@@ -58,7 +58,7 @@ thumbnail_default_size = 128
 thumbnail_sizes = [128, 256, 320]
 
 
-link_github_username = "jimmyff/zola-inky"
+link_github_username = "exiguus/zola-monospace"
 # link_twitter_username = ""
 # link_mastodon_url = ""
 # link_medium_username = ""
