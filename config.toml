@@ -2,7 +2,7 @@ title = "mono/plain; a11y=true"
 description = "An accessible, monospace plain Zola Theme"
 
 # The URL the site will be built for
-base_url = "http://zola-monoplain.vercel.app"
+base_url = "https://exiguus.github.io/zola-monoplain/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
