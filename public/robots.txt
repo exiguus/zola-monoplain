@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /
-Sitemap: http://192.168.32.98:3000/sitemap.xml
