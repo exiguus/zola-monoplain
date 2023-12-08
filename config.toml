@@ -1,4 +1,3 @@
-theme = "zola-monoplain"
 title = "mono/plain; a11y=true"
 description = "An accessible, monospace plain Zola Theme"
 
