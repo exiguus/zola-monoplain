@@ -12,16 +12,24 @@ Based on Zola Inky Theme
 - Be fast
 - Be accessible
 
+---
+
 - Respect your content
 - Respect your users
+
+---
 
 - Respect user preferences
 - Respect user privacy
 - Respect user bandwidth
   
+---
+
 - Use native browser styles where possible
 - Use semantic HTML
 - Use accessible HTML
+
+---
 
 - Do not use external resources (fonts, scripts, stylesheets, etc)
 
