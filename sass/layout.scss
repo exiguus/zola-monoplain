@@ -154,7 +154,7 @@ body {
                     margin: 0;
                     img {
                         margin: 0 auto;
-                        max-width: map.get($thumbnail, "small")
+                        max-width: map.get($thumbnail, "small");
 
                     }
                     figcaption {

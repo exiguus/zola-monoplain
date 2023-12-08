@@ -40,7 +40,7 @@
             <a href="{{ post.permalink | safe }}" title="{{ post.title }} - {{ post.date }}">
                 <figure>
                     {{ images::responsive_thumbnail(path=post.colocated_path, src=image, default_size=128,
-                    sizes=[128,256, 320],
+                    sizes=[128,256],
                     alt=post.title ~ " - " ~ post.date ) -}}
                     <figcaption id="post-{{ post.date }}">
                         {{ post.title }}

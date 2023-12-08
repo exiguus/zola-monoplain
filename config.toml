@@ -50,12 +50,12 @@ image_format = "webp"           # "auto", "jpg", "png", "webp"
 # responsive image shortcode 
 # example: {{ image(src="foo.jpeg", alt="some image") }}
 image_quality = 80
-images_default_size = 320
-images_sizes = [320, 384, 512, 576, 640, 768, 1024, 1152]
+images_default_size = 256
+images_sizes = [256, 384, 512, 576, 640, 768, 1024, 1152]
 
 thumbnail_quality = 70
 thumbnail_default_size = 128
-thumbnail_sizes = [128, 256, 320]
+thumbnail_sizes = [128, 256]
 
 
 link_github_username = "exiguus/zola-monospace"

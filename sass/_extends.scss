@@ -4,8 +4,8 @@
 %container {
     margin: 0 auto;
     width: 100%;
-    min-width: 20rem; // 320px @ 16px font-size
-    padding: 0 1rem;
+    min-width: 16rem; // 256px @ 16px font-size
+    padding: 0;
     box-sizing: content-box;
 
     @media (min-width: map.get($breakpoints, "small")) {
@@ -23,15 +23,18 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 100%;
-    grid-template-rows: 8rem 4rem auto 3rem;
+    grid-template-rows: 10rem 3rem auto 3rem;
     @media (min-width: map.get($breakpoints, "small")) {
+        grid-template-rows: 10rem 2rem auto 3rem;
+    }
+    @media (min-width: map.get($breakpoints, "medium")) {
         grid-template-rows: 8rem 2rem auto 3rem;
     }
     justify-content: center;
     align-items: start;
     min-height: calc(100vh - 2rem - 3rem);
     margin: 0;
-    padding: 3rem 0 0 0;
+    padding: 3rem 1rem 0 1rem;
     box-sizing: content-box;
 }
 
