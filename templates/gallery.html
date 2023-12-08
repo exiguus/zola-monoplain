@@ -13,13 +13,13 @@
     {% for image in post.extra.images -%}
     {# { set image = resize_image(path=post.path ~ image, width=256, height=256, format=config.extra.image_format,
     quality=config.extra.thumbnail_quality) %} #}
-    <li aria-labelledby="post-{{ post.date }}">
+    <li aria-labelledby="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }} - {{ post.date }}">
         <figure>
           {{ images::responsive_thumbnail(path=post.colocated_path, src=image, default_size=128,
           sizes=[128,256],
           alt=post.title ~ " - " ~ post.date ) -}}
-          <figcaption id="post-{{ post.date }}">
+          <figcaption id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             {{ post.title }}
             <date>{{ post.date }}</date>
           </figcaption>

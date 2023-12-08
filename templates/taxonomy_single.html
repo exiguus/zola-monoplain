@@ -10,10 +10,10 @@
   <h1 id="year-{{ year }}">{{ year }}</h1>
   <ul aria-labelledby="year-{{ year }}">
     {% for post in posts %}
-    <li aria-labelledby="post-{{ post.date }}">
+    <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
         <article>
-          <hgroup id="post-{{ post.date }}">
+          <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <h1>{{ post.title }}</h1>
             {% if post.draft %}<mark>(Draft)</mark>{% endif %}
             <date>

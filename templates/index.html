@@ -9,10 +9,10 @@
     <h1 id="latest-posts">Latest Posts</h1>
     <ul aria-labelledby="latest-posts">
         {% for post in section.pages | slice(end=8) -%}
-        <li aria-labelledby="post-{{ post.date }}">
+        <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
                 <article>
-                    <hgroup id="post-{{ post.date }}">
+                    <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
                         <h1>{{ post.title }}</h1>
                         {% if post.draft %}<mark>(Draft)</mark>{% endif %}
                         <date>
@@ -24,7 +24,7 @@
             </a>
         </li>
         {% endfor %}
-        </l>
+    </ul>
 </section>
 
 {% set section = get_section(path="gallery/_index.md") %}
@@ -36,13 +36,13 @@
         {% for image in post.extra.images -%}
         {# { set image = resize_image(path=post.path ~ image, width=256, height=256, format=config.extra.image_format,
         quality=config.extra.thumbnail_quality) %} #}
-        <li aria-labelledby="post-{{ post.date }}">
+        <li aria-labelledby="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <a href="{{ post.permalink | safe }}" title="{{ post.title }} - {{ post.date }}">
                 <figure>
                     {{ images::responsive_thumbnail(path=post.colocated_path, src=image, default_size=128,
                     sizes=[128,256],
                     alt=post.title ~ " - " ~ post.date ) -}}
-                    <figcaption id="post-{{ post.date }}">
+                    <figcaption id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
                         {{ post.title }}
                         <date>{{ post.date }}</date>
                     </figcaption>

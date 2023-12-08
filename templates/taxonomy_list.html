@@ -9,8 +9,8 @@
 <section aria-label="tags">
     <ul aria-label="tag-list">
         {% for term in terms %}
-        <li aria-labelledby="term-{{ term.name }}">
-            <a id="term-{{ term.name }}" href="{{ term.permalink | safe }}" title="{{ term.name }}">
+        <li aria-labelledby="term-{{ term.slug }}">
+            <a id="term-{{ term.slug }}" href="{{ term.permalink | safe }}" title="{{ term.name }}">
                 {{ term.name }}
                 (<count>{{ term.pages | length }}</count>)
             </a>
