@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{# Page hooks #}
+{% macro post_above_content(page) %}
+{%if page.authors %}
+<p>By
+    {% for author in page.authors %}
+    <a href="{{ config.base_url | safe }}/authors/{{ author | slugify }}">{{ author }}</a>{% if not loop.last %}, {%
+    endif %}
+    {% endfor %}
+</p>
+{% endif %}
+{% endmacro post_above_content %}
+{% macro post_below_content(page) %}{% endmacro post_below_content %}
+{% macro post_below_tags(page) %}{% endmacro post_below_tags %}
+
+{% macro posts_below_title(page) %}
+<p>{{ page.description }}</p>
+{% endmacro posts_below_title %}

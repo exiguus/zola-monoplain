@@ -1,0 +1,17 @@
+$breakpoints: (
+    small: 30rem, // 480px @ 16px font-size
+    medium: 48rem, // 768px @ 16px font-size
+    large: 64rem, // 1024px @ 16px font-size
+);
+
+$container: (
+    small: 24rem, // 384px @ 16px font-size
+    medium: 32rem, // 512px @ 16px font-size
+    large: 36rem, // 576px @ 16px font-size
+);
+
+$thumbnail: (
+    small: 320px,
+    medium: 200px,
+    large: 320px,
+);

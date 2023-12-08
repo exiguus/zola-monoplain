@@ -1,0 +1,216 @@
+@use "sass:map";
+@import "_variables.scss";
+
+body {
+    @extend %grid;
+
+    & > main,
+    & > footer,
+    & > header,
+    & > nav {
+        @extend %container;
+    }
+
+    & > nav#main-nav {
+        & > ul {
+            @extend %list-vertical;
+        }
+    }
+
+    & > nav#skip-nav {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        
+        a {
+            position: absolute;
+            display: block;
+            margin: -1px;
+            padding: 0;
+            width: 1px;
+            height: 1px;
+            border: 0;
+            clip: rect(0,0,0,0);
+            overflow: hidden;
+            -webkit-transition: padding 0s;
+            transition: padding 0s;
+
+            &:focus {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin: 1rem 2rem;
+                padding: 0.5rem 2rem;
+                width: auto;
+                height: auto;
+                overflow: initial;
+                  backdrop-filter: blur(20rem);
+                clip: auto;
+                text-align: center;
+            }
+        }
+    }
+
+    & > main {
+        & > nav {
+            ol {
+                list-style: upper-roman;
+                ol {
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+        section {
+            & > ul {
+                list-style: none;
+            }
+
+            & > ol,
+            & > ul {
+                padding-left: 2rem;
+                padding-bottom: 1rem;
+
+                li {
+                    h1, h2, h3 {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                    margin-bottom: 1rem;
+                }
+
+                figure {
+                    figcaption {
+                        date {
+                            display: block
+                        }
+                    }
+                }
+            }
+        }
+        article,
+        figure {
+            & > img {
+                max-width: map.get($thumbnail, "medium");
+                @media (min-width: map.get($breakpoints, "small")) {
+                    max-width: map.get($thumbnail, "small")
+                }
+                @media (min-width: map.get($breakpoints, "large")) {
+                    max-width: map.get($thumbnail, "large")
+                }
+            }
+        }
+
+        article {
+            & > hgroup {
+                display: grid;
+                grid-template-columns: 6rem auto;
+                gap: 1rem;
+                align-items: center;
+
+                & > date {
+                    order: 1;
+                }
+                & > h1 {
+                    order: 2;
+                }
+                & + p {
+                    margin-left: 7rem;
+                }
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+        
+        pre {
+            @extend %highlight-reset;
+            overflow-x: auto;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        #latest-images {
+            & + ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem 2rem;
+
+                figure {
+                    margin: 0;
+                    img {
+                        margin: 0 auto;
+                        max-width: map.get($thumbnail, "small")
+
+                    }
+                    figcaption {
+                        @extend %sr-only;
+                    }
+                }
+            }
+        }
+    }
+
+    & > footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        & > ul {
+            @extend %list-vertical;
+        }
+    }
+
+    @at-root #gallery {
+        > main {
+            section {
+                & > ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem 2rem;
+
+                    figure {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                        margin: 0;
+                        img {
+                            max-width: map.get($thumbnail, "small")
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root #search {
+        > main {
+            label {
+                @extend %sr-only;
+            }
+            input {
+                width: 100%;
+                padding: 0.5rem;
+            }
+            button {
+                padding: 0.5rem;
+            }
+        }
+    }
+}

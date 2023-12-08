@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{{ section.content | safe }}
+
+{% set section = get_section(path="posts/_index.md") %}
+<section aria-labelledby="latest-posts">
+    <h1 id="latest-posts">Latest Posts</h1>
+    <ul aria-labelledby="latest-posts">
+        {% for post in section.pages | slice(end=8) -%}
+        <li aria-labelledby="post-{{ post.date }}">
+            <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
+                <article>
+                    <hgroup id="post-{{ post.date }}">
+                        <h1>{{ post.title }}</h1>
+                        {% if post.draft %}<mark>(Draft)</mark>{% endif %}
+                        <date>
+                            {{ post.date | date(format='%Y-%m-%d') }}
+                        </date>
+                    </hgroup>
+                    {{ hooks::posts_below_title(page=post) }}
+                </article>
+            </a>
+        </li>
+        {% endfor %}
+        </l>
+</section>
+
+{% set section = get_section(path="gallery/_index.md") %}
+<section aria-labelledby="latest-images">
+    <h1 id="latest-images">Latest Images</h1>
+    <ul aria-labelledby="latest-images">
+        {% for post in section.pages | slice(end=6) -%}
+        {% if post.extra.images -%}
+        {% for image in post.extra.images -%}
+        {# { set image = resize_image(path=post.path ~ image, width=256, height=256, format=config.extra.image_format,
+        quality=config.extra.thumbnail_quality) %} #}
+        <li aria-labelledby="post-{{ post.date }}">
+            <a href="{{ post.permalink | safe }}" title="{{ post.title }} - {{ post.date }}">
+                <figure>
+                    {{ images::responsive_thumbnail(path=post.colocated_path, src=image, default_size=128,
+                    sizes=[128,256, 320],
+                    alt=post.title ~ " - " ~ post.date ) -}}
+                    <figcaption id="post-{{ post.date }}">
+                        {{ post.title }}
+                        <date>{{ post.date }}</date>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+        {% endfor -%}
+        {% endif -%}
+        {% endfor -%}
+    </ul>
+</section>
+
+{% endblock content %}

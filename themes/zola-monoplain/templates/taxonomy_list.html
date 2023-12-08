@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <h1>{{ taxonomy.name | capitalize }}</h1>
+</header>
+
+{% if terms %}
+<section aria-label="tags">
+    <ul aria-label="tag-list">
+        {% for term in terms %}
+        <li aria-labelledby="term-{{ term.name }}">
+            <a id="term-{{ term.name }}" href="{{ term.permalink | safe }}" title="{{ term.name }}">
+                {{ term.name }}
+                (<count>{{ term.pages | length }}</count>)
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+{% endblock content %}

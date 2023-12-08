@@ -1,0 +1,20 @@
+name = "mono/plain; a11y=true"
+
+description = "An accessible, monospace plain Zola Theme"
+license = "MIT"
+homepage = "https://github.com/jimmyff/zola-inky"
+# The minimum version of Zola required
+min_version = "0.17.0"
+# An optional live demo URL
+demo = "https://jimmyff.github.io/zola-inky/"
+
+[extra]
+
+[author]
+name = "jimmyff"
+homepage = "https://www.jimmyff.co.uk"
+
+[original]
+author = "mr-karan"
+homepage = "https://mrkaran.dev"
+repo = "https://github.com/mr-karan/website"

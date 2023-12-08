@@ -1,0 +1,22 @@
+@use "sass:map";
+@import "_variables.scss";
+
+html {
+    // Adoptive font-sizes
+    // See: https://www.madebymike.com.au/writing/fluid-type-calc-examples/
+    font-size: 1rem;
+    @media (min-width: map.get($breakpoints, "small")) {
+        font-size: calc(1rem + 8 * ((100vw - map.get($breakpoints, "small")) / 960));
+    }
+    @media (min-width: map.get($breakpoints, "medium")) {
+        font-size: calc(1rem + 8 * ((100vw - map.get($breakpoints, "medium")) / 960));
+    }
+    @media (min-width: map.get($breakpoints, "large")) {
+        font-size: calc(1rem + 8 * ((100vw - map.get($breakpoints, "large")) / 960));
+    }
+}
+
+body {
+    // monospace font-stack
+    font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco, monospace;
+}

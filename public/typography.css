@@ -1,0 +1,1 @@
+html{font-size:1rem}@media (min-width: 30rem){html{font-size:calc(1rem + 8*(100vw - 30rem)/960)}}@media (min-width: 48rem){html{font-size:calc(1rem + 8*(100vw - 48rem)/960)}}@media (min-width: 64rem){html{font-size:calc(1rem + 8*(100vw - 64rem)/960)}}body{font-family:"IBM Plex Mono",Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono",Consolas,"Lucida Console",Monaco,monospace}
