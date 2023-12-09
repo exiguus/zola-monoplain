@@ -60,9 +60,7 @@ thumbnail_sizes = [128, 256]
 
 link_github_username = "exiguus/zola-monospace"
 # link_twitter_username = ""
-# link_mastodon_url = ""
-# link_medium_username = ""
-# link_instagram_username = ""
+link_mastodon_url = "https://toot.community/@exiguus"
 
 menu_links = [
     { url = "$BASE_URL/", name = "Home" },

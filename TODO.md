@@ -12,3 +12,6 @@
 - [ ] lighthouse github action
 - [ ] lint format commit hooks
 - [ ] lint format github action
+- [ ] tabler icon macro
+  - [ ] add all icons from <https://github.com/tabler/tabler-icons/tree/master/icons>
+- [ ] add shortcode to documentation

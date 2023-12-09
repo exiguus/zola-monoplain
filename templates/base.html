@@ -2,6 +2,7 @@
 {% import "macros/opengraph.html" as social -%}
 {% import "macros/hooks.html" as hooks -%}
 {% import "macros/images.html" as images -%}
+{% import "macros/icons.html" as icons -%}
 <!DOCTYPE html>
 <html lang="en" prefix="og:https://ogp.me/ns#">
 
@@ -17,9 +18,6 @@
         href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}">
     {% endblock rss -%}
     <link rel="stylesheet" href="{{ get_url(path='base.css',trailing_slash=false)|safe}}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
-        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
-        crossorigin="anonymous"></script>
 </head>
 {% set id = current_path | trim_start_matches(pat='/') | trim_end_matches(pat='/') | replace(from='/', to='--') -%}
 {% if id -%}
@@ -118,40 +116,36 @@
                 {# Github #}
                 {% if config.extra.link_github_username -%}
                 <li>
-                    <a href="https://github.com/{{ config.extra.link_github_username }}" title="Github" rel="me"><i
-                            data-feather="github"></i></a>
+                    <a href="https://github.com/{{ config.extra.link_github_username }}" title="Github" rel="me">
+                        <span class="sr-only">Github</span>
+                        <span aria-hidden="true">
+                            {{ icons::icon(name="github") }}
+                        </span>
+                    </a>
                 </li>
                 {% endif -%}
 
                 {# Mastadon #}
                 {% if config.extra.link_mastodon_url -%}
                 <li>
-                    <a href="{{ config.extra.link_mastodon_url }}" title="Mastodon" rel="me"><i
-                            data-feather="message-square"></i></a>
+                    <a href="{{ config.extra.link_mastodon_url }}" title="Mastodon" rel="me">
+                        <span class="sr-only">Mastodon</span>
+                        <span aria-hidden="true">
+                            {{ icons::icon(name="mastadon") }}
+                        </span>
+                    </a>
                 </li>
                 {% endif -%}
 
                 {# Twitter #}
                 {% if config.extra.link_twitter_username -%}
                 <li>
-                    <a href="https://twitter.com/{{ config.extra.link_twitter_username }}" title="Twitter" rel="me"><i
-                            data-feather="twitter"></i></a>
-                </li>
-                {% endif -%}
-
-                {# Instagram #}
-                {% if config.extra.link_instagram_username -%}
-                <li>
-                    <a href="https://www.instagram.com/jimmyff_art/{{ config.extra.link_instagram_username }}"
-                        title="Medium" rel="me"><i data-feather="instagram"></i></a>
-                </li>
-                {% endif -%}
-
-                {# Medium #}
-                {% if config.extra.link_medium_username -%}
-                <li>
-                    <a href="https://medium.com/@{{ config.extra.link_medium_username }}" title="Medium" rel="me"><i
-                            data-feather="file-text"></i></a>
+                    <a href="https://twitter.com/{{ config.extra.link_twitter_username }}" title="Twitter" rel="me">
+                        <span class="sr-only">Twitter</span>
+                        <span aria-hidden="true">
+                            {{ icons::icon(name="twitter") }}
+                        </span>
+                    </a>
                 </li>
                 {% endif -%}
 
@@ -172,9 +166,6 @@
                     href="https://github.com/jimmyff/zola-inky">Inky</a>.{% endif %}
             </p>
         </footer>
-        <script>
-            feather.replace();
-        </script>
         {% block body_end -%}
         {% endblock body_end -%}
     </body>
