@@ -15,3 +15,4 @@
 - [ ] tabler icon macro
   - [ ] add all icons from <https://github.com/tabler/tabler-icons/tree/master/icons>
 - [ ] add shortcode to documentation
+- [ ] add icon shortcode {{ icon(name="github") }}

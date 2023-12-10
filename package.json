@@ -1,0 +1,24 @@
+{
+  "name": "zola",
+  "version": "1.0.0",
+  "description": "mono/plain; a11y=true; An accessible, monospace plain Zola Theme",
+  "scripts": {
+    "dev": "turbo run dev --parallel --no-cache",
+    "test": "turbo run test --parallel",
+    "check": "turbo run check --parallel",
+    "build": "turbo run check test build"
+  },
+  "keywords": [
+    "zola",
+    "theme",
+    "monospace",
+    "plain",
+    "accessible",
+    "a11y"
+  ],
+  "author": "Simon Gattner",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.11.1"
+  }
+}

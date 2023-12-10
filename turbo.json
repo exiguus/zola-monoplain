@@ -1,0 +1,86 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "public/**"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test",
+        "build",
+        "lint"
+      ],
+      "inputs": [
+        "src/*.tsx",
+        "src/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/*.tsx",
+        "test/*.ts",
+        "test/**/*.tsx",
+        "test/**/*.ts",
+        "types/*.ts",
+        "mocks/*.ts"
+      ]
+    },
+    "check": {
+      "dependsOn": [
+        "^check",
+        "build"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ],
+      "inputs": [
+        "*.tsx",
+        "*.ts",
+        "**/*.tsx",
+        "**/*.ts",
+        "*.jsx",
+        "*.js",
+        "**/*.jsx",
+        "**/*.js",
+        "*.mjs",
+        "**/*.mjs",
+        "*.cjs",
+        "**/*.cjs",
+        "*.css",
+        "**/*.css",
+        "*.scss",
+        "**/*.scss"
+      ]
+    },
+    "format": {
+      "dependsOn": [
+        "^format"
+      ],
+      "inputs": [
+        "*.tsx",
+        "*.ts",
+        "*.js",
+        "*.jsx",
+        "*.mjs",
+        "*.cjs",
+        "*.html",
+        "*.css",
+        "*.scss"
+      ]
+    },
+    "dev": {
+      "cache": false
+    }
+  },
+  "globalDependencies": [
+    ".env",
+    "package.json",
+    "tsconfig.json",
+    "tsconfig.global.json"
+  ]
+}
