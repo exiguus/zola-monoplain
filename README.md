@@ -61,6 +61,9 @@ For latest changes please see the [changelog](CHANGELOG.md).
     - [ ] Github integration
   - [ ] Link
     - [ ] preview images
+  - [ ] Icons
+    - [ ] preview all tabler icons
+    - [ ] search all tabler icons
 - [ ] Markdown
   - [ ] Graph support
   - [ ] Chart support
@@ -116,3 +119,21 @@ Contributions are very welcome! If you are planning to add a feature to the them
 - Consider backward compatibility, ideally people blindly-upgrading won't see any unexpected changes to their sites.
 
 New theme maintainers are welcome but should provide pull-request or two first!
+
+## Tabler Icons
+
+Use [Tabler Icons](https://tabler.io/icons) for icons.
+
+The icons macro use the following syntax:
+
+```md
+{{ icons("name", "size") }}
+```
+
+- Name is the name of the icon, e.g. `brand-github`. Names are the icon names from [Tabler Icons]([https://tabler.io/icons).
+- Size is the size of the icon in px, e.g. `24`. Default is `32`.
+  
+Tabler icons are installed via npm and are available in the `node_modules` folder.
+
+There is a copy script `pnpm cp:icons` folder that will copy the svg icon sprite
+to the `static` folder.

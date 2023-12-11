@@ -17,7 +17,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{config.title}}"
         href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}">
     {% endblock rss -%}
-    <link rel="stylesheet" href="{{ get_url(path='base.css',trailing_slash=false)|safe}}">
+    <link rel="stylesheet" href="{{ get_url(path='base.css',trailing_slash=false)|safe}}" media="screen">
 </head>
 {% set id = current_path | trim_start_matches(pat='/') | trim_end_matches(pat='/') | replace(from='/', to='--') -%}
 {% if id -%}
@@ -119,7 +119,7 @@
                     <a href="https://github.com/{{ config.extra.link_github_username }}" title="Github" rel="me">
                         <span class="sr-only">Github</span>
                         <span aria-hidden="true">
-                            {{ icons::icon(name="github") }}
+                            {{ icons::icon(name="brand-github") }}
                         </span>
                     </a>
                 </li>
@@ -131,19 +131,7 @@
                     <a href="{{ config.extra.link_mastodon_url }}" title="Mastodon" rel="me">
                         <span class="sr-only">Mastodon</span>
                         <span aria-hidden="true">
-                            {{ icons::icon(name="mastadon") }}
-                        </span>
-                    </a>
-                </li>
-                {% endif -%}
-
-                {# Twitter #}
-                {% if config.extra.link_twitter_username -%}
-                <li>
-                    <a href="https://twitter.com/{{ config.extra.link_twitter_username }}" title="Twitter" rel="me">
-                        <span class="sr-only">Twitter</span>
-                        <span aria-hidden="true">
-                            {{ icons::icon(name="twitter") }}
+                            {{ icons::icon(name="brand-mastodon") }}
                         </span>
                     </a>
                 </li>
@@ -151,12 +139,15 @@
 
                 {# RSS feed #}
                 <li>
-                    <a href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}" title="{{config.title}}"><i
-                            data-feather="rss"></i></a>
+                    <a href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}" title="{{config.title}}">
+                        <span class="sr-only">RSS feed</span>
+                        <span aria-hidden="true">
+                            {{ icons::icon(name="rss") }}
+                        </span>
+                    </a>
                 </li>
             </ul>
             <p aria-label="info"> © {{ config.title }} {{ now() | date(format="%Y") }}
-
                 {# If you remove the powered by information, it would be appreciated if
                 you could add information & links somewhere else on your site to credit
                 those that have created your tools. #}
@@ -169,5 +160,57 @@
         {% block body_end -%}
         {% endblock body_end -%}
     </body>
+    <script defer="defer" fetchpriority="low">
+        /**
+     * Append the SVG sprite to the DOM
+     * Only append the symbols that are used in the DOM
+     * @returns {Promise<void>}
+     */
+        const appendSVGSprite = async () => {
+            const usedSVGs = Array.from(document.querySelectorAll('use')).map(node => node.href.baseVal);
+
+            if (usedSVGs.length === 0) {
+                return;
+            }
+            const tablerSVGSprite = await fetch('tabler-sprite.svg')
+                .then(response => response.ok ? response.text() : null)
+
+            if (!tablerSVGSprite) {
+                console.warn('SVG sprite not found');
+                return;
+            }
+
+            const svgSprite = document.createElement('div');
+            svgSprite.setAttribute('id', 'svg-sprite');
+            svgSprite.setAttribute('aria-hidden', 'true');
+            svgSprite.setAttribute('style', 'position: absolute; width: 0; height: 0; overflow: hidden;');
+            svgSprite.innerHTML = tablerSVGSprite;
+
+            // only define the symbols we need
+            const symbols = Array.from(svgSprite.querySelectorAll('symbol') || [])
+                .filter(symbol => usedSVGs.includes(`#${symbol.id}`));
+            if (symbols.length > 0) {
+                const defs = svgSprite.querySelector("defs");
+                if (defs) {
+                    defs.innerHTML = symbols.map(symbol => symbol.outerHTML).join('');
+                } else {
+                    console.warn('SVG sprite defs not found');
+                }
+                document.body.appendChild(svgSprite);
+            } else {
+                console.warn('SVG sprite defined symbols not found');
+            }
+
+        };
+
+        // <script>
+        // This script should be added to the html head with attribute:
+        //  defer="defer"
+        // to make sure it is executed after the DOM is loaded.
+        // And the attribute:
+        //  fetchpriority="low"
+        // to make sure it is executed after the main scripts.
+        window.addEventListener('load', appendSVGSprite);
+    </script>
 
 </html>

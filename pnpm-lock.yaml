@@ -14,11 +14,18 @@ importers:
 
   themes/zola-monoplain:
     dependencies:
+      '@tabler/icons':
+        specifier: ^2.44.0
+        version: 2.44.0
       turbo:
         specifier: ^1.11.1
         version: 1.11.1
 
 packages:
+
+  /@tabler/icons@2.44.0:
+    resolution: {integrity: sha512-WPPtihDcAwEm1QZM9MXQw6+r/R2/qx7KMU1eegsi9DsqBLAb0W2kbt6e/syvd6j9c+6XNpRVBW1ziGqSWQAWOg==}
+    dev: false
 
   /turbo-darwin-64@1.11.1:
     resolution: {integrity: sha512-JmwL8kcfxncDf2SZFioSa6dUvpMq/HbMcurh9mGm6BxWLQoB0d3fP/q3HizgCSbOE4ihScXoQ+c/C2xhl6Ngjg==}
