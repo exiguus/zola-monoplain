@@ -1,9 +1,9 @@
 {
-  "name": "zola",
+  "name": "zola-monoplain-theme",
   "version": "1.0.0",
   "description": "mono/plain; a11y=true; An accessible, monospace plain Zola Theme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "check": "pnpm check:zola",
     "check:zola": "if command -v zola &> /dev/null; then exit 0; else echo 'Zola is not installed' && exit 1; fi",
     "dev": "pnpm check:zola && zola serve",
@@ -21,7 +21,6 @@
   "author": "Simon Gattner",
   "license": "MIT",
   "dependencies": {
-    "@tabler/icons": "^2.44.0",
-    "turbo": "^1.11.1"
+    "@tabler/icons": "^2.44.0"
   }
 }

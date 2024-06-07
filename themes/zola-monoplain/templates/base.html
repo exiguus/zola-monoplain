@@ -1,23 +1,15 @@
-{% import "macros/head.html" as head -%}
-{% import "macros/opengraph.html" as social -%}
 {% import "macros/hooks.html" as hooks -%}
 {% import "macros/images.html" as images -%}
 {% import "macros/icons.html" as icons -%}
+{% import "macros/markdown.html" as markdown -%}
+{% import "components/skip_nav.html" as skip_nav -%}
 <!DOCTYPE html>
 <html lang="en" prefix="og:https://ogp.me/ns#">
 
 <head>
-    {%- block general_meta -%}
-    {{ head::general_meta() }}
-    {%- endblock general_meta -%}
-    {%- block og_preview -%}
-    {{ social::og_preview() }}
-    {%-endblock og_preview -%}
-    {% block rss -%}
-    <link rel="alternate" type="application/rss+xml" title="{{config.title}}"
-        href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}">
-    {% endblock rss -%}
-    <link rel="stylesheet" href="{{ get_url(path='base.css',trailing_slash=false)|safe}}" media="screen">
+    {% block head -%}
+    {% include "components/head.html" %}
+    {% endblock head -%}
 </head>
 {% set id = current_path | trim_start_matches(pat='/') | trim_end_matches(pat='/') | replace(from='/', to='--') -%}
 {% if id -%}
@@ -27,190 +19,32 @@
 
     <body id="home">
         {% endif -%}
-        <nav id="skip-nav" aria-label="Skip Navigation" aria-live="off" aria-atomic="false">
-            <ul>
-                <li><a href="#main">Skip to content</a></li>
-                {% if page.toc -%}
-                <li><a href="#toc">Skip to table of contents</a>
-                    <ul>
-                        {% for h1 in page.toc -%}
-                        <li>
-                            <a href="#{{ h1.id }}">{{ h1.title }}</a>
-                            {% if h1.children -%}
-                            <ul>
-                                {% for h2 in h1.children -%}
-                                <li>
-                                    <a href="#{{ h2.id }}">{{ h2.title }}</a>
-                                    {% if h2.children -%}
-                                    <ul>
-                                        {% for h3 in h2.children -%}
-                                        <li>
-                                            <a href="#{{ h3.id }}">{{ h3.title }}</a>
-                                            {% if h3.children -%}
-                                            <ul>
-                                                {% for h4 in h3.children -%}
-                                                <li>
-                                                    <a href="#{{ h4.id }}">{{ h4.title }}</a>
-                                                    {% if h4.children -%}
-                                                    <ul>
-                                                        {% for h5 in h4.children -%}
-                                                        <li>
-                                                            <a href="#{{ h5.id }}">{{ h5.title }}</a>
-                                                            {% if h5.children -%}
-                                                            <ul>
-                                                                {% for h6 in h5.children -%}
-                                                                <li>
-                                                                    <a href="#{{ h6.id }}">{{ h6.title }}</a>
-                                                                </li>
-                                                                {% endfor -%}
-                                                            </ul>
-                                                            {% endif -%}
-                                                        </li>
-                                                        {% endfor -%}
-                                                    </ul>
-                                                    {% endif -%}
-                                                </li>
-                                                {% endfor -%}
-                                            </ul>
-                                            {% endif -%}
-                                        </li>
-                                        {% endfor -%}
-                                    </ul>
-                                    {% endif -%}
-                                </li>
-                                {% endfor -%}
-                            </ul>
-                            {% endif -%}
-                        </li>
-                        {% endfor -%}
-                    </ul>
-                </li>
-                {% endif -%}
-                <li><a href="#main-nav">Skip to navigation</a></li>
-            </ul>
-        </nav>
-        <header>
-            <a href="{{ config.base_url }}" title="{{ config.title }}">
-                <h1>{{ config.title }}</h1>
-                <p>{{ config.description }}</p>
-            </a>
-        </header>
-        <nav id="main-nav" aria-label="Main Navigation">
-            <ul>
-                {% for menu_link in config.extra.menu_links -%}
-                <li>
-                    {% set link_url = menu_link.url | replace(from="$BASE_URL", to=config.base_url) -%}
-                    <a {% if current_url and current_url==link_url %}class="active" {% endif %}
-                        href="{{ link_url | safe}} ">{{menu_link.name}}</a>
-                </li>
-                {% endfor -%}
-            </ul>
-        </nav>
-        <main id="main">
-            {## __tera_context ##}
-            {% block content -%}
-            {% endblock -%}
-        </main>
-        <footer>
-            <ul aria-label="links">
-                {# Github #}
-                {% if config.extra.link_github_username -%}
-                <li>
-                    <a href="https://github.com/{{ config.extra.link_github_username }}" title="Github" rel="me">
-                        <span class="sr-only">Github</span>
-                        <span aria-hidden="true">
-                            {{ icons::icon(name="brand-github") }}
-                        </span>
-                    </a>
-                </li>
-                {% endif -%}
-
-                {# Mastadon #}
-                {% if config.extra.link_mastodon_url -%}
-                <li>
-                    <a href="{{ config.extra.link_mastodon_url }}" title="Mastodon" rel="me">
-                        <span class="sr-only">Mastodon</span>
-                        <span aria-hidden="true">
-                            {{ icons::icon(name="brand-mastodon") }}
-                        </span>
-                    </a>
-                </li>
-                {% endif -%}
-
-                {# RSS feed #}
-                <li>
-                    <a href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}" title="{{config.title}}">
-                        <span class="sr-only">RSS feed</span>
-                        <span aria-hidden="true">
-                            {{ icons::icon(name="rss") }}
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <p aria-label="info"> © {{ config.title }} {{ now() | date(format="%Y") }}
-                {# If you remove the powered by information, it would be appreciated if
-                you could add information & links somewhere else on your site to credit
-                those that have created your tools. #}
-                {% if config.extra.disable_powered_by and config.extra.disable_powered_by == true %}{% else
-                %}<br>Powered by
-                <a target="_blank" href="https://getzola.org/">Zola</a>. Theme: <a target="_blank"
-                    href="https://github.com/jimmyff/zola-inky">Inky</a>.{% endif %}
-            </p>
-        </footer>
+        {% block skip_nav -%}
+        {% include "components/skip_nav.html" -%}
+        {% endblock skip_nav -%}
+        {% block header -%}
+        {% include "components/header.html" -%}
+        {% endblock header -%}
+        {% block nav -%}
+        {% include "components/nav.html" -%}
+        {% endblock nav -%}
+        <div>
+            {% block main -%}
+            <main id="main">
+                {% include "components/main.html" -%}
+                {% block content -%}
+                {% endblock -%}
+            </main>
+            {% endblock main -%}
+            {% block aside %}
+            {% endblock aside %}
+        </div>
+        {% block footer -%}
+        {% include "components/footer.html" -%}
+        {% endblock footer -%}
         {% block body_end -%}
         {% endblock body_end -%}
     </body>
-    <script defer="defer" fetchpriority="low">
-        /**
-     * Append the SVG sprite to the DOM
-     * Only append the symbols that are used in the DOM
-     * @returns {Promise<void>}
-     */
-        const appendSVGSprite = async () => {
-            const usedSVGs = Array.from(document.querySelectorAll('use')).map(node => node.href.baseVal);
-
-            if (usedSVGs.length === 0) {
-                return;
-            }
-            const tablerSVGSprite = await fetch('tabler-sprite.svg')
-                .then(response => response.ok ? response.text() : null)
-
-            if (!tablerSVGSprite) {
-                console.warn('SVG sprite not found');
-                return;
-            }
-
-            const svgSprite = document.createElement('div');
-            svgSprite.setAttribute('id', 'svg-sprite');
-            svgSprite.setAttribute('aria-hidden', 'true');
-            svgSprite.setAttribute('style', 'position: absolute; width: 0; height: 0; overflow: hidden;');
-            svgSprite.innerHTML = tablerSVGSprite;
-
-            // only define the symbols we need
-            const symbols = Array.from(svgSprite.querySelectorAll('symbol') || [])
-                .filter(symbol => usedSVGs.includes(`#${symbol.id}`));
-            if (symbols.length > 0) {
-                const defs = svgSprite.querySelector("defs");
-                if (defs) {
-                    defs.innerHTML = symbols.map(symbol => symbol.outerHTML).join('');
-                } else {
-                    console.warn('SVG sprite defs not found');
-                }
-                document.body.appendChild(svgSprite);
-            } else {
-                console.warn('SVG sprite defined symbols not found');
-            }
-
-        };
-
-        // <script>
-        // This script should be added to the html head with attribute:
-        //  defer="defer"
-        // to make sure it is executed after the DOM is loaded.
-        // And the attribute:
-        //  fetchpriority="low"
-        // to make sure it is executed after the main scripts.
-        window.addEventListener('load', appendSVGSprite);
-    </script>
+    <script src="/js/main.js" defer="defer"></script>
 
 </html>

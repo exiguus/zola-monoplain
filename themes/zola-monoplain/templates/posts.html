@@ -1,28 +1,4 @@
-{% extends "base.html" %} {% block content %}
-<hgroup>
-  <h1>{{ section.title }}</h1>
-  {{ section.content | safe }}
-</hgroup>
-{% for year, posts in section.pages | group_by(attribute="year") %}
-<section aria-labelledby="year-{{ year }}">
-  <h1 id="year-{{ year }}">{{ year }}</h1>
-  <ul aria-labelledby="year-{{ year }}">
-    {% for post in posts %}
-    <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
-      <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
-        <article>
-          <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
-            <h1>{{ post.title }}</h1>
-            {% if post.draft %}<mark>(Draft)</mark>{% endif %}
-            <date>
-              {{ post.date | date(format='%Y-%m-%d') }}
-            </date>
-          </hgroup>
-          {{ hooks::posts_below_title(page=post) }}
-        </article>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endfor %} {% endblock content %}
+{% extends "base.html" %}
+{% block content %}
+{% include "pages/posts.html" -%}
+{% endblock content %}

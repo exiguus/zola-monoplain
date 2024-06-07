@@ -1,0 +1,6 @@
+{% if config.extra.debug -%}
+<details role="group" aria-roledescription="debug">
+  <summary>Debug</summary>
+  <pre>{{ __tera_context }}</pre>
+</details>
+{% endif -%}

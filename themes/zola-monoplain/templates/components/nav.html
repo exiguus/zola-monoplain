@@ -1,0 +1,11 @@
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    {% for menu_link in config.extra.menu_links -%}
+    <li>
+      {% set link_url = menu_link.url | replace(from="$BASE_URL", to=config.base_url) -%}
+      <a {% if current_url and current_url==link_url %}class="active" {% endif %}
+        href="{{ link_url | safe}} ">{{menu_link.name}}</a>
+    </li>
+    {% endfor -%}
+  </ul>
+</nav>

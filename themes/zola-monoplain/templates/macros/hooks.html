@@ -3,7 +3,7 @@
 {# Page hooks #}
 {% macro post_above_content(page) %}
 {%if page.authors %}
-<p>By
+<p aria-label="Author">By
     {% for author in page.authors %}
     <a href="{{ config.base_url | safe }}/authors/{{ author | slugify }}">{{ author }}</a>{% if not loop.last %}, {%
     endif %}

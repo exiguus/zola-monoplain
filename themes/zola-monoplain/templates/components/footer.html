@@ -1,0 +1,44 @@
+<footer>
+  <ul aria-label="links">
+    {# Github #}
+    {% if config.extra.link_github_username -%}
+    <li>
+      <a href="https://github.com/{{ config.extra.link_github_username }}" title="Github" rel="me">
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">
+          {{ icons::icon(name="brand-github") }}
+        </span>
+      </a>
+    </li>
+    {% endif -%}
+    {# Mastadon #}
+    {% if config.extra.link_mastodon_url -%}
+    <li>
+      <a href="{{ config.extra.link_mastodon_url }}" title="Mastodon" rel="me">
+        <span class="sr-only">Mastodon</span>
+        <span aria-hidden="true">
+          {{ icons::icon(name="brand-mastodon") }}
+        </span>
+      </a>
+    </li>
+    {% endif -%}
+    {# RSS feed #}
+    <li>
+      <a href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}" title="{{config.title}}">
+        <span class="sr-only">RSS feed</span>
+        <span aria-hidden="true">
+          {{ icons::icon(name="rss") }}
+        </span>
+      </a>
+    </li>
+  </ul>
+  <p aria-label="info"> © {{ config.title }} {{ now() | date(format="%Y") }}
+    {# If you remove the powered by information, it would be appreciated if
+    you could add information & links somewhere else on your site to credit
+    those that have created your tools. #}
+    {% if config.extra.disable_powered_by and config.extra.disable_powered_by == true %}{% else
+    %}<br>Powered by
+    <a target="_blank" href="https://getzola.org/">Zola</a>. Theme: <a target="_blank"
+      href="https://github.com/jimmyff/zola-inky">Inky</a>.{% endif %}
+  </p>
+</footer>

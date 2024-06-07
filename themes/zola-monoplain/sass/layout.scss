@@ -4,7 +4,8 @@
 body {
     @extend %grid;
 
-    & > main,
+    & > div > main,
+    & > div > aside,
     & > footer,
     & > header,
     & > nav {
@@ -64,7 +65,17 @@ body {
         }
     }
 
-    & > main {
+    & > div > main,
+    & > div > aside {
+        & > figure {
+            margin: 0;
+            img {
+                max-width: 100%;
+            }
+            figcaption {
+                @extend %sr-only;
+            }
+        }
         & > nav {
             ol {
                 list-style: upper-roman;
@@ -80,7 +91,7 @@ body {
 
             & > ol,
             & > ul {
-                padding-left: 2rem;
+                padding-left: 1rem;
                 padding-bottom: 1rem;
 
                 li {
@@ -94,7 +105,9 @@ body {
                 figure {
                     figcaption {
                         date {
-                            display: block
+                            display: block;
+                            padding: 0.5rem 0;
+                            font-size: 80%;
                         }
                     }
                 }
@@ -102,6 +115,11 @@ body {
         }
         article,
         figure {
+            & > iframe {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
             & > img {
                 max-width: map.get($thumbnail, "medium");
                 @media (min-width: map.get($breakpoints, "small")) {
@@ -116,7 +134,7 @@ body {
         article {
             & > hgroup {
                 display: grid;
-                grid-template-columns: 6rem auto;
+                grid-template-columns: 7rem auto;
                 gap: 1rem;
                 align-items: center;
 
@@ -127,7 +145,7 @@ body {
                     order: 2;
                 }
                 & + p {
-                    margin-left: 7rem;
+                    margin-left: 8rem;
                 }
             }
         }
@@ -135,13 +153,15 @@ body {
         img {
             display: block;
             width: 100%;
+            box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem;
         }
         
         pre {
             @extend %highlight-reset;
             overflow-x: auto;
-            width: 100%;
             padding: 1rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         #latest-images {
@@ -177,7 +197,8 @@ body {
     }
 
     @at-root #gallery {
-        > main {
+        > div > main,
+        > div > aside {
             section {
                 & > ul {
                     display: grid;
@@ -200,7 +221,8 @@ body {
     }
 
     @at-root #search {
-        > main {
+        > div > main,
+        > div > aside {
             label {
                 @extend %sr-only;
             }

@@ -1,11 +1,5 @@
-{% extends "base.html" %}
-
-{% block content %}
-<header>
-  <h1>{{taxonomy.name | capitalize }}</h1>
-  <h2>{{ term.name | capitalize }}</h2>
-</header>
-{% for year, posts in term.pages | group_by(attribute="year") %}
+{% include "components/page_header.html" %}
+{% for year, posts in section.pages | group_by(attribute="year") %}
 <section aria-labelledby="year-{{ year }}">
   <h1 id="year-{{ year }}">{{ year }}</h1>
   <ul aria-labelledby="year-{{ year }}">
@@ -29,4 +23,4 @@
     {% endfor %}
   </ul>
 </section>
-{% endfor %}{% endblock content %}
+{% endfor %}

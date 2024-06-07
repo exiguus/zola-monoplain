@@ -1,15 +1,8 @@
-{% extends "base.html" %}
-
-{% block content %}
-<header>
-  <h1>{{taxonomy.name | capitalize }}</h1>
-  <h2>{{ term.name | capitalize }}</h2>
-</header>
-{% for year, posts in term.pages | group_by(attribute="year") %}
-<section aria-labelledby="year-{{ year }}">
-  <h1 id="year-{{ year }}">{{ year }}</h1>
-  <ul aria-labelledby="year-{{ year }}">
-    {% for post in posts %}
+{% set section = get_section(path="posts/_index.md") %}
+<section aria-labelledby="latest-posts">
+  <h1 id="latest-posts">Latest Posts</h1>
+  <ul aria-labelledby="latest-posts">
+    {% for post in section.pages | slice(end=8) -%}
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
         <article>
@@ -29,4 +22,3 @@
     {% endfor %}
   </ul>
 </section>
-{% endfor %}{% endblock content %}

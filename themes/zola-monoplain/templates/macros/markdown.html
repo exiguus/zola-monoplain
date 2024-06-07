@@ -1,0 +1,30 @@
+{% macro example(title="example", type, code) -%}
+<iframe srcdoc='
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      // enable native light/dark mode
+      :root {
+        color-scheme: light dark;
+      }
+      html {
+        color-scheme: light dark;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    {{ code | safe }}
+  </body>
+</html>
+'>
+</iframe>
+{% endmacro -%}

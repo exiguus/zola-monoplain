@@ -1,0 +1,35 @@
+{% set section_images = get_section(path="gallery/_index.md") -%}
+{% if config.extra.gallery_show_posts -%}
+{% set section_posts = get_section(path="posts/_index.md") -%}
+{% set pages = section_posts.pages | concat(with=section_images.pages) -%}
+{% else -%}
+{% set pages = section_images.pages -%}
+{% endif -%}
+<section aria-labelledby="latest-images">
+  <h1 id="latest-images">Latest Images</h1>
+  <ul aria-labelledby="latest-images">
+    {% for post in pages | slice(end=6) -%}
+    {% if post.extra.images -%}
+    {% for image in post.extra.images -%}
+    {# { set image = resize_image(path=post.path ~ image, width=256, height=256, format=config.extra.image_format,
+    quality=config.extra.thumbnail_quality) %} #}
+    <li aria-labelledby="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
+      <a href="{{ post.permalink | safe }}" title="{{ post.title }} - {{ post.date }}">
+        <figure>
+          {{ images::responsive_thumbnail(path=post.colocated_path, src=image, default_size=128,
+          sizes=[128,256],
+          alt=post.title ~ " - " ~ post.date ) -}}
+          <figcaption id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
+            {{ post.title }}
+            <p>
+              <date>{{ post.date }}</date>
+            </p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    {% endfor -%}
+    {% endif -%}
+    {% endfor -%}
+  </ul>
+</section>

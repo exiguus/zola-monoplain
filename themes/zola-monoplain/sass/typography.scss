@@ -19,4 +19,11 @@ html {
 body {
     // monospace font-stack
     font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco, monospace;
+    
+    p {
+        code {
+            padding: 0 0.4rem;
+            box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem;
+        }
+    }
 }

@@ -1,9 +1,6 @@
 {% macro og_preview() %}
 <title>{{config.title}} | {{social::og_title() }}</title>
-<meta
-  property="og:title"
-  content="{{config.title}} | {{social::og_title() }}"
-/>
+<meta property="og:title" content="{{config.title}} | {{social::og_title() }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ current_url | safe }}" />
 <meta property="og:description" content="{{ social::og_description() }}" />
@@ -37,13 +34,14 @@ page.description -%} {{ page.description }} {%- else -%} {{ config.description
 {{ config.description }}
 {%- endif -%}
 {%- elif term -%}
-  {%- if term.name -%}
-    {{ term.name | striptags }}
-  {%- else -%}
-    {{ config.description }}
-  {%- endif -%}
+{%- if term.name -%}
+{{ term.name | striptags }}
+{%- else -%}
+{{ config.description }}
+{%- endif -%}
 {%- elif taxonomy -%}
-{%- if taxonomy.name -%} {{ taxonomy.name | striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif -%}
+{%- if taxonomy.name -%} {{ taxonomy.name | striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif
+-%}
 {% endmacro og_title %}
 
 {% macro og_image() %}

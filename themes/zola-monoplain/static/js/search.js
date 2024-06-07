@@ -173,11 +173,6 @@ function initSearch() {
   }, 150));
 }
 
-
-if (document.readyState === "complete" ||
-  (document.readyState !== "loading" && !document.documentElement.doScroll)
-) {
+window.addEventListener('load', function () {
   initSearch();
-} else {
-  document.addEventListener("DOMContentLoaded", initSearch);
-}
+});
