@@ -7,6 +7,7 @@
     "check": "pnpm check:zola",
     "check:zola": "if command -v zola &> /dev/null; then exit 0; else echo 'Zola is not installed' && exit 1; fi",
     "dev": "pnpm check:zola && zola serve",
+    "build": "pnpm check:zola && zola build",
     "cp:icons": "cp ./node_modules/@tabler/icons/tabler-sprite.svg ./static",
     "postinstall": "pnpm cp:icons"
   },

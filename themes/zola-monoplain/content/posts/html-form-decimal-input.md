@@ -58,7 +58,6 @@ This will not work. The value will be set to `6.7` instead of `6.66` or the Brow
 
 You might now set the step attribute to `0.01` and try to submit the form with the following value `6.66`:
 
-
 {{ markdown(title="input attr type is number and attr step is 0.01" type="html", code='
   <form>
     <input type="number" step="0.01" />

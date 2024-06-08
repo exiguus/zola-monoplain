@@ -70,12 +70,12 @@
 - [ ] Markdown
   - [ ] Graph support
   - [ ] Chart support
--   [x] Task List support
--   [x] Table support
--   [x] Thumbnail support
--   [x] Icon support
--   [x] Smilie support
--   [x] Footnote support
+- [x] Task List support
+- [x] Table support
+- [x] Thumbnail support
+- [x] Icon support
+- [x] Smilie support
+- [x] Footnote support
 - [x] Github
   - [ ] Pages Deployment
   - [ ] Actions
@@ -90,19 +90,20 @@
 - [x] Taxonomy, Tags
 - [x] Table of Content
 - [x] Shortcodes
-  - [ ] Details
-  - [ ] Markdown
-  - [ ] youtube
-  - [ ] spotify
+  - [x] Details
+  - [x] Markdown
+  - [x] youtube
+  - [x] spotify
 - [x] Search
   
 ## Docs
 
 - [x] Markdown Page
-- [ ] Icon Page
-- [ ] Shortcodes Page
+- [x] Icon Page
+- [x] Shortcode Page
 - [ ] Features Page
 - [ ] About Page
+- [ ] Images Page
 
 ## Theme
 

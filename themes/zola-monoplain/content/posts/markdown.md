@@ -8,9 +8,15 @@ authors = ["Simon Gattner"]
 tags= ["Zola", "Theme", "Markdown", "Typography"]
 +++
 
-## Headers
+## Introduction
 
-### Header 3
+Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+
+Zola support CommonMark as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables and task lists, and strikethrough text.
+
+## Syntax
+
+### Headers
 
 #### Header 4
 
@@ -32,7 +38,7 @@ tags= ["Zola", "Theme", "Markdown", "Typography"]
 ###### Header 6
 ```
 
-## Paragraphs
+### Paragraphs
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
@@ -48,7 +54,7 @@ And this is another paragraph.
 This is still part of the same paragraph.
 ```
 
-## Text Formatting
+### Text Formatting
 
 **Bold Text**
 *Italic Text*  
@@ -62,9 +68,9 @@ This is still part of the same paragraph.
 ***Bold and Italic Text***
 ```
 
-## Lists
+### Lists
 
-### Unordered List
+#### Unordered List
 
 - Item 1
 - Item 2
@@ -78,7 +84,7 @@ This is still part of the same paragraph.
   - Subitem 2.2
 ```
 
-### Ordered List
+#### Ordered List
 
 1. First item
 2. Second item
@@ -92,7 +98,7 @@ This is still part of the same paragraph.
    2. Subitem 2.2
 ```
 
-## Links and Images
+### Links and Images
 
 [Link to github](https://github.com/exiguus/zola-monoplain)
 
@@ -104,7 +110,7 @@ This is still part of the same paragraph.
 ![Github Profile Image](https://avatars.githubusercontent.com/u/1060633)
 ```
 
-## Blockquotes
+### Blockquotes
 
 > This is a blockquote.
 >
@@ -118,9 +124,9 @@ This is still part of the same paragraph.
 > - It can also have **bold** or *italic* text.
 ```
 
-## Code
+### Code
 
-### Inline Code
+#### Inline Code
 
 This is `inline code` example.
 
@@ -128,7 +134,7 @@ This is `inline code` example.
 This is `inline code` example.
 ```
 
-### Code Blocks
+#### Code Blocks
 
 ```python
 def hello_world():
@@ -146,7 +152,7 @@ hello_world()
 ```
 ````
 
-## Tables
+### Tables
 
 | Name    | Age | Gender |
 | ------- | --- | ------ |
@@ -162,7 +168,7 @@ hello_world()
 | Charlie | 22  | Male   |
 ```
 
-## Task Lists
+### Task Lists
 
 - [x] Task 1
 - [ ] Task 2
@@ -174,7 +180,7 @@ hello_world()
 - [ ] Task 3
 ```
 
-## Horizontal Rule
+### Horizontal Rule
 
 ---
 
@@ -182,15 +188,15 @@ hello_world()
 ---
 ```
 
-## Emojis
+### Emojis
 
-:smiley: :rocket: :octocat:
+:smiley: :rocket: :money_with_wings:
 
 ```markdown
-:smiley: :rocket: :octocat:
+:smiley: :rocket: :money_with_wings:
 ```
 
-## Escaping Characters
+### Escaping Characters
 
 To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 
@@ -198,7 +204,7 @@ To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 ```
 
-## HTML
+### HTML
 
 <dl>
   <dt>Definition list</dt>
@@ -218,7 +224,7 @@ To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 </dl>
 ```
 
-## Footnotes
+### Footnotes
 
 Here is a footnote reference,[^1] and another.[^longnote]
 
