@@ -62,7 +62,6 @@
   - [x] Clean HTML5
   - [x] Lean CSS
 - [X] Dark / Light Mode
-- [x] Atom Feed
 - [ ] Preview
 - [ ] Comments
   - [ ] via Mastodon
@@ -70,12 +69,12 @@
 - [ ] Markdown
   - [ ] Graph support
   - [ ] Chart support
-- [x] Task List support
-- [x] Table support
-- [x] Thumbnail support
-- [x] Icon support
-- [x] Smilie support
-- [x] Footnote support
+  - [x] Task List support
+  - [x] Table support
+  - [x] Thumbnail support
+  - [x] Icon support
+  - [x] Smilie support
+  - [x] Footnote support
 - [x] Github
   - [ ] Pages Deployment
   - [ ] Actions
@@ -84,9 +83,9 @@
   - [ ] Latest Projects
   - [x] Latest Images
   - [x] Home
-  - [x] Post
+  - [x] Posts
   - [x] Gallery
-  - [ ] Project
+  - [ ] Projects
 - [x] Taxonomy, Tags
 - [x] Table of Content
 - [x] Shortcodes
@@ -94,6 +93,15 @@
   - [x] Markdown
   - [x] youtube
   - [x] spotify
+- [x] Share / Subscribe
+  - [x] Open Graph
+  - [x] Atom Feed
+- [X] Onsite SEO
+  - [x] Meta Tags 
+  - [x] Valid and Semantic HTML
+- [ ] Dictionary
+  - [ ] Translation
+  - [ ] Multilingual sites
 - [x] Search
   
 ## Docs
@@ -101,7 +109,9 @@
 - [x] Markdown Page
 - [x] Icon Page
 - [x] Shortcode Page
+- [ ] Dictionary Page
 - [ ] Features Page
+- [ ] Configuration Page
 - [ ] About Page
 - [ ] Images Page
 

@@ -28,10 +28,44 @@ page.description -%} {{ page.description }} {%- else -%} {{ config.description
 -%}
 {% endmacro title %}
 
-{% macro image() %}
-{%- if page.extra.preview_img -%}
-{{ get_url(path=page.extra.preview_img) | safe }}
+{% macro tags() %}
+{%- if section -%}
+{%- if section.tags -%}
+{{ section.tags | join(sep=", ")}}{%- else -%}
+{{ config.extra.tags | join(sep=", ")}}{%- endif -%}
+{%- elif page -%}
+{%- if page.tags -%}
+{{ page.tags | join(sep=", ")}}
 {%- else -%}
-{{ get_url(path='images/og-preview.png') | safe }}
+{{ config.extra.tags | join(sep=", ")}}
 {%- endif -%}
-{% endmacro image %}
+{%- endif -%}
+{% endmacro tags %}
+
+{% macro authors() %}
+{%- if section -%}
+{%- if section.authors -%}
+{{ section.authors | join(sep=", ")}}{%- else -%}
+{{ config.extra.authors | join(sep=", ")}}{%- endif -%}
+{%- elif page -%}
+{%- if page.authors -%}
+{{ page.authors | join(sep=", ")}}
+{%- else -%}
+{{ config.extra.authors | join(sep=", ")}}
+{%- endif -%}
+{%- endif -%}
+{% endmacro authors %}
+
+{% macro date() %}
+{%- if section -%}
+{%- if section.date -%}
+{{ section.date }}{%- else -%}
+{{ config.extra.date }}{%- endif -%}
+{%- elif page -%}
+{%- if page.date -%}
+{{ page.date }}
+{%- else -%}
+{{ config.extra.date }}
+{%- endif -%}
+{%- endif -%}
+{% endmacro date %}

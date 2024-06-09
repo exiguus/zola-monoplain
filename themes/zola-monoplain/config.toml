@@ -44,30 +44,28 @@ anchors = "on"
 [extra]
 # show a debug section (containing the page data) at the top of the page
 debug = false
-
-keywords = "zola, theme, ink, hugo-ink"
-
+# meta
+tags = ["zola", "theme", "a11y", "accessible"]
+authors = ["Simon Gattner"]
+# search
 search_enabled = true
-
-
+# images
 image_resizing_disabled = false
 image_format = "webp"           # "auto", "jpg", "png", "webp"
-
 # responsive image shortcode 
 # example: {{ image(src="foo.jpeg", alt="some image") }}
 image_quality = 80
 images_default_size = 256
 images_sizes = [256, 384, 512, 576, 640, 768, 1024, 1152]
-
+# thumbs
 thumbnail_quality = 70
 thumbnail_default_size = 128
 thumbnail_sizes = [128, 256]
-
-
+# links
 link_github_username = "exiguus/zola-monospace"
 # link_twitter_username = ""
 link_mastodon_url = "https://toot.community/@exiguus"
-
+# menu
 menu_links = [
     { url = "$BASE_URL/", name = "Home" },
     { url = "$BASE_URL/posts/", name = "Posts" },
@@ -75,6 +73,6 @@ menu_links = [
     { url = "$BASE_URL/tags/", name = "Tags" },
     { url = "$BASE_URL/search/", name = "Search" },
 ]
-
+# gallery
 # show also images from posts in gallery
 gallery_show_posts = true

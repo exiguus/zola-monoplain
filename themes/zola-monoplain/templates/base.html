@@ -1,15 +1,17 @@
-{% import "macros/hooks.html" as hooks -%}
-{% import "macros/images.html" as images -%}
-{% import "macros/icons.html" as icons -%}
-{% import "macros/markdown.html" as markdown -%}
-{% import "components/skip_nav.html" as skip_nav -%}
+{%- import "macros/hooks.html" as hooks -%}
+{%- import "macros/images.html" as images -%}
+{%- import "macros/icons.html" as icons -%}
+{%- import "macros/markdown.html" as markdown -%}
+{%- import "macros/meta.html" as meta -%}
+{%- import "macros/opengraph.html" as opengraph -%}
+{%- import "components/skip_nav.html" as skip_nav -%}
 <!DOCTYPE html>
 <html lang="en" prefix="og:https://ogp.me/ns#">
 
 <head>
     {% block head -%}
     {% include "components/head.html" %}
-    {% endblock head -%}
+    {% endblock head %}
 </head>
 {% set id = current_path | trim_start_matches(pat='/') | trim_end_matches(pat='/') | replace(from='/', to='--') -%}
 {% if id -%}

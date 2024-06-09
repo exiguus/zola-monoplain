@@ -2,7 +2,7 @@
 <section aria-labelledby="latest-posts">
   <h1 id="latest-posts">Latest Posts</h1>
   <ul aria-labelledby="latest-posts">
-    {% for post in section.pages | slice(end=8) -%}
+    {% for post in section.pages | slice(end=6) -%}
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
         <article>
@@ -15,6 +15,7 @@
               </date>
             </p>
           </hgroup>
+          <p>{{ post.description }}</p>
           {{ hooks::posts_below_title(page=post) }}
         </article>
       </a>
