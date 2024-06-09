@@ -22,6 +22,6 @@
   "author": "Simon Gattner",
   "license": "MIT",
   "dependencies": {
-    "@tabler/icons": "^2.44.0"
+    "@tabler/icons": "^3.5.0"
   }
 }
