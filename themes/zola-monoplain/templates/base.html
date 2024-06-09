@@ -19,7 +19,7 @@
 <body id="{{ id }}" data-base-url="{{ config.base_url | safe }}">
     {% else -%}
 
-    <body id="home">
+    <body id="home" data-base-url="{{ config.base_url | safe }}">
         {% endif -%}
         {% block skip_nav -%}
         {% include "components/skip_nav.html" -%}

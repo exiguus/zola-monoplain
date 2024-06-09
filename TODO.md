@@ -97,8 +97,9 @@
   - [x] Open Graph
   - [x] Atom Feed
 - [X] Onsite SEO
-  - [x] Meta Tags 
+  - [x] Meta Tags
   - [x] Valid and Semantic HTML
+  - [x] Sitemap
 - [x] Dictionary
   - [x] Translation
   - [ ] Multilingual sites
@@ -107,8 +108,9 @@
 ## Docs
 
 - [x] Markdown Page
-- [x] Icon Page
-- [x] Shortcode Page
+- [x] Icons Page
+- [x] Emojis Page
+- [x] Shortcodes Page
 - [x] Dictionary Page
 - [ ] Features Page
 - [ ] Configuration Page
