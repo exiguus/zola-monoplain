@@ -23,6 +23,9 @@ importers:
       dprint:
         specifier: ^0.46.2
         version: 0.46.2
+      fta-cli:
+        specifier: ^2.0.0
+        version: 2.0.0
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -427,6 +430,10 @@ packages:
   find-up@7.0.0:
     resolution: {integrity: sha512-YyZM99iHrqLKjmt4LJDj58KI+fYyufRLBSYcqycxf//KpBk9FoewoGX0450m9nB44qrZnovzC2oeP5hUibxc/g==}
     engines: {node: '>=18'}
+
+  fta-cli@2.0.0:
+    resolution: {integrity: sha512-MdpB2ChAfzNhPck/+VHAlUHZFiSP7LSt91Vi4jJymg+oRVRWOKpKbd5fuk9zJZR1YQ4uDkYZEAop04Qkcueqaw==}
+    hasBin: true
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -1390,6 +1397,8 @@ snapshots:
       locate-path: 7.2.0
       path-exists: 5.0.0
       unicorn-magic: 0.1.0
+
+  fta-cli@2.0.0: {}
 
   function-bind@1.1.2: {}
 
