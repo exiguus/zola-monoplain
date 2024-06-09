@@ -7,21 +7,26 @@
 <script type="text/javascript" src="{{ get_url(path='js/search.js')|safe }}"></script>
 
 <form aria-labelledby="search">
-    <legend id="search">Search</legend>
+    <legend id="search">{{ trans(key="search_form_legend") }}</legend>
     <p>
-        <label for="search-input">Search Input</label>
-        <input id="search-input" data-search autofocus="true" type="search" placeholder="Search ↵"
-            autocomplete="search" />
+        <label for="search-input">{{ trans(key="search_form_input_label") }}</label>
+        <input
+            id="search-input"
+            data-search autofocus="true"
+            type="search"
+            placeholder="{{ trans(key="search_form_input_placeholder") }}"
+            autocomplete="search"
+        />
     </p>
     <p>
-        <button type="submit" data-search-submit>Search</button>
-        <button type="reset" data-search-clear>Clear</button>
+        <button type="submit" data-search-submit>{{ trans(key="search_form_submit") }}</button>
+        <button type="reset" data-search-clear>{{ trans(key="search_form_clear") }}</button>
     </p>
 
 </form>
-<section data-search-results aria-label="search results">
+<section data-search-results aria-label="{{ trans(key="a11y_search_results_label") }}">
     <ol data-search-results-items>
-        <li>No results</li>
+        <li>{{ trans(key="search_results_empty") }}</li>
     </ol>
 </section>
 

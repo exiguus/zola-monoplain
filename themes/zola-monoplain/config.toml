@@ -41,6 +41,43 @@ paths = "on"
 taxonomies = "on"
 anchors = "on"
 
+[translations]
+
+draft_label = "(Draft)"
+search_form_legend = "Search"
+search_form_input_label = "Text to search"
+search_form_input_placeholder = "Search ↵"
+search_form_submit = "Search"
+search_form_clear = "Clear"
+search_results_empty = "No results"
+toc_summary = "Table of contents"
+skipNav_label = "Skip Navigation"
+skipNav_link_content = "Skip to content"
+skipNav_link_toc = "Skip to table of contents"
+skipNav_link_nav = "Skip to navigation"
+mainNav_label = "Main Navigation"
+footer_links = "Links"
+footer_info = "Information"
+footer_links_github_title = "Github page"
+footer_links_github_text = "Github"
+footer_links_mastodon_title = "Mastodon Page"
+footer_links_mastodon_text = "Mastodon"
+footer_links_atom_title = "Atom Feed"
+footer_links_atom_text = "Atom"
+footer_links_zola_title = "Your one-stop static site engine"
+footer_links_zola_text = "Zola"
+footer_links_theme_title = "Github Zola 'mono/plain; a11y=true' Theme"
+footer_links_theme_text = "@exiguus mono/plain Zola"
+footer_theme = "Theme by"
+footer_powered_by = "Powered by"
+footer_made = "Made with love"
+debug_label = "debug"
+debug_summary = "Debug"
+post_summary_desc = "Post summary"
+page_summary_desc = "Page summary"
+a11y_taxonomy_list_label = "Tag list"
+a11y_search_results_label = "Search results"
+
 [extra]
 # show a debug section (containing the page data) at the top of the page
 debug = false
@@ -72,6 +109,7 @@ menu_links = [
     { url = "$BASE_URL/gallery/", name = "Gallery" },
     { url = "$BASE_URL/tags/", name = "Tags" },
     { url = "$BASE_URL/search/", name = "Search" },
+    { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
 ]
 # gallery
 # show also images from posts in gallery

@@ -16,7 +16,7 @@
 {% set id = current_path | trim_start_matches(pat='/') | trim_end_matches(pat='/') | replace(from='/', to='--') -%}
 {% if id -%}
 
-<body id="{{ id }}">
+<body id="{{ id }}" data-base-url="{{ config.base_url | safe }}">
     {% else -%}
 
     <body id="home">
@@ -47,6 +47,7 @@
         {% block body_end -%}
         {% endblock body_end -%}
     </body>
-    <script src="/js/main.js" defer="defer"></script>
+    <script src="{{ get_url(path='js/main.js') }}" integrity="sha384-{{ get_hash(path='js/main.js',
+        sha_type=384, base64=true) | safe }}" defer="defer"></script>
 
 </html>

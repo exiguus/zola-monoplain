@@ -15,7 +15,7 @@
         <article>
           <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <h1>{{ post.title }}</h1>
-            {% if post.draft %}<mark>(Draft)</mark>{% endif %}
+            {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{% endif %}
             <p>
               <date>
                 {{ post.date | date(format='%Y-%m-%d') }}

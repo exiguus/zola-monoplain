@@ -7,7 +7,7 @@
 
 {% if terms %}
 <section aria-label="tags">
-    <ul aria-label="tag-list">
+    <ul aria-label="{{ trans(key="a11y_taxonomy_list_label") }}">
         {% for term in terms %}
         <li aria-labelledby="term-{{ term.slug }}">
             <a id="term-{{ term.slug }}" href="{{ term.permalink | safe }}" title="{{ term.name }}">

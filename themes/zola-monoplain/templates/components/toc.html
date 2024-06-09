@@ -1,7 +1,7 @@
 {% if page.toc -%}
 <nav aria-labelledby="toc">
   <details aria-labelledby="toc" open="true">
-    <summary id="toc">Table of contents</summary>
+    <summary id="toc">{{ trans(key="toc_summary") }}</summary>
     <ol aria-labelledby="toc">
       {% for h1 in page.toc %}
       <li>

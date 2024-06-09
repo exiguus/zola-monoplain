@@ -99,8 +99,8 @@
 - [X] Onsite SEO
   - [x] Meta Tags 
   - [x] Valid and Semantic HTML
-- [ ] Dictionary
-  - [ ] Translation
+- [x] Dictionary
+  - [x] Translation
   - [ ] Multilingual sites
 - [x] Search
   
@@ -109,11 +109,12 @@
 - [x] Markdown Page
 - [x] Icon Page
 - [x] Shortcode Page
-- [ ] Dictionary Page
+- [x] Dictionary Page
 - [ ] Features Page
 - [ ] Configuration Page
 - [ ] About Page
 - [ ] Images Page
+- [ ] Zola Page
 
 ## Theme
 
