@@ -2,89 +2,87 @@
 @import "_variables.scss";
 
 %container {
-    margin: 0 auto;
-    width: 100%;
-    min-width: 16rem; // 256px @ 16px font-size
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 16rem; // 256px @ 16px font-size
+  padding: 0;
+  box-sizing: content-box;
 
-    @media (min-width: map.get($breakpoints, "small")) {
-        width: map.get($container, "small");
-    }
-    @media (min-width: map.get($breakpoints, "medium")) {
-        width: map.get($container, "medium");
-    }
-    @media (min-width: map.get($breakpoints, "large")) {
-        width: map.get($container, "large");
-    }
+  @media (min-width: map.get($breakpoints, "small")) {
+    width: map.get($container, "small");
+  }
+  @media (min-width: map.get($breakpoints, "medium")) {
+    width: map.get($container, "medium");
+  }
+  @media (min-width: map.get($breakpoints, "large")) {
+    width: map.get($container, "large");
+  }
 }
 
 %grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 100%;
-    grid-template-rows: 10rem 3rem auto 3rem;
-    @media (min-width: map.get($breakpoints, "small")) {
-        grid-template-rows: 10rem 2rem auto 3rem;
-    }
-    @media (min-width: map.get($breakpoints, "medium")) {
-        grid-template-rows: 8rem 2rem auto 3rem;
-    }
-    justify-content: center;
-    align-items: start;
-    min-height: calc(100vh - 2rem - 3rem);
-    margin: 0;
-    padding: 3rem 1rem 0 1rem;
-    box-sizing: content-box;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 100%;
+  grid-template-rows: 10rem 3rem auto 3rem;
+  @media (min-width: map.get($breakpoints, "small")) {
+    grid-template-rows: 10rem 2rem auto 3rem;
+  }
+  @media (min-width: map.get($breakpoints, "medium")) {
+    grid-template-rows: 8rem 2rem auto 3rem;
+  }
+  justify-content: center;
+  align-items: start;
+  min-height: calc(100vh - 2rem - 3rem);
+  margin: 0;
+  padding: 3rem 1rem 0 1rem;
+  box-sizing: content-box;
 }
 
 %list-vertical {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: start;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-
 %sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 %highlight-reset {
-    background: initial !important;
-    background-color: initial !important;
-    border: initial !important;
-    border-radius: initial !important;
-    box-shadow: initial !important;
-    color: initial !important;
-    background: inherit !important;
-    filter: brightness(0.5) !important;
-    box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem !important;
+  background: initial !important;
+  background-color: initial !important;
+  border: initial !important;
+  border-radius: initial !important;
+  box-shadow: initial !important;
+  color: initial !important;
+  background: inherit !important;
+  filter: brightness(0.5) !important;
+  box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem !important;
 
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: currentColor;
-        filter: blur(100vw) brightness(0.5) opacity(0.5);
-        z-index: -1;
-    }
-    
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    filter: blur(100vw) brightness(0.5) opacity(0.5);
+    z-index: -1;
+  }
 }

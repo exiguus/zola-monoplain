@@ -1,0 +1,21 @@
+
+.vercel
+.turbo
+.pnpm-debug.log
+.env
+.next
+TODO.md
+PACKAGES.md
+coverage
+node_modules
+dist
+out
+pnpm-*.yaml
+*.mock.json
+playwright-report
+build-graph.svg
+build-graph.html
+test-results/
+cache/
+# Error formatting templates/base.html. Message: SyntaxError: Unexpected closing tag "html". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (54:1)
+base.html

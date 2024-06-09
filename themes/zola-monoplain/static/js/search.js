@@ -58,10 +58,10 @@ function makeTeaser(body, terms) {
       }
 
       index += word.length;
-      index += 1;  // ' ' or '.' if last word in sentence
+      index += 1; // ' ' or '.' if last word in sentence
     }
 
-    index += 1;  // because we split at a two-char boundary '. '
+    index += 1; // because we split at a two-char boundary '. '
   }
 
   if (weighted.length === 0) {
@@ -122,19 +122,23 @@ function makeTeaser(body, terms) {
 }
 
 function formatSearchResultItem(item, terms) {
-  return `<a href="${item.ref}" title="${item.doc.title}">`
-    + '<article>'
-    + `<h1>${item.doc.title}</h1>`
-    + `<p>${makeTeaser(item.doc.body, terms)}</p>`
-    + '</article>'
-    + '</a>';
+  return (
+    `<a href="${item.ref}" title="${item.doc.title}">` +
+    "<article>" +
+    `<h1>${item.doc.title}</h1>` +
+    `<p>${makeTeaser(item.doc.body, terms)}</p>` +
+    "</article>" +
+    "</a>"
+  );
 }
 
 // TODO: use data- selecter instead of ids and classes
 function initSearch() {
   var $searchInput = document.querySelector("[data-search]");
   var $searchResults = document.querySelector("[data-search-results]");
-  var $searchResultsItems = document.querySelector("[data-search-results-items]");
+  var $searchResultsItems = document.querySelector(
+    "[data-search-results-items]",
+  );
   var MAX_ITEMS = 20;
 
   var options = {
@@ -142,37 +146,40 @@ function initSearch() {
     fields: {
       title: { boost: 2 },
       body: { boost: 1 },
-    }
+    },
   };
   var currentTerm = "";
   var index = elasticlunr.Index.load(window.searchIndex);
 
-  $searchInput.addEventListener("keyup", debounce(function () {
-    var term = $searchInput.value.trim();
-    if (term === currentTerm || !index) {
-      return;
-    }
-    $searchResults.style.display = term === "" ? "none" : "block";
-    $searchResultsItems.innerHTML = "";
-    currentTerm = term;
-    if (term === "") {
-      return;
-    }
+  $searchInput.addEventListener(
+    "keyup",
+    debounce(function () {
+      var term = $searchInput.value.trim();
+      if (term === currentTerm || !index) {
+        return;
+      }
+      $searchResults.style.display = term === "" ? "none" : "block";
+      $searchResultsItems.innerHTML = "";
+      currentTerm = term;
+      if (term === "") {
+        return;
+      }
 
-    var results = index.search(term, options);
-    if (results.length === 0) {
-      $searchResults.style.display = "none";
-      return;
-    }
+      var results = index.search(term, options);
+      if (results.length === 0) {
+        $searchResults.style.display = "none";
+        return;
+      }
 
-    for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-      var item = document.createElement("li");
-      item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
-      $searchResultsItems.appendChild(item);
-    }
-  }, 150));
+      for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
+        var item = document.createElement("li");
+        item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
+        $searchResultsItems.appendChild(item);
+      }
+    }, 150),
+  );
 }
 
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   initSearch();
 });

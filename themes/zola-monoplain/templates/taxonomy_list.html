@@ -1,22 +1,22 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <header>
-    <h1>{{ taxonomy.name | capitalize }}</h1>
+  <h1>{{ taxonomy.name | capitalize }}</h1>
 </header>
 
 {% if terms %}
 <section aria-label="tags">
-    <ul aria-label="{{ trans(key="a11y_taxonomy_list_label") }}">
-        {% for term in terms %}
-        <li aria-labelledby="term-{{ term.slug }}">
-            <a id="term-{{ term.slug }}" href="{{ term.permalink | safe }}" title="{{ term.name }}">
-                {{ term.name }}
-                (<count>{{ term.pages | length }}</count>)
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+  <ul aria-label="{{ trans(key='a11y_taxonomy_list_label' ) }}">
+    {% for term in terms %}
+    <li aria-labelledby="term-{{ term.slug }}">
+      <a
+        id="term-{{ term.slug }}"
+        href="{{ term.permalink | safe }}"
+        title="{{ term.name }}"
+      >
+        {{ term.name }} (<count>{{ term.pages | length }}</count>)
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
-{% endif %}
-{% endblock content %}
+{% endif %} {% endblock content %}

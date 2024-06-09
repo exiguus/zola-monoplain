@@ -1,71 +1,25 @@
-{% macro description() %} {%- if section -%} {%- if
-section.description -%} {{ section.description }} {%- else -%} {{
-config.description }} {%- endif -%} {%- elif page -%} {%- if page.summary |
-string -%} {{ page.summary | striptags | truncate(length=200) }} {%- elif
-page.description -%} {{ page.description }} {%- else -%} {{ config.description
-}} {%- endif -%} {%- endif -%}
-{% endmacro description %}
-
-{% macro title() %}
-{%- if section -%}
-{%- if section.title -%}
-{{ section.title | striptags }}{%- else -%}
-{{ config.description }}{%- endif -%}
-{%- elif page -%}
-{%- if page.title -%}
-{{ page.title | striptags }}
-{%- else -%}
-{{ config.description }}
-{%- endif -%}
-{%- elif term -%}
-{%- if term.name -%}
-{{ term.name | striptags }}
-{%- else -%}
-{{ config.description }}
-{%- endif -%}
-{%- elif taxonomy -%}
-{%- if taxonomy.name -%} {{ taxonomy.name | striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif
--%}
-{% endmacro title %}
-
-{% macro tags() %}
-{%- if section -%}
-{%- if section.tags -%}
-{{ section.tags | join(sep=", ")}}{%- else -%}
-{{ config.extra.tags | join(sep=", ")}}{%- endif -%}
-{%- elif page -%}
-{%- if page.tags -%}
-{{ page.tags | join(sep=", ")}}
-{%- else -%}
-{{ config.extra.tags | join(sep=", ")}}
-{%- endif -%}
-{%- endif -%}
-{% endmacro tags %}
-
-{% macro authors() %}
-{%- if section -%}
-{%- if section.authors -%}
-{{ section.authors | join(sep=", ")}}{%- else -%}
-{{ config.extra.authors | join(sep=", ")}}{%- endif -%}
-{%- elif page -%}
-{%- if page.authors -%}
-{{ page.authors | join(sep=", ")}}
-{%- else -%}
-{{ config.extra.authors | join(sep=", ")}}
-{%- endif -%}
-{%- endif -%}
-{% endmacro authors %}
-
-{% macro date() %}
-{%- if section -%}
-{%- if section.date -%}
-{{ section.date }}{%- else -%}
-{{ config.extra.date }}{%- endif -%}
-{%- elif page -%}
-{%- if page.date -%}
-{{ page.date }}
-{%- else -%}
-{{ config.extra.date }}
-{%- endif -%}
-{%- endif -%}
-{% endmacro date %}
+{% macro description() %} {%- if section -%} {%- if section.description -%} {{
+section.description }} {%- else -%} {{ config.description }} {%- endif -%} {%-
+elif page -%} {%- if page.summary | string -%} {{ page.summary | striptags |
+truncate(length=200) }} {%- elif page.description -%} {{ page.description }} {%-
+else -%} {{ config.description }} {%- endif -%} {%- endif -%} {% endmacro
+description %} {% macro title() %} {%- if section -%} {%- if section.title -%}
+{{ section.title | striptags }}{%- else -%} {{ config.description }}{%- endif
+-%} {%- elif page -%} {%- if page.title -%} {{ page.title | striptags }} {%-
+else -%} {{ config.description }} {%- endif -%} {%- elif term -%} {%- if
+term.name -%} {{ term.name | striptags }} {%- else -%} {{ config.description }}
+{%- endif -%} {%- elif taxonomy -%} {%- if taxonomy.name -%} {{ taxonomy.name |
+striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif -%}
+{% endmacro title %} {% macro tags() %} {%- if section -%} {%- if section.tags
+-%} {{ section.tags | join(sep=", ")}}{%- else -%} {{ config.extra.tags |
+join(sep=", ")}}{%- endif -%} {%- elif page -%} {%- if page.tags -%} {{
+page.tags | join(sep=", ")}} {%- else -%} {{ config.extra.tags | join(sep=",
+")}} {%- endif -%} {%- endif -%} {% endmacro tags %} {% macro authors() %} {%-
+if section -%} {%- if section.authors -%} {{ section.authors | join(sep=",
+")}}{%- else -%} {{ config.extra.authors | join(sep=", ")}}{%- endif -%} {%-
+elif page -%} {%- if page.authors -%} {{ page.authors | join(sep=", ")}} {%-
+else -%} {{ config.extra.authors | join(sep=", ")}} {%- endif -%} {%- endif -%}
+{% endmacro authors %} {% macro date() %} {%- if section -%} {%- if section.date
+-%} {{ section.date }}{%- else -%} {{ config.extra.date }}{%- endif -%} {%- elif
+page -%} {%- if page.date -%} {{ page.date }} {%- else -%} {{ config.extra.date
+}} {%- endif -%} {%- endif -%} {% endmacro date %}

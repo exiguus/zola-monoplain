@@ -3,7 +3,11 @@
   <h1 id="tags">Tags</h1>
   <ul aria-labelledby="tags">
     {% for tag in page.taxonomies["tags"] %}
-    <li aria-label="{{tag}}"><a href='{{ config.base_url | safe }}/tags/{{ tag | slugify }}'>{{ tag }}</a></li>
+    <li aria-label="{{tag}}"
+      ><a href="{{ config.base_url | safe }}/tags/{{ tag | slugify }}"
+        >{{ tag }}</a
+      ></li
+    >
     {% endfor %}
   </ul>
 </section>

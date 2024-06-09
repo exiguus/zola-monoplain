@@ -8,19 +8,11 @@
   ],
   "tasks": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "public/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["public/**"]
     },
     "test": {
-      "dependsOn": [
-        "^test",
-        "build",
-        "lint"
-      ],
+      "dependsOn": ["^test", "build", "lint"],
       "inputs": [
         "src/*.tsx",
         "src/*.ts",
@@ -35,15 +27,10 @@
       ]
     },
     "check": {
-      "dependsOn": [
-        "^check",
-        "build"
-      ]
+      "dependsOn": ["^check", "build"]
     },
     "lint": {
-      "dependsOn": [
-        "^lint"
-      ],
+      "dependsOn": ["^lint"],
       "inputs": [
         "*.tsx",
         "*.ts",
@@ -64,9 +51,7 @@
       ]
     },
     "format": {
-      "dependsOn": [
-        "^format"
-      ],
+      "dependsOn": ["^format"],
       "inputs": [
         "*.tsx",
         "*.ts",

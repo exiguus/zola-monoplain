@@ -57,15 +57,15 @@ This is still part of the same paragraph.
 ### Text Formatting
 
 **Bold Text**
-*Italic Text*  
-~~Strikethrough Text~~  
-***Bold and Italic Text***
+_Italic Text_\
+~~Strikethrough Text~~\
+**_Bold and Italic Text_**
 
 ```markdown
 **Bold Text**
-*Italic Text*
+_Italic Text_
 ~~Strikethrough Text~~
-***Bold and Italic Text***
+**_Bold and Italic Text_**
 ```
 
 ### Lists
@@ -115,13 +115,13 @@ This is still part of the same paragraph.
 > This is a blockquote.
 >
 > - Blockquote can have lists.
-> - It can also have **bold** or *italic* text.
+> - It can also have **bold** or _italic_ text.
 
 ```markdown
 > This is a blockquote.
 >
 > - Blockquote can have lists.
-> - It can also have **bold** or *italic* text.
+> - It can also have **bold** or _italic_ text.
 ```
 
 ### Code
@@ -210,7 +210,7 @@ To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
   <dt>Definition list</dt>
   <dd>Is something people use sometimes.</dd>
 
-  <dt>Markdown in HTML</dt>
+<dt>Markdown in HTML</dt>
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
@@ -229,7 +229,6 @@ To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
-
 [^longnote]: Here's one with multiple blocks.
 
     Subsequent paragraphs are indented to show that they belong to the previous footnote.
@@ -238,7 +237,6 @@ Here is a footnote reference,[^1] and another.[^longnote]
 Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
-
 [^longnote]: Here's one with multiple blocks.
 
     Subsequent paragraphs are indented to show that they belong to the previous footnote.

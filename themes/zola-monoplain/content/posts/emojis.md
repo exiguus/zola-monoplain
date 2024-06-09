@@ -1,4 +1,3 @@
-
 +++
 title = "Emojis"
 description = "Emoji by example"
@@ -30,6 +29,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 ## Emojis
 
 {{ markdown(title="😀 grinning face" type="markdown", code='
+
 <!--
 # 😀 grinning face
 #
@@ -48,9 +48,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :grinning: `:grinning:`
 ') }}
 {{ markdown(title="😃 grinning face with big eyes" type="markdown", code='
+
 <!--
 # 😃 grinning face with big eyes
 #
@@ -70,9 +72,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smiley: `:smiley:`
 ') }}
 {{ markdown(title="😄 grinning face with smiling eyes" type="markdown", code='
+
 <!--
 # 😄 grinning face with smiling eyes
 #
@@ -93,9 +97,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smile: `:smile:`
 ') }}
 {{ markdown(title="😁 beaming face with smiling eyes" type="markdown", code='
+
 <!--
 # 😁 beaming face with smiling eyes
 #
@@ -111,9 +117,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :grin: `:grin:`
 ') }}
 {{ markdown(title="😆 grinning squinting face" type="markdown", code='
+
 <!--
 # 😆 grinning squinting face
 #
@@ -133,11 +141,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :laughing: `:laughing:`
 
 :satisfied: `:satisfied:`
 ') }}
 {{ markdown(title="😅 grinning face with sweat" type="markdown", code='
+
 <!--
 # 😅 grinning face with sweat
 #
@@ -155,9 +165,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sweat_smile: `:sweat_smile:`
 ') }}
 {{ markdown(title="🤣 rolling on the floor laughing" type="markdown", code='
+
 <!--
 # 🤣 rolling on the floor laughing
 #
@@ -176,9 +188,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :rofl: `:rofl:`
 ') }}
 {{ markdown(title="😂 face with tears of joy" type="markdown", code='
+
 <!--
 # 😂 face with tears of joy
 #
@@ -196,9 +210,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :joy: `:joy:`
 ') }}
 {{ markdown(title="🙂 slightly smiling face" type="markdown", code='
+
 <!--
 # 🙂 slightly smiling face
 #
@@ -214,9 +230,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :slightly_smiling_face: `:slightly_smiling_face:`
 ') }}
 {{ markdown(title="🙃 upside-down face" type="markdown", code='
+
 <!--
 # 🙃 upside-down face
 #
@@ -232,9 +250,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :upside_down_face: `:upside_down_face:`
 ') }}
 {{ markdown(title="🫠 melting face" type="markdown", code='
+
 <!--
 # 🫠 melting face
 #
@@ -253,9 +273,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :melting_face: `:melting_face:`
 ') }}
 {{ markdown(title="😉 winking face" type="markdown", code='
+
 <!--
 # 😉 winking face
 #
@@ -273,9 +295,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wink: `:wink:`
 ') }}
 {{ markdown(title="😊 smiling face with smiling eyes" type="markdown", code='
+
 <!--
 # 😊 smiling face with smiling eyes
 #
@@ -293,9 +317,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :blush: `:blush:`
 ') }}
 {{ markdown(title="😇 smiling face with halo" type="markdown", code='
+
 <!--
 # 😇 smiling face with halo
 #
@@ -313,9 +339,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :innocent: `:innocent:`
 ') }}
 {{ markdown(title="🥰 smiling face with hearts" type="markdown", code='
+
 <!--
 # 🥰 smiling face with hearts
 #
@@ -333,9 +361,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :smiling_face_with_three_hearts: `:smiling_face_with_three_hearts:`
 ') }}
 {{ markdown(title="😍 smiling face with heart-eyes" type="markdown", code='
+
 <!--
 # 😍 smiling face with heart-eyes
 #
@@ -354,9 +384,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heart_eyes: `:heart_eyes:`
 ') }}
 {{ markdown(title="🤩 star-struck" type="markdown", code='
+
 <!--
 # 🤩 star-struck
 #
@@ -374,9 +406,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :star_struck: `:star_struck:`
 ') }}
 {{ markdown(title="😘 face blowing a kiss" type="markdown", code='
+
 <!--
 # 😘 face blowing a kiss
 #
@@ -394,9 +428,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kissing_heart: `:kissing_heart:`
 ') }}
 {{ markdown(title="😗 kissing face" type="markdown", code='
+
 <!--
 # 😗 kissing face
 #
@@ -412,9 +448,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kissing: `:kissing:`
 ') }}
 {{ markdown(title="☺️ smiling face" type="markdown", code='
+
 <!--
 # ☺️ smiling face
 #
@@ -433,9 +471,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :relaxed: `:relaxed:`
 ') }}
 {{ markdown(title="😚 kissing face with closed eyes" type="markdown", code='
+
 <!--
 # 😚 kissing face with closed eyes
 #
@@ -451,9 +491,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kissing_closed_eyes: `:kissing_closed_eyes:`
 ') }}
 {{ markdown(title="😙 kissing face with smiling eyes" type="markdown", code='
+
 <!--
 # 😙 kissing face with smiling eyes
 #
@@ -469,9 +511,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kissing_smiling_eyes: `:kissing_smiling_eyes:`
 ') }}
 {{ markdown(title="🥲 smiling face with tear" type="markdown", code='
+
 <!--
 # 🥲 smiling face with tear
 #
@@ -487,9 +531,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :smiling_face_with_tear: `:smiling_face_with_tear:`
 ') }}
 {{ markdown(title="😋 face savoring food" type="markdown", code='
+
 <!--
 # 😋 face savoring food
 #
@@ -508,9 +554,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :yum: `:yum:`
 ') }}
 {{ markdown(title="😛 face with tongue" type="markdown", code='
+
 <!--
 # 😛 face with tongue
 #
@@ -526,9 +574,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :stuck_out_tongue: `:stuck_out_tongue:`
 ') }}
 {{ markdown(title="😜 winking face with tongue" type="markdown", code='
+
 <!--
 # 😜 winking face with tongue
 #
@@ -547,9 +597,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :stuck_out_tongue_winking_eye: `:stuck_out_tongue_winking_eye:`
 ') }}
 {{ markdown(title="🤪 zany face" type="markdown", code='
+
 <!--
 # 🤪 zany face
 #
@@ -568,9 +620,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :zany_face: `:zany_face:`
 ') }}
 {{ markdown(title="😝 squinting face with tongue" type="markdown", code='
+
 <!--
 # 😝 squinting face with tongue
 #
@@ -588,9 +642,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :stuck_out_tongue_closed_eyes: `:stuck_out_tongue_closed_eyes:`
 ') }}
 {{ markdown(title="🤑 money-mouth face" type="markdown", code='
+
 <!--
 # 🤑 money-mouth face
 #
@@ -608,9 +664,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :money_mouth_face: `:money_mouth_face:`
 ') }}
 {{ markdown(title="🤗 smiling face with open hands" type="markdown", code='
+
 <!--
 # 🤗 smiling face with open hands
 #
@@ -626,9 +684,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :hugs: `:hugs:`
 ') }}
 {{ markdown(title="🤭 face with hand over mouth" type="markdown", code='
+
 <!--
 # 🤭 face with hand over mouth
 #
@@ -647,9 +707,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :hand_over_mouth: `:hand_over_mouth:`
 ') }}
 {{ markdown(title="🫢 face with open eyes and hand over mouth" type="markdown", code='
+
 <!--
 # 🫢 face with open eyes and hand over mouth
 #
@@ -668,9 +730,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :face_with_open_eyes_and_hand_over_mouth: `:face_with_open_eyes_and_hand_over_mouth:`
 ') }}
 {{ markdown(title="🫣 face with peeking eye" type="markdown", code='
+
 <!--
 # 🫣 face with peeking eye
 #
@@ -686,9 +750,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :face_with_peeking_eye: `:face_with_peeking_eye:`
 ') }}
 {{ markdown(title="🤫 shushing face" type="markdown", code='
+
 <!--
 # 🤫 shushing face
 #
@@ -707,9 +773,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :shushing_face: `:shushing_face:`
 ') }}
 {{ markdown(title="🤔 thinking face" type="markdown", code='
+
 <!--
 # 🤔 thinking face
 #
@@ -725,9 +793,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :thinking: `:thinking:`
 ') }}
 {{ markdown(title="🫡 saluting face" type="markdown", code='
+
 <!--
 # 🫡 saluting face
 #
@@ -745,9 +815,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :saluting_face: `:saluting_face:`
 ') }}
 {{ markdown(title="🤐 zipper-mouth face" type="markdown", code='
+
 <!--
 # 🤐 zipper-mouth face
 #
@@ -766,9 +838,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :zipper_mouth_face: `:zipper_mouth_face:`
 ') }}
 {{ markdown(title="🤨 face with raised eyebrow" type="markdown", code='
+
 <!--
 # 🤨 face with raised eyebrow
 #
@@ -786,9 +860,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :raised_eyebrow: `:raised_eyebrow:`
 ') }}
 {{ markdown(title="😐 neutral face" type="markdown", code='
+
 <!--
 # 😐 neutral face
 #
@@ -806,9 +882,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :neutral_face: `:neutral_face:`
 ') }}
 {{ markdown(title="😑 expressionless face" type="markdown", code='
+
 <!--
 # 😑 expressionless face
 #
@@ -824,9 +902,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :expressionless: `:expressionless:`
 ') }}
 {{ markdown(title="😶 face without mouth" type="markdown", code='
+
 <!--
 # 😶 face without mouth
 #
@@ -845,9 +925,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_mouth: `:no_mouth:`
 ') }}
 {{ markdown(title="🫥 dotted line face" type="markdown", code='
+
 <!--
 # 🫥 dotted line face
 #
@@ -865,9 +947,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :dotted_line_face: `:dotted_line_face:`
 ') }}
 {{ markdown(title="😶‍🌫️ face in clouds" type="markdown", code='
+
 <!--
 # 😶‍🌫️ face in clouds
 #
@@ -883,9 +967,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :face_in_clouds: `:face_in_clouds:`
 ') }}
 {{ markdown(title="😏 smirking face" type="markdown", code='
+
 <!--
 # 😏 smirking face
 #
@@ -903,9 +989,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smirk: `:smirk:`
 ') }}
 {{ markdown(title="😒 unamused face" type="markdown", code='
+
 <!--
 # 😒 unamused face
 #
@@ -923,9 +1011,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :unamused: `:unamused:`
 ') }}
 {{ markdown(title="🙄 face with rolling eyes" type="markdown", code='
+
 <!--
 # 🙄 face with rolling eyes
 #
@@ -941,9 +1031,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :roll_eyes: `:roll_eyes:`
 ') }}
 {{ markdown(title="😬 grimacing face" type="markdown", code='
+
 <!--
 # 😬 grimacing face
 #
@@ -959,9 +1051,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :grimacing: `:grimacing:`
 ') }}
 {{ markdown(title="😮‍💨 face exhaling" type="markdown", code='
+
 <!--
 # 😮‍💨 face exhaling
 #
@@ -977,9 +1071,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :face_exhaling: `:face_exhaling:`
 ') }}
 {{ markdown(title="🤥 lying face" type="markdown", code='
+
 <!--
 # 🤥 lying face
 #
@@ -997,9 +1093,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :lying_face: `:lying_face:`
 ') }}
 {{ markdown(title="🫨 shaking face" type="markdown", code='
+
 <!--
 # 🫨 shaking face
 #
@@ -1017,9 +1115,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :shaking_face: `:shaking_face:`
 ') }}
 {{ markdown(title="😌 relieved face" type="markdown", code='
+
 <!--
 # 😌 relieved face
 #
@@ -1037,9 +1137,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :relieved: `:relieved:`
 ') }}
 {{ markdown(title="😔 pensive face" type="markdown", code='
+
 <!--
 # 😔 pensive face
 #
@@ -1055,9 +1157,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pensive: `:pensive:`
 ') }}
 {{ markdown(title="😪 sleepy face" type="markdown", code='
+
 <!--
 # 😪 sleepy face
 #
@@ -1075,9 +1179,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sleepy: `:sleepy:`
 ') }}
 {{ markdown(title="🤤 drooling face" type="markdown", code='
+
 <!--
 # 🤤 drooling face
 #
@@ -1093,9 +1199,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :drooling_face: `:drooling_face:`
 ') }}
 {{ markdown(title="😴 sleeping face" type="markdown", code='
+
 <!--
 # 😴 sleeping face
 #
@@ -1113,9 +1221,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sleeping: `:sleeping:`
 ') }}
 {{ markdown(title="😷 face with medical mask" type="markdown", code='
+
 <!--
 # 😷 face with medical mask
 #
@@ -1134,9 +1244,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mask: `:mask:`
 ') }}
 {{ markdown(title="🤒 face with thermometer" type="markdown", code='
+
 <!--
 # 🤒 face with thermometer
 #
@@ -1154,9 +1266,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :face_with_thermometer: `:face_with_thermometer:`
 ') }}
 {{ markdown(title="🤕 face with head-bandage" type="markdown", code='
+
 <!--
 # 🤕 face with head-bandage
 #
@@ -1174,9 +1288,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :face_with_head_bandage: `:face_with_head_bandage:`
 ') }}
 {{ markdown(title="🤢 nauseated face" type="markdown", code='
+
 <!--
 # 🤢 nauseated face
 #
@@ -1196,9 +1312,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :nauseated_face: `:nauseated_face:`
 ') }}
 {{ markdown(title="🤮 face vomiting" type="markdown", code='
+
 <!--
 # 🤮 face vomiting
 #
@@ -1217,9 +1335,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :vomiting_face: `:vomiting_face:`
 ') }}
 {{ markdown(title="🤧 sneezing face" type="markdown", code='
+
 <!--
 # 🤧 sneezing face
 #
@@ -1238,9 +1358,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :sneezing_face: `:sneezing_face:`
 ') }}
 {{ markdown(title="🥵 hot face" type="markdown", code='
+
 <!--
 # 🥵 hot face
 #
@@ -1259,9 +1381,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :hot_face: `:hot_face:`
 ') }}
 {{ markdown(title="🥶 cold face" type="markdown", code='
+
 <!--
 # 🥶 cold face
 #
@@ -1280,9 +1404,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :cold_face: `:cold_face:`
 ') }}
 {{ markdown(title="🥴 woozy face" type="markdown", code='
+
 <!--
 # 🥴 woozy face
 #
@@ -1300,9 +1426,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :woozy_face: `:woozy_face:`
 ') }}
 {{ markdown(title="😵 face with crossed-out eyes" type="markdown", code='
+
 <!--
 # 😵 face with crossed-out eyes
 #
@@ -1318,9 +1446,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dizzy_face: `:dizzy_face:`
 ') }}
 {{ markdown(title="😵‍💫 face with spiral eyes" type="markdown", code='
+
 <!--
 # 😵‍💫 face with spiral eyes
 #
@@ -1336,9 +1466,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :face_with_spiral_eyes: `:face_with_spiral_eyes:`
 ') }}
 {{ markdown(title="🤯 exploding head" type="markdown", code='
+
 <!--
 # 🤯 exploding head
 #
@@ -1357,9 +1489,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :exploding_head: `:exploding_head:`
 ') }}
 {{ markdown(title="🤠 cowboy hat face" type="markdown", code='
+
 <!--
 # 🤠 cowboy hat face
 #
@@ -1375,9 +1509,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :cowboy_hat_face: `:cowboy_hat_face:`
 ') }}
 {{ markdown(title="🥳 partying face" type="markdown", code='
+
 <!--
 # 🥳 partying face
 #
@@ -1396,9 +1532,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :partying_face: `:partying_face:`
 ') }}
 {{ markdown(title="🥸 disguised face" type="markdown", code='
+
 <!--
 # 🥸 disguised face
 #
@@ -1414,9 +1552,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :disguised_face: `:disguised_face:`
 ') }}
 {{ markdown(title="😎 smiling face with sunglasses" type="markdown", code='
+
 <!--
 # 😎 smiling face with sunglasses
 #
@@ -1434,9 +1574,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sunglasses: `:sunglasses:`
 ') }}
 {{ markdown(title="🤓 nerd face" type="markdown", code='
+
 <!--
 # 🤓 nerd face
 #
@@ -1455,9 +1597,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :nerd_face: `:nerd_face:`
 ') }}
 {{ markdown(title="🧐 face with monocle" type="markdown", code='
+
 <!--
 # 🧐 face with monocle
 #
@@ -1473,9 +1617,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :monocle_face: `:monocle_face:`
 ') }}
 {{ markdown(title="😕 confused face" type="markdown", code='
+
 <!--
 # 😕 confused face
 #
@@ -1491,9 +1637,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :confused: `:confused:`
 ') }}
 {{ markdown(title="🫤 face with diagonal mouth" type="markdown", code='
+
 <!--
 # 🫤 face with diagonal mouth
 #
@@ -1511,9 +1659,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :face_with_diagonal_mouth: `:face_with_diagonal_mouth:`
 ') }}
 {{ markdown(title="😟 worried face" type="markdown", code='
+
 <!--
 # 😟 worried face
 #
@@ -1531,9 +1681,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :worried: `:worried:`
 ') }}
 {{ markdown(title="🙁 slightly frowning face" type="markdown", code='
+
 <!--
 # 🙁 slightly frowning face
 #
@@ -1549,9 +1701,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :slightly_frowning_face: `:slightly_frowning_face:`
 ') }}
 {{ markdown(title="☹️ frowning face" type="markdown", code='
+
 <!--
 # ☹️ frowning face
 #
@@ -1567,9 +1721,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :frowning_face: `:frowning_face:`
 ') }}
 {{ markdown(title="😮 face with open mouth" type="markdown", code='
+
 <!--
 # 😮 face with open mouth
 #
@@ -1589,9 +1745,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :open_mouth: `:open_mouth:`
 ') }}
 {{ markdown(title="😯 hushed face" type="markdown", code='
+
 <!--
 # 😯 hushed face
 #
@@ -1610,9 +1768,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hushed: `:hushed:`
 ') }}
 {{ markdown(title="😲 astonished face" type="markdown", code='
+
 <!--
 # 😲 astonished face
 #
@@ -1631,9 +1791,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :astonished: `:astonished:`
 ') }}
 {{ markdown(title="😳 flushed face" type="markdown", code='
+
 <!--
 # 😳 flushed face
 #
@@ -1649,9 +1811,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :flushed: `:flushed:`
 ') }}
 {{ markdown(title="🥺 pleading face" type="markdown", code='
+
 <!--
 # 🥺 pleading face
 #
@@ -1670,9 +1834,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :pleading_face: `:pleading_face:`
 ') }}
 {{ markdown(title="🥹 face holding back tears" type="markdown", code='
+
 <!--
 # 🥹 face holding back tears
 #
@@ -1691,9 +1857,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :face_holding_back_tears: `:face_holding_back_tears:`
 ') }}
 {{ markdown(title="😦 frowning face with open mouth" type="markdown", code='
+
 <!--
 # 😦 frowning face with open mouth
 #
@@ -1709,9 +1877,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :frowning: `:frowning:`
 ') }}
 {{ markdown(title="😧 anguished face" type="markdown", code='
+
 <!--
 # 😧 anguished face
 #
@@ -1729,9 +1899,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :anguished: `:anguished:`
 ') }}
 {{ markdown(title="😨 fearful face" type="markdown", code='
+
 <!--
 # 😨 fearful face
 #
@@ -1751,9 +1923,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fearful: `:fearful:`
 ') }}
 {{ markdown(title="😰 anxious face with sweat" type="markdown", code='
+
 <!--
 # 😰 anxious face with sweat
 #
@@ -1771,9 +1945,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cold_sweat: `:cold_sweat:`
 ') }}
 {{ markdown(title="😥 sad but relieved face" type="markdown", code='
+
 <!--
 # 😥 sad but relieved face
 #
@@ -1793,9 +1969,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :disappointed_relieved: `:disappointed_relieved:`
 ') }}
 {{ markdown(title="😢 crying face" type="markdown", code='
+
 <!--
 # 😢 crying face
 #
@@ -1814,9 +1992,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cry: `:cry:`
 ') }}
 {{ markdown(title="😭 loudly crying face" type="markdown", code='
+
 <!--
 # 😭 loudly crying face
 #
@@ -1836,9 +2016,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sob: `:sob:`
 ') }}
 {{ markdown(title="😱 face screaming in fear" type="markdown", code='
+
 <!--
 # 😱 face screaming in fear
 #
@@ -1857,9 +2039,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :scream: `:scream:`
 ') }}
 {{ markdown(title="😖 confounded face" type="markdown", code='
+
 <!--
 # 😖 confounded face
 #
@@ -1875,9 +2059,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :confounded: `:confounded:`
 ') }}
 {{ markdown(title="😣 persevering face" type="markdown", code='
+
 <!--
 # 😣 persevering face
 #
@@ -1895,9 +2081,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :persevere: `:persevere:`
 ') }}
 {{ markdown(title="😞 disappointed face" type="markdown", code='
+
 <!--
 # 😞 disappointed face
 #
@@ -1915,9 +2103,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :disappointed: `:disappointed:`
 ') }}
 {{ markdown(title="😓 downcast face with sweat" type="markdown", code='
+
 <!--
 # 😓 downcast face with sweat
 #
@@ -1933,9 +2123,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sweat: `:sweat:`
 ') }}
 {{ markdown(title="😩 weary face" type="markdown", code='
+
 <!--
 # 😩 weary face
 #
@@ -1953,9 +2145,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :weary: `:weary:`
 ') }}
 {{ markdown(title="😫 tired face" type="markdown", code='
+
 <!--
 # 😫 tired face
 #
@@ -1974,9 +2168,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tired_face: `:tired_face:`
 ') }}
 {{ markdown(title="🥱 yawning face" type="markdown", code='
+
 <!--
 # 🥱 yawning face
 #
@@ -1992,9 +2188,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :yawning_face: `:yawning_face:`
 ') }}
 {{ markdown(title="😤 face with steam from nose" type="markdown", code='
+
 <!--
 # 😤 face with steam from nose
 #
@@ -2012,9 +2210,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :triumph: `:triumph:`
 ') }}
 {{ markdown(title="😡 enraged face" type="markdown", code='
+
 <!--
 # 😡 enraged face
 #
@@ -2033,11 +2233,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rage: `:rage:`
 
 :pout: `:pout:`
 ') }}
 {{ markdown(title="😠 angry face" type="markdown", code='
+
 <!--
 # 😠 angry face
 #
@@ -2056,9 +2258,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :angry: `:angry:`
 ') }}
 {{ markdown(title="🤬 face with symbols on mouth" type="markdown", code='
+
 <!--
 # 🤬 face with symbols on mouth
 #
@@ -2076,9 +2280,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :cursing_face: `:cursing_face:`
 ') }}
 {{ markdown(title="😈 smiling face with horns" type="markdown", code='
+
 <!--
 # 😈 smiling face with horns
 #
@@ -2098,9 +2304,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smiling_imp: `:smiling_imp:`
 ') }}
 {{ markdown(title="👿 angry face with horns" type="markdown", code='
+
 <!--
 # 👿 angry face with horns
 #
@@ -2121,9 +2329,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :imp: `:imp:`
 ') }}
 {{ markdown(title="💀 skull" type="markdown", code='
+
 <!--
 # 💀 skull
 #
@@ -2143,9 +2353,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :skull: `:skull:`
 ') }}
 {{ markdown(title="☠️ skull and crossbones" type="markdown", code='
+
 <!--
 # ☠️ skull and crossbones
 #
@@ -2164,9 +2376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :skull_and_crossbones: `:skull_and_crossbones:`
 ') }}
 {{ markdown(title="💩 pile of poo" type="markdown", code='
+
 <!--
 # 💩 pile of poo
 #
@@ -2186,6 +2400,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hankey: `:hankey:`
 
 :poop: `:poop:`
@@ -2193,6 +2408,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 :shit: `:shit:`
 ') }}
 {{ markdown(title="🤡 clown face" type="markdown", code='
+
 <!--
 # 🤡 clown face
 #
@@ -2208,9 +2424,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :clown_face: `:clown_face:`
 ') }}
 {{ markdown(title="👹 ogre" type="markdown", code='
+
 <!--
 # 👹 ogre
 #
@@ -2228,9 +2446,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :japanese_ogre: `:japanese_ogre:`
 ') }}
 {{ markdown(title="👺 goblin" type="markdown", code='
+
 <!--
 # 👺 goblin
 #
@@ -2246,9 +2466,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :japanese_goblin: `:japanese_goblin:`
 ') }}
 {{ markdown(title="👻 ghost" type="markdown", code='
+
 <!--
 # 👻 ghost
 #
@@ -2266,9 +2488,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ghost: `:ghost:`
 ') }}
 {{ markdown(title="👽 alien" type="markdown", code='
+
 <!--
 # 👽 alien
 #
@@ -2286,9 +2510,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :alien: `:alien:`
 ') }}
 {{ markdown(title="👾 alien monster" type="markdown", code='
+
 <!--
 # 👾 alien monster
 #
@@ -2307,9 +2533,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :space_invader: `:space_invader:`
 ') }}
 {{ markdown(title="🤖 robot" type="markdown", code='
+
 <!--
 # 🤖 robot
 #
@@ -2325,9 +2553,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :robot: `:robot:`
 ') }}
 {{ markdown(title="😺 grinning cat" type="markdown", code='
+
 <!--
 # 😺 grinning cat
 #
@@ -2343,9 +2573,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smiley_cat: `:smiley_cat:`
 ') }}
 {{ markdown(title="😸 grinning cat with smiling eyes" type="markdown", code='
+
 <!--
 # 😸 grinning cat with smiling eyes
 #
@@ -2361,9 +2593,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smile_cat: `:smile_cat:`
 ') }}
 {{ markdown(title="😹 cat with tears of joy" type="markdown", code='
+
 <!--
 # 😹 cat with tears of joy
 #
@@ -2379,9 +2613,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :joy_cat: `:joy_cat:`
 ') }}
 {{ markdown(title="😻 smiling cat with heart-eyes" type="markdown", code='
+
 <!--
 # 😻 smiling cat with heart-eyes
 #
@@ -2397,9 +2633,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heart_eyes_cat: `:heart_eyes_cat:`
 ') }}
 {{ markdown(title="😼 cat with wry smile" type="markdown", code='
+
 <!--
 # 😼 cat with wry smile
 #
@@ -2415,9 +2653,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smirk_cat: `:smirk_cat:`
 ') }}
 {{ markdown(title="😽 kissing cat" type="markdown", code='
+
 <!--
 # 😽 kissing cat
 #
@@ -2433,9 +2673,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kissing_cat: `:kissing_cat:`
 ') }}
 {{ markdown(title="🙀 weary cat" type="markdown", code='
+
 <!--
 # 🙀 weary cat
 #
@@ -2453,9 +2695,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :scream_cat: `:scream_cat:`
 ') }}
 {{ markdown(title="😿 crying cat" type="markdown", code='
+
 <!--
 # 😿 crying cat
 #
@@ -2474,9 +2718,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :crying_cat_face: `:crying_cat_face:`
 ') }}
 {{ markdown(title="😾 pouting cat" type="markdown", code='
+
 <!--
 # 😾 pouting cat
 #
@@ -2492,9 +2738,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pouting_cat: `:pouting_cat:`
 ') }}
 {{ markdown(title="🙈 see-no-evil monkey" type="markdown", code='
+
 <!--
 # 🙈 see-no-evil monkey
 #
@@ -2514,9 +2762,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :see_no_evil: `:see_no_evil:`
 ') }}
 {{ markdown(title="🙉 hear-no-evil monkey" type="markdown", code='
+
 <!--
 # 🙉 hear-no-evil monkey
 #
@@ -2535,9 +2785,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hear_no_evil: `:hear_no_evil:`
 ') }}
 {{ markdown(title="🙊 speak-no-evil monkey" type="markdown", code='
+
 <!--
 # 🙊 speak-no-evil monkey
 #
@@ -2557,9 +2809,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :speak_no_evil: `:speak_no_evil:`
 ') }}
 {{ markdown(title="💌 love letter" type="markdown", code='
+
 <!--
 # 💌 love letter
 #
@@ -2578,9 +2832,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :love_letter: `:love_letter:`
 ') }}
 {{ markdown(title="💘 heart with arrow" type="markdown", code='
+
 <!--
 # 💘 heart with arrow
 #
@@ -2599,9 +2855,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cupid: `:cupid:`
 ') }}
 {{ markdown(title="💝 heart with ribbon" type="markdown", code='
+
 <!--
 # 💝 heart with ribbon
 #
@@ -2619,9 +2877,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :gift_heart: `:gift_heart:`
 ') }}
 {{ markdown(title="💖 sparkling heart" type="markdown", code='
+
 <!--
 # 💖 sparkling heart
 #
@@ -2637,9 +2897,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sparkling_heart: `:sparkling_heart:`
 ') }}
 {{ markdown(title="💗 growing heart" type="markdown", code='
+
 <!--
 # 💗 growing heart
 #
@@ -2655,9 +2917,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heartpulse: `:heartpulse:`
 ') }}
 {{ markdown(title="💓 beating heart" type="markdown", code='
+
 <!--
 # 💓 beating heart
 #
@@ -2673,9 +2937,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heartbeat: `:heartbeat:`
 ') }}
 {{ markdown(title="💞 revolving hearts" type="markdown", code='
+
 <!--
 # 💞 revolving hearts
 #
@@ -2691,9 +2957,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :revolving_hearts: `:revolving_hearts:`
 ') }}
 {{ markdown(title="💕 two hearts" type="markdown", code='
+
 <!--
 # 💕 two hearts
 #
@@ -2709,9 +2977,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :two_hearts: `:two_hearts:`
 ') }}
 {{ markdown(title="💟 heart decoration" type="markdown", code='
+
 <!--
 # 💟 heart decoration
 #
@@ -2727,9 +2997,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heart_decoration: `:heart_decoration:`
 ') }}
 {{ markdown(title="❣️ heart exclamation" type="markdown", code='
+
 <!--
 # ❣️ heart exclamation
 #
@@ -2745,9 +3017,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :heavy_heart_exclamation: `:heavy_heart_exclamation:`
 ') }}
 {{ markdown(title="💔 broken heart" type="markdown", code='
+
 <!--
 # 💔 broken heart
 #
@@ -2763,9 +3037,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :broken_heart: `:broken_heart:`
 ') }}
 {{ markdown(title="❤️‍🔥 heart on fire" type="markdown", code='
+
 <!--
 # ❤️‍🔥 heart on fire
 #
@@ -2781,9 +3057,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :heart_on_fire: `:heart_on_fire:`
 ') }}
 {{ markdown(title="❤️‍🩹 mending heart" type="markdown", code='
+
 <!--
 # ❤️‍🩹 mending heart
 #
@@ -2799,9 +3077,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :mending_heart: `:mending_heart:`
 ') }}
 {{ markdown(title="❤️ red heart" type="markdown", code='
+
 <!--
 # ❤️ red heart
 #
@@ -2819,9 +3099,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heart: `:heart:`
 ') }}
 {{ markdown(title="🩷 pink heart" type="markdown", code='
+
 <!--
 # 🩷 pink heart
 #
@@ -2837,9 +3119,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :pink_heart: `:pink_heart:`
 ') }}
 {{ markdown(title="🧡 orange heart" type="markdown", code='
+
 <!--
 # 🧡 orange heart
 #
@@ -2855,9 +3139,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :orange_heart: `:orange_heart:`
 ') }}
 {{ markdown(title="💛 yellow heart" type="markdown", code='
+
 <!--
 # 💛 yellow heart
 #
@@ -2873,9 +3159,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :yellow_heart: `:yellow_heart:`
 ') }}
 {{ markdown(title="💚 green heart" type="markdown", code='
+
 <!--
 # 💚 green heart
 #
@@ -2891,9 +3179,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :green_heart: `:green_heart:`
 ') }}
 {{ markdown(title="💙 blue heart" type="markdown", code='
+
 <!--
 # 💙 blue heart
 #
@@ -2909,9 +3199,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :blue_heart: `:blue_heart:`
 ') }}
 {{ markdown(title="🩵 light blue heart" type="markdown", code='
+
 <!--
 # 🩵 light blue heart
 #
@@ -2927,9 +3219,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :light_blue_heart: `:light_blue_heart:`
 ') }}
 {{ markdown(title="💜 purple heart" type="markdown", code='
+
 <!--
 # 💜 purple heart
 #
@@ -2945,9 +3239,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :purple_heart: `:purple_heart:`
 ') }}
 {{ markdown(title="🤎 brown heart" type="markdown", code='
+
 <!--
 # 🤎 brown heart
 #
@@ -2963,9 +3259,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :brown_heart: `:brown_heart:`
 ') }}
 {{ markdown(title="🖤 black heart" type="markdown", code='
+
 <!--
 # 🖤 black heart
 #
@@ -2981,9 +3279,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :black_heart: `:black_heart:`
 ') }}
 {{ markdown(title="🩶 grey heart" type="markdown", code='
+
 <!--
 # 🩶 grey heart
 #
@@ -2999,9 +3299,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :grey_heart: `:grey_heart:`
 ') }}
 {{ markdown(title="🤍 white heart" type="markdown", code='
+
 <!--
 # 🤍 white heart
 #
@@ -3017,9 +3319,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :white_heart: `:white_heart:`
 ') }}
 {{ markdown(title="💋 kiss mark" type="markdown", code='
+
 <!--
 # 💋 kiss mark
 #
@@ -3037,9 +3341,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kiss: `:kiss:`
 ') }}
 {{ markdown(title="💯 hundred points" type="markdown", code='
+
 <!--
 # 💯 hundred points
 #
@@ -3058,9 +3364,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :100: `:100:`
 ') }}
 {{ markdown(title="💢 anger symbol" type="markdown", code='
+
 <!--
 # 💢 anger symbol
 #
@@ -3078,9 +3386,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :anger: `:anger:`
 ') }}
 {{ markdown(title="💥 collision" type="markdown", code='
+
 <!--
 # 💥 collision
 #
@@ -3099,11 +3409,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :boom: `:boom:`
 
 :collision: `:collision:`
 ') }}
 {{ markdown(title="💫 dizzy" type="markdown", code='
+
 <!--
 # 💫 dizzy
 #
@@ -3121,9 +3433,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dizzy: `:dizzy:`
 ') }}
 {{ markdown(title="💦 sweat droplets" type="markdown", code='
+
 <!--
 # 💦 sweat droplets
 #
@@ -3142,9 +3456,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sweat_drops: `:sweat_drops:`
 ') }}
 {{ markdown(title="💨 dashing away" type="markdown", code='
+
 <!--
 # 💨 dashing away
 #
@@ -3164,9 +3480,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dash: `:dash:`
 ') }}
 {{ markdown(title="🕳️ hole" type="markdown", code='
+
 <!--
 # 🕳️ hole
 #
@@ -3182,9 +3500,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :hole: `:hole:`
 ') }}
 {{ markdown(title="💬 speech balloon" type="markdown", code='
+
 <!--
 # 💬 speech balloon
 #
@@ -3202,9 +3522,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :speech_balloon: `:speech_balloon:`
 ') }}
 {{ markdown(title="👁️‍🗨️ eye in speech bubble" type="markdown", code='
+
 <!--
 # 👁️‍🗨️ eye in speech bubble
 #
@@ -3220,9 +3542,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :eye_speech_bubble: `:eye_speech_bubble:`
 ') }}
 {{ markdown(title="🗨️ left speech bubble" type="markdown", code='
+
 <!--
 # 🗨️ left speech bubble
 #
@@ -3238,9 +3562,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :left_speech_bubble: `:left_speech_bubble:`
 ') }}
 {{ markdown(title="🗯️ right anger bubble" type="markdown", code='
+
 <!--
 # 🗯️ right anger bubble
 #
@@ -3256,9 +3582,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :right_anger_bubble: `:right_anger_bubble:`
 ') }}
 {{ markdown(title="💭 thought balloon" type="markdown", code='
+
 <!--
 # 💭 thought balloon
 #
@@ -3276,9 +3604,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :thought_balloon: `:thought_balloon:`
 ') }}
 {{ markdown(title="💤 ZZZ" type="markdown", code='
+
 <!--
 # 💤 ZZZ
 #
@@ -3296,9 +3626,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :zzz: `:zzz:`
 ') }}
 {{ markdown(title="👋 waving hand" type="markdown", code='
+
 <!--
 # 👋 waving hand
 #
@@ -3317,9 +3649,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :wave: `:wave:`
 ') }}
 {{ markdown(title="🤚 raised back of hand" type="markdown", code='
+
 <!--
 # 🤚 raised back of hand
 #
@@ -3336,9 +3670,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :raised_back_of_hand: `:raised_back_of_hand:`
 ') }}
 {{ markdown(title="🖐️ hand with fingers splayed" type="markdown", code='
+
 <!--
 # 🖐️ hand with fingers splayed
 #
@@ -3355,9 +3691,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :raised_hand_with_fingers_splayed: `:raised_hand_with_fingers_splayed:`
 ') }}
 {{ markdown(title="✋ raised hand" type="markdown", code='
+
 <!--
 # ✋ raised hand
 #
@@ -3378,11 +3716,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :hand: `:hand:`
 
 :raised_hand: `:raised_hand:`
 ') }}
 {{ markdown(title="🖖 vulcan salute" type="markdown", code='
+
 <!--
 # 🖖 vulcan salute
 #
@@ -3402,9 +3742,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :vulcan_salute: `:vulcan_salute:`
 ') }}
 {{ markdown(title="🫱 rightwards hand" type="markdown", code='
+
 <!--
 # 🫱 rightwards hand
 #
@@ -3421,9 +3763,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :rightwards_hand: `:rightwards_hand:`
 ') }}
 {{ markdown(title="🫲 leftwards hand" type="markdown", code='
+
 <!--
 # 🫲 leftwards hand
 #
@@ -3440,9 +3784,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :leftwards_hand: `:leftwards_hand:`
 ') }}
 {{ markdown(title="🫳 palm down hand" type="markdown", code='
+
 <!--
 # 🫳 palm down hand
 #
@@ -3459,9 +3805,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :palm_down_hand: `:palm_down_hand:`
 ') }}
 {{ markdown(title="🫴 palm up hand" type="markdown", code='
+
 <!--
 # 🫴 palm up hand
 #
@@ -3478,9 +3826,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :palm_up_hand: `:palm_up_hand:`
 ') }}
 {{ markdown(title="🫷 leftwards pushing hand" type="markdown", code='
+
 <!--
 # 🫷 leftwards pushing hand
 #
@@ -3497,9 +3847,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :leftwards_pushing_hand: `:leftwards_pushing_hand:`
 ') }}
 {{ markdown(title="🫸 rightwards pushing hand" type="markdown", code='
+
 <!--
 # 🫸 rightwards pushing hand
 #
@@ -3516,9 +3868,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :rightwards_pushing_hand: `:rightwards_pushing_hand:`
 ') }}
 {{ markdown(title="👌 OK hand" type="markdown", code='
+
 <!--
 # 👌 OK hand
 #
@@ -3535,9 +3889,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ok_hand: `:ok_hand:`
 ') }}
 {{ markdown(title="🤌 pinched fingers" type="markdown", code='
+
 <!--
 # 🤌 pinched fingers
 #
@@ -3554,9 +3910,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pinched_fingers: `:pinched_fingers:`
 ') }}
 {{ markdown(title="🤏 pinching hand" type="markdown", code='
+
 <!--
 # 🤏 pinching hand
 #
@@ -3573,9 +3931,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pinching_hand: `:pinching_hand:`
 ') }}
 {{ markdown(title="✌️ victory hand" type="markdown", code='
+
 <!--
 # ✌️ victory hand
 #
@@ -3595,9 +3955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :v: `:v:`
 ') }}
 {{ markdown(title="🤞 crossed fingers" type="markdown", code='
+
 <!--
 # 🤞 crossed fingers
 #
@@ -3617,9 +3979,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :crossed_fingers: `:crossed_fingers:`
 ') }}
 {{ markdown(title="🫰 hand with index finger and thumb crossed" type="markdown", code='
+
 <!--
 # 🫰 hand with index finger and thumb crossed
 #
@@ -3636,9 +4000,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :hand_with_index_finger_and_thumb_crossed: `:hand_with_index_finger_and_thumb_crossed:`
 ') }}
 {{ markdown(title="🤟 love-you gesture" type="markdown", code='
+
 <!--
 # 🤟 love-you gesture
 #
@@ -3655,9 +4021,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :love_you_gesture: `:love_you_gesture:`
 ') }}
 {{ markdown(title="🤘 sign of the horns" type="markdown", code='
+
 <!--
 # 🤘 sign of the horns
 #
@@ -3674,9 +4042,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :metal: `:metal:`
 ') }}
 {{ markdown(title="🤙 call me hand" type="markdown", code='
+
 <!--
 # 🤙 call me hand
 #
@@ -3693,9 +4063,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :call_me_hand: `:call_me_hand:`
 ') }}
 {{ markdown(title="👈 backhand index pointing left" type="markdown", code='
+
 <!--
 # 👈 backhand index pointing left
 #
@@ -3712,9 +4084,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :point_left: `:point_left:`
 ') }}
 {{ markdown(title="👉 backhand index pointing right" type="markdown", code='
+
 <!--
 # 👉 backhand index pointing right
 #
@@ -3731,9 +4105,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :point_right: `:point_right:`
 ') }}
 {{ markdown(title="👆 backhand index pointing up" type="markdown", code='
+
 <!--
 # 👆 backhand index pointing up
 #
@@ -3750,9 +4126,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :point_up_2: `:point_up_2:`
 ') }}
 {{ markdown(title="🖕 middle finger" type="markdown", code='
+
 <!--
 # 🖕 middle finger
 #
@@ -3770,11 +4148,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :middle_finger: `:middle_finger:`
 
 :fu: `:fu:`
 ') }}
 {{ markdown(title="👇 backhand index pointing down" type="markdown", code='
+
 <!--
 # 👇 backhand index pointing down
 #
@@ -3791,9 +4171,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :point_down: `:point_down:`
 ') }}
 {{ markdown(title="☝️ index pointing up" type="markdown", code='
+
 <!--
 # ☝️ index pointing up
 #
@@ -3810,9 +4192,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :point_up: `:point_up:`
 ') }}
 {{ markdown(title="🫵 index pointing at the viewer" type="markdown", code='
+
 <!--
 # 🫵 index pointing at the viewer
 #
@@ -3829,9 +4213,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :index_pointing_at_the_viewer: `:index_pointing_at_the_viewer:`
 ') }}
 {{ markdown(title="👍 thumbs up" type="markdown", code='
+
 <!--
 # 👍 thumbs up
 #
@@ -3852,11 +4238,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :+1: `:+1:`
 
 :thumbsup: `:thumbsup:`
 ') }}
 {{ markdown(title="👎 thumbs down" type="markdown", code='
+
 <!--
 # 👎 thumbs down
 #
@@ -3877,11 +4265,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :-1: `:-1:`
 
 :thumbsdown: `:thumbsdown:`
 ') }}
 {{ markdown(title="✊ raised fist" type="markdown", code='
+
 <!--
 # ✊ raised fist
 #
@@ -3901,11 +4291,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fist_raised: `:fist_raised:`
 
 :fist: `:fist:`
 ') }}
 {{ markdown(title="👊 oncoming fist" type="markdown", code='
+
 <!--
 # 👊 oncoming fist
 #
@@ -3926,6 +4318,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fist_oncoming: `:fist_oncoming:`
 
 :facepunch: `:facepunch:`
@@ -3933,6 +4326,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 :punch: `:punch:`
 ') }}
 {{ markdown(title="🤛 left-facing fist" type="markdown", code='
+
 <!--
 # 🤛 left-facing fist
 #
@@ -3949,9 +4343,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fist_left: `:fist_left:`
 ') }}
 {{ markdown(title="🤜 right-facing fist" type="markdown", code='
+
 <!--
 # 🤜 right-facing fist
 #
@@ -3968,9 +4364,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fist_right: `:fist_right:`
 ') }}
 {{ markdown(title="👏 clapping hands" type="markdown", code='
+
 <!--
 # 👏 clapping hands
 #
@@ -3990,9 +4388,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :clap: `:clap:`
 ') }}
 {{ markdown(title="🙌 raising hands" type="markdown", code='
+
 <!--
 # 🙌 raising hands
 #
@@ -4011,9 +4411,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :raised_hands: `:raised_hands:`
 ') }}
 {{ markdown(title="🫶 heart hands" type="markdown", code='
+
 <!--
 # 🫶 heart hands
 #
@@ -4032,9 +4434,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :heart_hands: `:heart_hands:`
 ') }}
 {{ markdown(title="👐 open hands" type="markdown", code='
+
 <!--
 # 👐 open hands
 #
@@ -4051,9 +4455,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :open_hands: `:open_hands:`
 ') }}
 {{ markdown(title="🤲 palms up together" type="markdown", code='
+
 <!--
 # 🤲 palms up together
 #
@@ -4070,9 +4476,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :palms_up_together: `:palms_up_together:`
 ') }}
 {{ markdown(title="🤝 handshake" type="markdown", code='
+
 <!--
 # 🤝 handshake
 #
@@ -4091,9 +4499,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :handshake: `:handshake:`
 ') }}
 {{ markdown(title="🙏 folded hands" type="markdown", code='
+
 <!--
 # 🙏 folded hands
 #
@@ -4114,9 +4524,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pray: `:pray:`
 ') }}
 {{ markdown(title="✍️ writing hand" type="markdown", code='
+
 <!--
 # ✍️ writing hand
 #
@@ -4133,9 +4545,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :writing_hand: `:writing_hand:`
 ') }}
 {{ markdown(title="💅 nail polish" type="markdown", code='
+
 <!--
 # 💅 nail polish
 #
@@ -4155,9 +4569,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :nail_care: `:nail_care:`
 ') }}
 {{ markdown(title="🤳 selfie" type="markdown", code='
+
 <!--
 # 🤳 selfie
 #
@@ -4174,9 +4590,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :selfie: `:selfie:`
 ') }}
 {{ markdown(title="💪 flexed biceps" type="markdown", code='
+
 <!--
 # 💪 flexed biceps
 #
@@ -4198,9 +4616,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :muscle: `:muscle:`
 ') }}
 {{ markdown(title="🦾 mechanical arm" type="markdown", code='
+
 <!--
 # 🦾 mechanical arm
 #
@@ -4216,9 +4636,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :mechanical_arm: `:mechanical_arm:`
 ') }}
 {{ markdown(title="🦿 mechanical leg" type="markdown", code='
+
 <!--
 # 🦿 mechanical leg
 #
@@ -4234,9 +4656,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :mechanical_leg: `:mechanical_leg:`
 ') }}
 {{ markdown(title="🦵 leg" type="markdown", code='
+
 <!--
 # 🦵 leg
 #
@@ -4253,9 +4677,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :leg: `:leg:`
 ') }}
 {{ markdown(title="🦶 foot" type="markdown", code='
+
 <!--
 # 🦶 foot
 #
@@ -4272,9 +4698,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :foot: `:foot:`
 ') }}
 {{ markdown(title="👂 ear" type="markdown", code='
+
 <!--
 # 👂 ear
 #
@@ -4295,9 +4723,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ear: `:ear:`
 ') }}
 {{ markdown(title="🦻 ear with hearing aid" type="markdown", code='
+
 <!--
 # 🦻 ear with hearing aid
 #
@@ -4314,9 +4744,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ear_with_hearing_aid: `:ear_with_hearing_aid:`
 ') }}
 {{ markdown(title="👃 nose" type="markdown", code='
+
 <!--
 # 👃 nose
 #
@@ -4335,9 +4767,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :nose: `:nose:`
 ') }}
 {{ markdown(title="🧠 brain" type="markdown", code='
+
 <!--
 # 🧠 brain
 #
@@ -4353,9 +4787,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :brain: `:brain:`
 ') }}
 {{ markdown(title="🫀 anatomical heart" type="markdown", code='
+
 <!--
 # 🫀 anatomical heart
 #
@@ -4371,9 +4807,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :anatomical_heart: `:anatomical_heart:`
 ') }}
 {{ markdown(title="🫁 lungs" type="markdown", code='
+
 <!--
 # 🫁 lungs
 #
@@ -4389,9 +4827,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :lungs: `:lungs:`
 ') }}
 {{ markdown(title="🦷 tooth" type="markdown", code='
+
 <!--
 # 🦷 tooth
 #
@@ -4407,9 +4847,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :tooth: `:tooth:`
 ') }}
 {{ markdown(title="🦴 bone" type="markdown", code='
+
 <!--
 # 🦴 bone
 #
@@ -4425,9 +4867,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :bone: `:bone:`
 ') }}
 {{ markdown(title="👀 eyes" type="markdown", code='
+
 <!--
 # 👀 eyes
 #
@@ -4447,9 +4891,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :eyes: `:eyes:`
 ') }}
 {{ markdown(title="👁️ eye" type="markdown", code='
+
 <!--
 # 👁️ eye
 #
@@ -4465,9 +4911,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :eye: `:eye:`
 ') }}
 {{ markdown(title="👅 tongue" type="markdown", code='
+
 <!--
 # 👅 tongue
 #
@@ -4485,9 +4933,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tongue: `:tongue:`
 ') }}
 {{ markdown(title="👄 mouth" type="markdown", code='
+
 <!--
 # 👄 mouth
 #
@@ -4505,9 +4955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lips: `:lips:`
 ') }}
 {{ markdown(title="🫦 biting lip" type="markdown", code='
+
 <!--
 # 🫦 biting lip
 #
@@ -4523,9 +4975,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :biting_lip: `:biting_lip:`
 ') }}
 {{ markdown(title="👶 baby" type="markdown", code='
+
 <!--
 # 👶 baby
 #
@@ -4545,9 +4999,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :baby: `:baby:`
 ') }}
 {{ markdown(title="🧒 child" type="markdown", code='
+
 <!--
 # 🧒 child
 #
@@ -4564,9 +5020,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :child: `:child:`
 ') }}
 {{ markdown(title="👦 boy" type="markdown", code='
+
 <!--
 # 👦 boy
 #
@@ -4585,9 +5043,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :boy: `:boy:`
 ') }}
 {{ markdown(title="👧 girl" type="markdown", code='
+
 <!--
 # 👧 girl
 #
@@ -4606,9 +5066,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :girl: `:girl:`
 ') }}
 {{ markdown(title="🧑 person" type="markdown", code='
+
 <!--
 # 🧑 person
 #
@@ -4625,9 +5087,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :adult: `:adult:`
 ') }}
 {{ markdown(title="👱 person: blond hair" type="markdown", code='
+
 <!--
 # 👱 person: blond hair
 #
@@ -4644,9 +5108,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :blond_haired_person: `:blond_haired_person:`
 ') }}
 {{ markdown(title="👨 man" type="markdown", code='
+
 <!--
 # 👨 man
 #
@@ -4667,9 +5133,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man: `:man:`
 ') }}
 {{ markdown(title="🧔 person: beard" type="markdown", code='
+
 <!--
 # 🧔 person: beard
 #
@@ -4686,9 +5154,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bearded_person: `:bearded_person:`
 ') }}
 {{ markdown(title="🧔‍♂️ man: beard" type="markdown", code='
+
 <!--
 # 🧔‍♂️ man: beard
 #
@@ -4705,9 +5175,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_beard: `:man_beard:`
 ') }}
 {{ markdown(title="🧔‍♀️ woman: beard" type="markdown", code='
+
 <!--
 # 🧔‍♀️ woman: beard
 #
@@ -4724,9 +5196,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_beard: `:woman_beard:`
 ') }}
 {{ markdown(title="👨‍🦰 man: red hair" type="markdown", code='
+
 <!--
 # 👨‍🦰 man: red hair
 #
@@ -4743,9 +5217,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :red_haired_man: `:red_haired_man:`
 ') }}
 {{ markdown(title="👨‍🦱 man: curly hair" type="markdown", code='
+
 <!--
 # 👨‍🦱 man: curly hair
 #
@@ -4762,9 +5238,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :curly_haired_man: `:curly_haired_man:`
 ') }}
 {{ markdown(title="👨‍🦳 man: white hair" type="markdown", code='
+
 <!--
 # 👨‍🦳 man: white hair
 #
@@ -4781,9 +5259,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :white_haired_man: `:white_haired_man:`
 ') }}
 {{ markdown(title="👨‍🦲 man: bald" type="markdown", code='
+
 <!--
 # 👨‍🦲 man: bald
 #
@@ -4800,9 +5280,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bald_man: `:bald_man:`
 ') }}
 {{ markdown(title="👩 woman" type="markdown", code='
+
 <!--
 # 👩 woman
 #
@@ -4821,9 +5303,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman: `:woman:`
 ') }}
 {{ markdown(title="👩‍🦰 woman: red hair" type="markdown", code='
+
 <!--
 # 👩‍🦰 woman: red hair
 #
@@ -4840,9 +5324,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :red_haired_woman: `:red_haired_woman:`
 ') }}
 {{ markdown(title="🧑‍🦰 person: red hair" type="markdown", code='
+
 <!--
 # 🧑‍🦰 person: red hair
 #
@@ -4859,9 +5345,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_red_hair: `:person_red_hair:`
 ') }}
 {{ markdown(title="👩‍🦱 woman: curly hair" type="markdown", code='
+
 <!--
 # 👩‍🦱 woman: curly hair
 #
@@ -4878,9 +5366,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :curly_haired_woman: `:curly_haired_woman:`
 ') }}
 {{ markdown(title="🧑‍🦱 person: curly hair" type="markdown", code='
+
 <!--
 # 🧑‍🦱 person: curly hair
 #
@@ -4897,9 +5387,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_curly_hair: `:person_curly_hair:`
 ') }}
 {{ markdown(title="👩‍🦳 woman: white hair" type="markdown", code='
+
 <!--
 # 👩‍🦳 woman: white hair
 #
@@ -4916,9 +5408,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :white_haired_woman: `:white_haired_woman:`
 ') }}
 {{ markdown(title="🧑‍🦳 person: white hair" type="markdown", code='
+
 <!--
 # 🧑‍🦳 person: white hair
 #
@@ -4935,9 +5429,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_white_hair: `:person_white_hair:`
 ') }}
 {{ markdown(title="👩‍🦲 woman: bald" type="markdown", code='
+
 <!--
 # 👩‍🦲 woman: bald
 #
@@ -4954,9 +5450,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bald_woman: `:bald_woman:`
 ') }}
 {{ markdown(title="🧑‍🦲 person: bald" type="markdown", code='
+
 <!--
 # 🧑‍🦲 person: bald
 #
@@ -4973,9 +5471,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_bald: `:person_bald:`
 ') }}
 {{ markdown(title="👱‍♀️ woman: blond hair" type="markdown", code='
+
 <!--
 # 👱‍♀️ woman: blond hair
 #
@@ -4993,11 +5493,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :blond_haired_woman: `:blond_haired_woman:`
 
 :blonde_woman: `:blonde_woman:`
 ') }}
 {{ markdown(title="👱‍♂️ man: blond hair" type="markdown", code='
+
 <!--
 # 👱‍♂️ man: blond hair
 #
@@ -5014,9 +5516,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :blond_haired_man: `:blond_haired_man:`
 ') }}
 {{ markdown(title="🧓 older person" type="markdown", code='
+
 <!--
 # 🧓 older person
 #
@@ -5033,9 +5537,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :older_adult: `:older_adult:`
 ') }}
 {{ markdown(title="👴 old man" type="markdown", code='
+
 <!--
 # 👴 old man
 #
@@ -5052,9 +5558,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :older_man: `:older_man:`
 ') }}
 {{ markdown(title="👵 old woman" type="markdown", code='
+
 <!--
 # 👵 old woman
 #
@@ -5071,9 +5579,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :older_woman: `:older_woman:`
 ') }}
 {{ markdown(title="🙍 person frowning" type="markdown", code='
+
 <!--
 # 🙍 person frowning
 #
@@ -5090,9 +5600,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :frowning_person: `:frowning_person:`
 ') }}
 {{ markdown(title="🙍‍♂️ man frowning" type="markdown", code='
+
 <!--
 # 🙍‍♂️ man frowning
 #
@@ -5109,9 +5621,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :frowning_man: `:frowning_man:`
 ') }}
 {{ markdown(title="🙍‍♀️ woman frowning" type="markdown", code='
+
 <!--
 # 🙍‍♀️ woman frowning
 #
@@ -5128,9 +5642,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :frowning_woman: `:frowning_woman:`
 ') }}
 {{ markdown(title="🙎 person pouting" type="markdown", code='
+
 <!--
 # 🙎 person pouting
 #
@@ -5147,9 +5663,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pouting_face: `:pouting_face:`
 ') }}
 {{ markdown(title="🙎‍♂️ man pouting" type="markdown", code='
+
 <!--
 # 🙎‍♂️ man pouting
 #
@@ -5166,9 +5684,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pouting_man: `:pouting_man:`
 ') }}
 {{ markdown(title="🙎‍♀️ woman pouting" type="markdown", code='
+
 <!--
 # 🙎‍♀️ woman pouting
 #
@@ -5185,9 +5705,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pouting_woman: `:pouting_woman:`
 ') }}
 {{ markdown(title="🙅 person gesturing NO" type="markdown", code='
+
 <!--
 # 🙅 person gesturing NO
 #
@@ -5208,9 +5730,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :no_good: `:no_good:`
 ') }}
 {{ markdown(title="🙅‍♂️ man gesturing NO" type="markdown", code='
+
 <!--
 # 🙅‍♂️ man gesturing NO
 #
@@ -5232,11 +5756,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :no_good_man: `:no_good_man:`
 
 :ng_man: `:ng_man:`
 ') }}
 {{ markdown(title="🙅‍♀️ woman gesturing NO" type="markdown", code='
+
 <!--
 # 🙅‍♀️ woman gesturing NO
 #
@@ -5258,11 +5784,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :no_good_woman: `:no_good_woman:`
 
 :ng_woman: `:ng_woman:`
 ') }}
 {{ markdown(title="🙆 person gesturing OK" type="markdown", code='
+
 <!--
 # 🙆 person gesturing OK
 #
@@ -5279,9 +5807,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ok_person: `:ok_person:`
 ') }}
 {{ markdown(title="🙆‍♂️ man gesturing OK" type="markdown", code='
+
 <!--
 # 🙆‍♂️ man gesturing OK
 #
@@ -5298,9 +5828,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ok_man: `:ok_man:`
 ') }}
 {{ markdown(title="🙆‍♀️ woman gesturing OK" type="markdown", code='
+
 <!--
 # 🙆‍♀️ woman gesturing OK
 #
@@ -5317,9 +5849,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ok_woman: `:ok_woman:`
 ') }}
 {{ markdown(title="💁 person tipping hand" type="markdown", code='
+
 <!--
 # 💁 person tipping hand
 #
@@ -5337,11 +5871,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :tipping_hand_person: `:tipping_hand_person:`
 
 :information_desk_person: `:information_desk_person:`
 ') }}
 {{ markdown(title="💁‍♂️ man tipping hand" type="markdown", code='
+
 <!--
 # 💁‍♂️ man tipping hand
 #
@@ -5361,11 +5897,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :tipping_hand_man: `:tipping_hand_man:`
 
 :sassy_man: `:sassy_man:`
 ') }}
 {{ markdown(title="💁‍♀️ woman tipping hand" type="markdown", code='
+
 <!--
 # 💁‍♀️ woman tipping hand
 #
@@ -5385,11 +5923,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :tipping_hand_woman: `:tipping_hand_woman:`
 
 :sassy_woman: `:sassy_woman:`
 ') }}
 {{ markdown(title="🙋 person raising hand" type="markdown", code='
+
 <!--
 # 🙋 person raising hand
 #
@@ -5406,9 +5946,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :raising_hand: `:raising_hand:`
 ') }}
 {{ markdown(title="🙋‍♂️ man raising hand" type="markdown", code='
+
 <!--
 # 🙋‍♂️ man raising hand
 #
@@ -5425,9 +5967,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :raising_hand_man: `:raising_hand_man:`
 ') }}
 {{ markdown(title="🙋‍♀️ woman raising hand" type="markdown", code='
+
 <!--
 # 🙋‍♀️ woman raising hand
 #
@@ -5444,9 +5988,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :raising_hand_woman: `:raising_hand_woman:`
 ') }}
 {{ markdown(title="🧏 deaf person" type="markdown", code='
+
 <!--
 # 🧏 deaf person
 #
@@ -5463,9 +6009,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :deaf_person: `:deaf_person:`
 ') }}
 {{ markdown(title="🧏‍♂️ deaf man" type="markdown", code='
+
 <!--
 # 🧏‍♂️ deaf man
 #
@@ -5482,9 +6030,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :deaf_man: `:deaf_man:`
 ') }}
 {{ markdown(title="🧏‍♀️ deaf woman" type="markdown", code='
+
 <!--
 # 🧏‍♀️ deaf woman
 #
@@ -5501,9 +6051,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :deaf_woman: `:deaf_woman:`
 ') }}
 {{ markdown(title="🙇 person bowing" type="markdown", code='
+
 <!--
 # 🙇 person bowing
 #
@@ -5523,9 +6075,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bow: `:bow:`
 ') }}
 {{ markdown(title="🙇‍♂️ man bowing" type="markdown", code='
+
 <!--
 # 🙇‍♂️ man bowing
 #
@@ -5545,9 +6099,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bowing_man: `:bowing_man:`
 ') }}
 {{ markdown(title="🙇‍♀️ woman bowing" type="markdown", code='
+
 <!--
 # 🙇‍♀️ woman bowing
 #
@@ -5567,9 +6123,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bowing_woman: `:bowing_woman:`
 ') }}
 {{ markdown(title="🤦 person facepalming" type="markdown", code='
+
 <!--
 # 🤦 person facepalming
 #
@@ -5586,9 +6144,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :facepalm: `:facepalm:`
 ') }}
 {{ markdown(title="🤦‍♂️ man facepalming" type="markdown", code='
+
 <!--
 # 🤦‍♂️ man facepalming
 #
@@ -5605,9 +6165,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_facepalming: `:man_facepalming:`
 ') }}
 {{ markdown(title="🤦‍♀️ woman facepalming" type="markdown", code='
+
 <!--
 # 🤦‍♀️ woman facepalming
 #
@@ -5624,9 +6186,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_facepalming: `:woman_facepalming:`
 ') }}
 {{ markdown(title="🤷 person shrugging" type="markdown", code='
+
 <!--
 # 🤷 person shrugging
 #
@@ -5643,9 +6207,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :shrug: `:shrug:`
 ') }}
 {{ markdown(title="🤷‍♂️ man shrugging" type="markdown", code='
+
 <!--
 # 🤷‍♂️ man shrugging
 #
@@ -5662,9 +6228,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_shrugging: `:man_shrugging:`
 ') }}
 {{ markdown(title="🤷‍♀️ woman shrugging" type="markdown", code='
+
 <!--
 # 🤷‍♀️ woman shrugging
 #
@@ -5681,9 +6249,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_shrugging: `:woman_shrugging:`
 ') }}
 {{ markdown(title="🧑‍⚕️ health worker" type="markdown", code='
+
 <!--
 # 🧑‍⚕️ health worker
 #
@@ -5700,9 +6270,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :health_worker: `:health_worker:`
 ') }}
 {{ markdown(title="👨‍⚕️ man health worker" type="markdown", code='
+
 <!--
 # 👨‍⚕️ man health worker
 #
@@ -5722,9 +6294,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_health_worker: `:man_health_worker:`
 ') }}
 {{ markdown(title="👩‍⚕️ woman health worker" type="markdown", code='
+
 <!--
 # 👩‍⚕️ woman health worker
 #
@@ -5744,9 +6318,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_health_worker: `:woman_health_worker:`
 ') }}
 {{ markdown(title="🧑‍🎓 student" type="markdown", code='
+
 <!--
 # 🧑‍🎓 student
 #
@@ -5763,9 +6339,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :student: `:student:`
 ') }}
 {{ markdown(title="👨‍🎓 man student" type="markdown", code='
+
 <!--
 # 👨‍🎓 man student
 #
@@ -5784,9 +6362,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_student: `:man_student:`
 ') }}
 {{ markdown(title="👩‍🎓 woman student" type="markdown", code='
+
 <!--
 # 👩‍🎓 woman student
 #
@@ -5805,9 +6385,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_student: `:woman_student:`
 ') }}
 {{ markdown(title="🧑‍🏫 teacher" type="markdown", code='
+
 <!--
 # 🧑‍🏫 teacher
 #
@@ -5824,9 +6406,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :teacher: `:teacher:`
 ') }}
 {{ markdown(title="👨‍🏫 man teacher" type="markdown", code='
+
 <!--
 # 👨‍🏫 man teacher
 #
@@ -5846,9 +6430,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_teacher: `:man_teacher:`
 ') }}
 {{ markdown(title="👩‍🏫 woman teacher" type="markdown", code='
+
 <!--
 # 👩‍🏫 woman teacher
 #
@@ -5868,9 +6454,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_teacher: `:woman_teacher:`
 ') }}
 {{ markdown(title="🧑‍⚖️ judge" type="markdown", code='
+
 <!--
 # 🧑‍⚖️ judge
 #
@@ -5887,9 +6475,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :judge: `:judge:`
 ') }}
 {{ markdown(title="👨‍⚖️ man judge" type="markdown", code='
+
 <!--
 # 👨‍⚖️ man judge
 #
@@ -5908,9 +6498,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_judge: `:man_judge:`
 ') }}
 {{ markdown(title="👩‍⚖️ woman judge" type="markdown", code='
+
 <!--
 # 👩‍⚖️ woman judge
 #
@@ -5929,9 +6521,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_judge: `:woman_judge:`
 ') }}
 {{ markdown(title="🧑‍🌾 farmer" type="markdown", code='
+
 <!--
 # 🧑‍🌾 farmer
 #
@@ -5948,9 +6542,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :farmer: `:farmer:`
 ') }}
 {{ markdown(title="👨‍🌾 man farmer" type="markdown", code='
+
 <!--
 # 👨‍🌾 man farmer
 #
@@ -5967,9 +6563,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_farmer: `:man_farmer:`
 ') }}
 {{ markdown(title="👩‍🌾 woman farmer" type="markdown", code='
+
 <!--
 # 👩‍🌾 woman farmer
 #
@@ -5986,9 +6584,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_farmer: `:woman_farmer:`
 ') }}
 {{ markdown(title="🧑‍🍳 cook" type="markdown", code='
+
 <!--
 # 🧑‍🍳 cook
 #
@@ -6005,9 +6605,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :cook: `:cook:`
 ') }}
 {{ markdown(title="👨‍🍳 man cook" type="markdown", code='
+
 <!--
 # 👨‍🍳 man cook
 #
@@ -6026,9 +6628,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_cook: `:man_cook:`
 ') }}
 {{ markdown(title="👩‍🍳 woman cook" type="markdown", code='
+
 <!--
 # 👩‍🍳 woman cook
 #
@@ -6047,9 +6651,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_cook: `:woman_cook:`
 ') }}
 {{ markdown(title="🧑‍🔧 mechanic" type="markdown", code='
+
 <!--
 # 🧑‍🔧 mechanic
 #
@@ -6066,9 +6672,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mechanic: `:mechanic:`
 ') }}
 {{ markdown(title="👨‍🔧 man mechanic" type="markdown", code='
+
 <!--
 # 👨‍🔧 man mechanic
 #
@@ -6085,9 +6693,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_mechanic: `:man_mechanic:`
 ') }}
 {{ markdown(title="👩‍🔧 woman mechanic" type="markdown", code='
+
 <!--
 # 👩‍🔧 woman mechanic
 #
@@ -6104,9 +6714,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_mechanic: `:woman_mechanic:`
 ') }}
 {{ markdown(title="🧑‍🏭 factory worker" type="markdown", code='
+
 <!--
 # 🧑‍🏭 factory worker
 #
@@ -6123,9 +6735,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :factory_worker: `:factory_worker:`
 ') }}
 {{ markdown(title="👨‍🏭 man factory worker" type="markdown", code='
+
 <!--
 # 👨‍🏭 man factory worker
 #
@@ -6142,9 +6756,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_factory_worker: `:man_factory_worker:`
 ') }}
 {{ markdown(title="👩‍🏭 woman factory worker" type="markdown", code='
+
 <!--
 # 👩‍🏭 woman factory worker
 #
@@ -6161,9 +6777,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_factory_worker: `:woman_factory_worker:`
 ') }}
 {{ markdown(title="🧑‍💼 office worker" type="markdown", code='
+
 <!--
 # 🧑‍💼 office worker
 #
@@ -6180,9 +6798,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :office_worker: `:office_worker:`
 ') }}
 {{ markdown(title="👨‍💼 man office worker" type="markdown", code='
+
 <!--
 # 👨‍💼 man office worker
 #
@@ -6201,9 +6821,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_office_worker: `:man_office_worker:`
 ') }}
 {{ markdown(title="👩‍💼 woman office worker" type="markdown", code='
+
 <!--
 # 👩‍💼 woman office worker
 #
@@ -6222,9 +6844,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_office_worker: `:woman_office_worker:`
 ') }}
 {{ markdown(title="🧑‍🔬 scientist" type="markdown", code='
+
 <!--
 # 🧑‍🔬 scientist
 #
@@ -6241,9 +6865,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :scientist: `:scientist:`
 ') }}
 {{ markdown(title="👨‍🔬 man scientist" type="markdown", code='
+
 <!--
 # 👨‍🔬 man scientist
 #
@@ -6262,9 +6888,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_scientist: `:man_scientist:`
 ') }}
 {{ markdown(title="👩‍🔬 woman scientist" type="markdown", code='
+
 <!--
 # 👩‍🔬 woman scientist
 #
@@ -6283,9 +6911,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_scientist: `:woman_scientist:`
 ') }}
 {{ markdown(title="🧑‍💻 technologist" type="markdown", code='
+
 <!--
 # 🧑‍💻 technologist
 #
@@ -6302,9 +6932,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :technologist: `:technologist:`
 ') }}
 {{ markdown(title="👨‍💻 man technologist" type="markdown", code='
+
 <!--
 # 👨‍💻 man technologist
 #
@@ -6323,9 +6955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_technologist: `:man_technologist:`
 ') }}
 {{ markdown(title="👩‍💻 woman technologist" type="markdown", code='
+
 <!--
 # 👩‍💻 woman technologist
 #
@@ -6344,9 +6978,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_technologist: `:woman_technologist:`
 ') }}
 {{ markdown(title="🧑‍🎤 singer" type="markdown", code='
+
 <!--
 # 🧑‍🎤 singer
 #
@@ -6363,9 +6999,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :singer: `:singer:`
 ') }}
 {{ markdown(title="👨‍🎤 man singer" type="markdown", code='
+
 <!--
 # 👨‍🎤 man singer
 #
@@ -6384,9 +7022,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_singer: `:man_singer:`
 ') }}
 {{ markdown(title="👩‍🎤 woman singer" type="markdown", code='
+
 <!--
 # 👩‍🎤 woman singer
 #
@@ -6405,9 +7045,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_singer: `:woman_singer:`
 ') }}
 {{ markdown(title="🧑‍🎨 artist" type="markdown", code='
+
 <!--
 # 🧑‍🎨 artist
 #
@@ -6424,9 +7066,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :artist: `:artist:`
 ') }}
 {{ markdown(title="👨‍🎨 man artist" type="markdown", code='
+
 <!--
 # 👨‍🎨 man artist
 #
@@ -6445,9 +7089,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_artist: `:man_artist:`
 ') }}
 {{ markdown(title="👩‍🎨 woman artist" type="markdown", code='
+
 <!--
 # 👩‍🎨 woman artist
 #
@@ -6466,9 +7112,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_artist: `:woman_artist:`
 ') }}
 {{ markdown(title="🧑‍✈️ pilot" type="markdown", code='
+
 <!--
 # 🧑‍✈️ pilot
 #
@@ -6485,9 +7133,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pilot: `:pilot:`
 ') }}
 {{ markdown(title="👨‍✈️ man pilot" type="markdown", code='
+
 <!--
 # 👨‍✈️ man pilot
 #
@@ -6504,9 +7154,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_pilot: `:man_pilot:`
 ') }}
 {{ markdown(title="👩‍✈️ woman pilot" type="markdown", code='
+
 <!--
 # 👩‍✈️ woman pilot
 #
@@ -6523,9 +7175,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_pilot: `:woman_pilot:`
 ') }}
 {{ markdown(title="🧑‍🚀 astronaut" type="markdown", code='
+
 <!--
 # 🧑‍🚀 astronaut
 #
@@ -6542,9 +7196,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :astronaut: `:astronaut:`
 ') }}
 {{ markdown(title="👨‍🚀 man astronaut" type="markdown", code='
+
 <!--
 # 👨‍🚀 man astronaut
 #
@@ -6563,9 +7219,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_astronaut: `:man_astronaut:`
 ') }}
 {{ markdown(title="👩‍🚀 woman astronaut" type="markdown", code='
+
 <!--
 # 👩‍🚀 woman astronaut
 #
@@ -6584,9 +7242,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_astronaut: `:woman_astronaut:`
 ') }}
 {{ markdown(title="🧑‍🚒 firefighter" type="markdown", code='
+
 <!--
 # 🧑‍🚒 firefighter
 #
@@ -6603,9 +7263,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :firefighter: `:firefighter:`
 ') }}
 {{ markdown(title="👨‍🚒 man firefighter" type="markdown", code='
+
 <!--
 # 👨‍🚒 man firefighter
 #
@@ -6622,9 +7284,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_firefighter: `:man_firefighter:`
 ') }}
 {{ markdown(title="👩‍🚒 woman firefighter" type="markdown", code='
+
 <!--
 # 👩‍🚒 woman firefighter
 #
@@ -6641,9 +7305,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_firefighter: `:woman_firefighter:`
 ') }}
 {{ markdown(title="👮 police officer" type="markdown", code='
+
 <!--
 # 👮 police officer
 #
@@ -6663,11 +7329,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :police_officer: `:police_officer:`
 
 :cop: `:cop:`
 ') }}
 {{ markdown(title="👮‍♂️ man police officer" type="markdown", code='
+
 <!--
 # 👮‍♂️ man police officer
 #
@@ -6687,9 +7355,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :policeman: `:policeman:`
 ') }}
 {{ markdown(title="👮‍♀️ woman police officer" type="markdown", code='
+
 <!--
 # 👮‍♀️ woman police officer
 #
@@ -6709,9 +7379,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :policewoman: `:policewoman:`
 ') }}
 {{ markdown(title="🕵️ detective" type="markdown", code='
+
 <!--
 # 🕵️ detective
 #
@@ -6730,9 +7402,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :detective: `:detective:`
 ') }}
 {{ markdown(title="🕵️‍♂️ man detective" type="markdown", code='
+
 <!--
 # 🕵️‍♂️ man detective
 #
@@ -6751,9 +7425,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :male_detective: `:male_detective:`
 ') }}
 {{ markdown(title="🕵️‍♀️ woman detective" type="markdown", code='
+
 <!--
 # 🕵️‍♀️ woman detective
 #
@@ -6772,9 +7448,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :female_detective: `:female_detective:`
 ') }}
 {{ markdown(title="💂 guard" type="markdown", code='
+
 <!--
 # 💂 guard
 #
@@ -6791,9 +7469,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :guard: `:guard:`
 ') }}
 {{ markdown(title="💂‍♂️ man guard" type="markdown", code='
+
 <!--
 # 💂‍♂️ man guard
 #
@@ -6810,9 +7490,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :guardsman: `:guardsman:`
 ') }}
 {{ markdown(title="💂‍♀️ woman guard" type="markdown", code='
+
 <!--
 # 💂‍♀️ woman guard
 #
@@ -6829,9 +7511,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :guardswoman: `:guardswoman:`
 ') }}
 {{ markdown(title="🥷 ninja" type="markdown", code='
+
 <!--
 # 🥷 ninja
 #
@@ -6848,9 +7532,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :ninja: `:ninja:`
 ') }}
 {{ markdown(title="👷 construction worker" type="markdown", code='
+
 <!--
 # 👷 construction worker
 #
@@ -6869,9 +7555,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :construction_worker: `:construction_worker:`
 ') }}
 {{ markdown(title="👷‍♂️ man construction worker" type="markdown", code='
+
 <!--
 # 👷‍♂️ man construction worker
 #
@@ -6890,9 +7578,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :construction_worker_man: `:construction_worker_man:`
 ') }}
 {{ markdown(title="👷‍♀️ woman construction worker" type="markdown", code='
+
 <!--
 # 👷‍♀️ woman construction worker
 #
@@ -6911,9 +7601,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :construction_worker_woman: `:construction_worker_woman:`
 ') }}
 {{ markdown(title="🫅 person with crown" type="markdown", code='
+
 <!--
 # 🫅 person with crown
 #
@@ -6930,9 +7622,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_with_crown: `:person_with_crown:`
 ') }}
 {{ markdown(title="🤴 prince" type="markdown", code='
+
 <!--
 # 🤴 prince
 #
@@ -6952,9 +7646,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :prince: `:prince:`
 ') }}
 {{ markdown(title="👸 princess" type="markdown", code='
+
 <!--
 # 👸 princess
 #
@@ -6974,9 +7670,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :princess: `:princess:`
 ') }}
 {{ markdown(title="👳 person wearing turban" type="markdown", code='
+
 <!--
 # 👳 person wearing turban
 #
@@ -6993,9 +7691,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_with_turban: `:person_with_turban:`
 ') }}
 {{ markdown(title="👳‍♂️ man wearing turban" type="markdown", code='
+
 <!--
 # 👳‍♂️ man wearing turban
 #
@@ -7012,9 +7712,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_with_turban: `:man_with_turban:`
 ') }}
 {{ markdown(title="👳‍♀️ woman wearing turban" type="markdown", code='
+
 <!--
 # 👳‍♀️ woman wearing turban
 #
@@ -7031,9 +7733,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_with_turban: `:woman_with_turban:`
 ') }}
 {{ markdown(title="👲 person with skullcap" type="markdown", code='
+
 <!--
 # 👲 person with skullcap
 #
@@ -7050,9 +7754,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_with_gua_pi_mao: `:man_with_gua_pi_mao:`
 ') }}
 {{ markdown(title="🧕 woman with headscarf" type="markdown", code='
+
 <!--
 # 🧕 woman with headscarf
 #
@@ -7071,9 +7777,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_with_headscarf: `:woman_with_headscarf:`
 ') }}
 {{ markdown(title="🤵 person in tuxedo" type="markdown", code='
+
 <!--
 # 🤵 person in tuxedo
 #
@@ -7094,9 +7802,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_in_tuxedo: `:person_in_tuxedo:`
 ') }}
 {{ markdown(title="🤵‍♂️ man in tuxedo" type="markdown", code='
+
 <!--
 # 🤵‍♂️ man in tuxedo
 #
@@ -7113,9 +7823,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_in_tuxedo: `:man_in_tuxedo:`
 ') }}
 {{ markdown(title="🤵‍♀️ woman in tuxedo" type="markdown", code='
+
 <!--
 # 🤵‍♀️ woman in tuxedo
 #
@@ -7132,9 +7844,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_in_tuxedo: `:woman_in_tuxedo:`
 ') }}
 {{ markdown(title="👰 person with veil" type="markdown", code='
+
 <!--
 # 👰 person with veil
 #
@@ -7154,9 +7868,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_with_veil: `:person_with_veil:`
 ') }}
 {{ markdown(title="👰‍♂️ man with veil" type="markdown", code='
+
 <!--
 # 👰‍♂️ man with veil
 #
@@ -7173,9 +7889,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_with_veil: `:man_with_veil:`
 ') }}
 {{ markdown(title="👰‍♀️ woman with veil" type="markdown", code='
+
 <!--
 # 👰‍♀️ woman with veil
 #
@@ -7193,11 +7911,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_with_veil: `:woman_with_veil:`
 
 :bride_with_veil: `:bride_with_veil:`
 ') }}
 {{ markdown(title="🤰 pregnant woman" type="markdown", code='
+
 <!--
 # 🤰 pregnant woman
 #
@@ -7214,9 +7934,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pregnant_woman: `:pregnant_woman:`
 ') }}
 {{ markdown(title="🫃 pregnant man" type="markdown", code='
+
 <!--
 # 🫃 pregnant man
 #
@@ -7233,9 +7955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pregnant_man: `:pregnant_man:`
 ') }}
 {{ markdown(title="🫄 pregnant person" type="markdown", code='
+
 <!--
 # 🫄 pregnant person
 #
@@ -7252,9 +7976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :pregnant_person: `:pregnant_person:`
 ') }}
 {{ markdown(title="🤱 breast-feeding" type="markdown", code='
+
 <!--
 # 🤱 breast-feeding
 #
@@ -7273,9 +7999,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :breast_feeding: `:breast_feeding:`
 ') }}
 {{ markdown(title="👩‍🍼 woman feeding baby" type="markdown", code='
+
 <!--
 # 👩‍🍼 woman feeding baby
 #
@@ -7292,9 +8020,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_feeding_baby: `:woman_feeding_baby:`
 ') }}
 {{ markdown(title="👨‍🍼 man feeding baby" type="markdown", code='
+
 <!--
 # 👨‍🍼 man feeding baby
 #
@@ -7311,9 +8041,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_feeding_baby: `:man_feeding_baby:`
 ') }}
 {{ markdown(title="🧑‍🍼 person feeding baby" type="markdown", code='
+
 <!--
 # 🧑‍🍼 person feeding baby
 #
@@ -7330,9 +8062,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_feeding_baby: `:person_feeding_baby:`
 ') }}
 {{ markdown(title="👼 baby angel" type="markdown", code='
+
 <!--
 # 👼 baby angel
 #
@@ -7349,9 +8083,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :angel: `:angel:`
 ') }}
 {{ markdown(title="🎅 Santa Claus" type="markdown", code='
+
 <!--
 # 🎅 Santa Claus
 #
@@ -7370,9 +8106,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :santa: `:santa:`
 ') }}
 {{ markdown(title="🤶 Mrs. Claus" type="markdown", code='
+
 <!--
 # 🤶 Mrs. Claus
 #
@@ -7391,9 +8129,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mrs_claus: `:mrs_claus:`
 ') }}
 {{ markdown(title="🧑‍🎄 mx claus" type="markdown", code='
+
 <!--
 # 🧑‍🎄 mx claus
 #
@@ -7410,9 +8150,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mx_claus: `:mx_claus:`
 ') }}
 {{ markdown(title="🦸 superhero" type="markdown", code='
+
 <!--
 # 🦸 superhero
 #
@@ -7429,9 +8171,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :superhero: `:superhero:`
 ') }}
 {{ markdown(title="🦸‍♂️ man superhero" type="markdown", code='
+
 <!--
 # 🦸‍♂️ man superhero
 #
@@ -7448,9 +8192,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :superhero_man: `:superhero_man:`
 ') }}
 {{ markdown(title="🦸‍♀️ woman superhero" type="markdown", code='
+
 <!--
 # 🦸‍♀️ woman superhero
 #
@@ -7467,9 +8213,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :superhero_woman: `:superhero_woman:`
 ') }}
 {{ markdown(title="🦹 supervillain" type="markdown", code='
+
 <!--
 # 🦹 supervillain
 #
@@ -7486,9 +8234,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :supervillain: `:supervillain:`
 ') }}
 {{ markdown(title="🦹‍♂️ man supervillain" type="markdown", code='
+
 <!--
 # 🦹‍♂️ man supervillain
 #
@@ -7505,9 +8255,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :supervillain_man: `:supervillain_man:`
 ') }}
 {{ markdown(title="🦹‍♀️ woman supervillain" type="markdown", code='
+
 <!--
 # 🦹‍♀️ woman supervillain
 #
@@ -7524,9 +8276,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :supervillain_woman: `:supervillain_woman:`
 ') }}
 {{ markdown(title="🧙 mage" type="markdown", code='
+
 <!--
 # 🧙 mage
 #
@@ -7545,9 +8299,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mage: `:mage:`
 ') }}
 {{ markdown(title="🧙‍♂️ man mage" type="markdown", code='
+
 <!--
 # 🧙‍♂️ man mage
 #
@@ -7566,9 +8322,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mage_man: `:mage_man:`
 ') }}
 {{ markdown(title="🧙‍♀️ woman mage" type="markdown", code='
+
 <!--
 # 🧙‍♀️ woman mage
 #
@@ -7587,9 +8345,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mage_woman: `:mage_woman:`
 ') }}
 {{ markdown(title="🧚 fairy" type="markdown", code='
+
 <!--
 # 🧚 fairy
 #
@@ -7606,9 +8366,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fairy: `:fairy:`
 ') }}
 {{ markdown(title="🧚‍♂️ man fairy" type="markdown", code='
+
 <!--
 # 🧚‍♂️ man fairy
 #
@@ -7625,9 +8387,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fairy_man: `:fairy_man:`
 ') }}
 {{ markdown(title="🧚‍♀️ woman fairy" type="markdown", code='
+
 <!--
 # 🧚‍♀️ woman fairy
 #
@@ -7644,9 +8408,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :fairy_woman: `:fairy_woman:`
 ') }}
 {{ markdown(title="🧛 vampire" type="markdown", code='
+
 <!--
 # 🧛 vampire
 #
@@ -7663,9 +8429,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :vampire: `:vampire:`
 ') }}
 {{ markdown(title="🧛‍♂️ man vampire" type="markdown", code='
+
 <!--
 # 🧛‍♂️ man vampire
 #
@@ -7682,9 +8450,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :vampire_man: `:vampire_man:`
 ') }}
 {{ markdown(title="🧛‍♀️ woman vampire" type="markdown", code='
+
 <!--
 # 🧛‍♀️ woman vampire
 #
@@ -7701,9 +8471,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :vampire_woman: `:vampire_woman:`
 ') }}
 {{ markdown(title="🧜 merperson" type="markdown", code='
+
 <!--
 # 🧜 merperson
 #
@@ -7720,9 +8492,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :merperson: `:merperson:`
 ') }}
 {{ markdown(title="🧜‍♂️ merman" type="markdown", code='
+
 <!--
 # 🧜‍♂️ merman
 #
@@ -7739,9 +8513,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :merman: `:merman:`
 ') }}
 {{ markdown(title="🧜‍♀️ mermaid" type="markdown", code='
+
 <!--
 # 🧜‍♀️ mermaid
 #
@@ -7758,9 +8534,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mermaid: `:mermaid:`
 ') }}
 {{ markdown(title="🧝 elf" type="markdown", code='
+
 <!--
 # 🧝 elf
 #
@@ -7777,9 +8555,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :elf: `:elf:`
 ') }}
 {{ markdown(title="🧝‍♂️ man elf" type="markdown", code='
+
 <!--
 # 🧝‍♂️ man elf
 #
@@ -7796,9 +8576,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :elf_man: `:elf_man:`
 ') }}
 {{ markdown(title="🧝‍♀️ woman elf" type="markdown", code='
+
 <!--
 # 🧝‍♀️ woman elf
 #
@@ -7815,9 +8597,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :elf_woman: `:elf_woman:`
 ') }}
 {{ markdown(title="🧞 genie" type="markdown", code='
+
 <!--
 # 🧞 genie
 #
@@ -7833,9 +8617,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :genie: `:genie:`
 ') }}
 {{ markdown(title="🧞‍♂️ man genie" type="markdown", code='
+
 <!--
 # 🧞‍♂️ man genie
 #
@@ -7851,9 +8637,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :genie_man: `:genie_man:`
 ') }}
 {{ markdown(title="🧞‍♀️ woman genie" type="markdown", code='
+
 <!--
 # 🧞‍♀️ woman genie
 #
@@ -7869,9 +8657,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :genie_woman: `:genie_woman:`
 ') }}
 {{ markdown(title="🧟 zombie" type="markdown", code='
+
 <!--
 # 🧟 zombie
 #
@@ -7887,9 +8677,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :zombie: `:zombie:`
 ') }}
 {{ markdown(title="🧟‍♂️ man zombie" type="markdown", code='
+
 <!--
 # 🧟‍♂️ man zombie
 #
@@ -7905,9 +8697,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :zombie_man: `:zombie_man:`
 ') }}
 {{ markdown(title="🧟‍♀️ woman zombie" type="markdown", code='
+
 <!--
 # 🧟‍♀️ woman zombie
 #
@@ -7923,9 +8717,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :zombie_woman: `:zombie_woman:`
 ') }}
 {{ markdown(title="🧌 troll" type="markdown", code='
+
 <!--
 # 🧌 troll
 #
@@ -7941,9 +8737,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :troll: `:troll:`
 ') }}
 {{ markdown(title="💆 person getting massage" type="markdown", code='
+
 <!--
 # 💆 person getting massage
 #
@@ -7962,9 +8760,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :massage: `:massage:`
 ') }}
 {{ markdown(title="💆‍♂️ man getting massage" type="markdown", code='
+
 <!--
 # 💆‍♂️ man getting massage
 #
@@ -7983,9 +8783,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :massage_man: `:massage_man:`
 ') }}
 {{ markdown(title="💆‍♀️ woman getting massage" type="markdown", code='
+
 <!--
 # 💆‍♀️ woman getting massage
 #
@@ -8004,9 +8806,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :massage_woman: `:massage_woman:`
 ') }}
 {{ markdown(title="💇 person getting haircut" type="markdown", code='
+
 <!--
 # 💇 person getting haircut
 #
@@ -8025,9 +8829,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :haircut: `:haircut:`
 ') }}
 {{ markdown(title="💇‍♂️ man getting haircut" type="markdown", code='
+
 <!--
 # 💇‍♂️ man getting haircut
 #
@@ -8044,9 +8850,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :haircut_man: `:haircut_man:`
 ') }}
 {{ markdown(title="💇‍♀️ woman getting haircut" type="markdown", code='
+
 <!--
 # 💇‍♀️ woman getting haircut
 #
@@ -8063,9 +8871,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :haircut_woman: `:haircut_woman:`
 ') }}
 {{ markdown(title="🚶 person walking" type="markdown", code='
+
 <!--
 # 🚶 person walking
 #
@@ -8082,9 +8892,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :walking: `:walking:`
 ') }}
 {{ markdown(title="🚶‍♂️ man walking" type="markdown", code='
+
 <!--
 # 🚶‍♂️ man walking
 #
@@ -8101,9 +8913,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :walking_man: `:walking_man:`
 ') }}
 {{ markdown(title="🚶‍♀️ woman walking" type="markdown", code='
+
 <!--
 # 🚶‍♀️ woman walking
 #
@@ -8120,9 +8934,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :walking_woman: `:walking_woman:`
 ') }}
 {{ markdown(title="🧍 person standing" type="markdown", code='
+
 <!--
 # 🧍 person standing
 #
@@ -8139,9 +8955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :standing_person: `:standing_person:`
 ') }}
 {{ markdown(title="🧍‍♂️ man standing" type="markdown", code='
+
 <!--
 # 🧍‍♂️ man standing
 #
@@ -8158,9 +8976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :standing_man: `:standing_man:`
 ') }}
 {{ markdown(title="🧍‍♀️ woman standing" type="markdown", code='
+
 <!--
 # 🧍‍♀️ woman standing
 #
@@ -8177,9 +8997,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :standing_woman: `:standing_woman:`
 ') }}
 {{ markdown(title="🧎 person kneeling" type="markdown", code='
+
 <!--
 # 🧎 person kneeling
 #
@@ -8196,9 +9018,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :kneeling_person: `:kneeling_person:`
 ') }}
 {{ markdown(title="🧎‍♂️ man kneeling" type="markdown", code='
+
 <!--
 # 🧎‍♂️ man kneeling
 #
@@ -8215,9 +9039,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :kneeling_man: `:kneeling_man:`
 ') }}
 {{ markdown(title="🧎‍♀️ woman kneeling" type="markdown", code='
+
 <!--
 # 🧎‍♀️ woman kneeling
 #
@@ -8234,9 +9060,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :kneeling_woman: `:kneeling_woman:`
 ') }}
 {{ markdown(title="🧑‍🦯 person with white cane" type="markdown", code='
+
 <!--
 # 🧑‍🦯 person with white cane
 #
@@ -8253,9 +9081,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_with_probing_cane: `:person_with_probing_cane:`
 ') }}
 {{ markdown(title="👨‍🦯 man with white cane" type="markdown", code='
+
 <!--
 # 👨‍🦯 man with white cane
 #
@@ -8272,9 +9102,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_with_probing_cane: `:man_with_probing_cane:`
 ') }}
 {{ markdown(title="👩‍🦯 woman with white cane" type="markdown", code='
+
 <!--
 # 👩‍🦯 woman with white cane
 #
@@ -8291,9 +9123,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_with_probing_cane: `:woman_with_probing_cane:`
 ') }}
 {{ markdown(title="🧑‍🦼 person in motorized wheelchair" type="markdown", code='
+
 <!--
 # 🧑‍🦼 person in motorized wheelchair
 #
@@ -8310,9 +9144,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_in_motorized_wheelchair: `:person_in_motorized_wheelchair:`
 ') }}
 {{ markdown(title="👨‍🦼 man in motorized wheelchair" type="markdown", code='
+
 <!--
 # 👨‍🦼 man in motorized wheelchair
 #
@@ -8329,9 +9165,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_in_motorized_wheelchair: `:man_in_motorized_wheelchair:`
 ') }}
 {{ markdown(title="👩‍🦼 woman in motorized wheelchair" type="markdown", code='
+
 <!--
 # 👩‍🦼 woman in motorized wheelchair
 #
@@ -8348,9 +9186,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_in_motorized_wheelchair: `:woman_in_motorized_wheelchair:`
 ') }}
 {{ markdown(title="🧑‍🦽 person in manual wheelchair" type="markdown", code='
+
 <!--
 # 🧑‍🦽 person in manual wheelchair
 #
@@ -8367,9 +9207,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :person_in_manual_wheelchair: `:person_in_manual_wheelchair:`
 ') }}
 {{ markdown(title="👨‍🦽 man in manual wheelchair" type="markdown", code='
+
 <!--
 # 👨‍🦽 man in manual wheelchair
 #
@@ -8386,9 +9228,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_in_manual_wheelchair: `:man_in_manual_wheelchair:`
 ') }}
 {{ markdown(title="👩‍🦽 woman in manual wheelchair" type="markdown", code='
+
 <!--
 # 👩‍🦽 woman in manual wheelchair
 #
@@ -8405,9 +9249,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_in_manual_wheelchair: `:woman_in_manual_wheelchair:`
 ') }}
 {{ markdown(title="🏃 person running" type="markdown", code='
+
 <!--
 # 🏃 person running
 #
@@ -8429,11 +9275,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :runner: `:runner:`
 
 :running: `:running:`
 ') }}
 {{ markdown(title="🏃‍♂️ man running" type="markdown", code='
+
 <!--
 # 🏃‍♂️ man running
 #
@@ -8454,9 +9302,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :running_man: `:running_man:`
 ') }}
 {{ markdown(title="🏃‍♀️ woman running" type="markdown", code='
+
 <!--
 # 🏃‍♀️ woman running
 #
@@ -8477,9 +9327,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :running_woman: `:running_woman:`
 ') }}
 {{ markdown(title="💃 woman dancing" type="markdown", code='
+
 <!--
 # 💃 woman dancing
 #
@@ -8499,11 +9351,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_dancing: `:woman_dancing:`
 
 :dancer: `:dancer:`
 ') }}
 {{ markdown(title="🕺 man dancing" type="markdown", code='
+
 <!--
 # 🕺 man dancing
 #
@@ -8522,9 +9376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_dancing: `:man_dancing:`
 ') }}
 {{ markdown(title="🕴️ person in suit levitating" type="markdown", code='
+
 <!--
 # 🕴️ person in suit levitating
 #
@@ -8541,9 +9397,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :business_suit_levitating: `:business_suit_levitating:`
 ') }}
 {{ markdown(title="👯 people with bunny ears" type="markdown", code='
+
 <!--
 # 👯 people with bunny ears
 #
@@ -8561,9 +9419,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dancers: `:dancers:`
 ') }}
 {{ markdown(title="👯‍♂️ men with bunny ears" type="markdown", code='
+
 <!--
 # 👯‍♂️ men with bunny ears
 #
@@ -8581,9 +9441,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :dancing_men: `:dancing_men:`
 ') }}
 {{ markdown(title="👯‍♀️ women with bunny ears" type="markdown", code='
+
 <!--
 # 👯‍♀️ women with bunny ears
 #
@@ -8601,9 +9463,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :dancing_women: `:dancing_women:`
 ') }}
 {{ markdown(title="🧖 person in steamy room" type="markdown", code='
+
 <!--
 # 🧖 person in steamy room
 #
@@ -8622,9 +9486,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :sauna_person: `:sauna_person:`
 ') }}
 {{ markdown(title="🧖‍♂️ man in steamy room" type="markdown", code='
+
 <!--
 # 🧖‍♂️ man in steamy room
 #
@@ -8643,9 +9509,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :sauna_man: `:sauna_man:`
 ') }}
 {{ markdown(title="🧖‍♀️ woman in steamy room" type="markdown", code='
+
 <!--
 # 🧖‍♀️ woman in steamy room
 #
@@ -8664,9 +9532,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :sauna_woman: `:sauna_woman:`
 ') }}
 {{ markdown(title="🧗 person climbing" type="markdown", code='
+
 <!--
 # 🧗 person climbing
 #
@@ -8685,9 +9555,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :climbing: `:climbing:`
 ') }}
 {{ markdown(title="🧗‍♂️ man climbing" type="markdown", code='
+
 <!--
 # 🧗‍♂️ man climbing
 #
@@ -8706,9 +9578,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :climbing_man: `:climbing_man:`
 ') }}
 {{ markdown(title="🧗‍♀️ woman climbing" type="markdown", code='
+
 <!--
 # 🧗‍♀️ woman climbing
 #
@@ -8727,9 +9601,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :climbing_woman: `:climbing_woman:`
 ') }}
 {{ markdown(title="🤺 person fencing" type="markdown", code='
+
 <!--
 # 🤺 person fencing
 #
@@ -8745,9 +9621,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :person_fencing: `:person_fencing:`
 ') }}
 {{ markdown(title="🏇 horse racing" type="markdown", code='
+
 <!--
 # 🏇 horse racing
 #
@@ -8764,9 +9642,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :horse_racing: `:horse_racing:`
 ') }}
 {{ markdown(title="⛷️ skier" type="markdown", code='
+
 <!--
 # ⛷️ skier
 #
@@ -8782,9 +9662,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :skier: `:skier:`
 ') }}
 {{ markdown(title="🏂 snowboarder" type="markdown", code='
+
 <!--
 # 🏂 snowboarder
 #
@@ -8801,9 +9683,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :snowboarder: `:snowboarder:`
 ') }}
 {{ markdown(title="🏌️ person golfing" type="markdown", code='
+
 <!--
 # 🏌️ person golfing
 #
@@ -8820,9 +9704,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :golfing: `:golfing:`
 ') }}
 {{ markdown(title="🏌️‍♂️ man golfing" type="markdown", code='
+
 <!--
 # 🏌️‍♂️ man golfing
 #
@@ -8839,9 +9725,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :golfing_man: `:golfing_man:`
 ') }}
 {{ markdown(title="🏌️‍♀️ woman golfing" type="markdown", code='
+
 <!--
 # 🏌️‍♀️ woman golfing
 #
@@ -8858,9 +9746,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :golfing_woman: `:golfing_woman:`
 ') }}
 {{ markdown(title="🏄 person surfing" type="markdown", code='
+
 <!--
 # 🏄 person surfing
 #
@@ -8877,9 +9767,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :surfer: `:surfer:`
 ') }}
 {{ markdown(title="🏄‍♂️ man surfing" type="markdown", code='
+
 <!--
 # 🏄‍♂️ man surfing
 #
@@ -8896,9 +9788,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :surfing_man: `:surfing_man:`
 ') }}
 {{ markdown(title="🏄‍♀️ woman surfing" type="markdown", code='
+
 <!--
 # 🏄‍♀️ woman surfing
 #
@@ -8915,9 +9809,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :surfing_woman: `:surfing_woman:`
 ') }}
 {{ markdown(title="🚣 person rowing boat" type="markdown", code='
+
 <!--
 # 🚣 person rowing boat
 #
@@ -8934,9 +9830,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :rowboat: `:rowboat:`
 ') }}
 {{ markdown(title="🚣‍♂️ man rowing boat" type="markdown", code='
+
 <!--
 # 🚣‍♂️ man rowing boat
 #
@@ -8953,9 +9851,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :rowing_man: `:rowing_man:`
 ') }}
 {{ markdown(title="🚣‍♀️ woman rowing boat" type="markdown", code='
+
 <!--
 # 🚣‍♀️ woman rowing boat
 #
@@ -8972,9 +9872,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :rowing_woman: `:rowing_woman:`
 ') }}
 {{ markdown(title="🏊 person swimming" type="markdown", code='
+
 <!--
 # 🏊 person swimming
 #
@@ -8991,9 +9893,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :swimmer: `:swimmer:`
 ') }}
 {{ markdown(title="🏊‍♂️ man swimming" type="markdown", code='
+
 <!--
 # 🏊‍♂️ man swimming
 #
@@ -9010,9 +9914,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :swimming_man: `:swimming_man:`
 ') }}
 {{ markdown(title="🏊‍♀️ woman swimming" type="markdown", code='
+
 <!--
 # 🏊‍♀️ woman swimming
 #
@@ -9029,9 +9935,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :swimming_woman: `:swimming_woman:`
 ') }}
 {{ markdown(title="⛹️ person bouncing ball" type="markdown", code='
+
 <!--
 # ⛹️ person bouncing ball
 #
@@ -9050,9 +9958,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bouncing_ball_person: `:bouncing_ball_person:`
 ') }}
 {{ markdown(title="⛹️‍♂️ man bouncing ball" type="markdown", code='
+
 <!--
 # ⛹️‍♂️ man bouncing ball
 #
@@ -9070,11 +9980,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bouncing_ball_man: `:bouncing_ball_man:`
 
 :basketball_man: `:basketball_man:`
 ') }}
 {{ markdown(title="⛹️‍♀️ woman bouncing ball" type="markdown", code='
+
 <!--
 # ⛹️‍♀️ woman bouncing ball
 #
@@ -9092,11 +10004,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bouncing_ball_woman: `:bouncing_ball_woman:`
 
 :basketball_woman: `:basketball_woman:`
 ') }}
 {{ markdown(title="🏋️ person lifting weights" type="markdown", code='
+
 <!--
 # 🏋️ person lifting weights
 #
@@ -9116,9 +10030,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :weight_lifting: `:weight_lifting:`
 ') }}
 {{ markdown(title="🏋️‍♂️ man lifting weights" type="markdown", code='
+
 <!--
 # 🏋️‍♂️ man lifting weights
 #
@@ -9138,9 +10054,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :weight_lifting_man: `:weight_lifting_man:`
 ') }}
 {{ markdown(title="🏋️‍♀️ woman lifting weights" type="markdown", code='
+
 <!--
 # 🏋️‍♀️ woman lifting weights
 #
@@ -9160,9 +10078,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :weight_lifting_woman: `:weight_lifting_woman:`
 ') }}
 {{ markdown(title="🚴 person biking" type="markdown", code='
+
 <!--
 # 🚴 person biking
 #
@@ -9179,9 +10099,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bicyclist: `:bicyclist:`
 ') }}
 {{ markdown(title="🚴‍♂️ man biking" type="markdown", code='
+
 <!--
 # 🚴‍♂️ man biking
 #
@@ -9198,9 +10120,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :biking_man: `:biking_man:`
 ') }}
 {{ markdown(title="🚴‍♀️ woman biking" type="markdown", code='
+
 <!--
 # 🚴‍♀️ woman biking
 #
@@ -9217,9 +10141,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :biking_woman: `:biking_woman:`
 ') }}
 {{ markdown(title="🚵 person mountain biking" type="markdown", code='
+
 <!--
 # 🚵 person mountain biking
 #
@@ -9236,9 +10162,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mountain_bicyclist: `:mountain_bicyclist:`
 ') }}
 {{ markdown(title="🚵‍♂️ man mountain biking" type="markdown", code='
+
 <!--
 # 🚵‍♂️ man mountain biking
 #
@@ -9255,9 +10183,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mountain_biking_man: `:mountain_biking_man:`
 ') }}
 {{ markdown(title="🚵‍♀️ woman mountain biking" type="markdown", code='
+
 <!--
 # 🚵‍♀️ woman mountain biking
 #
@@ -9274,9 +10204,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :mountain_biking_woman: `:mountain_biking_woman:`
 ') }}
 {{ markdown(title="🤸 person cartwheeling" type="markdown", code='
+
 <!--
 # 🤸 person cartwheeling
 #
@@ -9293,9 +10225,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :cartwheeling: `:cartwheeling:`
 ') }}
 {{ markdown(title="🤸‍♂️ man cartwheeling" type="markdown", code='
+
 <!--
 # 🤸‍♂️ man cartwheeling
 #
@@ -9312,9 +10246,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_cartwheeling: `:man_cartwheeling:`
 ') }}
 {{ markdown(title="🤸‍♀️ woman cartwheeling" type="markdown", code='
+
 <!--
 # 🤸‍♀️ woman cartwheeling
 #
@@ -9331,9 +10267,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_cartwheeling: `:woman_cartwheeling:`
 ') }}
 {{ markdown(title="🤼 people wrestling" type="markdown", code='
+
 <!--
 # 🤼 people wrestling
 #
@@ -9349,9 +10287,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :wrestling: `:wrestling:`
 ') }}
 {{ markdown(title="🤼‍♂️ men wrestling" type="markdown", code='
+
 <!--
 # 🤼‍♂️ men wrestling
 #
@@ -9367,9 +10307,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :men_wrestling: `:men_wrestling:`
 ') }}
 {{ markdown(title="🤼‍♀️ women wrestling" type="markdown", code='
+
 <!--
 # 🤼‍♀️ women wrestling
 #
@@ -9385,9 +10327,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :women_wrestling: `:women_wrestling:`
 ') }}
 {{ markdown(title="🤽 person playing water polo" type="markdown", code='
+
 <!--
 # 🤽 person playing water polo
 #
@@ -9404,9 +10348,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :water_polo: `:water_polo:`
 ') }}
 {{ markdown(title="🤽‍♂️ man playing water polo" type="markdown", code='
+
 <!--
 # 🤽‍♂️ man playing water polo
 #
@@ -9423,9 +10369,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_playing_water_polo: `:man_playing_water_polo:`
 ') }}
 {{ markdown(title="🤽‍♀️ woman playing water polo" type="markdown", code='
+
 <!--
 # 🤽‍♀️ woman playing water polo
 #
@@ -9442,9 +10390,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_playing_water_polo: `:woman_playing_water_polo:`
 ') }}
 {{ markdown(title="🤾 person playing handball" type="markdown", code='
+
 <!--
 # 🤾 person playing handball
 #
@@ -9461,9 +10411,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :handball_person: `:handball_person:`
 ') }}
 {{ markdown(title="🤾‍♂️ man playing handball" type="markdown", code='
+
 <!--
 # 🤾‍♂️ man playing handball
 #
@@ -9480,9 +10432,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_playing_handball: `:man_playing_handball:`
 ') }}
 {{ markdown(title="🤾‍♀️ woman playing handball" type="markdown", code='
+
 <!--
 # 🤾‍♀️ woman playing handball
 #
@@ -9499,9 +10453,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_playing_handball: `:woman_playing_handball:`
 ') }}
 {{ markdown(title="🤹 person juggling" type="markdown", code='
+
 <!--
 # 🤹 person juggling
 #
@@ -9518,9 +10474,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :juggling_person: `:juggling_person:`
 ') }}
 {{ markdown(title="🤹‍♂️ man juggling" type="markdown", code='
+
 <!--
 # 🤹‍♂️ man juggling
 #
@@ -9537,9 +10495,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :man_juggling: `:man_juggling:`
 ') }}
 {{ markdown(title="🤹‍♀️ woman juggling" type="markdown", code='
+
 <!--
 # 🤹‍♀️ woman juggling
 #
@@ -9556,9 +10516,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :woman_juggling: `:woman_juggling:`
 ') }}
 {{ markdown(title="🧘 person in lotus position" type="markdown", code='
+
 <!--
 # 🧘 person in lotus position
 #
@@ -9577,9 +10539,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :lotus_position: `:lotus_position:`
 ') }}
 {{ markdown(title="🧘‍♂️ man in lotus position" type="markdown", code='
+
 <!--
 # 🧘‍♂️ man in lotus position
 #
@@ -9598,9 +10562,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :lotus_position_man: `:lotus_position_man:`
 ') }}
 {{ markdown(title="🧘‍♀️ woman in lotus position" type="markdown", code='
+
 <!--
 # 🧘‍♀️ woman in lotus position
 #
@@ -9619,9 +10585,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :lotus_position_woman: `:lotus_position_woman:`
 ') }}
 {{ markdown(title="🛀 person taking bath" type="markdown", code='
+
 <!--
 # 🛀 person taking bath
 #
@@ -9640,9 +10608,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :bath: `:bath:`
 ') }}
 {{ markdown(title="🛌 person in bed" type="markdown", code='
+
 <!--
 # 🛌 person in bed
 #
@@ -9659,9 +10629,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :sleeping_bed: `:sleeping_bed:`
 ') }}
 {{ markdown(title="🧑‍🤝‍🧑 people holding hands" type="markdown", code='
+
 <!--
 # 🧑‍🤝‍🧑 people holding hands
 #
@@ -9681,9 +10653,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :people_holding_hands: `:people_holding_hands:`
 ') }}
 {{ markdown(title="👭 women holding hands" type="markdown", code='
+
 <!--
 # 👭 women holding hands
 #
@@ -9703,9 +10677,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :two_women_holding_hands: `:two_women_holding_hands:`
 ') }}
 {{ markdown(title="👫 woman and man holding hands" type="markdown", code='
+
 <!--
 # 👫 woman and man holding hands
 #
@@ -9724,9 +10700,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couple: `:couple:`
 ') }}
 {{ markdown(title="👬 men holding hands" type="markdown", code='
+
 <!--
 # 👬 men holding hands
 #
@@ -9746,9 +10724,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :two_men_holding_hands: `:two_men_holding_hands:`
 ') }}
 {{ markdown(title="💏 kiss" type="markdown", code='
+
 <!--
 # 💏 kiss
 #
@@ -9765,9 +10745,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couplekiss: `:couplekiss:`
 ') }}
 {{ markdown(title="👩‍❤️‍💋‍👨 kiss: woman, man" type="markdown", code='
+
 <!--
 # 👩‍❤️‍💋‍👨 kiss: woman, man
 #
@@ -9784,9 +10766,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couplekiss_man_woman: `:couplekiss_man_woman:`
 ') }}
 {{ markdown(title="👨‍❤️‍💋‍👨 kiss: man, man" type="markdown", code='
+
 <!--
 # 👨‍❤️‍💋‍👨 kiss: man, man
 #
@@ -9803,9 +10787,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couplekiss_man_man: `:couplekiss_man_man:`
 ') }}
 {{ markdown(title="👩‍❤️‍💋‍👩 kiss: woman, woman" type="markdown", code='
+
 <!--
 # 👩‍❤️‍💋‍👩 kiss: woman, woman
 #
@@ -9822,9 +10808,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couplekiss_woman_woman: `:couplekiss_woman_woman:`
 ') }}
 {{ markdown(title="💑 couple with heart" type="markdown", code='
+
 <!--
 # 💑 couple with heart
 #
@@ -9841,9 +10829,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couple_with_heart: `:couple_with_heart:`
 ') }}
 {{ markdown(title="👩‍❤️‍👨 couple with heart: woman, man" type="markdown", code='
+
 <!--
 # 👩‍❤️‍👨 couple with heart: woman, man
 #
@@ -9860,9 +10850,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couple_with_heart_woman_man: `:couple_with_heart_woman_man:`
 ') }}
 {{ markdown(title="👨‍❤️‍👨 couple with heart: man, man" type="markdown", code='
+
 <!--
 # 👨‍❤️‍👨 couple with heart: man, man
 #
@@ -9879,9 +10871,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couple_with_heart_man_man: `:couple_with_heart_man_man:`
 ') }}
 {{ markdown(title="👩‍❤️‍👩 couple with heart: woman, woman" type="markdown", code='
+
 <!--
 # 👩‍❤️‍👩 couple with heart: woman, woman
 #
@@ -9898,9 +10892,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "skin_tones": true
 # }
 -->
+
 :couple_with_heart_woman_woman: `:couple_with_heart_woman_woman:`
 ') }}
 {{ markdown(title="👪 family" type="markdown", code='
+
 <!--
 # 👪 family
 #
@@ -9920,9 +10916,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :family: `:family:`
 ') }}
 {{ markdown(title="👨‍👩‍👦 family: man, woman, boy" type="markdown", code='
+
 <!--
 # 👨‍👩‍👦 family: man, woman, boy
 #
@@ -9938,9 +10936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :family_man_woman_boy: `:family_man_woman_boy:`
 ') }}
 {{ markdown(title="👨‍👩‍👧 family: man, woman, girl" type="markdown", code='
+
 <!--
 # 👨‍👩‍👧 family: man, woman, girl
 #
@@ -9956,9 +10956,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_woman_girl: `:family_man_woman_girl:`
 ') }}
 {{ markdown(title="👨‍👩‍👧‍👦 family: man, woman, girl, boy" type="markdown", code='
+
 <!--
 # 👨‍👩‍👧‍👦 family: man, woman, girl, boy
 #
@@ -9974,9 +10976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_woman_girl_boy: `:family_man_woman_girl_boy:`
 ') }}
 {{ markdown(title="👨‍👩‍👦‍👦 family: man, woman, boy, boy" type="markdown", code='
+
 <!--
 # 👨‍👩‍👦‍👦 family: man, woman, boy, boy
 #
@@ -9992,9 +10996,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_woman_boy_boy: `:family_man_woman_boy_boy:`
 ') }}
 {{ markdown(title="👨‍👩‍👧‍👧 family: man, woman, girl, girl" type="markdown", code='
+
 <!--
 # 👨‍👩‍👧‍👧 family: man, woman, girl, girl
 #
@@ -10010,9 +11016,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_woman_girl_girl: `:family_man_woman_girl_girl:`
 ') }}
 {{ markdown(title="👨‍👨‍👦 family: man, man, boy" type="markdown", code='
+
 <!--
 # 👨‍👨‍👦 family: man, man, boy
 #
@@ -10028,9 +11036,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_man_boy: `:family_man_man_boy:`
 ') }}
 {{ markdown(title="👨‍👨‍👧 family: man, man, girl" type="markdown", code='
+
 <!--
 # 👨‍👨‍👧 family: man, man, girl
 #
@@ -10046,9 +11056,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_man_girl: `:family_man_man_girl:`
 ') }}
 {{ markdown(title="👨‍👨‍👧‍👦 family: man, man, girl, boy" type="markdown", code='
+
 <!--
 # 👨‍👨‍👧‍👦 family: man, man, girl, boy
 #
@@ -10064,9 +11076,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_man_girl_boy: `:family_man_man_girl_boy:`
 ') }}
 {{ markdown(title="👨‍👨‍👦‍👦 family: man, man, boy, boy" type="markdown", code='
+
 <!--
 # 👨‍👨‍👦‍👦 family: man, man, boy, boy
 #
@@ -10082,9 +11096,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_man_boy_boy: `:family_man_man_boy_boy:`
 ') }}
 {{ markdown(title="👨‍👨‍👧‍👧 family: man, man, girl, girl" type="markdown", code='
+
 <!--
 # 👨‍👨‍👧‍👧 family: man, man, girl, girl
 #
@@ -10100,9 +11116,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_man_man_girl_girl: `:family_man_man_girl_girl:`
 ') }}
 {{ markdown(title="👩‍👩‍👦 family: woman, woman, boy" type="markdown", code='
+
 <!--
 # 👩‍👩‍👦 family: woman, woman, boy
 #
@@ -10118,9 +11136,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_woman_woman_boy: `:family_woman_woman_boy:`
 ') }}
 {{ markdown(title="👩‍👩‍👧 family: woman, woman, girl" type="markdown", code='
+
 <!--
 # 👩‍👩‍👧 family: woman, woman, girl
 #
@@ -10136,9 +11156,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_woman_woman_girl: `:family_woman_woman_girl:`
 ') }}
 {{ markdown(title="👩‍👩‍👧‍👦 family: woman, woman, girl, boy" type="markdown", code='
+
 <!--
 # 👩‍👩‍👧‍👦 family: woman, woman, girl, boy
 #
@@ -10154,9 +11176,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_woman_woman_girl_boy: `:family_woman_woman_girl_boy:`
 ') }}
 {{ markdown(title="👩‍👩‍👦‍👦 family: woman, woman, boy, boy" type="markdown", code='
+
 <!--
 # 👩‍👩‍👦‍👦 family: woman, woman, boy, boy
 #
@@ -10172,9 +11196,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_woman_woman_boy_boy: `:family_woman_woman_boy_boy:`
 ') }}
 {{ markdown(title="👩‍👩‍👧‍👧 family: woman, woman, girl, girl" type="markdown", code='
+
 <!--
 # 👩‍👩‍👧‍👧 family: woman, woman, girl, girl
 #
@@ -10190,9 +11216,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :family_woman_woman_girl_girl: `:family_woman_woman_girl_girl:`
 ') }}
 {{ markdown(title="👨‍👦 family: man, boy" type="markdown", code='
+
 <!--
 # 👨‍👦 family: man, boy
 #
@@ -10208,9 +11236,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_man_boy: `:family_man_boy:`
 ') }}
 {{ markdown(title="👨‍👦‍👦 family: man, boy, boy" type="markdown", code='
+
 <!--
 # 👨‍👦‍👦 family: man, boy, boy
 #
@@ -10226,9 +11256,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_man_boy_boy: `:family_man_boy_boy:`
 ') }}
 {{ markdown(title="👨‍👧 family: man, girl" type="markdown", code='
+
 <!--
 # 👨‍👧 family: man, girl
 #
@@ -10244,9 +11276,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_man_girl: `:family_man_girl:`
 ') }}
 {{ markdown(title="👨‍👧‍👦 family: man, girl, boy" type="markdown", code='
+
 <!--
 # 👨‍👧‍👦 family: man, girl, boy
 #
@@ -10262,9 +11296,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_man_girl_boy: `:family_man_girl_boy:`
 ') }}
 {{ markdown(title="👨‍👧‍👧 family: man, girl, girl" type="markdown", code='
+
 <!--
 # 👨‍👧‍👧 family: man, girl, girl
 #
@@ -10280,9 +11316,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_man_girl_girl: `:family_man_girl_girl:`
 ') }}
 {{ markdown(title="👩‍👦 family: woman, boy" type="markdown", code='
+
 <!--
 # 👩‍👦 family: woman, boy
 #
@@ -10298,9 +11336,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_woman_boy: `:family_woman_boy:`
 ') }}
 {{ markdown(title="👩‍👦‍👦 family: woman, boy, boy" type="markdown", code='
+
 <!--
 # 👩‍👦‍👦 family: woman, boy, boy
 #
@@ -10316,9 +11356,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_woman_boy_boy: `:family_woman_boy_boy:`
 ') }}
 {{ markdown(title="👩‍👧 family: woman, girl" type="markdown", code='
+
 <!--
 # 👩‍👧 family: woman, girl
 #
@@ -10334,9 +11376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_woman_girl: `:family_woman_girl:`
 ') }}
 {{ markdown(title="👩‍👧‍👦 family: woman, girl, boy" type="markdown", code='
+
 <!--
 # 👩‍👧‍👦 family: woman, girl, boy
 #
@@ -10352,9 +11396,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_woman_girl_boy: `:family_woman_girl_boy:`
 ') }}
 {{ markdown(title="👩‍👧‍👧 family: woman, girl, girl" type="markdown", code='
+
 <!--
 # 👩‍👧‍👧 family: woman, girl, girl
 #
@@ -10370,9 +11416,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :family_woman_girl_girl: `:family_woman_girl_girl:`
 ') }}
 {{ markdown(title="🗣️ speaking head" type="markdown", code='
+
 <!--
 # 🗣️ speaking head
 #
@@ -10388,9 +11436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :speaking_head: `:speaking_head:`
 ') }}
 {{ markdown(title="👤 bust in silhouette" type="markdown", code='
+
 <!--
 # 👤 bust in silhouette
 #
@@ -10408,9 +11458,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bust_in_silhouette: `:bust_in_silhouette:`
 ') }}
 {{ markdown(title="👥 busts in silhouette" type="markdown", code='
+
 <!--
 # 👥 busts in silhouette
 #
@@ -10430,9 +11482,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :busts_in_silhouette: `:busts_in_silhouette:`
 ') }}
 {{ markdown(title="🫂 people hugging" type="markdown", code='
+
 <!--
 # 🫂 people hugging
 #
@@ -10448,9 +11502,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :people_hugging: `:people_hugging:`
 ') }}
 {{ markdown(title="👣 footprints" type="markdown", code='
+
 <!--
 # 👣 footprints
 #
@@ -10469,9 +11525,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :footprints: `:footprints:`
 ') }}
 {{ markdown(title="🐵 monkey face" type="markdown", code='
+
 <!--
 # 🐵 monkey face
 #
@@ -10487,9 +11545,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :monkey_face: `:monkey_face:`
 ') }}
 {{ markdown(title="🐒 monkey" type="markdown", code='
+
 <!--
 # 🐒 monkey
 #
@@ -10505,9 +11565,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :monkey: `:monkey:`
 ') }}
 {{ markdown(title="🦍 gorilla" type="markdown", code='
+
 <!--
 # 🦍 gorilla
 #
@@ -10523,9 +11585,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :gorilla: `:gorilla:`
 ') }}
 {{ markdown(title="🦧 orangutan" type="markdown", code='
+
 <!--
 # 🦧 orangutan
 #
@@ -10541,9 +11605,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :orangutan: `:orangutan:`
 ') }}
 {{ markdown(title="🐶 dog face" type="markdown", code='
+
 <!--
 # 🐶 dog face
 #
@@ -10561,9 +11627,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dog: `:dog:`
 ') }}
 {{ markdown(title="🐕 dog" type="markdown", code='
+
 <!--
 # 🐕 dog
 #
@@ -10579,9 +11647,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dog2: `:dog2:`
 ') }}
 {{ markdown(title="🦮 guide dog" type="markdown", code='
+
 <!--
 # 🦮 guide dog
 #
@@ -10597,9 +11667,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :guide_dog: `:guide_dog:`
 ') }}
 {{ markdown(title="🐕‍🦺 service dog" type="markdown", code='
+
 <!--
 # 🐕‍🦺 service dog
 #
@@ -10615,9 +11687,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :service_dog: `:service_dog:`
 ') }}
 {{ markdown(title="🐩 poodle" type="markdown", code='
+
 <!--
 # 🐩 poodle
 #
@@ -10635,9 +11709,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :poodle: `:poodle:`
 ') }}
 {{ markdown(title="🐺 wolf" type="markdown", code='
+
 <!--
 # 🐺 wolf
 #
@@ -10653,9 +11729,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wolf: `:wolf:`
 ') }}
 {{ markdown(title="🦊 fox" type="markdown", code='
+
 <!--
 # 🦊 fox
 #
@@ -10671,9 +11749,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :fox_face: `:fox_face:`
 ') }}
 {{ markdown(title="🦝 raccoon" type="markdown", code='
+
 <!--
 # 🦝 raccoon
 #
@@ -10689,9 +11769,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :raccoon: `:raccoon:`
 ') }}
 {{ markdown(title="🐱 cat face" type="markdown", code='
+
 <!--
 # 🐱 cat face
 #
@@ -10709,9 +11791,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cat: `:cat:`
 ') }}
 {{ markdown(title="🐈 cat" type="markdown", code='
+
 <!--
 # 🐈 cat
 #
@@ -10727,9 +11811,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cat2: `:cat2:`
 ') }}
 {{ markdown(title="🐈‍⬛ black cat" type="markdown", code='
+
 <!--
 # 🐈‍⬛ black cat
 #
@@ -10745,9 +11831,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :black_cat: `:black_cat:`
 ') }}
 {{ markdown(title="🦁 lion" type="markdown", code='
+
 <!--
 # 🦁 lion
 #
@@ -10763,9 +11851,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :lion: `:lion:`
 ') }}
 {{ markdown(title="🐯 tiger face" type="markdown", code='
+
 <!--
 # 🐯 tiger face
 #
@@ -10781,9 +11871,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tiger: `:tiger:`
 ') }}
 {{ markdown(title="🐅 tiger" type="markdown", code='
+
 <!--
 # 🐅 tiger
 #
@@ -10799,9 +11891,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tiger2: `:tiger2:`
 ') }}
 {{ markdown(title="🐆 leopard" type="markdown", code='
+
 <!--
 # 🐆 leopard
 #
@@ -10817,9 +11911,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :leopard: `:leopard:`
 ') }}
 {{ markdown(title="🐴 horse face" type="markdown", code='
+
 <!--
 # 🐴 horse face
 #
@@ -10835,9 +11931,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :horse: `:horse:`
 ') }}
 {{ markdown(title="🫎 moose" type="markdown", code='
+
 <!--
 # 🫎 moose
 #
@@ -10855,9 +11953,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :moose: `:moose:`
 ') }}
 {{ markdown(title="🫏 donkey" type="markdown", code='
+
 <!--
 # 🫏 donkey
 #
@@ -10875,9 +11975,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :donkey: `:donkey:`
 ') }}
 {{ markdown(title="🐎 horse" type="markdown", code='
+
 <!--
 # 🐎 horse
 #
@@ -10895,9 +11997,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :racehorse: `:racehorse:`
 ') }}
 {{ markdown(title="🦄 unicorn" type="markdown", code='
+
 <!--
 # 🦄 unicorn
 #
@@ -10913,9 +12017,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :unicorn: `:unicorn:`
 ') }}
 {{ markdown(title="🦓 zebra" type="markdown", code='
+
 <!--
 # 🦓 zebra
 #
@@ -10931,9 +12037,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :zebra: `:zebra:`
 ') }}
 {{ markdown(title="🦌 deer" type="markdown", code='
+
 <!--
 # 🦌 deer
 #
@@ -10949,9 +12057,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :deer: `:deer:`
 ') }}
 {{ markdown(title="🦬 bison" type="markdown", code='
+
 <!--
 # 🦬 bison
 #
@@ -10967,9 +12077,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :bison: `:bison:`
 ') }}
 {{ markdown(title="🐮 cow face" type="markdown", code='
+
 <!--
 # 🐮 cow face
 #
@@ -10985,9 +12097,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cow: `:cow:`
 ') }}
 {{ markdown(title="🐂 ox" type="markdown", code='
+
 <!--
 # 🐂 ox
 #
@@ -11003,9 +12117,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ox: `:ox:`
 ') }}
 {{ markdown(title="🐃 water buffalo" type="markdown", code='
+
 <!--
 # 🐃 water buffalo
 #
@@ -11021,9 +12137,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :water_buffalo: `:water_buffalo:`
 ') }}
 {{ markdown(title="🐄 cow" type="markdown", code='
+
 <!--
 # 🐄 cow
 #
@@ -11039,9 +12157,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cow2: `:cow2:`
 ') }}
 {{ markdown(title="🐷 pig face" type="markdown", code='
+
 <!--
 # 🐷 pig face
 #
@@ -11057,9 +12177,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pig: `:pig:`
 ') }}
 {{ markdown(title="🐖 pig" type="markdown", code='
+
 <!--
 # 🐖 pig
 #
@@ -11075,9 +12197,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pig2: `:pig2:`
 ') }}
 {{ markdown(title="🐗 boar" type="markdown", code='
+
 <!--
 # 🐗 boar
 #
@@ -11093,9 +12217,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :boar: `:boar:`
 ') }}
 {{ markdown(title="🐽 pig nose" type="markdown", code='
+
 <!--
 # 🐽 pig nose
 #
@@ -11111,9 +12237,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pig_nose: `:pig_nose:`
 ') }}
 {{ markdown(title="🐏 ram" type="markdown", code='
+
 <!--
 # 🐏 ram
 #
@@ -11129,9 +12257,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ram: `:ram:`
 ') }}
 {{ markdown(title="🐑 ewe" type="markdown", code='
+
 <!--
 # 🐑 ewe
 #
@@ -11147,9 +12277,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sheep: `:sheep:`
 ') }}
 {{ markdown(title="🐐 goat" type="markdown", code='
+
 <!--
 # 🐐 goat
 #
@@ -11165,9 +12297,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :goat: `:goat:`
 ') }}
 {{ markdown(title="🐪 camel" type="markdown", code='
+
 <!--
 # 🐪 camel
 #
@@ -11185,9 +12319,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dromedary_camel: `:dromedary_camel:`
 ') }}
 {{ markdown(title="🐫 two-hump camel" type="markdown", code='
+
 <!--
 # 🐫 two-hump camel
 #
@@ -11203,9 +12339,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :camel: `:camel:`
 ') }}
 {{ markdown(title="🦙 llama" type="markdown", code='
+
 <!--
 # 🦙 llama
 #
@@ -11221,9 +12359,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :llama: `:llama:`
 ') }}
 {{ markdown(title="🦒 giraffe" type="markdown", code='
+
 <!--
 # 🦒 giraffe
 #
@@ -11239,9 +12379,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :giraffe: `:giraffe:`
 ') }}
 {{ markdown(title="🐘 elephant" type="markdown", code='
+
 <!--
 # 🐘 elephant
 #
@@ -11257,9 +12399,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :elephant: `:elephant:`
 ') }}
 {{ markdown(title="🦣 mammoth" type="markdown", code='
+
 <!--
 # 🦣 mammoth
 #
@@ -11275,9 +12419,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :mammoth: `:mammoth:`
 ') }}
 {{ markdown(title="🦏 rhinoceros" type="markdown", code='
+
 <!--
 # 🦏 rhinoceros
 #
@@ -11293,9 +12439,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :rhinoceros: `:rhinoceros:`
 ') }}
 {{ markdown(title="🦛 hippopotamus" type="markdown", code='
+
 <!--
 # 🦛 hippopotamus
 #
@@ -11311,9 +12459,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :hippopotamus: `:hippopotamus:`
 ') }}
 {{ markdown(title="🐭 mouse face" type="markdown", code='
+
 <!--
 # 🐭 mouse face
 #
@@ -11329,9 +12479,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mouse: `:mouse:`
 ') }}
 {{ markdown(title="🐁 mouse" type="markdown", code='
+
 <!--
 # 🐁 mouse
 #
@@ -11347,9 +12499,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mouse2: `:mouse2:`
 ') }}
 {{ markdown(title="🐀 rat" type="markdown", code='
+
 <!--
 # 🐀 rat
 #
@@ -11365,9 +12519,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rat: `:rat:`
 ') }}
 {{ markdown(title="🐹 hamster" type="markdown", code='
+
 <!--
 # 🐹 hamster
 #
@@ -11385,9 +12541,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hamster: `:hamster:`
 ') }}
 {{ markdown(title="🐰 rabbit face" type="markdown", code='
+
 <!--
 # 🐰 rabbit face
 #
@@ -11405,9 +12563,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rabbit: `:rabbit:`
 ') }}
 {{ markdown(title="🐇 rabbit" type="markdown", code='
+
 <!--
 # 🐇 rabbit
 #
@@ -11423,9 +12583,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rabbit2: `:rabbit2:`
 ') }}
 {{ markdown(title="🐿️ chipmunk" type="markdown", code='
+
 <!--
 # 🐿️ chipmunk
 #
@@ -11441,9 +12603,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :chipmunk: `:chipmunk:`
 ') }}
 {{ markdown(title="🦫 beaver" type="markdown", code='
+
 <!--
 # 🦫 beaver
 #
@@ -11459,9 +12623,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :beaver: `:beaver:`
 ') }}
 {{ markdown(title="🦔 hedgehog" type="markdown", code='
+
 <!--
 # 🦔 hedgehog
 #
@@ -11477,9 +12643,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :hedgehog: `:hedgehog:`
 ') }}
 {{ markdown(title="🦇 bat" type="markdown", code='
+
 <!--
 # 🦇 bat
 #
@@ -11495,9 +12663,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :bat: `:bat:`
 ') }}
 {{ markdown(title="🐻 bear" type="markdown", code='
+
 <!--
 # 🐻 bear
 #
@@ -11513,9 +12683,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bear: `:bear:`
 ') }}
 {{ markdown(title="🐻‍❄️ polar bear" type="markdown", code='
+
 <!--
 # 🐻‍❄️ polar bear
 #
@@ -11531,9 +12703,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :polar_bear: `:polar_bear:`
 ') }}
 {{ markdown(title="🐨 koala" type="markdown", code='
+
 <!--
 # 🐨 koala
 #
@@ -11549,9 +12723,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :koala: `:koala:`
 ') }}
 {{ markdown(title="🐼 panda" type="markdown", code='
+
 <!--
 # 🐼 panda
 #
@@ -11567,9 +12743,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :panda_face: `:panda_face:`
 ') }}
 {{ markdown(title="🦥 sloth" type="markdown", code='
+
 <!--
 # 🦥 sloth
 #
@@ -11585,9 +12763,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :sloth: `:sloth:`
 ') }}
 {{ markdown(title="🦦 otter" type="markdown", code='
+
 <!--
 # 🦦 otter
 #
@@ -11603,9 +12783,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :otter: `:otter:`
 ') }}
 {{ markdown(title="🦨 skunk" type="markdown", code='
+
 <!--
 # 🦨 skunk
 #
@@ -11621,9 +12803,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :skunk: `:skunk:`
 ') }}
 {{ markdown(title="🦘 kangaroo" type="markdown", code='
+
 <!--
 # 🦘 kangaroo
 #
@@ -11639,9 +12823,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :kangaroo: `:kangaroo:`
 ') }}
 {{ markdown(title="🦡 badger" type="markdown", code='
+
 <!--
 # 🦡 badger
 #
@@ -11657,9 +12843,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :badger: `:badger:`
 ') }}
 {{ markdown(title="🐾 paw prints" type="markdown", code='
+
 <!--
 # 🐾 paw prints
 #
@@ -11676,11 +12864,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :feet: `:feet:`
 
 :paw_prints: `:paw_prints:`
 ') }}
 {{ markdown(title="🦃 turkey" type="markdown", code='
+
 <!--
 # 🦃 turkey
 #
@@ -11698,9 +12888,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :turkey: `:turkey:`
 ') }}
 {{ markdown(title="🐔 chicken" type="markdown", code='
+
 <!--
 # 🐔 chicken
 #
@@ -11716,9 +12908,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :chicken: `:chicken:`
 ') }}
 {{ markdown(title="🐓 rooster" type="markdown", code='
+
 <!--
 # 🐓 rooster
 #
@@ -11734,9 +12928,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rooster: `:rooster:`
 ') }}
 {{ markdown(title="🐣 hatching chick" type="markdown", code='
+
 <!--
 # 🐣 hatching chick
 #
@@ -11752,9 +12948,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hatching_chick: `:hatching_chick:`
 ') }}
 {{ markdown(title="🐤 baby chick" type="markdown", code='
+
 <!--
 # 🐤 baby chick
 #
@@ -11770,9 +12968,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :baby_chick: `:baby_chick:`
 ') }}
 {{ markdown(title="🐥 front-facing baby chick" type="markdown", code='
+
 <!--
 # 🐥 front-facing baby chick
 #
@@ -11788,9 +12988,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hatched_chick: `:hatched_chick:`
 ') }}
 {{ markdown(title="🐦 bird" type="markdown", code='
+
 <!--
 # 🐦 bird
 #
@@ -11806,9 +13008,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bird: `:bird:`
 ') }}
 {{ markdown(title="🐧 penguin" type="markdown", code='
+
 <!--
 # 🐧 penguin
 #
@@ -11824,9 +13028,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :penguin: `:penguin:`
 ') }}
 {{ markdown(title="🕊️ dove" type="markdown", code='
+
 <!--
 # 🕊️ dove
 #
@@ -11844,9 +13050,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :dove: `:dove:`
 ') }}
 {{ markdown(title="🦅 eagle" type="markdown", code='
+
 <!--
 # 🦅 eagle
 #
@@ -11862,9 +13070,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :eagle: `:eagle:`
 ') }}
 {{ markdown(title="🦆 duck" type="markdown", code='
+
 <!--
 # 🦆 duck
 #
@@ -11880,9 +13090,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :duck: `:duck:`
 ') }}
 {{ markdown(title="🦢 swan" type="markdown", code='
+
 <!--
 # 🦢 swan
 #
@@ -11898,9 +13110,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :swan: `:swan:`
 ') }}
 {{ markdown(title="🦉 owl" type="markdown", code='
+
 <!--
 # 🦉 owl
 #
@@ -11916,9 +13130,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :owl: `:owl:`
 ') }}
 {{ markdown(title="🦤 dodo" type="markdown", code='
+
 <!--
 # 🦤 dodo
 #
@@ -11934,9 +13150,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :dodo: `:dodo:`
 ') }}
 {{ markdown(title="🪶 feather" type="markdown", code='
+
 <!--
 # 🪶 feather
 #
@@ -11952,9 +13170,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :feather: `:feather:`
 ') }}
 {{ markdown(title="🦩 flamingo" type="markdown", code='
+
 <!--
 # 🦩 flamingo
 #
@@ -11970,9 +13190,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :flamingo: `:flamingo:`
 ') }}
 {{ markdown(title="🦚 peacock" type="markdown", code='
+
 <!--
 # 🦚 peacock
 #
@@ -11988,9 +13210,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :peacock: `:peacock:`
 ') }}
 {{ markdown(title="🦜 parrot" type="markdown", code='
+
 <!--
 # 🦜 parrot
 #
@@ -12006,9 +13230,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :parrot: `:parrot:`
 ') }}
 {{ markdown(title="🪽 wing" type="markdown", code='
+
 <!--
 # 🪽 wing
 #
@@ -12026,9 +13252,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :wing: `:wing:`
 ') }}
 {{ markdown(title="🐦‍⬛ black bird" type="markdown", code='
+
 <!--
 # 🐦‍⬛ black bird
 #
@@ -12044,9 +13272,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :black_bird: `:black_bird:`
 ') }}
 {{ markdown(title="🪿 goose" type="markdown", code='
+
 <!--
 # 🪿 goose
 #
@@ -12064,9 +13294,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :goose: `:goose:`
 ') }}
 {{ markdown(title="🐸 frog" type="markdown", code='
+
 <!--
 # 🐸 frog
 #
@@ -12082,9 +13314,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :frog: `:frog:`
 ') }}
 {{ markdown(title="🐊 crocodile" type="markdown", code='
+
 <!--
 # 🐊 crocodile
 #
@@ -12100,9 +13334,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :crocodile: `:crocodile:`
 ') }}
 {{ markdown(title="🐢 turtle" type="markdown", code='
+
 <!--
 # 🐢 turtle
 #
@@ -12120,9 +13356,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :turtle: `:turtle:`
 ') }}
 {{ markdown(title="🦎 lizard" type="markdown", code='
+
 <!--
 # 🦎 lizard
 #
@@ -12138,9 +13376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :lizard: `:lizard:`
 ') }}
 {{ markdown(title="🐍 snake" type="markdown", code='
+
 <!--
 # 🐍 snake
 #
@@ -12156,9 +13396,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :snake: `:snake:`
 ') }}
 {{ markdown(title="🐲 dragon face" type="markdown", code='
+
 <!--
 # 🐲 dragon face
 #
@@ -12174,9 +13416,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dragon_face: `:dragon_face:`
 ') }}
 {{ markdown(title="🐉 dragon" type="markdown", code='
+
 <!--
 # 🐉 dragon
 #
@@ -12192,9 +13436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dragon: `:dragon:`
 ') }}
 {{ markdown(title="🦕 sauropod" type="markdown", code='
+
 <!--
 # 🦕 sauropod
 #
@@ -12212,9 +13458,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :sauropod: `:sauropod:`
 ') }}
 {{ markdown(title="🦖 T-Rex" type="markdown", code='
+
 <!--
 # 🦖 T-Rex
 #
@@ -12232,9 +13480,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :t-rex: `:t-rex:`
 ') }}
 {{ markdown(title="🐳 spouting whale" type="markdown", code='
+
 <!--
 # 🐳 spouting whale
 #
@@ -12252,9 +13502,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :whale: `:whale:`
 ') }}
 {{ markdown(title="🐋 whale" type="markdown", code='
+
 <!--
 # 🐋 whale
 #
@@ -12270,9 +13522,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :whale2: `:whale2:`
 ') }}
 {{ markdown(title="🐬 dolphin" type="markdown", code='
+
 <!--
 # 🐬 dolphin
 #
@@ -12289,11 +13543,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dolphin: `:dolphin:`
 
 :flipper: `:flipper:`
 ') }}
 {{ markdown(title="🦭 seal" type="markdown", code='
+
 <!--
 # 🦭 seal
 #
@@ -12309,9 +13565,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :seal: `:seal:`
 ') }}
 {{ markdown(title="🐟 fish" type="markdown", code='
+
 <!--
 # 🐟 fish
 #
@@ -12327,9 +13585,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fish: `:fish:`
 ') }}
 {{ markdown(title="🐠 tropical fish" type="markdown", code='
+
 <!--
 # 🐠 tropical fish
 #
@@ -12345,9 +13605,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tropical_fish: `:tropical_fish:`
 ') }}
 {{ markdown(title="🐡 blowfish" type="markdown", code='
+
 <!--
 # 🐡 blowfish
 #
@@ -12363,9 +13625,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :blowfish: `:blowfish:`
 ') }}
 {{ markdown(title="🦈 shark" type="markdown", code='
+
 <!--
 # 🦈 shark
 #
@@ -12381,9 +13645,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :shark: `:shark:`
 ') }}
 {{ markdown(title="🐙 octopus" type="markdown", code='
+
 <!--
 # 🐙 octopus
 #
@@ -12399,9 +13665,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :octopus: `:octopus:`
 ') }}
 {{ markdown(title="🐚 spiral shell" type="markdown", code='
+
 <!--
 # 🐚 spiral shell
 #
@@ -12420,9 +13688,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :shell: `:shell:`
 ') }}
 {{ markdown(title="🪸 coral" type="markdown", code='
+
 <!--
 # 🪸 coral
 #
@@ -12438,9 +13708,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :coral: `:coral:`
 ') }}
 {{ markdown(title="🪼 jellyfish" type="markdown", code='
+
 <!--
 # 🪼 jellyfish
 #
@@ -12456,9 +13728,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :jellyfish: `:jellyfish:`
 ') }}
 {{ markdown(title="🐌 snail" type="markdown", code='
+
 <!--
 # 🐌 snail
 #
@@ -12476,9 +13750,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :snail: `:snail:`
 ') }}
 {{ markdown(title="🦋 butterfly" type="markdown", code='
+
 <!--
 # 🦋 butterfly
 #
@@ -12494,9 +13770,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :butterfly: `:butterfly:`
 ') }}
 {{ markdown(title="🐛 bug" type="markdown", code='
+
 <!--
 # 🐛 bug
 #
@@ -12512,9 +13790,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bug: `:bug:`
 ') }}
 {{ markdown(title="🐜 ant" type="markdown", code='
+
 <!--
 # 🐜 ant
 #
@@ -12530,9 +13810,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ant: `:ant:`
 ') }}
 {{ markdown(title="🐝 honeybee" type="markdown", code='
+
 <!--
 # 🐝 honeybee
 #
@@ -12549,11 +13831,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bee: `:bee:`
 
 :honeybee: `:honeybee:`
 ') }}
 {{ markdown(title="🪲 beetle" type="markdown", code='
+
 <!--
 # 🪲 beetle
 #
@@ -12569,9 +13853,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :beetle: `:beetle:`
 ') }}
 {{ markdown(title="🐞 lady beetle" type="markdown", code='
+
 <!--
 # 🐞 lady beetle
 #
@@ -12589,9 +13875,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lady_beetle: `:lady_beetle:`
 ') }}
 {{ markdown(title="🦗 cricket" type="markdown", code='
+
 <!--
 # 🦗 cricket
 #
@@ -12607,9 +13895,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :cricket: `:cricket:`
 ') }}
 {{ markdown(title="🪳 cockroach" type="markdown", code='
+
 <!--
 # 🪳 cockroach
 #
@@ -12625,9 +13915,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :cockroach: `:cockroach:`
 ') }}
 {{ markdown(title="🕷️ spider" type="markdown", code='
+
 <!--
 # 🕷️ spider
 #
@@ -12643,9 +13935,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :spider: `:spider:`
 ') }}
 {{ markdown(title="🕸️ spider web" type="markdown", code='
+
 <!--
 # 🕸️ spider web
 #
@@ -12661,9 +13955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :spider_web: `:spider_web:`
 ') }}
 {{ markdown(title="🦂 scorpion" type="markdown", code='
+
 <!--
 # 🦂 scorpion
 #
@@ -12679,9 +13975,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :scorpion: `:scorpion:`
 ') }}
 {{ markdown(title="🦟 mosquito" type="markdown", code='
+
 <!--
 # 🦟 mosquito
 #
@@ -12697,9 +13995,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :mosquito: `:mosquito:`
 ') }}
 {{ markdown(title="🪰 fly" type="markdown", code='
+
 <!--
 # 🪰 fly
 #
@@ -12715,9 +14015,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :fly: `:fly:`
 ') }}
 {{ markdown(title="🪱 worm" type="markdown", code='
+
 <!--
 # 🪱 worm
 #
@@ -12733,9 +14035,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :worm: `:worm:`
 ') }}
 {{ markdown(title="🦠 microbe" type="markdown", code='
+
 <!--
 # 🦠 microbe
 #
@@ -12753,9 +14057,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :microbe: `:microbe:`
 ') }}
 {{ markdown(title="💐 bouquet" type="markdown", code='
+
 <!--
 # 💐 bouquet
 #
@@ -12773,9 +14079,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bouquet: `:bouquet:`
 ') }}
 {{ markdown(title="🌸 cherry blossom" type="markdown", code='
+
 <!--
 # 🌸 cherry blossom
 #
@@ -12794,9 +14102,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cherry_blossom: `:cherry_blossom:`
 ') }}
 {{ markdown(title="💮 white flower" type="markdown", code='
+
 <!--
 # 💮 white flower
 #
@@ -12812,9 +14122,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_flower: `:white_flower:`
 ') }}
 {{ markdown(title="🪷 lotus" type="markdown", code='
+
 <!--
 # 🪷 lotus
 #
@@ -12830,9 +14142,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :lotus: `:lotus:`
 ') }}
 {{ markdown(title="🏵️ rosette" type="markdown", code='
+
 <!--
 # 🏵️ rosette
 #
@@ -12848,9 +14162,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :rosette: `:rosette:`
 ') }}
 {{ markdown(title="🌹 rose" type="markdown", code='
+
 <!--
 # 🌹 rose
 #
@@ -12868,9 +14184,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rose: `:rose:`
 ') }}
 {{ markdown(title="🥀 wilted flower" type="markdown", code='
+
 <!--
 # 🥀 wilted flower
 #
@@ -12886,9 +14204,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :wilted_flower: `:wilted_flower:`
 ') }}
 {{ markdown(title="🌺 hibiscus" type="markdown", code='
+
 <!--
 # 🌺 hibiscus
 #
@@ -12904,9 +14224,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hibiscus: `:hibiscus:`
 ') }}
 {{ markdown(title="🌻 sunflower" type="markdown", code='
+
 <!--
 # 🌻 sunflower
 #
@@ -12922,9 +14244,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sunflower: `:sunflower:`
 ') }}
 {{ markdown(title="🌼 blossom" type="markdown", code='
+
 <!--
 # 🌼 blossom
 #
@@ -12940,9 +14264,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :blossom: `:blossom:`
 ') }}
 {{ markdown(title="🌷 tulip" type="markdown", code='
+
 <!--
 # 🌷 tulip
 #
@@ -12960,9 +14286,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tulip: `:tulip:`
 ') }}
 {{ markdown(title="🪻 hyacinth" type="markdown", code='
+
 <!--
 # 🪻 hyacinth
 #
@@ -12978,9 +14306,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :hyacinth: `:hyacinth:`
 ') }}
 {{ markdown(title="🌱 seedling" type="markdown", code='
+
 <!--
 # 🌱 seedling
 #
@@ -12998,9 +14328,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :seedling: `:seedling:`
 ') }}
 {{ markdown(title="🪴 potted plant" type="markdown", code='
+
 <!--
 # 🪴 potted plant
 #
@@ -13016,9 +14348,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :potted_plant: `:potted_plant:`
 ') }}
 {{ markdown(title="🌲 evergreen tree" type="markdown", code='
+
 <!--
 # 🌲 evergreen tree
 #
@@ -13036,9 +14370,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :evergreen_tree: `:evergreen_tree:`
 ') }}
 {{ markdown(title="🌳 deciduous tree" type="markdown", code='
+
 <!--
 # 🌳 deciduous tree
 #
@@ -13056,9 +14392,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :deciduous_tree: `:deciduous_tree:`
 ') }}
 {{ markdown(title="🌴 palm tree" type="markdown", code='
+
 <!--
 # 🌴 palm tree
 #
@@ -13074,9 +14412,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :palm_tree: `:palm_tree:`
 ') }}
 {{ markdown(title="🌵 cactus" type="markdown", code='
+
 <!--
 # 🌵 cactus
 #
@@ -13092,9 +14432,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cactus: `:cactus:`
 ') }}
 {{ markdown(title="🌾 sheaf of rice" type="markdown", code='
+
 <!--
 # 🌾 sheaf of rice
 #
@@ -13110,9 +14452,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ear_of_rice: `:ear_of_rice:`
 ') }}
 {{ markdown(title="🌿 herb" type="markdown", code='
+
 <!--
 # 🌿 herb
 #
@@ -13128,9 +14472,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :herb: `:herb:`
 ') }}
 {{ markdown(title="☘️ shamrock" type="markdown", code='
+
 <!--
 # ☘️ shamrock
 #
@@ -13146,9 +14492,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :shamrock: `:shamrock:`
 ') }}
 {{ markdown(title="🍀 four leaf clover" type="markdown", code='
+
 <!--
 # 🍀 four leaf clover
 #
@@ -13166,9 +14514,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :four_leaf_clover: `:four_leaf_clover:`
 ') }}
 {{ markdown(title="🍁 maple leaf" type="markdown", code='
+
 <!--
 # 🍁 maple leaf
 #
@@ -13186,9 +14536,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :maple_leaf: `:maple_leaf:`
 ') }}
 {{ markdown(title="🍂 fallen leaf" type="markdown", code='
+
 <!--
 # 🍂 fallen leaf
 #
@@ -13206,9 +14558,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fallen_leaf: `:fallen_leaf:`
 ') }}
 {{ markdown(title="🍃 leaf fluttering in wind" type="markdown", code='
+
 <!--
 # 🍃 leaf fluttering in wind
 #
@@ -13226,9 +14580,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :leaves: `:leaves:`
 ') }}
 {{ markdown(title="🪹 empty nest" type="markdown", code='
+
 <!--
 # 🪹 empty nest
 #
@@ -13244,9 +14600,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :empty_nest: `:empty_nest:`
 ') }}
 {{ markdown(title="🪺 nest with eggs" type="markdown", code='
+
 <!--
 # 🪺 nest with eggs
 #
@@ -13262,9 +14620,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :nest_with_eggs: `:nest_with_eggs:`
 ') }}
 {{ markdown(title="🍄 mushroom" type="markdown", code='
+
 <!--
 # 🍄 mushroom
 #
@@ -13282,9 +14642,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mushroom: `:mushroom:`
 ') }}
 {{ markdown(title="🍇 grapes" type="markdown", code='
+
 <!--
 # 🍇 grapes
 #
@@ -13300,9 +14662,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :grapes: `:grapes:`
 ') }}
 {{ markdown(title="🍈 melon" type="markdown", code='
+
 <!--
 # 🍈 melon
 #
@@ -13318,9 +14682,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :melon: `:melon:`
 ') }}
 {{ markdown(title="🍉 watermelon" type="markdown", code='
+
 <!--
 # 🍉 watermelon
 #
@@ -13336,9 +14702,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :watermelon: `:watermelon:`
 ') }}
 {{ markdown(title="🍊 tangerine" type="markdown", code='
+
 <!--
 # 🍊 tangerine
 #
@@ -13356,6 +14724,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tangerine: `:tangerine:`
 
 :orange: `:orange:`
@@ -13363,6 +14732,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 :mandarin: `:mandarin:`
 ') }}
 {{ markdown(title="🍋 lemon" type="markdown", code='
+
 <!--
 # 🍋 lemon
 #
@@ -13378,9 +14748,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lemon: `:lemon:`
 ') }}
 {{ markdown(title="🍌 banana" type="markdown", code='
+
 <!--
 # 🍌 banana
 #
@@ -13398,9 +14770,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :banana: `:banana:`
 ') }}
 {{ markdown(title="🍍 pineapple" type="markdown", code='
+
 <!--
 # 🍍 pineapple
 #
@@ -13416,9 +14790,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pineapple: `:pineapple:`
 ') }}
 {{ markdown(title="🥭 mango" type="markdown", code='
+
 <!--
 # 🥭 mango
 #
@@ -13434,9 +14810,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :mango: `:mango:`
 ') }}
 {{ markdown(title="🍎 red apple" type="markdown", code='
+
 <!--
 # 🍎 red apple
 #
@@ -13452,9 +14830,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :apple: `:apple:`
 ') }}
 {{ markdown(title="🍏 green apple" type="markdown", code='
+
 <!--
 # 🍏 green apple
 #
@@ -13472,9 +14852,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :green_apple: `:green_apple:`
 ') }}
 {{ markdown(title="🍐 pear" type="markdown", code='
+
 <!--
 # 🍐 pear
 #
@@ -13490,9 +14872,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pear: `:pear:`
 ') }}
 {{ markdown(title="🍑 peach" type="markdown", code='
+
 <!--
 # 🍑 peach
 #
@@ -13508,9 +14892,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :peach: `:peach:`
 ') }}
 {{ markdown(title="🍒 cherries" type="markdown", code='
+
 <!--
 # 🍒 cherries
 #
@@ -13528,9 +14914,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cherries: `:cherries:`
 ') }}
 {{ markdown(title="🍓 strawberry" type="markdown", code='
+
 <!--
 # 🍓 strawberry
 #
@@ -13548,9 +14936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :strawberry: `:strawberry:`
 ') }}
 {{ markdown(title="🫐 blueberries" type="markdown", code='
+
 <!--
 # 🫐 blueberries
 #
@@ -13566,9 +14956,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :blueberries: `:blueberries:`
 ') }}
 {{ markdown(title="🥝 kiwi fruit" type="markdown", code='
+
 <!--
 # 🥝 kiwi fruit
 #
@@ -13584,9 +14976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :kiwi_fruit: `:kiwi_fruit:`
 ') }}
 {{ markdown(title="🍅 tomato" type="markdown", code='
+
 <!--
 # 🍅 tomato
 #
@@ -13602,9 +14996,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tomato: `:tomato:`
 ') }}
 {{ markdown(title="🫒 olive" type="markdown", code='
+
 <!--
 # 🫒 olive
 #
@@ -13620,9 +15016,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :olive: `:olive:`
 ') }}
 {{ markdown(title="🥥 coconut" type="markdown", code='
+
 <!--
 # 🥥 coconut
 #
@@ -13638,9 +15036,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :coconut: `:coconut:`
 ') }}
 {{ markdown(title="🥑 avocado" type="markdown", code='
+
 <!--
 # 🥑 avocado
 #
@@ -13656,9 +15056,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :avocado: `:avocado:`
 ') }}
 {{ markdown(title="🍆 eggplant" type="markdown", code='
+
 <!--
 # 🍆 eggplant
 #
@@ -13676,9 +15078,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :eggplant: `:eggplant:`
 ') }}
 {{ markdown(title="🥔 potato" type="markdown", code='
+
 <!--
 # 🥔 potato
 #
@@ -13694,9 +15098,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :potato: `:potato:`
 ') }}
 {{ markdown(title="🥕 carrot" type="markdown", code='
+
 <!--
 # 🥕 carrot
 #
@@ -13712,9 +15118,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :carrot: `:carrot:`
 ') }}
 {{ markdown(title="🌽 ear of corn" type="markdown", code='
+
 <!--
 # 🌽 ear of corn
 #
@@ -13730,9 +15138,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :corn: `:corn:`
 ') }}
 {{ markdown(title="🌶️ hot pepper" type="markdown", code='
+
 <!--
 # 🌶️ hot pepper
 #
@@ -13750,9 +15160,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :hot_pepper: `:hot_pepper:`
 ') }}
 {{ markdown(title="🫑 bell pepper" type="markdown", code='
+
 <!--
 # 🫑 bell pepper
 #
@@ -13768,9 +15180,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :bell_pepper: `:bell_pepper:`
 ') }}
 {{ markdown(title="🥒 cucumber" type="markdown", code='
+
 <!--
 # 🥒 cucumber
 #
@@ -13786,9 +15200,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :cucumber: `:cucumber:`
 ') }}
 {{ markdown(title="🥬 leafy green" type="markdown", code='
+
 <!--
 # 🥬 leafy green
 #
@@ -13804,9 +15220,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :leafy_green: `:leafy_green:`
 ') }}
 {{ markdown(title="🥦 broccoli" type="markdown", code='
+
 <!--
 # 🥦 broccoli
 #
@@ -13822,9 +15240,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :broccoli: `:broccoli:`
 ') }}
 {{ markdown(title="🧄 garlic" type="markdown", code='
+
 <!--
 # 🧄 garlic
 #
@@ -13840,9 +15260,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :garlic: `:garlic:`
 ') }}
 {{ markdown(title="🧅 onion" type="markdown", code='
+
 <!--
 # 🧅 onion
 #
@@ -13858,9 +15280,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :onion: `:onion:`
 ') }}
 {{ markdown(title="🥜 peanuts" type="markdown", code='
+
 <!--
 # 🥜 peanuts
 #
@@ -13876,9 +15300,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :peanuts: `:peanuts:`
 ') }}
 {{ markdown(title="🫘 beans" type="markdown", code='
+
 <!--
 # 🫘 beans
 #
@@ -13894,9 +15320,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :beans: `:beans:`
 ') }}
 {{ markdown(title="🌰 chestnut" type="markdown", code='
+
 <!--
 # 🌰 chestnut
 #
@@ -13912,9 +15340,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :chestnut: `:chestnut:`
 ') }}
 {{ markdown(title="🫚 ginger root" type="markdown", code='
+
 <!--
 # 🫚 ginger root
 #
@@ -13930,9 +15360,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :ginger_root: `:ginger_root:`
 ') }}
 {{ markdown(title="🫛 pea pod" type="markdown", code='
+
 <!--
 # 🫛 pea pod
 #
@@ -13948,9 +15380,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :pea_pod: `:pea_pod:`
 ') }}
 {{ markdown(title="🍞 bread" type="markdown", code='
+
 <!--
 # 🍞 bread
 #
@@ -13968,9 +15402,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bread: `:bread:`
 ') }}
 {{ markdown(title="🥐 croissant" type="markdown", code='
+
 <!--
 # 🥐 croissant
 #
@@ -13986,9 +15422,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :croissant: `:croissant:`
 ') }}
 {{ markdown(title="🥖 baguette bread" type="markdown", code='
+
 <!--
 # 🥖 baguette bread
 #
@@ -14004,9 +15442,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :baguette_bread: `:baguette_bread:`
 ') }}
 {{ markdown(title="🫓 flatbread" type="markdown", code='
+
 <!--
 # 🫓 flatbread
 #
@@ -14022,9 +15462,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :flatbread: `:flatbread:`
 ') }}
 {{ markdown(title="🥨 pretzel" type="markdown", code='
+
 <!--
 # 🥨 pretzel
 #
@@ -14040,9 +15482,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :pretzel: `:pretzel:`
 ') }}
 {{ markdown(title="🥯 bagel" type="markdown", code='
+
 <!--
 # 🥯 bagel
 #
@@ -14058,9 +15502,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :bagel: `:bagel:`
 ') }}
 {{ markdown(title="🥞 pancakes" type="markdown", code='
+
 <!--
 # 🥞 pancakes
 #
@@ -14076,9 +15522,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :pancakes: `:pancakes:`
 ') }}
 {{ markdown(title="🧇 waffle" type="markdown", code='
+
 <!--
 # 🧇 waffle
 #
@@ -14094,9 +15542,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :waffle: `:waffle:`
 ') }}
 {{ markdown(title="🧀 cheese wedge" type="markdown", code='
+
 <!--
 # 🧀 cheese wedge
 #
@@ -14112,9 +15562,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cheese: `:cheese:`
 ') }}
 {{ markdown(title="🍖 meat on bone" type="markdown", code='
+
 <!--
 # 🍖 meat on bone
 #
@@ -14130,9 +15582,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :meat_on_bone: `:meat_on_bone:`
 ') }}
 {{ markdown(title="🍗 poultry leg" type="markdown", code='
+
 <!--
 # 🍗 poultry leg
 #
@@ -14151,9 +15605,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :poultry_leg: `:poultry_leg:`
 ') }}
 {{ markdown(title="🥩 cut of meat" type="markdown", code='
+
 <!--
 # 🥩 cut of meat
 #
@@ -14169,9 +15625,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :cut_of_meat: `:cut_of_meat:`
 ') }}
 {{ markdown(title="🥓 bacon" type="markdown", code='
+
 <!--
 # 🥓 bacon
 #
@@ -14187,9 +15645,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :bacon: `:bacon:`
 ') }}
 {{ markdown(title="🍔 hamburger" type="markdown", code='
+
 <!--
 # 🍔 hamburger
 #
@@ -14207,9 +15667,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hamburger: `:hamburger:`
 ') }}
 {{ markdown(title="🍟 french fries" type="markdown", code='
+
 <!--
 # 🍟 french fries
 #
@@ -14225,9 +15687,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fries: `:fries:`
 ') }}
 {{ markdown(title="🍕 pizza" type="markdown", code='
+
 <!--
 # 🍕 pizza
 #
@@ -14243,9 +15707,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pizza: `:pizza:`
 ') }}
 {{ markdown(title="🌭 hot dog" type="markdown", code='
+
 <!--
 # 🌭 hot dog
 #
@@ -14261,9 +15727,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :hotdog: `:hotdog:`
 ') }}
 {{ markdown(title="🥪 sandwich" type="markdown", code='
+
 <!--
 # 🥪 sandwich
 #
@@ -14279,9 +15747,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :sandwich: `:sandwich:`
 ') }}
 {{ markdown(title="🌮 taco" type="markdown", code='
+
 <!--
 # 🌮 taco
 #
@@ -14297,9 +15767,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :taco: `:taco:`
 ') }}
 {{ markdown(title="🌯 burrito" type="markdown", code='
+
 <!--
 # 🌯 burrito
 #
@@ -14315,9 +15787,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :burrito: `:burrito:`
 ') }}
 {{ markdown(title="🫔 tamale" type="markdown", code='
+
 <!--
 # 🫔 tamale
 #
@@ -14333,9 +15807,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :tamale: `:tamale:`
 ') }}
 {{ markdown(title="🥙 stuffed flatbread" type="markdown", code='
+
 <!--
 # 🥙 stuffed flatbread
 #
@@ -14351,9 +15827,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :stuffed_flatbread: `:stuffed_flatbread:`
 ') }}
 {{ markdown(title="🧆 falafel" type="markdown", code='
+
 <!--
 # 🧆 falafel
 #
@@ -14369,9 +15847,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :falafel: `:falafel:`
 ') }}
 {{ markdown(title="🥚 egg" type="markdown", code='
+
 <!--
 # 🥚 egg
 #
@@ -14387,9 +15867,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :egg: `:egg:`
 ') }}
 {{ markdown(title="🍳 cooking" type="markdown", code='
+
 <!--
 # 🍳 cooking
 #
@@ -14407,9 +15889,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fried_egg: `:fried_egg:`
 ') }}
 {{ markdown(title="🥘 shallow pan of food" type="markdown", code='
+
 <!--
 # 🥘 shallow pan of food
 #
@@ -14428,9 +15912,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :shallow_pan_of_food: `:shallow_pan_of_food:`
 ') }}
 {{ markdown(title="🍲 pot of food" type="markdown", code='
+
 <!--
 # 🍲 pot of food
 #
@@ -14446,9 +15932,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :stew: `:stew:`
 ') }}
 {{ markdown(title="🫕 fondue" type="markdown", code='
+
 <!--
 # 🫕 fondue
 #
@@ -14464,9 +15952,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :fondue: `:fondue:`
 ') }}
 {{ markdown(title="🥣 bowl with spoon" type="markdown", code='
+
 <!--
 # 🥣 bowl with spoon
 #
@@ -14482,9 +15972,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :bowl_with_spoon: `:bowl_with_spoon:`
 ') }}
 {{ markdown(title="🥗 green salad" type="markdown", code='
+
 <!--
 # 🥗 green salad
 #
@@ -14500,9 +15992,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :green_salad: `:green_salad:`
 ') }}
 {{ markdown(title="🍿 popcorn" type="markdown", code='
+
 <!--
 # 🍿 popcorn
 #
@@ -14518,9 +16012,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :popcorn: `:popcorn:`
 ') }}
 {{ markdown(title="🧈 butter" type="markdown", code='
+
 <!--
 # 🧈 butter
 #
@@ -14536,9 +16032,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :butter: `:butter:`
 ') }}
 {{ markdown(title="🧂 salt" type="markdown", code='
+
 <!--
 # 🧂 salt
 #
@@ -14554,9 +16052,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :salt: `:salt:`
 ') }}
 {{ markdown(title="🥫 canned food" type="markdown", code='
+
 <!--
 # 🥫 canned food
 #
@@ -14572,9 +16072,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :canned_food: `:canned_food:`
 ') }}
 {{ markdown(title="🍱 bento box" type="markdown", code='
+
 <!--
 # 🍱 bento box
 #
@@ -14590,9 +16092,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bento: `:bento:`
 ') }}
 {{ markdown(title="🍘 rice cracker" type="markdown", code='
+
 <!--
 # 🍘 rice cracker
 #
@@ -14608,9 +16112,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rice_cracker: `:rice_cracker:`
 ') }}
 {{ markdown(title="🍙 rice ball" type="markdown", code='
+
 <!--
 # 🍙 rice ball
 #
@@ -14626,9 +16132,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rice_ball: `:rice_ball:`
 ') }}
 {{ markdown(title="🍚 cooked rice" type="markdown", code='
+
 <!--
 # 🍚 cooked rice
 #
@@ -14644,9 +16152,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rice: `:rice:`
 ') }}
 {{ markdown(title="🍛 curry rice" type="markdown", code='
+
 <!--
 # 🍛 curry rice
 #
@@ -14662,9 +16172,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :curry: `:curry:`
 ') }}
 {{ markdown(title="🍜 steaming bowl" type="markdown", code='
+
 <!--
 # 🍜 steaming bowl
 #
@@ -14682,9 +16194,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ramen: `:ramen:`
 ') }}
 {{ markdown(title="🍝 spaghetti" type="markdown", code='
+
 <!--
 # 🍝 spaghetti
 #
@@ -14702,9 +16216,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :spaghetti: `:spaghetti:`
 ') }}
 {{ markdown(title="🍠 roasted sweet potato" type="markdown", code='
+
 <!--
 # 🍠 roasted sweet potato
 #
@@ -14720,9 +16236,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sweet_potato: `:sweet_potato:`
 ') }}
 {{ markdown(title="🍢 oden" type="markdown", code='
+
 <!--
 # 🍢 oden
 #
@@ -14738,9 +16256,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :oden: `:oden:`
 ') }}
 {{ markdown(title="🍣 sushi" type="markdown", code='
+
 <!--
 # 🍣 sushi
 #
@@ -14756,9 +16276,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sushi: `:sushi:`
 ') }}
 {{ markdown(title="🍤 fried shrimp" type="markdown", code='
+
 <!--
 # 🍤 fried shrimp
 #
@@ -14776,9 +16298,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fried_shrimp: `:fried_shrimp:`
 ') }}
 {{ markdown(title="🍥 fish cake with swirl" type="markdown", code='
+
 <!--
 # 🍥 fish cake with swirl
 #
@@ -14794,9 +16318,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fish_cake: `:fish_cake:`
 ') }}
 {{ markdown(title="🥮 moon cake" type="markdown", code='
+
 <!--
 # 🥮 moon cake
 #
@@ -14812,9 +16338,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :moon_cake: `:moon_cake:`
 ') }}
 {{ markdown(title="🍡 dango" type="markdown", code='
+
 <!--
 # 🍡 dango
 #
@@ -14830,9 +16358,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dango: `:dango:`
 ') }}
 {{ markdown(title="🥟 dumpling" type="markdown", code='
+
 <!--
 # 🥟 dumpling
 #
@@ -14848,9 +16378,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :dumpling: `:dumpling:`
 ') }}
 {{ markdown(title="🥠 fortune cookie" type="markdown", code='
+
 <!--
 # 🥠 fortune cookie
 #
@@ -14866,9 +16398,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :fortune_cookie: `:fortune_cookie:`
 ') }}
 {{ markdown(title="🥡 takeout box" type="markdown", code='
+
 <!--
 # 🥡 takeout box
 #
@@ -14884,9 +16418,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :takeout_box: `:takeout_box:`
 ') }}
 {{ markdown(title="🦀 crab" type="markdown", code='
+
 <!--
 # 🦀 crab
 #
@@ -14902,9 +16438,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :crab: `:crab:`
 ') }}
 {{ markdown(title="🦞 lobster" type="markdown", code='
+
 <!--
 # 🦞 lobster
 #
@@ -14920,9 +16458,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :lobster: `:lobster:`
 ') }}
 {{ markdown(title="🦐 shrimp" type="markdown", code='
+
 <!--
 # 🦐 shrimp
 #
@@ -14938,9 +16478,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :shrimp: `:shrimp:`
 ') }}
 {{ markdown(title="🦑 squid" type="markdown", code='
+
 <!--
 # 🦑 squid
 #
@@ -14956,9 +16498,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :squid: `:squid:`
 ') }}
 {{ markdown(title="🦪 oyster" type="markdown", code='
+
 <!--
 # 🦪 oyster
 #
@@ -14974,9 +16518,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :oyster: `:oyster:`
 ') }}
 {{ markdown(title="🍦 soft ice cream" type="markdown", code='
+
 <!--
 # 🍦 soft ice cream
 #
@@ -14992,9 +16538,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :icecream: `:icecream:`
 ') }}
 {{ markdown(title="🍧 shaved ice" type="markdown", code='
+
 <!--
 # 🍧 shaved ice
 #
@@ -15010,9 +16558,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :shaved_ice: `:shaved_ice:`
 ') }}
 {{ markdown(title="🍨 ice cream" type="markdown", code='
+
 <!--
 # 🍨 ice cream
 #
@@ -15028,9 +16578,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ice_cream: `:ice_cream:`
 ') }}
 {{ markdown(title="🍩 doughnut" type="markdown", code='
+
 <!--
 # 🍩 doughnut
 #
@@ -15046,9 +16598,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :doughnut: `:doughnut:`
 ') }}
 {{ markdown(title="🍪 cookie" type="markdown", code='
+
 <!--
 # 🍪 cookie
 #
@@ -15064,9 +16618,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cookie: `:cookie:`
 ') }}
 {{ markdown(title="🎂 birthday cake" type="markdown", code='
+
 <!--
 # 🎂 birthday cake
 #
@@ -15084,9 +16640,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :birthday: `:birthday:`
 ') }}
 {{ markdown(title="🍰 shortcake" type="markdown", code='
+
 <!--
 # 🍰 shortcake
 #
@@ -15104,9 +16662,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cake: `:cake:`
 ') }}
 {{ markdown(title="🧁 cupcake" type="markdown", code='
+
 <!--
 # 🧁 cupcake
 #
@@ -15122,9 +16682,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :cupcake: `:cupcake:`
 ') }}
 {{ markdown(title="🥧 pie" type="markdown", code='
+
 <!--
 # 🥧 pie
 #
@@ -15140,9 +16702,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :pie: `:pie:`
 ') }}
 {{ markdown(title="🍫 chocolate bar" type="markdown", code='
+
 <!--
 # 🍫 chocolate bar
 #
@@ -15158,9 +16722,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :chocolate_bar: `:chocolate_bar:`
 ') }}
 {{ markdown(title="🍬 candy" type="markdown", code='
+
 <!--
 # 🍬 candy
 #
@@ -15178,9 +16744,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :candy: `:candy:`
 ') }}
 {{ markdown(title="🍭 lollipop" type="markdown", code='
+
 <!--
 # 🍭 lollipop
 #
@@ -15196,9 +16764,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lollipop: `:lollipop:`
 ') }}
 {{ markdown(title="🍮 custard" type="markdown", code='
+
 <!--
 # 🍮 custard
 #
@@ -15214,9 +16784,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :custard: `:custard:`
 ') }}
 {{ markdown(title="🍯 honey pot" type="markdown", code='
+
 <!--
 # 🍯 honey pot
 #
@@ -15232,9 +16804,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :honey_pot: `:honey_pot:`
 ') }}
 {{ markdown(title="🍼 baby bottle" type="markdown", code='
+
 <!--
 # 🍼 baby bottle
 #
@@ -15252,9 +16826,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :baby_bottle: `:baby_bottle:`
 ') }}
 {{ markdown(title="🥛 glass of milk" type="markdown", code='
+
 <!--
 # 🥛 glass of milk
 #
@@ -15270,9 +16846,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :milk_glass: `:milk_glass:`
 ') }}
 {{ markdown(title="☕ hot beverage" type="markdown", code='
+
 <!--
 # ☕ hot beverage
 #
@@ -15291,9 +16869,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :coffee: `:coffee:`
 ') }}
 {{ markdown(title="🫖 teapot" type="markdown", code='
+
 <!--
 # 🫖 teapot
 #
@@ -15309,9 +16889,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :teapot: `:teapot:`
 ') }}
 {{ markdown(title="🍵 teacup without handle" type="markdown", code='
+
 <!--
 # 🍵 teacup without handle
 #
@@ -15330,9 +16912,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tea: `:tea:`
 ') }}
 {{ markdown(title="🍶 sake" type="markdown", code='
+
 <!--
 # 🍶 sake
 #
@@ -15348,9 +16932,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sake: `:sake:`
 ') }}
 {{ markdown(title="🍾 bottle with popping cork" type="markdown", code='
+
 <!--
 # 🍾 bottle with popping cork
 #
@@ -15370,9 +16956,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :champagne: `:champagne:`
 ') }}
 {{ markdown(title="🍷 wine glass" type="markdown", code='
+
 <!--
 # 🍷 wine glass
 #
@@ -15388,9 +16976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wine_glass: `:wine_glass:`
 ') }}
 {{ markdown(title="🍸 cocktail glass" type="markdown", code='
+
 <!--
 # 🍸 cocktail glass
 #
@@ -15408,9 +16998,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cocktail: `:cocktail:`
 ') }}
 {{ markdown(title="🍹 tropical drink" type="markdown", code='
+
 <!--
 # 🍹 tropical drink
 #
@@ -15429,9 +17021,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tropical_drink: `:tropical_drink:`
 ') }}
 {{ markdown(title="🍺 beer mug" type="markdown", code='
+
 <!--
 # 🍺 beer mug
 #
@@ -15449,9 +17043,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :beer: `:beer:`
 ') }}
 {{ markdown(title="🍻 clinking beer mugs" type="markdown", code='
+
 <!--
 # 🍻 clinking beer mugs
 #
@@ -15469,9 +17065,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :beers: `:beers:`
 ') }}
 {{ markdown(title="🥂 clinking glasses" type="markdown", code='
+
 <!--
 # 🥂 clinking glasses
 #
@@ -15490,9 +17088,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :clinking_glasses: `:clinking_glasses:`
 ') }}
 {{ markdown(title="🥃 tumbler glass" type="markdown", code='
+
 <!--
 # 🥃 tumbler glass
 #
@@ -15510,9 +17110,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :tumbler_glass: `:tumbler_glass:`
 ') }}
 {{ markdown(title="🫗 pouring liquid" type="markdown", code='
+
 <!--
 # 🫗 pouring liquid
 #
@@ -15528,9 +17130,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :pouring_liquid: `:pouring_liquid:`
 ') }}
 {{ markdown(title="🥤 cup with straw" type="markdown", code='
+
 <!--
 # 🥤 cup with straw
 #
@@ -15546,9 +17150,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :cup_with_straw: `:cup_with_straw:`
 ') }}
 {{ markdown(title="🧋 bubble tea" type="markdown", code='
+
 <!--
 # 🧋 bubble tea
 #
@@ -15564,9 +17170,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :bubble_tea: `:bubble_tea:`
 ') }}
 {{ markdown(title="🧃 beverage box" type="markdown", code='
+
 <!--
 # 🧃 beverage box
 #
@@ -15582,9 +17190,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :beverage_box: `:beverage_box:`
 ') }}
 {{ markdown(title="🧉 mate" type="markdown", code='
+
 <!--
 # 🧉 mate
 #
@@ -15600,9 +17210,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :mate: `:mate:`
 ') }}
 {{ markdown(title="🧊 ice" type="markdown", code='
+
 <!--
 # 🧊 ice
 #
@@ -15618,9 +17230,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :ice_cube: `:ice_cube:`
 ') }}
 {{ markdown(title="🥢 chopsticks" type="markdown", code='
+
 <!--
 # 🥢 chopsticks
 #
@@ -15636,9 +17250,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :chopsticks: `:chopsticks:`
 ') }}
 {{ markdown(title="🍽️ fork and knife with plate" type="markdown", code='
+
 <!--
 # 🍽️ fork and knife with plate
 #
@@ -15657,9 +17273,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :plate_with_cutlery: `:plate_with_cutlery:`
 ') }}
 {{ markdown(title="🍴 fork and knife" type="markdown", code='
+
 <!--
 # 🍴 fork and knife
 #
@@ -15677,9 +17295,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fork_and_knife: `:fork_and_knife:`
 ') }}
 {{ markdown(title="🥄 spoon" type="markdown", code='
+
 <!--
 # 🥄 spoon
 #
@@ -15695,9 +17315,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :spoon: `:spoon:`
 ') }}
 {{ markdown(title="🔪 kitchen knife" type="markdown", code='
+
 <!--
 # 🔪 kitchen knife
 #
@@ -15717,11 +17339,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hocho: `:hocho:`
 
 :knife: `:knife:`
 ') }}
 {{ markdown(title="🫙 jar" type="markdown", code='
+
 <!--
 # 🫙 jar
 #
@@ -15737,9 +17361,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :jar: `:jar:`
 ') }}
 {{ markdown(title="🏺 amphora" type="markdown", code='
+
 <!--
 # 🏺 amphora
 #
@@ -15755,9 +17381,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :amphora: `:amphora:`
 ') }}
 {{ markdown(title="🌍 globe showing Europe-Africa" type="markdown", code='
+
 <!--
 # 🌍 globe showing Europe-Africa
 #
@@ -15777,9 +17405,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :earth_africa: `:earth_africa:`
 ') }}
 {{ markdown(title="🌎 globe showing Americas" type="markdown", code='
+
 <!--
 # 🌎 globe showing Americas
 #
@@ -15799,9 +17429,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :earth_americas: `:earth_americas:`
 ') }}
 {{ markdown(title="🌏 globe showing Asia-Australia" type="markdown", code='
+
 <!--
 # 🌏 globe showing Asia-Australia
 #
@@ -15821,9 +17453,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :earth_asia: `:earth_asia:`
 ') }}
 {{ markdown(title="🌐 globe with meridians" type="markdown", code='
+
 <!--
 # 🌐 globe with meridians
 #
@@ -15843,9 +17477,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :globe_with_meridians: `:globe_with_meridians:`
 ') }}
 {{ markdown(title="🗺️ world map" type="markdown", code='
+
 <!--
 # 🗺️ world map
 #
@@ -15863,9 +17499,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :world_map: `:world_map:`
 ') }}
 {{ markdown(title="🗾 map of Japan" type="markdown", code='
+
 <!--
 # 🗾 map of Japan
 #
@@ -15881,9 +17519,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :japan: `:japan:`
 ') }}
 {{ markdown(title="🧭 compass" type="markdown", code='
+
 <!--
 # 🧭 compass
 #
@@ -15899,9 +17539,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :compass: `:compass:`
 ') }}
 {{ markdown(title="🏔️ snow-capped mountain" type="markdown", code='
+
 <!--
 # 🏔️ snow-capped mountain
 #
@@ -15917,9 +17559,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :mountain_snow: `:mountain_snow:`
 ') }}
 {{ markdown(title="⛰️ mountain" type="markdown", code='
+
 <!--
 # ⛰️ mountain
 #
@@ -15935,9 +17579,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :mountain: `:mountain:`
 ') }}
 {{ markdown(title="🌋 volcano" type="markdown", code='
+
 <!--
 # 🌋 volcano
 #
@@ -15953,9 +17599,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :volcano: `:volcano:`
 ') }}
 {{ markdown(title="🗻 mount fuji" type="markdown", code='
+
 <!--
 # 🗻 mount fuji
 #
@@ -15971,9 +17619,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mount_fuji: `:mount_fuji:`
 ') }}
 {{ markdown(title="🏕️ camping" type="markdown", code='
+
 <!--
 # 🏕️ camping
 #
@@ -15989,9 +17639,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :camping: `:camping:`
 ') }}
 {{ markdown(title="🏖️ beach with umbrella" type="markdown", code='
+
 <!--
 # 🏖️ beach with umbrella
 #
@@ -16007,9 +17659,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :beach_umbrella: `:beach_umbrella:`
 ') }}
 {{ markdown(title="🏜️ desert" type="markdown", code='
+
 <!--
 # 🏜️ desert
 #
@@ -16025,9 +17679,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :desert: `:desert:`
 ') }}
 {{ markdown(title="🏝️ desert island" type="markdown", code='
+
 <!--
 # 🏝️ desert island
 #
@@ -16043,9 +17699,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :desert_island: `:desert_island:`
 ') }}
 {{ markdown(title="🏞️ national park" type="markdown", code='
+
 <!--
 # 🏞️ national park
 #
@@ -16061,9 +17719,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :national_park: `:national_park:`
 ') }}
 {{ markdown(title="🏟️ stadium" type="markdown", code='
+
 <!--
 # 🏟️ stadium
 #
@@ -16079,9 +17739,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :stadium: `:stadium:`
 ') }}
 {{ markdown(title="🏛️ classical building" type="markdown", code='
+
 <!--
 # 🏛️ classical building
 #
@@ -16097,9 +17759,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :classical_building: `:classical_building:`
 ') }}
 {{ markdown(title="🏗️ building construction" type="markdown", code='
+
 <!--
 # 🏗️ building construction
 #
@@ -16115,9 +17779,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :building_construction: `:building_construction:`
 ') }}
 {{ markdown(title="🧱 brick" type="markdown", code='
+
 <!--
 # 🧱 brick
 #
@@ -16133,9 +17799,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :bricks: `:bricks:`
 ') }}
 {{ markdown(title="🪨 rock" type="markdown", code='
+
 <!--
 # 🪨 rock
 #
@@ -16151,9 +17819,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :rock: `:rock:`
 ') }}
 {{ markdown(title="🪵 wood" type="markdown", code='
+
 <!--
 # 🪵 wood
 #
@@ -16169,9 +17839,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :wood: `:wood:`
 ') }}
 {{ markdown(title="🛖 hut" type="markdown", code='
+
 <!--
 # 🛖 hut
 #
@@ -16187,9 +17859,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :hut: `:hut:`
 ') }}
 {{ markdown(title="🏘️ houses" type="markdown", code='
+
 <!--
 # 🏘️ houses
 #
@@ -16205,9 +17879,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :houses: `:houses:`
 ') }}
 {{ markdown(title="🏚️ derelict house" type="markdown", code='
+
 <!--
 # 🏚️ derelict house
 #
@@ -16223,9 +17899,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :derelict_house: `:derelict_house:`
 ') }}
 {{ markdown(title="🏠 house" type="markdown", code='
+
 <!--
 # 🏠 house
 #
@@ -16241,9 +17919,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :house: `:house:`
 ') }}
 {{ markdown(title="🏡 house with garden" type="markdown", code='
+
 <!--
 # 🏡 house with garden
 #
@@ -16259,9 +17939,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :house_with_garden: `:house_with_garden:`
 ') }}
 {{ markdown(title="🏢 office building" type="markdown", code='
+
 <!--
 # 🏢 office building
 #
@@ -16277,9 +17959,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :office: `:office:`
 ') }}
 {{ markdown(title="🏣 Japanese post office" type="markdown", code='
+
 <!--
 # 🏣 Japanese post office
 #
@@ -16295,9 +17979,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :post_office: `:post_office:`
 ') }}
 {{ markdown(title="🏤 post office" type="markdown", code='
+
 <!--
 # 🏤 post office
 #
@@ -16313,9 +17999,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :european_post_office: `:european_post_office:`
 ') }}
 {{ markdown(title="🏥 hospital" type="markdown", code='
+
 <!--
 # 🏥 hospital
 #
@@ -16331,9 +18019,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hospital: `:hospital:`
 ') }}
 {{ markdown(title="🏦 bank" type="markdown", code='
+
 <!--
 # 🏦 bank
 #
@@ -16349,9 +18039,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bank: `:bank:`
 ') }}
 {{ markdown(title="🏨 hotel" type="markdown", code='
+
 <!--
 # 🏨 hotel
 #
@@ -16367,9 +18059,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hotel: `:hotel:`
 ') }}
 {{ markdown(title="🏩 love hotel" type="markdown", code='
+
 <!--
 # 🏩 love hotel
 #
@@ -16385,9 +18079,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :love_hotel: `:love_hotel:`
 ') }}
 {{ markdown(title="🏪 convenience store" type="markdown", code='
+
 <!--
 # 🏪 convenience store
 #
@@ -16403,9 +18099,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :convenience_store: `:convenience_store:`
 ') }}
 {{ markdown(title="🏫 school" type="markdown", code='
+
 <!--
 # 🏫 school
 #
@@ -16421,9 +18119,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :school: `:school:`
 ') }}
 {{ markdown(title="🏬 department store" type="markdown", code='
+
 <!--
 # 🏬 department store
 #
@@ -16439,9 +18139,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :department_store: `:department_store:`
 ') }}
 {{ markdown(title="🏭 factory" type="markdown", code='
+
 <!--
 # 🏭 factory
 #
@@ -16457,9 +18159,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :factory: `:factory:`
 ') }}
 {{ markdown(title="🏯 Japanese castle" type="markdown", code='
+
 <!--
 # 🏯 Japanese castle
 #
@@ -16475,9 +18179,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :japanese_castle: `:japanese_castle:`
 ') }}
 {{ markdown(title="🏰 castle" type="markdown", code='
+
 <!--
 # 🏰 castle
 #
@@ -16493,9 +18199,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :european_castle: `:european_castle:`
 ') }}
 {{ markdown(title="💒 wedding" type="markdown", code='
+
 <!--
 # 💒 wedding
 #
@@ -16513,9 +18221,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wedding: `:wedding:`
 ') }}
 {{ markdown(title="🗼 Tokyo tower" type="markdown", code='
+
 <!--
 # 🗼 Tokyo tower
 #
@@ -16531,9 +18241,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tokyo_tower: `:tokyo_tower:`
 ') }}
 {{ markdown(title="🗽 Statue of Liberty" type="markdown", code='
+
 <!--
 # 🗽 Statue of Liberty
 #
@@ -16549,9 +18261,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :statue_of_liberty: `:statue_of_liberty:`
 ') }}
 {{ markdown(title="⛪ church" type="markdown", code='
+
 <!--
 # ⛪ church
 #
@@ -16567,9 +18281,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :church: `:church:`
 ') }}
 {{ markdown(title="🕌 mosque" type="markdown", code='
+
 <!--
 # 🕌 mosque
 #
@@ -16585,9 +18301,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :mosque: `:mosque:`
 ') }}
 {{ markdown(title="🛕 hindu temple" type="markdown", code='
+
 <!--
 # 🛕 hindu temple
 #
@@ -16603,9 +18321,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :hindu_temple: `:hindu_temple:`
 ') }}
 {{ markdown(title="🕍 synagogue" type="markdown", code='
+
 <!--
 # 🕍 synagogue
 #
@@ -16621,9 +18341,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :synagogue: `:synagogue:`
 ') }}
 {{ markdown(title="⛩️ shinto shrine" type="markdown", code='
+
 <!--
 # ⛩️ shinto shrine
 #
@@ -16639,9 +18361,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :shinto_shrine: `:shinto_shrine:`
 ') }}
 {{ markdown(title="🕋 kaaba" type="markdown", code='
+
 <!--
 # 🕋 kaaba
 #
@@ -16657,9 +18381,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :kaaba: `:kaaba:`
 ') }}
 {{ markdown(title="⛲ fountain" type="markdown", code='
+
 <!--
 # ⛲ fountain
 #
@@ -16675,9 +18401,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fountain: `:fountain:`
 ') }}
 {{ markdown(title="⛺ tent" type="markdown", code='
+
 <!--
 # ⛺ tent
 #
@@ -16695,9 +18423,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tent: `:tent:`
 ') }}
 {{ markdown(title="🌁 foggy" type="markdown", code='
+
 <!--
 # 🌁 foggy
 #
@@ -16715,9 +18445,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :foggy: `:foggy:`
 ') }}
 {{ markdown(title="🌃 night with stars" type="markdown", code='
+
 <!--
 # 🌃 night with stars
 #
@@ -16733,9 +18465,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :night_with_stars: `:night_with_stars:`
 ') }}
 {{ markdown(title="🏙️ cityscape" type="markdown", code='
+
 <!--
 # 🏙️ cityscape
 #
@@ -16753,9 +18487,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cityscape: `:cityscape:`
 ') }}
 {{ markdown(title="🌄 sunrise over mountains" type="markdown", code='
+
 <!--
 # 🌄 sunrise over mountains
 #
@@ -16771,9 +18507,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sunrise_over_mountains: `:sunrise_over_mountains:`
 ') }}
 {{ markdown(title="🌅 sunrise" type="markdown", code='
+
 <!--
 # 🌅 sunrise
 #
@@ -16789,9 +18527,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sunrise: `:sunrise:`
 ') }}
 {{ markdown(title="🌆 cityscape at dusk" type="markdown", code='
+
 <!--
 # 🌆 cityscape at dusk
 #
@@ -16807,9 +18547,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :city_sunset: `:city_sunset:`
 ') }}
 {{ markdown(title="🌇 sunset" type="markdown", code='
+
 <!--
 # 🌇 sunset
 #
@@ -16825,9 +18567,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :city_sunrise: `:city_sunrise:`
 ') }}
 {{ markdown(title="🌉 bridge at night" type="markdown", code='
+
 <!--
 # 🌉 bridge at night
 #
@@ -16843,9 +18587,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bridge_at_night: `:bridge_at_night:`
 ') }}
 {{ markdown(title="♨️ hot springs" type="markdown", code='
+
 <!--
 # ♨️ hot springs
 #
@@ -16861,9 +18607,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hotsprings: `:hotsprings:`
 ') }}
 {{ markdown(title="🎠 carousel horse" type="markdown", code='
+
 <!--
 # 🎠 carousel horse
 #
@@ -16879,9 +18627,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :carousel_horse: `:carousel_horse:`
 ') }}
 {{ markdown(title="🛝 playground slide" type="markdown", code='
+
 <!--
 # 🛝 playground slide
 #
@@ -16897,9 +18647,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :playground_slide: `:playground_slide:`
 ') }}
 {{ markdown(title="🎡 ferris wheel" type="markdown", code='
+
 <!--
 # 🎡 ferris wheel
 #
@@ -16915,9 +18667,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ferris_wheel: `:ferris_wheel:`
 ') }}
 {{ markdown(title="🎢 roller coaster" type="markdown", code='
+
 <!--
 # 🎢 roller coaster
 #
@@ -16933,9 +18687,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :roller_coaster: `:roller_coaster:`
 ') }}
 {{ markdown(title="💈 barber pole" type="markdown", code='
+
 <!--
 # 💈 barber pole
 #
@@ -16951,9 +18707,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :barber: `:barber:`
 ') }}
 {{ markdown(title="🎪 circus tent" type="markdown", code='
+
 <!--
 # 🎪 circus tent
 #
@@ -16969,9 +18727,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :circus_tent: `:circus_tent:`
 ') }}
 {{ markdown(title="🚂 locomotive" type="markdown", code='
+
 <!--
 # 🚂 locomotive
 #
@@ -16989,9 +18749,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :steam_locomotive: `:steam_locomotive:`
 ') }}
 {{ markdown(title="🚃 railway car" type="markdown", code='
+
 <!--
 # 🚃 railway car
 #
@@ -17007,9 +18769,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :railway_car: `:railway_car:`
 ') }}
 {{ markdown(title="🚄 high-speed train" type="markdown", code='
+
 <!--
 # 🚄 high-speed train
 #
@@ -17027,9 +18791,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bullettrain_side: `:bullettrain_side:`
 ') }}
 {{ markdown(title="🚅 bullet train" type="markdown", code='
+
 <!--
 # 🚅 bullet train
 #
@@ -17047,9 +18813,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bullettrain_front: `:bullettrain_front:`
 ') }}
 {{ markdown(title="🚆 train" type="markdown", code='
+
 <!--
 # 🚆 train
 #
@@ -17065,9 +18833,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :train2: `:train2:`
 ') }}
 {{ markdown(title="🚇 metro" type="markdown", code='
+
 <!--
 # 🚇 metro
 #
@@ -17083,9 +18853,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :metro: `:metro:`
 ') }}
 {{ markdown(title="🚈 light rail" type="markdown", code='
+
 <!--
 # 🚈 light rail
 #
@@ -17101,9 +18873,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :light_rail: `:light_rail:`
 ') }}
 {{ markdown(title="🚉 station" type="markdown", code='
+
 <!--
 # 🚉 station
 #
@@ -17119,9 +18893,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :station: `:station:`
 ') }}
 {{ markdown(title="🚊 tram" type="markdown", code='
+
 <!--
 # 🚊 tram
 #
@@ -17137,9 +18913,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tram: `:tram:`
 ') }}
 {{ markdown(title="🚝 monorail" type="markdown", code='
+
 <!--
 # 🚝 monorail
 #
@@ -17155,9 +18933,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :monorail: `:monorail:`
 ') }}
 {{ markdown(title="🚞 mountain railway" type="markdown", code='
+
 <!--
 # 🚞 mountain railway
 #
@@ -17173,9 +18953,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mountain_railway: `:mountain_railway:`
 ') }}
 {{ markdown(title="🚋 tram car" type="markdown", code='
+
 <!--
 # 🚋 tram car
 #
@@ -17191,9 +18973,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :train: `:train:`
 ') }}
 {{ markdown(title="🚌 bus" type="markdown", code='
+
 <!--
 # 🚌 bus
 #
@@ -17209,9 +18993,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bus: `:bus:`
 ') }}
 {{ markdown(title="🚍 oncoming bus" type="markdown", code='
+
 <!--
 # 🚍 oncoming bus
 #
@@ -17227,9 +19013,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :oncoming_bus: `:oncoming_bus:`
 ') }}
 {{ markdown(title="🚎 trolleybus" type="markdown", code='
+
 <!--
 # 🚎 trolleybus
 #
@@ -17245,9 +19033,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :trolleybus: `:trolleybus:`
 ') }}
 {{ markdown(title="🚐 minibus" type="markdown", code='
+
 <!--
 # 🚐 minibus
 #
@@ -17263,9 +19053,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :minibus: `:minibus:`
 ') }}
 {{ markdown(title="🚑 ambulance" type="markdown", code='
+
 <!--
 # 🚑 ambulance
 #
@@ -17281,9 +19073,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ambulance: `:ambulance:`
 ') }}
 {{ markdown(title="🚒 fire engine" type="markdown", code='
+
 <!--
 # 🚒 fire engine
 #
@@ -17299,9 +19093,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fire_engine: `:fire_engine:`
 ') }}
 {{ markdown(title="🚓 police car" type="markdown", code='
+
 <!--
 # 🚓 police car
 #
@@ -17317,9 +19113,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :police_car: `:police_car:`
 ') }}
 {{ markdown(title="🚔 oncoming police car" type="markdown", code='
+
 <!--
 # 🚔 oncoming police car
 #
@@ -17335,9 +19133,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :oncoming_police_car: `:oncoming_police_car:`
 ') }}
 {{ markdown(title="🚕 taxi" type="markdown", code='
+
 <!--
 # 🚕 taxi
 #
@@ -17353,9 +19153,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :taxi: `:taxi:`
 ') }}
 {{ markdown(title="🚖 oncoming taxi" type="markdown", code='
+
 <!--
 # 🚖 oncoming taxi
 #
@@ -17371,9 +19173,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :oncoming_taxi: `:oncoming_taxi:`
 ') }}
 {{ markdown(title="🚗 automobile" type="markdown", code='
+
 <!--
 # 🚗 automobile
 #
@@ -17390,11 +19194,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :car: `:car:`
 
 :red_car: `:red_car:`
 ') }}
 {{ markdown(title="🚘 oncoming automobile" type="markdown", code='
+
 <!--
 # 🚘 oncoming automobile
 #
@@ -17410,9 +19216,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :oncoming_automobile: `:oncoming_automobile:`
 ') }}
 {{ markdown(title="🚙 sport utility vehicle" type="markdown", code='
+
 <!--
 # 🚙 sport utility vehicle
 #
@@ -17428,9 +19236,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :blue_car: `:blue_car:`
 ') }}
 {{ markdown(title="🛻 pickup truck" type="markdown", code='
+
 <!--
 # 🛻 pickup truck
 #
@@ -17446,9 +19256,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :pickup_truck: `:pickup_truck:`
 ') }}
 {{ markdown(title="🚚 delivery truck" type="markdown", code='
+
 <!--
 # 🚚 delivery truck
 #
@@ -17464,9 +19276,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :truck: `:truck:`
 ') }}
 {{ markdown(title="🚛 articulated lorry" type="markdown", code='
+
 <!--
 # 🚛 articulated lorry
 #
@@ -17482,9 +19296,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :articulated_lorry: `:articulated_lorry:`
 ') }}
 {{ markdown(title="🚜 tractor" type="markdown", code='
+
 <!--
 # 🚜 tractor
 #
@@ -17500,9 +19316,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tractor: `:tractor:`
 ') }}
 {{ markdown(title="🏎️ racing car" type="markdown", code='
+
 <!--
 # 🏎️ racing car
 #
@@ -17518,9 +19336,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :racing_car: `:racing_car:`
 ') }}
 {{ markdown(title="🏍️ motorcycle" type="markdown", code='
+
 <!--
 # 🏍️ motorcycle
 #
@@ -17536,9 +19356,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :motorcycle: `:motorcycle:`
 ') }}
 {{ markdown(title="🛵 motor scooter" type="markdown", code='
+
 <!--
 # 🛵 motor scooter
 #
@@ -17554,9 +19376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :motor_scooter: `:motor_scooter:`
 ') }}
 {{ markdown(title="🦽 manual wheelchair" type="markdown", code='
+
 <!--
 # 🦽 manual wheelchair
 #
@@ -17572,9 +19396,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :manual_wheelchair: `:manual_wheelchair:`
 ') }}
 {{ markdown(title="🦼 motorized wheelchair" type="markdown", code='
+
 <!--
 # 🦼 motorized wheelchair
 #
@@ -17590,9 +19416,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :motorized_wheelchair: `:motorized_wheelchair:`
 ') }}
 {{ markdown(title="🛺 auto rickshaw" type="markdown", code='
+
 <!--
 # 🛺 auto rickshaw
 #
@@ -17608,9 +19436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :auto_rickshaw: `:auto_rickshaw:`
 ') }}
 {{ markdown(title="🚲 bicycle" type="markdown", code='
+
 <!--
 # 🚲 bicycle
 #
@@ -17628,9 +19458,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bike: `:bike:`
 ') }}
 {{ markdown(title="🛴 kick scooter" type="markdown", code='
+
 <!--
 # 🛴 kick scooter
 #
@@ -17646,9 +19478,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :kick_scooter: `:kick_scooter:`
 ') }}
 {{ markdown(title="🛹 skateboard" type="markdown", code='
+
 <!--
 # 🛹 skateboard
 #
@@ -17664,9 +19498,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :skateboard: `:skateboard:`
 ') }}
 {{ markdown(title="🛼 roller skate" type="markdown", code='
+
 <!--
 # 🛼 roller skate
 #
@@ -17682,9 +19518,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :roller_skate: `:roller_skate:`
 ') }}
 {{ markdown(title="🚏 bus stop" type="markdown", code='
+
 <!--
 # 🚏 bus stop
 #
@@ -17700,9 +19538,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :busstop: `:busstop:`
 ') }}
 {{ markdown(title="🛣️ motorway" type="markdown", code='
+
 <!--
 # 🛣️ motorway
 #
@@ -17718,9 +19558,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :motorway: `:motorway:`
 ') }}
 {{ markdown(title="🛤️ railway track" type="markdown", code='
+
 <!--
 # 🛤️ railway track
 #
@@ -17736,9 +19578,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :railway_track: `:railway_track:`
 ') }}
 {{ markdown(title="🛢️ oil drum" type="markdown", code='
+
 <!--
 # 🛢️ oil drum
 #
@@ -17754,9 +19598,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :oil_drum: `:oil_drum:`
 ') }}
 {{ markdown(title="⛽ fuel pump" type="markdown", code='
+
 <!--
 # ⛽ fuel pump
 #
@@ -17772,9 +19618,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fuelpump: `:fuelpump:`
 ') }}
 {{ markdown(title="🛞 wheel" type="markdown", code='
+
 <!--
 # 🛞 wheel
 #
@@ -17790,9 +19638,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :wheel: `:wheel:`
 ') }}
 {{ markdown(title="🚨 police car light" type="markdown", code='
+
 <!--
 # 🚨 police car light
 #
@@ -17811,9 +19661,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rotating_light: `:rotating_light:`
 ') }}
 {{ markdown(title="🚥 horizontal traffic light" type="markdown", code='
+
 <!--
 # 🚥 horizontal traffic light
 #
@@ -17829,9 +19681,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :traffic_light: `:traffic_light:`
 ') }}
 {{ markdown(title="🚦 vertical traffic light" type="markdown", code='
+
 <!--
 # 🚦 vertical traffic light
 #
@@ -17849,9 +19703,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :vertical_traffic_light: `:vertical_traffic_light:`
 ') }}
 {{ markdown(title="🛑 stop sign" type="markdown", code='
+
 <!--
 # 🛑 stop sign
 #
@@ -17867,9 +19723,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :stop_sign: `:stop_sign:`
 ') }}
 {{ markdown(title="🚧 construction" type="markdown", code='
+
 <!--
 # 🚧 construction
 #
@@ -17887,9 +19745,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :construction: `:construction:`
 ') }}
 {{ markdown(title="⚓ anchor" type="markdown", code='
+
 <!--
 # ⚓ anchor
 #
@@ -17907,9 +19767,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :anchor: `:anchor:`
 ') }}
 {{ markdown(title="🛟 ring buoy" type="markdown", code='
+
 <!--
 # 🛟 ring buoy
 #
@@ -17927,9 +19789,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :ring_buoy: `:ring_buoy:`
 ') }}
 {{ markdown(title="⛵ sailboat" type="markdown", code='
+
 <!--
 # ⛵ sailboat
 #
@@ -17946,11 +19810,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :boat: `:boat:`
 
 :sailboat: `:sailboat:`
 ') }}
 {{ markdown(title="🛶 canoe" type="markdown", code='
+
 <!--
 # 🛶 canoe
 #
@@ -17966,9 +19832,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :canoe: `:canoe:`
 ') }}
 {{ markdown(title="🚤 speedboat" type="markdown", code='
+
 <!--
 # 🚤 speedboat
 #
@@ -17986,9 +19854,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :speedboat: `:speedboat:`
 ') }}
 {{ markdown(title="🛳️ passenger ship" type="markdown", code='
+
 <!--
 # 🛳️ passenger ship
 #
@@ -18006,9 +19876,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :passenger_ship: `:passenger_ship:`
 ') }}
 {{ markdown(title="⛴️ ferry" type="markdown", code='
+
 <!--
 # ⛴️ ferry
 #
@@ -18024,9 +19896,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :ferry: `:ferry:`
 ') }}
 {{ markdown(title="🛥️ motor boat" type="markdown", code='
+
 <!--
 # 🛥️ motor boat
 #
@@ -18042,9 +19916,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :motor_boat: `:motor_boat:`
 ') }}
 {{ markdown(title="🚢 ship" type="markdown", code='
+
 <!--
 # 🚢 ship
 #
@@ -18060,9 +19936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ship: `:ship:`
 ') }}
 {{ markdown(title="✈️ airplane" type="markdown", code='
+
 <!--
 # ✈️ airplane
 #
@@ -18080,9 +19958,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :airplane: `:airplane:`
 ') }}
 {{ markdown(title="🛩️ small airplane" type="markdown", code='
+
 <!--
 # 🛩️ small airplane
 #
@@ -18100,9 +19980,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :small_airplane: `:small_airplane:`
 ') }}
 {{ markdown(title="🛫 airplane departure" type="markdown", code='
+
 <!--
 # 🛫 airplane departure
 #
@@ -18118,9 +20000,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :flight_departure: `:flight_departure:`
 ') }}
 {{ markdown(title="🛬 airplane arrival" type="markdown", code='
+
 <!--
 # 🛬 airplane arrival
 #
@@ -18136,9 +20020,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :flight_arrival: `:flight_arrival:`
 ') }}
 {{ markdown(title="🪂 parachute" type="markdown", code='
+
 <!--
 # 🪂 parachute
 #
@@ -18154,9 +20040,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :parachute: `:parachute:`
 ') }}
 {{ markdown(title="💺 seat" type="markdown", code='
+
 <!--
 # 💺 seat
 #
@@ -18172,9 +20060,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :seat: `:seat:`
 ') }}
 {{ markdown(title="🚁 helicopter" type="markdown", code='
+
 <!--
 # 🚁 helicopter
 #
@@ -18190,9 +20080,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :helicopter: `:helicopter:`
 ') }}
 {{ markdown(title="🚟 suspension railway" type="markdown", code='
+
 <!--
 # 🚟 suspension railway
 #
@@ -18208,9 +20100,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :suspension_railway: `:suspension_railway:`
 ') }}
 {{ markdown(title="🚠 mountain cableway" type="markdown", code='
+
 <!--
 # 🚠 mountain cableway
 #
@@ -18226,9 +20120,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mountain_cableway: `:mountain_cableway:`
 ') }}
 {{ markdown(title="🚡 aerial tramway" type="markdown", code='
+
 <!--
 # 🚡 aerial tramway
 #
@@ -18244,9 +20140,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :aerial_tramway: `:aerial_tramway:`
 ') }}
 {{ markdown(title="🛰️ satellite" type="markdown", code='
+
 <!--
 # 🛰️ satellite
 #
@@ -18265,9 +20163,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :artificial_satellite: `:artificial_satellite:`
 ') }}
 {{ markdown(title="🚀 rocket" type="markdown", code='
+
 <!--
 # 🚀 rocket
 #
@@ -18286,9 +20186,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rocket: `:rocket:`
 ') }}
 {{ markdown(title="🛸 flying saucer" type="markdown", code='
+
 <!--
 # 🛸 flying saucer
 #
@@ -18306,9 +20208,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :flying_saucer: `:flying_saucer:`
 ') }}
 {{ markdown(title="🛎️ bellhop bell" type="markdown", code='
+
 <!--
 # 🛎️ bellhop bell
 #
@@ -18324,9 +20228,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :bellhop_bell: `:bellhop_bell:`
 ') }}
 {{ markdown(title="🧳 luggage" type="markdown", code='
+
 <!--
 # 🧳 luggage
 #
@@ -18342,9 +20248,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :luggage: `:luggage:`
 ') }}
 {{ markdown(title="⌛ hourglass done" type="markdown", code='
+
 <!--
 # ⌛ hourglass done
 #
@@ -18362,9 +20270,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hourglass: `:hourglass:`
 ') }}
 {{ markdown(title="⏳ hourglass not done" type="markdown", code='
+
 <!--
 # ⏳ hourglass not done
 #
@@ -18382,9 +20292,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hourglass_flowing_sand: `:hourglass_flowing_sand:`
 ') }}
 {{ markdown(title="⌚ watch" type="markdown", code='
+
 <!--
 # ⌚ watch
 #
@@ -18402,9 +20314,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :watch: `:watch:`
 ') }}
 {{ markdown(title="⏰ alarm clock" type="markdown", code='
+
 <!--
 # ⏰ alarm clock
 #
@@ -18422,9 +20336,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :alarm_clock: `:alarm_clock:`
 ') }}
 {{ markdown(title="⏱️ stopwatch" type="markdown", code='
+
 <!--
 # ⏱️ stopwatch
 #
@@ -18440,9 +20356,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :stopwatch: `:stopwatch:`
 ') }}
 {{ markdown(title="⏲️ timer clock" type="markdown", code='
+
 <!--
 # ⏲️ timer clock
 #
@@ -18458,9 +20376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :timer_clock: `:timer_clock:`
 ') }}
 {{ markdown(title="🕰️ mantelpiece clock" type="markdown", code='
+
 <!--
 # 🕰️ mantelpiece clock
 #
@@ -18476,9 +20396,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :mantelpiece_clock: `:mantelpiece_clock:`
 ') }}
 {{ markdown(title="🕛 twelve o’clock" type="markdown", code='
+
 <!--
 # 🕛 twelve o’clock
 #
@@ -18494,9 +20416,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock12: `:clock12:`
 ') }}
 {{ markdown(title="🕧 twelve-thirty" type="markdown", code='
+
 <!--
 # 🕧 twelve-thirty
 #
@@ -18512,9 +20436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock1230: `:clock1230:`
 ') }}
 {{ markdown(title="🕐 one o’clock" type="markdown", code='
+
 <!--
 # 🕐 one o’clock
 #
@@ -18530,9 +20456,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock1: `:clock1:`
 ') }}
 {{ markdown(title="🕜 one-thirty" type="markdown", code='
+
 <!--
 # 🕜 one-thirty
 #
@@ -18548,9 +20476,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock130: `:clock130:`
 ') }}
 {{ markdown(title="🕑 two o’clock" type="markdown", code='
+
 <!--
 # 🕑 two o’clock
 #
@@ -18566,9 +20496,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock2: `:clock2:`
 ') }}
 {{ markdown(title="🕝 two-thirty" type="markdown", code='
+
 <!--
 # 🕝 two-thirty
 #
@@ -18584,9 +20516,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock230: `:clock230:`
 ') }}
 {{ markdown(title="🕒 three o’clock" type="markdown", code='
+
 <!--
 # 🕒 three o’clock
 #
@@ -18602,9 +20536,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock3: `:clock3:`
 ') }}
 {{ markdown(title="🕞 three-thirty" type="markdown", code='
+
 <!--
 # 🕞 three-thirty
 #
@@ -18620,9 +20556,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock330: `:clock330:`
 ') }}
 {{ markdown(title="🕓 four o’clock" type="markdown", code='
+
 <!--
 # 🕓 four o’clock
 #
@@ -18638,9 +20576,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock4: `:clock4:`
 ') }}
 {{ markdown(title="🕟 four-thirty" type="markdown", code='
+
 <!--
 # 🕟 four-thirty
 #
@@ -18656,9 +20596,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock430: `:clock430:`
 ') }}
 {{ markdown(title="🕔 five o’clock" type="markdown", code='
+
 <!--
 # 🕔 five o’clock
 #
@@ -18674,9 +20616,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock5: `:clock5:`
 ') }}
 {{ markdown(title="🕠 five-thirty" type="markdown", code='
+
 <!--
 # 🕠 five-thirty
 #
@@ -18692,9 +20636,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock530: `:clock530:`
 ') }}
 {{ markdown(title="🕕 six o’clock" type="markdown", code='
+
 <!--
 # 🕕 six o’clock
 #
@@ -18710,9 +20656,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock6: `:clock6:`
 ') }}
 {{ markdown(title="🕡 six-thirty" type="markdown", code='
+
 <!--
 # 🕡 six-thirty
 #
@@ -18728,9 +20676,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock630: `:clock630:`
 ') }}
 {{ markdown(title="🕖 seven o’clock" type="markdown", code='
+
 <!--
 # 🕖 seven o’clock
 #
@@ -18746,9 +20696,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock7: `:clock7:`
 ') }}
 {{ markdown(title="🕢 seven-thirty" type="markdown", code='
+
 <!--
 # 🕢 seven-thirty
 #
@@ -18764,9 +20716,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock730: `:clock730:`
 ') }}
 {{ markdown(title="🕗 eight o’clock" type="markdown", code='
+
 <!--
 # 🕗 eight o’clock
 #
@@ -18782,9 +20736,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock8: `:clock8:`
 ') }}
 {{ markdown(title="🕣 eight-thirty" type="markdown", code='
+
 <!--
 # 🕣 eight-thirty
 #
@@ -18800,9 +20756,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock830: `:clock830:`
 ') }}
 {{ markdown(title="🕘 nine o’clock" type="markdown", code='
+
 <!--
 # 🕘 nine o’clock
 #
@@ -18818,9 +20776,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock9: `:clock9:`
 ') }}
 {{ markdown(title="🕤 nine-thirty" type="markdown", code='
+
 <!--
 # 🕤 nine-thirty
 #
@@ -18836,9 +20796,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock930: `:clock930:`
 ') }}
 {{ markdown(title="🕙 ten o’clock" type="markdown", code='
+
 <!--
 # 🕙 ten o’clock
 #
@@ -18854,9 +20816,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock10: `:clock10:`
 ') }}
 {{ markdown(title="🕥 ten-thirty" type="markdown", code='
+
 <!--
 # 🕥 ten-thirty
 #
@@ -18872,9 +20836,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock1030: `:clock1030:`
 ') }}
 {{ markdown(title="🕚 eleven o’clock" type="markdown", code='
+
 <!--
 # 🕚 eleven o’clock
 #
@@ -18890,9 +20856,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock11: `:clock11:`
 ') }}
 {{ markdown(title="🕦 eleven-thirty" type="markdown", code='
+
 <!--
 # 🕦 eleven-thirty
 #
@@ -18908,9 +20876,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clock1130: `:clock1130:`
 ') }}
 {{ markdown(title="🌑 new moon" type="markdown", code='
+
 <!--
 # 🌑 new moon
 #
@@ -18926,9 +20896,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :new_moon: `:new_moon:`
 ') }}
 {{ markdown(title="🌒 waxing crescent moon" type="markdown", code='
+
 <!--
 # 🌒 waxing crescent moon
 #
@@ -18944,9 +20916,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :waxing_crescent_moon: `:waxing_crescent_moon:`
 ') }}
 {{ markdown(title="🌓 first quarter moon" type="markdown", code='
+
 <!--
 # 🌓 first quarter moon
 #
@@ -18962,9 +20936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :first_quarter_moon: `:first_quarter_moon:`
 ') }}
 {{ markdown(title="🌔 waxing gibbous moon" type="markdown", code='
+
 <!--
 # 🌔 waxing gibbous moon
 #
@@ -18981,11 +20957,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :moon: `:moon:`
 
 :waxing_gibbous_moon: `:waxing_gibbous_moon:`
 ') }}
 {{ markdown(title="🌕 full moon" type="markdown", code='
+
 <!--
 # 🌕 full moon
 #
@@ -19001,9 +20979,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :full_moon: `:full_moon:`
 ') }}
 {{ markdown(title="🌖 waning gibbous moon" type="markdown", code='
+
 <!--
 # 🌖 waning gibbous moon
 #
@@ -19019,9 +20999,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :waning_gibbous_moon: `:waning_gibbous_moon:`
 ') }}
 {{ markdown(title="🌗 last quarter moon" type="markdown", code='
+
 <!--
 # 🌗 last quarter moon
 #
@@ -19037,9 +21019,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :last_quarter_moon: `:last_quarter_moon:`
 ') }}
 {{ markdown(title="🌘 waning crescent moon" type="markdown", code='
+
 <!--
 # 🌘 waning crescent moon
 #
@@ -19055,9 +21039,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :waning_crescent_moon: `:waning_crescent_moon:`
 ') }}
 {{ markdown(title="🌙 crescent moon" type="markdown", code='
+
 <!--
 # 🌙 crescent moon
 #
@@ -19075,9 +21061,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :crescent_moon: `:crescent_moon:`
 ') }}
 {{ markdown(title="🌚 new moon face" type="markdown", code='
+
 <!--
 # 🌚 new moon face
 #
@@ -19093,9 +21081,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :new_moon_with_face: `:new_moon_with_face:`
 ') }}
 {{ markdown(title="🌛 first quarter moon face" type="markdown", code='
+
 <!--
 # 🌛 first quarter moon face
 #
@@ -19111,9 +21101,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :first_quarter_moon_with_face: `:first_quarter_moon_with_face:`
 ') }}
 {{ markdown(title="🌜 last quarter moon face" type="markdown", code='
+
 <!--
 # 🌜 last quarter moon face
 #
@@ -19129,9 +21121,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :last_quarter_moon_with_face: `:last_quarter_moon_with_face:`
 ') }}
 {{ markdown(title="🌡️ thermometer" type="markdown", code='
+
 <!--
 # 🌡️ thermometer
 #
@@ -19147,9 +21141,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :thermometer: `:thermometer:`
 ') }}
 {{ markdown(title="☀️ sun" type="markdown", code='
+
 <!--
 # ☀️ sun
 #
@@ -19167,9 +21163,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sunny: `:sunny:`
 ') }}
 {{ markdown(title="🌝 full moon face" type="markdown", code='
+
 <!--
 # 🌝 full moon face
 #
@@ -19185,9 +21183,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :full_moon_with_face: `:full_moon_with_face:`
 ') }}
 {{ markdown(title="🌞 sun with face" type="markdown", code='
+
 <!--
 # 🌞 sun with face
 #
@@ -19205,9 +21205,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sun_with_face: `:sun_with_face:`
 ') }}
 {{ markdown(title="🪐 ringed planet" type="markdown", code='
+
 <!--
 # 🪐 ringed planet
 #
@@ -19223,9 +21225,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :ringed_planet: `:ringed_planet:`
 ') }}
 {{ markdown(title="⭐ star" type="markdown", code='
+
 <!--
 # ⭐ star
 #
@@ -19241,9 +21245,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :star: `:star:`
 ') }}
 {{ markdown(title="🌟 glowing star" type="markdown", code='
+
 <!--
 # 🌟 glowing star
 #
@@ -19259,9 +21265,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :star2: `:star2:`
 ') }}
 {{ markdown(title="🌠 shooting star" type="markdown", code='
+
 <!--
 # 🌠 shooting star
 #
@@ -19277,9 +21285,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :stars: `:stars:`
 ') }}
 {{ markdown(title="🌌 milky way" type="markdown", code='
+
 <!--
 # 🌌 milky way
 #
@@ -19295,9 +21305,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :milky_way: `:milky_way:`
 ') }}
 {{ markdown(title="☁️ cloud" type="markdown", code='
+
 <!--
 # ☁️ cloud
 #
@@ -19313,9 +21325,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cloud: `:cloud:`
 ') }}
 {{ markdown(title="⛅ sun behind cloud" type="markdown", code='
+
 <!--
 # ⛅ sun behind cloud
 #
@@ -19334,9 +21348,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :partly_sunny: `:partly_sunny:`
 ') }}
 {{ markdown(title="⛈️ cloud with lightning and rain" type="markdown", code='
+
 <!--
 # ⛈️ cloud with lightning and rain
 #
@@ -19352,9 +21368,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cloud_with_lightning_and_rain: `:cloud_with_lightning_and_rain:`
 ') }}
 {{ markdown(title="🌤️ sun behind small cloud" type="markdown", code='
+
 <!--
 # 🌤️ sun behind small cloud
 #
@@ -19370,9 +21388,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :sun_behind_small_cloud: `:sun_behind_small_cloud:`
 ') }}
 {{ markdown(title="🌥️ sun behind large cloud" type="markdown", code='
+
 <!--
 # 🌥️ sun behind large cloud
 #
@@ -19388,9 +21408,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :sun_behind_large_cloud: `:sun_behind_large_cloud:`
 ') }}
 {{ markdown(title="🌦️ sun behind rain cloud" type="markdown", code='
+
 <!--
 # 🌦️ sun behind rain cloud
 #
@@ -19406,9 +21428,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :sun_behind_rain_cloud: `:sun_behind_rain_cloud:`
 ') }}
 {{ markdown(title="🌧️ cloud with rain" type="markdown", code='
+
 <!--
 # 🌧️ cloud with rain
 #
@@ -19424,9 +21448,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cloud_with_rain: `:cloud_with_rain:`
 ') }}
 {{ markdown(title="🌨️ cloud with snow" type="markdown", code='
+
 <!--
 # 🌨️ cloud with snow
 #
@@ -19442,9 +21468,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cloud_with_snow: `:cloud_with_snow:`
 ') }}
 {{ markdown(title="🌩️ cloud with lightning" type="markdown", code='
+
 <!--
 # 🌩️ cloud with lightning
 #
@@ -19460,9 +21488,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cloud_with_lightning: `:cloud_with_lightning:`
 ') }}
 {{ markdown(title="🌪️ tornado" type="markdown", code='
+
 <!--
 # 🌪️ tornado
 #
@@ -19478,9 +21508,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :tornado: `:tornado:`
 ') }}
 {{ markdown(title="🌫️ fog" type="markdown", code='
+
 <!--
 # 🌫️ fog
 #
@@ -19496,9 +21528,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :fog: `:fog:`
 ') }}
 {{ markdown(title="🌬️ wind face" type="markdown", code='
+
 <!--
 # 🌬️ wind face
 #
@@ -19514,9 +21548,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :wind_face: `:wind_face:`
 ') }}
 {{ markdown(title="🌀 cyclone" type="markdown", code='
+
 <!--
 # 🌀 cyclone
 #
@@ -19534,9 +21570,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cyclone: `:cyclone:`
 ') }}
 {{ markdown(title="🌈 rainbow" type="markdown", code='
+
 <!--
 # 🌈 rainbow
 #
@@ -19552,9 +21590,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rainbow: `:rainbow:`
 ') }}
 {{ markdown(title="🌂 closed umbrella" type="markdown", code='
+
 <!--
 # 🌂 closed umbrella
 #
@@ -19573,9 +21613,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :closed_umbrella: `:closed_umbrella:`
 ') }}
 {{ markdown(title="☂️ umbrella" type="markdown", code='
+
 <!--
 # ☂️ umbrella
 #
@@ -19591,9 +21633,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :open_umbrella: `:open_umbrella:`
 ') }}
 {{ markdown(title="☔ umbrella with rain drops" type="markdown", code='
+
 <!--
 # ☔ umbrella with rain drops
 #
@@ -19612,9 +21656,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :umbrella: `:umbrella:`
 ') }}
 {{ markdown(title="⛱️ umbrella on ground" type="markdown", code='
+
 <!--
 # ⛱️ umbrella on ground
 #
@@ -19632,9 +21678,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :parasol_on_ground: `:parasol_on_ground:`
 ') }}
 {{ markdown(title="⚡ high voltage" type="markdown", code='
+
 <!--
 # ⚡ high voltage
 #
@@ -19653,9 +21701,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :zap: `:zap:`
 ') }}
 {{ markdown(title="❄️ snowflake" type="markdown", code='
+
 <!--
 # ❄️ snowflake
 #
@@ -19675,9 +21725,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :snowflake: `:snowflake:`
 ') }}
 {{ markdown(title="☃️ snowman" type="markdown", code='
+
 <!--
 # ☃️ snowman
 #
@@ -19696,9 +21748,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :snowman_with_snow: `:snowman_with_snow:`
 ') }}
 {{ markdown(title="⛄ snowman without snow" type="markdown", code='
+
 <!--
 # ⛄ snowman without snow
 #
@@ -19716,9 +21770,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :snowman: `:snowman:`
 ') }}
 {{ markdown(title="☄️ comet" type="markdown", code='
+
 <!--
 # ☄️ comet
 #
@@ -19734,9 +21790,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :comet: `:comet:`
 ') }}
 {{ markdown(title="🔥 fire" type="markdown", code='
+
 <!--
 # 🔥 fire
 #
@@ -19754,9 +21812,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fire: `:fire:`
 ') }}
 {{ markdown(title="💧 droplet" type="markdown", code='
+
 <!--
 # 💧 droplet
 #
@@ -19774,9 +21834,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :droplet: `:droplet:`
 ') }}
 {{ markdown(title="🌊 water wave" type="markdown", code='
+
 <!--
 # 🌊 water wave
 #
@@ -19794,9 +21856,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ocean: `:ocean:`
 ') }}
 {{ markdown(title="🎃 jack-o-lantern" type="markdown", code='
+
 <!--
 # 🎃 jack-o-lantern
 #
@@ -19814,9 +21878,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :jack_o_lantern: `:jack_o_lantern:`
 ') }}
 {{ markdown(title="🎄 Christmas tree" type="markdown", code='
+
 <!--
 # 🎄 Christmas tree
 #
@@ -19832,9 +21898,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :christmas_tree: `:christmas_tree:`
 ') }}
 {{ markdown(title="🎆 fireworks" type="markdown", code='
+
 <!--
 # 🎆 fireworks
 #
@@ -19853,9 +21921,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fireworks: `:fireworks:`
 ') }}
 {{ markdown(title="🎇 sparkler" type="markdown", code='
+
 <!--
 # 🎇 sparkler
 #
@@ -19871,9 +21941,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sparkler: `:sparkler:`
 ') }}
 {{ markdown(title="🧨 firecracker" type="markdown", code='
+
 <!--
 # 🧨 firecracker
 #
@@ -19889,9 +21961,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :firecracker: `:firecracker:`
 ') }}
 {{ markdown(title="✨ sparkles" type="markdown", code='
+
 <!--
 # ✨ sparkles
 #
@@ -19909,9 +21983,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sparkles: `:sparkles:`
 ') }}
 {{ markdown(title="🎈 balloon" type="markdown", code='
+
 <!--
 # 🎈 balloon
 #
@@ -19930,9 +22006,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :balloon: `:balloon:`
 ') }}
 {{ markdown(title="🎉 party popper" type="markdown", code='
+
 <!--
 # 🎉 party popper
 #
@@ -19951,9 +22029,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tada: `:tada:`
 ') }}
 {{ markdown(title="🎊 confetti ball" type="markdown", code='
+
 <!--
 # 🎊 confetti ball
 #
@@ -19969,9 +22049,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :confetti_ball: `:confetti_ball:`
 ') }}
 {{ markdown(title="🎋 tanabata tree" type="markdown", code='
+
 <!--
 # 🎋 tanabata tree
 #
@@ -19987,9 +22069,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tanabata_tree: `:tanabata_tree:`
 ') }}
 {{ markdown(title="🎍 pine decoration" type="markdown", code='
+
 <!--
 # 🎍 pine decoration
 #
@@ -20005,9 +22089,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bamboo: `:bamboo:`
 ') }}
 {{ markdown(title="🎎 Japanese dolls" type="markdown", code='
+
 <!--
 # 🎎 Japanese dolls
 #
@@ -20023,9 +22109,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dolls: `:dolls:`
 ') }}
 {{ markdown(title="🎏 carp streamer" type="markdown", code='
+
 <!--
 # 🎏 carp streamer
 #
@@ -20041,9 +22129,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :flags: `:flags:`
 ') }}
 {{ markdown(title="🎐 wind chime" type="markdown", code='
+
 <!--
 # 🎐 wind chime
 #
@@ -20059,9 +22149,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wind_chime: `:wind_chime:`
 ') }}
 {{ markdown(title="🎑 moon viewing ceremony" type="markdown", code='
+
 <!--
 # 🎑 moon viewing ceremony
 #
@@ -20077,9 +22169,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rice_scene: `:rice_scene:`
 ') }}
 {{ markdown(title="🧧 red envelope" type="markdown", code='
+
 <!--
 # 🧧 red envelope
 #
@@ -20095,9 +22189,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :red_envelope: `:red_envelope:`
 ') }}
 {{ markdown(title="🎀 ribbon" type="markdown", code='
+
 <!--
 # 🎀 ribbon
 #
@@ -20113,9 +22209,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ribbon: `:ribbon:`
 ') }}
 {{ markdown(title="🎁 wrapped gift" type="markdown", code='
+
 <!--
 # 🎁 wrapped gift
 #
@@ -20135,9 +22233,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :gift: `:gift:`
 ') }}
 {{ markdown(title="🎗️ reminder ribbon" type="markdown", code='
+
 <!--
 # 🎗️ reminder ribbon
 #
@@ -20153,9 +22253,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :reminder_ribbon: `:reminder_ribbon:`
 ') }}
 {{ markdown(title="🎟️ admission tickets" type="markdown", code='
+
 <!--
 # 🎟️ admission tickets
 #
@@ -20171,9 +22273,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :tickets: `:tickets:`
 ') }}
 {{ markdown(title="🎫 ticket" type="markdown", code='
+
 <!--
 # 🎫 ticket
 #
@@ -20189,9 +22293,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ticket: `:ticket:`
 ') }}
 {{ markdown(title="🎖️ military medal" type="markdown", code='
+
 <!--
 # 🎖️ military medal
 #
@@ -20207,9 +22313,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :medal_military: `:medal_military:`
 ') }}
 {{ markdown(title="🏆 trophy" type="markdown", code='
+
 <!--
 # 🏆 trophy
 #
@@ -20229,9 +22337,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :trophy: `:trophy:`
 ') }}
 {{ markdown(title="🏅 sports medal" type="markdown", code='
+
 <!--
 # 🏅 sports medal
 #
@@ -20250,9 +22360,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :medal_sports: `:medal_sports:`
 ') }}
 {{ markdown(title="🥇 1st place medal" type="markdown", code='
+
 <!--
 # 🥇 1st place medal
 #
@@ -20270,9 +22382,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :1st_place_medal: `:1st_place_medal:`
 ') }}
 {{ markdown(title="🥈 2nd place medal" type="markdown", code='
+
 <!--
 # 🥈 2nd place medal
 #
@@ -20290,9 +22404,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :2nd_place_medal: `:2nd_place_medal:`
 ') }}
 {{ markdown(title="🥉 3rd place medal" type="markdown", code='
+
 <!--
 # 🥉 3rd place medal
 #
@@ -20310,9 +22426,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :3rd_place_medal: `:3rd_place_medal:`
 ') }}
 {{ markdown(title="⚽ soccer ball" type="markdown", code='
+
 <!--
 # ⚽ soccer ball
 #
@@ -20330,9 +22448,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :soccer: `:soccer:`
 ') }}
 {{ markdown(title="⚾ baseball" type="markdown", code='
+
 <!--
 # ⚾ baseball
 #
@@ -20350,9 +22470,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :baseball: `:baseball:`
 ') }}
 {{ markdown(title="🥎 softball" type="markdown", code='
+
 <!--
 # 🥎 softball
 #
@@ -20368,9 +22490,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :softball: `:softball:`
 ') }}
 {{ markdown(title="🏀 basketball" type="markdown", code='
+
 <!--
 # 🏀 basketball
 #
@@ -20388,9 +22512,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :basketball: `:basketball:`
 ') }}
 {{ markdown(title="🏐 volleyball" type="markdown", code='
+
 <!--
 # 🏐 volleyball
 #
@@ -20406,9 +22532,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :volleyball: `:volleyball:`
 ') }}
 {{ markdown(title="🏈 american football" type="markdown", code='
+
 <!--
 # 🏈 american football
 #
@@ -20426,9 +22554,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :football: `:football:`
 ') }}
 {{ markdown(title="🏉 rugby football" type="markdown", code='
+
 <!--
 # 🏉 rugby football
 #
@@ -20444,9 +22574,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rugby_football: `:rugby_football:`
 ') }}
 {{ markdown(title="🎾 tennis" type="markdown", code='
+
 <!--
 # 🎾 tennis
 #
@@ -20464,9 +22596,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tennis: `:tennis:`
 ') }}
 {{ markdown(title="🥏 flying disc" type="markdown", code='
+
 <!--
 # 🥏 flying disc
 #
@@ -20482,9 +22616,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :flying_disc: `:flying_disc:`
 ') }}
 {{ markdown(title="🎳 bowling" type="markdown", code='
+
 <!--
 # 🎳 bowling
 #
@@ -20500,9 +22636,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bowling: `:bowling:`
 ') }}
 {{ markdown(title="🏏 cricket game" type="markdown", code='
+
 <!--
 # 🏏 cricket game
 #
@@ -20518,9 +22656,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :cricket_game: `:cricket_game:`
 ') }}
 {{ markdown(title="🏑 field hockey" type="markdown", code='
+
 <!--
 # 🏑 field hockey
 #
@@ -20536,9 +22676,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :field_hockey: `:field_hockey:`
 ') }}
 {{ markdown(title="🏒 ice hockey" type="markdown", code='
+
 <!--
 # 🏒 ice hockey
 #
@@ -20554,9 +22696,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :ice_hockey: `:ice_hockey:`
 ') }}
 {{ markdown(title="🥍 lacrosse" type="markdown", code='
+
 <!--
 # 🥍 lacrosse
 #
@@ -20572,9 +22716,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :lacrosse: `:lacrosse:`
 ') }}
 {{ markdown(title="🏓 ping pong" type="markdown", code='
+
 <!--
 # 🏓 ping pong
 #
@@ -20590,9 +22736,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :ping_pong: `:ping_pong:`
 ') }}
 {{ markdown(title="🏸 badminton" type="markdown", code='
+
 <!--
 # 🏸 badminton
 #
@@ -20608,9 +22756,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :badminton: `:badminton:`
 ') }}
 {{ markdown(title="🥊 boxing glove" type="markdown", code='
+
 <!--
 # 🥊 boxing glove
 #
@@ -20626,9 +22776,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :boxing_glove: `:boxing_glove:`
 ') }}
 {{ markdown(title="🥋 martial arts uniform" type="markdown", code='
+
 <!--
 # 🥋 martial arts uniform
 #
@@ -20644,9 +22796,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :martial_arts_uniform: `:martial_arts_uniform:`
 ') }}
 {{ markdown(title="🥅 goal net" type="markdown", code='
+
 <!--
 # 🥅 goal net
 #
@@ -20662,9 +22816,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :goal_net: `:goal_net:`
 ') }}
 {{ markdown(title="⛳ flag in hole" type="markdown", code='
+
 <!--
 # ⛳ flag in hole
 #
@@ -20680,9 +22836,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :golf: `:golf:`
 ') }}
 {{ markdown(title="⛸️ ice skate" type="markdown", code='
+
 <!--
 # ⛸️ ice skate
 #
@@ -20700,9 +22858,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :ice_skate: `:ice_skate:`
 ') }}
 {{ markdown(title="🎣 fishing pole" type="markdown", code='
+
 <!--
 # 🎣 fishing pole
 #
@@ -20718,9 +22878,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fishing_pole_and_fish: `:fishing_pole_and_fish:`
 ') }}
 {{ markdown(title="🤿 diving mask" type="markdown", code='
+
 <!--
 # 🤿 diving mask
 #
@@ -20736,9 +22898,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :diving_mask: `:diving_mask:`
 ') }}
 {{ markdown(title="🎽 running shirt" type="markdown", code='
+
 <!--
 # 🎽 running shirt
 #
@@ -20756,9 +22920,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :running_shirt_with_sash: `:running_shirt_with_sash:`
 ') }}
 {{ markdown(title="🎿 skis" type="markdown", code='
+
 <!--
 # 🎿 skis
 #
@@ -20774,9 +22940,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ski: `:ski:`
 ') }}
 {{ markdown(title="🛷 sled" type="markdown", code='
+
 <!--
 # 🛷 sled
 #
@@ -20792,9 +22960,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :sled: `:sled:`
 ') }}
 {{ markdown(title="🥌 curling stone" type="markdown", code='
+
 <!--
 # 🥌 curling stone
 #
@@ -20810,9 +22980,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :curling_stone: `:curling_stone:`
 ') }}
 {{ markdown(title="🎯 bullseye" type="markdown", code='
+
 <!--
 # 🎯 bullseye
 #
@@ -20830,9 +23002,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dart: `:dart:`
 ') }}
 {{ markdown(title="🪀 yo-yo" type="markdown", code='
+
 <!--
 # 🪀 yo-yo
 #
@@ -20848,9 +23022,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :yo_yo: `:yo_yo:`
 ') }}
 {{ markdown(title="🪁 kite" type="markdown", code='
+
 <!--
 # 🪁 kite
 #
@@ -20866,9 +23042,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :kite: `:kite:`
 ') }}
 {{ markdown(title="🔫 water pistol" type="markdown", code='
+
 <!--
 # 🔫 water pistol
 #
@@ -20887,9 +23065,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :gun: `:gun:`
 ') }}
 {{ markdown(title="🎱 pool 8 ball" type="markdown", code='
+
 <!--
 # 🎱 pool 8 ball
 #
@@ -20908,9 +23088,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :8ball: `:8ball:`
 ') }}
 {{ markdown(title="🔮 crystal ball" type="markdown", code='
+
 <!--
 # 🔮 crystal ball
 #
@@ -20928,9 +23110,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :crystal_ball: `:crystal_ball:`
 ') }}
 {{ markdown(title="🪄 magic wand" type="markdown", code='
+
 <!--
 # 🪄 magic wand
 #
@@ -20946,9 +23130,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :magic_wand: `:magic_wand:`
 ') }}
 {{ markdown(title="🎮 video game" type="markdown", code='
+
 <!--
 # 🎮 video game
 #
@@ -20968,9 +23154,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :video_game: `:video_game:`
 ') }}
 {{ markdown(title="🕹️ joystick" type="markdown", code='
+
 <!--
 # 🕹️ joystick
 #
@@ -20986,9 +23174,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :joystick: `:joystick:`
 ') }}
 {{ markdown(title="🎰 slot machine" type="markdown", code='
+
 <!--
 # 🎰 slot machine
 #
@@ -21004,9 +23194,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :slot_machine: `:slot_machine:`
 ') }}
 {{ markdown(title="🎲 game die" type="markdown", code='
+
 <!--
 # 🎲 game die
 #
@@ -21025,9 +23217,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :game_die: `:game_die:`
 ') }}
 {{ markdown(title="🧩 puzzle piece" type="markdown", code='
+
 <!--
 # 🧩 puzzle piece
 #
@@ -21043,9 +23237,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :jigsaw: `:jigsaw:`
 ') }}
 {{ markdown(title="🧸 teddy bear" type="markdown", code='
+
 <!--
 # 🧸 teddy bear
 #
@@ -21061,9 +23257,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :teddy_bear: `:teddy_bear:`
 ') }}
 {{ markdown(title="🪅 piñata" type="markdown", code='
+
 <!--
 # 🪅 piñata
 #
@@ -21079,9 +23277,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :pinata: `:pinata:`
 ') }}
 {{ markdown(title="🪩 mirror ball" type="markdown", code='
+
 <!--
 # 🪩 mirror ball
 #
@@ -21100,9 +23300,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :mirror_ball: `:mirror_ball:`
 ') }}
 {{ markdown(title="🪆 nesting dolls" type="markdown", code='
+
 <!--
 # 🪆 nesting dolls
 #
@@ -21118,9 +23320,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :nesting_dolls: `:nesting_dolls:`
 ') }}
 {{ markdown(title="♠️ spade suit" type="markdown", code='
+
 <!--
 # ♠️ spade suit
 #
@@ -21136,9 +23340,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :spades: `:spades:`
 ') }}
 {{ markdown(title="♥️ heart suit" type="markdown", code='
+
 <!--
 # ♥️ heart suit
 #
@@ -21154,9 +23360,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hearts: `:hearts:`
 ') }}
 {{ markdown(title="♦️ diamond suit" type="markdown", code='
+
 <!--
 # ♦️ diamond suit
 #
@@ -21172,9 +23380,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :diamonds: `:diamonds:`
 ') }}
 {{ markdown(title="♣️ club suit" type="markdown", code='
+
 <!--
 # ♣️ club suit
 #
@@ -21190,9 +23400,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clubs: `:clubs:`
 ') }}
 {{ markdown(title="♟️ chess pawn" type="markdown", code='
+
 <!--
 # ♟️ chess pawn
 #
@@ -21208,9 +23420,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :chess_pawn: `:chess_pawn:`
 ') }}
 {{ markdown(title="🃏 joker" type="markdown", code='
+
 <!--
 # 🃏 joker
 #
@@ -21226,9 +23440,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_joker: `:black_joker:`
 ') }}
 {{ markdown(title="🀄 mahjong red dragon" type="markdown", code='
+
 <!--
 # 🀄 mahjong red dragon
 #
@@ -21244,9 +23460,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mahjong: `:mahjong:`
 ') }}
 {{ markdown(title="🎴 flower playing cards" type="markdown", code='
+
 <!--
 # 🎴 flower playing cards
 #
@@ -21262,9 +23480,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :flower_playing_cards: `:flower_playing_cards:`
 ') }}
 {{ markdown(title="🎭 performing arts" type="markdown", code='
+
 <!--
 # 🎭 performing arts
 #
@@ -21283,9 +23503,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :performing_arts: `:performing_arts:`
 ') }}
 {{ markdown(title="🖼️ framed picture" type="markdown", code='
+
 <!--
 # 🖼️ framed picture
 #
@@ -21301,9 +23523,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :framed_picture: `:framed_picture:`
 ') }}
 {{ markdown(title="🎨 artist palette" type="markdown", code='
+
 <!--
 # 🎨 artist palette
 #
@@ -21322,9 +23546,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :art: `:art:`
 ') }}
 {{ markdown(title="🧵 thread" type="markdown", code='
+
 <!--
 # 🧵 thread
 #
@@ -21340,9 +23566,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :thread: `:thread:`
 ') }}
 {{ markdown(title="🪡 sewing needle" type="markdown", code='
+
 <!--
 # 🪡 sewing needle
 #
@@ -21358,9 +23586,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :sewing_needle: `:sewing_needle:`
 ') }}
 {{ markdown(title="🧶 yarn" type="markdown", code='
+
 <!--
 # 🧶 yarn
 #
@@ -21376,9 +23606,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :yarn: `:yarn:`
 ') }}
 {{ markdown(title="🪢 knot" type="markdown", code='
+
 <!--
 # 🪢 knot
 #
@@ -21394,9 +23626,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :knot: `:knot:`
 ') }}
 {{ markdown(title="👓 glasses" type="markdown", code='
+
 <!--
 # 👓 glasses
 #
@@ -21414,9 +23648,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :eyeglasses: `:eyeglasses:`
 ') }}
 {{ markdown(title="🕶️ sunglasses" type="markdown", code='
+
 <!--
 # 🕶️ sunglasses
 #
@@ -21432,9 +23668,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :dark_sunglasses: `:dark_sunglasses:`
 ') }}
 {{ markdown(title="🥽 goggles" type="markdown", code='
+
 <!--
 # 🥽 goggles
 #
@@ -21450,9 +23688,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :goggles: `:goggles:`
 ') }}
 {{ markdown(title="🥼 lab coat" type="markdown", code='
+
 <!--
 # 🥼 lab coat
 #
@@ -21468,9 +23708,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :lab_coat: `:lab_coat:`
 ') }}
 {{ markdown(title="🦺 safety vest" type="markdown", code='
+
 <!--
 # 🦺 safety vest
 #
@@ -21486,9 +23728,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :safety_vest: `:safety_vest:`
 ') }}
 {{ markdown(title="👔 necktie" type="markdown", code='
+
 <!--
 # 👔 necktie
 #
@@ -21507,9 +23751,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :necktie: `:necktie:`
 ') }}
 {{ markdown(title="👕 t-shirt" type="markdown", code='
+
 <!--
 # 👕 t-shirt
 #
@@ -21526,11 +23772,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :shirt: `:shirt:`
 
 :tshirt: `:tshirt:`
 ') }}
 {{ markdown(title="👖 jeans" type="markdown", code='
+
 <!--
 # 👖 jeans
 #
@@ -21548,9 +23796,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :jeans: `:jeans:`
 ') }}
 {{ markdown(title="🧣 scarf" type="markdown", code='
+
 <!--
 # 🧣 scarf
 #
@@ -21566,9 +23816,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :scarf: `:scarf:`
 ') }}
 {{ markdown(title="🧤 gloves" type="markdown", code='
+
 <!--
 # 🧤 gloves
 #
@@ -21584,9 +23836,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :gloves: `:gloves:`
 ') }}
 {{ markdown(title="🧥 coat" type="markdown", code='
+
 <!--
 # 🧥 coat
 #
@@ -21602,9 +23856,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :coat: `:coat:`
 ') }}
 {{ markdown(title="🧦 socks" type="markdown", code='
+
 <!--
 # 🧦 socks
 #
@@ -21620,9 +23876,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :socks: `:socks:`
 ') }}
 {{ markdown(title="👗 dress" type="markdown", code='
+
 <!--
 # 👗 dress
 #
@@ -21638,9 +23896,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dress: `:dress:`
 ') }}
 {{ markdown(title="👘 kimono" type="markdown", code='
+
 <!--
 # 👘 kimono
 #
@@ -21656,9 +23916,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kimono: `:kimono:`
 ') }}
 {{ markdown(title="🥻 sari" type="markdown", code='
+
 <!--
 # 🥻 sari
 #
@@ -21674,9 +23936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :sari: `:sari:`
 ') }}
 {{ markdown(title="🩱 one-piece swimsuit" type="markdown", code='
+
 <!--
 # 🩱 one-piece swimsuit
 #
@@ -21692,9 +23956,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :one_piece_swimsuit: `:one_piece_swimsuit:`
 ') }}
 {{ markdown(title="🩲 briefs" type="markdown", code='
+
 <!--
 # 🩲 briefs
 #
@@ -21710,9 +23976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :swim_brief: `:swim_brief:`
 ') }}
 {{ markdown(title="🩳 shorts" type="markdown", code='
+
 <!--
 # 🩳 shorts
 #
@@ -21728,9 +23996,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :shorts: `:shorts:`
 ') }}
 {{ markdown(title="👙 bikini" type="markdown", code='
+
 <!--
 # 👙 bikini
 #
@@ -21748,9 +24018,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bikini: `:bikini:`
 ') }}
 {{ markdown(title="👚 woman’s clothes" type="markdown", code='
+
 <!--
 # 👚 woman’s clothes
 #
@@ -21766,9 +24038,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :womans_clothes: `:womans_clothes:`
 ') }}
 {{ markdown(title="🪭 folding hand fan" type="markdown", code='
+
 <!--
 # 🪭 folding hand fan
 #
@@ -21786,9 +24060,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :folding_hand_fan: `:folding_hand_fan:`
 ') }}
 {{ markdown(title="👛 purse" type="markdown", code='
+
 <!--
 # 👛 purse
 #
@@ -21804,9 +24080,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :purse: `:purse:`
 ') }}
 {{ markdown(title="👜 handbag" type="markdown", code='
+
 <!--
 # 👜 handbag
 #
@@ -21824,9 +24102,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :handbag: `:handbag:`
 ') }}
 {{ markdown(title="👝 clutch bag" type="markdown", code='
+
 <!--
 # 👝 clutch bag
 #
@@ -21844,9 +24124,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pouch: `:pouch:`
 ') }}
 {{ markdown(title="🛍️ shopping bags" type="markdown", code='
+
 <!--
 # 🛍️ shopping bags
 #
@@ -21864,9 +24146,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :shopping: `:shopping:`
 ') }}
 {{ markdown(title="🎒 backpack" type="markdown", code='
+
 <!--
 # 🎒 backpack
 #
@@ -21882,9 +24166,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :school_satchel: `:school_satchel:`
 ') }}
 {{ markdown(title="🩴 thong sandal" type="markdown", code='
+
 <!--
 # 🩴 thong sandal
 #
@@ -21900,9 +24186,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :thong_sandal: `:thong_sandal:`
 ') }}
 {{ markdown(title="👞 man’s shoe" type="markdown", code='
+
 <!--
 # 👞 man’s shoe
 #
@@ -21919,11 +24207,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mans_shoe: `:mans_shoe:`
 
 :shoe: `:shoe:`
 ') }}
 {{ markdown(title="👟 running shoe" type="markdown", code='
+
 <!--
 # 👟 running shoe
 #
@@ -21943,9 +24233,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :athletic_shoe: `:athletic_shoe:`
 ') }}
 {{ markdown(title="🥾 hiking boot" type="markdown", code='
+
 <!--
 # 🥾 hiking boot
 #
@@ -21961,9 +24253,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :hiking_boot: `:hiking_boot:`
 ') }}
 {{ markdown(title="🥿 flat shoe" type="markdown", code='
+
 <!--
 # 🥿 flat shoe
 #
@@ -21979,9 +24273,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :flat_shoe: `:flat_shoe:`
 ') }}
 {{ markdown(title="👠 high-heeled shoe" type="markdown", code='
+
 <!--
 # 👠 high-heeled shoe
 #
@@ -21999,9 +24295,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :high_heel: `:high_heel:`
 ') }}
 {{ markdown(title="👡 woman’s sandal" type="markdown", code='
+
 <!--
 # 👡 woman’s sandal
 #
@@ -22019,9 +24317,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sandal: `:sandal:`
 ') }}
 {{ markdown(title="🩰 ballet shoes" type="markdown", code='
+
 <!--
 # 🩰 ballet shoes
 #
@@ -22037,9 +24337,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :ballet_shoes: `:ballet_shoes:`
 ') }}
 {{ markdown(title="👢 woman’s boot" type="markdown", code='
+
 <!--
 # 👢 woman’s boot
 #
@@ -22055,9 +24357,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :boot: `:boot:`
 ') }}
 {{ markdown(title="🪮 hair pick" type="markdown", code='
+
 <!--
 # 🪮 hair pick
 #
@@ -22073,9 +24377,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :hair_pick: `:hair_pick:`
 ') }}
 {{ markdown(title="👑 crown" type="markdown", code='
+
 <!--
 # 👑 crown
 #
@@ -22095,9 +24401,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :crown: `:crown:`
 ') }}
 {{ markdown(title="👒 woman’s hat" type="markdown", code='
+
 <!--
 # 👒 woman’s hat
 #
@@ -22113,9 +24421,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :womans_hat: `:womans_hat:`
 ') }}
 {{ markdown(title="🎩 top hat" type="markdown", code='
+
 <!--
 # 🎩 top hat
 #
@@ -22134,9 +24444,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tophat: `:tophat:`
 ') }}
 {{ markdown(title="🎓 graduation cap" type="markdown", code='
+
 <!--
 # 🎓 graduation cap
 #
@@ -22157,9 +24469,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mortar_board: `:mortar_board:`
 ') }}
 {{ markdown(title="🧢 billed cap" type="markdown", code='
+
 <!--
 # 🧢 billed cap
 #
@@ -22175,9 +24489,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :billed_cap: `:billed_cap:`
 ') }}
 {{ markdown(title="🪖 military helmet" type="markdown", code='
+
 <!--
 # 🪖 military helmet
 #
@@ -22193,9 +24509,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :military_helmet: `:military_helmet:`
 ') }}
 {{ markdown(title="⛑️ rescue worker’s helmet" type="markdown", code='
+
 <!--
 # ⛑️ rescue worker’s helmet
 #
@@ -22211,9 +24529,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :rescue_worker_helmet: `:rescue_worker_helmet:`
 ') }}
 {{ markdown(title="📿 prayer beads" type="markdown", code='
+
 <!--
 # 📿 prayer beads
 #
@@ -22229,9 +24549,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :prayer_beads: `:prayer_beads:`
 ') }}
 {{ markdown(title="💄 lipstick" type="markdown", code='
+
 <!--
 # 💄 lipstick
 #
@@ -22249,9 +24571,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lipstick: `:lipstick:`
 ') }}
 {{ markdown(title="💍 ring" type="markdown", code='
+
 <!--
 # 💍 ring
 #
@@ -22271,9 +24595,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ring: `:ring:`
 ') }}
 {{ markdown(title="💎 gem stone" type="markdown", code='
+
 <!--
 # 💎 gem stone
 #
@@ -22291,9 +24617,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :gem: `:gem:`
 ') }}
 {{ markdown(title="🔇 muted speaker" type="markdown", code='
+
 <!--
 # 🔇 muted speaker
 #
@@ -22312,9 +24640,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mute: `:mute:`
 ') }}
 {{ markdown(title="🔈 speaker low volume" type="markdown", code='
+
 <!--
 # 🔈 speaker low volume
 #
@@ -22330,9 +24660,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :speaker: `:speaker:`
 ') }}
 {{ markdown(title="🔉 speaker medium volume" type="markdown", code='
+
 <!--
 # 🔉 speaker medium volume
 #
@@ -22350,9 +24682,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sound: `:sound:`
 ') }}
 {{ markdown(title="🔊 speaker high volume" type="markdown", code='
+
 <!--
 # 🔊 speaker high volume
 #
@@ -22370,9 +24704,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :loud_sound: `:loud_sound:`
 ') }}
 {{ markdown(title="📢 loudspeaker" type="markdown", code='
+
 <!--
 # 📢 loudspeaker
 #
@@ -22390,9 +24726,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :loudspeaker: `:loudspeaker:`
 ') }}
 {{ markdown(title="📣 megaphone" type="markdown", code='
+
 <!--
 # 📣 megaphone
 #
@@ -22408,9 +24746,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mega: `:mega:`
 ') }}
 {{ markdown(title="📯 postal horn" type="markdown", code='
+
 <!--
 # 📯 postal horn
 #
@@ -22426,9 +24766,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :postal_horn: `:postal_horn:`
 ') }}
 {{ markdown(title="🔔 bell" type="markdown", code='
+
 <!--
 # 🔔 bell
 #
@@ -22447,9 +24789,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bell: `:bell:`
 ') }}
 {{ markdown(title="🔕 bell with slash" type="markdown", code='
+
 <!--
 # 🔕 bell with slash
 #
@@ -22468,9 +24812,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_bell: `:no_bell:`
 ') }}
 {{ markdown(title="🎼 musical score" type="markdown", code='
+
 <!--
 # 🎼 musical score
 #
@@ -22486,9 +24832,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :musical_score: `:musical_score:`
 ') }}
 {{ markdown(title="🎵 musical note" type="markdown", code='
+
 <!--
 # 🎵 musical note
 #
@@ -22504,9 +24852,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :musical_note: `:musical_note:`
 ') }}
 {{ markdown(title="🎶 musical notes" type="markdown", code='
+
 <!--
 # 🎶 musical notes
 #
@@ -22524,9 +24874,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :notes: `:notes:`
 ') }}
 {{ markdown(title="🎙️ studio microphone" type="markdown", code='
+
 <!--
 # 🎙️ studio microphone
 #
@@ -22544,9 +24896,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :studio_microphone: `:studio_microphone:`
 ') }}
 {{ markdown(title="🎚️ level slider" type="markdown", code='
+
 <!--
 # 🎚️ level slider
 #
@@ -22562,9 +24916,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :level_slider: `:level_slider:`
 ') }}
 {{ markdown(title="🎛️ control knobs" type="markdown", code='
+
 <!--
 # 🎛️ control knobs
 #
@@ -22580,9 +24936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :control_knobs: `:control_knobs:`
 ') }}
 {{ markdown(title="🎤 microphone" type="markdown", code='
+
 <!--
 # 🎤 microphone
 #
@@ -22600,9 +24958,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :microphone: `:microphone:`
 ') }}
 {{ markdown(title="🎧 headphone" type="markdown", code='
+
 <!--
 # 🎧 headphone
 #
@@ -22621,9 +24981,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :headphones: `:headphones:`
 ') }}
 {{ markdown(title="📻 radio" type="markdown", code='
+
 <!--
 # 📻 radio
 #
@@ -22641,9 +25003,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :radio: `:radio:`
 ') }}
 {{ markdown(title="🎷 saxophone" type="markdown", code='
+
 <!--
 # 🎷 saxophone
 #
@@ -22659,9 +25023,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :saxophone: `:saxophone:`
 ') }}
 {{ markdown(title="🪗 accordion" type="markdown", code='
+
 <!--
 # 🪗 accordion
 #
@@ -22677,9 +25043,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :accordion: `:accordion:`
 ') }}
 {{ markdown(title="🎸 guitar" type="markdown", code='
+
 <!--
 # 🎸 guitar
 #
@@ -22697,9 +25065,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :guitar: `:guitar:`
 ') }}
 {{ markdown(title="🎹 musical keyboard" type="markdown", code='
+
 <!--
 # 🎹 musical keyboard
 #
@@ -22717,9 +25087,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :musical_keyboard: `:musical_keyboard:`
 ') }}
 {{ markdown(title="🎺 trumpet" type="markdown", code='
+
 <!--
 # 🎺 trumpet
 #
@@ -22735,9 +25107,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :trumpet: `:trumpet:`
 ') }}
 {{ markdown(title="🎻 violin" type="markdown", code='
+
 <!--
 # 🎻 violin
 #
@@ -22753,9 +25127,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :violin: `:violin:`
 ') }}
 {{ markdown(title="🪕 banjo" type="markdown", code='
+
 <!--
 # 🪕 banjo
 #
@@ -22771,9 +25147,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :banjo: `:banjo:`
 ') }}
 {{ markdown(title="🥁 drum" type="markdown", code='
+
 <!--
 # 🥁 drum
 #
@@ -22789,9 +25167,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :drum: `:drum:`
 ') }}
 {{ markdown(title="🪘 long drum" type="markdown", code='
+
 <!--
 # 🪘 long drum
 #
@@ -22807,9 +25187,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :long_drum: `:long_drum:`
 ') }}
 {{ markdown(title="🪇 maracas" type="markdown", code='
+
 <!--
 # 🪇 maracas
 #
@@ -22827,9 +25209,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :maracas: `:maracas:`
 ') }}
 {{ markdown(title="🪈 flute" type="markdown", code='
+
 <!--
 # 🪈 flute
 #
@@ -22847,9 +25231,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :flute: `:flute:`
 ') }}
 {{ markdown(title="📱 mobile phone" type="markdown", code='
+
 <!--
 # 📱 mobile phone
 #
@@ -22868,9 +25254,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :iphone: `:iphone:`
 ') }}
 {{ markdown(title="📲 mobile phone with arrow" type="markdown", code='
+
 <!--
 # 📲 mobile phone with arrow
 #
@@ -22889,9 +25277,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :calling: `:calling:`
 ') }}
 {{ markdown(title="☎️ telephone" type="markdown", code='
+
 <!--
 # ☎️ telephone
 #
@@ -22908,11 +25298,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :phone: `:phone:`
 
 :telephone: `:telephone:`
 ') }}
 {{ markdown(title="📞 telephone receiver" type="markdown", code='
+
 <!--
 # 📞 telephone receiver
 #
@@ -22931,9 +25323,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :telephone_receiver: `:telephone_receiver:`
 ') }}
 {{ markdown(title="📟 pager" type="markdown", code='
+
 <!--
 # 📟 pager
 #
@@ -22949,9 +25343,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pager: `:pager:`
 ') }}
 {{ markdown(title="📠 fax machine" type="markdown", code='
+
 <!--
 # 📠 fax machine
 #
@@ -22967,9 +25363,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fax: `:fax:`
 ') }}
 {{ markdown(title="🔋 battery" type="markdown", code='
+
 <!--
 # 🔋 battery
 #
@@ -22987,9 +25385,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :battery: `:battery:`
 ') }}
 {{ markdown(title="🪫 low battery" type="markdown", code='
+
 <!--
 # 🪫 low battery
 #
@@ -23005,9 +25405,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :low_battery: `:low_battery:`
 ') }}
 {{ markdown(title="🔌 electric plug" type="markdown", code='
+
 <!--
 # 🔌 electric plug
 #
@@ -23023,9 +25425,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :electric_plug: `:electric_plug:`
 ') }}
 {{ markdown(title="💻 laptop" type="markdown", code='
+
 <!--
 # 💻 laptop
 #
@@ -23044,9 +25448,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :computer: `:computer:`
 ') }}
 {{ markdown(title="🖥️ desktop computer" type="markdown", code='
+
 <!--
 # 🖥️ desktop computer
 #
@@ -23062,9 +25468,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :desktop_computer: `:desktop_computer:`
 ') }}
 {{ markdown(title="🖨️ printer" type="markdown", code='
+
 <!--
 # 🖨️ printer
 #
@@ -23080,9 +25488,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :printer: `:printer:`
 ') }}
 {{ markdown(title="⌨️ keyboard" type="markdown", code='
+
 <!--
 # ⌨️ keyboard
 #
@@ -23098,9 +25508,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :keyboard: `:keyboard:`
 ') }}
 {{ markdown(title="🖱️ computer mouse" type="markdown", code='
+
 <!--
 # 🖱️ computer mouse
 #
@@ -23116,9 +25528,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :computer_mouse: `:computer_mouse:`
 ') }}
 {{ markdown(title="🖲️ trackball" type="markdown", code='
+
 <!--
 # 🖲️ trackball
 #
@@ -23134,9 +25548,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :trackball: `:trackball:`
 ') }}
 {{ markdown(title="💽 computer disk" type="markdown", code='
+
 <!--
 # 💽 computer disk
 #
@@ -23152,9 +25568,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :minidisc: `:minidisc:`
 ') }}
 {{ markdown(title="💾 floppy disk" type="markdown", code='
+
 <!--
 # 💾 floppy disk
 #
@@ -23172,9 +25590,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :floppy_disk: `:floppy_disk:`
 ') }}
 {{ markdown(title="💿 optical disk" type="markdown", code='
+
 <!--
 # 💿 optical disk
 #
@@ -23190,9 +25610,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cd: `:cd:`
 ') }}
 {{ markdown(title="📀 dvd" type="markdown", code='
+
 <!--
 # 📀 dvd
 #
@@ -23208,9 +25630,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dvd: `:dvd:`
 ') }}
 {{ markdown(title="🧮 abacus" type="markdown", code='
+
 <!--
 # 🧮 abacus
 #
@@ -23226,9 +25650,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :abacus: `:abacus:`
 ') }}
 {{ markdown(title="🎥 movie camera" type="markdown", code='
+
 <!--
 # 🎥 movie camera
 #
@@ -23247,9 +25673,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :movie_camera: `:movie_camera:`
 ') }}
 {{ markdown(title="🎞️ film frames" type="markdown", code='
+
 <!--
 # 🎞️ film frames
 #
@@ -23265,9 +25693,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :film_strip: `:film_strip:`
 ') }}
 {{ markdown(title="📽️ film projector" type="markdown", code='
+
 <!--
 # 📽️ film projector
 #
@@ -23283,9 +25713,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :film_projector: `:film_projector:`
 ') }}
 {{ markdown(title="🎬 clapper board" type="markdown", code='
+
 <!--
 # 🎬 clapper board
 #
@@ -23303,9 +25735,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clapper: `:clapper:`
 ') }}
 {{ markdown(title="📺 television" type="markdown", code='
+
 <!--
 # 📺 television
 #
@@ -23321,9 +25755,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tv: `:tv:`
 ') }}
 {{ markdown(title="📷 camera" type="markdown", code='
+
 <!--
 # 📷 camera
 #
@@ -23341,9 +25777,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :camera: `:camera:`
 ') }}
 {{ markdown(title="📸 camera with flash" type="markdown", code='
+
 <!--
 # 📸 camera with flash
 #
@@ -23361,9 +25799,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :camera_flash: `:camera_flash:`
 ') }}
 {{ markdown(title="📹 video camera" type="markdown", code='
+
 <!--
 # 📹 video camera
 #
@@ -23379,9 +25819,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :video_camera: `:video_camera:`
 ') }}
 {{ markdown(title="📼 videocassette" type="markdown", code='
+
 <!--
 # 📼 videocassette
 #
@@ -23397,9 +25839,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :vhs: `:vhs:`
 ') }}
 {{ markdown(title="🔍 magnifying glass tilted left" type="markdown", code='
+
 <!--
 # 🔍 magnifying glass tilted left
 #
@@ -23418,9 +25862,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mag: `:mag:`
 ') }}
 {{ markdown(title="🔎 magnifying glass tilted right" type="markdown", code='
+
 <!--
 # 🔎 magnifying glass tilted right
 #
@@ -23436,9 +25882,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mag_right: `:mag_right:`
 ') }}
 {{ markdown(title="🕯️ candle" type="markdown", code='
+
 <!--
 # 🕯️ candle
 #
@@ -23454,9 +25902,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :candle: `:candle:`
 ') }}
 {{ markdown(title="💡 light bulb" type="markdown", code='
+
 <!--
 # 💡 light bulb
 #
@@ -23475,9 +25925,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bulb: `:bulb:`
 ') }}
 {{ markdown(title="🔦 flashlight" type="markdown", code='
+
 <!--
 # 🔦 flashlight
 #
@@ -23493,9 +25945,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :flashlight: `:flashlight:`
 ') }}
 {{ markdown(title="🏮 red paper lantern" type="markdown", code='
+
 <!--
 # 🏮 red paper lantern
 #
@@ -23512,11 +25966,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :izakaya_lantern: `:izakaya_lantern:`
 
 :lantern: `:lantern:`
 ') }}
 {{ markdown(title="🪔 diya lamp" type="markdown", code='
+
 <!--
 # 🪔 diya lamp
 #
@@ -23532,9 +25988,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :diya_lamp: `:diya_lamp:`
 ') }}
 {{ markdown(title="📔 notebook with decorative cover" type="markdown", code='
+
 <!--
 # 📔 notebook with decorative cover
 #
@@ -23550,9 +26008,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :notebook_with_decorative_cover: `:notebook_with_decorative_cover:`
 ') }}
 {{ markdown(title="📕 closed book" type="markdown", code='
+
 <!--
 # 📕 closed book
 #
@@ -23568,9 +26028,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :closed_book: `:closed_book:`
 ') }}
 {{ markdown(title="📖 open book" type="markdown", code='
+
 <!--
 # 📖 open book
 #
@@ -23587,11 +26049,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :book: `:book:`
 
 :open_book: `:open_book:`
 ') }}
 {{ markdown(title="📗 green book" type="markdown", code='
+
 <!--
 # 📗 green book
 #
@@ -23607,9 +26071,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :green_book: `:green_book:`
 ') }}
 {{ markdown(title="📘 blue book" type="markdown", code='
+
 <!--
 # 📘 blue book
 #
@@ -23625,9 +26091,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :blue_book: `:blue_book:`
 ') }}
 {{ markdown(title="📙 orange book" type="markdown", code='
+
 <!--
 # 📙 orange book
 #
@@ -23643,9 +26111,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :orange_book: `:orange_book:`
 ') }}
 {{ markdown(title="📚 books" type="markdown", code='
+
 <!--
 # 📚 books
 #
@@ -23663,9 +26133,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :books: `:books:`
 ') }}
 {{ markdown(title="📓 notebook" type="markdown", code='
+
 <!--
 # 📓 notebook
 #
@@ -23681,9 +26153,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :notebook: `:notebook:`
 ') }}
 {{ markdown(title="📒 ledger" type="markdown", code='
+
 <!--
 # 📒 ledger
 #
@@ -23699,9 +26173,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ledger: `:ledger:`
 ') }}
 {{ markdown(title="📃 page with curl" type="markdown", code='
+
 <!--
 # 📃 page with curl
 #
@@ -23717,9 +26193,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :page_with_curl: `:page_with_curl:`
 ') }}
 {{ markdown(title="📜 scroll" type="markdown", code='
+
 <!--
 # 📜 scroll
 #
@@ -23737,9 +26215,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :scroll: `:scroll:`
 ') }}
 {{ markdown(title="📄 page facing up" type="markdown", code='
+
 <!--
 # 📄 page facing up
 #
@@ -23757,9 +26237,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :page_facing_up: `:page_facing_up:`
 ') }}
 {{ markdown(title="📰 newspaper" type="markdown", code='
+
 <!--
 # 📰 newspaper
 #
@@ -23777,9 +26259,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :newspaper: `:newspaper:`
 ') }}
 {{ markdown(title="🗞️ rolled-up newspaper" type="markdown", code='
+
 <!--
 # 🗞️ rolled-up newspaper
 #
@@ -23797,9 +26281,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :newspaper_roll: `:newspaper_roll:`
 ') }}
 {{ markdown(title="📑 bookmark tabs" type="markdown", code='
+
 <!--
 # 📑 bookmark tabs
 #
@@ -23815,9 +26301,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bookmark_tabs: `:bookmark_tabs:`
 ') }}
 {{ markdown(title="🔖 bookmark" type="markdown", code='
+
 <!--
 # 🔖 bookmark
 #
@@ -23833,9 +26321,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bookmark: `:bookmark:`
 ') }}
 {{ markdown(title="🏷️ label" type="markdown", code='
+
 <!--
 # 🏷️ label
 #
@@ -23853,9 +26343,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :label: `:label:`
 ') }}
 {{ markdown(title="💰 money bag" type="markdown", code='
+
 <!--
 # 💰 money bag
 #
@@ -23874,9 +26366,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :moneybag: `:moneybag:`
 ') }}
 {{ markdown(title="🪙 coin" type="markdown", code='
+
 <!--
 # 🪙 coin
 #
@@ -23892,9 +26386,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :coin: `:coin:`
 ') }}
 {{ markdown(title="💴 yen banknote" type="markdown", code='
+
 <!--
 # 💴 yen banknote
 #
@@ -23910,9 +26406,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :yen: `:yen:`
 ') }}
 {{ markdown(title="💵 dollar banknote" type="markdown", code='
+
 <!--
 # 💵 dollar banknote
 #
@@ -23930,9 +26428,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :dollar: `:dollar:`
 ') }}
 {{ markdown(title="💶 euro banknote" type="markdown", code='
+
 <!--
 # 💶 euro banknote
 #
@@ -23948,9 +26448,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :euro: `:euro:`
 ') }}
 {{ markdown(title="💷 pound banknote" type="markdown", code='
+
 <!--
 # 💷 pound banknote
 #
@@ -23966,9 +26468,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pound: `:pound:`
 ') }}
 {{ markdown(title="💸 money with wings" type="markdown", code='
+
 <!--
 # 💸 money with wings
 #
@@ -23986,9 +26490,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :money_with_wings: `:money_with_wings:`
 ') }}
 {{ markdown(title="💳 credit card" type="markdown", code='
+
 <!--
 # 💳 credit card
 #
@@ -24006,9 +26512,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :credit_card: `:credit_card:`
 ') }}
 {{ markdown(title="🧾 receipt" type="markdown", code='
+
 <!--
 # 🧾 receipt
 #
@@ -24024,9 +26532,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :receipt: `:receipt:`
 ') }}
 {{ markdown(title="💹 chart increasing with yen" type="markdown", code='
+
 <!--
 # 💹 chart increasing with yen
 #
@@ -24042,9 +26552,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :chart: `:chart:`
 ') }}
 {{ markdown(title="✉️ envelope" type="markdown", code='
+
 <!--
 # ✉️ envelope
 #
@@ -24063,9 +26575,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :envelope: `:envelope:`
 ') }}
 {{ markdown(title="📧 e-mail" type="markdown", code='
+
 <!--
 # 📧 e-mail
 #
@@ -24082,11 +26596,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :email: `:email:`
 
 :e-mail: `:e-mail:`
 ') }}
 {{ markdown(title="📨 incoming envelope" type="markdown", code='
+
 <!--
 # 📨 incoming envelope
 #
@@ -24102,9 +26618,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :incoming_envelope: `:incoming_envelope:`
 ') }}
 {{ markdown(title="📩 envelope with arrow" type="markdown", code='
+
 <!--
 # 📩 envelope with arrow
 #
@@ -24120,9 +26638,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :envelope_with_arrow: `:envelope_with_arrow:`
 ') }}
 {{ markdown(title="📤 outbox tray" type="markdown", code='
+
 <!--
 # 📤 outbox tray
 #
@@ -24138,9 +26658,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :outbox_tray: `:outbox_tray:`
 ') }}
 {{ markdown(title="📥 inbox tray" type="markdown", code='
+
 <!--
 # 📥 inbox tray
 #
@@ -24156,9 +26678,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :inbox_tray: `:inbox_tray:`
 ') }}
 {{ markdown(title="📦 package" type="markdown", code='
+
 <!--
 # 📦 package
 #
@@ -24176,9 +26700,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :package: `:package:`
 ') }}
 {{ markdown(title="📫 closed mailbox with raised flag" type="markdown", code='
+
 <!--
 # 📫 closed mailbox with raised flag
 #
@@ -24194,9 +26720,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mailbox: `:mailbox:`
 ') }}
 {{ markdown(title="📪 closed mailbox with lowered flag" type="markdown", code='
+
 <!--
 # 📪 closed mailbox with lowered flag
 #
@@ -24212,9 +26740,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mailbox_closed: `:mailbox_closed:`
 ') }}
 {{ markdown(title="📬 open mailbox with raised flag" type="markdown", code='
+
 <!--
 # 📬 open mailbox with raised flag
 #
@@ -24230,9 +26760,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mailbox_with_mail: `:mailbox_with_mail:`
 ') }}
 {{ markdown(title="📭 open mailbox with lowered flag" type="markdown", code='
+
 <!--
 # 📭 open mailbox with lowered flag
 #
@@ -24248,9 +26780,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mailbox_with_no_mail: `:mailbox_with_no_mail:`
 ') }}
 {{ markdown(title="📮 postbox" type="markdown", code='
+
 <!--
 # 📮 postbox
 #
@@ -24266,9 +26800,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :postbox: `:postbox:`
 ') }}
 {{ markdown(title="🗳️ ballot box with ballot" type="markdown", code='
+
 <!--
 # 🗳️ ballot box with ballot
 #
@@ -24284,9 +26820,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :ballot_box: `:ballot_box:`
 ') }}
 {{ markdown(title="✏️ pencil" type="markdown", code='
+
 <!--
 # ✏️ pencil
 #
@@ -24302,9 +26840,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pencil2: `:pencil2:`
 ') }}
 {{ markdown(title="✒️ black nib" type="markdown", code='
+
 <!--
 # ✒️ black nib
 #
@@ -24320,9 +26860,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_nib: `:black_nib:`
 ') }}
 {{ markdown(title="🖋️ fountain pen" type="markdown", code='
+
 <!--
 # 🖋️ fountain pen
 #
@@ -24338,9 +26880,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :fountain_pen: `:fountain_pen:`
 ') }}
 {{ markdown(title="🖊️ pen" type="markdown", code='
+
 <!--
 # 🖊️ pen
 #
@@ -24356,9 +26900,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :pen: `:pen:`
 ') }}
 {{ markdown(title="🖌️ paintbrush" type="markdown", code='
+
 <!--
 # 🖌️ paintbrush
 #
@@ -24374,9 +26920,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :paintbrush: `:paintbrush:`
 ') }}
 {{ markdown(title="🖍️ crayon" type="markdown", code='
+
 <!--
 # 🖍️ crayon
 #
@@ -24392,9 +26940,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :crayon: `:crayon:`
 ') }}
 {{ markdown(title="📝 memo" type="markdown", code='
+
 <!--
 # 📝 memo
 #
@@ -24414,11 +26964,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :memo: `:memo:`
 
 :pencil: `:pencil:`
 ') }}
 {{ markdown(title="💼 briefcase" type="markdown", code='
+
 <!--
 # 💼 briefcase
 #
@@ -24436,9 +26988,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :briefcase: `:briefcase:`
 ') }}
 {{ markdown(title="📁 file folder" type="markdown", code='
+
 <!--
 # 📁 file folder
 #
@@ -24456,9 +27010,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :file_folder: `:file_folder:`
 ') }}
 {{ markdown(title="📂 open file folder" type="markdown", code='
+
 <!--
 # 📂 open file folder
 #
@@ -24474,9 +27030,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :open_file_folder: `:open_file_folder:`
 ') }}
 {{ markdown(title="🗂️ card index dividers" type="markdown", code='
+
 <!--
 # 🗂️ card index dividers
 #
@@ -24492,9 +27050,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :card_index_dividers: `:card_index_dividers:`
 ') }}
 {{ markdown(title="📅 calendar" type="markdown", code='
+
 <!--
 # 📅 calendar
 #
@@ -24513,9 +27073,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :date: `:date:`
 ') }}
 {{ markdown(title="📆 tear-off calendar" type="markdown", code='
+
 <!--
 # 📆 tear-off calendar
 #
@@ -24533,9 +27095,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :calendar: `:calendar:`
 ') }}
 {{ markdown(title="🗒️ spiral notepad" type="markdown", code='
+
 <!--
 # 🗒️ spiral notepad
 #
@@ -24551,9 +27115,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :spiral_notepad: `:spiral_notepad:`
 ') }}
 {{ markdown(title="🗓️ spiral calendar" type="markdown", code='
+
 <!--
 # 🗓️ spiral calendar
 #
@@ -24569,9 +27135,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :spiral_calendar: `:spiral_calendar:`
 ') }}
 {{ markdown(title="📇 card index" type="markdown", code='
+
 <!--
 # 📇 card index
 #
@@ -24587,9 +27155,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :card_index: `:card_index:`
 ') }}
 {{ markdown(title="📈 chart increasing" type="markdown", code='
+
 <!--
 # 📈 chart increasing
 #
@@ -24608,9 +27178,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :chart_with_upwards_trend: `:chart_with_upwards_trend:`
 ') }}
 {{ markdown(title="📉 chart decreasing" type="markdown", code='
+
 <!--
 # 📉 chart decreasing
 #
@@ -24629,9 +27201,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :chart_with_downwards_trend: `:chart_with_downwards_trend:`
 ') }}
 {{ markdown(title="📊 bar chart" type="markdown", code='
+
 <!--
 # 📊 bar chart
 #
@@ -24650,9 +27224,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bar_chart: `:bar_chart:`
 ') }}
 {{ markdown(title="📋 clipboard" type="markdown", code='
+
 <!--
 # 📋 clipboard
 #
@@ -24668,9 +27244,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :clipboard: `:clipboard:`
 ') }}
 {{ markdown(title="📌 pushpin" type="markdown", code='
+
 <!--
 # 📌 pushpin
 #
@@ -24688,9 +27266,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pushpin: `:pushpin:`
 ') }}
 {{ markdown(title="📍 round pushpin" type="markdown", code='
+
 <!--
 # 📍 round pushpin
 #
@@ -24708,9 +27288,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :round_pushpin: `:round_pushpin:`
 ') }}
 {{ markdown(title="📎 paperclip" type="markdown", code='
+
 <!--
 # 📎 paperclip
 #
@@ -24726,9 +27308,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :paperclip: `:paperclip:`
 ') }}
 {{ markdown(title="🖇️ linked paperclips" type="markdown", code='
+
 <!--
 # 🖇️ linked paperclips
 #
@@ -24744,9 +27328,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :paperclips: `:paperclips:`
 ') }}
 {{ markdown(title="📏 straight ruler" type="markdown", code='
+
 <!--
 # 📏 straight ruler
 #
@@ -24762,9 +27348,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :straight_ruler: `:straight_ruler:`
 ') }}
 {{ markdown(title="📐 triangular ruler" type="markdown", code='
+
 <!--
 # 📐 triangular ruler
 #
@@ -24780,9 +27368,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :triangular_ruler: `:triangular_ruler:`
 ') }}
 {{ markdown(title="✂️ scissors" type="markdown", code='
+
 <!--
 # ✂️ scissors
 #
@@ -24800,9 +27390,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :scissors: `:scissors:`
 ') }}
 {{ markdown(title="🗃️ card file box" type="markdown", code='
+
 <!--
 # 🗃️ card file box
 #
@@ -24818,9 +27410,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :card_file_box: `:card_file_box:`
 ') }}
 {{ markdown(title="🗄️ file cabinet" type="markdown", code='
+
 <!--
 # 🗄️ file cabinet
 #
@@ -24836,9 +27430,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :file_cabinet: `:file_cabinet:`
 ') }}
 {{ markdown(title="🗑️ wastebasket" type="markdown", code='
+
 <!--
 # 🗑️ wastebasket
 #
@@ -24856,9 +27452,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :wastebasket: `:wastebasket:`
 ') }}
 {{ markdown(title="🔒 locked" type="markdown", code='
+
 <!--
 # 🔒 locked
 #
@@ -24877,9 +27475,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lock: `:lock:`
 ') }}
 {{ markdown(title="🔓 unlocked" type="markdown", code='
+
 <!--
 # 🔓 unlocked
 #
@@ -24897,9 +27497,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :unlock: `:unlock:`
 ') }}
 {{ markdown(title="🔏 locked with pen" type="markdown", code='
+
 <!--
 # 🔏 locked with pen
 #
@@ -24915,9 +27517,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :lock_with_ink_pen: `:lock_with_ink_pen:`
 ') }}
 {{ markdown(title="🔐 locked with key" type="markdown", code='
+
 <!--
 # 🔐 locked with key
 #
@@ -24935,9 +27539,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :closed_lock_with_key: `:closed_lock_with_key:`
 ') }}
 {{ markdown(title="🔑 key" type="markdown", code='
+
 <!--
 # 🔑 key
 #
@@ -24956,9 +27562,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :key: `:key:`
 ') }}
 {{ markdown(title="🗝️ old key" type="markdown", code='
+
 <!--
 # 🗝️ old key
 #
@@ -24974,9 +27582,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :old_key: `:old_key:`
 ') }}
 {{ markdown(title="🔨 hammer" type="markdown", code='
+
 <!--
 # 🔨 hammer
 #
@@ -24994,9 +27604,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hammer: `:hammer:`
 ') }}
 {{ markdown(title="🪓 axe" type="markdown", code='
+
 <!--
 # 🪓 axe
 #
@@ -25012,9 +27624,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :axe: `:axe:`
 ') }}
 {{ markdown(title="⛏️ pick" type="markdown", code='
+
 <!--
 # ⛏️ pick
 #
@@ -25030,9 +27644,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :pick: `:pick:`
 ') }}
 {{ markdown(title="⚒️ hammer and pick" type="markdown", code='
+
 <!--
 # ⚒️ hammer and pick
 #
@@ -25048,9 +27664,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :hammer_and_pick: `:hammer_and_pick:`
 ') }}
 {{ markdown(title="🛠️ hammer and wrench" type="markdown", code='
+
 <!--
 # 🛠️ hammer and wrench
 #
@@ -25066,9 +27684,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :hammer_and_wrench: `:hammer_and_wrench:`
 ') }}
 {{ markdown(title="🗡️ dagger" type="markdown", code='
+
 <!--
 # 🗡️ dagger
 #
@@ -25084,9 +27704,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :dagger: `:dagger:`
 ') }}
 {{ markdown(title="⚔️ crossed swords" type="markdown", code='
+
 <!--
 # ⚔️ crossed swords
 #
@@ -25102,9 +27724,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :crossed_swords: `:crossed_swords:`
 ') }}
 {{ markdown(title="💣 bomb" type="markdown", code='
+
 <!--
 # 💣 bomb
 #
@@ -25122,9 +27746,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bomb: `:bomb:`
 ') }}
 {{ markdown(title="🪃 boomerang" type="markdown", code='
+
 <!--
 # 🪃 boomerang
 #
@@ -25140,9 +27766,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :boomerang: `:boomerang:`
 ') }}
 {{ markdown(title="🏹 bow and arrow" type="markdown", code='
+
 <!--
 # 🏹 bow and arrow
 #
@@ -25160,9 +27788,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :bow_and_arrow: `:bow_and_arrow:`
 ') }}
 {{ markdown(title="🛡️ shield" type="markdown", code='
+
 <!--
 # 🛡️ shield
 #
@@ -25178,9 +27808,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :shield: `:shield:`
 ') }}
 {{ markdown(title="🪚 carpentry saw" type="markdown", code='
+
 <!--
 # 🪚 carpentry saw
 #
@@ -25196,9 +27828,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :carpentry_saw: `:carpentry_saw:`
 ') }}
 {{ markdown(title="🔧 wrench" type="markdown", code='
+
 <!--
 # 🔧 wrench
 #
@@ -25216,9 +27850,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wrench: `:wrench:`
 ') }}
 {{ markdown(title="🪛 screwdriver" type="markdown", code='
+
 <!--
 # 🪛 screwdriver
 #
@@ -25234,9 +27870,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :screwdriver: `:screwdriver:`
 ') }}
 {{ markdown(title="🔩 nut and bolt" type="markdown", code='
+
 <!--
 # 🔩 nut and bolt
 #
@@ -25252,9 +27890,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :nut_and_bolt: `:nut_and_bolt:`
 ') }}
 {{ markdown(title="⚙️ gear" type="markdown", code='
+
 <!--
 # ⚙️ gear
 #
@@ -25270,9 +27910,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :gear: `:gear:`
 ') }}
 {{ markdown(title="🗜️ clamp" type="markdown", code='
+
 <!--
 # 🗜️ clamp
 #
@@ -25288,9 +27930,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :clamp: `:clamp:`
 ') }}
 {{ markdown(title="⚖️ balance scale" type="markdown", code='
+
 <!--
 # ⚖️ balance scale
 #
@@ -25306,9 +27950,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :balance_scale: `:balance_scale:`
 ') }}
 {{ markdown(title="🦯 white cane" type="markdown", code='
+
 <!--
 # 🦯 white cane
 #
@@ -25324,9 +27970,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :probing_cane: `:probing_cane:`
 ') }}
 {{ markdown(title="🔗 link" type="markdown", code='
+
 <!--
 # 🔗 link
 #
@@ -25342,9 +27990,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :link: `:link:`
 ') }}
 {{ markdown(title="⛓️ chains" type="markdown", code='
+
 <!--
 # ⛓️ chains
 #
@@ -25360,9 +28010,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :chains: `:chains:`
 ') }}
 {{ markdown(title="🪝 hook" type="markdown", code='
+
 <!--
 # 🪝 hook
 #
@@ -25378,9 +28030,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :hook: `:hook:`
 ') }}
 {{ markdown(title="🧰 toolbox" type="markdown", code='
+
 <!--
 # 🧰 toolbox
 #
@@ -25396,9 +28050,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :toolbox: `:toolbox:`
 ') }}
 {{ markdown(title="🧲 magnet" type="markdown", code='
+
 <!--
 # 🧲 magnet
 #
@@ -25414,9 +28070,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :magnet: `:magnet:`
 ') }}
 {{ markdown(title="🪜 ladder" type="markdown", code='
+
 <!--
 # 🪜 ladder
 #
@@ -25432,9 +28090,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :ladder: `:ladder:`
 ') }}
 {{ markdown(title="⚗️ alembic" type="markdown", code='
+
 <!--
 # ⚗️ alembic
 #
@@ -25450,9 +28110,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :alembic: `:alembic:`
 ') }}
 {{ markdown(title="🧪 test tube" type="markdown", code='
+
 <!--
 # 🧪 test tube
 #
@@ -25468,9 +28130,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :test_tube: `:test_tube:`
 ') }}
 {{ markdown(title="🧫 petri dish" type="markdown", code='
+
 <!--
 # 🧫 petri dish
 #
@@ -25486,9 +28150,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :petri_dish: `:petri_dish:`
 ') }}
 {{ markdown(title="🧬 dna" type="markdown", code='
+
 <!--
 # 🧬 dna
 #
@@ -25504,9 +28170,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :dna: `:dna:`
 ') }}
 {{ markdown(title="🔬 microscope" type="markdown", code='
+
 <!--
 # 🔬 microscope
 #
@@ -25526,9 +28194,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :microscope: `:microscope:`
 ') }}
 {{ markdown(title="🔭 telescope" type="markdown", code='
+
 <!--
 # 🔭 telescope
 #
@@ -25544,9 +28214,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :telescope: `:telescope:`
 ') }}
 {{ markdown(title="📡 satellite antenna" type="markdown", code='
+
 <!--
 # 📡 satellite antenna
 #
@@ -25564,9 +28236,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :satellite: `:satellite:`
 ') }}
 {{ markdown(title="💉 syringe" type="markdown", code='
+
 <!--
 # 💉 syringe
 #
@@ -25586,9 +28260,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :syringe: `:syringe:`
 ') }}
 {{ markdown(title="🩸 drop of blood" type="markdown", code='
+
 <!--
 # 🩸 drop of blood
 #
@@ -25604,9 +28280,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :drop_of_blood: `:drop_of_blood:`
 ') }}
 {{ markdown(title="💊 pill" type="markdown", code='
+
 <!--
 # 💊 pill
 #
@@ -25625,9 +28303,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pill: `:pill:`
 ') }}
 {{ markdown(title="🩹 adhesive bandage" type="markdown", code='
+
 <!--
 # 🩹 adhesive bandage
 #
@@ -25643,9 +28323,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :adhesive_bandage: `:adhesive_bandage:`
 ') }}
 {{ markdown(title="🩼 crutch" type="markdown", code='
+
 <!--
 # 🩼 crutch
 #
@@ -25661,9 +28343,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :crutch: `:crutch:`
 ') }}
 {{ markdown(title="🩺 stethoscope" type="markdown", code='
+
 <!--
 # 🩺 stethoscope
 #
@@ -25679,9 +28363,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :stethoscope: `:stethoscope:`
 ') }}
 {{ markdown(title="🩻 x-ray" type="markdown", code='
+
 <!--
 # 🩻 x-ray
 #
@@ -25697,9 +28383,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :x_ray: `:x_ray:`
 ') }}
 {{ markdown(title="🚪 door" type="markdown", code='
+
 <!--
 # 🚪 door
 #
@@ -25715,9 +28403,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :door: `:door:`
 ') }}
 {{ markdown(title="🛗 elevator" type="markdown", code='
+
 <!--
 # 🛗 elevator
 #
@@ -25733,9 +28423,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :elevator: `:elevator:`
 ') }}
 {{ markdown(title="🪞 mirror" type="markdown", code='
+
 <!--
 # 🪞 mirror
 #
@@ -25751,9 +28443,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :mirror: `:mirror:`
 ') }}
 {{ markdown(title="🪟 window" type="markdown", code='
+
 <!--
 # 🪟 window
 #
@@ -25769,9 +28463,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :window: `:window:`
 ') }}
 {{ markdown(title="🛏️ bed" type="markdown", code='
+
 <!--
 # 🛏️ bed
 #
@@ -25787,9 +28483,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :bed: `:bed:`
 ') }}
 {{ markdown(title="🛋️ couch and lamp" type="markdown", code='
+
 <!--
 # 🛋️ couch and lamp
 #
@@ -25805,9 +28503,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :couch_and_lamp: `:couch_and_lamp:`
 ') }}
 {{ markdown(title="🪑 chair" type="markdown", code='
+
 <!--
 # 🪑 chair
 #
@@ -25823,9 +28523,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :chair: `:chair:`
 ') }}
 {{ markdown(title="🚽 toilet" type="markdown", code='
+
 <!--
 # 🚽 toilet
 #
@@ -25843,9 +28545,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :toilet: `:toilet:`
 ') }}
 {{ markdown(title="🪠 plunger" type="markdown", code='
+
 <!--
 # 🪠 plunger
 #
@@ -25861,9 +28565,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :plunger: `:plunger:`
 ') }}
 {{ markdown(title="🚿 shower" type="markdown", code='
+
 <!--
 # 🚿 shower
 #
@@ -25881,9 +28587,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :shower: `:shower:`
 ') }}
 {{ markdown(title="🛁 bathtub" type="markdown", code='
+
 <!--
 # 🛁 bathtub
 #
@@ -25899,9 +28607,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bathtub: `:bathtub:`
 ') }}
 {{ markdown(title="🪤 mouse trap" type="markdown", code='
+
 <!--
 # 🪤 mouse trap
 #
@@ -25917,9 +28627,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :mouse_trap: `:mouse_trap:`
 ') }}
 {{ markdown(title="🪒 razor" type="markdown", code='
+
 <!--
 # 🪒 razor
 #
@@ -25935,9 +28647,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :razor: `:razor:`
 ') }}
 {{ markdown(title="🧴 lotion bottle" type="markdown", code='
+
 <!--
 # 🧴 lotion bottle
 #
@@ -25953,9 +28667,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :lotion_bottle: `:lotion_bottle:`
 ') }}
 {{ markdown(title="🧷 safety pin" type="markdown", code='
+
 <!--
 # 🧷 safety pin
 #
@@ -25971,9 +28687,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :safety_pin: `:safety_pin:`
 ') }}
 {{ markdown(title="🧹 broom" type="markdown", code='
+
 <!--
 # 🧹 broom
 #
@@ -25989,9 +28707,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :broom: `:broom:`
 ') }}
 {{ markdown(title="🧺 basket" type="markdown", code='
+
 <!--
 # 🧺 basket
 #
@@ -26007,9 +28727,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :basket: `:basket:`
 ') }}
 {{ markdown(title="🧻 roll of paper" type="markdown", code='
+
 <!--
 # 🧻 roll of paper
 #
@@ -26027,9 +28749,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :roll_of_paper: `:roll_of_paper:`
 ') }}
 {{ markdown(title="🪣 bucket" type="markdown", code='
+
 <!--
 # 🪣 bucket
 #
@@ -26045,9 +28769,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :bucket: `:bucket:`
 ') }}
 {{ markdown(title="🧼 soap" type="markdown", code='
+
 <!--
 # 🧼 soap
 #
@@ -26063,9 +28789,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :soap: `:soap:`
 ') }}
 {{ markdown(title="🫧 bubbles" type="markdown", code='
+
 <!--
 # 🫧 bubbles
 #
@@ -26081,9 +28809,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :bubbles: `:bubbles:`
 ') }}
 {{ markdown(title="🪥 toothbrush" type="markdown", code='
+
 <!--
 # 🪥 toothbrush
 #
@@ -26099,9 +28829,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :toothbrush: `:toothbrush:`
 ') }}
 {{ markdown(title="🧽 sponge" type="markdown", code='
+
 <!--
 # 🧽 sponge
 #
@@ -26117,9 +28849,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :sponge: `:sponge:`
 ') }}
 {{ markdown(title="🧯 fire extinguisher" type="markdown", code='
+
 <!--
 # 🧯 fire extinguisher
 #
@@ -26135,9 +28869,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :fire_extinguisher: `:fire_extinguisher:`
 ') }}
 {{ markdown(title="🛒 shopping cart" type="markdown", code='
+
 <!--
 # 🛒 shopping cart
 #
@@ -26153,9 +28889,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.2"
 # }
 -->
+
 :shopping_cart: `:shopping_cart:`
 ') }}
 {{ markdown(title="🚬 cigarette" type="markdown", code='
+
 <!--
 # 🚬 cigarette
 #
@@ -26173,9 +28911,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :smoking: `:smoking:`
 ') }}
 {{ markdown(title="⚰️ coffin" type="markdown", code='
+
 <!--
 # ⚰️ coffin
 #
@@ -26193,9 +28933,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :coffin: `:coffin:`
 ') }}
 {{ markdown(title="🪦 headstone" type="markdown", code='
+
 <!--
 # 🪦 headstone
 #
@@ -26211,9 +28953,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :headstone: `:headstone:`
 ') }}
 {{ markdown(title="⚱️ funeral urn" type="markdown", code='
+
 <!--
 # ⚱️ funeral urn
 #
@@ -26229,9 +28973,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :funeral_urn: `:funeral_urn:`
 ') }}
 {{ markdown(title="🧿 nazar amulet" type="markdown", code='
+
 <!--
 # 🧿 nazar amulet
 #
@@ -26247,9 +28993,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :nazar_amulet: `:nazar_amulet:`
 ') }}
 {{ markdown(title="🪬 hamsa" type="markdown", code='
+
 <!--
 # 🪬 hamsa
 #
@@ -26265,9 +29013,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :hamsa: `:hamsa:`
 ') }}
 {{ markdown(title="🗿 moai" type="markdown", code='
+
 <!--
 # 🗿 moai
 #
@@ -26285,9 +29035,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :moyai: `:moyai:`
 ') }}
 {{ markdown(title="🪧 placard" type="markdown", code='
+
 <!--
 # 🪧 placard
 #
@@ -26303,9 +29055,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :placard: `:placard:`
 ') }}
 {{ markdown(title="🪪 identification card" type="markdown", code='
+
 <!--
 # 🪪 identification card
 #
@@ -26321,9 +29075,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :identification_card: `:identification_card:`
 ') }}
 {{ markdown(title="🏧 ATM sign" type="markdown", code='
+
 <!--
 # 🏧 ATM sign
 #
@@ -26339,9 +29095,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :atm: `:atm:`
 ') }}
 {{ markdown(title="🚮 litter in bin sign" type="markdown", code='
+
 <!--
 # 🚮 litter in bin sign
 #
@@ -26357,9 +29115,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :put_litter_in_its_place: `:put_litter_in_its_place:`
 ') }}
 {{ markdown(title="🚰 potable water" type="markdown", code='
+
 <!--
 # 🚰 potable water
 #
@@ -26375,9 +29135,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :potable_water: `:potable_water:`
 ') }}
 {{ markdown(title="♿ wheelchair symbol" type="markdown", code='
+
 <!--
 # ♿ wheelchair symbol
 #
@@ -26395,9 +29157,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wheelchair: `:wheelchair:`
 ') }}
 {{ markdown(title="🚹 men’s room" type="markdown", code='
+
 <!--
 # 🚹 men’s room
 #
@@ -26413,9 +29177,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mens: `:mens:`
 ') }}
 {{ markdown(title="🚺 women’s room" type="markdown", code='
+
 <!--
 # 🚺 women’s room
 #
@@ -26431,9 +29197,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :womens: `:womens:`
 ') }}
 {{ markdown(title="🚻 restroom" type="markdown", code='
+
 <!--
 # 🚻 restroom
 #
@@ -26451,9 +29219,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :restroom: `:restroom:`
 ') }}
 {{ markdown(title="🚼 baby symbol" type="markdown", code='
+
 <!--
 # 🚼 baby symbol
 #
@@ -26469,9 +29239,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :baby_symbol: `:baby_symbol:`
 ') }}
 {{ markdown(title="🚾 water closet" type="markdown", code='
+
 <!--
 # 🚾 water closet
 #
@@ -26490,9 +29262,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wc: `:wc:`
 ') }}
 {{ markdown(title="🛂 passport control" type="markdown", code='
+
 <!--
 # 🛂 passport control
 #
@@ -26508,9 +29282,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :passport_control: `:passport_control:`
 ') }}
 {{ markdown(title="🛃 customs" type="markdown", code='
+
 <!--
 # 🛃 customs
 #
@@ -26526,9 +29302,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :customs: `:customs:`
 ') }}
 {{ markdown(title="🛄 baggage claim" type="markdown", code='
+
 <!--
 # 🛄 baggage claim
 #
@@ -26546,9 +29324,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :baggage_claim: `:baggage_claim:`
 ') }}
 {{ markdown(title="🛅 left luggage" type="markdown", code='
+
 <!--
 # 🛅 left luggage
 #
@@ -26564,9 +29344,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :left_luggage: `:left_luggage:`
 ') }}
 {{ markdown(title="⚠️ warning" type="markdown", code='
+
 <!--
 # ⚠️ warning
 #
@@ -26584,9 +29366,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :warning: `:warning:`
 ') }}
 {{ markdown(title="🚸 children crossing" type="markdown", code='
+
 <!--
 # 🚸 children crossing
 #
@@ -26602,9 +29386,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :children_crossing: `:children_crossing:`
 ') }}
 {{ markdown(title="⛔ no entry" type="markdown", code='
+
 <!--
 # ⛔ no entry
 #
@@ -26622,9 +29408,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_entry: `:no_entry:`
 ') }}
 {{ markdown(title="🚫 prohibited" type="markdown", code='
+
 <!--
 # 🚫 prohibited
 #
@@ -26643,9 +29431,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_entry_sign: `:no_entry_sign:`
 ') }}
 {{ markdown(title="🚳 no bicycles" type="markdown", code='
+
 <!--
 # 🚳 no bicycles
 #
@@ -26661,9 +29451,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_bicycles: `:no_bicycles:`
 ') }}
 {{ markdown(title="🚭 no smoking" type="markdown", code='
+
 <!--
 # 🚭 no smoking
 #
@@ -26679,9 +29471,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_smoking: `:no_smoking:`
 ') }}
 {{ markdown(title="🚯 no littering" type="markdown", code='
+
 <!--
 # 🚯 no littering
 #
@@ -26697,9 +29491,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :do_not_litter: `:do_not_litter:`
 ') }}
 {{ markdown(title="🚱 non-potable water" type="markdown", code='
+
 <!--
 # 🚱 non-potable water
 #
@@ -26715,9 +29511,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :non-potable_water: `:non-potable_water:`
 ') }}
 {{ markdown(title="🚷 no pedestrians" type="markdown", code='
+
 <!--
 # 🚷 no pedestrians
 #
@@ -26733,9 +29531,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_pedestrians: `:no_pedestrians:`
 ') }}
 {{ markdown(title="📵 no mobile phones" type="markdown", code='
+
 <!--
 # 📵 no mobile phones
 #
@@ -26751,9 +29551,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :no_mobile_phones: `:no_mobile_phones:`
 ') }}
 {{ markdown(title="🔞 no one under eighteen" type="markdown", code='
+
 <!--
 # 🔞 no one under eighteen
 #
@@ -26769,9 +29571,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :underage: `:underage:`
 ') }}
 {{ markdown(title="☢️ radioactive" type="markdown", code='
+
 <!--
 # ☢️ radioactive
 #
@@ -26787,9 +29591,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :radioactive: `:radioactive:`
 ') }}
 {{ markdown(title="☣️ biohazard" type="markdown", code='
+
 <!--
 # ☣️ biohazard
 #
@@ -26805,9 +29611,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :biohazard: `:biohazard:`
 ') }}
 {{ markdown(title="⬆️ up arrow" type="markdown", code='
+
 <!--
 # ⬆️ up arrow
 #
@@ -26823,9 +29631,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_up: `:arrow_up:`
 ') }}
 {{ markdown(title="↗️ up-right arrow" type="markdown", code='
+
 <!--
 # ↗️ up-right arrow
 #
@@ -26841,9 +29651,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_upper_right: `:arrow_upper_right:`
 ') }}
 {{ markdown(title="➡️ right arrow" type="markdown", code='
+
 <!--
 # ➡️ right arrow
 #
@@ -26859,9 +29671,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_right: `:arrow_right:`
 ') }}
 {{ markdown(title="↘️ down-right arrow" type="markdown", code='
+
 <!--
 # ↘️ down-right arrow
 #
@@ -26877,9 +29691,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_lower_right: `:arrow_lower_right:`
 ') }}
 {{ markdown(title="⬇️ down arrow" type="markdown", code='
+
 <!--
 # ⬇️ down arrow
 #
@@ -26895,9 +29711,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_down: `:arrow_down:`
 ') }}
 {{ markdown(title="↙️ down-left arrow" type="markdown", code='
+
 <!--
 # ↙️ down-left arrow
 #
@@ -26913,9 +29731,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_lower_left: `:arrow_lower_left:`
 ') }}
 {{ markdown(title="⬅️ left arrow" type="markdown", code='
+
 <!--
 # ⬅️ left arrow
 #
@@ -26931,9 +29751,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_left: `:arrow_left:`
 ') }}
 {{ markdown(title="↖️ up-left arrow" type="markdown", code='
+
 <!--
 # ↖️ up-left arrow
 #
@@ -26949,9 +29771,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_upper_left: `:arrow_upper_left:`
 ') }}
 {{ markdown(title="↕️ up-down arrow" type="markdown", code='
+
 <!--
 # ↕️ up-down arrow
 #
@@ -26967,9 +29791,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_up_down: `:arrow_up_down:`
 ') }}
 {{ markdown(title="↔️ left-right arrow" type="markdown", code='
+
 <!--
 # ↔️ left-right arrow
 #
@@ -26985,9 +29811,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :left_right_arrow: `:left_right_arrow:`
 ') }}
 {{ markdown(title="↩️ right arrow curving left" type="markdown", code='
+
 <!--
 # ↩️ right arrow curving left
 #
@@ -27005,9 +29833,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :leftwards_arrow_with_hook: `:leftwards_arrow_with_hook:`
 ') }}
 {{ markdown(title="↪️ left arrow curving right" type="markdown", code='
+
 <!--
 # ↪️ left arrow curving right
 #
@@ -27023,9 +29853,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_right_hook: `:arrow_right_hook:`
 ') }}
 {{ markdown(title="⤴️ right arrow curving up" type="markdown", code='
+
 <!--
 # ⤴️ right arrow curving up
 #
@@ -27041,9 +29873,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_heading_up: `:arrow_heading_up:`
 ') }}
 {{ markdown(title="⤵️ right arrow curving down" type="markdown", code='
+
 <!--
 # ⤵️ right arrow curving down
 #
@@ -27059,9 +29893,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_heading_down: `:arrow_heading_down:`
 ') }}
 {{ markdown(title="🔃 clockwise vertical arrows" type="markdown", code='
+
 <!--
 # 🔃 clockwise vertical arrows
 #
@@ -27077,9 +29913,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrows_clockwise: `:arrows_clockwise:`
 ') }}
 {{ markdown(title="🔄 counterclockwise arrows button" type="markdown", code='
+
 <!--
 # 🔄 counterclockwise arrows button
 #
@@ -27097,9 +29935,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrows_counterclockwise: `:arrows_counterclockwise:`
 ') }}
 {{ markdown(title="🔙 BACK arrow" type="markdown", code='
+
 <!--
 # 🔙 BACK arrow
 #
@@ -27115,9 +29955,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :back: `:back:`
 ') }}
 {{ markdown(title="🔚 END arrow" type="markdown", code='
+
 <!--
 # 🔚 END arrow
 #
@@ -27133,9 +29975,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :end: `:end:`
 ') }}
 {{ markdown(title="🔛 ON! arrow" type="markdown", code='
+
 <!--
 # 🔛 ON! arrow
 #
@@ -27151,9 +29995,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :on: `:on:`
 ') }}
 {{ markdown(title="🔜 SOON arrow" type="markdown", code='
+
 <!--
 # 🔜 SOON arrow
 #
@@ -27169,9 +30015,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :soon: `:soon:`
 ') }}
 {{ markdown(title="🔝 TOP arrow" type="markdown", code='
+
 <!--
 # 🔝 TOP arrow
 #
@@ -27187,9 +30035,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :top: `:top:`
 ') }}
 {{ markdown(title="🛐 place of worship" type="markdown", code='
+
 <!--
 # 🛐 place of worship
 #
@@ -27205,9 +30055,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :place_of_worship: `:place_of_worship:`
 ') }}
 {{ markdown(title="⚛️ atom symbol" type="markdown", code='
+
 <!--
 # ⚛️ atom symbol
 #
@@ -27223,9 +30075,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :atom_symbol: `:atom_symbol:`
 ') }}
 {{ markdown(title="🕉️ om" type="markdown", code='
+
 <!--
 # 🕉️ om
 #
@@ -27241,9 +30095,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :om: `:om:`
 ') }}
 {{ markdown(title="✡️ star of David" type="markdown", code='
+
 <!--
 # ✡️ star of David
 #
@@ -27259,9 +30115,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :star_of_david: `:star_of_david:`
 ') }}
 {{ markdown(title="☸️ wheel of dharma" type="markdown", code='
+
 <!--
 # ☸️ wheel of dharma
 #
@@ -27277,9 +30135,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :wheel_of_dharma: `:wheel_of_dharma:`
 ') }}
 {{ markdown(title="☯️ yin yang" type="markdown", code='
+
 <!--
 # ☯️ yin yang
 #
@@ -27295,9 +30155,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :yin_yang: `:yin_yang:`
 ') }}
 {{ markdown(title="✝️ latin cross" type="markdown", code='
+
 <!--
 # ✝️ latin cross
 #
@@ -27313,9 +30175,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :latin_cross: `:latin_cross:`
 ') }}
 {{ markdown(title="☦️ orthodox cross" type="markdown", code='
+
 <!--
 # ☦️ orthodox cross
 #
@@ -27331,9 +30195,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :orthodox_cross: `:orthodox_cross:`
 ') }}
 {{ markdown(title="☪️ star and crescent" type="markdown", code='
+
 <!--
 # ☪️ star and crescent
 #
@@ -27349,9 +30215,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :star_and_crescent: `:star_and_crescent:`
 ') }}
 {{ markdown(title="☮️ peace symbol" type="markdown", code='
+
 <!--
 # ☮️ peace symbol
 #
@@ -27367,9 +30235,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :peace_symbol: `:peace_symbol:`
 ') }}
 {{ markdown(title="🕎 menorah" type="markdown", code='
+
 <!--
 # 🕎 menorah
 #
@@ -27385,9 +30255,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :menorah: `:menorah:`
 ') }}
 {{ markdown(title="🔯 dotted six-pointed star" type="markdown", code='
+
 <!--
 # 🔯 dotted six-pointed star
 #
@@ -27403,9 +30275,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :six_pointed_star: `:six_pointed_star:`
 ') }}
 {{ markdown(title="🪯 khanda" type="markdown", code='
+
 <!--
 # 🪯 khanda
 #
@@ -27421,9 +30295,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :khanda: `:khanda:`
 ') }}
 {{ markdown(title="♈ Aries" type="markdown", code='
+
 <!--
 # ♈ Aries
 #
@@ -27439,9 +30315,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :aries: `:aries:`
 ') }}
 {{ markdown(title="♉ Taurus" type="markdown", code='
+
 <!--
 # ♉ Taurus
 #
@@ -27457,9 +30335,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :taurus: `:taurus:`
 ') }}
 {{ markdown(title="♊ Gemini" type="markdown", code='
+
 <!--
 # ♊ Gemini
 #
@@ -27475,9 +30355,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :gemini: `:gemini:`
 ') }}
 {{ markdown(title="♋ Cancer" type="markdown", code='
+
 <!--
 # ♋ Cancer
 #
@@ -27493,9 +30375,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cancer: `:cancer:`
 ') }}
 {{ markdown(title="♌ Leo" type="markdown", code='
+
 <!--
 # ♌ Leo
 #
@@ -27511,9 +30395,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :leo: `:leo:`
 ') }}
 {{ markdown(title="♍ Virgo" type="markdown", code='
+
 <!--
 # ♍ Virgo
 #
@@ -27529,9 +30415,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :virgo: `:virgo:`
 ') }}
 {{ markdown(title="♎ Libra" type="markdown", code='
+
 <!--
 # ♎ Libra
 #
@@ -27547,9 +30435,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :libra: `:libra:`
 ') }}
 {{ markdown(title="♏ Scorpio" type="markdown", code='
+
 <!--
 # ♏ Scorpio
 #
@@ -27565,9 +30455,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :scorpius: `:scorpius:`
 ') }}
 {{ markdown(title="♐ Sagittarius" type="markdown", code='
+
 <!--
 # ♐ Sagittarius
 #
@@ -27583,9 +30475,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sagittarius: `:sagittarius:`
 ') }}
 {{ markdown(title="♑ Capricorn" type="markdown", code='
+
 <!--
 # ♑ Capricorn
 #
@@ -27601,9 +30495,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :capricorn: `:capricorn:`
 ') }}
 {{ markdown(title="♒ Aquarius" type="markdown", code='
+
 <!--
 # ♒ Aquarius
 #
@@ -27619,9 +30515,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :aquarius: `:aquarius:`
 ') }}
 {{ markdown(title="♓ Pisces" type="markdown", code='
+
 <!--
 # ♓ Pisces
 #
@@ -27637,9 +30535,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :pisces: `:pisces:`
 ') }}
 {{ markdown(title="⛎ Ophiuchus" type="markdown", code='
+
 <!--
 # ⛎ Ophiuchus
 #
@@ -27655,9 +30555,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ophiuchus: `:ophiuchus:`
 ') }}
 {{ markdown(title="🔀 shuffle tracks button" type="markdown", code='
+
 <!--
 # 🔀 shuffle tracks button
 #
@@ -27675,9 +30577,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :twisted_rightwards_arrows: `:twisted_rightwards_arrows:`
 ') }}
 {{ markdown(title="🔁 repeat button" type="markdown", code='
+
 <!--
 # 🔁 repeat button
 #
@@ -27695,9 +30599,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :repeat: `:repeat:`
 ') }}
 {{ markdown(title="🔂 repeat single button" type="markdown", code='
+
 <!--
 # 🔂 repeat single button
 #
@@ -27713,9 +30619,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :repeat_one: `:repeat_one:`
 ') }}
 {{ markdown(title="▶️ play button" type="markdown", code='
+
 <!--
 # ▶️ play button
 #
@@ -27731,9 +30639,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_forward: `:arrow_forward:`
 ') }}
 {{ markdown(title="⏩ fast-forward button" type="markdown", code='
+
 <!--
 # ⏩ fast-forward button
 #
@@ -27749,9 +30659,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fast_forward: `:fast_forward:`
 ') }}
 {{ markdown(title="⏭️ next track button" type="markdown", code='
+
 <!--
 # ⏭️ next track button
 #
@@ -27767,9 +30679,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :next_track_button: `:next_track_button:`
 ') }}
 {{ markdown(title="⏯️ play or pause button" type="markdown", code='
+
 <!--
 # ⏯️ play or pause button
 #
@@ -27785,9 +30699,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :play_or_pause_button: `:play_or_pause_button:`
 ') }}
 {{ markdown(title="◀️ reverse button" type="markdown", code='
+
 <!--
 # ◀️ reverse button
 #
@@ -27803,9 +30719,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_backward: `:arrow_backward:`
 ') }}
 {{ markdown(title="⏪ fast reverse button" type="markdown", code='
+
 <!--
 # ⏪ fast reverse button
 #
@@ -27821,9 +30739,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :rewind: `:rewind:`
 ') }}
 {{ markdown(title="⏮️ last track button" type="markdown", code='
+
 <!--
 # ⏮️ last track button
 #
@@ -27839,9 +30759,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :previous_track_button: `:previous_track_button:`
 ') }}
 {{ markdown(title="🔼 upwards button" type="markdown", code='
+
 <!--
 # 🔼 upwards button
 #
@@ -27857,9 +30779,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_up_small: `:arrow_up_small:`
 ') }}
 {{ markdown(title="⏫ fast up button" type="markdown", code='
+
 <!--
 # ⏫ fast up button
 #
@@ -27875,9 +30799,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_double_up: `:arrow_double_up:`
 ') }}
 {{ markdown(title="🔽 downwards button" type="markdown", code='
+
 <!--
 # 🔽 downwards button
 #
@@ -27893,9 +30819,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_down_small: `:arrow_down_small:`
 ') }}
 {{ markdown(title="⏬ fast down button" type="markdown", code='
+
 <!--
 # ⏬ fast down button
 #
@@ -27911,9 +30839,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :arrow_double_down: `:arrow_double_down:`
 ') }}
 {{ markdown(title="⏸️ pause button" type="markdown", code='
+
 <!--
 # ⏸️ pause button
 #
@@ -27929,9 +30859,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :pause_button: `:pause_button:`
 ') }}
 {{ markdown(title="⏹️ stop button" type="markdown", code='
+
 <!--
 # ⏹️ stop button
 #
@@ -27947,9 +30879,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :stop_button: `:stop_button:`
 ') }}
 {{ markdown(title="⏺️ record button" type="markdown", code='
+
 <!--
 # ⏺️ record button
 #
@@ -27965,9 +30899,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :record_button: `:record_button:`
 ') }}
 {{ markdown(title="⏏️ eject button" type="markdown", code='
+
 <!--
 # ⏏️ eject button
 #
@@ -27983,9 +30919,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :eject_button: `:eject_button:`
 ') }}
 {{ markdown(title="🎦 cinema" type="markdown", code='
+
 <!--
 # 🎦 cinema
 #
@@ -28004,9 +30942,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cinema: `:cinema:`
 ') }}
 {{ markdown(title="🔅 dim button" type="markdown", code='
+
 <!--
 # 🔅 dim button
 #
@@ -28022,9 +30962,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :low_brightness: `:low_brightness:`
 ') }}
 {{ markdown(title="🔆 bright button" type="markdown", code='
+
 <!--
 # 🔆 bright button
 #
@@ -28040,9 +30982,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :high_brightness: `:high_brightness:`
 ') }}
 {{ markdown(title="📶 antenna bars" type="markdown", code='
+
 <!--
 # 📶 antenna bars
 #
@@ -28060,9 +31004,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :signal_strength: `:signal_strength:`
 ') }}
 {{ markdown(title="🛜 wireless" type="markdown", code='
+
 <!--
 # 🛜 wireless
 #
@@ -28080,9 +31026,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "16.4"
 # }
 -->
+
 :wireless: `:wireless:`
 ') }}
 {{ markdown(title="📳 vibration mode" type="markdown", code='
+
 <!--
 # 📳 vibration mode
 #
@@ -28098,9 +31046,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :vibration_mode: `:vibration_mode:`
 ') }}
 {{ markdown(title="📴 mobile phone off" type="markdown", code='
+
 <!--
 # 📴 mobile phone off
 #
@@ -28119,9 +31069,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :mobile_phone_off: `:mobile_phone_off:`
 ') }}
 {{ markdown(title="♀️ female sign" type="markdown", code='
+
 <!--
 # ♀️ female sign
 #
@@ -28137,9 +31089,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :female_sign: `:female_sign:`
 ') }}
 {{ markdown(title="♂️ male sign" type="markdown", code='
+
 <!--
 # ♂️ male sign
 #
@@ -28155,9 +31109,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :male_sign: `:male_sign:`
 ') }}
 {{ markdown(title="⚧️ transgender symbol" type="markdown", code='
+
 <!--
 # ⚧️ transgender symbol
 #
@@ -28173,9 +31129,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :transgender_symbol: `:transgender_symbol:`
 ') }}
 {{ markdown(title="✖️ multiply" type="markdown", code='
+
 <!--
 # ✖️ multiply
 #
@@ -28191,9 +31149,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heavy_multiplication_x: `:heavy_multiplication_x:`
 ') }}
 {{ markdown(title="➕ plus" type="markdown", code='
+
 <!--
 # ➕ plus
 #
@@ -28209,9 +31169,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heavy_plus_sign: `:heavy_plus_sign:`
 ') }}
 {{ markdown(title="➖ minus" type="markdown", code='
+
 <!--
 # ➖ minus
 #
@@ -28227,9 +31189,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heavy_minus_sign: `:heavy_minus_sign:`
 ') }}
 {{ markdown(title="➗ divide" type="markdown", code='
+
 <!--
 # ➗ divide
 #
@@ -28245,9 +31209,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heavy_division_sign: `:heavy_division_sign:`
 ') }}
 {{ markdown(title="🟰 heavy equals sign" type="markdown", code='
+
 <!--
 # 🟰 heavy equals sign
 #
@@ -28263,9 +31229,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "15.4"
 # }
 -->
+
 :heavy_equals_sign: `:heavy_equals_sign:`
 ') }}
 {{ markdown(title="♾️ infinity" type="markdown", code='
+
 <!--
 # ♾️ infinity
 #
@@ -28281,9 +31249,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :infinity: `:infinity:`
 ') }}
 {{ markdown(title="‼️ double exclamation mark" type="markdown", code='
+
 <!--
 # ‼️ double exclamation mark
 #
@@ -28299,9 +31269,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :bangbang: `:bangbang:`
 ') }}
 {{ markdown(title="⁉️ exclamation question mark" type="markdown", code='
+
 <!--
 # ⁉️ exclamation question mark
 #
@@ -28317,9 +31289,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :interrobang: `:interrobang:`
 ') }}
 {{ markdown(title="❓ red question mark" type="markdown", code='
+
 <!--
 # ❓ red question mark
 #
@@ -28337,9 +31311,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :question: `:question:`
 ') }}
 {{ markdown(title="❔ white question mark" type="markdown", code='
+
 <!--
 # ❔ white question mark
 #
@@ -28355,9 +31331,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :grey_question: `:grey_question:`
 ') }}
 {{ markdown(title="❕ white exclamation mark" type="markdown", code='
+
 <!--
 # ❕ white exclamation mark
 #
@@ -28373,9 +31351,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :grey_exclamation: `:grey_exclamation:`
 ') }}
 {{ markdown(title="❗ red exclamation mark" type="markdown", code='
+
 <!--
 # ❗ red exclamation mark
 #
@@ -28394,11 +31374,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :exclamation: `:exclamation:`
 
 :heavy_exclamation_mark: `:heavy_exclamation_mark:`
 ') }}
 {{ markdown(title="〰️ wavy dash" type="markdown", code='
+
 <!--
 # 〰️ wavy dash
 #
@@ -28414,9 +31396,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :wavy_dash: `:wavy_dash:`
 ') }}
 {{ markdown(title="💱 currency exchange" type="markdown", code='
+
 <!--
 # 💱 currency exchange
 #
@@ -28432,9 +31416,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :currency_exchange: `:currency_exchange:`
 ') }}
 {{ markdown(title="💲 heavy dollar sign" type="markdown", code='
+
 <!--
 # 💲 heavy dollar sign
 #
@@ -28450,9 +31436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heavy_dollar_sign: `:heavy_dollar_sign:`
 ') }}
 {{ markdown(title="⚕️ medical symbol" type="markdown", code='
+
 <!--
 # ⚕️ medical symbol
 #
@@ -28468,9 +31456,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :medical_symbol: `:medical_symbol:`
 ') }}
 {{ markdown(title="♻️ recycling symbol" type="markdown", code='
+
 <!--
 # ♻️ recycling symbol
 #
@@ -28489,9 +31479,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :recycle: `:recycle:`
 ') }}
 {{ markdown(title="⚜️ fleur-de-lis" type="markdown", code='
+
 <!--
 # ⚜️ fleur-de-lis
 #
@@ -28507,9 +31499,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :fleur_de_lis: `:fleur_de_lis:`
 ') }}
 {{ markdown(title="🔱 trident emblem" type="markdown", code='
+
 <!--
 # 🔱 trident emblem
 #
@@ -28525,9 +31519,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :trident: `:trident:`
 ') }}
 {{ markdown(title="📛 name badge" type="markdown", code='
+
 <!--
 # 📛 name badge
 #
@@ -28543,9 +31539,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :name_badge: `:name_badge:`
 ') }}
 {{ markdown(title="🔰 Japanese symbol for beginner" type="markdown", code='
+
 <!--
 # 🔰 Japanese symbol for beginner
 #
@@ -28561,9 +31559,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :beginner: `:beginner:`
 ') }}
 {{ markdown(title="⭕ hollow red circle" type="markdown", code='
+
 <!--
 # ⭕ hollow red circle
 #
@@ -28579,9 +31579,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :o: `:o:`
 ') }}
 {{ markdown(title="✅ check mark button" type="markdown", code='
+
 <!--
 # ✅ check mark button
 #
@@ -28597,9 +31599,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_check_mark: `:white_check_mark:`
 ') }}
 {{ markdown(title="☑️ check box with check" type="markdown", code='
+
 <!--
 # ☑️ check box with check
 #
@@ -28615,9 +31619,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ballot_box_with_check: `:ballot_box_with_check:`
 ') }}
 {{ markdown(title="✔️ check mark" type="markdown", code='
+
 <!--
 # ✔️ check mark
 #
@@ -28633,9 +31639,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :heavy_check_mark: `:heavy_check_mark:`
 ') }}
 {{ markdown(title="❌ cross mark" type="markdown", code='
+
 <!--
 # ❌ cross mark
 #
@@ -28651,9 +31659,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :x: `:x:`
 ') }}
 {{ markdown(title="❎ cross mark button" type="markdown", code='
+
 <!--
 # ❎ cross mark button
 #
@@ -28669,9 +31679,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :negative_squared_cross_mark: `:negative_squared_cross_mark:`
 ') }}
 {{ markdown(title="➰ curly loop" type="markdown", code='
+
 <!--
 # ➰ curly loop
 #
@@ -28687,9 +31699,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :curly_loop: `:curly_loop:`
 ') }}
 {{ markdown(title="➿ double curly loop" type="markdown", code='
+
 <!--
 # ➿ double curly loop
 #
@@ -28705,9 +31719,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :loop: `:loop:`
 ') }}
 {{ markdown(title="〽️ part alternation mark" type="markdown", code='
+
 <!--
 # 〽️ part alternation mark
 #
@@ -28723,9 +31739,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :part_alternation_mark: `:part_alternation_mark:`
 ') }}
 {{ markdown(title="✳️ eight-spoked asterisk" type="markdown", code='
+
 <!--
 # ✳️ eight-spoked asterisk
 #
@@ -28741,9 +31759,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :eight_spoked_asterisk: `:eight_spoked_asterisk:`
 ') }}
 {{ markdown(title="✴️ eight-pointed star" type="markdown", code='
+
 <!--
 # ✴️ eight-pointed star
 #
@@ -28759,9 +31779,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :eight_pointed_black_star: `:eight_pointed_black_star:`
 ') }}
 {{ markdown(title="❇️ sparkle" type="markdown", code='
+
 <!--
 # ❇️ sparkle
 #
@@ -28777,9 +31799,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sparkle: `:sparkle:`
 ') }}
 {{ markdown(title="©️ copyright" type="markdown", code='
+
 <!--
 # ©️ copyright
 #
@@ -28795,9 +31819,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :copyright: `:copyright:`
 ') }}
 {{ markdown(title="®️ registered" type="markdown", code='
+
 <!--
 # ®️ registered
 #
@@ -28813,9 +31839,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :registered: `:registered:`
 ') }}
 {{ markdown(title="™️ trade mark" type="markdown", code='
+
 <!--
 # ™️ trade mark
 #
@@ -28833,9 +31861,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :tm: `:tm:`
 ') }}
 {{ markdown(title="#️⃣ keycap: #" type="markdown", code='
+
 <!--
 # #️⃣ keycap: #
 #
@@ -28853,9 +31883,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :hash: `:hash:`
 ') }}
-{{ markdown(title="*️⃣ keycap: *" type="markdown", code='
+{{ markdown(title="_️⃣ keycap: _" type="markdown", code='
+
 <!--
 # *️⃣ keycap: *
 #
@@ -28871,9 +31903,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :asterisk: `:asterisk:`
 ') }}
 {{ markdown(title="0️⃣ keycap: 0" type="markdown", code='
+
 <!--
 # 0️⃣ keycap: 0
 #
@@ -28889,9 +31923,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :zero: `:zero:`
 ') }}
 {{ markdown(title="1️⃣ keycap: 1" type="markdown", code='
+
 <!--
 # 1️⃣ keycap: 1
 #
@@ -28907,9 +31943,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :one: `:one:`
 ') }}
 {{ markdown(title="2️⃣ keycap: 2" type="markdown", code='
+
 <!--
 # 2️⃣ keycap: 2
 #
@@ -28925,9 +31963,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :two: `:two:`
 ') }}
 {{ markdown(title="3️⃣ keycap: 3" type="markdown", code='
+
 <!--
 # 3️⃣ keycap: 3
 #
@@ -28943,9 +31983,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :three: `:three:`
 ') }}
 {{ markdown(title="4️⃣ keycap: 4" type="markdown", code='
+
 <!--
 # 4️⃣ keycap: 4
 #
@@ -28961,9 +32003,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :four: `:four:`
 ') }}
 {{ markdown(title="5️⃣ keycap: 5" type="markdown", code='
+
 <!--
 # 5️⃣ keycap: 5
 #
@@ -28979,9 +32023,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :five: `:five:`
 ') }}
 {{ markdown(title="6️⃣ keycap: 6" type="markdown", code='
+
 <!--
 # 6️⃣ keycap: 6
 #
@@ -28997,9 +32043,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :six: `:six:`
 ') }}
 {{ markdown(title="7️⃣ keycap: 7" type="markdown", code='
+
 <!--
 # 7️⃣ keycap: 7
 #
@@ -29015,9 +32063,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :seven: `:seven:`
 ') }}
 {{ markdown(title="8️⃣ keycap: 8" type="markdown", code='
+
 <!--
 # 8️⃣ keycap: 8
 #
@@ -29033,9 +32083,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :eight: `:eight:`
 ') }}
 {{ markdown(title="9️⃣ keycap: 9" type="markdown", code='
+
 <!--
 # 9️⃣ keycap: 9
 #
@@ -29051,9 +32103,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :nine: `:nine:`
 ') }}
 {{ markdown(title="🔟 keycap: 10" type="markdown", code='
+
 <!--
 # 🔟 keycap: 10
 #
@@ -29069,9 +32123,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :keycap_ten: `:keycap_ten:`
 ') }}
 {{ markdown(title="🔠 input latin uppercase" type="markdown", code='
+
 <!--
 # 🔠 input latin uppercase
 #
@@ -29089,9 +32145,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :capital_abcd: `:capital_abcd:`
 ') }}
 {{ markdown(title="🔡 input latin lowercase" type="markdown", code='
+
 <!--
 # 🔡 input latin lowercase
 #
@@ -29107,9 +32165,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :abcd: `:abcd:`
 ') }}
 {{ markdown(title="🔢 input numbers" type="markdown", code='
+
 <!--
 # 🔢 input numbers
 #
@@ -29127,9 +32187,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :1234: `:1234:`
 ') }}
 {{ markdown(title="🔣 input symbols" type="markdown", code='
+
 <!--
 # 🔣 input symbols
 #
@@ -29145,9 +32207,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :symbols: `:symbols:`
 ') }}
 {{ markdown(title="🔤 input latin letters" type="markdown", code='
+
 <!--
 # 🔤 input latin letters
 #
@@ -29165,9 +32229,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :abc: `:abc:`
 ') }}
 {{ markdown(title="🅰️ A button (blood type)" type="markdown", code='
+
 <!--
 # 🅰️ A button (blood type)
 #
@@ -29183,9 +32249,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :a: `:a:`
 ') }}
 {{ markdown(title="🆎 AB button (blood type)" type="markdown", code='
+
 <!--
 # 🆎 AB button (blood type)
 #
@@ -29201,9 +32269,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ab: `:ab:`
 ') }}
 {{ markdown(title="🅱️ B button (blood type)" type="markdown", code='
+
 <!--
 # 🅱️ B button (blood type)
 #
@@ -29219,9 +32289,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :b: `:b:`
 ') }}
 {{ markdown(title="🆑 CL button" type="markdown", code='
+
 <!--
 # 🆑 CL button
 #
@@ -29237,9 +32309,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cl: `:cl:`
 ') }}
 {{ markdown(title="🆒 COOL button" type="markdown", code='
+
 <!--
 # 🆒 COOL button
 #
@@ -29255,9 +32329,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cool: `:cool:`
 ') }}
 {{ markdown(title="🆓 FREE button" type="markdown", code='
+
 <!--
 # 🆓 FREE button
 #
@@ -29273,9 +32349,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :free: `:free:`
 ') }}
 {{ markdown(title="ℹ️ information" type="markdown", code='
+
 <!--
 # ℹ️ information
 #
@@ -29291,9 +32369,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :information_source: `:information_source:`
 ') }}
 {{ markdown(title="🆔 ID button" type="markdown", code='
+
 <!--
 # 🆔 ID button
 #
@@ -29309,9 +32389,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :id: `:id:`
 ') }}
 {{ markdown(title="Ⓜ️ circled M" type="markdown", code='
+
 <!--
 # Ⓜ️ circled M
 #
@@ -29327,9 +32409,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :m: `:m:`
 ') }}
 {{ markdown(title="🆕 NEW button" type="markdown", code='
+
 <!--
 # 🆕 NEW button
 #
@@ -29347,9 +32431,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :new: `:new:`
 ') }}
 {{ markdown(title="🆖 NG button" type="markdown", code='
+
 <!--
 # 🆖 NG button
 #
@@ -29365,9 +32451,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ng: `:ng:`
 ') }}
 {{ markdown(title="🅾️ O button (blood type)" type="markdown", code='
+
 <!--
 # 🅾️ O button (blood type)
 #
@@ -29383,9 +32471,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :o2: `:o2:`
 ') }}
 {{ markdown(title="🆗 OK button" type="markdown", code='
+
 <!--
 # 🆗 OK button
 #
@@ -29403,9 +32493,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ok: `:ok:`
 ') }}
 {{ markdown(title="🅿️ P button" type="markdown", code='
+
 <!--
 # 🅿️ P button
 #
@@ -29421,9 +32513,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :parking: `:parking:`
 ') }}
 {{ markdown(title="🆘 SOS button" type="markdown", code='
+
 <!--
 # 🆘 SOS button
 #
@@ -29442,9 +32536,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sos: `:sos:`
 ') }}
 {{ markdown(title="🆙 UP! button" type="markdown", code='
+
 <!--
 # 🆙 UP! button
 #
@@ -29460,9 +32556,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :up: `:up:`
 ') }}
 {{ markdown(title="🆚 VS button" type="markdown", code='
+
 <!--
 # 🆚 VS button
 #
@@ -29478,9 +32576,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :vs: `:vs:`
 ') }}
 {{ markdown(title="🈁 Japanese “here” button" type="markdown", code='
+
 <!--
 # 🈁 Japanese “here” button
 #
@@ -29496,9 +32596,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :koko: `:koko:`
 ') }}
 {{ markdown(title="🈂️ Japanese “service charge” button" type="markdown", code='
+
 <!--
 # 🈂️ Japanese “service charge” button
 #
@@ -29514,9 +32616,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :sa: `:sa:`
 ') }}
 {{ markdown(title="🈷️ Japanese “monthly amount” button" type="markdown", code='
+
 <!--
 # 🈷️ Japanese “monthly amount” button
 #
@@ -29532,9 +32636,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u6708: `:u6708:`
 ') }}
 {{ markdown(title="🈶 Japanese “not free of charge” button" type="markdown", code='
+
 <!--
 # 🈶 Japanese “not free of charge” button
 #
@@ -29550,9 +32656,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u6709: `:u6709:`
 ') }}
 {{ markdown(title="🈯 Japanese “reserved” button" type="markdown", code='
+
 <!--
 # 🈯 Japanese “reserved” button
 #
@@ -29568,9 +32676,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u6307: `:u6307:`
 ') }}
 {{ markdown(title="🉐 Japanese “bargain” button" type="markdown", code='
+
 <!--
 # 🉐 Japanese “bargain” button
 #
@@ -29586,9 +32696,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ideograph_advantage: `:ideograph_advantage:`
 ') }}
 {{ markdown(title="🈹 Japanese “discount” button" type="markdown", code='
+
 <!--
 # 🈹 Japanese “discount” button
 #
@@ -29604,9 +32716,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u5272: `:u5272:`
 ') }}
 {{ markdown(title="🈚 Japanese “free of charge” button" type="markdown", code='
+
 <!--
 # 🈚 Japanese “free of charge” button
 #
@@ -29622,9 +32736,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u7121: `:u7121:`
 ') }}
 {{ markdown(title="🈲 Japanese “prohibited” button" type="markdown", code='
+
 <!--
 # 🈲 Japanese “prohibited” button
 #
@@ -29640,9 +32756,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u7981: `:u7981:`
 ') }}
 {{ markdown(title="🉑 Japanese “acceptable” button" type="markdown", code='
+
 <!--
 # 🉑 Japanese “acceptable” button
 #
@@ -29658,9 +32776,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :accept: `:accept:`
 ') }}
 {{ markdown(title="🈸 Japanese “application” button" type="markdown", code='
+
 <!--
 # 🈸 Japanese “application” button
 #
@@ -29676,9 +32796,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u7533: `:u7533:`
 ') }}
 {{ markdown(title="🈴 Japanese “passing grade” button" type="markdown", code='
+
 <!--
 # 🈴 Japanese “passing grade” button
 #
@@ -29694,9 +32816,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u5408: `:u5408:`
 ') }}
 {{ markdown(title="🈳 Japanese “vacancy” button" type="markdown", code='
+
 <!--
 # 🈳 Japanese “vacancy” button
 #
@@ -29712,9 +32836,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u7a7a: `:u7a7a:`
 ') }}
 {{ markdown(title="㊗️ Japanese “congratulations” button" type="markdown", code='
+
 <!--
 # ㊗️ Japanese “congratulations” button
 #
@@ -29730,9 +32856,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :congratulations: `:congratulations:`
 ') }}
 {{ markdown(title="㊙️ Japanese “secret” button" type="markdown", code='
+
 <!--
 # ㊙️ Japanese “secret” button
 #
@@ -29748,9 +32876,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :secret: `:secret:`
 ') }}
 {{ markdown(title="🈺 Japanese “open for business” button" type="markdown", code='
+
 <!--
 # 🈺 Japanese “open for business” button
 #
@@ -29766,9 +32896,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u55b6: `:u55b6:`
 ') }}
 {{ markdown(title="🈵 Japanese “no vacancy” button" type="markdown", code='
+
 <!--
 # 🈵 Japanese “no vacancy” button
 #
@@ -29784,9 +32916,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :u6e80: `:u6e80:`
 ') }}
 {{ markdown(title="🔴 red circle" type="markdown", code='
+
 <!--
 # 🔴 red circle
 #
@@ -29802,9 +32936,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :red_circle: `:red_circle:`
 ') }}
 {{ markdown(title="🟠 orange circle" type="markdown", code='
+
 <!--
 # 🟠 orange circle
 #
@@ -29820,9 +32956,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :orange_circle: `:orange_circle:`
 ') }}
 {{ markdown(title="🟡 yellow circle" type="markdown", code='
+
 <!--
 # 🟡 yellow circle
 #
@@ -29838,9 +32976,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :yellow_circle: `:yellow_circle:`
 ') }}
 {{ markdown(title="🟢 green circle" type="markdown", code='
+
 <!--
 # 🟢 green circle
 #
@@ -29856,9 +32996,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :green_circle: `:green_circle:`
 ') }}
 {{ markdown(title="🔵 blue circle" type="markdown", code='
+
 <!--
 # 🔵 blue circle
 #
@@ -29874,9 +33016,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :large_blue_circle: `:large_blue_circle:`
 ') }}
 {{ markdown(title="🟣 purple circle" type="markdown", code='
+
 <!--
 # 🟣 purple circle
 #
@@ -29892,9 +33036,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :purple_circle: `:purple_circle:`
 ') }}
 {{ markdown(title="🟤 brown circle" type="markdown", code='
+
 <!--
 # 🟤 brown circle
 #
@@ -29910,9 +33056,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :brown_circle: `:brown_circle:`
 ') }}
 {{ markdown(title="⚫ black circle" type="markdown", code='
+
 <!--
 # ⚫ black circle
 #
@@ -29928,9 +33076,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_circle: `:black_circle:`
 ') }}
 {{ markdown(title="⚪ white circle" type="markdown", code='
+
 <!--
 # ⚪ white circle
 #
@@ -29946,9 +33096,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_circle: `:white_circle:`
 ') }}
 {{ markdown(title="🟥 red square" type="markdown", code='
+
 <!--
 # 🟥 red square
 #
@@ -29964,9 +33116,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :red_square: `:red_square:`
 ') }}
 {{ markdown(title="🟧 orange square" type="markdown", code='
+
 <!--
 # 🟧 orange square
 #
@@ -29982,9 +33136,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :orange_square: `:orange_square:`
 ') }}
 {{ markdown(title="🟨 yellow square" type="markdown", code='
+
 <!--
 # 🟨 yellow square
 #
@@ -30000,9 +33156,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :yellow_square: `:yellow_square:`
 ') }}
 {{ markdown(title="🟩 green square" type="markdown", code='
+
 <!--
 # 🟩 green square
 #
@@ -30018,9 +33176,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :green_square: `:green_square:`
 ') }}
 {{ markdown(title="🟦 blue square" type="markdown", code='
+
 <!--
 # 🟦 blue square
 #
@@ -30036,9 +33196,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :blue_square: `:blue_square:`
 ') }}
 {{ markdown(title="🟪 purple square" type="markdown", code='
+
 <!--
 # 🟪 purple square
 #
@@ -30054,9 +33216,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :purple_square: `:purple_square:`
 ') }}
 {{ markdown(title="🟫 brown square" type="markdown", code='
+
 <!--
 # 🟫 brown square
 #
@@ -30072,9 +33236,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "13.0"
 # }
 -->
+
 :brown_square: `:brown_square:`
 ') }}
 {{ markdown(title="⬛ black large square" type="markdown", code='
+
 <!--
 # ⬛ black large square
 #
@@ -30090,9 +33256,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_large_square: `:black_large_square:`
 ') }}
 {{ markdown(title="⬜ white large square" type="markdown", code='
+
 <!--
 # ⬜ white large square
 #
@@ -30108,9 +33276,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_large_square: `:white_large_square:`
 ') }}
 {{ markdown(title="◼️ black medium square" type="markdown", code='
+
 <!--
 # ◼️ black medium square
 #
@@ -30126,9 +33296,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_medium_square: `:black_medium_square:`
 ') }}
 {{ markdown(title="◻️ white medium square" type="markdown", code='
+
 <!--
 # ◻️ white medium square
 #
@@ -30144,9 +33316,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_medium_square: `:white_medium_square:`
 ') }}
 {{ markdown(title="◾ black medium-small square" type="markdown", code='
+
 <!--
 # ◾ black medium-small square
 #
@@ -30162,9 +33336,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_medium_small_square: `:black_medium_small_square:`
 ') }}
 {{ markdown(title="◽ white medium-small square" type="markdown", code='
+
 <!--
 # ◽ white medium-small square
 #
@@ -30180,9 +33356,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_medium_small_square: `:white_medium_small_square:`
 ') }}
 {{ markdown(title="▪️ black small square" type="markdown", code='
+
 <!--
 # ▪️ black small square
 #
@@ -30198,9 +33376,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_small_square: `:black_small_square:`
 ') }}
 {{ markdown(title="▫️ white small square" type="markdown", code='
+
 <!--
 # ▫️ white small square
 #
@@ -30216,9 +33396,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_small_square: `:white_small_square:`
 ') }}
 {{ markdown(title="🔶 large orange diamond" type="markdown", code='
+
 <!--
 # 🔶 large orange diamond
 #
@@ -30234,9 +33416,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :large_orange_diamond: `:large_orange_diamond:`
 ') }}
 {{ markdown(title="🔷 large blue diamond" type="markdown", code='
+
 <!--
 # 🔷 large blue diamond
 #
@@ -30252,9 +33436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :large_blue_diamond: `:large_blue_diamond:`
 ') }}
 {{ markdown(title="🔸 small orange diamond" type="markdown", code='
+
 <!--
 # 🔸 small orange diamond
 #
@@ -30270,9 +33456,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :small_orange_diamond: `:small_orange_diamond:`
 ') }}
 {{ markdown(title="🔹 small blue diamond" type="markdown", code='
+
 <!--
 # 🔹 small blue diamond
 #
@@ -30288,9 +33476,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :small_blue_diamond: `:small_blue_diamond:`
 ') }}
 {{ markdown(title="🔺 red triangle pointed up" type="markdown", code='
+
 <!--
 # 🔺 red triangle pointed up
 #
@@ -30306,9 +33496,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :small_red_triangle: `:small_red_triangle:`
 ') }}
 {{ markdown(title="🔻 red triangle pointed down" type="markdown", code='
+
 <!--
 # 🔻 red triangle pointed down
 #
@@ -30324,9 +33516,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :small_red_triangle_down: `:small_red_triangle_down:`
 ') }}
 {{ markdown(title="💠 diamond with a dot" type="markdown", code='
+
 <!--
 # 💠 diamond with a dot
 #
@@ -30342,9 +33536,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :diamond_shape_with_a_dot_inside: `:diamond_shape_with_a_dot_inside:`
 ') }}
 {{ markdown(title="🔘 radio button" type="markdown", code='
+
 <!--
 # 🔘 radio button
 #
@@ -30360,9 +33556,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :radio_button: `:radio_button:`
 ') }}
 {{ markdown(title="🔳 white square button" type="markdown", code='
+
 <!--
 # 🔳 white square button
 #
@@ -30378,9 +33576,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :white_square_button: `:white_square_button:`
 ') }}
 {{ markdown(title="🔲 black square button" type="markdown", code='
+
 <!--
 # 🔲 black square button
 #
@@ -30396,9 +33596,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :black_square_button: `:black_square_button:`
 ') }}
 {{ markdown(title="🏁 chequered flag" type="markdown", code='
+
 <!--
 # 🏁 chequered flag
 #
@@ -30417,9 +33619,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :checkered_flag: `:checkered_flag:`
 ') }}
 {{ markdown(title="🚩 triangular flag" type="markdown", code='
+
 <!--
 # 🚩 triangular flag
 #
@@ -30435,9 +33639,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :triangular_flag_on_post: `:triangular_flag_on_post:`
 ') }}
 {{ markdown(title="🎌 crossed flags" type="markdown", code='
+
 <!--
 # 🎌 crossed flags
 #
@@ -30453,9 +33659,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :crossed_flags: `:crossed_flags:`
 ') }}
 {{ markdown(title="🏴 black flag" type="markdown", code='
+
 <!--
 # 🏴 black flag
 #
@@ -30471,9 +33679,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :black_flag: `:black_flag:`
 ') }}
 {{ markdown(title="🏳️ white flag" type="markdown", code='
+
 <!--
 # 🏳️ white flag
 #
@@ -30489,9 +33699,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :white_flag: `:white_flag:`
 ') }}
 {{ markdown(title="🏳️‍🌈 rainbow flag" type="markdown", code='
+
 <!--
 # 🏳️‍🌈 rainbow flag
 #
@@ -30509,9 +33721,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "10.0"
 # }
 -->
+
 :rainbow_flag: `:rainbow_flag:`
 ') }}
 {{ markdown(title="🏳️‍⚧️ transgender flag" type="markdown", code='
+
 <!--
 # 🏳️‍⚧️ transgender flag
 #
@@ -30527,9 +33741,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "14.0"
 # }
 -->
+
 :transgender_flag: `:transgender_flag:`
 ') }}
 {{ markdown(title="🏴‍☠️ pirate flag" type="markdown", code='
+
 <!--
 # 🏴‍☠️ pirate flag
 #
@@ -30545,9 +33761,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :pirate_flag: `:pirate_flag:`
 ') }}
 {{ markdown(title="🇦🇨 flag: Ascension Island" type="markdown", code='
+
 <!--
 # 🇦🇨 flag: Ascension Island
 #
@@ -30563,9 +33781,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :ascension_island: `:ascension_island:`
 ') }}
 {{ markdown(title="🇦🇩 flag: Andorra" type="markdown", code='
+
 <!--
 # 🇦🇩 flag: Andorra
 #
@@ -30581,9 +33801,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :andorra: `:andorra:`
 ') }}
 {{ markdown(title="🇦🇪 flag: United Arab Emirates" type="markdown", code='
+
 <!--
 # 🇦🇪 flag: United Arab Emirates
 #
@@ -30599,9 +33821,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :united_arab_emirates: `:united_arab_emirates:`
 ') }}
 {{ markdown(title="🇦🇫 flag: Afghanistan" type="markdown", code='
+
 <!--
 # 🇦🇫 flag: Afghanistan
 #
@@ -30617,9 +33841,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :afghanistan: `:afghanistan:`
 ') }}
 {{ markdown(title="🇦🇬 flag: Antigua & Barbuda" type="markdown", code='
+
 <!--
 # 🇦🇬 flag: Antigua & Barbuda
 #
@@ -30635,9 +33861,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :antigua_barbuda: `:antigua_barbuda:`
 ') }}
 {{ markdown(title="🇦🇮 flag: Anguilla" type="markdown", code='
+
 <!--
 # 🇦🇮 flag: Anguilla
 #
@@ -30653,9 +33881,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :anguilla: `:anguilla:`
 ') }}
 {{ markdown(title="🇦🇱 flag: Albania" type="markdown", code='
+
 <!--
 # 🇦🇱 flag: Albania
 #
@@ -30671,9 +33901,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :albania: `:albania:`
 ') }}
 {{ markdown(title="🇦🇲 flag: Armenia" type="markdown", code='
+
 <!--
 # 🇦🇲 flag: Armenia
 #
@@ -30689,9 +33921,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :armenia: `:armenia:`
 ') }}
 {{ markdown(title="🇦🇴 flag: Angola" type="markdown", code='
+
 <!--
 # 🇦🇴 flag: Angola
 #
@@ -30707,9 +33941,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :angola: `:angola:`
 ') }}
 {{ markdown(title="🇦🇶 flag: Antarctica" type="markdown", code='
+
 <!--
 # 🇦🇶 flag: Antarctica
 #
@@ -30725,9 +33961,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :antarctica: `:antarctica:`
 ') }}
 {{ markdown(title="🇦🇷 flag: Argentina" type="markdown", code='
+
 <!--
 # 🇦🇷 flag: Argentina
 #
@@ -30743,9 +33981,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :argentina: `:argentina:`
 ') }}
 {{ markdown(title="🇦🇸 flag: American Samoa" type="markdown", code='
+
 <!--
 # 🇦🇸 flag: American Samoa
 #
@@ -30761,9 +34001,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :american_samoa: `:american_samoa:`
 ') }}
 {{ markdown(title="🇦🇹 flag: Austria" type="markdown", code='
+
 <!--
 # 🇦🇹 flag: Austria
 #
@@ -30779,9 +34021,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :austria: `:austria:`
 ') }}
 {{ markdown(title="🇦🇺 flag: Australia" type="markdown", code='
+
 <!--
 # 🇦🇺 flag: Australia
 #
@@ -30797,9 +34041,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :australia: `:australia:`
 ') }}
 {{ markdown(title="🇦🇼 flag: Aruba" type="markdown", code='
+
 <!--
 # 🇦🇼 flag: Aruba
 #
@@ -30815,9 +34061,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :aruba: `:aruba:`
 ') }}
 {{ markdown(title="🇦🇽 flag: Åland Islands" type="markdown", code='
+
 <!--
 # 🇦🇽 flag: Åland Islands
 #
@@ -30833,9 +34081,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :aland_islands: `:aland_islands:`
 ') }}
 {{ markdown(title="🇦🇿 flag: Azerbaijan" type="markdown", code='
+
 <!--
 # 🇦🇿 flag: Azerbaijan
 #
@@ -30851,9 +34101,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :azerbaijan: `:azerbaijan:`
 ') }}
 {{ markdown(title="🇧🇦 flag: Bosnia & Herzegovina" type="markdown", code='
+
 <!--
 # 🇧🇦 flag: Bosnia & Herzegovina
 #
@@ -30869,9 +34121,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bosnia_herzegovina: `:bosnia_herzegovina:`
 ') }}
 {{ markdown(title="🇧🇧 flag: Barbados" type="markdown", code='
+
 <!--
 # 🇧🇧 flag: Barbados
 #
@@ -30887,9 +34141,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :barbados: `:barbados:`
 ') }}
 {{ markdown(title="🇧🇩 flag: Bangladesh" type="markdown", code='
+
 <!--
 # 🇧🇩 flag: Bangladesh
 #
@@ -30905,9 +34161,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bangladesh: `:bangladesh:`
 ') }}
 {{ markdown(title="🇧🇪 flag: Belgium" type="markdown", code='
+
 <!--
 # 🇧🇪 flag: Belgium
 #
@@ -30923,9 +34181,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :belgium: `:belgium:`
 ') }}
 {{ markdown(title="🇧🇫 flag: Burkina Faso" type="markdown", code='
+
 <!--
 # 🇧🇫 flag: Burkina Faso
 #
@@ -30941,9 +34201,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :burkina_faso: `:burkina_faso:`
 ') }}
 {{ markdown(title="🇧🇬 flag: Bulgaria" type="markdown", code='
+
 <!--
 # 🇧🇬 flag: Bulgaria
 #
@@ -30959,9 +34221,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bulgaria: `:bulgaria:`
 ') }}
 {{ markdown(title="🇧🇭 flag: Bahrain" type="markdown", code='
+
 <!--
 # 🇧🇭 flag: Bahrain
 #
@@ -30977,9 +34241,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bahrain: `:bahrain:`
 ') }}
 {{ markdown(title="🇧🇮 flag: Burundi" type="markdown", code='
+
 <!--
 # 🇧🇮 flag: Burundi
 #
@@ -30995,9 +34261,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :burundi: `:burundi:`
 ') }}
 {{ markdown(title="🇧🇯 flag: Benin" type="markdown", code='
+
 <!--
 # 🇧🇯 flag: Benin
 #
@@ -31013,9 +34281,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :benin: `:benin:`
 ') }}
 {{ markdown(title="🇧🇱 flag: St. Barthélemy" type="markdown", code='
+
 <!--
 # 🇧🇱 flag: St. Barthélemy
 #
@@ -31031,9 +34301,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :st_barthelemy: `:st_barthelemy:`
 ') }}
 {{ markdown(title="🇧🇲 flag: Bermuda" type="markdown", code='
+
 <!--
 # 🇧🇲 flag: Bermuda
 #
@@ -31049,9 +34321,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bermuda: `:bermuda:`
 ') }}
 {{ markdown(title="🇧🇳 flag: Brunei" type="markdown", code='
+
 <!--
 # 🇧🇳 flag: Brunei
 #
@@ -31067,9 +34341,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :brunei: `:brunei:`
 ') }}
 {{ markdown(title="🇧🇴 flag: Bolivia" type="markdown", code='
+
 <!--
 # 🇧🇴 flag: Bolivia
 #
@@ -31085,9 +34361,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bolivia: `:bolivia:`
 ') }}
 {{ markdown(title="🇧🇶 flag: Caribbean Netherlands" type="markdown", code='
+
 <!--
 # 🇧🇶 flag: Caribbean Netherlands
 #
@@ -31103,9 +34381,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :caribbean_netherlands: `:caribbean_netherlands:`
 ') }}
 {{ markdown(title="🇧🇷 flag: Brazil" type="markdown", code='
+
 <!--
 # 🇧🇷 flag: Brazil
 #
@@ -31121,9 +34401,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :brazil: `:brazil:`
 ') }}
 {{ markdown(title="🇧🇸 flag: Bahamas" type="markdown", code='
+
 <!--
 # 🇧🇸 flag: Bahamas
 #
@@ -31139,9 +34421,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bahamas: `:bahamas:`
 ') }}
 {{ markdown(title="🇧🇹 flag: Bhutan" type="markdown", code='
+
 <!--
 # 🇧🇹 flag: Bhutan
 #
@@ -31157,9 +34441,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :bhutan: `:bhutan:`
 ') }}
 {{ markdown(title="🇧🇻 flag: Bouvet Island" type="markdown", code='
+
 <!--
 # 🇧🇻 flag: Bouvet Island
 #
@@ -31175,9 +34461,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :bouvet_island: `:bouvet_island:`
 ') }}
 {{ markdown(title="🇧🇼 flag: Botswana" type="markdown", code='
+
 <!--
 # 🇧🇼 flag: Botswana
 #
@@ -31193,9 +34481,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :botswana: `:botswana:`
 ') }}
 {{ markdown(title="🇧🇾 flag: Belarus" type="markdown", code='
+
 <!--
 # 🇧🇾 flag: Belarus
 #
@@ -31211,9 +34501,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :belarus: `:belarus:`
 ') }}
 {{ markdown(title="🇧🇿 flag: Belize" type="markdown", code='
+
 <!--
 # 🇧🇿 flag: Belize
 #
@@ -31229,9 +34521,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :belize: `:belize:`
 ') }}
 {{ markdown(title="🇨🇦 flag: Canada" type="markdown", code='
+
 <!--
 # 🇨🇦 flag: Canada
 #
@@ -31247,9 +34541,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :canada: `:canada:`
 ') }}
 {{ markdown(title="🇨🇨 flag: Cocos (Keeling) Islands" type="markdown", code='
+
 <!--
 # 🇨🇨 flag: Cocos (Keeling) Islands
 #
@@ -31267,9 +34563,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :cocos_islands: `:cocos_islands:`
 ') }}
 {{ markdown(title="🇨🇩 flag: Congo - Kinshasa" type="markdown", code='
+
 <!--
 # 🇨🇩 flag: Congo - Kinshasa
 #
@@ -31285,9 +34583,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :congo_kinshasa: `:congo_kinshasa:`
 ') }}
 {{ markdown(title="🇨🇫 flag: Central African Republic" type="markdown", code='
+
 <!--
 # 🇨🇫 flag: Central African Republic
 #
@@ -31303,9 +34603,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :central_african_republic: `:central_african_republic:`
 ') }}
 {{ markdown(title="🇨🇬 flag: Congo - Brazzaville" type="markdown", code='
+
 <!--
 # 🇨🇬 flag: Congo - Brazzaville
 #
@@ -31321,9 +34623,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :congo_brazzaville: `:congo_brazzaville:`
 ') }}
 {{ markdown(title="🇨🇭 flag: Switzerland" type="markdown", code='
+
 <!--
 # 🇨🇭 flag: Switzerland
 #
@@ -31339,9 +34643,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :switzerland: `:switzerland:`
 ') }}
 {{ markdown(title="🇨🇮 flag: Côte d’Ivoire" type="markdown", code='
+
 <!--
 # 🇨🇮 flag: Côte d’Ivoire
 #
@@ -31359,9 +34665,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cote_divoire: `:cote_divoire:`
 ') }}
 {{ markdown(title="🇨🇰 flag: Cook Islands" type="markdown", code='
+
 <!--
 # 🇨🇰 flag: Cook Islands
 #
@@ -31377,9 +34685,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cook_islands: `:cook_islands:`
 ') }}
 {{ markdown(title="🇨🇱 flag: Chile" type="markdown", code='
+
 <!--
 # 🇨🇱 flag: Chile
 #
@@ -31395,9 +34705,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :chile: `:chile:`
 ') }}
 {{ markdown(title="🇨🇲 flag: Cameroon" type="markdown", code='
+
 <!--
 # 🇨🇲 flag: Cameroon
 #
@@ -31413,9 +34725,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cameroon: `:cameroon:`
 ') }}
 {{ markdown(title="🇨🇳 flag: China" type="markdown", code='
+
 <!--
 # 🇨🇳 flag: China
 #
@@ -31433,9 +34747,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :cn: `:cn:`
 ') }}
 {{ markdown(title="🇨🇴 flag: Colombia" type="markdown", code='
+
 <!--
 # 🇨🇴 flag: Colombia
 #
@@ -31451,9 +34767,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :colombia: `:colombia:`
 ') }}
 {{ markdown(title="🇨🇵 flag: Clipperton Island" type="markdown", code='
+
 <!--
 # 🇨🇵 flag: Clipperton Island
 #
@@ -31469,9 +34787,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :clipperton_island: `:clipperton_island:`
 ') }}
 {{ markdown(title="🇨🇷 flag: Costa Rica" type="markdown", code='
+
 <!--
 # 🇨🇷 flag: Costa Rica
 #
@@ -31487,9 +34807,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :costa_rica: `:costa_rica:`
 ') }}
 {{ markdown(title="🇨🇺 flag: Cuba" type="markdown", code='
+
 <!--
 # 🇨🇺 flag: Cuba
 #
@@ -31505,9 +34827,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cuba: `:cuba:`
 ') }}
 {{ markdown(title="🇨🇻 flag: Cape Verde" type="markdown", code='
+
 <!--
 # 🇨🇻 flag: Cape Verde
 #
@@ -31523,9 +34847,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cape_verde: `:cape_verde:`
 ') }}
 {{ markdown(title="🇨🇼 flag: Curaçao" type="markdown", code='
+
 <!--
 # 🇨🇼 flag: Curaçao
 #
@@ -31541,9 +34867,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :curacao: `:curacao:`
 ') }}
 {{ markdown(title="🇨🇽 flag: Christmas Island" type="markdown", code='
+
 <!--
 # 🇨🇽 flag: Christmas Island
 #
@@ -31559,9 +34887,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :christmas_island: `:christmas_island:`
 ') }}
 {{ markdown(title="🇨🇾 flag: Cyprus" type="markdown", code='
+
 <!--
 # 🇨🇾 flag: Cyprus
 #
@@ -31577,9 +34907,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cyprus: `:cyprus:`
 ') }}
 {{ markdown(title="🇨🇿 flag: Czechia" type="markdown", code='
+
 <!--
 # 🇨🇿 flag: Czechia
 #
@@ -31595,9 +34927,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :czech_republic: `:czech_republic:`
 ') }}
 {{ markdown(title="🇩🇪 flag: Germany" type="markdown", code='
+
 <!--
 # 🇩🇪 flag: Germany
 #
@@ -31616,9 +34950,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :de: `:de:`
 ') }}
 {{ markdown(title="🇩🇬 flag: Diego Garcia" type="markdown", code='
+
 <!--
 # 🇩🇬 flag: Diego Garcia
 #
@@ -31634,9 +34970,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :diego_garcia: `:diego_garcia:`
 ') }}
 {{ markdown(title="🇩🇯 flag: Djibouti" type="markdown", code='
+
 <!--
 # 🇩🇯 flag: Djibouti
 #
@@ -31652,9 +34990,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :djibouti: `:djibouti:`
 ') }}
 {{ markdown(title="🇩🇰 flag: Denmark" type="markdown", code='
+
 <!--
 # 🇩🇰 flag: Denmark
 #
@@ -31670,9 +35010,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :denmark: `:denmark:`
 ') }}
 {{ markdown(title="🇩🇲 flag: Dominica" type="markdown", code='
+
 <!--
 # 🇩🇲 flag: Dominica
 #
@@ -31688,9 +35030,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :dominica: `:dominica:`
 ') }}
 {{ markdown(title="🇩🇴 flag: Dominican Republic" type="markdown", code='
+
 <!--
 # 🇩🇴 flag: Dominican Republic
 #
@@ -31706,9 +35050,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :dominican_republic: `:dominican_republic:`
 ') }}
 {{ markdown(title="🇩🇿 flag: Algeria" type="markdown", code='
+
 <!--
 # 🇩🇿 flag: Algeria
 #
@@ -31724,9 +35070,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :algeria: `:algeria:`
 ') }}
 {{ markdown(title="🇪🇦 flag: Ceuta & Melilla" type="markdown", code='
+
 <!--
 # 🇪🇦 flag: Ceuta & Melilla
 #
@@ -31742,9 +35090,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :ceuta_melilla: `:ceuta_melilla:`
 ') }}
 {{ markdown(title="🇪🇨 flag: Ecuador" type="markdown", code='
+
 <!--
 # 🇪🇨 flag: Ecuador
 #
@@ -31760,9 +35110,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :ecuador: `:ecuador:`
 ') }}
 {{ markdown(title="🇪🇪 flag: Estonia" type="markdown", code='
+
 <!--
 # 🇪🇪 flag: Estonia
 #
@@ -31778,9 +35130,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :estonia: `:estonia:`
 ') }}
 {{ markdown(title="🇪🇬 flag: Egypt" type="markdown", code='
+
 <!--
 # 🇪🇬 flag: Egypt
 #
@@ -31796,9 +35150,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :egypt: `:egypt:`
 ') }}
 {{ markdown(title="🇪🇭 flag: Western Sahara" type="markdown", code='
+
 <!--
 # 🇪🇭 flag: Western Sahara
 #
@@ -31814,9 +35170,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :western_sahara: `:western_sahara:`
 ') }}
 {{ markdown(title="🇪🇷 flag: Eritrea" type="markdown", code='
+
 <!--
 # 🇪🇷 flag: Eritrea
 #
@@ -31832,9 +35190,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :eritrea: `:eritrea:`
 ') }}
 {{ markdown(title="🇪🇸 flag: Spain" type="markdown", code='
+
 <!--
 # 🇪🇸 flag: Spain
 #
@@ -31852,9 +35212,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :es: `:es:`
 ') }}
 {{ markdown(title="🇪🇹 flag: Ethiopia" type="markdown", code='
+
 <!--
 # 🇪🇹 flag: Ethiopia
 #
@@ -31870,9 +35232,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :ethiopia: `:ethiopia:`
 ') }}
 {{ markdown(title="🇪🇺 flag: European Union" type="markdown", code='
+
 <!--
 # 🇪🇺 flag: European Union
 #
@@ -31889,11 +35253,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :eu: `:eu:`
 
 :european_union: `:european_union:`
 ') }}
 {{ markdown(title="🇫🇮 flag: Finland" type="markdown", code='
+
 <!--
 # 🇫🇮 flag: Finland
 #
@@ -31909,9 +35275,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :finland: `:finland:`
 ') }}
 {{ markdown(title="🇫🇯 flag: Fiji" type="markdown", code='
+
 <!--
 # 🇫🇯 flag: Fiji
 #
@@ -31927,9 +35295,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :fiji: `:fiji:`
 ') }}
 {{ markdown(title="🇫🇰 flag: Falkland Islands" type="markdown", code='
+
 <!--
 # 🇫🇰 flag: Falkland Islands
 #
@@ -31945,9 +35315,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :falkland_islands: `:falkland_islands:`
 ') }}
 {{ markdown(title="🇫🇲 flag: Micronesia" type="markdown", code='
+
 <!--
 # 🇫🇲 flag: Micronesia
 #
@@ -31963,9 +35335,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :micronesia: `:micronesia:`
 ') }}
 {{ markdown(title="🇫🇴 flag: Faroe Islands" type="markdown", code='
+
 <!--
 # 🇫🇴 flag: Faroe Islands
 #
@@ -31981,9 +35355,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :faroe_islands: `:faroe_islands:`
 ') }}
 {{ markdown(title="🇫🇷 flag: France" type="markdown", code='
+
 <!--
 # 🇫🇷 flag: France
 #
@@ -32002,9 +35378,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :fr: `:fr:`
 ') }}
 {{ markdown(title="🇬🇦 flag: Gabon" type="markdown", code='
+
 <!--
 # 🇬🇦 flag: Gabon
 #
@@ -32020,9 +35398,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :gabon: `:gabon:`
 ') }}
 {{ markdown(title="🇬🇧 flag: United Kingdom" type="markdown", code='
+
 <!--
 # 🇬🇧 flag: United Kingdom
 #
@@ -32042,11 +35422,13 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :gb: `:gb:`
 
 :uk: `:uk:`
 ') }}
 {{ markdown(title="🇬🇩 flag: Grenada" type="markdown", code='
+
 <!--
 # 🇬🇩 flag: Grenada
 #
@@ -32062,9 +35444,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :grenada: `:grenada:`
 ') }}
 {{ markdown(title="🇬🇪 flag: Georgia" type="markdown", code='
+
 <!--
 # 🇬🇪 flag: Georgia
 #
@@ -32080,9 +35464,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :georgia: `:georgia:`
 ') }}
 {{ markdown(title="🇬🇫 flag: French Guiana" type="markdown", code='
+
 <!--
 # 🇬🇫 flag: French Guiana
 #
@@ -32098,9 +35484,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :french_guiana: `:french_guiana:`
 ') }}
 {{ markdown(title="🇬🇬 flag: Guernsey" type="markdown", code='
+
 <!--
 # 🇬🇬 flag: Guernsey
 #
@@ -32116,9 +35504,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :guernsey: `:guernsey:`
 ') }}
 {{ markdown(title="🇬🇭 flag: Ghana" type="markdown", code='
+
 <!--
 # 🇬🇭 flag: Ghana
 #
@@ -32134,9 +35524,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :ghana: `:ghana:`
 ') }}
 {{ markdown(title="🇬🇮 flag: Gibraltar" type="markdown", code='
+
 <!--
 # 🇬🇮 flag: Gibraltar
 #
@@ -32152,9 +35544,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :gibraltar: `:gibraltar:`
 ') }}
 {{ markdown(title="🇬🇱 flag: Greenland" type="markdown", code='
+
 <!--
 # 🇬🇱 flag: Greenland
 #
@@ -32170,9 +35564,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :greenland: `:greenland:`
 ') }}
 {{ markdown(title="🇬🇲 flag: Gambia" type="markdown", code='
+
 <!--
 # 🇬🇲 flag: Gambia
 #
@@ -32188,9 +35584,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :gambia: `:gambia:`
 ') }}
 {{ markdown(title="🇬🇳 flag: Guinea" type="markdown", code='
+
 <!--
 # 🇬🇳 flag: Guinea
 #
@@ -32206,9 +35604,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :guinea: `:guinea:`
 ') }}
 {{ markdown(title="🇬🇵 flag: Guadeloupe" type="markdown", code='
+
 <!--
 # 🇬🇵 flag: Guadeloupe
 #
@@ -32224,9 +35624,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :guadeloupe: `:guadeloupe:`
 ') }}
 {{ markdown(title="🇬🇶 flag: Equatorial Guinea" type="markdown", code='
+
 <!--
 # 🇬🇶 flag: Equatorial Guinea
 #
@@ -32242,9 +35644,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :equatorial_guinea: `:equatorial_guinea:`
 ') }}
 {{ markdown(title="🇬🇷 flag: Greece" type="markdown", code='
+
 <!--
 # 🇬🇷 flag: Greece
 #
@@ -32260,9 +35664,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :greece: `:greece:`
 ') }}
 {{ markdown(title="🇬🇸 flag: South Georgia & South Sandwich Islands" type="markdown", code='
+
 <!--
 # 🇬🇸 flag: South Georgia & South Sandwich Islands
 #
@@ -32278,9 +35684,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :south_georgia_south_sandwich_islands: `:south_georgia_south_sandwich_islands:`
 ') }}
 {{ markdown(title="🇬🇹 flag: Guatemala" type="markdown", code='
+
 <!--
 # 🇬🇹 flag: Guatemala
 #
@@ -32296,9 +35704,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :guatemala: `:guatemala:`
 ') }}
 {{ markdown(title="🇬🇺 flag: Guam" type="markdown", code='
+
 <!--
 # 🇬🇺 flag: Guam
 #
@@ -32314,9 +35724,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :guam: `:guam:`
 ') }}
 {{ markdown(title="🇬🇼 flag: Guinea-Bissau" type="markdown", code='
+
 <!--
 # 🇬🇼 flag: Guinea-Bissau
 #
@@ -32332,9 +35744,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :guinea_bissau: `:guinea_bissau:`
 ') }}
 {{ markdown(title="🇬🇾 flag: Guyana" type="markdown", code='
+
 <!--
 # 🇬🇾 flag: Guyana
 #
@@ -32350,9 +35764,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :guyana: `:guyana:`
 ') }}
 {{ markdown(title="🇭🇰 flag: Hong Kong SAR China" type="markdown", code='
+
 <!--
 # 🇭🇰 flag: Hong Kong SAR China
 #
@@ -32368,9 +35784,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :hong_kong: `:hong_kong:`
 ') }}
 {{ markdown(title="🇭🇲 flag: Heard & McDonald Islands" type="markdown", code='
+
 <!--
 # 🇭🇲 flag: Heard & McDonald Islands
 #
@@ -32386,9 +35804,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :heard_mcdonald_islands: `:heard_mcdonald_islands:`
 ') }}
 {{ markdown(title="🇭🇳 flag: Honduras" type="markdown", code='
+
 <!--
 # 🇭🇳 flag: Honduras
 #
@@ -32404,9 +35824,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :honduras: `:honduras:`
 ') }}
 {{ markdown(title="🇭🇷 flag: Croatia" type="markdown", code='
+
 <!--
 # 🇭🇷 flag: Croatia
 #
@@ -32422,9 +35844,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :croatia: `:croatia:`
 ') }}
 {{ markdown(title="🇭🇹 flag: Haiti" type="markdown", code='
+
 <!--
 # 🇭🇹 flag: Haiti
 #
@@ -32440,9 +35864,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :haiti: `:haiti:`
 ') }}
 {{ markdown(title="🇭🇺 flag: Hungary" type="markdown", code='
+
 <!--
 # 🇭🇺 flag: Hungary
 #
@@ -32458,9 +35884,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :hungary: `:hungary:`
 ') }}
 {{ markdown(title="🇮🇨 flag: Canary Islands" type="markdown", code='
+
 <!--
 # 🇮🇨 flag: Canary Islands
 #
@@ -32476,9 +35904,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :canary_islands: `:canary_islands:`
 ') }}
 {{ markdown(title="🇮🇩 flag: Indonesia" type="markdown", code='
+
 <!--
 # 🇮🇩 flag: Indonesia
 #
@@ -32494,9 +35924,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :indonesia: `:indonesia:`
 ') }}
 {{ markdown(title="🇮🇪 flag: Ireland" type="markdown", code='
+
 <!--
 # 🇮🇪 flag: Ireland
 #
@@ -32512,9 +35944,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :ireland: `:ireland:`
 ') }}
 {{ markdown(title="🇮🇱 flag: Israel" type="markdown", code='
+
 <!--
 # 🇮🇱 flag: Israel
 #
@@ -32530,9 +35964,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :israel: `:israel:`
 ') }}
 {{ markdown(title="🇮🇲 flag: Isle of Man" type="markdown", code='
+
 <!--
 # 🇮🇲 flag: Isle of Man
 #
@@ -32548,9 +35984,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :isle_of_man: `:isle_of_man:`
 ') }}
 {{ markdown(title="🇮🇳 flag: India" type="markdown", code='
+
 <!--
 # 🇮🇳 flag: India
 #
@@ -32566,9 +36004,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :india: `:india:`
 ') }}
 {{ markdown(title="🇮🇴 flag: British Indian Ocean Territory" type="markdown", code='
+
 <!--
 # 🇮🇴 flag: British Indian Ocean Territory
 #
@@ -32584,9 +36024,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :british_indian_ocean_territory: `:british_indian_ocean_territory:`
 ') }}
 {{ markdown(title="🇮🇶 flag: Iraq" type="markdown", code='
+
 <!--
 # 🇮🇶 flag: Iraq
 #
@@ -32602,9 +36044,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :iraq: `:iraq:`
 ') }}
 {{ markdown(title="🇮🇷 flag: Iran" type="markdown", code='
+
 <!--
 # 🇮🇷 flag: Iran
 #
@@ -32620,9 +36064,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :iran: `:iran:`
 ') }}
 {{ markdown(title="🇮🇸 flag: Iceland" type="markdown", code='
+
 <!--
 # 🇮🇸 flag: Iceland
 #
@@ -32638,9 +36084,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :iceland: `:iceland:`
 ') }}
 {{ markdown(title="🇮🇹 flag: Italy" type="markdown", code='
+
 <!--
 # 🇮🇹 flag: Italy
 #
@@ -32658,9 +36106,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :it: `:it:`
 ') }}
 {{ markdown(title="🇯🇪 flag: Jersey" type="markdown", code='
+
 <!--
 # 🇯🇪 flag: Jersey
 #
@@ -32676,9 +36126,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :jersey: `:jersey:`
 ') }}
 {{ markdown(title="🇯🇲 flag: Jamaica" type="markdown", code='
+
 <!--
 # 🇯🇲 flag: Jamaica
 #
@@ -32694,9 +36146,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :jamaica: `:jamaica:`
 ') }}
 {{ markdown(title="🇯🇴 flag: Jordan" type="markdown", code='
+
 <!--
 # 🇯🇴 flag: Jordan
 #
@@ -32712,9 +36166,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :jordan: `:jordan:`
 ') }}
 {{ markdown(title="🇯🇵 flag: Japan" type="markdown", code='
+
 <!--
 # 🇯🇵 flag: Japan
 #
@@ -32732,9 +36188,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :jp: `:jp:`
 ') }}
 {{ markdown(title="🇰🇪 flag: Kenya" type="markdown", code='
+
 <!--
 # 🇰🇪 flag: Kenya
 #
@@ -32750,9 +36208,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :kenya: `:kenya:`
 ') }}
 {{ markdown(title="🇰🇬 flag: Kyrgyzstan" type="markdown", code='
+
 <!--
 # 🇰🇬 flag: Kyrgyzstan
 #
@@ -32768,9 +36228,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :kyrgyzstan: `:kyrgyzstan:`
 ') }}
 {{ markdown(title="🇰🇭 flag: Cambodia" type="markdown", code='
+
 <!--
 # 🇰🇭 flag: Cambodia
 #
@@ -32786,9 +36248,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cambodia: `:cambodia:`
 ') }}
 {{ markdown(title="🇰🇮 flag: Kiribati" type="markdown", code='
+
 <!--
 # 🇰🇮 flag: Kiribati
 #
@@ -32804,9 +36268,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :kiribati: `:kiribati:`
 ') }}
 {{ markdown(title="🇰🇲 flag: Comoros" type="markdown", code='
+
 <!--
 # 🇰🇲 flag: Comoros
 #
@@ -32822,9 +36288,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :comoros: `:comoros:`
 ') }}
 {{ markdown(title="🇰🇳 flag: St. Kitts & Nevis" type="markdown", code='
+
 <!--
 # 🇰🇳 flag: St. Kitts & Nevis
 #
@@ -32840,9 +36308,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :st_kitts_nevis: `:st_kitts_nevis:`
 ') }}
 {{ markdown(title="🇰🇵 flag: North Korea" type="markdown", code='
+
 <!--
 # 🇰🇵 flag: North Korea
 #
@@ -32858,9 +36328,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :north_korea: `:north_korea:`
 ') }}
 {{ markdown(title="🇰🇷 flag: South Korea" type="markdown", code='
+
 <!--
 # 🇰🇷 flag: South Korea
 #
@@ -32878,9 +36350,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :kr: `:kr:`
 ') }}
 {{ markdown(title="🇰🇼 flag: Kuwait" type="markdown", code='
+
 <!--
 # 🇰🇼 flag: Kuwait
 #
@@ -32896,9 +36370,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :kuwait: `:kuwait:`
 ') }}
 {{ markdown(title="🇰🇾 flag: Cayman Islands" type="markdown", code='
+
 <!--
 # 🇰🇾 flag: Cayman Islands
 #
@@ -32914,9 +36390,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :cayman_islands: `:cayman_islands:`
 ') }}
 {{ markdown(title="🇰🇿 flag: Kazakhstan" type="markdown", code='
+
 <!--
 # 🇰🇿 flag: Kazakhstan
 #
@@ -32932,9 +36410,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :kazakhstan: `:kazakhstan:`
 ') }}
 {{ markdown(title="🇱🇦 flag: Laos" type="markdown", code='
+
 <!--
 # 🇱🇦 flag: Laos
 #
@@ -32950,9 +36430,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :laos: `:laos:`
 ') }}
 {{ markdown(title="🇱🇧 flag: Lebanon" type="markdown", code='
+
 <!--
 # 🇱🇧 flag: Lebanon
 #
@@ -32968,9 +36450,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :lebanon: `:lebanon:`
 ') }}
 {{ markdown(title="🇱🇨 flag: St. Lucia" type="markdown", code='
+
 <!--
 # 🇱🇨 flag: St. Lucia
 #
@@ -32986,9 +36470,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :st_lucia: `:st_lucia:`
 ') }}
 {{ markdown(title="🇱🇮 flag: Liechtenstein" type="markdown", code='
+
 <!--
 # 🇱🇮 flag: Liechtenstein
 #
@@ -33004,9 +36490,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :liechtenstein: `:liechtenstein:`
 ') }}
 {{ markdown(title="🇱🇰 flag: Sri Lanka" type="markdown", code='
+
 <!--
 # 🇱🇰 flag: Sri Lanka
 #
@@ -33022,9 +36510,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :sri_lanka: `:sri_lanka:`
 ') }}
 {{ markdown(title="🇱🇷 flag: Liberia" type="markdown", code='
+
 <!--
 # 🇱🇷 flag: Liberia
 #
@@ -33040,9 +36530,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :liberia: `:liberia:`
 ') }}
 {{ markdown(title="🇱🇸 flag: Lesotho" type="markdown", code='
+
 <!--
 # 🇱🇸 flag: Lesotho
 #
@@ -33058,9 +36550,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :lesotho: `:lesotho:`
 ') }}
 {{ markdown(title="🇱🇹 flag: Lithuania" type="markdown", code='
+
 <!--
 # 🇱🇹 flag: Lithuania
 #
@@ -33076,9 +36570,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :lithuania: `:lithuania:`
 ') }}
 {{ markdown(title="🇱🇺 flag: Luxembourg" type="markdown", code='
+
 <!--
 # 🇱🇺 flag: Luxembourg
 #
@@ -33094,9 +36590,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :luxembourg: `:luxembourg:`
 ') }}
 {{ markdown(title="🇱🇻 flag: Latvia" type="markdown", code='
+
 <!--
 # 🇱🇻 flag: Latvia
 #
@@ -33112,9 +36610,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :latvia: `:latvia:`
 ') }}
 {{ markdown(title="🇱🇾 flag: Libya" type="markdown", code='
+
 <!--
 # 🇱🇾 flag: Libya
 #
@@ -33130,9 +36630,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :libya: `:libya:`
 ') }}
 {{ markdown(title="🇲🇦 flag: Morocco" type="markdown", code='
+
 <!--
 # 🇲🇦 flag: Morocco
 #
@@ -33148,9 +36650,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :morocco: `:morocco:`
 ') }}
 {{ markdown(title="🇲🇨 flag: Monaco" type="markdown", code='
+
 <!--
 # 🇲🇨 flag: Monaco
 #
@@ -33166,9 +36670,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :monaco: `:monaco:`
 ') }}
 {{ markdown(title="🇲🇩 flag: Moldova" type="markdown", code='
+
 <!--
 # 🇲🇩 flag: Moldova
 #
@@ -33184,9 +36690,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :moldova: `:moldova:`
 ') }}
 {{ markdown(title="🇲🇪 flag: Montenegro" type="markdown", code='
+
 <!--
 # 🇲🇪 flag: Montenegro
 #
@@ -33202,9 +36710,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :montenegro: `:montenegro:`
 ') }}
 {{ markdown(title="🇲🇫 flag: St. Martin" type="markdown", code='
+
 <!--
 # 🇲🇫 flag: St. Martin
 #
@@ -33220,9 +36730,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :st_martin: `:st_martin:`
 ') }}
 {{ markdown(title="🇲🇬 flag: Madagascar" type="markdown", code='
+
 <!--
 # 🇲🇬 flag: Madagascar
 #
@@ -33238,9 +36750,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :madagascar: `:madagascar:`
 ') }}
 {{ markdown(title="🇲🇭 flag: Marshall Islands" type="markdown", code='
+
 <!--
 # 🇲🇭 flag: Marshall Islands
 #
@@ -33256,9 +36770,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :marshall_islands: `:marshall_islands:`
 ') }}
 {{ markdown(title="🇲🇰 flag: North Macedonia" type="markdown", code='
+
 <!--
 # 🇲🇰 flag: North Macedonia
 #
@@ -33274,9 +36790,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :macedonia: `:macedonia:`
 ') }}
 {{ markdown(title="🇲🇱 flag: Mali" type="markdown", code='
+
 <!--
 # 🇲🇱 flag: Mali
 #
@@ -33292,9 +36810,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :mali: `:mali:`
 ') }}
 {{ markdown(title="🇲🇲 flag: Myanmar (Burma)" type="markdown", code='
+
 <!--
 # 🇲🇲 flag: Myanmar (Burma)
 #
@@ -33312,9 +36832,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :myanmar: `:myanmar:`
 ') }}
 {{ markdown(title="🇲🇳 flag: Mongolia" type="markdown", code='
+
 <!--
 # 🇲🇳 flag: Mongolia
 #
@@ -33330,9 +36852,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :mongolia: `:mongolia:`
 ') }}
 {{ markdown(title="🇲🇴 flag: Macao SAR China" type="markdown", code='
+
 <!--
 # 🇲🇴 flag: Macao SAR China
 #
@@ -33348,9 +36872,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :macau: `:macau:`
 ') }}
 {{ markdown(title="🇲🇵 flag: Northern Mariana Islands" type="markdown", code='
+
 <!--
 # 🇲🇵 flag: Northern Mariana Islands
 #
@@ -33366,9 +36892,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :northern_mariana_islands: `:northern_mariana_islands:`
 ') }}
 {{ markdown(title="🇲🇶 flag: Martinique" type="markdown", code='
+
 <!--
 # 🇲🇶 flag: Martinique
 #
@@ -33384,9 +36912,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :martinique: `:martinique:`
 ') }}
 {{ markdown(title="🇲🇷 flag: Mauritania" type="markdown", code='
+
 <!--
 # 🇲🇷 flag: Mauritania
 #
@@ -33402,9 +36932,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :mauritania: `:mauritania:`
 ') }}
 {{ markdown(title="🇲🇸 flag: Montserrat" type="markdown", code='
+
 <!--
 # 🇲🇸 flag: Montserrat
 #
@@ -33420,9 +36952,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :montserrat: `:montserrat:`
 ') }}
 {{ markdown(title="🇲🇹 flag: Malta" type="markdown", code='
+
 <!--
 # 🇲🇹 flag: Malta
 #
@@ -33438,9 +36972,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :malta: `:malta:`
 ') }}
 {{ markdown(title="🇲🇺 flag: Mauritius" type="markdown", code='
+
 <!--
 # 🇲🇺 flag: Mauritius
 #
@@ -33456,9 +36992,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :mauritius: `:mauritius:`
 ') }}
 {{ markdown(title="🇲🇻 flag: Maldives" type="markdown", code='
+
 <!--
 # 🇲🇻 flag: Maldives
 #
@@ -33474,9 +37012,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :maldives: `:maldives:`
 ') }}
 {{ markdown(title="🇲🇼 flag: Malawi" type="markdown", code='
+
 <!--
 # 🇲🇼 flag: Malawi
 #
@@ -33492,9 +37032,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :malawi: `:malawi:`
 ') }}
 {{ markdown(title="🇲🇽 flag: Mexico" type="markdown", code='
+
 <!--
 # 🇲🇽 flag: Mexico
 #
@@ -33510,9 +37052,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :mexico: `:mexico:`
 ') }}
 {{ markdown(title="🇲🇾 flag: Malaysia" type="markdown", code='
+
 <!--
 # 🇲🇾 flag: Malaysia
 #
@@ -33528,9 +37072,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :malaysia: `:malaysia:`
 ') }}
 {{ markdown(title="🇲🇿 flag: Mozambique" type="markdown", code='
+
 <!--
 # 🇲🇿 flag: Mozambique
 #
@@ -33546,9 +37092,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :mozambique: `:mozambique:`
 ') }}
 {{ markdown(title="🇳🇦 flag: Namibia" type="markdown", code='
+
 <!--
 # 🇳🇦 flag: Namibia
 #
@@ -33564,9 +37112,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :namibia: `:namibia:`
 ') }}
 {{ markdown(title="🇳🇨 flag: New Caledonia" type="markdown", code='
+
 <!--
 # 🇳🇨 flag: New Caledonia
 #
@@ -33582,9 +37132,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :new_caledonia: `:new_caledonia:`
 ') }}
 {{ markdown(title="🇳🇪 flag: Niger" type="markdown", code='
+
 <!--
 # 🇳🇪 flag: Niger
 #
@@ -33600,9 +37152,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :niger: `:niger:`
 ') }}
 {{ markdown(title="🇳🇫 flag: Norfolk Island" type="markdown", code='
+
 <!--
 # 🇳🇫 flag: Norfolk Island
 #
@@ -33618,9 +37172,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :norfolk_island: `:norfolk_island:`
 ') }}
 {{ markdown(title="🇳🇬 flag: Nigeria" type="markdown", code='
+
 <!--
 # 🇳🇬 flag: Nigeria
 #
@@ -33636,9 +37192,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :nigeria: `:nigeria:`
 ') }}
 {{ markdown(title="🇳🇮 flag: Nicaragua" type="markdown", code='
+
 <!--
 # 🇳🇮 flag: Nicaragua
 #
@@ -33654,9 +37212,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :nicaragua: `:nicaragua:`
 ') }}
 {{ markdown(title="🇳🇱 flag: Netherlands" type="markdown", code='
+
 <!--
 # 🇳🇱 flag: Netherlands
 #
@@ -33672,9 +37232,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :netherlands: `:netherlands:`
 ') }}
 {{ markdown(title="🇳🇴 flag: Norway" type="markdown", code='
+
 <!--
 # 🇳🇴 flag: Norway
 #
@@ -33690,9 +37252,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :norway: `:norway:`
 ') }}
 {{ markdown(title="🇳🇵 flag: Nepal" type="markdown", code='
+
 <!--
 # 🇳🇵 flag: Nepal
 #
@@ -33708,9 +37272,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :nepal: `:nepal:`
 ') }}
 {{ markdown(title="🇳🇷 flag: Nauru" type="markdown", code='
+
 <!--
 # 🇳🇷 flag: Nauru
 #
@@ -33726,9 +37292,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :nauru: `:nauru:`
 ') }}
 {{ markdown(title="🇳🇺 flag: Niue" type="markdown", code='
+
 <!--
 # 🇳🇺 flag: Niue
 #
@@ -33744,9 +37312,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :niue: `:niue:`
 ') }}
 {{ markdown(title="🇳🇿 flag: New Zealand" type="markdown", code='
+
 <!--
 # 🇳🇿 flag: New Zealand
 #
@@ -33762,9 +37332,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :new_zealand: `:new_zealand:`
 ') }}
 {{ markdown(title="🇴🇲 flag: Oman" type="markdown", code='
+
 <!--
 # 🇴🇲 flag: Oman
 #
@@ -33780,9 +37352,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :oman: `:oman:`
 ') }}
 {{ markdown(title="🇵🇦 flag: Panama" type="markdown", code='
+
 <!--
 # 🇵🇦 flag: Panama
 #
@@ -33798,9 +37372,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :panama: `:panama:`
 ') }}
 {{ markdown(title="🇵🇪 flag: Peru" type="markdown", code='
+
 <!--
 # 🇵🇪 flag: Peru
 #
@@ -33816,9 +37392,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :peru: `:peru:`
 ') }}
 {{ markdown(title="🇵🇫 flag: French Polynesia" type="markdown", code='
+
 <!--
 # 🇵🇫 flag: French Polynesia
 #
@@ -33834,9 +37412,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :french_polynesia: `:french_polynesia:`
 ') }}
 {{ markdown(title="🇵🇬 flag: Papua New Guinea" type="markdown", code='
+
 <!--
 # 🇵🇬 flag: Papua New Guinea
 #
@@ -33852,9 +37432,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :papua_new_guinea: `:papua_new_guinea:`
 ') }}
 {{ markdown(title="🇵🇭 flag: Philippines" type="markdown", code='
+
 <!--
 # 🇵🇭 flag: Philippines
 #
@@ -33870,9 +37452,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :philippines: `:philippines:`
 ') }}
 {{ markdown(title="🇵🇰 flag: Pakistan" type="markdown", code='
+
 <!--
 # 🇵🇰 flag: Pakistan
 #
@@ -33888,9 +37472,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :pakistan: `:pakistan:`
 ') }}
 {{ markdown(title="🇵🇱 flag: Poland" type="markdown", code='
+
 <!--
 # 🇵🇱 flag: Poland
 #
@@ -33906,9 +37492,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :poland: `:poland:`
 ') }}
 {{ markdown(title="🇵🇲 flag: St. Pierre & Miquelon" type="markdown", code='
+
 <!--
 # 🇵🇲 flag: St. Pierre & Miquelon
 #
@@ -33924,9 +37512,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :st_pierre_miquelon: `:st_pierre_miquelon:`
 ') }}
 {{ markdown(title="🇵🇳 flag: Pitcairn Islands" type="markdown", code='
+
 <!--
 # 🇵🇳 flag: Pitcairn Islands
 #
@@ -33942,9 +37532,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :pitcairn_islands: `:pitcairn_islands:`
 ') }}
 {{ markdown(title="🇵🇷 flag: Puerto Rico" type="markdown", code='
+
 <!--
 # 🇵🇷 flag: Puerto Rico
 #
@@ -33960,9 +37552,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :puerto_rico: `:puerto_rico:`
 ') }}
 {{ markdown(title="🇵🇸 flag: Palestinian Territories" type="markdown", code='
+
 <!--
 # 🇵🇸 flag: Palestinian Territories
 #
@@ -33978,9 +37572,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :palestinian_territories: `:palestinian_territories:`
 ') }}
 {{ markdown(title="🇵🇹 flag: Portugal" type="markdown", code='
+
 <!--
 # 🇵🇹 flag: Portugal
 #
@@ -33996,9 +37592,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :portugal: `:portugal:`
 ') }}
 {{ markdown(title="🇵🇼 flag: Palau" type="markdown", code='
+
 <!--
 # 🇵🇼 flag: Palau
 #
@@ -34014,9 +37612,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :palau: `:palau:`
 ') }}
 {{ markdown(title="🇵🇾 flag: Paraguay" type="markdown", code='
+
 <!--
 # 🇵🇾 flag: Paraguay
 #
@@ -34032,9 +37632,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :paraguay: `:paraguay:`
 ') }}
 {{ markdown(title="🇶🇦 flag: Qatar" type="markdown", code='
+
 <!--
 # 🇶🇦 flag: Qatar
 #
@@ -34050,9 +37652,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :qatar: `:qatar:`
 ') }}
 {{ markdown(title="🇷🇪 flag: Réunion" type="markdown", code='
+
 <!--
 # 🇷🇪 flag: Réunion
 #
@@ -34068,9 +37672,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :reunion: `:reunion:`
 ') }}
 {{ markdown(title="🇷🇴 flag: Romania" type="markdown", code='
+
 <!--
 # 🇷🇴 flag: Romania
 #
@@ -34086,9 +37692,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :romania: `:romania:`
 ') }}
 {{ markdown(title="🇷🇸 flag: Serbia" type="markdown", code='
+
 <!--
 # 🇷🇸 flag: Serbia
 #
@@ -34104,9 +37712,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :serbia: `:serbia:`
 ') }}
 {{ markdown(title="🇷🇺 flag: Russia" type="markdown", code='
+
 <!--
 # 🇷🇺 flag: Russia
 #
@@ -34124,9 +37734,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :ru: `:ru:`
 ') }}
 {{ markdown(title="🇷🇼 flag: Rwanda" type="markdown", code='
+
 <!--
 # 🇷🇼 flag: Rwanda
 #
@@ -34142,9 +37754,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :rwanda: `:rwanda:`
 ') }}
 {{ markdown(title="🇸🇦 flag: Saudi Arabia" type="markdown", code='
+
 <!--
 # 🇸🇦 flag: Saudi Arabia
 #
@@ -34160,9 +37774,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :saudi_arabia: `:saudi_arabia:`
 ') }}
 {{ markdown(title="🇸🇧 flag: Solomon Islands" type="markdown", code='
+
 <!--
 # 🇸🇧 flag: Solomon Islands
 #
@@ -34178,9 +37794,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :solomon_islands: `:solomon_islands:`
 ') }}
 {{ markdown(title="🇸🇨 flag: Seychelles" type="markdown", code='
+
 <!--
 # 🇸🇨 flag: Seychelles
 #
@@ -34196,9 +37814,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :seychelles: `:seychelles:`
 ') }}
 {{ markdown(title="🇸🇩 flag: Sudan" type="markdown", code='
+
 <!--
 # 🇸🇩 flag: Sudan
 #
@@ -34214,9 +37834,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :sudan: `:sudan:`
 ') }}
 {{ markdown(title="🇸🇪 flag: Sweden" type="markdown", code='
+
 <!--
 # 🇸🇪 flag: Sweden
 #
@@ -34232,9 +37854,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :sweden: `:sweden:`
 ') }}
 {{ markdown(title="🇸🇬 flag: Singapore" type="markdown", code='
+
 <!--
 # 🇸🇬 flag: Singapore
 #
@@ -34250,9 +37874,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :singapore: `:singapore:`
 ') }}
 {{ markdown(title="🇸🇭 flag: St. Helena" type="markdown", code='
+
 <!--
 # 🇸🇭 flag: St. Helena
 #
@@ -34268,9 +37894,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :st_helena: `:st_helena:`
 ') }}
 {{ markdown(title="🇸🇮 flag: Slovenia" type="markdown", code='
+
 <!--
 # 🇸🇮 flag: Slovenia
 #
@@ -34286,9 +37914,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :slovenia: `:slovenia:`
 ') }}
 {{ markdown(title="🇸🇯 flag: Svalbard & Jan Mayen" type="markdown", code='
+
 <!--
 # 🇸🇯 flag: Svalbard & Jan Mayen
 #
@@ -34304,9 +37934,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :svalbard_jan_mayen: `:svalbard_jan_mayen:`
 ') }}
 {{ markdown(title="🇸🇰 flag: Slovakia" type="markdown", code='
+
 <!--
 # 🇸🇰 flag: Slovakia
 #
@@ -34322,9 +37954,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :slovakia: `:slovakia:`
 ') }}
 {{ markdown(title="🇸🇱 flag: Sierra Leone" type="markdown", code='
+
 <!--
 # 🇸🇱 flag: Sierra Leone
 #
@@ -34340,9 +37974,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :sierra_leone: `:sierra_leone:`
 ') }}
 {{ markdown(title="🇸🇲 flag: San Marino" type="markdown", code='
+
 <!--
 # 🇸🇲 flag: San Marino
 #
@@ -34358,9 +37994,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :san_marino: `:san_marino:`
 ') }}
 {{ markdown(title="🇸🇳 flag: Senegal" type="markdown", code='
+
 <!--
 # 🇸🇳 flag: Senegal
 #
@@ -34376,9 +38014,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :senegal: `:senegal:`
 ') }}
 {{ markdown(title="🇸🇴 flag: Somalia" type="markdown", code='
+
 <!--
 # 🇸🇴 flag: Somalia
 #
@@ -34394,9 +38034,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :somalia: `:somalia:`
 ') }}
 {{ markdown(title="🇸🇷 flag: Suriname" type="markdown", code='
+
 <!--
 # 🇸🇷 flag: Suriname
 #
@@ -34412,9 +38054,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :suriname: `:suriname:`
 ') }}
 {{ markdown(title="🇸🇸 flag: South Sudan" type="markdown", code='
+
 <!--
 # 🇸🇸 flag: South Sudan
 #
@@ -34430,9 +38074,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :south_sudan: `:south_sudan:`
 ') }}
 {{ markdown(title="🇸🇹 flag: São Tomé & Príncipe" type="markdown", code='
+
 <!--
 # 🇸🇹 flag: São Tomé & Príncipe
 #
@@ -34448,9 +38094,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :sao_tome_principe: `:sao_tome_principe:`
 ') }}
 {{ markdown(title="🇸🇻 flag: El Salvador" type="markdown", code='
+
 <!--
 # 🇸🇻 flag: El Salvador
 #
@@ -34466,9 +38114,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :el_salvador: `:el_salvador:`
 ') }}
 {{ markdown(title="🇸🇽 flag: Sint Maarten" type="markdown", code='
+
 <!--
 # 🇸🇽 flag: Sint Maarten
 #
@@ -34484,9 +38134,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :sint_maarten: `:sint_maarten:`
 ') }}
 {{ markdown(title="🇸🇾 flag: Syria" type="markdown", code='
+
 <!--
 # 🇸🇾 flag: Syria
 #
@@ -34502,9 +38154,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :syria: `:syria:`
 ') }}
 {{ markdown(title="🇸🇿 flag: Eswatini" type="markdown", code='
+
 <!--
 # 🇸🇿 flag: Eswatini
 #
@@ -34520,9 +38174,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :swaziland: `:swaziland:`
 ') }}
 {{ markdown(title="🇹🇦 flag: Tristan da Cunha" type="markdown", code='
+
 <!--
 # 🇹🇦 flag: Tristan da Cunha
 #
@@ -34538,9 +38194,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :tristan_da_cunha: `:tristan_da_cunha:`
 ') }}
 {{ markdown(title="🇹🇨 flag: Turks & Caicos Islands" type="markdown", code='
+
 <!--
 # 🇹🇨 flag: Turks & Caicos Islands
 #
@@ -34556,9 +38214,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :turks_caicos_islands: `:turks_caicos_islands:`
 ') }}
 {{ markdown(title="🇹🇩 flag: Chad" type="markdown", code='
+
 <!--
 # 🇹🇩 flag: Chad
 #
@@ -34574,9 +38234,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :chad: `:chad:`
 ') }}
 {{ markdown(title="🇹🇫 flag: French Southern Territories" type="markdown", code='
+
 <!--
 # 🇹🇫 flag: French Southern Territories
 #
@@ -34592,9 +38254,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :french_southern_territories: `:french_southern_territories:`
 ') }}
 {{ markdown(title="🇹🇬 flag: Togo" type="markdown", code='
+
 <!--
 # 🇹🇬 flag: Togo
 #
@@ -34610,9 +38274,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :togo: `:togo:`
 ') }}
 {{ markdown(title="🇹🇭 flag: Thailand" type="markdown", code='
+
 <!--
 # 🇹🇭 flag: Thailand
 #
@@ -34628,9 +38294,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :thailand: `:thailand:`
 ') }}
 {{ markdown(title="🇹🇯 flag: Tajikistan" type="markdown", code='
+
 <!--
 # 🇹🇯 flag: Tajikistan
 #
@@ -34646,9 +38314,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :tajikistan: `:tajikistan:`
 ') }}
 {{ markdown(title="🇹🇰 flag: Tokelau" type="markdown", code='
+
 <!--
 # 🇹🇰 flag: Tokelau
 #
@@ -34664,9 +38334,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :tokelau: `:tokelau:`
 ') }}
 {{ markdown(title="🇹🇱 flag: Timor-Leste" type="markdown", code='
+
 <!--
 # 🇹🇱 flag: Timor-Leste
 #
@@ -34682,9 +38354,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :timor_leste: `:timor_leste:`
 ') }}
 {{ markdown(title="🇹🇲 flag: Turkmenistan" type="markdown", code='
+
 <!--
 # 🇹🇲 flag: Turkmenistan
 #
@@ -34700,9 +38374,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :turkmenistan: `:turkmenistan:`
 ') }}
 {{ markdown(title="🇹🇳 flag: Tunisia" type="markdown", code='
+
 <!--
 # 🇹🇳 flag: Tunisia
 #
@@ -34718,9 +38394,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :tunisia: `:tunisia:`
 ') }}
 {{ markdown(title="🇹🇴 flag: Tonga" type="markdown", code='
+
 <!--
 # 🇹🇴 flag: Tonga
 #
@@ -34736,9 +38414,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :tonga: `:tonga:`
 ') }}
 {{ markdown(title="🇹🇷 flag: Turkey" type="markdown", code='
+
 <!--
 # 🇹🇷 flag: Turkey
 #
@@ -34756,9 +38436,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.1"
 # }
 -->
+
 :tr: `:tr:`
 ') }}
 {{ markdown(title="🇹🇹 flag: Trinidad & Tobago" type="markdown", code='
+
 <!--
 # 🇹🇹 flag: Trinidad & Tobago
 #
@@ -34774,9 +38456,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :trinidad_tobago: `:trinidad_tobago:`
 ') }}
 {{ markdown(title="🇹🇻 flag: Tuvalu" type="markdown", code='
+
 <!--
 # 🇹🇻 flag: Tuvalu
 #
@@ -34792,9 +38476,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :tuvalu: `:tuvalu:`
 ') }}
 {{ markdown(title="🇹🇼 flag: Taiwan" type="markdown", code='
+
 <!--
 # 🇹🇼 flag: Taiwan
 #
@@ -34810,9 +38496,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :taiwan: `:taiwan:`
 ') }}
 {{ markdown(title="🇹🇿 flag: Tanzania" type="markdown", code='
+
 <!--
 # 🇹🇿 flag: Tanzania
 #
@@ -34828,9 +38516,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :tanzania: `:tanzania:`
 ') }}
 {{ markdown(title="🇺🇦 flag: Ukraine" type="markdown", code='
+
 <!--
 # 🇺🇦 flag: Ukraine
 #
@@ -34846,9 +38536,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :ukraine: `:ukraine:`
 ') }}
 {{ markdown(title="🇺🇬 flag: Uganda" type="markdown", code='
+
 <!--
 # 🇺🇬 flag: Uganda
 #
@@ -34864,9 +38556,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :uganda: `:uganda:`
 ') }}
 {{ markdown(title="🇺🇲 flag: U.S. Outlying Islands" type="markdown", code='
+
 <!--
 # 🇺🇲 flag: U.S. Outlying Islands
 #
@@ -34882,9 +38576,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :us_outlying_islands: `:us_outlying_islands:`
 ') }}
 {{ markdown(title="🇺🇳 flag: United Nations" type="markdown", code='
+
 <!--
 # 🇺🇳 flag: United Nations
 #
@@ -34900,9 +38596,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :united_nations: `:united_nations:`
 ') }}
 {{ markdown(title="🇺🇸 flag: United States" type="markdown", code='
+
 <!--
 # 🇺🇸 flag: United States
 #
@@ -34922,9 +38620,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "6.0"
 # }
 -->
+
 :us: `:us:`
 ') }}
 {{ markdown(title="🇺🇾 flag: Uruguay" type="markdown", code='
+
 <!--
 # 🇺🇾 flag: Uruguay
 #
@@ -34940,9 +38640,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :uruguay: `:uruguay:`
 ') }}
 {{ markdown(title="🇺🇿 flag: Uzbekistan" type="markdown", code='
+
 <!--
 # 🇺🇿 flag: Uzbekistan
 #
@@ -34958,9 +38660,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :uzbekistan: `:uzbekistan:`
 ') }}
 {{ markdown(title="🇻🇦 flag: Vatican City" type="markdown", code='
+
 <!--
 # 🇻🇦 flag: Vatican City
 #
@@ -34976,9 +38680,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :vatican_city: `:vatican_city:`
 ') }}
 {{ markdown(title="🇻🇨 flag: St. Vincent & Grenadines" type="markdown", code='
+
 <!--
 # 🇻🇨 flag: St. Vincent & Grenadines
 #
@@ -34994,9 +38700,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :st_vincent_grenadines: `:st_vincent_grenadines:`
 ') }}
 {{ markdown(title="🇻🇪 flag: Venezuela" type="markdown", code='
+
 <!--
 # 🇻🇪 flag: Venezuela
 #
@@ -35012,9 +38720,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :venezuela: `:venezuela:`
 ') }}
 {{ markdown(title="🇻🇬 flag: British Virgin Islands" type="markdown", code='
+
 <!--
 # 🇻🇬 flag: British Virgin Islands
 #
@@ -35030,9 +38740,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :british_virgin_islands: `:british_virgin_islands:`
 ') }}
 {{ markdown(title="🇻🇮 flag: U.S. Virgin Islands" type="markdown", code='
+
 <!--
 # 🇻🇮 flag: U.S. Virgin Islands
 #
@@ -35048,9 +38760,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :us_virgin_islands: `:us_virgin_islands:`
 ') }}
 {{ markdown(title="🇻🇳 flag: Vietnam" type="markdown", code='
+
 <!--
 # 🇻🇳 flag: Vietnam
 #
@@ -35066,9 +38780,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :vietnam: `:vietnam:`
 ') }}
 {{ markdown(title="🇻🇺 flag: Vanuatu" type="markdown", code='
+
 <!--
 # 🇻🇺 flag: Vanuatu
 #
@@ -35084,9 +38800,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :vanuatu: `:vanuatu:`
 ') }}
 {{ markdown(title="🇼🇫 flag: Wallis & Futuna" type="markdown", code='
+
 <!--
 # 🇼🇫 flag: Wallis & Futuna
 #
@@ -35102,9 +38820,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :wallis_futuna: `:wallis_futuna:`
 ') }}
 {{ markdown(title="🇼🇸 flag: Samoa" type="markdown", code='
+
 <!--
 # 🇼🇸 flag: Samoa
 #
@@ -35120,9 +38840,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :samoa: `:samoa:`
 ') }}
 {{ markdown(title="🇽🇰 flag: Kosovo" type="markdown", code='
+
 <!--
 # 🇽🇰 flag: Kosovo
 #
@@ -35138,9 +38860,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :kosovo: `:kosovo:`
 ') }}
 {{ markdown(title="🇾🇪 flag: Yemen" type="markdown", code='
+
 <!--
 # 🇾🇪 flag: Yemen
 #
@@ -35156,9 +38880,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :yemen: `:yemen:`
 ') }}
 {{ markdown(title="🇾🇹 flag: Mayotte" type="markdown", code='
+
 <!--
 # 🇾🇹 flag: Mayotte
 #
@@ -35174,9 +38900,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "9.0"
 # }
 -->
+
 :mayotte: `:mayotte:`
 ') }}
 {{ markdown(title="🇿🇦 flag: South Africa" type="markdown", code='
+
 <!--
 # 🇿🇦 flag: South Africa
 #
@@ -35192,9 +38920,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :south_africa: `:south_africa:`
 ') }}
 {{ markdown(title="🇿🇲 flag: Zambia" type="markdown", code='
+
 <!--
 # 🇿🇲 flag: Zambia
 #
@@ -35210,9 +38940,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :zambia: `:zambia:`
 ') }}
 {{ markdown(title="🇿🇼 flag: Zimbabwe" type="markdown", code='
+
 <!--
 # 🇿🇼 flag: Zimbabwe
 #
@@ -35228,9 +38960,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "8.3"
 # }
 -->
+
 :zimbabwe: `:zimbabwe:`
 ') }}
 {{ markdown(title="🏴󠁧󠁢󠁥󠁮󠁧󠁿 flag: England" type="markdown", code='
+
 <!--
 # 🏴󠁧󠁢󠁥󠁮󠁧󠁿 flag: England
 #
@@ -35246,9 +38980,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :england: `:england:`
 ') }}
 {{ markdown(title="🏴󠁧󠁢󠁳󠁣󠁴󠁿 flag: Scotland" type="markdown", code='
+
 <!--
 # 🏴󠁧󠁢󠁳󠁣󠁴󠁿 flag: Scotland
 #
@@ -35264,9 +39000,11 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :scotland: `:scotland:`
 ') }}
 {{ markdown(title="🏴󠁧󠁢󠁷󠁬󠁳󠁿 flag: Wales" type="markdown", code='
+
 <!--
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 flag: Wales
 #
@@ -35282,11 +39020,10 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 #     "ios_version": "12.1"
 # }
 -->
+
 :wales: `:wales:`
 ') }}
-
 
 ## Generated
 
 This Markdown file was generated by [`emoji.py`](../emojis.py). It use [`emojis.json`](../emojis.json) to extract the list of available smilies.
-

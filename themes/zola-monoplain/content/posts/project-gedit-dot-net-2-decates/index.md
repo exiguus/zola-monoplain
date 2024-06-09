@@ -7,7 +7,6 @@ tags = ["blog", "abandoned", "gedit", "review"]
 images = ["gedit-weblog-last-post.png", "gedit-article-last-post.png", "gedit-landingpage.png", "gedit-redesign.png"]
 +++
 
-
 ## Introduction
 
 [gedit.net](http://gedit.net) is my first personal blog.
@@ -24,9 +23,9 @@ In this post I will review my self, the blog and its content and the technology 
 
 I started the blog for the following reasons:
 
-* reflect my dive into web development and web design
-* learn and test new things (SEO, HTML, CSS, JavaScript, PERL, SSI, PHP, CMS, etc.)
-* share my knowledge (and get feedback)
+- reflect my dive into web development and web design
+- learn and test new things (SEO, HTML, CSS, JavaScript, PERL, SSI, PHP, CMS, etc.)
+- share my knowledge (and get feedback)
 
 It was not because of writing, because I write all the time. It was more about publishing and write for others.
 
@@ -60,30 +59,30 @@ From my perspective today, I should have focused more on the content and the wri
 
 From today's perspective, the following things are the most curious:
 
-* It was quite hard for me to write in English, so I did it in German
-* Writing in German was also hard, because I had high demands on myself
-* Web standards and Accessibility was a thing for me
-* Most article has examples and code
-* My focus was a bit too much on the design and technology
-* Still listen to Pink Floyd
-* Every article is a how-to or tutorial (no opinion or review)
-* I wrote about HTML 5 in 2011
-* Still use content like HTML entities, RGB colors and font stacks
-* I used a lot of different technology
+- It was quite hard for me to write in English, so I did it in German
+- Writing in German was also hard, because I had high demands on myself
+- Web standards and Accessibility was a thing for me
+- Most article has examples and code
+- My focus was a bit too much on the design and technology
+- Still listen to Pink Floyd
+- Every article is a how-to or tutorial (no opinion or review)
+- I wrote about HTML 5 in 2011
+- Still use content like HTML entities, RGB colors and font stacks
+- I used a lot of different technology
 
 {{ image(src="gedit-redesign.png", alt="gedit.net redesign") }}
 [^redesign-v0.6] Screenshot of Redesign v0.6 in Photoshop (never finished) from 2010
 
 ## More currious
 
-* A website with basically no JavaScript
-* It support IE 6, 7 and 8
-* No CSS or JavaScript framework
-* I used Opera as my main browser (that one with the [Presto Engine](https://en.wikipedia.org/wiki/Presto_(browser_engine)))
-* [SCiTe](https://www.scintilla.org/SciTE.html) was my Text Editor of choice
-* AddType application/x-httpd-php .css
-* No Mobile Support
-* I decided to use HTML 4.01 over of XHTML 1.0
+- A website with basically no JavaScript
+- It support IE 6, 7 and 8
+- No CSS or JavaScript framework
+- I used Opera as my main browser (that one with the [Presto Engine](<https://en.wikipedia.org/wiki/Presto_(browser_engine)>))
+- [SCiTe](https://www.scintilla.org/SciTE.html) was my Text Editor of choice
+- AddType application/x-httpd-php .css
+- No Mobile Support
+- I decided to use HTML 4.01 over of XHTML 1.0
 
 ## Why I abandoned the blog?
 
@@ -114,19 +113,19 @@ And I thought it would be a good idea to write about the blog and the technology
 
 ## 20-Year-old technology
 
-* HTML 4.01 (not XHTML 1.0)
-* CSS 2.1 (CSS 3 was a draft)
-* WCAG 1.0 (WCAG 2.0 was published in January 2001)
-* PHP 5.2 (CMS)
-* SQLite 2 (Database version that is not supported any more)
-* Smarty (Template engine)
-* Pound 2 (Reverse Proxy with SSL termination)
-* Varnish 2 (Reverse Proxy with caching and filtering)
-* Apache 2 (Webserver)
-* Nginx (Webserver for static files)
-* thttp (Webserver for static files)
-* Debian 6 (Squeeze) (OS)
-* VPS (Hosting)
+- HTML 4.01 (not XHTML 1.0)
+- CSS 2.1 (CSS 3 was a draft)
+- WCAG 1.0 (WCAG 2.0 was published in January 2001)
+- PHP 5.2 (CMS)
+- SQLite 2 (Database version that is not supported any more)
+- Smarty (Template engine)
+- Pound 2 (Reverse Proxy with SSL termination)
+- Varnish 2 (Reverse Proxy with caching and filtering)
+- Apache 2 (Webserver)
+- Nginx (Webserver for static files)
+- thttp (Webserver for static files)
+- Debian 6 (Squeeze) (OS)
+- VPS (Hosting)
 
 **HTML5** was not a thing yet. XHTML 1.0 was around the corner. But i decided to use HTML 4.01. I don't know why. Maybe because I validated it any way and used the strict mode. And I remember that I played at the time with custom document types. I also remember that I was not sure if I could use them with XHTML 1.0. So I decided to use HTML 4.01.
 
@@ -177,38 +176,38 @@ In general, non-English content, is not very inclusive. And it was a mistake to 
 
 From my perspective today, I learned a lot of things while I published in the blog. I will try to list the most important ones:
 
-* it is **better** to write a post then to change the software of your blog
-* be sure what you want to achieve to **focus** on the right things
-* it is **possible** to use the same technology for 20 years
-* **start** small and simple and grow from there to not get lost in details
-* **ship** fast and often to get feedback
-* it is not important to **finish** a project to write about it
-* perfect is the enemy of **good** and **done**
-* **try** out new things to learn new things, even if you don't need them
+- it is **better** to write a post then to change the software of your blog
+- be sure what you want to achieve to **focus** on the right things
+- it is **possible** to use the same technology for 20 years
+- **start** small and simple and grow from there to not get lost in details
+- **ship** fast and often to get feedback
+- it is not important to **finish** a project to write about it
+- perfect is the enemy of **good** and **done**
+- **try** out new things to learn new things, even if you don't need them
 
 ## What I would do different today?
 
 If I could talk to my younger self, I would tell him the following:
 
-* you should **start** writing while you learn new things before you forget them
-* each post should have a date, because a date give the reader an idea of the context and the **relevance** of the content
-* write about **everything** not only a specific topic because it is your personal blog
-* the blog must be **independent** of the learning platform because the learning platform will change
-* the content must be **independent** of the technology because the technology will change
-* the content must be **independent** of the design because the design will change
-* use Markdown or any other simple markup language or whatever you want that makes writing **easy** and fast and focus on the content
-* use a language that is easy to **understand** and write for you and others (e.g., English)
+- you should **start** writing while you learn new things before you forget them
+- each post should have a date, because a date give the reader an idea of the context and the **relevance** of the content
+- write about **everything** not only a specific topic because it is your personal blog
+- the blog must be **independent** of the learning platform because the learning platform will change
+- the content must be **independent** of the technology because the technology will change
+- the content must be **independent** of the design because the design will change
+- use Markdown or any other simple markup language or whatever you want that makes writing **easy** and fast and focus on the content
+- use a language that is easy to **understand** and write for you and others (e.g., English)
 
 ## My personal takeaways
 
 Personally, I stick to the following takeaways:
 
-* write about what you do to **reflect** it, and you will remember it and understand it better
-* examples should be simple and easy to **understand** for you and others to prof that you understand it
-* examples should work because it is frustrating if they don't, and it will harm your **reputation**
-* it is easy to **find** things to learn if you read everything you find interesting
-* it is easy to find **topics** to write about, if you document everything you learn
-* **share** good things you find on the web to remember them because you will be the other person tomorrow that will search for it
+- write about what you do to **reflect** it, and you will remember it and understand it better
+- examples should be simple and easy to **understand** for you and others to prof that you understand it
+- examples should work because it is frustrating if they don't, and it will harm your **reputation**
+- it is easy to **find** things to learn if you read everything you find interesting
+- it is easy to find **topics** to write about, if you document everything you learn
+- **share** good things you find on the web to remember them because you will be the other person tomorrow that will search for it
 
 ## Conclusion
 
@@ -238,14 +237,14 @@ The [last Article post](http://gedit.net/Artikel;Free_HTML-CSS_Templates_viCard_
 The installation of the current running blog was in 2008 (moved from VPS a to VPS b).
 
 ```bash
-$ find . -type f -printf '%T+ %p\n' | sort | head -n 1 
+$ find . -type f -printf '%T+ %p\n' | sort | head -n 1
 2008-06-18+11:08:07.0000000000 ./sbin/config/db_settings.conf.php
 ```
 
 Last config/code adjustment was 2014-10-21 (PHP Version upgrade).
 
 ```bash
-$ find . -type f ! \( -name "*.cache" -o -name "*.sqlite" \) -printf '%T+ %p\n' | sort -r | head -n 1 
+$ find . -type f ! \( -name "*.cache" -o -name "*.sqlite" \) -printf '%T+ %p\n' | sort -r | head -n 1
 2014-10-21+07:32:55.0000000000 ./sbin/includes/functions.inc.php
 ```
 
@@ -390,13 +389,13 @@ cat content.sqlite | grep -a -o -E '[0-9]{10}' | sort | uniq |awk '{ print strft
 7. Another uniq: Removes adjacent duplicate dates, ensuring that each unique date appears only once in the final output.
 
 8. This command sequence extracts Unix timestamps from the content.sqlite file, converts them into human-readable dates in the format %Y-%m-%d, sorts them, removes duplicate dates, and finally presents a list of unique dates sorted in ascending order.
-Shows all posts from 2004 to 2012. Because i did not find a proper tool to view SQLite2 databases, i had to parse the binary.
+   Shows all posts from 2004 to 2012. Because i did not find a proper tool to view SQLite2 databases, i had to parse the binary.
 
 This command sequence extracts Unix timestamps from the content.sqlite file, converts them into human-readable dates in the format %Y-%m-%d, sorts them, removes duplicate dates, and finally presents a list of unique dates sorted in ascending order.
 `)}}
 
 Get Posts create/edit by date:
-  
+
 ```bash
 $ cat content.sqlite | grep -a -o -E '([0-9]{10})(.*)' | awk '!seen[$1]++ { print strftime("%Y-%m-%d", $1) " " substr($0, 11) }' | sed -E 's/<[^>]+>//g; s/[0-9]{10}//g' | sort
 2004-12-19 ArtikelArtikel//gedit.NET - Artikel - Tutorials, Howtos und Artikel zu Themen wie HTML>
@@ -405,7 +404,7 @@ $ cat content.sqlite | grep -a -o -E '([0-9]{10})(.*)' | awk '!seen[$1]++ { prin
 2004-12-19 Artikel - CSS Schriftgröße und ZeilenabstandArtiC
 2004-12-19 Artikel - Druckvorschau - Cascading Style Sheet zum
 2004-12-19 Artikel - Dynamische Webseiten mit SSI Templates
-2004-12-19 Artikel - Elemente anzeigen und verbergen 
+2004-12-19 Artikel - Elemente anzeigen und verbergen
 2004-12-19 Artikel - Free HTML/CSS Templates viCard und
 2004-12-19 Artikel - Javascript - externe Links in einem n
 2004-12-19 Artikel - Javascript - externe Links in einem ndP
@@ -422,7 +421,7 @@ $ cat content.sqlite | grep -a -o -E '([0-9]{10})(.*)' | awk '!seen[$1]++ { prin
 2004-12-19 WeblogWeblogEine Liste interessanter, lesenswerter und informativer Websites zu The5[
 2005-01-08 Impressum - HaftungsausschlussImpressum - HaftungsausschlussImpressum und Haftungsaus
 2005-01-08 Impressum und Haftungsausschluss - DatenschutzImpressum und Haftungsaussch
-2005-01-08 Impressum und Haftungsausschluss - Verweise und LinksImpressum und 
+2005-01-08 Impressum und Haftungsausschluss - Verweise und LinksImpressum und
 2005-01-08 SeitensucheSeitensucheHier finden Sie was Sie suchen auf gedit.gedit, Suche, Seitensuche,F
 2005-01-08 Seitensuche - GoogleSeitensuche - GoogleBenutzen Sie Google um zu finden was Sie a
 2005-01-08 Seitensuche - GoogleSeitensuche - Google//gedit.NET - Seitensuche - Benutzen Sie GH
@@ -557,25 +556,25 @@ $ cat content.sqlite | grep -a -o -E '([0-9]{10})(.*)' | awk '!seen[$1]++ { prin
 {{ details(title="Let's break down the command step by step:", content=`
 
 1. cat content.sqlite: This reads the content of the file named content.sqlite.
-2. grep -a -o -E '([0-9]{10})(.*)': Using grep with options:
+2. grep -a -o -E '([0-9]{10})(.\*)': Using grep with options:
 
-   * -a: Treat binary files as text.
-   * -o: Only output the matching part of the line.
-   * -E: Interpret the pattern as an extended regular expression.
-   * '([0-9]{10})(.*)': This regular expression searches for a sequence of exactly 10 digits (representing UNIX timestamps) followed by any characters. It captures the timestamp and the rest of the line as separate parts.
+   - -a: Treat binary files as text.
+   - -o: Only output the matching part of the line.
+   - -E: Interpret the pattern as an extended regular expression.
+   - '([0-9]{10})(.\*)': This regular expression searches for a sequence of exactly 10 digits (representing UNIX timestamps) followed by any characters. It captures the timestamp and the rest of the line as separate parts.
 
 3. awk '!seen[$1]++ { print strftime("%Y-%m-%d", $1) " " substr($0, 11) }':
 
-   * awk: A powerful text processing tool.
-   * '!seen[$1]++ { print strftime("%Y-%m-%d", $1) " " substr($0, 11) }': The awk command does the following:
-   * !seen[$1]++: Uses an associative array seen indexed by the first captured group from grep (which is the UNIX timestamp). It ensures that only the first occurrence of each timestamp is considered.
-   * strftime("%Y-%m-%d", $1): Converts the UNIX timestamp $1 to a human-readable date format (%Y-%m-%d).
-   * substr($0, 11): Extracts the substring from the 11th character to the end of the line (excluding the timestamp). This represents the content after the timestamp.
+   - awk: A powerful text processing tool.
+   - '!seen[$1]++ { print strftime("%Y-%m-%d", $1) " " substr($0, 11) }': The awk command does the following:
+   - !seen[$1]++: Uses an associative array seen indexed by the first captured group from grep (which is the UNIX timestamp). It ensures that only the first occurrence of each timestamp is considered.
+   - strftime("%Y-%m-%d", $1): Converts the UNIX timestamp $1 to a human-readable date format (%Y-%m-%d).
+   - substr($0, 11): Extracts the substring from the 11th character to the end of the line (excluding the timestamp). This represents the content after the timestamp.
 
 4. sed -E 's/<[^>]+>//g; s/[0-9]{10}//g': sed command with two replacement expressions:
 
-   * s/<[^>]+>//g: Removes HTML tags using a regular expression that matches any characters between < and >.
-   * s/[0-9]{10}//g: Removes sequences of exactly 10 digits, i.e., UNIX timestamps.
+   - s/<[^>]+>//g: Removes HTML tags using a regular expression that matches any characters between < and >.
+   - s/[0-9]{10}//g: Removes sequences of exactly 10 digits, i.e., UNIX timestamps.
 
 5. sort: Sorts the output in ascending order.
 
@@ -583,5 +582,4 @@ Overall, this command chain extracts UNIX timestamps and content from the file, 
 `)}}
 
 [^1]: I think it is phpSQLiteCMS version 2.0.4. Because I did regular updates. But I have no proof for that. The CMS is still available on [SourceForge](https://sourceforge.net/projects/phpsqlitecms/). The project is abandoned since 2009.
-
 [^redesign-v0.6]: I found a screenshot of the redesign v0.6 in my files. It was never finished.

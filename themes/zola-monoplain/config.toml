@@ -24,9 +24,9 @@ generate_feed = true
 #     ]
 #
 taxonomies = [
-    { name = "tags", lang = "en", rss = true },
-    {name = "categories", paginate_by = 5},  # 5 items per page for a term
-    {name = "authors"}, # Basic definition: no feed or pagination
+  { name = "tags", lang = "en", rss = true },
+  { name = "categories", paginate_by = 5 }, # 5 items per page for a term
+  { name = "authors" }, # Basic definition: no feed or pagination
 ]
 
 [markdown]
@@ -42,7 +42,6 @@ taxonomies = "on"
 anchors = "on"
 
 [translations]
-
 draft_label = "(Draft)"
 search_form_legend = "Search"
 search_form_input_label = "Text to search"
@@ -88,8 +87,8 @@ authors = ["Simon Gattner"]
 search_enabled = true
 # images
 image_resizing_disabled = false
-image_format = "webp"           # "auto", "jpg", "png", "webp"
-# responsive image shortcode 
+image_format = "webp" # "auto", "jpg", "png", "webp"
+# responsive image shortcode
 # example: {{ image(src="foo.jpeg", alt="some image") }}
 image_quality = 80
 images_default_size = 256
@@ -104,12 +103,12 @@ link_github_username = "exiguus/zola-monospace"
 link_mastodon_url = "https://toot.community/@exiguus"
 # menu
 menu_links = [
-    { url = "$BASE_URL/", name = "Home" },
-    { url = "$BASE_URL/posts/", name = "Posts" },
-    { url = "$BASE_URL/gallery/", name = "Gallery" },
-    { url = "$BASE_URL/tags/", name = "Tags" },
-    { url = "$BASE_URL/search/", name = "Search" },
-    { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
+  { url = "$BASE_URL/", name = "Home" },
+  { url = "$BASE_URL/posts/", name = "Posts" },
+  { url = "$BASE_URL/gallery/", name = "Gallery" },
+  { url = "$BASE_URL/tags/", name = "Tags" },
+  { url = "$BASE_URL/search/", name = "Search" },
+  { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
 ]
 # gallery
 # show also images from posts in gallery

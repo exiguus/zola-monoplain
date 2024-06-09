@@ -1,6 +1,6 @@
 <!-- All icons from https://tabler.io/icons/ under the MIT License -->
-{% macro icon(name, size=32) %}
-{# use tabler sprite (see: https://tabler.io/docs/icons/svg#svg-sprite) #}
+{% macro icon(name, size=32) %} {# use tabler sprite (see:
+https://tabler.io/docs/icons/svg#svg-sprite) #}
 <svg width="{{ size }}" height="{{ size }}">
   <use xlink:href="#tabler-{{ name  | default (value='heart-filled') }}" />
 </svg>

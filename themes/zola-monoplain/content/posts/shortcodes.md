@@ -17,16 +17,12 @@ Shortcodes are a way to embed additional content in your Markdown files. They ar
 
 The `details` shortcode can be used to create a collapsible section in your Markdown files. This can be useful for hiding additional information or content that is not essential to the main text. Here is an example of how to use the `details` shortcode:
 
-{{ details(title="Click to expand", summary="This is a summary" content=`
-This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.
-`) }}
+{{ details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) }}
 
 Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
 
 ```md
-\{\{ details(title="Click to expand", summary="This is a summary" content=`
-This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.
-`) \}\}
+\{\{ details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) \}\}
 ```
 
 ### Markdown
@@ -34,7 +30,8 @@ This is the content that will be hidden by default. You can click on the summary
 The `markdown` shortcode can be used to render Code within your Markdown files. This can be usefull to embed Code examples and the Source of the examples. Here is an example that render a HTML form and the Source.
 
 {{ markdown(title="input attr type is number and attr step is 1" type="html", code='
-  <form>
+
+<form>
     <input type="number" step="1" />
     <input type="submit" />
   </form>
@@ -51,7 +48,8 @@ Please note that the shortcode normale start and end with `{{` and `}}`. But in 
 
 ```md
 \{\{ markdown(title="input attr type is number and attr step is 1" type="html", code='
-  <form>
+
+<form>
     <input type="number" step="1" />
     <input type="submit" />
   </form>
@@ -107,4 +105,4 @@ Please note that the shortcode normale start and end with `{{` and `}}`. But in 
 
 ## Conclusion
 
-Shortcodes are a powerful feature of Zola that can be used to embed additional content in your Markdown files. They are easy to use and can help you create more dynamic and interactive posts. I hope this post has given you a good overview of how to use shortcodes in Zola. If you have any questions or need further assistance, feel free to leave a comment below. Happy coding! 
+Shortcodes are a powerful feature of Zola that can be used to embed additional content in your Markdown files. They are easy to use and can help you create more dynamic and interactive posts. I hope this post has given you a good overview of how to use shortcodes in Zola. If you have any questions or need further assistance, feel free to leave a comment below. Happy coding!

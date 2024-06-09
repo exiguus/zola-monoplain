@@ -6,6 +6,7 @@
 {%- import "macros/opengraph.html" as opengraph -%}
 {%- import "components/skip_nav.html" as skip_nav -%}
 <!DOCTYPE html>
+
 <html lang="en" prefix="og:https://ogp.me/ns#">
 
 <head>
@@ -46,8 +47,8 @@
         {% endblock footer -%}
         {% block body_end -%}
         {% endblock body_end -%}
+        <script src="{{ get_url(path='js/main.js') }}" integrity="sha384-{{ get_hash(path='js/main.js',
+sha_type=384, base64=true) | safe }}" defer="defer"></script>
     </body>
-    <script src="{{ get_url(path='js/main.js') }}" integrity="sha384-{{ get_hash(path='js/main.js',
-        sha_type=384, base64=true) | safe }}" defer="defer"></script>
 
 </html>

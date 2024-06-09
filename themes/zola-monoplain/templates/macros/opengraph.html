@@ -1,37 +1,16 @@
-{% macro description() %} {%- if section -%} {%- if
-section.description -%} {{ section.description }} {%- else -%} {{
-config.description }} {%- endif -%} {%- elif page -%} {%- if page.summary |
-string -%} {{ page.summary | striptags | truncate(length=200) }} {%- elif
-page.description -%} {{ page.description }} {%- else -%} {{ config.description
-}} {%- endif -%} {%- endif -%}
-{% endmacro description %}
-
-{% macro title() %}
-{%- if section -%}
-{%- if section.title -%}
-{{ section.title | striptags }}{%- else -%}
-{{ config.description }}{%- endif -%}
-{%- elif page -%}
-{%- if page.title -%}
-{{ page.title | striptags }}
-{%- else -%}
-{{ config.description }}
-{%- endif -%}
-{%- elif term -%}
-{%- if term.name -%}
-{{ term.name | striptags }}
-{%- else -%}
-{{ config.description }}
-{%- endif -%}
-{%- elif taxonomy -%}
-{%- if taxonomy.name -%} {{ taxonomy.name | striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif
--%}
-{% endmacro title %}
-
-{% macro image() %}
-{%- if page.extra.preview_img -%}
-{{ get_url(path=page.extra.preview_img) | safe }}
-{%- else -%}
-{{ get_url(path='images/og-preview.png') | safe }}
-{%- endif -%}
-{% endmacro image %}
+{% macro description() %} {%- if section -%} {%- if section.description -%} {{
+section.description }} {%- else -%} {{ config.description }} {%- endif -%} {%-
+elif page -%} {%- if page.summary | string -%} {{ page.summary | striptags |
+truncate(length=200) }} {%- elif page.description -%} {{ page.description }} {%-
+else -%} {{ config.description }} {%- endif -%} {%- endif -%} {% endmacro
+description %} {% macro title() %} {%- if section -%} {%- if section.title -%}
+{{ section.title | striptags }}{%- else -%} {{ config.description }}{%- endif
+-%} {%- elif page -%} {%- if page.title -%} {{ page.title | striptags }} {%-
+else -%} {{ config.description }} {%- endif -%} {%- elif term -%} {%- if
+term.name -%} {{ term.name | striptags }} {%- else -%} {{ config.description }}
+{%- endif -%} {%- elif taxonomy -%} {%- if taxonomy.name -%} {{ taxonomy.name |
+striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif -%}
+{% endmacro title %} {% macro image() %} {%- if page.extra.preview_img -%} {{
+get_url(path=page.extra.preview_img) | safe }} {%- else -%} {{
+get_url(path='images/og-preview.png') | safe }} {%- endif -%} {% endmacro image
+%}

@@ -61,7 +61,7 @@
   - [x] Default Browser Styles
   - [x] Clean HTML5
   - [x] Lean CSS
-- [X] Dark / Light Mode
+- [x] Dark / Light Mode
 - [ ] Preview
 - [ ] Comments
   - [ ] via Mastodon
@@ -91,12 +91,13 @@
 - [x] Shortcodes
   - [x] Details
   - [x] Markdown
-  - [x] youtube
-  - [x] spotify
+  - [x] Icon
+  - [x] Youtube
+  - [x] Spotify
 - [x] Share / Subscribe
   - [x] Open Graph
   - [x] Atom Feed
-- [X] Onsite SEO
+- [x] Onsite SEO
   - [x] Meta Tags
   - [x] Valid and Semantic HTML
   - [x] Sitemap
@@ -104,7 +105,7 @@
   - [x] Translation
   - [ ] Multilingual sites
 - [x] Search
-  
+
 ## Docs
 
 - [x] Markdown Page
@@ -148,7 +149,7 @@
   - [ ] Deploy
 - [ ] Preview deployments
 - [ ] Production deployments
-  
+
 ## Refactor
 
 - [ ] tabler icon macro

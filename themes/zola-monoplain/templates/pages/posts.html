@@ -1,5 +1,5 @@
-{% include "components/page_header.html" %}
-{% for year, posts in section.pages | group_by(attribute="year") %}
+{% include "components/page_header.html" %} {% for year, posts in section.pages
+| group_by(attribute="year") %}
 <section aria-labelledby="year-{{ year }}">
   <h1 id="year-{{ year }}">{{ year }}</h1>
   <ul aria-labelledby="year-{{ year }}">
@@ -9,11 +9,10 @@
         <article>
           <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <h1>{{ post.title }}</h1>
-            {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{% endif %}
+            {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%
+            endif %}
             <p>
-              <date>
-                {{ post.date | date(format='%Y-%m-%d') }}
-              </date>
+              <date> {{ post.date | date(format='%Y-%m-%d') }} </date>
             </p>
           </hgroup>
           <p class="sr-only">{{ post.description }}</p>

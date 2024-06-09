@@ -1,4 +1,3 @@
-
 # A11y: Mono/Plain
 
 > An accessible, monospace plain Zola Theme
@@ -22,7 +21,7 @@ Based on Zola Inky Theme
 - Respect user preferences
 - Respect user privacy
 - Respect user bandwidth
-  
+
 ---
 
 - Use native browser styles where possible
@@ -93,10 +92,10 @@ For latest changes please see the [changelog](CHANGELOG.md).
 
 ## Customising the theme
 
-- __To change the settings__ copy `config.toml` in to your project and update as required (make sure you add the theme variable at the top of the file, see the getting started heading above).
-- __To inject content in to templates__ copy `templates/macros/hooks.html` and update as required.
-- __To change the Syntax Highlighting__ change `highlight_theme` in `config.toml` to one of the [available themes](https://github.com/getzola/zola/tree/master/sublime/themes).
-  
+- **To change the settings** copy `config.toml` in to your project and update as required (make sure you add the theme variable at the top of the file, see the getting started heading above).
+- **To inject content in to templates** copy `templates/macros/hooks.html` and update as required.
+- **To change the Syntax Highlighting** change `highlight_theme` in `config.toml` to one of the [available themes](https://github.com/getzola/zola/tree/master/sublime/themes).
+
 ## Using the responsive image shortcode
 
 Using the responsive images will make sure your images are generated at various sizes and served up to viewers at the size that best suits their device via the image srcset attribute. You can use this feature in your markdown like so:
@@ -132,7 +131,7 @@ The icons macro use the following syntax:
 
 - Name is the name of the icon, e.g. `brand-github`. Names are the icon names from [Tabler Icons]([https://tabler.io/icons).
 - Size is the size of the icon in px, e.g. `24`. Default is `32`.
-  
+
 Tabler icons are installed via npm and are available in the `node_modules` folder.
 
 There is a copy script `pnpm cp:icons` folder that will copy the svg icon sprite

@@ -1,5 +1,5 @@
-{% import "macros/meta.html" as meta %}
-{% import "macros/opengraph.html" as opengraph %}
+{% import "macros/meta.html" as meta %} {% import "macros/opengraph.html" as
+opengraph %}
 <title>{{ opengraph::title() }} | {{config.title}}</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,21 @@
 <meta name="description" content="{{ meta::description() }}" />
 <meta name="keywords" content="{{ meta::tags() }}" />
 <meta name="author" content="{{ meta::authors() }}" />
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
 <meta name="build" content="{{ now() }}" />
-<meta property="og:title" content="{{config.title}} | {{opengraph::title() }}" />
+<meta
+  property="og:title"
+  content="{{config.title}} | {{opengraph::title() }}"
+/>
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ current_url | safe }}" />
 <meta property="og:description" content="{{ opengraph::description() }}" />
@@ -20,7 +31,15 @@
 <meta property="og:image:url" content="{{opengraph::image() }}" />
 <meta property="og:image:secure_url" content="{{opengraph::image() }}" />
 {% block atom -%}
-<link rel="alternate" type="application/atom+xml" title="{{config.title}}"
-  href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="{{config.title}}"
+  href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}"
+/>
 {%- endblock atom %}
-<link rel="stylesheet" href="{{ get_url(path='base.css',trailing_slash=false)|safe}}" media="screen">
+<link
+  rel="stylesheet"
+  href="{{ get_url(path='base.css',trailing_slash=false)|safe}}"
+  media="screen"
+/>

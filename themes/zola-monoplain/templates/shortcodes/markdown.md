@@ -1,4 +1,5 @@
 {% import "macros/markdown.html" as markdown -%}
+
 <figure aria-label="markdown">
   {% if title -%}
   <figcaption>
@@ -10,8 +11,8 @@
     <summary>Source</summary>
 
 ```{{ type }}
-  {{ code | trim }}
+{{ code | trim }}
 ```
 
-  </details>
+</details>
 </figure>

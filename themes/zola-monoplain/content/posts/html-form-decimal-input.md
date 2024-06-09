@@ -21,7 +21,8 @@ After some research I decided to use the second solution. But I had to learn som
 Try to submit the form with the following value `6.66`:
 
 {{ markdown(title="input attr type is number" type="html", code='
-  <form>
+
+<form>
     <input type="number" />
     <input type="submit" />
   </form>
@@ -35,12 +36,14 @@ Try to submit the form with the following value `6.66`:
 ') }}
 
 This will not work. The value will be set to `6` instead of `6.66` or the Browser will show an error message like:
+
 > Please enter a valid value. The two nearest valid values are 6 and 7
 
 Same with a `step` attribute set to `0.1` and try to submit the form with the following value `6.66`:
 
 {{ markdown(title="input attr type is number and attr step is 0.1" type="html", code='
-  <form>
+
+<form>
     <input type="number" step="0.1" />
     <input type="submit" />
   </form>
@@ -54,12 +57,14 @@ Same with a `step` attribute set to `0.1` and try to submit the form with the fo
 ') }}
 
 This will not work. The value will be set to `6.7` instead of `6.66` or the Browser will show an error message like:
+
 > Please enter a valid value. The two nearest valid values are 6.6 and 6.7
 
 You might now set the step attribute to `0.01` and try to submit the form with the following value `6.66`:
 
 {{ markdown(title="input attr type is number and attr step is 0.01" type="html", code='
-  <form>
+
+<form>
     <input type="number" step="0.01" />
     <input type="submit" />
   </form>
@@ -88,7 +93,8 @@ Or you can set step to `any`. This will allow all possible decimal values.
 For decimal values, you can use the following code:
 
 {{ markdown(title="input attr type is number and attr step is any" type="html", code='
-  <form>
+
+<form>
     <input type="number" step="any" />
     <input type="submit" />
   </form>
@@ -108,7 +114,8 @@ The step `any` value will allow all possible decimal values. Or more precisely, 
 For integer values, you can use the following code:
 
 {{ markdown(title="input attr type is number and attr step is 1" type="html", code='
-  <form>
+
+<form>
     <input type="number" step="1" />
     <input type="submit" />
   </form>

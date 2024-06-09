@@ -6,7 +6,15 @@
     "dev": "turbo run dev --parallel --no-cache",
     "test": "turbo run test --parallel",
     "check": "turbo run check --parallel",
-    "build": "turbo run check test build"
+    "build": "turbo run check test build",
+    "format": "pnpm format:fix",
+    "format:fix": "dprint fmt",
+    "format:check": "dprint check",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "prepare": "pnpm husky install"
   },
   "keywords": [
     "zola",
@@ -16,10 +24,34 @@
     "accessible",
     "a11y"
   ],
-  "author": "Simon Gattner",
+  "author": {
+    "name": "Simon Gattner",
+    "url": "https://www.gattner.name/",
+    "mastodon": "https://toot.community/@exiguus"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exiguus/zola-monoplain.git"
+  },
+  "homepage": "https://github.com/exiguus/zola-monoplain#readme",
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/prompt-cli": "^19.3.1",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "dprint": "^0.46.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "turbo": "^2.0.3"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx|js|jsx|mjs|cjs)": [
+      "pnpm format:fix"
+    ],
+    "*.@(md|mdx|html|json)": [
+      "pnpm format:fix"
+    ]
   },
   "packageManager": "pnpm@9.2.0"
 }

@@ -1,5 +1,6 @@
 {% macro example(title="example", type, code) -%}
-<iframe srcdoc='
+<iframe
+  srcdoc='
 <html>
   <head>
     <title>{{ title }}</title>
@@ -25,6 +26,7 @@
     {{ code | safe }}
   </body>
 </html>
-'>
+'
+>
 </iframe>
 {% endmacro -%}
