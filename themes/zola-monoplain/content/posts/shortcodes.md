@@ -65,6 +65,22 @@ Please note that the shortcode normale start and end with `{{` and `}}`. But in 
 ') \}\}
 ```
 
+### Icons
+
+The `icon` shortcode can be used to embed icons in your Markdown files. This can be useful for adding visual elements to your posts. Here is an example of how to use the `icon` shortcode:
+
+{{ icon(name="activity") }}
+
+Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+
+```md
+\{\{ icon(name="activity",size=32) \}\}
+```
+
+The size of the icon can be adjusted by adding the `size` parameter to the shortcode. The default size is 32 pixels, but you can specify a different size. The parameter is optional and can be omitted if you want to use the default size.
+
+All available icon names can be found on the [icon page](@/posts/icons.md).
+
 ### Youtube
 
 The `youtube` shortcode can be used to embed YouTube videos in your Markdown files. This can be useful for including video content in your posts. Here is an example of how to use the `youtube` shortcode:

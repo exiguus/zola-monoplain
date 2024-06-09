@@ -1,5 +1,5 @@
 /**
-  * Append the SVG sprite to the DOM
+  * Lazy append the SVG sprite to the DOM
   * Only append the symbols that are used in the DOM
   * @returns {Promise < void>}
 */
@@ -9,7 +9,9 @@ const appendSVGSprite = async () => {
   if (usedSVGs.length === 0) {
     return;
   }
-  const tablerSVGSprite = await fetch('/tabler-sprite.svg')
+
+  const baseUrl = document.querySelector('body').dataset.baseUrl || '';
+  const tablerSVGSprite = await fetch(`${baseUrl}/images/tabler-sprite.svg`)
     .then(response => response.ok ? response.text() : null)
 
   if (!tablerSVGSprite) {

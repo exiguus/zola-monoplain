@@ -192,6 +192,8 @@ body {
         gap: 1rem;
 
         & > ul {
+            padding-left: 1rem;
+            width: 66.6%;
             @extend %list-vertical;
         }
     }
