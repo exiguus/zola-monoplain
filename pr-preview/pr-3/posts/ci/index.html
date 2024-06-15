@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og:https://ogp.me/ns#">
+
+<head>
+    <title>Continous Integration | mono&#x2F;plain; a11y=true</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Zola" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="Continous Integration" />
+<meta name="description" content="Continous Integration by Example" />
+<meta name="keywords" content="zola,
+theme,
+a11y,
+accessible" />
+<meta name="author" content="Simon Gattner" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="build" content="2024-06-15T20:50:25.844181270+00:00" />
+<meta
+  property="og:title"
+  content="mono&#x2F;plain; a11y=true | Continous Integration"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://exiguus.github.io/zola-monoplain/posts/ci/" />
+<meta property="og:description" content="Continous Integration by Example" />
+<meta property="og:image" content="https://exiguus.github.io/zola-monoplain/images/og-preview.png" />
+<meta property="og:image:url" content="https://exiguus.github.io/zola-monoplain/images/og-preview.png" />
+<meta property="og:image:secure_url" content="https://exiguus.github.io/zola-monoplain/images/og-preview.png" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="mono&#x2F;plain; a11y=true"
+  href="https://exiguus.github.io/zola-monoplain/atom.xml"
+/>
+<link
+  rel="stylesheet"
+  href="https://exiguus.github.io/zola-monoplain/base.css"
+  media="screen"
+/>
+
+    
+</head>
+<body id="posts--ci" data-base-url="https://exiguus.github.io/zola-monoplain">
+    <nav
+  id="skip-nav"
+  aria-label="Skip Navigation"
+  aria-live="off"
+  aria-atomic="false"
+>
+  <ul>
+    <li><a href="#main">Skip to content</a></li>
+    <li
+      ><a href="#toc">Skip to table of contents</a>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+          </li>
+        <li>
+          <a href="#github-actions">Github Actions</a>
+          <ul>
+            <li>
+              <a href="#simple-github-pages-deployment">Simple Github Pages deployment</a>
+              </li>
+            <li>
+              <a href="#advance-github-pages-deployment">Advance Github Pages deployment</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </li>
+    <li><a href="#main-nav">Skip to navigation</a></li>
+  </ul>
+</nav>
+<header>
+  <a href="https://exiguus.github.io/zola-monoplain" title="mono&#x2F;plain; a11y=true">
+    <h1>mono&#x2F;plain; a11y=true</h1>
+    <p>An accessible, monospace plain Zola Theme</p>
+  </a>
+</header>
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate">
+        Feed
+      </a>
+      </li>
+    </ul>
+</nav>
+<div>
+            <main id="main">
+                 <hgroup
+  role="group"
+  aria-roledescription="Post summary"
+>
+  
+
+<p aria-label="Author"
+  >By 
+  <a href="https://exiguus.github.io/zola-monoplain/authors/simon-gattner"
+    >Simon Gattner</a
+  > 
+</p>
+ 
+  <h1>Continous Integration </h1>
+  <p> Created: <date>2024-06-15</date> </p>
+   <nav aria-labelledby="toc">
+  <details aria-labelledby="toc" open="true">
+    <summary id="toc">Table of contents</summary>
+    <ol aria-labelledby="toc">
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/ci/#introduction">Introduction</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/ci/#github-actions">Github Actions</a>
+        
+        <ol>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/ci/#simple-github-pages-deployment">Simple Github Pages deployment</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/ci/#advance-github-pages-deployment">Advance Github Pages deployment</a>
+            
+          </li>
+          
+        </ol>
+        
+      </li>
+      
+    </ol>
+  </details>
+</nav>
+
+
+</hgroup>
+<h2 id="introduction">Introduction</h2>
+<p>The theme use Github Actions for <em>Continous Integration</em> and <em>Continous Deployment</em>. The Github Actions are defined in the <code>.github/workflows</code> directory. The Github Actions are used to validate, format, build and deploy the website.</p>
+<h2 id="github-actions">Github Actions</h2>
+<h3 id="simple-github-pages-deployment">Simple Github Pages deployment</h3>
+<p>Use <code>zola-deploy-action</code> to build and deploy the website to Github Pages.</p>
+<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#6272a4;"># .github/workflows/github-pages.yml
+</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Github Pages
+</span><span>
+</span><span style="color:#bd93f9;">on</span><span>:
+</span><span>  </span><span style="color:#ff79c6;">push</span><span>:
+</span><span>    </span><span style="color:#ff79c6;">branches</span><span>:
+</span><span>      - </span><span style="color:#f1fa8c;">main
+</span><span>
+</span><span style="color:#ff79c6;">jobs</span><span>:
+</span><span>  </span><span style="color:#ff79c6;">build</span><span>:
+</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Build and deploy
+</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
+</span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">github.ref == &#39;refs/heads/main&#39;
+</span><span>
+</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">checkout
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">build_and_deploy
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">shalzz/zola-deploy-action@v0.18.0
+</span><span>        </span><span style="color:#ff79c6;">env</span><span>:
+</span><span>          </span><span style="color:#6272a4;"># Target branch
+</span><span>          </span><span style="color:#ff79c6;">PAGES_BRANCH</span><span>: </span><span style="color:#f1fa8c;">gh-pages
+</span><span>          </span><span style="color:#ff79c6;">TOKEN</span><span>: </span><span style="color:#f1fa8c;">${{ secrets.GITHUB_TOKEN }}
+</span><span style="color:#ff79c6;">´          BUILD_DIR</span><span>: </span><span style="color:#f1fa8c;">themes/zola-monoplain
+</span></code></pre>
+<p>See <a href="https://www.getzola.org/documentation/deployment/github-pages/">https://www.getzola.org/documentation/deployment/github-pages/</a></p>
+<h3 id="advance-github-pages-deployment">Advance Github Pages deployment</h3>
+<p>Use <code>github-pages-deploy-action</code> to build and deploy the website to Github Pages.</p>
+<p>Use <code>taiki-e/install-action</code> to install Zola.</p>
+<p>Use <code>pnpm/action-setup</code> to install pnpm.</p>
+<p>Use <code>actions/cache</code> to cache the pnpm store.</p>
+<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#6272a4;"># .github/workflows/deploy.yml
+</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy
+</span><span style="color:#bd93f9;">on</span><span>:
+</span><span>  </span><span style="color:#ff79c6;">push</span><span>:
+</span><span>    </span><span style="color:#ff79c6;">branches</span><span>:
+</span><span>      - </span><span style="color:#f1fa8c;">main
+</span><span>
+</span><span style="color:#ff79c6;">jobs</span><span>:
+</span><span>  </span><span style="color:#ff79c6;">deploy-github-pages</span><span>:
+</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy Github Pages
+</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
+</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
+</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">taiki-e/install-action@v2
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">tool</span><span>: </span><span style="color:#f1fa8c;">zola@0.18.0
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup Node.js
+</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">setup-node
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/setup-node@v4
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">node-version-file</span><span>: </span><span style="color:#f1fa8c;">package.json
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">pnpm/action-setup@v4
+</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install pnpm
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">run_install</span><span>: </span><span style="color:#bd93f9;">false
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Get pnpm store directory
+</span><span>        </span><span style="color:#ff79c6;">shell</span><span>: </span><span style="color:#f1fa8c;">bash
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
+</span><span style="color:#f1fa8c;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV
+</span><span style="color:#f1fa8c;">
+</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/cache@v4
+</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup pnpm cache
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">${{ env.STORE_PATH }}
+</span><span>          </span><span style="color:#ff79c6;">key</span><span>: </span><span style="color:#f1fa8c;">${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}
+</span><span>          </span><span style="color:#ff79c6;">restore-keys</span><span>: </span><span style="color:#ff79c6;">|
+</span><span style="color:#f1fa8c;">            ${{ runner.os }}-pnpm-store-
+</span><span style="color:#f1fa8c;">
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install dependencies
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm install
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Build
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm build
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">JamesIves/github-pages-deploy-action@v4
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">folder</span><span>: </span><span style="color:#f1fa8c;">./themes/zola-monoplain/public
+</span><span>          </span><span style="color:#ff79c6;">branch</span><span>: </span><span style="color:#f1fa8c;">gh-pages
+</span><span>          </span><span style="color:#ff79c6;">clean-exclude</span><span>: </span><span style="color:#f1fa8c;">pr-preview
+</span><span>          </span><span style="color:#ff79c6;">force</span><span>: </span><span style="color:#bd93f9;">false
+</span></code></pre>
+  
+<section aria-labelledby="tags">
+  <h1 id="tags">Tags</h1>
+  <ul aria-labelledby="tags">
+    
+    <li aria-label="Zola"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/zola"
+        >Zola</a
+      ></li
+    >
+    
+    <li aria-label="CI"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/ci"
+        >CI</a
+      ></li
+    >
+    
+    <li aria-label="Continous Integration"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/continous-integration"
+        >Continous Integration</a
+      ></li
+    >
+    
+    <li aria-label="Deployment"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/deployment"
+        >Deployment</a
+      ></li
+    >
+    
+    <li aria-label="Build"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/build"
+        >Build</a
+      ></li
+    >
+    
+    <li aria-label="Github Actions"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/github-actions"
+        >Github Actions</a
+      ></li
+    >
+    
+  </ul>
+</section>
+
+
+</main>
+             <aside>
+  <section aria-labelledby="latest-images">
+  <h1 id="latest-images">Latest Images</h1>
+  <ul aria-labelledby="latest-images">
+    </ul>
+</section>
+
+<section aria-labelledby="latest-posts">
+  <h1 id="latest-posts">Latest Posts</h1>
+  <ul aria-labelledby="latest-posts">
+    <li aria-labelledby="post-2024-06-15-ci-1">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/ci/" title="Continous Integration">
+        <article>
+          <hgroup id="post-2024-06-15-ci-1">
+            <h1>Continous Integration</h1>
+            
+            <p>
+              <date> 2024-06-15 </date>
+            </p>
+          </hgroup>
+          <p>Continous Integration by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-dictionary-2">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/dictionary/" title="Dictionary">
+        <article>
+          <hgroup id="post-2024-06-09-dictionary-2">
+            <h1>Dictionary</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </hgroup>
+          <p>Dictionary by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-icons-3">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/icons/" title="Icons">
+        <article>
+          <hgroup id="post-2024-06-09-icons-3">
+            <h1>Icons</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </hgroup>
+          <p>Icons by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-zola-4">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/zola/" title="Zola">
+        <article>
+          <hgroup id="post-2024-06-09-zola-4">
+            <h1>Zola</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </hgroup>
+          <p>Your one-stop static site engine</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-08-shortcodes-5">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/" title="Shortcodes">
+        <article>
+          <hgroup id="post-2024-06-08-shortcodes-5">
+            <h1>Shortcodes</h1>
+            
+            <p>
+              <date> 2024-06-08 </date>
+            </p>
+          </hgroup>
+          <p>Shortcodes by example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-07-emojis-6">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/emojis/" title="Emojis">
+        <article>
+          <hgroup id="post-2024-06-07-emojis-6">
+            <h1>Emojis</h1>
+            
+            <p>
+              <date> 2024-06-07 </date>
+            </p>
+          </hgroup>
+          <p>Emoji by example</p>
+          
+        </article>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+</aside>
+
+        </div>
+        <footer>
+  <h2 id="footer-links" class="sr-only">Links</h2>
+  <ul aria-labelledby="footer-links">
+     <li>
+      <a
+        href="https://github.com/exiguus&#x2F;zola-monospace"
+        title="Github page"
+        rel="me"
+      >
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-github" />
+</svg>
+ </span>
+      </a>
+    </li>
+     <li>
+      <a
+        href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus"
+        title="Mastodon Page"
+        rel="me"
+      >
+        <span class="sr-only"
+          >Mastodon</span
+        >
+        <span aria-hidden="true">
+           
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-mastodon" />
+</svg>
+
+        </span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://exiguus.github.io/zola-monoplain/atom.xml"
+        title="Atom Feed"
+        rel="alternate"
+      >
+        <span class="sr-only">Atom</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-rss" />
+</svg>
+ </span>
+      </a>
+    </li>
+  </ul>
+  <h2 id="footer-info" class="sr-only">Information</h2>
+  <p aria-labelledby="footer-info">
+    © mono&#x2F;plain; a11y=true 2024  <br />Powered by
+    <a
+      title="Your one-stop static site engine"
+      href="https://getzola.org/"
+      >Zola</a
+    >. Theme by
+    <a
+      target="_blank"
+      title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
+      href="https://github.com/exiguus/zola-monoplain"
+      >@exiguus mono&#x2F;plain Zola</a
+    >. Made with love.
+  </p>
+</footer>
+<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-XQ1Fsl+5GSmgurMTkLZaRJ3syIZGv8rV511tBFlUN8YJHc4AaYh5j82xkxRfljUE" defer="defer"></script>
+    </body>
+
+</html>

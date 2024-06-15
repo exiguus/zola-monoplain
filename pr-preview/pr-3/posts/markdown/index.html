@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og:https://ogp.me/ns#">
+
+<head>
+    <title>Markdown | mono&#x2F;plain; a11y=true</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Zola" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="Markdown" />
+<meta name="description" content="Markdown by example" />
+<meta name="keywords" content="zola,
+theme,
+a11y,
+accessible" />
+<meta name="author" content="Simon Gattner" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="build" content="2024-06-15T20:50:26.002252138+00:00" />
+<meta
+  property="og:title"
+  content="mono&#x2F;plain; a11y=true | Markdown"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://exiguus.github.io/zola-monoplain/posts/markdown/" />
+<meta property="og:description" content="Markdown by example" />
+<meta property="og:image" content="https://exiguus.github.io/zola-monoplain/images/og-preview.png" />
+<meta property="og:image:url" content="https://exiguus.github.io/zola-monoplain/images/og-preview.png" />
+<meta property="og:image:secure_url" content="https://exiguus.github.io/zola-monoplain/images/og-preview.png" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="mono&#x2F;plain; a11y=true"
+  href="https://exiguus.github.io/zola-monoplain/atom.xml"
+/>
+<link
+  rel="stylesheet"
+  href="https://exiguus.github.io/zola-monoplain/base.css"
+  media="screen"
+/>
+
+    
+</head>
+<body id="posts--markdown" data-base-url="https://exiguus.github.io/zola-monoplain">
+    <nav
+  id="skip-nav"
+  aria-label="Skip Navigation"
+  aria-live="off"
+  aria-atomic="false"
+>
+  <ul>
+    <li><a href="#main">Skip to content</a></li>
+    <li
+      ><a href="#toc">Skip to table of contents</a>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+          </li>
+        <li>
+          <a href="#syntax">Syntax</a>
+          <ul>
+            <li>
+              <a href="#headers">Headers</a>
+              <ul>
+                <li>
+                  <a href="#header-4">Header 4</a>
+                  <ul>
+                    <li>
+                      <a href="#header-5">Header 5</a>
+                      <ul>
+                        <li>
+                          <a href="#header-6">Header 6</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            <li>
+              <a href="#paragraphs">Paragraphs</a>
+              </li>
+            <li>
+              <a href="#text-formatting">Text Formatting</a>
+              </li>
+            <li>
+              <a href="#lists">Lists</a>
+              <ul>
+                <li>
+                  <a href="#unordered-list">Unordered List</a>
+                  </li>
+                <li>
+                  <a href="#ordered-list">Ordered List</a>
+                  </li>
+                </ul>
+              </li>
+            <li>
+              <a href="#links-and-images">Links and Images</a>
+              </li>
+            <li>
+              <a href="#blockquotes">Blockquotes</a>
+              </li>
+            <li>
+              <a href="#code">Code</a>
+              <ul>
+                <li>
+                  <a href="#inline-code">Inline Code</a>
+                  </li>
+                <li>
+                  <a href="#code-blocks">Code Blocks</a>
+                  </li>
+                </ul>
+              </li>
+            <li>
+              <a href="#tables">Tables</a>
+              </li>
+            <li>
+              <a href="#task-lists">Task Lists</a>
+              </li>
+            <li>
+              <a href="#horizontal-rule">Horizontal Rule</a>
+              </li>
+            <li>
+              <a href="#emojis">Emojis</a>
+              </li>
+            <li>
+              <a href="#escaping-characters">Escaping Characters</a>
+              </li>
+            <li>
+              <a href="#html">HTML</a>
+              </li>
+            <li>
+              <a href="#footnotes">Footnotes</a>
+              </li>
+            </ul>
+          </li>
+        <li>
+          <a href="#references">References</a>
+          </li>
+        </ul>
+    </li>
+    <li><a href="#main-nav">Skip to navigation</a></li>
+  </ul>
+</nav>
+<header>
+  <a href="https://exiguus.github.io/zola-monoplain" title="mono&#x2F;plain; a11y=true">
+    <h1>mono&#x2F;plain; a11y=true</h1>
+    <p>An accessible, monospace plain Zola Theme</p>
+  </a>
+</header>
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate">
+        Feed
+      </a>
+      </li>
+    </ul>
+</nav>
+<div>
+            <main id="main">
+                 <hgroup
+  role="group"
+  aria-roledescription="Post summary"
+>
+  
+
+<p aria-label="Author"
+  >By 
+  <a href="https://exiguus.github.io/zola-monoplain/authors/simon-gattner"
+    >Simon Gattner</a
+  > 
+</p>
+ 
+  <h1>Markdown </h1>
+  <p> Created: <date>2024-03-26</date> </p>
+  
+  <p> Updated: <date>2025-06-07</date> </p>
+   <nav aria-labelledby="toc">
+  <details aria-labelledby="toc" open="true">
+    <summary id="toc">Table of contents</summary>
+    <ol aria-labelledby="toc">
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#introduction">Introduction</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#syntax">Syntax</a>
+        
+        <ol>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#headers">Headers</a>
+            
+            <ol>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#header-4">Header 4</a>
+                
+                <ol>
+                  
+                  <li>
+                    <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#header-5">Header 5</a>
+                    
+                    <ol>
+                      
+                      <li>
+                        <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#header-6">Header 6</a>
+                        
+                      </li>
+                      
+                    </ol>
+                    
+                  </li>
+                  
+                </ol>
+                
+              </li>
+              
+            </ol>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#paragraphs">Paragraphs</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#text-formatting">Text Formatting</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#lists">Lists</a>
+            
+            <ol>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#unordered-list">Unordered List</a>
+                
+              </li>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#ordered-list">Ordered List</a>
+                
+              </li>
+              
+            </ol>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#links-and-images">Links and Images</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#blockquotes">Blockquotes</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#code">Code</a>
+            
+            <ol>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#inline-code">Inline Code</a>
+                
+              </li>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#code-blocks">Code Blocks</a>
+                
+              </li>
+              
+            </ol>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#tables">Tables</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#task-lists">Task Lists</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#horizontal-rule">Horizontal Rule</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#emojis">Emojis</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#escaping-characters">Escaping Characters</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#html">HTML</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#footnotes">Footnotes</a>
+            
+          </li>
+          
+        </ol>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/markdown/#references">References</a>
+        
+      </li>
+      
+    </ol>
+  </details>
+</nav>
+
+
+</hgroup>
+<h2 id="introduction">Introduction</h2>
+<p>Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
+<p>Zola support CommonMark as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables and task lists, and strikethrough text.</p>
+<h2 id="syntax">Syntax</h2>
+<h3 id="headers">Headers</h3>
+<h4 id="header-4">Header 4</h4>
+<h5 id="header-5">Header 5</h5>
+<h6 id="header-6">Header 6</h6>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#8be9fd;"># Header 1
+</span><span>
+</span><span style="color:#8be9fd;">## Header 2
+</span><span>
+</span><span style="color:#8be9fd;">### Header 3
+</span><span>
+</span><span style="color:#8be9fd;">#### Header 4
+</span><span>
+</span><span style="color:#8be9fd;">##### Header 5
+</span><span>
+</span><span style="color:#8be9fd;">###### Header 6
+</span></code></pre>
+<h3 id="paragraphs">Paragraphs</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p>This is a new paragraph.</p>
+<p>And this is another paragraph.
+This is still part of the same paragraph.</p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>This is a new paragraph.
+</span><span>
+</span><span>And this is another paragraph.
+</span><span>This is still part of the same paragraph.
+</span></code></pre>
+<h3 id="text-formatting">Text Formatting</h3>
+<p><strong>Bold Text</strong>
+<em>Italic Text</em><br />
+<del>Strikethrough Text</del><br />
+<strong><em>Bold and Italic Text</em></strong></p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-weight:bold;color:#ffb86c;">**Bold Text**
+</span><span style="font-style:italic;color:#ffb86c;">_Italic Text_
+</span><span>~~Strikethrough Text~~
+</span><span style="font-weight:bold;color:#ffb86c;">**</span><span style="font-style:italic;color:#ffb86c;">_Bold and Italic Text_</span><span style="font-weight:bold;color:#ffb86c;">**
+</span></code></pre>
+<h3 id="lists">Lists</h3>
+<h4 id="unordered-list">Unordered List</h4>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Subitem 2.1</li>
+<li>Subitem 2.2</li>
+</ul>
+</li>
+</ul>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#ff79c6;">- </span><span>Item 1
+</span><span style="color:#ff79c6;">-</span><span> Item 2
+</span><span>  </span><span style="color:#ff79c6;">-</span><span> Subitem 2.1
+</span><span>  </span><span style="color:#ff79c6;">-</span><span> Subitem 2.2
+</span></code></pre>
+<h4 id="ordered-list">Ordered List</h4>
+<ol>
+<li>First item</li>
+<li>Second item
+<ol>
+<li>Subitem 2.1</li>
+<li>Subitem 2.2</li>
+</ol>
+</li>
+</ol>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>1</span><span style="color:#ff79c6;">. </span><span>First item
+</span><span>2</span><span style="color:#ff79c6;">.</span><span> Second item
+</span><span>   1</span><span style="color:#ff79c6;">.</span><span> Subitem 2.1
+</span><span>   2</span><span style="color:#ff79c6;">.</span><span> Subitem 2.2
+</span></code></pre>
+<h3 id="links-and-images">Links and Images</h3>
+<p><a href="https://github.com/exiguus/zola-monoplain">Link to github</a></p>
+<p><img src="https://avatars.githubusercontent.com/u/1060633" alt="Github Profile Image" /></p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>[Link to github](</span><span style="text-decoration:underline;color:#bd93f9;">https://github.com/exiguus/zola-monoplain</span><span>)
+</span><span>
+</span><span>![Github Profile Image](</span><span style="text-decoration:underline;color:#bd93f9;">https://avatars.githubusercontent.com/u/1060633</span><span>)
+</span></code></pre>
+<h3 id="blockquotes">Blockquotes</h3>
+<blockquote>
+<p>This is a blockquote.</p>
+<ul>
+<li>Blockquote can have lists.</li>
+<li>It can also have <strong>bold</strong> or <em>italic</em> text.</li>
+</ul>
+</blockquote>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="background-color:#6272a4;font-style:italic;color:#6272a4;">&gt;</span><span style="font-style:italic;color:#6272a4;"> This is a blockquote.
+</span><span style="background-color:#6272a4;font-style:italic;color:#6272a4;">&gt;</span><span style="font-style:italic;color:#6272a4;">
+</span><span style="background-color:#6272a4;font-style:italic;color:#6272a4;">&gt;</span><span style="font-style:italic;color:#6272a4;"> </span><span style="font-style:italic;color:#ff79c6;">- </span><span style="font-style:italic;color:#6272a4;">Blockquote can have lists.
+</span><span style="background-color:#6272a4;font-style:italic;color:#6272a4;">&gt;</span><span style="font-style:italic;color:#6272a4;"> </span><span style="font-style:italic;color:#ff79c6;">- </span><span style="font-style:italic;color:#6272a4;">It can also have </span><span style="font-weight:bold;color:#ffb86c;">**bold**</span><span style="font-style:italic;color:#6272a4;"> or </span><span style="font-style:italic;color:#ffb86c;">_italic_</span><span style="font-style:italic;color:#6272a4;"> text.
+</span></code></pre>
+<h3 id="code">Code</h3>
+<h4 id="inline-code">Inline Code</h4>
+<p>This is <code>inline code</code> example.</p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>This is </span><span style="color:#50fa7b;">`inline code`</span><span> example.
+</span></code></pre>
+<h4 id="code-blocks">Code Blocks</h4>
+<pre data-lang="python" style="background-color:#282a36;color:#f8f8f2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#ff79c6;">def </span><span style="color:#50fa7b;">hello_world</span><span>():
+</span><span>    </span><span style="color:#8be9fd;">print</span><span>(</span><span style="color:#f1fa8c;">&quot;Hello, World!&quot;</span><span>)
+</span><span>
+</span><span style="color:#50fa7b;">hello_world</span><span>()
+</span></code></pre>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>```</span><span style="color:#bd93f9;">python
+</span><span style="font-style:italic;color:#ff79c6;">def </span><span style="color:#50fa7b;">hello_world</span><span>():
+</span><span>    </span><span style="color:#8be9fd;">print</span><span>(</span><span style="color:#f1fa8c;">&quot;Hello, World!&quot;</span><span>)
+</span><span>
+</span><span style="color:#50fa7b;">hello_world</span><span>()
+</span><span>```
+</span></code></pre>
+<h3 id="tables">Tables</h3>
+<table><thead><tr><th>Name</th><th>Age</th><th>Gender</th></tr></thead><tbody>
+<tr><td>Alice</td><td>25</td><td>Female</td></tr>
+<tr><td>Bob</td><td>30</td><td>Male</td></tr>
+<tr><td>Charlie</td><td>22</td><td>Male</td></tr>
+</tbody></table>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>| Name    | Age | Gender |
+</span><span>| ------- | --- | ------ |
+</span><span>| Alice   | 25  | Female |
+</span><span>| Bob     | 30  | Male   |
+</span><span>| Charlie | 22  | Male   |
+</span></code></pre>
+<h3 id="task-lists">Task Lists</h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Task 1</li>
+<li><input disabled="" type="checkbox"/>
+Task 2</li>
+<li><input disabled="" type="checkbox"/>
+Task 3</li>
+</ul>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#ff79c6;">- </span><span>[x] Task 1
+</span><span style="color:#ff79c6;">-</span><span> [ ] Task 2
+</span><span style="color:#ff79c6;">-</span><span> [ ] Task 3
+</span></code></pre>
+<h3 id="horizontal-rule">Horizontal Rule</h3>
+<hr />
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#6272a4;">---
+</span></code></pre>
+<h3 id="emojis">Emojis</h3>
+<p>😃 🚀 💸</p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>:smiley: :rocket: :money_with_wings:
+</span></code></pre>
+<h3 id="escaping-characters">Escaping Characters</h3>
+<p>To escape characters like * or _, use backslashes: *escaped* and _escaped_</p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>To escape characters like </span><span style="color:#ff79c6;">\*</span><span> or </span><span style="color:#ff79c6;">\_</span><span>, use backslashes: </span><span style="color:#ff79c6;">\*</span><span>escaped</span><span style="color:#ff79c6;">\*</span><span> and </span><span style="color:#ff79c6;">\_</span><span>escaped</span><span style="color:#ff79c6;">\_
+</span></code></pre>
+<h3 id="html">HTML</h3>
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+<dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+<pre data-lang="html" style="background-color:#282a36;color:#f8f8f2;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#ff79c6;">dl</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ff79c6;">dt</span><span>&gt;Definition list&lt;/</span><span style="color:#ff79c6;">dt</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ff79c6;">dd</span><span>&gt;Is something people use sometimes.&lt;/</span><span style="color:#ff79c6;">dd</span><span>&gt;
+</span><span>
+</span><span>  &lt;</span><span style="color:#ff79c6;">dt</span><span>&gt;Markdown in HTML&lt;/</span><span style="color:#ff79c6;">dt</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ff79c6;">dd</span><span>&gt;Does *not* work **very** well. Use HTML &lt;</span><span style="color:#ff79c6;">em</span><span>&gt;tags&lt;/</span><span style="color:#ff79c6;">em</span><span>&gt;.&lt;/</span><span style="color:#ff79c6;">dd</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#ff79c6;">dl</span><span>&gt;
+</span></code></pre>
+<h3 id="footnotes">Footnotes</h3>
+<p>Here is a footnote reference,<sup class="footnote-reference"><a href="#1">1</a></sup> and another.<sup class="footnote-reference"><a href="#longnote">2</a></sup></p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>Here is the footnote.
+<sup class="footnote-reference"><a href="#longnote">2</a></sup>: Here's one with multiple blocks.</p>
+</div>
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>Subsequent paragraphs are indented to show that they belong to the previous footnote.
+</span></code></pre>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>Here is a footnote reference,[^1] and another.[^longnote]
+</span><span>
+</span><span>[^1]: Here is the footnote.
+</span><span>[^longnote]: Here&#39;s one with multiple blocks.
+</span><span>
+</span><span>    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+</span></code></pre>
+<h2 id="references">References</h2>
+<p>Zola<sup class="footnote-reference"><a href="#zola">3</a></sup> use pulldown-cmark<sup class="footnote-reference"><a href="#pulldown-cmark">4</a></sup> as pull parser for CommonMark<sup class="footnote-reference"><a href="#commonmark">5</a></sup> as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables<sup class="footnote-reference"><a href="#github-tables">6</a></sup>, Github flavored task lists<sup class="footnote-reference"><a href="#github-task-lists">7</a></sup> and strikethrough<sup class="footnote-reference"><a href="#strikethrough">8</a></sup> text.</p>
+<ul>
+<li><sup class="footnote-reference"><a href="#zola">3</a></sup> <a href="https://www.getzola.org/documentation/getting-started/overview/#zola-at-a-glance">Zola at a Glance</a></li>
+<li><sup class="footnote-reference"><a href="#commonmark">5</a></sup> <a href="https://commonmark.org/help/">CommonMark</a></li>
+<li><sup class="footnote-reference"><a href="#pulldown-cmark">4</a></sup> <a href="https://github.com/pulldown-cmark/pulldown-cmark#pulldown-cmark">pulldown-cmark</a></li>
+<li><sup class="footnote-reference"><a href="#github-tables">6</a></sup> <a href="https://github.github.com/gfm/#tables-extension-">Github flavored tables</a></li>
+<li><sup class="footnote-reference"><a href="#github-task-lists">7</a></sup> <a href="https://github.github.com/gfm/#task-list-items-extension-">Github flavored task lists</a></li>
+<li><sup class="footnote-reference"><a href="#strikethrough">8</a></sup> <a href="https://github.github.com/gfm/#strikethrough-extension-">Strikethrough</a></li>
+</ul>
+  
+<section aria-labelledby="tags">
+  <h1 id="tags">Tags</h1>
+  <ul aria-labelledby="tags">
+    
+    <li aria-label="Zola"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/zola"
+        >Zola</a
+      ></li
+    >
+    
+    <li aria-label="Theme"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/theme"
+        >Theme</a
+      ></li
+    >
+    
+    <li aria-label="Markdown"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/markdown"
+        >Markdown</a
+      ></li
+    >
+    
+    <li aria-label="Typography"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/typography"
+        >Typography</a
+      ></li
+    >
+    
+  </ul>
+</section>
+
+
+</main>
+             <aside>
+  <section aria-labelledby="latest-images">
+  <h1 id="latest-images">Latest Images</h1>
+  <ul aria-labelledby="latest-images">
+    </ul>
+</section>
+
+<section aria-labelledby="latest-posts">
+  <h1 id="latest-posts">Latest Posts</h1>
+  <ul aria-labelledby="latest-posts">
+    <li aria-labelledby="post-2024-06-15-ci-1">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/ci/" title="Continous Integration">
+        <article>
+          <hgroup id="post-2024-06-15-ci-1">
+            <h1>Continous Integration</h1>
+            
+            <p>
+              <date> 2024-06-15 </date>
+            </p>
+          </hgroup>
+          <p>Continous Integration by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-dictionary-2">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/dictionary/" title="Dictionary">
+        <article>
+          <hgroup id="post-2024-06-09-dictionary-2">
+            <h1>Dictionary</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </hgroup>
+          <p>Dictionary by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-icons-3">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/icons/" title="Icons">
+        <article>
+          <hgroup id="post-2024-06-09-icons-3">
+            <h1>Icons</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </hgroup>
+          <p>Icons by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-zola-4">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/zola/" title="Zola">
+        <article>
+          <hgroup id="post-2024-06-09-zola-4">
+            <h1>Zola</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </hgroup>
+          <p>Your one-stop static site engine</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-08-shortcodes-5">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/" title="Shortcodes">
+        <article>
+          <hgroup id="post-2024-06-08-shortcodes-5">
+            <h1>Shortcodes</h1>
+            
+            <p>
+              <date> 2024-06-08 </date>
+            </p>
+          </hgroup>
+          <p>Shortcodes by example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-07-emojis-6">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/emojis/" title="Emojis">
+        <article>
+          <hgroup id="post-2024-06-07-emojis-6">
+            <h1>Emojis</h1>
+            
+            <p>
+              <date> 2024-06-07 </date>
+            </p>
+          </hgroup>
+          <p>Emoji by example</p>
+          
+        </article>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+</aside>
+
+        </div>
+        <footer>
+  <h2 id="footer-links" class="sr-only">Links</h2>
+  <ul aria-labelledby="footer-links">
+     <li>
+      <a
+        href="https://github.com/exiguus&#x2F;zola-monospace"
+        title="Github page"
+        rel="me"
+      >
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-github" />
+</svg>
+ </span>
+      </a>
+    </li>
+     <li>
+      <a
+        href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus"
+        title="Mastodon Page"
+        rel="me"
+      >
+        <span class="sr-only"
+          >Mastodon</span
+        >
+        <span aria-hidden="true">
+           
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-mastodon" />
+</svg>
+
+        </span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://exiguus.github.io/zola-monoplain/atom.xml"
+        title="Atom Feed"
+        rel="alternate"
+      >
+        <span class="sr-only">Atom</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-rss" />
+</svg>
+ </span>
+      </a>
+    </li>
+  </ul>
+  <h2 id="footer-info" class="sr-only">Information</h2>
+  <p aria-labelledby="footer-info">
+    © mono&#x2F;plain; a11y=true 2024  <br />Powered by
+    <a
+      title="Your one-stop static site engine"
+      href="https://getzola.org/"
+      >Zola</a
+    >. Theme by
+    <a
+      target="_blank"
+      title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
+      href="https://github.com/exiguus/zola-monoplain"
+      >@exiguus mono&#x2F;plain Zola</a
+    >. Made with love.
+  </p>
+</footer>
+<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-XQ1Fsl+5GSmgurMTkLZaRJ3syIZGv8rV511tBFlUN8YJHc4AaYh5j82xkxRfljUE" defer="defer"></script>
+    </body>
+
+</html>
