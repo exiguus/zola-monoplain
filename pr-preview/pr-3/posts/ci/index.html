@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2024-06-15T21:16:57.516478745+00:00" />
+<meta name="build" content="2024-06-15T21:19:19.476998228+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -344,6 +344,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>        </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">github.event.action != &#39;closed&#39;
 </span><span>
 </span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy
+</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">deploy
 </span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">rossjrw/pr-preview-action@v1
 </span><span>        </span><span style="color:#ff79c6;">with</span><span>:
 </span><span>          </span><span style="color:#ff79c6;">source-dir</span><span>: </span><span style="color:#f1fa8c;">./themes/zola-monoplain/public
