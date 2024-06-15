@@ -1,7 +1,7 @@
 name: Lighthouse
 on:
   workflow_run:
-    workflows: ["Build and deploy GH Pages"]
+    workflows: ["Github Pages"]
     types:
       - completed
 
