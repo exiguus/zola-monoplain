@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2024-06-15T21:13:14.907815069+00:00" />
+<meta name="build" content="2024-06-15T21:16:57.516478745+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -299,6 +299,10 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>  </span><span style="color:#ff79c6;">deploy-preview</span><span>:
 </span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy PR Preview
 </span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
+</span><span>
+</span><span>    </span><span style="color:#ff79c6;">outputs</span><span>:
+</span><span>      </span><span style="color:#ff79c6;">preview_url</span><span>: </span><span style="color:#f1fa8c;">${{ steps.deploy.outputs.deployment-url }}
+</span><span>
 </span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
 </span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
 </span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
@@ -348,7 +352,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>          </span><span style="color:#ff79c6;">action</span><span>: </span><span style="color:#f1fa8c;">auto
 </span><span>
 </span><span>  </span><span style="color:#ff79c6;">lighthouse</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Lighthouse
+</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Lighthouse Check PR Preview
 </span><span>    </span><span style="color:#ff79c6;">needs</span><span>: </span><span style="color:#f1fa8c;">deploy-preview
 </span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
 </span><span>    </span><span style="color:#ff79c6;">timeout-minutes</span><span>: </span><span style="color:#bd93f9;">5
@@ -359,7 +363,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Audit URLs and validate Budget
 </span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">treosh/lighthouse-ci-action@v11
 </span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">urls</span><span>: </span><span style="color:#f1fa8c;">${{ steps.deploy.outputs.deployment-url }}
+</span><span>          </span><span style="color:#ff79c6;">urls</span><span>: </span><span style="color:#f1fa8c;">${{ steps.deploy-preview.outputs.preview_url }}
 </span><span>          </span><span style="color:#ff79c6;">budgetPath</span><span>: </span><span style="color:#f1fa8c;">./budget.json
 </span><span>          </span><span style="color:#ff79c6;">uploadArtifacts</span><span>: </span><span style="color:#bd93f9;">true
 </span><span>          </span><span style="color:#ff79c6;">runs</span><span>: </span><span style="color:#bd93f9;">3
