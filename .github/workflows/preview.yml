@@ -1,4 +1,4 @@
-name: Previews
+name: Preview
 concurrency: preview-${{ github.ref }}
 on:
   pull_request:
@@ -9,8 +9,12 @@ on:
       - closed
 jobs:
   deploy-preview:
-    name: Deploy PR Preview
+    name: Deploy PR
     runs-on: ubuntu-latest
+
+    outputs:
+      preview_url: ${{ steps.deploy.outputs.deployment-url }}
+
     steps:
       - name: Checkout
         id: checkout
@@ -52,9 +56,31 @@ jobs:
         if: github.event.action != 'closed'
 
       - name: Deploy
+        id: deploy
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./themes/zola-monoplain/public
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
+
+      - name: Info
+        run: |
+          echo "Preview URL: ${{ steps.deploy.outputs.deployment-url }}"
+
+  lighthouse:
+    name: Test PR
+    needs: deploy-preview
+    if: always()
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit URLs and validate Budget
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: ${{ needs.deploy-preview.outputs.preview_url }}
+          budgetPath: ./budget.json
+          uploadArtifacts: true
+          runs: 3
