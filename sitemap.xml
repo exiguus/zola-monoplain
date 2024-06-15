@@ -35,6 +35,10 @@
         <lastmod>2023-12-30</lastmod>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/posts/ci/</loc>
+        <lastmod>2024-06-15</lastmod>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/dictionary/</loc>
         <lastmod>2024-06-09</lastmod>
     </url>
@@ -82,7 +86,19 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/blog/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/build/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/ci/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/continous-integration/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/decimal/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/deployment/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/dictionary/</loc>
@@ -98,6 +114,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/gedit/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/github-actions/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/github/</loc>
