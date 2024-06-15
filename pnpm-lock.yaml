@@ -42,8 +42,8 @@ importers:
   themes/zola-monoplain:
     dependencies:
       '@tabler/icons':
-        specifier: ^2.47.0
-        version: 2.47.0
+        specifier: ^3.6.0
+        version: 3.6.0
 
 packages:
 
@@ -184,8 +184,8 @@ packages:
     resolution: {integrity: sha512-/gKJun8NNiWGZJkGzI/Ragc53cOdcLNdzjLaIa+GEjguQs0ulsurx8WN0jijdK9yPqDvziX995sMRLyLt1uZMQ==}
     engines: {node: '>= 0.4'}
 
-  '@tabler/icons@2.47.0':
-    resolution: {integrity: sha512-4w5evLh+7FUUiA1GucvGj2ReX2TvOjEr4ejXdwL/bsjoSkof6r1gQmzqI+VHrE2CpJpB3al7bCTulOkFa/RcyA==}
+  '@tabler/icons@3.6.0':
+    resolution: {integrity: sha512-Zv0Ofc64RCMpZ2F8CvsWAphrSjerx5hEErt/RMmE+W8r4E5l5Lizi+My9KbbZQ4NyAtrtrOX80OY1oROZrRzEA==}
 
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
@@ -355,7 +355,7 @@ packages:
     resolution: {integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==}
 
   concat-map@0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   concat-stream@2.0.0:
     resolution: {integrity: sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==}
@@ -1667,7 +1667,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.7
 
-  '@tabler/icons@2.47.0': {}
+  '@tabler/icons@3.6.0': {}
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
