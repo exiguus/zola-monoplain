@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2024-06-15T21:19:19.476998228+00:00" />
+<meta name="build" content="2024-06-15T21:26:36.770996119+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -286,7 +286,7 @@ accessible" />
 <p>Use <em>pr-preview-action</em> to build and deploy the website to Github Pages.
 Test the website with <em>lighthouse-ci-action</em>.</p>
 <pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#6272a4;"># .github/workflows/preview.yml
-</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Previews
+</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Preview
 </span><span style="color:#ff79c6;">concurrency</span><span>: </span><span style="color:#f1fa8c;">preview-${{ github.ref }}
 </span><span style="color:#bd93f9;">on</span><span>:
 </span><span>  </span><span style="color:#ff79c6;">pull_request</span><span>:
@@ -297,7 +297,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>      - </span><span style="color:#f1fa8c;">closed
 </span><span style="color:#ff79c6;">jobs</span><span>:
 </span><span>  </span><span style="color:#ff79c6;">deploy-preview</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy PR Preview
+</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy PR
 </span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
 </span><span>
 </span><span>    </span><span style="color:#ff79c6;">outputs</span><span>:
@@ -352,8 +352,12 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>          </span><span style="color:#ff79c6;">umbrella-dir</span><span>: </span><span style="color:#f1fa8c;">pr-preview
 </span><span>          </span><span style="color:#ff79c6;">action</span><span>: </span><span style="color:#f1fa8c;">auto
 </span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Info
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
+</span><span style="color:#f1fa8c;">          echo &quot;Preview URL: ${{ steps.deploy.outputs.deployment-url }}&quot;
+</span><span style="color:#f1fa8c;">
 </span><span>  </span><span style="color:#ff79c6;">lighthouse</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Lighthouse Check PR Preview
+</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Lighthouse Check PR
 </span><span>    </span><span style="color:#ff79c6;">needs</span><span>: </span><span style="color:#f1fa8c;">deploy-preview
 </span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
 </span><span>    </span><span style="color:#ff79c6;">timeout-minutes</span><span>: </span><span style="color:#bd93f9;">5
@@ -364,7 +368,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Audit URLs and validate Budget
 </span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">treosh/lighthouse-ci-action@v11
 </span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">urls</span><span>: </span><span style="color:#f1fa8c;">${{ steps.deploy-preview.outputs.preview_url }}
+</span><span>          </span><span style="color:#ff79c6;">urls</span><span>: </span><span style="color:#f1fa8c;">${{ needs.deploy-preview.outputs.preview_url }}
 </span><span>          </span><span style="color:#ff79c6;">budgetPath</span><span>: </span><span style="color:#f1fa8c;">./budget.json
 </span><span>          </span><span style="color:#ff79c6;">uploadArtifacts</span><span>: </span><span style="color:#bd93f9;">true
 </span><span>          </span><span style="color:#ff79c6;">runs</span><span>: </span><span style="color:#bd93f9;">3
