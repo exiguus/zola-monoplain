@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2024-06-15T21:33:20.387760298+00:00" />
+<meta name="build" content="2024-06-16T13:00:17.483788121+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Markdown"
@@ -183,10 +183,7 @@ accessible" />
 </nav>
 <div>
             <main id="main">
-                 <hgroup
-  role="group"
-  aria-roledescription="Post summary"
->
+                 <hgroup role="group" aria-description="Post summary">
   
 
 <p aria-label="Author"
@@ -517,30 +514,48 @@ Task 3</li>
 </span><span>&lt;/</span><span style="color:#ff79c6;">dl</span><span>&gt;
 </span></code></pre>
 <h3 id="footnotes">Footnotes</h3>
-<p>Here is a footnote reference,<sup class="footnote-reference"><a href="#1">1</a></sup> and another.<sup class="footnote-reference"><a href="#longnote">2</a></sup></p>
+<p>Here is a footnote reference,<sup class="footnote-reference"><a href="#1">1</a></sup> and another.<sup class="footnote-reference"><a href="#2">2</a></sup></p>
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p>Here is the footnote.
-<sup class="footnote-reference"><a href="#longnote">2</a></sup>: Here's one with multiple blocks.</p>
+<p>Here is the footnote.</p>
 </div>
-<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>Subsequent paragraphs are indented to show that they belong to the previous footnote.
-</span></code></pre>
-<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>Here is a footnote reference,[^1] and another.[^longnote]
+<!-- format fix -->
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>Here's one with multiple blocks.</p>
+</div>
+<p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p>
+<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>Here is a footnote reference,[^1] and another.[^2]
 </span><span>
 </span><span>[^1]: Here is the footnote.
-</span><span>[^longnote]: Here&#39;s one with multiple blocks.
+</span><span>[^2]: Here&#39;s one with multiple blocks.
 </span><span>
-</span><span>    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+</span><span>Subsequent paragraphs are indented to show that they belong to the previous footnote.
 </span></code></pre>
 <h2 id="references">References</h2>
-<p>Zola<sup class="footnote-reference"><a href="#zola">3</a></sup> use pulldown-cmark<sup class="footnote-reference"><a href="#pulldown-cmark">4</a></sup> as pull parser for CommonMark<sup class="footnote-reference"><a href="#commonmark">5</a></sup> as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables<sup class="footnote-reference"><a href="#github-tables">6</a></sup>, Github flavored task lists<sup class="footnote-reference"><a href="#github-task-lists">7</a></sup> and strikethrough<sup class="footnote-reference"><a href="#strikethrough">8</a></sup> text.</p>
-<ul>
-<li><sup class="footnote-reference"><a href="#zola">3</a></sup> <a href="https://www.getzola.org/documentation/getting-started/overview/#zola-at-a-glance">Zola at a Glance</a></li>
-<li><sup class="footnote-reference"><a href="#commonmark">5</a></sup> <a href="https://commonmark.org/help/">CommonMark</a></li>
-<li><sup class="footnote-reference"><a href="#pulldown-cmark">4</a></sup> <a href="https://github.com/pulldown-cmark/pulldown-cmark#pulldown-cmark">pulldown-cmark</a></li>
-<li><sup class="footnote-reference"><a href="#github-tables">6</a></sup> <a href="https://github.github.com/gfm/#tables-extension-">Github flavored tables</a></li>
-<li><sup class="footnote-reference"><a href="#github-task-lists">7</a></sup> <a href="https://github.github.com/gfm/#task-list-items-extension-">Github flavored task lists</a></li>
-<li><sup class="footnote-reference"><a href="#strikethrough">8</a></sup> <a href="https://github.github.com/gfm/#strikethrough-extension-">Strikethrough</a></li>
-</ul>
+<p>Zola<sup class="footnote-reference"><a href="#3">3</a></sup> use pulldown-cmark<sup class="footnote-reference"><a href="#4">4</a></sup> as pull parser for CommonMark<sup class="footnote-reference"><a href="#5">5</a></sup> as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables<sup class="footnote-reference"><a href="#6">6</a></sup>, Github flavored task lists<sup class="footnote-reference"><a href="#7">7</a></sup> and strikethrough<sup class="footnote-reference"><a href="#8">8</a></sup> text.</p>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p><a href="https://www.getzola.org/documentation/getting-started/overview/#zola-at-a-glance">Zola at a Glance</a></p>
+</div>
+<!-- format fix -->
+<div class="footnote-definition" id="4"><sup class="footnote-definition-label">4</sup>
+<p><a href="https://github.com/pulldown-cmark/pulldown-cmark#pulldown-cmark">pulldown-cmark</a></p>
+</div>
+<!-- format fix -->
+<div class="footnote-definition" id="5"><sup class="footnote-definition-label">5</sup>
+<p><a href="https://commonmark.org/help/">CommonMark</a></p>
+</div>
+<!-- format fix -->
+<div class="footnote-definition" id="6"><sup class="footnote-definition-label">6</sup>
+<p><a href="https://github.github.com/gfm/#tables-extension-">Github flavored tables</a></p>
+</div>
+<!-- format fix -->
+<div class="footnote-definition" id="7"><sup class="footnote-definition-label">7</sup>
+<p><a href="https://github.github.com/gfm/#task-list-items-extension-">Github flavored task lists</a></p>
+</div>
+<!-- format fix -->
+<div class="footnote-definition" id="8"><sup class="footnote-definition-label">8</sup>
+<p><a href="https://github.github.com/gfm/#strikethrough-extension-">Strikethrough</a></p>
+</div>
+<!-- format fix -->
   
 <section aria-labelledby="tags">
   <h1 id="tags">Tags</h1>
@@ -745,7 +760,8 @@ Task 3</li>
       title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
       href="https://github.com/exiguus/zola-monoplain"
       >@exiguus mono&#x2F;plain Zola</a
-    >. Made with love.
+    >. Made with love.<br />
+    <i class="sr-only">Last update:</i> <small>2024-06-16T13:00:17.521693384+00:00</small>
   </p>
 </footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-XQ1Fsl+5GSmgurMTkLZaRJ3syIZGv8rV511tBFlUN8YJHc4AaYh5j82xkxRfljUE" defer="defer"></script>

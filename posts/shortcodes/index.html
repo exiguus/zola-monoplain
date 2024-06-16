@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2024-06-15T21:33:20.308793797+00:00" />
+<meta name="build" content="2024-06-16T13:00:17.555065554+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Shortcodes"
@@ -125,10 +125,7 @@ accessible" />
 </nav>
 <div>
             <main id="main">
-                 <hgroup
-  role="group"
-  aria-roledescription="Post summary"
->
+                 <hgroup role="group" aria-description="Post summary">
   
 
 <p aria-label="Author"
@@ -214,6 +211,7 @@ accessible" />
     Example: input attr type is number and attr step is 1
   </figcaption>
   <iframe
+  title="input attr type is number and attr step is 1"
   srcdoc='
 <html>
   <head>
@@ -301,6 +299,7 @@ accessible" />
 <p>The <code>youtube</code> shortcode can be used to embed YouTube videos in your Markdown files. This can be useful for including video content in your posts. Here is an example of how to use the <code>youtube</code> shortcode:</p>
 <figure class="youtube">
   <iframe
+    title="loop"
     src="https://www.youtube-nocookie.com/embed/Pb4Naef8pc8"
     webkitallowfullscreen
     mozallowfullscreen
@@ -309,12 +308,13 @@ accessible" />
   </iframe>
 </figure>
 <p>Please note that the shortcode normale start and end with <code>{{</code> and <code>}}</code>. But in this example the shortcode start and end with <code>\{\{</code> and <code>\}\}</code>. This is necessary to render the shortcode in the Markdown file.</p>
-<pre data-lang="md" style="background-color:#282a36;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span style="color:#ff79c6;">\{\{</span><span> youtube(id=&quot;Pb4Naef8pc8&quot;) </span><span style="color:#ff79c6;">\}\}
+<pre data-lang="md" style="background-color:#282a36;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span style="color:#ff79c6;">\{\{</span><span> youtube(id=&quot;Pb4Naef8pc8&quot;, title=&quot;loop&quot;) </span><span style="color:#ff79c6;">\}\}
 </span></code></pre>
 <h3 id="spotify">Spotify</h3>
 <p>The <code>spotify</code> shortcode can be used to embed Spotify playlists in your Markdown files. This can be useful for including music playlists in your posts. Here is an example of how to use the <code>spotify</code> shortcode:</p>
 <figure class="spotify">
   <iframe
+    title="album"
     src="https://open.spotify.com/embed/album/6rqhFgbbKwnb9MLmUQDhG6"
     width="300"
     height="380"
@@ -325,7 +325,7 @@ accessible" />
   </iframe>
 </figure>
 <p>Please note that the shortcode normale start and end with <code>{{</code> and <code>}}</code>. But in this example the shortcode start and end with <code>\{\{</code> and <code>\}\}</code>. This is necessary to render the shortcode in the Markdown file.</p>
-<pre data-lang="md" style="background-color:#282a36;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span style="color:#ff79c6;">\{\{</span><span> spotify(id=&quot;6rqhFgbbKwnb9MLmUQDhG6&quot;) </span><span style="color:#ff79c6;">\}\}
+<pre data-lang="md" style="background-color:#282a36;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span style="color:#ff79c6;">\{\{</span><span> spotify(id=&quot;6rqhFgbbKwnb9MLmUQDhG6&quot;, title=&quot;album&quot;) </span><span style="color:#ff79c6;">\}\}
 </span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>Shortcodes are a powerful feature of Zola that can be used to embed additional content in your Markdown files. They are easy to use and can help you create more dynamic and interactive posts. I hope this post has given you a good overview of how to use shortcodes in Zola. If you have any questions or need further assistance, feel free to leave a comment below. Happy coding!</p>
@@ -533,7 +533,8 @@ accessible" />
       title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
       href="https://github.com/exiguus/zola-monoplain"
       >@exiguus mono&#x2F;plain Zola</a
-    >. Made with love.
+    >. Made with love.<br />
+    <i class="sr-only">Last update:</i> <small>2024-06-16T13:00:17.605942691+00:00</small>
   </p>
 </footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-XQ1Fsl+5GSmgurMTkLZaRJ3syIZGv8rV511tBFlUN8YJHc4AaYh5j82xkxRfljUE" defer="defer"></script>
