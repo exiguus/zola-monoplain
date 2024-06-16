@@ -13,8 +13,8 @@
   src="{{ get_url(path='js/search.js')|safe }}"
 ></script>
 
-<form aria-labelledby="search">
-  <legend id="search">{{ trans(key="search_form_legend") }}</legend>
+<form aria-labelledby="search-form">
+  <legend id="search-form">{{ trans(key="search_form_legend") }}</legend>
   <p>
     <label for="search-input">{{ trans(key="search_form_input_label") }}</label>
     <input
@@ -23,7 +23,7 @@
       autofocus="true"
       type="search"
       placeholder="{{ trans(key='search_form_input_placeholder') }}"
-      autocomplete="search"
+      autocomplete="on"
     />
   </p>
   <p>

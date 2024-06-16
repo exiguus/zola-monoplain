@@ -1,5 +1,6 @@
 <figure class="youtube{% if class %} {{class}}{% endif %}">
   <iframe
+    title="{{title | default(value='YouTube video')}}"
     src="https://www.youtube-nocookie.com/embed/{{id}}{% if autoplay %}?autoplay=1{% endif %}"
     webkitallowfullscreen
     mozallowfullscreen

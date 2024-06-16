@@ -212,6 +212,8 @@ jobs:
           runs: 3
 ```
 
+See: <https://github.com/marketplace/actions/deploy-pr-preview>
+
 ### Checks
 
 Use _check-format_ to check the format of the code.

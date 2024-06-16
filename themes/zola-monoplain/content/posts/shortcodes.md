@@ -83,24 +83,24 @@ All available icon names can be found on the [icon page](@/posts/icons.md).
 
 The `youtube` shortcode can be used to embed YouTube videos in your Markdown files. This can be useful for including video content in your posts. Here is an example of how to use the `youtube` shortcode:
 
-{{ youtube(id="Pb4Naef8pc8") }}
+{{ youtube(id="Pb4Naef8pc8", title="loop") }}
 
 Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
 
 ```md
-\{\{ youtube(id="Pb4Naef8pc8") \}\}
+\{\{ youtube(id="Pb4Naef8pc8", title="loop") \}\}
 ```
 
 ### Spotify
 
 The `spotify` shortcode can be used to embed Spotify playlists in your Markdown files. This can be useful for including music playlists in your posts. Here is an example of how to use the `spotify` shortcode:
 
-{{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6") }}
+{{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") }}
 
 Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
 
 ```md
-\{\{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6") \}\}
+\{\{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") \}\}
 ```
 
 ## Conclusion

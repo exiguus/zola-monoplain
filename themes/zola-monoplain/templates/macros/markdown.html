@@ -1,5 +1,6 @@
 {% macro example(title="example", type, code) -%}
 <iframe
+  title="{{ title | default(value='example') }}"
   srcdoc='
 <html>
   <head>
