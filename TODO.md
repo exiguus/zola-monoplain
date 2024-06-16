@@ -5,9 +5,10 @@
 - [x] Home
   - [x] Latest Posts
   - [x] Latest Projects
+  - [ ] Latest Links
   - [x] Latest Images
 - [x] Posts
-- [ ] Post
+- [x] Post
   - [x] header
     - [x] Author
     - [x] Date and Update
@@ -21,7 +22,7 @@
     - [x] youtube
     - [x] spotify
     - [x] icons
-  - [ ] Markdown
+  - [x] Markdown
     - [x] Headlines
     - [x] Paragraphs
     - [x] Text Formatting (bold, italic, strikethrough, bold and italic)
@@ -32,12 +33,13 @@
     - [x] Tables
     - [x] Task Lists
     - [x] Horizontal Rules
-    - [ ] Emojis
+    - [x] Emojis
     - [x] Escaping Characters
     - [x] HTML
     - [x] Footnotes
 - [x] Gallery
 - [ ] Projects
+- [ ] Links
 - [x] Tags
 - [x] Search
 
@@ -48,6 +50,7 @@
 - [x] Post
 - [x] Gallery
 - [ ] Projects
+- [ ] Links
 - [x] Tags
 - [x] Search
 
@@ -62,7 +65,7 @@
   - [x] Clean HTML5
   - [x] Lean CSS
 - [x] Dark / Light Mode
-- [ ] Preview
+- [x] Preview
 - [ ] Comments
   - [ ] via Mastodon
   - [ ] via Disqus (Github Discussions)
@@ -76,16 +79,18 @@
   - [x] Smilie support
   - [x] Footnote support
 - [x] Github
-  - [ ] Pages Deployment
-  - [ ] Actions
+  - [x] Pages Deployment
+  - [x] Actions
 - [ ] Templates
   - [x] Latest Posts
   - [ ] Latest Projects
+  - [ ] Latest Links
   - [x] Latest Images
   - [x] Home
   - [x] Posts
   - [x] Gallery
   - [ ] Projects
+  - [ ] Links
 - [x] Taxonomy, Tags
 - [x] Table of Content
 - [x] Shortcodes
@@ -113,6 +118,7 @@
 - [x] Emojis Page
 - [x] Shortcodes Page
 - [x] Dictionary Page
+- [x] CI Page
 - [ ] Features Page
 - [ ] Configuration Page
 - [ ] About Page
@@ -130,32 +136,30 @@
 
 ## Format, lint, validate
 
-- [ ] validate SCSS & CSS
-- [ ] validate HTML
-- [ ] validate Accessibility
-- [ ] lighthouse test
-- [ ] lighthouse github action
-- [ ] format dprint
-- [ ] format commit hooks
-- [ ] format github action
+- [x] validate HTML
+- [x] validate Accessibility
+- [x] lighthouse test
+- [x] lighthouse github action
+- [x] format dprint
+- [x] format commit hooks
+- [x] format github action
 
 ## CI / CD
 
-- [ ] Github Actions
-  - [ ] Lighthouse
-  - [ ] Format
-  - [ ] Validate
-  - [ ] Build
-  - [ ] Deploy
-- [ ] Preview deployments
-- [ ] Production deployments
+- [x] Github Actions
+  - [x] Lighthouse
+  - [x] Check
+  - [x] Build
+  - [x] Deploy
+- [x] Preview deployments
+- [x] Production deployments
 
 ## Refactor
 
-- [ ] tabler icon macro
-  - [ ] add all icons from <https://github.com/tabler/tabler-icons/tree/master/icons>
-- [ ] add shortcode to documentation
-- [ ] add icon shortcode {{ icon(name="github") }}
+- [x] tabler icon macro
+  - [x] add all icons from <https://github.com/tabler/tabler-icons/tree/master/icons>
+- [x] add shortcode to documentation
+- [x] add icon shortcode {{ icon(name="github") }}
 - [ ] search macro
 - [ ] search documentation
 - [ ] search shortcode {{ search() }}
