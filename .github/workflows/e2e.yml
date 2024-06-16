@@ -10,6 +10,7 @@ jobs:
     name: A11y
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    if: always()
 
     steps:
       - name: Checkout

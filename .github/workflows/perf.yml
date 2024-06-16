@@ -1,4 +1,4 @@
-name: Lighthouse
+name: perf
 on:
   workflow_run:
     workflows: ["Deploy"]
@@ -6,10 +6,12 @@ on:
       - completed
 
 jobs:
-  test_run:
+  lighthouse:
     name: Test run
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    if: always()
+
     steps:
       - uses: actions/checkout@v4
 
