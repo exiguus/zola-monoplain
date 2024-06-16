@@ -24,5 +24,10 @@
   "license": "MIT",
   "dependencies": {
     "@tabler/icons": "^2.47.0"
+  },
+  "engines": {
+    "pnpm": ">=8.0.0 <10.0.0",
+    "npm": ">=9.0.0 <10.0.0",
+    "node": ">=20.0.0 <21.0.0"
   }
 }
