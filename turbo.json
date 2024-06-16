@@ -23,7 +23,8 @@
         "test/**/*.tsx",
         "test/**/*.ts",
         "types/*.ts",
-        "mocks/*.ts"
+        "mocks/*.ts",
+        "public/**"
       ]
     },
     "check": {
