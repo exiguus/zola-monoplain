@@ -65,6 +65,9 @@
         "*.scss"
       ]
     },
+    "e2e": {
+      "dependsOn": ["^e2e", "lint"]
+    },
     "dev": {
       "cache": false
     }

@@ -125,7 +125,7 @@ jobs:
         run: pnpm install
 
       - name: Test Run
-        run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
+        run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs ${{ needs.deploy-preview.outputs.preview_url }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
