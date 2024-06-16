@@ -7,7 +7,7 @@
     "test": "turbo run test --parallel",
     "check": "pnpm check:fta && turbo run check --parallel",
     "check:fta": "fta --config-path ./fta.config.json .",
-    "build": "turbo run check test build",
+    "build": "turbo run check build test",
     "format": "pnpm format:fix",
     "format:fix": "dprint fmt",
     "format:check": "dprint check",
