@@ -122,13 +122,16 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install && pnpm test:setup
 
       - name: Test Run
         run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs ${{ needs.deploy-preview.outputs.preview_url }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: a11y-report
           path: themes/zola-monoplain/pa11y-report/**
+          if-no-files-found: error
+          retention-days: 7
