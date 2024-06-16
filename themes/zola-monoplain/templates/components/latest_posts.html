@@ -2,7 +2,9 @@
 <section aria-labelledby="latest-posts">
   <h1 id="latest-posts">Latest Posts</h1>
   <ul aria-labelledby="latest-posts">
-    {% for post in section.pages | slice(end=6) -%}
+    {% set_global imageCount = 0 -%} {% set imageCountMax = 6 -%} {% for post in
+    section.pages -%} {% set_global imageCount = imageCount + 1 -%} {% if
+    imageCount > imageCountMax -%}{% break -%}{% endif -%}
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
         <article>
