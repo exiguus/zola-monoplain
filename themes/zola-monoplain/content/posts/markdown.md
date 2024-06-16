@@ -229,17 +229,20 @@ To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 Here is a footnote reference,[^1] and another.[^2]
 
 [^1]: Here is the footnote.
-[^2]:
-    Here's one with multiple blocks.
-    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+
+<!-- format fix -->
+
+[^2]: Here's one with multiple blocks.
+
+Subsequent paragraphs are indented to show that they belong to the previous footnote.
 
 ```markdown
 Here is a footnote reference,[^1] and another.[^2]
 
 [^1]: Here is the footnote.
-[^2]:
-    Here's one with multiple blocks.
-    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+[^2]: Here's one with multiple blocks.
+
+Subsequent paragraphs are indented to show that they belong to the previous footnote.
 ```
 
 ## References
@@ -247,8 +250,25 @@ Here is a footnote reference,[^1] and another.[^2]
 Zola[^3] use pulldown-cmark[^4] as pull parser for CommonMark[^5] as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables[^6], Github flavored task lists[^7] and strikethrough[^8] text.
 
 [^3]: [Zola at a Glance](https://www.getzola.org/documentation/getting-started/overview/#zola-at-a-glance)
+
+<!-- format fix -->
+
 [^4]: [pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark#pulldown-cmark)
+
+<!-- format fix -->
+
 [^5]: [CommonMark](https://commonmark.org/help/)
+
+<!-- format fix -->
+
 [^6]: [Github flavored tables](https://github.github.com/gfm/#tables-extension-)
+
+<!-- format fix -->
+
 [^7]: [Github flavored task lists](https://github.github.com/gfm/#task-list-items-extension-)
+
+<!-- format fix -->
+
 [^8]: [Strikethrough](https://github.github.com/gfm/#strikethrough-extension-)
+
+<!-- format fix -->
