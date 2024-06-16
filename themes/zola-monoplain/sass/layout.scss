@@ -166,6 +166,13 @@ body {
       box-sizing: border-box;
     }
 
+    .footnote-definition {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
     #latest-images {
       & + ul {
         display: grid;

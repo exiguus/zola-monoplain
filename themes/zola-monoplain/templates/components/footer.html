@@ -57,6 +57,7 @@
       title="{{ trans(key='footer_links_theme_title') }}"
       href="https://github.com/exiguus/zola-monoplain"
       >{{ trans(key="footer_links_theme_text") }}</a
-    >. {{ trans(key="footer_made") }}.{% endif %}
+    >. {{ trans(key="footer_made") }}.{% endif %}<br />
+    <i class="sr-only">Last update:</i> <small>{{ now() }}</small>
   </p>
 </footer>

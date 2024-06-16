@@ -226,29 +226,29 @@ To escape characters like \* or \_, use backslashes: \*escaped\* and \_escaped\_
 
 ### Footnotes
 
-Here is a footnote reference,[^1] and another.[^longnote]
+Here is a footnote reference,[^1] and another.[^2]
 
 [^1]: Here is the footnote.
-[^longnote]: Here's one with multiple blocks.
-
+[^2]:
+    Here's one with multiple blocks.
     Subsequent paragraphs are indented to show that they belong to the previous footnote.
 
 ```markdown
-Here is a footnote reference,[^1] and another.[^longnote]
+Here is a footnote reference,[^1] and another.[^2]
 
 [^1]: Here is the footnote.
-[^longnote]: Here's one with multiple blocks.
-
+[^2]:
+    Here's one with multiple blocks.
     Subsequent paragraphs are indented to show that they belong to the previous footnote.
 ```
 
 ## References
 
-Zola[^zola] use pulldown-cmark[^pulldown-cmark] as pull parser for CommonMark[^commonmark] as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables[^github-tables], Github flavored task lists[^github-task-lists] and strikethrough[^strikethrough] text.
+Zola[^3] use pulldown-cmark[^4] as pull parser for CommonMark[^5] as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables[^6], Github flavored task lists[^7] and strikethrough[^8] text.
 
-- [^zola] [Zola at a Glance](https://www.getzola.org/documentation/getting-started/overview/#zola-at-a-glance)
-- [^commonmark] [CommonMark](https://commonmark.org/help/)
-- [^pulldown-cmark] [pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark#pulldown-cmark)
-- [^github-tables] [Github flavored tables](https://github.github.com/gfm/#tables-extension-)
-- [^github-task-lists] [Github flavored task lists](https://github.github.com/gfm/#task-list-items-extension-)
-- [^strikethrough] [Strikethrough](https://github.github.com/gfm/#strikethrough-extension-)
+[^3]: [Zola at a Glance](https://www.getzola.org/documentation/getting-started/overview/#zola-at-a-glance)
+[^4]: [pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark#pulldown-cmark)
+[^5]: [CommonMark](https://commonmark.org/help/)
+[^6]: [Github flavored tables](https://github.github.com/gfm/#tables-extension-)
+[^7]: [Github flavored task lists](https://github.github.com/gfm/#task-list-items-extension-)
+[^8]: [Strikethrough](https://github.github.com/gfm/#strikethrough-extension-)

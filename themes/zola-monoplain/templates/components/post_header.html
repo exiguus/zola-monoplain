@@ -1,7 +1,4 @@
-<hgroup
-  role="group"
-  aria-roledescription="{{ trans(key='post_summary_desc') }}"
->
+<hgroup role="group" aria-description="{{ trans(key='post_summary_desc') }}">
   {{ hooks::post_above_content(page=page) }}
   <h1>{{ page.title }} {% if page.draft %}<mark>Draft</mark>{% endif %}</h1>
   <p> Created: <date>{{ page.date | date(format='%Y-%m-%d')}}</date> </p>
