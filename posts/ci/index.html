@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2024-06-16T14:11:20.599346323+00:00" />
+<meta name="build" content="2024-06-19T18:12:54.966675418+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -82,6 +82,9 @@ accessible" />
               </li>
             <li>
               <a href="#lighthouse">Lighthouse</a>
+              </li>
+            <li>
+              <a href="#accessibility">Accessibility</a>
               </li>
             </ul>
           </li>
@@ -171,6 +174,11 @@ accessible" />
           
           <li>
             <a href="https://exiguus.github.io/zola-monoplain/posts/ci/#lighthouse">Lighthouse</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/ci/#accessibility">Accessibility</a>
             
           </li>
           
@@ -480,6 +488,67 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>          </span><span style="color:#ff79c6;">budgetPath</span><span>: </span><span style="color:#f1fa8c;">./budget.json
 </span><span>          </span><span style="color:#ff79c6;">uploadArtifacts</span><span>: </span><span style="color:#bd93f9;">true
 </span><span>          </span><span style="color:#ff79c6;">runs</span><span>: </span><span style="color:#bd93f9;">3
+</span></code></pre>
+<h3 id="accessibility">Accessibility</h3>
+<p>Use <code>pa11y</code> to check the accessibility of the website.</p>
+<p>And validate against the <code>WCAG</code> standard.</p>
+<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">e2e
+</span><span style="color:#bd93f9;">on</span><span>:
+</span><span>  </span><span style="color:#ff79c6;">workflow_run</span><span>:
+</span><span>    </span><span style="color:#ff79c6;">workflows</span><span>: [</span><span style="color:#f1fa8c;">&quot;Deploy&quot;</span><span>]
+</span><span>    </span><span style="color:#ff79c6;">types</span><span>:
+</span><span>      - </span><span style="color:#f1fa8c;">completed
+</span><span>
+</span><span style="color:#ff79c6;">jobs</span><span>:
+</span><span>  </span><span style="color:#ff79c6;">a11y</span><span>:
+</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">A11y
+</span><span>    </span><span style="color:#ff79c6;">timeout-minutes</span><span>: </span><span style="color:#bd93f9;">15
+</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
+</span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
+</span><span>
+</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
+</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup Node.js
+</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">setup-node
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/setup-node@v4
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">node-version-file</span><span>: </span><span style="color:#f1fa8c;">package.json
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">pnpm/action-setup@v4
+</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install pnpm
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">run_install</span><span>: </span><span style="color:#bd93f9;">false
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Get pnpm store directory
+</span><span>        </span><span style="color:#ff79c6;">shell</span><span>: </span><span style="color:#f1fa8c;">bash
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
+</span><span style="color:#f1fa8c;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV
+</span><span style="color:#f1fa8c;">
+</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/cache@v4
+</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup pnpm cache
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">${{ env.STORE_PATH }}
+</span><span>          </span><span style="color:#ff79c6;">key</span><span>: </span><span style="color:#f1fa8c;">${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}
+</span><span>          </span><span style="color:#ff79c6;">restore-keys</span><span>: </span><span style="color:#ff79c6;">|
+</span><span style="color:#f1fa8c;">            ${{ runner.os }}-pnpm-store-
+</span><span style="color:#f1fa8c;">
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install dependencies
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm install &amp;&amp; pnpm test:setup
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Test Run
+</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">cd themes/zola-monoplain &amp;&amp; node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
+</span><span>
+</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Upload Artifacts
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v4
+</span><span>        </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
+</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
+</span><span>          </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">a11y-report
+</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">themes/zola-monoplain/pa11y-report/**
+</span><span>          </span><span style="color:#ff79c6;">if-no-files-found</span><span>: </span><span style="color:#f1fa8c;">error
+</span><span>          </span><span style="color:#ff79c6;">retention-days</span><span>: </span><span style="color:#bd93f9;">7
 </span></code></pre>
   
 <section aria-labelledby="tags">
@@ -806,7 +875,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
       href="https://github.com/exiguus/zola-monoplain"
       >@exiguus mono&#x2F;plain Zola</a
     >. Made with love.<br />
-    <i class="sr-only">Last update:</i> <small>2024-06-16T14:11:20.663289864+00:00</small>
+    <i class="sr-only">Last update:</i> <small>2024-06-19T18:12:55.019363769+00:00</small>
   </p>
 </footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-XQ1Fsl+5GSmgurMTkLZaRJ3syIZGv8rV511tBFlUN8YJHc4AaYh5j82xkxRfljUE" defer="defer"></script>
