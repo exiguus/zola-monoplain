@@ -9,7 +9,7 @@ images = ["gedit-weblog-last-post.png", "gedit-article-last-post.png", "gedit-la
 
 ## Introduction
 
-[gedit.net](http://gedit.net) is my first personal blog.
+[gedit.net](https://gedit.net) is my first personal blog.
 About web development and web design.
 In 2003 I published my first article.
 In 2011 was my last post.
@@ -226,11 +226,11 @@ Before I archived the blog, I did some research. I wanted to know how many artic
 
 ### History
 
-The [last Weblog post](http://gedit.net/Weblog) is from 2011-04-03 and links the HTML 5 Editor draft
+The [last Weblog post](https://gedit.net/Weblog) is from 2011-04-03 and links the HTML 5 Editor draft
 
 {{ image(src="gedit-weblog-last-post.png", alt="gedit.net last post") }}
 
-The [last Article post](http://gedit.net/Artikel;Free_HTML-CSS_Templates_viCard_und_Helvetica) is from 2009 and offers two free HTML templates for personal sites. My personal was running on the second one (Helvetica) until 2020.
+The [last Article post](https://gedit.net/Artikel_Free_HTML-CSS_Templates_viCard_und_Helvetica.html) is from 2009 and offers two free HTML templates for personal sites. My personal was running on the second one (Helvetica) until 2020.
 
 {{ image(src="gedit-article-last-post.png", alt="gedit.net last article") }}
 
@@ -581,5 +581,8 @@ $ cat content.sqlite | grep -a -o -E '([0-9]{10})(.*)' | awk '!seen[$1]++ { prin
 Overall, this command chain extracts UNIX timestamps and content from the file, formats the timestamps to human-readable dates, removes HTML tags, removes the timestamps themselves, and finally sorts the output.
 `)}}
 
-[^1]: I think it is phpSQLiteCMS version 2.0.4. Because I did regular updates. But I have no proof for that. The CMS is still available on [SourceForge](https://sourceforge.net/projects/phpsqlitecms/). The project is abandoned since 2009.
 [^redesign-v0.6]: I found a screenshot of the redesign v0.6 in my files. It was never finished.
+
+<!-- format -->
+
+[^1]: I think it is phpSQLiteCMS version 2.0.4. Because I did regular updates. But I have no proof for that. The CMS is still available on [SourceForge](https://sourceforge.net/projects/phpsqlitecms/). The project is abandoned since 2009.
