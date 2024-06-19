@@ -4,7 +4,7 @@
 
 - [x] Home
   - [x] Latest Posts
-  - [x] Latest Projects
+  - [ ] Latest Projects
   - [ ] Latest Links
   - [x] Latest Images
 - [x] Posts
@@ -111,6 +111,13 @@
   - [ ] Multilingual sites
 - [x] Search
 
+## Configuration
+
+- [ ] show latest images
+- [ ] latest image count
+- [ ] latest post count
+- [ ] ...
+
 ## Docs
 
 - [x] Markdown Page
@@ -119,6 +126,8 @@
 - [x] Shortcodes Page
 - [x] Dictionary Page
 - [x] CI Page
+- [x] Theme Page
+- [ ] Accessibility Page
 - [ ] Features Page
 - [ ] Configuration Page
 - [ ] About Page
@@ -149,6 +158,7 @@
 - [x] Github Actions
   - [x] Lighthouse
   - [x] Check
+  - [x] e2e
   - [x] Build
   - [x] Deploy
 - [x] Preview deployments
