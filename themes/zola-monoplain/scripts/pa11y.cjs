@@ -61,7 +61,7 @@ console.log("Start testing...");
 
 Promise.all(
   testPaths.map(async (path) => {
-    await run(`${url}${path}`);
+    return run(`${url}${path}`);
   }),
 )
   .then(async () => {
@@ -148,11 +148,17 @@ Promise.all(
 async function run(url) {
   try {
     console.info(`Start test ${url}`);
-    const result = await pa11y(url, config);
+    const result = await Promise.race([
+      pa11y(url, config),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("Timeout")), 30000),
+      ), // 30 seconds timeout
+    ]);
     console.info(`End test ${url}`);
     results.push(result);
-    return result;
+    return result; // Ensure this resolves
   } catch (error) {
-    console.error(error.message);
+    console.error(`Error occurred while testing ${url}: ${error.message}`);
+    return Promise.reject(error); // Explicitly reject the promise on error
   }
 }
