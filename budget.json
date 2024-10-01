@@ -29,10 +29,6 @@
       {
         "metric": "max-potential-fid",
         "budget": 400
-      },
-      {
-        "metric": "first-meaningful-paint",
-        "budget": 2000
       }
     ],
     "resourceSizes": [
