@@ -6,6 +6,7 @@
     "dev": "turbo run dev --parallel --no-cache",
     "test": "turbo run test --parallel",
     "test:setup": "pnpx puppeteer browsers install chrome",
+    "test:environment": "pnpx pa11y --environment",
     "check": "pnpm check:fta && turbo run check --parallel",
     "check:fta": "fta --config-path ./fta.config.json .",
     "build": "turbo run check build test",
