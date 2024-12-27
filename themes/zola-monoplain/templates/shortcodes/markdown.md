@@ -6,7 +6,7 @@
     Example: {{ title }}
   </figcaption>
   {% endif -%}
-  {{ markdown::example(title=title, type=type, code=code) }}
+  {{ markdown::markdown(title=title, type=type, code=code) }}
   <details aria-label="source" open>
     <summary>Source</summary>
 

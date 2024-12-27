@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Observer Example</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      body {
+        font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono",
+          "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco,
+          monospace;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      form legend {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      form label {
+        display: block;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript Observer Pattern Example</h1>
+    <button id="unsubscribe" disabled="disabled">Unsubscribe and change</button>
+    <button id="subscribe" disabled="disabled">Subscribe and change</button>
+    <h2>Output:</h2>
+    <pre id="output"></pre>
+    <script>
+      class Subject {
+        constructor() {
+          this.observers = [];
+          this.state = 0;
+        }
+
+        addObserver(observer) {
+          this.observers.push(observer);
+        }
+
+        removeObserver(observer) {
+          this.observers = this.observers.filter((obs) => obs !== observer);
+        }
+
+        notifyObservers() {
+          this.observers.forEach((observer) => observer.update(this.state));
+        }
+
+        setState(newState) {
+          this.state = newState;
+          this.notifyObservers();
+        }
+
+        getState() {
+          return this.state;
+        }
+      }
+
+      class Observer {
+        constructor(name) {
+          this.name = name;
+        }
+
+        update(state) {
+          const data = `${this.name} observed state change: ${state}`;
+          console.log(data);
+          const now = new Date();
+          const timestamp = now.toISOString().split("T")[1].split(".")[0];
+          document.getElementById("output").textContent +=
+            `${timestamp}: ${data}\n`;
+        }
+      }
+
+      const subject = new Subject();
+
+      const observer1 = new Observer("Observer 1");
+      const observer2 = new Observer("Observer 2");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttonSubscribe = document.getElementById("subscribe");
+        const buttonUnsubscribe = document.getElementById("unsubscribe");
+
+        buttonSubscribe.addEventListener("click", function () {
+          subject.addObserver(observer2);
+          const observer3 = new Observer("Observer 3");
+          subject.addObserver(observer3);
+
+          setTimeout(() => {
+            subject.setState(22); // Only Observer 2 will be notified
+          }, 1000);
+
+          setTimeout(() => {
+            subject.addObserver(observer1);
+            subject.setState(33); // Both observers will be notified
+          }, 2000);
+
+          setTimeout(() => {
+            subject.setState(44); // Both observers will be notified
+          }, 4000);
+        });
+
+        buttonUnsubscribe.addEventListener("click", function () {
+          subject.removeObserver(observer2);
+
+          setTimeout(() => {
+            subject.setState(22); // Only Observer 2 will be notified
+          }, 1000);
+
+          setTimeout(() => {
+            subject.addObserver(observer1);
+            subject.setState(33); // Both observers will be notified
+          }, 2000);
+
+          setTimeout(() => {
+            subject.setState(44); // Both observers will be notified
+          }, 4000);
+        });
+
+        subject.addObserver(observer1);
+        subject.addObserver(observer2);
+
+        subject.setState(1); // Both observers will be notified
+
+        subject.removeObserver(observer1);
+
+        setTimeout(() => {
+          subject.setState(2); // Only Observer 2 will be notified
+        }, 1000);
+
+        setTimeout(() => {
+          subject.addObserver(observer1);
+          subject.setState(3); // Both observers will be notified
+        }, 2000);
+
+        setTimeout(() => {
+          subject.setState(4); // Both observers will be notified
+        }, 4000);
+
+        setTimeout(() => {
+          subject.setState(5); // Only Observer 1 will be notified
+
+          buttonSubscribe.removeAttribute("disabled");
+          buttonUnsubscribe.removeAttribute("disabled");
+        }, 8000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% macro example(title="example", src, height) -%}
+<iframe
+  title="{{ title | default(value='example') }}"
+  src="{{ src }}"
+  height="{{ height | default(value='300px') }}"
+  width="100%"
+  loading="lazy"
+>
+</iframe>
+{% endmacro -%}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Signal Pattern Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      body {
+        font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono",
+          "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco,
+          monospace;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Signal Pattern Example with jQuery</h1>
+      <h2>Internal State</h2>
+      <p>
+        <button id="incrementBtn">Increment</button>
+      </p>
+      <p id="displayCount">Count: 0</p>
+    </main>
+    <script>
+      $(document).ready(function () {
+        // Use jQuery's custom event system for signals
+        const createSignal = (initialValue) => {
+          const $signal = $({});
+          let value = initialValue;
+
+          const signal = {
+            get value() {
+              return value;
+            },
+            set value(newValue) {
+              value = newValue;
+              $signal.trigger("change", [value]);
+            },
+            subscribe(callback) {
+              $signal.on("change", (event, newValue) => callback(newValue));
+              return () => {
+                $signal.off("change", callback);
+              };
+            },
+          };
+
+          return signal;
+        };
+
+        // Create a signal for count
+        const count = createSignal(0);
+
+        // Update the display whenever the count changes
+        count.subscribe((newValue) => {
+          $("#displayCount").text("Count: " + newValue);
+        });
+
+        // Increment the count when the button is clicked
+        $("#incrementBtn").on("click", () => {
+          count.value += 1;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{% macro details(title="details", content, open, id) -%} {% if id -%} {% set
+id=id -%} {% else -%} {% set id="details"~ nth -%} {% endif -%}
+<details aria-labelledby="{{id}}" {% if open %}open{%endif%}>
+  <summary id="{{id}}">{{ title }}</summary>
+  {{ content }}
+</details>
+{% endmacro -%}

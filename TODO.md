@@ -177,3 +177,5 @@
 - [ ] taxonomy list / single
 - [ ] minify javascript
 - [ ] typescript support
+- [ ] refactor shortcode markdown like "inline" example
+- [ ] update shortcode markdown documentation with all options

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Pub/Sub Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      body {
+        font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono",
+          "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco,
+          monospace;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      form legend {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      form label {
+        display: block;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>jQuery Subscription Pattern Example</h1>
+    <button id="unsubscribe" disabled="disabled"
+      >Unsubscribe and Publish</button
+    >
+    <button id="subscribe" disabled="disabled">Subscribe and Publish</button>
+    <h2>Output:</h2>
+    <pre id="output"></pre>
+    <script>
+      // jquery subscription pattern use jquery event api
+      $(document).ready(function () {
+        // Create an event bus
+        const eventBus = $({}); // Create a jQuery object to serve as an event bus
+
+        // Subscribe to a topic
+        function subscribe(topic, listener) {
+          eventBus.on(topic, listener);
+        }
+
+        // Unsubscribe from a topic
+        function unsubscribe(topic, listener) {
+          eventBus.off(topic, listener);
+        }
+
+        // Publish to a topic
+        function publish(topic, data) {
+          eventBus.trigger(topic, data);
+        }
+
+        function output(data) {
+          const now = new Date();
+          const timestamp = now.toISOString().split("T")[1].split(".")[0];
+          console.log(data);
+          $("#output").append(`${timestamp}: ${data}` + "\n");
+        }
+
+        function subscriber1(event, data) {
+          output("Subscriber 1 received: " + data);
+        }
+
+        function subscriber2(event, data) {
+          output("Subscriber 2 received: " + data);
+        }
+
+        function subscriber3(event, data) {
+          output("Subscriber 3 received: " + data);
+          const buttonElement = $("button");
+          buttonElement.removeAttr("disabled");
+        }
+
+        function runSubscribe() {
+          // Subscribe to topics
+          subscribe("topic1", subscriber1);
+          subscribe("topic1", subscriber2);
+          subscribe("topic2", subscriber2);
+          subscribe("topic2", subscriber3);
+        }
+
+        function runPublish() {
+          // Publish to topics
+          setTimeout(() => {
+            publish("topic1", ["Hello, World! (topic1)"]);
+          }, 2000);
+
+          // Publish again
+          setTimeout(() => {
+            publish("topic1", ["Hello again! (topic1)"]);
+          }, 6000);
+
+          // Publish to another topic
+          setTimeout(() => {
+            publish("topic2", ["Another message (topic2)"]);
+          }, 12000);
+        }
+
+        function runUnsubscribe() {
+          // Unsubscribe a subscriber
+          unsubscribe("topic1", subscriber1);
+        }
+
+        runSubscribe();
+        runPublish();
+
+        function runUnsubscribeAndPublish() {
+          runUnsubscribe();
+          runPublish();
+        }
+
+        function runSubscribeAndPublish() {
+          runSubscribe();
+          runPublish();
+        }
+
+        $("button#unsubscribe").click(function () {
+          runUnsubscribeAndPublish();
+        });
+
+        $("button#subscribe").click(function () {
+          runSubscribeAndPublish();
+        });
+      });
+    </script>
+  </body>
+</html>

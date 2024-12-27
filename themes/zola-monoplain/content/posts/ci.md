@@ -363,7 +363,14 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v4
         with:
-          node-version-file: package.json
++++
+title = "Emojis"
+description = "Emoji by example"
+date = 2024-06-07
+authors = ["Simon Gattner"]
+[taxonomies]
+tags= ["Zola", "Theme", "Markdown", "Emojis"]
++++          node-version-file: package.json
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm

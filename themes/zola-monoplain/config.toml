@@ -7,6 +7,14 @@ base_url = "https://exiguus.github.io/zola-monoplain"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+# content
+ignored_content = [
+  "**/node_modules/",
+  "**/react-*/*.md",
+  "**/react-*/src/",
+  "**/react-*/public/",
+]
+
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 default_language = "en"
