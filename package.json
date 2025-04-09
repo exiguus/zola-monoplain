@@ -17,7 +17,7 @@
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch",
     "release:major": "standard-version --release-as major",
-    "prepare": "pnpm husky install"
+    "prepare": "pnpm husky"
   },
   "keywords": [
     "zola",
@@ -39,17 +39,17 @@
   },
   "homepage": "https://github.com/exiguus/zola-monoplain#readme",
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@commitlint/prompt-cli": "^19.6.1",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/prompt-cli": "^19.8.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "dprint": "^0.46.3",
     "fta-cli": "^2.0.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
+    "lint-staged": "^15.5.0",
     "pa11y": "^8.0.0",
     "standard-version": "^9.5.0",
-    "turbo": "^2.3.3"
+    "turbo": "^2.5.0"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
@@ -59,7 +59,7 @@
       "pnpm format:fix"
     ]
   },
-  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631",
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
@@ -71,8 +71,8 @@
     }
   },
   "engines": {
-    "pnpm": ">=8.0.0 <10.0.0",
-    "npm": ">=9.0.0 <10.0.0",
+    "pnpm": ">=8.0.0 <12.0.0",
+    "npm": ">=9.0.0 <12.0.0",
     "node": ">=20.0.0 <23.0.0"
   }
 }
