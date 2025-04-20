@@ -46,7 +46,7 @@
     "dprint": "^0.46.3",
     "fta-cli": "^2.0.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "pa11y": "^8.0.0",
     "standard-version": "^9.5.0",
     "turbo": "^2.5.0"
