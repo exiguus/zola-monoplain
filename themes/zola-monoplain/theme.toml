@@ -2,19 +2,20 @@ name = "mono/plain; a11y=true"
 
 description = "An accessible, monospace plain Zola Theme"
 license = "MIT"
-homepage = "https://github.com/jimmyff/zola-inky"
+homepage = "https://github.com/exiguus/zola-monoplain"
 # The minimum version of Zola required
-min_version = "0.17.0"
+min_version = "0.18.0"
 # An optional live demo URL
-demo = "https://jimmyff.github.io/zola-inky/"
+demo = "https://exiguus.github.io/zola-monoplain/"
 
 [extra]
 
 [author]
-name = "jimmyff"
-homepage = "https://www.jimmyff.co.uk"
+name = "exiguus"
+homepage = "https://www.gattner.name"
+repo = "https://github.com/exiguus/zola-monoplain"
 
 [original]
-author = "mr-karan"
-homepage = "https://mrkaran.dev"
-repo = "https://github.com/mr-karan/website"
+name = "jimmyff"
+homepage = "https://www.jimmyff.co.uk"
+repo = "https://github.com/jimmyff/zola-inky"
