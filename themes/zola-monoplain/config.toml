@@ -15,7 +15,6 @@ build_search_index = true
 default_language = "en"
 
 # atom feed
-generate_feed = true
 feed_filenames = ["atom.xml"]
 feed_limit = 50
 

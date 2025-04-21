@@ -1,6 +1,5 @@
 +++
 title = "Oops! Page not found"
-images = []
 template = "404.html"
 page_template = "404.html"
 in_search_index = false

@@ -1,6 +1,5 @@
 +++
 title = "About"
-images = []
 template = "page.html"
 in_search_index = true
 +++
