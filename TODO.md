@@ -139,7 +139,7 @@
 - [x] update config.toml
 - [ ] update README.md
 - [ ] update CHANGELOG.md
-- [ ] update LICENSE
+- [x] update LICENSE
 - [ ] update CONTRIBUTING.md
 - [x] update theme/config.toml
 
