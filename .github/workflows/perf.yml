@@ -10,7 +10,13 @@ jobs:
     if: always()
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Common Setup
+        uses: ./.github/actions/common-setup
+        with:
+          node-version-file: package.json
 
       - name: Audit URLs and validate Budget
         uses: treosh/lighthouse-ci-action@v12

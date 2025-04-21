@@ -1,4 +1,4 @@
-# .github/workflows/deploy.yml
+# .github/workflows/prod.yml
 name: Deploy
 on:
   push:
@@ -6,41 +6,22 @@ on:
       - main
 
 jobs:
-  deploy-github-pages:
-    name: Deploy Github Pages
+  deploy-prod:
+    name: Deploy Prod
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
-        id: checkout
         uses: actions/checkout@v4
 
       - uses: taiki-e/install-action@v2
         with:
           tool: zola@0.18.0
 
-      - name: Setup Node.js
-        id: setup-node
-        uses: actions/setup-node@v4
+      - name: Common Setup
+        uses: ./.github/actions/common-setup
         with:
           node-version-file: package.json
-
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
         run: pnpm install
@@ -57,13 +38,19 @@ jobs:
           force: false
 
   lighthouse:
-    name: Perf PR
-    needs: deploy-github-pages
+    name: Perf Prod
+    needs: deploy-prod
     if: always()
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Common Setup
+        uses: ./.github/actions/common-setup
+        with:
+          node-version-file: package.json
 
       - name: Audit URLs and validate Budget
         uses: treosh/lighthouse-ci-action@v12
@@ -75,39 +62,18 @@ jobs:
 
   a11y:
     name: A11y Prod
-    needs: deploy-github-pages
+    needs: deploy-prod
     if: always()
     timeout-minutes: 5
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        id: checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        id: setup-node
-        uses: actions/setup-node@v4
+      - name: Common Setup
+        uses: ./.github/actions/common-setup
         with:
           node-version-file: package.json
-
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
         run: pnpm install && pnpm test:setup && pnpm test:environment
