@@ -1,4 +1,4 @@
 <hgroup role="group" aria-description="{{ trans(key='page_summary_desc') }}">
-  <h1>{{ section.title }}</h1>
-  {{ section.content | safe }}
+  <h1>{{ section.title | default(value="Ooopsi!") }}</h1>
+  {{ section.content | default(value="Page not found") | safe }}
 </hgroup>

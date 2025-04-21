@@ -25,7 +25,10 @@ opengraph %}
   content="{{config.title}} | {{opengraph::title() }}"
 />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ current_url | safe }}" />
+<meta
+  property="og:url"
+  content="{{ current_url | default(value=config.base_url) | safe }}"
+/>
 <meta property="og:description" content="{{ opengraph::description() }}" />
 <meta property="og:image" content="{{opengraph::image() }}" />
 <meta property="og:image:url" content="{{opengraph::image() }}" />

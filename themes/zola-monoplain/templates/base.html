@@ -10,45 +10,46 @@
 <html lang="en" prefix="og:https://ogp.me/ns#">
 
 <head>
-    {% block head -%}
-    {% include "components/head.html" %}
-    {% endblock head %}
+  {% block head -%}
+  {% include "components/head.html" %}
+  {% endblock head %}
 </head>
-{% set id = current_path | trim_start_matches(pat='/') | trim_end_matches(pat='/') | replace(from='/', to='--') -%}
+{% set id = current_path | default(value="not-found") | trim_start_matches(pat='/') | trim_end_matches(pat='/') |
+replace(from='/', to='--') -%}
 {% if id -%}
 
 <body id="{{ id }}" data-base-url="{{ config.base_url | safe }}">
-    {% else -%}
+  {% else -%}
 
-    <body id="home" data-base-url="{{ config.base_url | safe }}">
-        {% endif -%}
-        {% block skip_nav -%}
-        {% include "components/skip_nav.html" -%}
-        {% endblock skip_nav -%}
-        {% block header -%}
-        {% include "components/header.html" -%}
-        {% endblock header -%}
-        {% block nav -%}
-        {% include "components/nav.html" -%}
-        {% endblock nav -%}
-        <div>
-            {% block main -%}
-            <main id="main">
-                {% include "components/main.html" -%}
-                {% block content -%}
-                {% endblock -%}
-            </main>
-            {% endblock main -%}
-            {% block aside %}
-            {% endblock aside %}
-        </div>
-        {% block footer -%}
-        {% include "components/footer.html" -%}
-        {% endblock footer -%}
-        {% block body_end -%}
-        {% endblock body_end -%}
-        <script src="{{ get_url(path='js/main.js') }}" integrity="sha384-{{ get_hash(path='js/main.js',
+  <body id="home" data-base-url="{{ config.base_url | safe }}">
+    {% endif -%}
+    {% block skip_nav -%}
+    {% include "components/skip_nav.html" -%}
+    {% endblock skip_nav -%}
+    {% block header -%}
+    {% include "components/header.html" -%}
+    {% endblock header -%}
+    {% block nav -%}
+    {% include "components/nav.html" -%}
+    {% endblock nav -%}
+    <div>
+      {% block main -%}
+      <main id="main">
+        {% include "components/main.html" -%}
+        {% block content -%}
+        {% endblock -%}
+      </main>
+      {% endblock main -%}
+      {% block aside %}
+      {% endblock aside %}
+    </div>
+    {% block footer -%}
+    {% include "components/footer.html" -%}
+    {% endblock footer -%}
+    {% block body_end -%}
+    {% endblock body_end -%}
+    <script src="{{ get_url(path='js/main.js') }}" integrity="sha384-{{ get_hash(path='js/main.js',
 sha_type=384, base64=true) | safe }}" defer="defer"></script>
-    </body>
+  </body>
 
 </html>
