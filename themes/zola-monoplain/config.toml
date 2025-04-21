@@ -7,6 +7,9 @@ base_url = "https://exiguus.github.io/zola-monoplain"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+# When set to "true", the generated HTML files are minified.
+minify_html = false
+
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 default_language = "en"
