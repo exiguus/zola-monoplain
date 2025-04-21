@@ -34,10 +34,6 @@
         <loc>https://exiguus.github.io/zola-monoplain/posts/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/posts/archiv-websites-on-github/</loc>
-        <lastmod>2023-12-30</lastmod>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/ci/</loc>
         <lastmod>2024-06-15</lastmod>
     </url>
@@ -50,20 +46,12 @@
         <lastmod>2024-06-07</lastmod>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/posts/html-form-decimal-input/</loc>
-        <lastmod>2023-10-18</lastmod>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/icons/</loc>
         <lastmod>2024-06-09</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/markdown/</loc>
         <lastmod>2025-06-07</lastmod>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/posts/project-gedit-dot-net-2-decates/</loc>
-        <lastmod>2024-01-01</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/shortcodes/</loc>
@@ -80,15 +68,6 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/abandoned/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/archiv/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/blog/</loc>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/build/</loc>
     </url>
     <url>
@@ -96,9 +75,6 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/continous-integration/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/decimal/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/deployment/</loc>
@@ -110,37 +86,16 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/emojis/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/form/</loc>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/gallery/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/gedit/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/github-actions/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/github/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/html/</loc>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/icons/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/input/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/integer/</loc>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/markdown/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/review/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/shortcodes/</loc>
@@ -152,9 +107,6 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/static-site-generator/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/step/</loc>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/theme/</loc>
     </url>
     <url>
@@ -162,12 +114,6 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/typography/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/webpage/</loc>
-    </url>
-    <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/website/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/zola/</loc>
