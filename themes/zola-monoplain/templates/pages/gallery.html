@@ -3,7 +3,9 @@ get_section(path="gallery/_index.md") -%} {% if config.extra.gallery_show_posts
 -%} {% set section_posts = get_section(path="posts/_index.md") -%} {% set pages
 = section_posts.pages | concat(with=section_images.pages) -%} {% else -%} {% set
 pages = section_images.pages -%} {% endif -%} {% for year, posts in pages |
-group_by(attribute="year") -%}
+group_by(attribute="year") -%} {% set_global yearHasImage = false -%} {% for
+post in posts -%} {% if post.extra.images -%} {% set_global yearHasImage = true
+-%} {% endif -%} {% endfor -%} {% if yearHasImage -%}
 <section aria-labelledby="year-{{ year }}">
   <h1 id="year-{{ year }}">{{ year }}</h1>
   <ul aria-labelledby="year-{{ year }}">
@@ -36,4 +38,4 @@ group_by(attribute="year") -%}
     {% endfor -%} {% endif -%} {% endfor -%}
   </ul>
 </section>
-{% endfor -%}
+{% endif -%} {% endfor -%}
