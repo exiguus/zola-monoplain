@@ -131,17 +131,17 @@
 - [ ] Features Page
 - [ ] Configuration Page
 - [ ] About Page
-- [ ] Images Page
-- [ ] Zola Page
+- [x] Gallery Page
+- [x] Zola Page
 
 ## Theme
 
-- [ ] update theme.toml
+- [x] update config.toml
 - [ ] update README.md
 - [ ] update CHANGELOG.md
 - [ ] update LICENSE
 - [ ] update CONTRIBUTING.md
-- [ ] update theme/config.toml
+- [x] update theme/config.toml
 
 ## Format, lint, validate
 
@@ -170,10 +170,14 @@
   - [x] add all icons from <https://github.com/tabler/tabler-icons/tree/master/icons>
 - [x] add shortcode to documentation
 - [x] add icon shortcode {{ icon(name="github") }}
-- [ ] search macro
-- [ ] search documentation
-- [ ] search shortcode {{ search() }}
-- [ ] search page
+- [x] search component
+- [ ] search page / javascript
 - [ ] taxonomy list / single
 - [ ] minify javascript
 - [ ] typescript support
+- [ ] tabler v3 support
+
+## Fixes
+
+- [ ] fix atom feed show unpublished posts https://github.com/exiguus/zola-monoplain/issues/30
+- [ ] fix feature branch CI pipeline https://github.com/exiguus/zola-monoplain/issues/35
