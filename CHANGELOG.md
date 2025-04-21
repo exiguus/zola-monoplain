@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/gattner-name/pbl-frontend/compare/v1.2.0...v1.2.1) (2025-04-21)
+
+### Bug Fixes
+
+- **sprite:** post install script ([3bab986](https://github.com/gattner-name/pbl-frontend/commits/3bab986b50ee006425345068a40cab84777d3610))
+
 ## [1.2.0](https://github.com/gattner-name/pbl-frontend/compare/v1.1.0...v1.2.0) (2025-04-21)
 
 ### Features
