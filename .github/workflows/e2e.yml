@@ -5,7 +5,7 @@ on:
 jobs:
   a11y:
     name: A11y
-    timeout-minutes: 15
+    timeout-minutes: 5
     runs-on: ubuntu-latest
 
     steps:
@@ -17,17 +17,7 @@ jobs:
         with:
           node-version-file: package.json
 
-      - name: Install dependencies
-        run: pnpm install && pnpm test:setup
-
-      - name: Test Run
-        run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
-
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: A11 Test
+        uses: ./.github/actions/a11y
         with:
-          name: a11y-report
-          path: themes/zola-monoplain/pa11y-report/**
-          if-no-files-found: error
-          retention-days: 7
+          url: https://exiguus.github.io/zola-monoplain/
