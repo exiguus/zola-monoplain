@@ -230,7 +230,8 @@ body {
     }
   }
 
-  @at-root #search {
+  @at-root #search,
+    #not-found {
     > div > main,
     > div > aside {
       label {
