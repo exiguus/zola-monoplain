@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/gattner-name/pbl-frontend/compare/v1.1.0...v1.2.0) (2025-04-21)
+
+### Features
+
+- **404:** add custom 404 not-found page ([f048ebd](https://github.com/gattner-name/pbl-frontend/commits/f048ebda301b12b756f5af28c9862fc4020088f3))
+- **atom:** add custom atom feed ([24db9ef](https://github.com/gattner-name/pbl-frontend/commits/24db9ef276c0f96bfb7bad95418cab5070c6f5fb))
+- **nav:** add footer navigation ([9cf8b2d](https://github.com/gattner-name/pbl-frontend/commits/9cf8b2d5220f4e0fd8bd42b4a1d207232bca0ddc))
+- **robots:** add custom robots.txt ([fbd5791](https://github.com/gattner-name/pbl-frontend/commits/fbd5791081b1f7e8d539518bdf6bd25adc288f2f))
+- **sitemap:** add custom sitemap template ([61506ba](https://github.com/gattner-name/pbl-frontend/commits/61506bac8ccb56ac9ef308e434b5b7d8131ed591))
+- **theme:** update theme description file ([09c7fa1](https://github.com/gattner-name/pbl-frontend/commits/09c7fa167cc4fba9603dafb1f4c90ba46724025d))
+
+### Bug Fixes
+
+- **a11y:** remove target ([286b6b4](https://github.com/gattner-name/pbl-frontend/commits/286b6b4838aa336b288092e93f66400b7d60ef05))
+- **gallery:** show only years that have images ([96b3e24](https://github.com/gattner-name/pbl-frontend/commits/96b3e24d60b681999fa0138c0df649f2b5f9db02))
+- **header:** base url ([9509388](https://github.com/gattner-name/pbl-frontend/commits/9509388565ea25d346057f0d3d3d3afa7aa0f98a))
+- **latest:** image count ([3e54988](https://github.com/gattner-name/pbl-frontend/commits/3e549881b08d4b40c8540ef7e86a5500fa3f8e29))
+- **lighthouse:** update budget ([cc8aebe](https://github.com/gattner-name/pbl-frontend/commits/cc8aebe7f88d8026b965cf280d19ee47022687b8))
+- **markdown:** format footnotes ([5cd7216](https://github.com/gattner-name/pbl-frontend/commits/5cd72167046cf8c34cbaa6d00a1a831d25835f23))
+- **nav:** footer nav doublicate id ([4e23e2d](https://github.com/gattner-name/pbl-frontend/commits/4e23e2d51e3ccdc767d0d55409bba87ffe04882a))
+- **pa11y:** disable chrome sandbox for e2e tests ([5817fe3](https://github.com/gattner-name/pbl-frontend/commits/5817fe3c5eb9d9d99c074803b4f2d2b88ac75e51))
+- **perf:** test first-meanigful-paint ([b12aabe](https://github.com/gattner-name/pbl-frontend/commits/b12aabe519f3ca937d8177b2ab497f9e92336d9f))
+- **posts:** update urls ([8556bac](https://github.com/gattner-name/pbl-frontend/commits/8556bacbb869975c1f1c6b43c1a7554ea3bebb04))
+- **puppeteer:** browser install ([eb35548](https://github.com/gattner-name/pbl-frontend/commits/eb35548b61b1ccc397516e9e4ba1c5ebd66fe861))
+- **test:** timeout error for pa11y emojis ([0ca439c](https://github.com/gattner-name/pbl-frontend/commits/0ca439cadbc2c3d0f3bf6c4d4c7675ed4aaf481c))
+
 ## 1.1.0 (2024-06-09)
 
 ### Features
