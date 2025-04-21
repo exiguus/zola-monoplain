@@ -13,6 +13,14 @@ default_language = "en"
 
 # atom feed
 generate_feed = true
+feed_filenames = ["atom.xml"]
+feed_limit = 50
+
+# When set to "false", Sitemap.xml is not generated
+generate_sitemap = true
+
+# When set to "false", robots.txt is not generated
+generate_robots_txt = true
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 # Example:
@@ -43,6 +51,7 @@ anchors = "on"
 
 [translations]
 draft_label = "(Draft)"
+feed_atom_title = "Atom Feed"
 search_form_legend = "Search"
 search_form_input_label = "Text to search"
 search_form_input_placeholder = "Search ↵"

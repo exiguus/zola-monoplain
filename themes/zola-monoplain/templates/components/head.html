@@ -37,7 +37,7 @@ opengraph %}
 <link
   rel="alternate"
   type="application/atom+xml"
-  title="{{config.title}}"
+  title="{{config.title}} {{trans(key='feed_atom_title')}}"
   href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}"
 />
 {%- endblock atom %}
