@@ -30,7 +30,7 @@ replace(from='/', to='--') -%}
     {% include "components/header.html" -%}
     {% endblock header -%}
     {% block nav -%}
-    {% include "components/nav.html" -%}
+    {% include "components/main_nav.html" -%}
     {% endblock nav -%}
     <div>
       {% block main -%}
@@ -44,6 +44,8 @@ replace(from='/', to='--') -%}
       {% endblock aside %}
     </div>
     {% block footer -%}
+    {% include "components/footer_nav.html" -%}
+
     {% include "components/footer.html" -%}
     {% endblock footer -%}
     {% block body_end -%}
