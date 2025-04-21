@@ -137,8 +137,8 @@
 ## Theme
 
 - [x] update config.toml
-- [ ] update README.md
-- [ ] update CHANGELOG.md
+- [x] update README.md
+- [x] update CHANGELOG.md
 - [x] update LICENSE
 - [ ] update CONTRIBUTING.md
 - [x] update theme/config.toml
@@ -161,8 +161,13 @@
   - [x] e2e
   - [x] Build
   - [x] Deploy
+  - [ ] Release
 - [x] Preview deployments
 - [x] Production deployments
+- [ ] Release strategy
+  - [x] Changelog
+  - [x] Versioning
+  - [ ] Release on Tag
 
 ## Refactor
 
@@ -180,4 +185,4 @@
 ## Fixes
 
 - [ ] fix atom feed show unpublished posts https://github.com/exiguus/zola-monoplain/issues/30
-- [ ] fix feature branch CI pipeline https://github.com/exiguus/zola-monoplain/issues/35
+- [x] fix feature branch CI pipeline https://github.com/exiguus/zola-monoplain/issues/35

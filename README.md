@@ -2,7 +2,7 @@
 
 > An accessible, monospace plain Zola Theme
 
-Based on Zola Inky Theme
+<https://exiguus.github.io/zola-monoplain/>
 
 ## Philosophy
 
@@ -30,7 +30,7 @@ Based on Zola Inky Theme
 
 ---
 
-- Do not use external resources (fonts, scripts, stylesheets, etc)
+- Do not load external resources (fonts, scripts, stylesheets, etc)
 
 ## Changelog
 
@@ -101,9 +101,11 @@ For latest changes please see the [changelog](CHANGELOG.md).
 
 ## Getting started
 
-1. Add this theme to your `themes/` folder (recommended method: git submodule).
-2. Copy of the the theme's config.toml file and put in your projects root directory. Update it as required and don't forget to add `theme = 'a11y-mono-plain` at the top of the file.
+1. Add this theme to your `themes/` folder (copy or symlink).
+2. Copy of the the theme's config.toml file and put in your projects root directory. Update it as required and don't forget to add `theme = 'zola-monoplain'` at the top of the file.
 3. Copy this contents of the `content/` directory the root of your project and change the files as your necessary.
+
+Also, see the themes documentation: <https://exiguus.github.io/zola-monoplain/posts/themes/>
 
 ## Customising the theme
 
@@ -132,8 +134,6 @@ Contributions are very welcome! If you are planning to add a feature to the them
 - Keep it lean. Adding bloat will likely result in your PR being rejected.
 - Consider backward compatibility, ideally people blindly-upgrading won't see any unexpected changes to their sites.
 
-New theme maintainers are welcome but should provide pull-request or two first!
-
 ## Tabler Icons
 
 Use [Tabler Icons](https://tabler.io/icons) for icons.
@@ -151,3 +151,13 @@ Tabler icons are installed via npm and are available in the `node_modules` folde
 
 There is a copy script `pnpm cp:icons` folder that will copy the svg icon sprite
 to the `static` folder.
+
+## License
+
+This theme is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- [Zola](https://www.getzola.org/)
+- [Tabler Icons](https://tabler.io/icons)
+- [Zola Inky Theme](https://github.com/jimmyff/zola-inky)

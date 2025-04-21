@@ -1,10 +1,11 @@
 +++
-title = "Zola"
-description = "Your one-stop static site engine"
+title = "Themes"
+description = "Monoplain Theme for your one-stop static site engine"
 date = 2024-06-09
+update = 2025-04-21
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Markdown", "SSG", "Static Site Generator"]
+tags= ["Zola", "Theme", "Markdown", "SSG", "Static Site Generator"]
 +++
 
 ## Introduction
