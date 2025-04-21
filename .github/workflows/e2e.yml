@@ -1,7 +1,5 @@
 name: e2e
 on:
-  pull_request:
-  push:
   workflow_run:
     workflows: ["Deploy"]
     types:

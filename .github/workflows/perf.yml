@@ -1,7 +1,5 @@
 name: perf
 on:
-  pull_request:
-  push:
   workflow_run:
     workflows: ["Deploy"]
     types:
