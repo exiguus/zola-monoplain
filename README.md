@@ -8,6 +8,8 @@
 
 > Design should never say, 'Look at me.' It should always say, 'Look at this.' - David Craib
 
+This Theme is designed to:
+
 - Be fast
 - Be accessible
 
@@ -30,7 +32,8 @@
 
 ---
 
-- Do not load external resources (fonts, scripts, stylesheets, etc)
+- not load external resources (like fonts, js, styles)
+- focus on the content and the user experience
 
 ## Changelog
 
