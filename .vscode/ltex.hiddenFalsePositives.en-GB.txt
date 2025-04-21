@@ -1,3 +1,0 @@
-{"rule":"PASSIVE_VOICE","sentence":"^\\QMost of the features were supported by the major\\E$"}
-{"rule":"PASSIVE_VOICE","sentence":"^\\QPound was used as a reverse proxy with SSL termination.\\E$"}
-{"rule":"THREE_NN","sentence":"^\\QLike a font stack generator, a RGB color picker and a HTML entity picker.\\E$"}
