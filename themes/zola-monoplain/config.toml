@@ -61,11 +61,12 @@ search_form_submit = "Search"
 search_form_clear = "Clear"
 search_results_empty = "No results"
 toc_summary = "Table of contents"
-skipNav_label = "Skip Navigation"
-skipNav_link_content = "Skip to content"
-skipNav_link_toc = "Skip to table of contents"
-skipNav_link_nav = "Skip to navigation"
-mainNav_label = "Main Navigation"
+skip_nav_label = "Skip Navigation"
+skip_nav_link_content = "Skip to content"
+skip_nav_link_toc = "Skip to table of contents"
+skip_nav_link_nav = "Skip to navigation"
+main_nav_label = "Main Navigation"
+footer_nav_label = "Footer Navigation"
 footer_links = "Links"
 footer_info = "Information"
 footer_links_github_title = "Github page"
@@ -94,6 +95,7 @@ debug = false
 # meta
 tags = ["zola", "theme", "a11y", "accessible"]
 authors = ["Simon Gattner"]
+timezone = "Europe/Berlin"
 # search
 search_enabled = true
 # images
@@ -110,13 +112,21 @@ thumbnail_default_size = 128
 thumbnail_sizes = [128, 256]
 # links
 link_github_username = "exiguus/zola-monospace"
-# link_twitter_username = ""
 link_mastodon_url = "https://toot.community/@exiguus"
-# menu
-menu_links = [
+# main navigation
+main_nav_items = [
+  { url = "$BASE_URL/", name = "Home" },
+  { url = "$BASE_URL/posts/", name = "Posts" },
+  { url = "$BASE_URL/about/", name = "About" },
+  { url = "$BASE_URL/search/", name = "Search" },
+  { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
+]
+# footer navigation
+footer_nav_items = [
   { url = "$BASE_URL/", name = "Home" },
   { url = "$BASE_URL/posts/", name = "Posts" },
   { url = "$BASE_URL/gallery/", name = "Gallery" },
+  { url = "$BASE_URL/about/", name = "About" },
   { url = "$BASE_URL/tags/", name = "Tags" },
   { url = "$BASE_URL/search/", name = "Search" },
   { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },

@@ -1,14 +1,14 @@
 <nav
   id="skip-nav"
-  aria-label="{{ trans(key='skipNav_label') }}"
+  aria-label="{{ trans(key='skip_nav_label') }}"
   aria-live="off"
   aria-atomic="false"
 >
   <ul>
-    <li><a href="#main">{{ trans(key="skipNav_link_content") }}</a></li>
+    <li><a href="#main">{{ trans(key="skip_nav_link_content") }}</a></li>
     {% if page.toc -%}
     <li
-      ><a href="#toc">{{ trans(key="skipNav_link_toc") }}</a>
+      ><a href="#toc">{{ trans(key="skip_nav_link_toc") }}</a>
       <ul>
         {% for h1 in page.toc -%}
         <li>
@@ -63,6 +63,6 @@
       </ul>
     </li>
     {% endif -%}
-    <li><a href="#main-nav">{{ trans(key="skipNav_link_nav") }}</a></li>
+    <li><a href="#main-nav">{{ trans(key="skip_nav_link_nav") }}</a></li>
   </ul>
 </nav>

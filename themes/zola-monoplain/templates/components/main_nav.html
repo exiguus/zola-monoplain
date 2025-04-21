@@ -1,0 +1,17 @@
+<nav id="main-nav" aria-label="{{ trans(key='main_nav_label') }}">
+  <ul>
+    {% for item in config.extra.main_nav_items -%}
+    <li>
+      {% set link_url = item.url | replace(from="$BASE_URL", to=config.base_url)
+      -%} {% set is_active = current_url and current_url == link_url -%} {% if
+      is_active -%}
+      <a class="active" href="{{ link_url | safe }}"> {{ item.name }} </a>
+      {% else -%} {% if item.rel -%}
+      <a href="{{ link_url | safe }}" rel="{{ item.rel }}"> {{ item.name }} </a>
+      {% else -%}
+      <a href="{{ link_url | safe }}"> {{ item.name }} </a>
+      {% endif -%} {% endif -%}
+    </li>
+    {% endfor -%}
+  </ul>
+</nav>
