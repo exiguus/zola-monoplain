@@ -1,4 +1,5 @@
 const pa11y = require("pa11y");
+const puppeteer = require("puppeteer");
 const {
   config,
   testPaths,
@@ -148,12 +149,19 @@ Promise.all(
 async function run(url) {
   try {
     console.info(`Start test ${url}`);
+    const browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    });
     const result = await Promise.race([
-      pa11y(url, config),
+      pa11y(url, {
+        ...config,
+        browser,
+      }),
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error("Timeout")), 30000),
       ), // 30 seconds timeout
     ]);
+    browser.close();
     console.info(`End test ${url}`);
     results.push(result);
     return result; // Ensure this resolves
