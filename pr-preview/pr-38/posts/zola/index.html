@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2025-04-21T14:04:17.160487298+00:00" />
+<meta name="build" content="2025-04-21T20:33:41.861406621+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Zola"
@@ -69,12 +69,16 @@ accessible" />
           <a href="#introduction">Introduction</a>
           </li>
         <li>
-          <a href="#features">Features</a>
-          <ul>
-            <li>
-              <a href="#templates">Templates</a>
-              </li>
-            </ul>
+          <a href="#install">Install</a>
+          </li>
+        <li>
+          <a href="#create-a-new-site">Create a new site</a>
+          </li>
+        <li>
+          <a href="#themes">Themes</a>
+          </li>
+        <li>
+          <a href="#templates">Templates</a>
           </li>
         <li>
           <a href="#multilingual-sites">Multilingual sites</a>
@@ -102,18 +106,13 @@ accessible" />
       <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
       </li>
     <li>
-      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
-      </li>
-    <li>
-      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
       </li>
     <li>
       <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
       </li>
     <li>
-      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate">
-        Feed
-      </a>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
       </li>
     </ul>
 </nav>
@@ -142,16 +141,22 @@ accessible" />
       </li>
       
       <li>
-        <a href="https://exiguus.github.io/zola-monoplain/posts/zola/#features">Features</a>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/zola/#install">Install</a>
         
-        <ol>
-          
-          <li>
-            <a href="https://exiguus.github.io/zola-monoplain/posts/zola/#templates">Templates</a>
-            
-          </li>
-          
-        </ol>
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/zola/#create-a-new-site">Create a new site</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/zola/#themes">Themes</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/zola/#templates">Templates</a>
         
       </li>
       
@@ -174,8 +179,44 @@ accessible" />
 <h2 id="introduction">Introduction</h2>
 <p>Zola is a fast static site generator written in Rust. It is designed to be simple to use and easy to extend. Zola is a great choice for building blogs, portfolios, and other static websites.</p>
 <p>In this post, I will introduce you to Zola and show you how to get started with it.</p>
-<h2 id="features">Features</h2>
-<h3 id="templates">Templates</h3>
+<h2 id="install">Install</h2>
+<p>Zola is available on all major platforms. You can install it using the package manager of your choice or build it by yourself.</p>
+<p>To build Zola, you can use the following command:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">git</span><span> clone https://github.com/getzola/zola.git
+</span><span style="color:#8be9fd;">cd</span><span> zola
+</span><span style="color:#50fa7b;">cargo</span><span> install</span><span style="font-style:italic;color:#ffb86c;"> --path</span><span> .</span><span style="font-style:italic;color:#ffb86c;"> --locked
+</span><span style="color:#50fa7b;">zola</span><span style="font-style:italic;color:#ffb86c;"> --version
+</span></code></pre>
+<p>to install Zola use:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">cp</span><span> target/release/zola </span><span style="color:#bd93f9;">~</span><span>/.cargo/bin/zola
+</span></code></pre>
+<p><a href="https://www.getzola.org/documentation/getting-started/installation/">https://www.getzola.org/documentation/getting-started/installation/</a></p>
+<h2 id="create-a-new-site">Create a new site</h2>
+<p>To create a new Zola site, you can use the the Zola CLI with the following command:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">zola</span><span> init my-site
+</span></code></pre>
+<p><a href="https://www.getzola.org/documentation/getting-started/cli-usage/">https://www.getzola.org/documentation/getting-started/cli-usage/</a></p>
+<h2 id="themes">Themes</h2>
+<p>Zola supports themes out of the box. You can create your own theme or use one of the many themes available on the Zola website.</p>
+<p>After init your site, you can clone the theme.</p>
+<p>Then you can copy the theme to your site directory:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">git</span><span> clone https://github.com/exiguus/zola-monoplain.git
+</span><span style="color:#6272a4;"># The theme is in the themes/zola-monoplain directory
+</span><span style="color:#50fa7b;">cp</span><span style="font-style:italic;color:#ffb86c;"> -R</span><span> zola-monoplain/themes/zola-monoplain my-site/themes/
+</span><span style="color:#6272a4;"># Copy the example content of the theme to your site directory
+</span><span style="color:#50fa7b;">cp</span><span style="font-style:italic;color:#ffb86c;"> -R</span><span> zola-monoplain/theme/content my-site/
+</span><span style="color:#6272a4;"># Copy the example config.toml of the theme to your site directory
+</span><span style="color:#50fa7b;">cp</span><span> zola-monoplain/config.toml my-site/
+</span></code></pre>
+<p>Instead of copy files over you can also use symlinks. This is useful if you want to use the theme in multiple sites. You can create a symlink to the theme directory in your site directory:</p>
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">ln</span><span style="font-style:italic;color:#ffb86c;"> -s</span><span> /path/to/zola-monoplain/themes/zola-monoplain /path/to/blog/themes/zola-monoplain
+</span></code></pre>
+<p>Then you can set the theme in the <code>config.toml</code> file:</p>
+<pre data-lang="toml" style="background-color:#282a36;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ff79c6;">theme </span><span>= </span><span style="color:#f1fa8c;">&quot;zola-monoplain&quot;
+</span></code></pre>
+<p>And adjust the <code>config.toml</code> file to your needs.</p>
+<p>An example how to use the theme with with github actions in a monorepo can be found here: <a href="https://github.com/exiguus/blog">https://github.com/exiguus/blog</a></p>
+<h2 id="templates">Templates</h2>
 <p>Zola uses the Tera template engine to render your content. Tera is a powerful and flexible template engine that allows you to create complex layouts and designs for your website.</p>
 <p><a href="https://keats.github.io/tera/docs">https://keats.github.io/tera/docs</a></p>
 <h2 id="multilingual-sites">Multilingual sites</h2>
@@ -450,7 +491,32 @@ accessible" />
 </aside>
 
     </div>
-    <footer>
+    <nav id="main-nav" aria-label="Footer Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<footer>
   <h2 id="footer-links" class="sr-only">Links</h2>
   <ul aria-labelledby="footer-links">
      <li>
@@ -514,7 +580,10 @@ accessible" />
       href="https://github.com/exiguus/zola-monoplain"
       >@exiguus mono&#x2F;plain Zola</a
     >. Made with love.<br />
-    <i class="sr-only">Last update:</i> <small>2025-04-21T14:04:17.201540677+00:00</small>
+    <i class="sr-only">Last update:</i>
+    <small
+      >2025-04-21 22:33:41 Europe&#x2F;Berlin</small
+    >
   </p>
 </footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-XQ1Fsl+5GSmgurMTkLZaRJ3syIZGv8rV511tBFlUN8YJHc4AaYh5j82xkxRfljUE" defer="defer"></script>
