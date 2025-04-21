@@ -1,9 +1,6 @@
 name: e2e
 on:
-  workflow_run:
-    workflows: ["Deploy"]
-    types:
-      - completed
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   a11y:

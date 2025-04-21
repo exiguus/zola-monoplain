@@ -1,0 +1,125 @@
+# .github/workflows/deploy.yml
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-github-pages:
+    name: Deploy Github Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.18.0
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./themes/zola-monoplain/public
+          branch: gh-pages
+          clean-exclude: pr-preview
+          force: false
+
+  lighthouse:
+    name: Perf PR
+    needs: deploy-github-pages
+    if: always()
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit URLs and validate Budget
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: https://exiguus.github.io/zola-monoplain/
+          budgetPath: ./budget.json
+          uploadArtifacts: true
+          runs: 3
+
+  a11y:
+    name: A11y Prod
+    needs: deploy-github-pages
+    if: always()
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install && pnpm test:setup && pnpm test:environment
+
+      - name: Test Run
+        run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: a11y-report
+          path: themes/zola-monoplain/pa11y-report/**
+          if-no-files-found: error
+          retention-days: 7

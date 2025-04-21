@@ -1,13 +1,10 @@
 name: perf
 on:
-  workflow_run:
-    workflows: ["Deploy"]
-    types:
-      - completed
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   lighthouse:
-    name: Test run
+    name: Perf
     timeout-minutes: 15
     runs-on: ubuntu-latest
     if: always()
