@@ -12,7 +12,8 @@ body {
     @extend %container;
   }
 
-  & > nav#main-nav {
+  & > nav#main-nav,
+  & > nav#footer-nav {
     & > ul {
       @extend %list-vertical;
     }
