@@ -46,43 +46,58 @@ For latest changes please see the [changelog](CHANGELOG.md).
   - [x] Default Browser Styles
   - [x] Clean HTML5
   - [x] Lean CSS
-  - [x] Accessible
+- [x] Accessible
+  - [x] CI tests
+  - [x] pa11y report
 - [ ] Templates
   - [ ] Home
-    - [ ] Latest Posts
+    - [x] Latest Posts
     - [ ] Latest Projects
     - [ ] Latest Links
-    - [ ] Latest Gallery Images
-  - [ ] Post
-  - [ ] Gallery
-    - [ ] Post integration
+    - [x] Latest Gallery Images
+  - [x] Post
+    - [x] Table of Content support
+    - [x] Shortcodes <https://exiguus.github.io/zola-monoplain/posts/shortcodes/>
+    - [x] Emojis <https://exiguus.github.io/zola-monoplain/posts/emojis/>
+    - [x] Icons <https://exiguus.github.io/zola-monoplain/posts/icons/>
+    - [ ] Markdown <https://exiguus.github.io/zola-monoplain/posts/markdown/>
+      - [x] CommonMark
+      - [x] GitHub Flavored Markdown
+      - [ ] Graph support
+      - [ ] Chart support
+    - [ ] Comments
+      - [ ] via Mastodon
+      - [ ] via Disqus (Github Discussions)
+  - [x] Gallery
+    - [x] Post integration
   - [ ] Project
     - [ ] Github integration
   - [ ] Link
     - [ ] preview images
-  - [ ] Icons
-    - [ ] preview all tabler icons
-    - [ ] search all tabler icons
-- [ ] Markdown
-  - [ ] Graph support
-  - [ ] Chart support
-- [ ] Translations
-- [x] Search
-- [ ] Comments
-  - [ ] via Mastodon
-  - [ ] via Disqus (Github Discussions)
-- [x] Link preview support
-- [x] Taxonomy support
-- [ ] Table of Content support
-- [x] Customizable via template hooks
-- [ ] Customizable JavaScript
+  - [x] Taxonomy / Category and Tag support
+  - [x] Search
+  - [x] Sitemap
+  - [x] 404 / not-found
+  - [x] Feeds
+    - [x] Atom
+- [x] Language
+  - [x] Translations <https://exiguus.github.io/zola-monoplain/posts/zola/>
+  - [x] Dictionary <https://exiguus.github.io/zola-monoplain/posts/dictionary/>
+- [x] Opengraph
+  - [x] Link preview support
+- [ ] Customization
+  - [x] Customizable via template hooks
+  - [ ] Customizable JavaScript
 - [ ] Environment
+  - [x] Javascript Support
+  - [x] React Support
   - [ ] TypeScript support
+- [ ] CI/CD <https://exiguus.github.io/zola-monoplain/posts/ci/>
   - [ ] Linting and Formatting support
     - [ ] Eslint
-    - [ ] Prettier
-    - [ ] Commitlint
-  - [ ] Commit hooks
+    - [x] Prettier
+    - [x] Commitlint
+  - [x] Commit hooks
 
 ## Getting started
 
