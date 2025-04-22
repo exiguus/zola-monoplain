@@ -56,7 +56,7 @@
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
       "pnpm format:fix"
     ],
-    "*.@(md|mdx|html|json)": [
+    "*.@(md|mdx|html|json|toml|yml|yaml)": [
       "pnpm format:fix"
     ]
   },
