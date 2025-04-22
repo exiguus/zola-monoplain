@@ -16,7 +16,7 @@ default_language = "en"
 
 # atom feed
 generate_feeds = true
-feed_filenames = ["atom.xml"]
+feed_filenames = ["atom.xml", "rss.xml"]
 feed_limit = 50
 
 # When set to "false", Sitemap.xml is not generated
@@ -55,6 +55,7 @@ anchors = "on"
 [translations]
 draft_label = "(Draft)"
 feed_atom_title = "Atom Feed"
+feed_rss_title = "RSS Feed"
 search_form_legend = "Search"
 search_form_input_label = "Text to search"
 search_form_input_placeholder = "Search ↵"

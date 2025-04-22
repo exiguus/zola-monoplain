@@ -40,7 +40,14 @@ opengraph %}
   title="{{config.title}} {{trans(key='feed_atom_title')}}"
   href="{{ get_url(path='atom.xml',trailing_slash=false)|safe}}"
 />
-{%- endblock atom %}
+{%- endblock atom %} {% block rss -%}
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="{{config.title}} {{trans(key='feed_rss_title')}}"
+  href="{{ get_url(path='atom.rss',trailing_slash=false)|safe}}"
+/>
+{%- endblock rss %}
 <link
   rel="stylesheet"
   href="{{ get_url(path='base.css',trailing_slash=false)|safe}}"
