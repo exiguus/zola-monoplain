@@ -113,7 +113,7 @@ thumbnail_quality = 70
 thumbnail_default_size = 128
 thumbnail_sizes = [128, 256]
 # links
-link_github_username = "exiguus/zola-monospace"
+link_github_username = "exiguus/zola-monoplain"
 link_mastodon_url = "https://toot.community/@exiguus"
 # main navigation
 main_nav_items = [
