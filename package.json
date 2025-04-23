@@ -48,9 +48,9 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "pa11y": "^8.0.0",
-    "puppeteer": "^24.6.1",
+    "puppeteer": "^24.7.1",
     "standard-version": "^9.5.0",
-    "turbo": "^2.5.0"
+    "turbo": "^2.5.1"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
