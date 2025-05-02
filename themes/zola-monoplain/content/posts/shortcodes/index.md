@@ -5,6 +5,9 @@ date = 2024-06-08
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Theme", "Markdown", "Shortcodes"]
+[extra]
+images = ["example-image.jpg"]
+preview_img = "example-image.jpg"
 +++
 
 ## Introduction
@@ -12,6 +15,28 @@ tags= ["Zola", "Theme", "Markdown", "Shortcodes"]
 Shortcodes are a way to embed additional content in your Markdown files. They are a powerful feature of Zola and can be used to embed content like images, videos, or other HTML elements. In this post, I will show you how to use shortcodes in Zola.
 
 ## Shortcodes
+
+### Images
+
+The `image` shortcode can be used to embed images in your Markdown files. This can be useful for adding visual elements to your posts. Here is an example of how to use the `image` shortcode:
+
+{{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") }}
+
+Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+
+```md
+\{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") \}\}
+```
+
+The `path` parameter specifies the path to the image file, the `src` parameter specifies the filename of the image, and the `alt` parameter specifies the alt text for the image.
+
+{{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) }}
+
+```md
+\{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=300) \}\}
+```
+
+The `width` and `height` parameters can be used to specify the size of the image. The `width` and `height` parameters are optional and can be omitted if you want to use the original size of the image.
 
 ### Details
 

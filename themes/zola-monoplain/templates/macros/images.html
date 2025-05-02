@@ -5,7 +5,13 @@ height) -%}
   height="{{ height }}"
   alt="{{ alt }}"
   title="{{ alt }}"
-  src="{{ get_url(path=path ~ src) | safe }}"
+  {% if width or height -%}
+    {% set abspath = path ~ src -%}
+    {% set resized = resize_image(path=abspath, width=width | default(value=0), height=height | default(value=0)) -%}
+    src="{{ resized.url | safe }}"
+  {% else -%}
+    src="{{ get_url(path=path ~ src) | safe }}"
+  {% endif -%}
   class="{{ class }}"
   loading="lazy"
 />

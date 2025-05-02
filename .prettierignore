@@ -18,4 +18,5 @@ build-graph.html
 test-results/
 cache/
 # Error formatting templates/base.html. Message: SyntaxError: Unexpected closing tag "html". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (54:1)
-base.html
+themes/zola-monoplain/templates/base.html
+themes/zola-monoplain/templates/macros/images.html
