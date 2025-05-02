@@ -10,7 +10,10 @@ else -%} {{ config.description }} {%- endif -%} {%- elif term -%} {%- if
 term.name -%} {{ term.name | striptags }} {%- else -%} {{ config.description }}
 {%- endif -%} {%- elif taxonomy -%} {%- if taxonomy.name -%} {{ taxonomy.name |
 striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif -%}
-{% endmacro title %} {% macro image() %} {%- if page.extra.preview_img -%} {{
-get_url(path=page.extra.preview_img) | safe }} {%- else -%} {{
-get_url(path='images/og-preview.png') | safe }} {%- endif -%} {% endmacro image
-%}
+{% endmacro title %} {% macro image() %} {%- if page.extra.preview_img -%} {%-
+if page.extra.preview_img is starting_with("/") or page.extra.preview_img is
+containing("://") -%} {{ page.extra.preview_img | safe }} {%- else -%} {% set
+image = resize_image(path=page.path ~ page.extra.preview_img, width=1200,
+height=630) -%} {{ image.url | safe }} {%- endif -%} {%- else -%} {% set image =
+resize_image(path='images/og-preview.png', width=1200, height=630) -%} {{
+image.url }} {%- endif -%} {% endmacro image %}
