@@ -64,7 +64,8 @@
     "**/tmp",
     "**/temp",
     "themes/zola-monoplain/templates/base.html",
-    "themes/zola-monoplain/templates/macros/images.html"
+    "themes/zola-monoplain/templates/macros/images.html",
+    "themes/zola-monoplain/content/posts/opengraph/index.md"
   ],
   "plugins": [
     "https://plugins.dprint.dev/prettier-0.40.0.json@68c668863ec834d4be0f6f5ccaab415df75336a992aceb7eeeb14fdf096a9e9c",
