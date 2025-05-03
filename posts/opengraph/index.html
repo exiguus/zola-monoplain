@@ -25,7 +25,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2025-05-03T00:00:22.787199849+00:00" />
+<meta name="build" content="2025-05-03T00:09:55.313755185+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Open Graph Preview"
@@ -191,43 +191,20 @@ accessible" />
 </span><span>+++
 </span></code></pre>
 <p>The macro for the preview_img look like:</p>
-<pre data-lang="html" style="background-color:#282a36;color:#f8f8f2;" class="language-html "><code class="language-html" data-lang="html"><span>{% macro image(path, src, alt, class=&quot;&quot;, width, height) -%}
+<pre data-lang="html" style="background-color:#282a36;color:#f8f8f2;" class="language-html "><code class="language-html" data-lang="html"><span>{% macro image(path, src, alt, class=&quot;&quot;, width,
+</span><span>height) -%}
 </span><span>&lt;</span><span style="color:#ff79c6;">img
 </span><span>  </span><span style="color:#50fa7b;">width</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ width }}&quot;
 </span><span>  </span><span style="color:#50fa7b;">height</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ height }}&quot;
 </span><span>  </span><span style="color:#50fa7b;">alt</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ alt }}&quot;
 </span><span>  </span><span style="color:#50fa7b;">title</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ alt }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">{%
-</span><span>  </span><span style="color:#50fa7b;">if
-</span><span>  </span><span style="color:#50fa7b;">width
-</span><span>  </span><span style="color:#50fa7b;">or
-</span><span>  </span><span style="color:#50fa7b;">height
-</span><span>  </span><span style="color:#50fa7b;">-%}
-</span><span>  </span><span style="color:#50fa7b;">{%
-</span><span>  </span><span style="color:#50fa7b;">set
-</span><span>  </span><span style="color:#50fa7b;">abspath</span><span>=</span><span style="color:#f1fa8c;">&quot;path&quot;
-</span><span>  </span><span style="color:#50fa7b;">~
-</span><span>  </span><span style="color:#50fa7b;">src
-</span><span>  </span><span style="color:#50fa7b;">-%}
-</span><span>  </span><span style="color:#50fa7b;">{%
-</span><span>  </span><span style="color:#50fa7b;">set
-</span><span>  </span><span style="color:#50fa7b;">resized</span><span>=</span><span style="color:#f1fa8c;">&quot;resize_image(path&quot;
-</span><span>  =</span><span style="background-color:#ff79c6;color:#f8f8f0;">&quot;</span><span style="color:#50fa7b;">abspath,</span><span style="background-color:#ff79c6;color:#f8f8f0;">&quot;</span><span>
-</span><span>  </span><span style="color:#50fa7b;">width</span><span>=</span><span style="color:#f1fa8c;">&quot;width&quot;
-</span><span>  </span><span style="color:#50fa7b;">|
-</span><span>  </span><span style="color:#50fa7b;">default(value</span><span>=</span><span style="color:#f1fa8c;">&quot;0),&quot;
-</span><span>  </span><span style="color:#50fa7b;">height</span><span>=</span><span style="color:#f1fa8c;">&quot;height&quot;
-</span><span>  </span><span style="color:#50fa7b;">|
-</span><span>  </span><span style="color:#50fa7b;">default(value</span><span>=</span><span style="color:#f1fa8c;">&quot;0))&quot;
-</span><span>  </span><span style="color:#50fa7b;">-%}
-</span><span>  </span><span style="color:#50fa7b;">src</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ resized.url | safe }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">{%
-</span><span>  </span><span style="color:#50fa7b;">else
-</span><span>  </span><span style="color:#50fa7b;">-%}
-</span><span>  </span><span style="color:#50fa7b;">src</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ get_url(path=path ~ src) | safe }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">{%
-</span><span>  </span><span style="color:#50fa7b;">endif
-</span><span>  </span><span style="color:#50fa7b;">-%}
+</span><span>  </span><span style="color:#50fa7b;">{% if width or height -%}
+</span><span>    </span><span style="color:#50fa7b;">{% set abspath </span><span>= </span><span style="color:#f1fa8c;">path </span><span style="color:#50fa7b;">~ src -%}
+</span><span>    </span><span style="color:#50fa7b;">{% set resized </span><span>= </span><span style="color:#f1fa8c;">resize_image(path=abspath, </span><span style="color:#50fa7b;">width</span><span>=</span><span style="color:#f1fa8c;">width </span><span style="color:#50fa7b;">| default(value</span><span>=</span><span style="color:#f1fa8c;">0), </span><span style="color:#50fa7b;">height</span><span>=</span><span style="color:#f1fa8c;">height </span><span style="color:#50fa7b;">| default(value</span><span>=</span><span style="color:#f1fa8c;">0)) </span><span style="color:#50fa7b;">-%}
+</span><span>    </span><span style="color:#50fa7b;">src</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ resized.url | safe }}&quot;
+</span><span>  </span><span style="color:#50fa7b;">{% else -%}
+</span><span>    </span><span style="color:#50fa7b;">src</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ get_url(path=path ~ src) | safe }}&quot;
+</span><span>  </span><span style="color:#50fa7b;">{% endif -%}
 </span><span>  </span><span style="color:#50fa7b;">class</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ class }}&quot;
 </span><span>  </span><span style="color:#50fa7b;">loading</span><span>=</span><span style="color:#f1fa8c;">&quot;lazy&quot;
 </span><span>/&gt;
@@ -590,7 +567,7 @@ The <code>resize_image</code> function is used to generate a resized version of 
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2025-05-03 02:00:22 Europe&#x2F;Berlin</small
+      >2025-05-03 02:09:55 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>
