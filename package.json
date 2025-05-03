@@ -1,6 +1,6 @@
 {
   "name": "zola-monoplain",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "mono/plain; a11y=true; An accessible, monospace plain Zola Theme",
   "scripts": {
     "dev": "turbo run dev --parallel --no-cache",

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/gattner-name/pbl-frontend/compare/v1.2.1...v1.3.0) (2025-05-03)
+
+### Features
+
+- **opengraph:** add image support ([9af0764](https://github.com/gattner-name/pbl-frontend/commits/9af0764fc4969c0ac3694f8fdbd11734ef425925))
+- **rss:** add rss alternative beside atom ([e7d0e57](https://github.com/gattner-name/pbl-frontend/commits/e7d0e5731a5c500ad332b9d4d8754719526d9d24))
+- **shortcodes:** add image custom size support ([afb5b35](https://github.com/gattner-name/pbl-frontend/commits/afb5b35b63560d96e1df28f5922c7fcd08908030))
+- **sitemap:** ignore 400 and 500 pages ([0da1409](https://github.com/gattner-name/pbl-frontend/commits/0da1409f09b64db051c6925c3917a97e46b945e2))
+
+### Bug Fixes
+
+- **config:** monoplain typo ([f1406b8](https://github.com/gattner-name/pbl-frontend/commits/f1406b891d6f9c1e5aaea8bcb098d47343c1b3c8))
+- **feed:** enable feed generation ([5d094cb](https://github.com/gattner-name/pbl-frontend/commits/5d094cb883d4eccd9dc44f3686007d85f64207e0))
+
 ### [1.2.1](https://github.com/gattner-name/pbl-frontend/compare/v1.2.0...v1.2.1) (2025-04-21)
 
 ### Bug Fixes
