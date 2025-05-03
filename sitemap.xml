@@ -51,6 +51,10 @@
         <lastmod>2025-06-07</lastmod>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/posts/opengraph/</loc>
+        <lastmod>2025-05-03</lastmod>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/shortcodes/</loc>
         <lastmod>2024-06-08</lastmod>
     </url>
@@ -93,6 +97,12 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/markdown/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/open-graph/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/preview-image/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/shortcodes/</loc>
