@@ -75,8 +75,6 @@ For latest changes please see the [changelog](CHANGELOG.md).
     - [x] Post integration
   - [ ] Project
     - [ ] Github integration
-  - [ ] Link
-    - [ ] preview images
   - [x] Taxonomy / Category and Tag support
   - [x] Search
   - [x] Sitemap
@@ -88,6 +86,8 @@ For latest changes please see the [changelog](CHANGELOG.md).
   - [x] Dictionary <https://exiguus.github.io/zola-monoplain/posts/dictionary/>
 - [x] Opengraph
   - [x] Link preview support
+  - [x] Link preview image support
+  - [x] Link custom preview image support
 - [ ] Customization
   - [x] Customizable via template hooks
   - [ ] Customizable JavaScript
