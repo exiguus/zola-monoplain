@@ -40,18 +40,18 @@
   },
   "homepage": "https://github.com/exiguus/zola-monoplain#readme",
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "@commitlint/prompt-cli": "^19.8.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/prompt-cli": "^19.8.1",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "dprint": "^0.49.1",
     "fta-cli": "^2.0.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^15.5.2",
     "pa11y": "^8.0.0",
-    "puppeteer": "^24.8.0",
+    "puppeteer": "^24.8.2",
     "standard-version": "^9.5.0",
-    "turbo": "^2.5.2"
+    "turbo": "^2.5.3"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
