@@ -11,7 +11,7 @@
     "check:fta": "fta --config-path ./fta.config.json .",
     "build": "turbo run check build test",
     "format": "pnpm format:fix",
-    "format:fix": "dprint fmt",
+    "format:fix": "dprint fmt --allow-no-files",
     "format:check": "dprint check",
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
