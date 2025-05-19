@@ -4,7 +4,7 @@ description = "Dictionary by Example"
 date = 2024-06-09
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Markdown", "Translations", "Dictionary"]
+tags= ["Zola", "Markdown", "Translations", "Languages", "Dictionary"]
 +++
 
 ## Introduction
@@ -47,3 +47,17 @@ search_form_legend = "La recherche"
 [language.it.translations]
 search_form_legend = "La ricerca"
 ```
+
+## Extra Language
+
+```md
++++
+title = "Extra Language"
+description = "Extra Language"
+date = 2024-06-09
+[extra]
+lang = "de"
++++
+```
+
+The `extra.lang` field is used to set the language for the main content of the page or post. Also, it adds a `lang` attribute to posts and gallery items link the the page.

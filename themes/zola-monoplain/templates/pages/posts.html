@@ -6,7 +6,7 @@
     {% for post in posts %}
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
-        <article>
+        <article {% if post.extra.lang %}lang="{{ post.extra.lang }}"{% endif %}>
           <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <h1>{{ post.title }}</h1>
             {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%

@@ -20,7 +20,7 @@ post in posts -%} {% if post.extra.images -%} {% set_global yearHasImage = true
         href="{{ post.permalink | safe }}"
         title="{{ post.title }} - {{ post.date }}"
       >
-        <figure>
+        <figure {% if post.extra.lang %}lang="{{ post.extra.lang }}"{% endif %}>
           {{ images::responsive_thumbnail(path=post.colocated_path, src=image,
           default_size=128, sizes=[128,256], alt=post.title ~ " - " ~ post.date
           ) -}}

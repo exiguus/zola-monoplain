@@ -1,3 +1,6 @@
-{% import "macros/images.html" as images -%} {% include
-"components/post_header.html" -%} {{ page.content | safe }} {% include
-"components/post_footer.html" -%}
+{% import "macros/images.html" as images -%} {% if page.extra.lang -%}
+<div lang="{{page.extra.lang}}">
+  {% endif -%} {% include "components/post_header.html" -%} {{ page.content |
+  safe }} {% include "components/post_footer.html" -%} {% if page.extra.lang -%}
+</div>
+{% endif -%}
