@@ -48,7 +48,7 @@
     "fta-cli": "^2.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "pa11y": "^8.0.0",
+    "pa11y": "^9.0.0",
     "puppeteer": "^24.8.2",
     "standard-version": "^9.5.0",
     "turbo": "^2.5.3"
