@@ -1,2 +1,4 @@
-{{ hooks::post_below_content(page=page) }} {% include
+{{ hooks::post_below_content(page=page) }} {% if
+config.extra.feedback_email_enabled -%} {% include
+"components/post_feedback.html" -%} {% endif -%} {% include
 "components/post_tags.html" -%} {{ hooks::post_below_tags(page=page) }}

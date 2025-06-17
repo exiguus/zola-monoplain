@@ -69,6 +69,7 @@ For latest changes please see the [changelog](CHANGELOG.md).
       - [ ] Graph support
       - [ ] Chart support
     - [ ] Comments
+      - [x] via mailto
       - [ ] via Mastodon
       - [ ] via Disqus (Github Discussions)
   - [x] Gallery
