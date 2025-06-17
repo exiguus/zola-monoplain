@@ -144,11 +144,14 @@ body {
         & > date {
           order: 1;
         }
+        & > p {
+          margin: 0;
+        }
         & > h1 {
           order: 2;
         }
         & + p {
-          margin-left: 8rem;
+          margin: 1em 0 3em 8em;
         }
       }
     }
