@@ -44,14 +44,14 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/prompt-cli": "^19.8.1",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "dprint": "^0.49.1",
+    "dprint": "^0.50.0",
     "fta-cli": "^2.0.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.2",
-    "pa11y": "^8.0.0",
-    "puppeteer": "^24.8.2",
+    "lint-staged": "^16.1.2",
+    "pa11y": "^9.0.0",
+    "puppeteer": "^24.10.1",
     "standard-version": "^9.5.0",
-    "turbo": "^2.5.3"
+    "turbo": "^2.5.4"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
