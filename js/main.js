@@ -48,6 +48,20 @@ const appendSVGSprite = async () => {
   }
 };
 
+/**
+ * de-obfuscate email address
+ *  Obfuscate email address look like this: &#x3C;me&#x40;example&#8203;&#x2E;com&#x3E;
+ * @param {string} email - obfuscated email address
+ * @returns {string} - de-obfuscated email address
+ **/
+const deobfuscateEmail = (email) =>
+  email
+    .replace(/&#8203;/g, "")
+    .replace(/&#x3C;/g, "<")
+    .replace(/&#x40;/g, "@")
+    .replace(/&#x2E;/g, ".")
+    .replace(/&#x3E;/g, ">");
+
 // <script>
 // This script should be added to the html head with attribute:
 //  defer="defer"
@@ -57,4 +71,11 @@ const appendSVGSprite = async () => {
 // to make sure it is executed after the main scripts.
 window.addEventListener("load", function () {
   appendSVGSprite();
+  const emailElements = document.querySelectorAll("a[data-obfuscated-email]");
+  Array.from(emailElements).forEach((emailElement) => {
+    emailElement.addEventListener("click", function (event) {
+      const email = deobfuscateEmail(event.target.dataset.obfuscatedEmail);
+      event.target.href = `mailto:${email}`;
+    });
+  });
 });
