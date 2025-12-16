@@ -43,7 +43,7 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/prompt-cli": "^19.8.1",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "dprint": "^0.50.2",
     "fta-cli": "^2.0.2",
     "husky": "^9.1.7",
