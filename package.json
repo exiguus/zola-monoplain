@@ -51,7 +51,7 @@
     "pa11y": "^9.0.1",
     "puppeteer": "^24.33.0",
     "standard-version": "^9.5.0",
-    "turbo": "^2.6.3"
+    "turbo": "^2.7.2"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
