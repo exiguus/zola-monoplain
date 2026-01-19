@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-01-19T01:59:14.600860388+00:00" />
+<meta name="build" content="2026-01-19T02:11:35.442367150+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -461,7 +461,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>
 </span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Upload Output Summary
 </span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">upload-output
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v4
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v6
 </span><span>        </span><span style="color:#ff79c6;">with</span><span>:
 </span><span>          </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">output
 </span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">output.json
@@ -544,7 +544,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 </span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">cd themes/zola-monoplain &amp;&amp; node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
 </span><span>
 </span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Upload Artifacts
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v4
+</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v6
 </span><span>        </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
 </span><span>        </span><span style="color:#ff79c6;">with</span><span>:
 </span><span>          </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">a11y-report
@@ -862,7 +862,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-01-19 02:59:14 Europe&#x2F;Berlin</small
+      >2026-01-19 03:11:35 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>
