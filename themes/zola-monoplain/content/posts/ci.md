@@ -298,7 +298,7 @@ jobs:
 
       - name: Upload Output Summary
         id: upload-output
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: output
           path: output.json
@@ -390,7 +390,7 @@ jobs:
         run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: a11y-report
