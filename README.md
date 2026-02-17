@@ -115,7 +115,7 @@ Also, see the themes documentation: <https://exiguus.github.io/zola-monoplain/po
 
 - **To change the settings** copy `config.toml` in to your project and update as required (make sure you add the theme variable at the top of the file, see the getting started heading above).
 - **To inject content in to templates** copy `templates/macros/hooks.html` and update as required.
-- **To change the Syntax Highlighting** change `highlight_theme` in `config.toml` to one of the [available themes](https://github.com/getzola/zola/tree/master/sublime/themes).
+- **To change the Syntax Highlighting** change `theme` in `config.toml` to one of the [available themes](https://github.com/getzola/zola/tree/master/sublime/themes).
 
 ## Using the responsive image shortcode
 
