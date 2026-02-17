@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-01-19T02:11:35.416383527+00:00" />
+<meta name="build" content="2026-02-17T19:13:18.662140261+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Themes"
@@ -35,9 +35,9 @@ accessible" />
   content="https://exiguus.github.io/zola-monoplain/posts/themes/"
 />
 <meta property="og:description" content="Monoplain Theme for your one-stop static site engine" />
-<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -186,66 +186,58 @@ accessible" />
 <h2 id="install">Install</h2>
 <p>Zola is available on all major platforms. You can install it using the package manager of your choice or build it by yourself.</p>
 <p>To build Zola, you can use the following command:</p>
-<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">git</span><span> clone https://github.com/getzola/zola.git
-</span><span style="color:#8be9fd;">cd</span><span> zola
-</span><span style="color:#50fa7b;">cargo</span><span> install</span><span style="font-style:italic;color:#ffb86c;"> --path</span><span> .</span><span style="font-style:italic;color:#ffb86c;"> --locked
-</span><span style="color:#50fa7b;">zola</span><span style="font-style:italic;color:#ffb86c;"> --version
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> clone https://github.com/getzola/zola.git</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">cd</span><span style="color: #F1FA8C;"> zola</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">cargo</span><span style="color: #F1FA8C;"> install</span><span style="color: #BD93F9;"> --path</span><span style="color: #F1FA8C;"> .</span><span style="color: #BD93F9;"> --locked</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre>
 <p>to install Zola use:</p>
-<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">cp</span><span> target/release/zola </span><span style="color:#bd93f9;">~</span><span>/.cargo/bin/zola
-</span></code></pre>
-<p><a href="https://www.getzola.org/documentation/getting-started/installation/">https://www.getzola.org/documentation/getting-started/installation/</a></p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #F1FA8C;"> target/release/zola ~/.cargo/bin/zola</span></span></code></pre>
+<p><a rel="external" href="https://www.getzola.org/documentation/getting-started/installation/">https://www.getzola.org/documentation/getting-started/installation/</a></p>
 <h2 id="create-a-new-site">Create a new site</h2>
 <p>To create a new Zola site, you can use the the Zola CLI with the following command:</p>
-<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">zola</span><span> init my-site
-</span></code></pre>
-<p><a href="https://www.getzola.org/documentation/getting-started/cli-usage/">https://www.getzola.org/documentation/getting-started/cli-usage/</a></p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #F1FA8C;"> init my-site</span></span></code></pre>
+<p><a rel="external" href="https://www.getzola.org/documentation/getting-started/cli-usage/">https://www.getzola.org/documentation/getting-started/cli-usage/</a></p>
 <h2 id="themes">Themes</h2>
 <p>Zola supports themes out of the box. You can create your own theme or use one of the many themes available on the Zola website.</p>
 <p>After init your site, you can clone the theme.</p>
 <p>Then you can copy the theme to your site directory:</p>
-<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">git</span><span> clone https://github.com/exiguus/zola-monoplain.git
-</span><span style="color:#6272a4;"># The theme is in the themes/zola-monoplain directory
-</span><span style="color:#50fa7b;">cp</span><span style="font-style:italic;color:#ffb86c;"> -R</span><span> zola-monoplain/themes/zola-monoplain my-site/themes/
-</span><span style="color:#6272a4;"># Copy the example content of the theme to your site directory
-</span><span style="color:#50fa7b;">cp</span><span style="font-style:italic;color:#ffb86c;"> -R</span><span> zola-monoplain/theme/content my-site/
-</span><span style="color:#6272a4;"># Copy the example config.toml of the theme to your site directory
-</span><span style="color:#50fa7b;">cp</span><span> zola-monoplain/config.toml my-site/
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> clone https://github.com/exiguus/zola-monoplain.git</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># The theme is in the themes/zola-monoplain directory</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #BD93F9;"> -R</span><span style="color: #F1FA8C;"> zola-monoplain/themes/zola-monoplain my-site/themes/</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Copy the example content of the theme to your site directory</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #BD93F9;"> -R</span><span style="color: #F1FA8C;"> zola-monoplain/theme/content my-site/</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Copy the example config.toml of the theme to your site directory</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #F1FA8C;"> zola-monoplain/config.toml my-site/</span></span></code></pre>
 <p>Instead of copy files over you can also use symlinks. This is useful if you want to use the theme in multiple sites. You can create a symlink to the theme directory in your site directory:</p>
-<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">ln</span><span style="font-style:italic;color:#ffb86c;"> -s</span><span> /path/to/zola-monoplain/themes/zola-monoplain /path/to/blog/themes/zola-monoplain
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">ln</span><span style="color: #BD93F9;"> -s</span><span style="color: #F1FA8C;"> /path/to/zola-monoplain/themes/zola-monoplain /path/to/blog/themes/zola-monoplain</span></span></code></pre>
 <p>Then you can set the theme in the <code>config.toml</code> file:</p>
-<pre data-lang="toml" style="background-color:#282a36;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ff79c6;">theme </span><span>= </span><span style="color:#f1fa8c;">&quot;zola-monoplain&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #8BE9FD;">theme</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">zola-monoplain</span><span style="color: #E9F284;">&quot;</span></span></code></pre>
 <p>And adjust the <code>config.toml</code> file to your needs.</p>
-<p>An example how to use the theme with with github actions in a monorepo can be found here: <a href="https://github.com/exiguus/blog">https://github.com/exiguus/blog</a></p>
+<p>An example how to use the theme with with github actions in a monorepo can be found here: <a rel="external" href="https://github.com/exiguus/blog">https://github.com/exiguus/blog</a></p>
 <h2 id="templates">Templates</h2>
 <p>Zola uses the Tera template engine to render your content. Tera is a powerful and flexible template engine that allows you to create complex layouts and designs for your website.</p>
-<p><a href="https://keats.github.io/tera/docs">https://keats.github.io/tera/docs</a></p>
+<p><a rel="external" href="https://keats.github.io/tera/docs">https://keats.github.io/tera/docs</a></p>
 <h2 id="multilingual-sites">Multilingual sites</h2>
 <p>Zola supports multilingual sites out of the box. You can create content in multiple languages and Zola will generate separate pages for each language.</p>
 <p>Languages and translations are defined in the <code>config.toml</code> file. You can specify the default language and add translations for each language you want to support.</p>
-<pre data-lang="toml" style="background-color:#282a36;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[languages.de]
-</span><span style="color:#ff79c6;">generate_feed </span><span>= </span><span style="color:#bd93f9;">true
-</span><span style="color:#ff79c6;">build_search_index </span><span>= </span><span style="color:#bd93f9;">true
-</span><span>
-</span><span>[languages.en]
-</span><span>
-</span><span>[language.de.translations]
-</span><span style="color:#ff79c6;">home </span><span>= </span><span style="color:#f1fa8c;">&quot;Startseite&quot;
-</span><span>
-</span><span>[language.en.translations]
-</span><span style="color:#ff79c6;">home </span><span>= </span><span style="color:#f1fa8c;">&quot;Home&quot;
-</span><span>
-</span><span>[translations]
-</span><span style="color:#ff79c6;">home </span><span>= </span><span style="color:#f1fa8c;">&quot;Home&quot;
-</span></code></pre>
-<h2 id="resources">Resources</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">languages</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">de</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">generate_feed</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">build_search_index</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">languages</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">en</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">de</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">home</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Startseite</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">en</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">home</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Home</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">home</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Home</span><span style="color: #E9F284;">&quot;</span></span></code></pre><h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://www.getzola.org/">Zola website</a></li>
-<li><a href="https://www.getzola.org/documentation/templates/overview/">Zola templates</a></li>
-<li><a href="https://www.getzola.org/documentation/content/multilingual/">Zola Multilingual sites</a></li>
+<li><a rel="external" href="https://www.getzola.org/">Zola website</a></li>
+<li><a rel="external" href="https://www.getzola.org/documentation/templates/overview/">Zola templates</a></li>
+<li><a rel="external" href="https://www.getzola.org/documentation/content/multilingual/">Zola Multilingual sites</a></li>
 </ul>
    <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
@@ -317,8 +309,8 @@ accessible" />
   height="720"
   alt="Open Graph Preview - 2025-05-03"
   title="Open Graph Preview - 2025-05-03"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.c6be8221f3393acc.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.44c8e67b9df53264.webp 256w"
   class=""
   loading="lazy"
 />
@@ -344,8 +336,8 @@ accessible" />
   height="1866"
   alt="Shortcodes - 2024-06-08"
   title="Shortcodes - 2024-06-08"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.056da86c6a6b0c0b.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.4baec50532018be8.webp 256w"
   class=""
   loading="lazy"
 />
@@ -551,7 +543,7 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-01-19 03:11:35 Europe&#x2F;Berlin</small
+      >2026-02-17 20:13:18 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>

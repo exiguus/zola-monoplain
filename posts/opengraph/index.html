@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-01-19T02:11:35.401574797+00:00" />
+<meta name="build" content="2026-02-17T19:13:18.662140261+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Open Graph Preview"
@@ -35,9 +35,9 @@ accessible" />
   content="https://exiguus.github.io/zola-monoplain/posts/opengraph/"
 />
 <meta property="og:description" content="Open Graph Preview by example" />
-<meta property="og:image" content="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.4d1367aeb67c8d18.jpg" />
-<meta property="og:image:url" content="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.4d1367aeb67c8d18.jpg" />
-<meta property="og:image:secure_url" content="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.4d1367aeb67c8d18.jpg" />
+<meta property="og:image" content="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.7af4c0b2bacc5a13.jpg" />
+<meta property="og:image:url" content="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.7af4c0b2bacc5a13.jpg" />
+<meta property="og:image:secure_url" content="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.7af4c0b2bacc5a13.jpg" />
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -177,105 +177,95 @@ accessible" />
 <h2 id="post-metadata">Post Metadata</h2>
 <p>In the page metadata, you can define <code>preview_img</code> for the Open Graph preview image. This image will be used when the page is shared on social media platforms. The <code>preview_img</code> should be the filepath to the image you want to use.</p>
 <p>In this example, the <code>preview_img</code> is set to <code>opengraph-preview-image.jpg</code>, which is located in the same directory as the Markdown file for this post.</p>
-<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;Open Graph Preview&quot;
-</span><span>description = &quot;Open Graph Preview by example&quot;
-</span><span>date = 2025-05-03
-</span><span>authors = [&quot;Simon Gattner&quot;]
-</span><span>[taxonomies]
-</span><span>tags= [&quot;Zola&quot;, &quot;Theme&quot;, &quot;Markdown&quot;, &quot;Open Graph&quot;, &quot;Preview Image&quot;]
-</span><span>[extra]
-</span><span>images = [&quot;opengraph-preview-image.jpg&quot;]
-</span><span>preview_img = &quot;opengraph-preview-image.jpg&quot;
-</span><span>+++
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"><span>title = &quot;Open Graph Preview&quot;</span></span>
+<span class="giallo-l"><span>description = &quot;Open Graph Preview by example&quot;</span></span>
+<span class="giallo-l"><span>date = 2025-05-03</span></span>
+<span class="giallo-l"><span>authors = [&quot;Simon Gattner&quot;]</span></span>
+<span class="giallo-l"><span>[</span><span style="color: #FF79C6;">taxonomies</span><span>]</span></span>
+<span class="giallo-l"><span>tags= [&quot;Zola&quot;, &quot;Theme&quot;, &quot;Markdown&quot;, &quot;Open Graph&quot;, &quot;Preview Image&quot;]</span></span>
+<span class="giallo-l"><span>[</span><span style="color: #FF79C6;">extra</span><span>]</span></span>
+<span class="giallo-l"><span>images = [</span><span style="color: #FF79C6;">&quot;opengraph-preview-image.jpg&quot;</span><span>]</span></span>
+<span class="giallo-l"><span>preview_img = &quot;opengraph-preview-image.jpg&quot;</span></span>
+<span class="giallo-l"><span>+++</span></span></code></pre>
 <p>The macro for the preview_img look like:</p>
-<pre data-lang="html" style="background-color:#282a36;color:#f8f8f2;" class="language-html "><code class="language-html" data-lang="html"><span>{% macro image(path, src, alt, class=&quot;&quot;, width,
-</span><span>height) -%}
-</span><span>&lt;</span><span style="color:#ff79c6;">img
-</span><span>  </span><span style="color:#50fa7b;">width</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ width }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">height</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ height }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">alt</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ alt }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">title</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ alt }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">{% if width or height -%}
-</span><span>    </span><span style="color:#50fa7b;">{% set abspath </span><span>= </span><span style="color:#f1fa8c;">path </span><span style="color:#50fa7b;">~ src -%}
-</span><span>    </span><span style="color:#50fa7b;">{% set resized </span><span>= </span><span style="color:#f1fa8c;">resize_image(path=abspath, </span><span style="color:#50fa7b;">width</span><span>=</span><span style="color:#f1fa8c;">width </span><span style="color:#50fa7b;">| default(value</span><span>=</span><span style="color:#f1fa8c;">0), </span><span style="color:#50fa7b;">height</span><span>=</span><span style="color:#f1fa8c;">height </span><span style="color:#50fa7b;">| default(value</span><span>=</span><span style="color:#f1fa8c;">0)) </span><span style="color:#50fa7b;">-%}
-</span><span>    </span><span style="color:#50fa7b;">src</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ resized.url | safe }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">{% else -%}
-</span><span>    </span><span style="color:#50fa7b;">src</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ get_url(path=path ~ src) | safe }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">{% endif -%}
-</span><span>  </span><span style="color:#50fa7b;">class</span><span>=</span><span style="color:#f1fa8c;">&quot;{{ class }}&quot;
-</span><span>  </span><span style="color:#50fa7b;">loading</span><span>=</span><span style="color:#f1fa8c;">&quot;lazy&quot;
-</span><span>/&gt;
-</span><span>{% endmacro image -%}
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="html"><span class="giallo-l"><span>{% macro image(path, src, alt, class=&quot;&quot;, width,</span></span>
+<span class="giallo-l"><span>height) -%}</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">img</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  width</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ width }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  height</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ height }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  alt</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ alt }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  title</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ alt }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  {% if width or height -%}</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">    {% set abspath</span><span style="color: #FF79C6;"> =</span><span style="color: #F1FA8C;"> path</span><span style="color: #50FA7B;font-style: italic;"> ~ src -%}</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">    {% set resized</span><span style="color: #FF79C6;"> =</span><span style="color: #F1FA8C;"> resize_image(path</span><span style="color: #FF5555;font-style: italic;text-decoration: underline;">=</span><span style="color: #F1FA8C;">abspath,</span><span style="color: #50FA7B;font-style: italic;"> width</span><span style="color: #FF79C6;">=</span><span style="color: #F1FA8C;">width</span><span style="color: #50FA7B;font-style: italic;"> | default(value</span><span style="color: #FF79C6;">=</span><span style="color: #F1FA8C;">0),</span><span style="color: #50FA7B;font-style: italic;"> height</span><span style="color: #FF79C6;">=</span><span style="color: #F1FA8C;">height</span><span style="color: #50FA7B;font-style: italic;"> | default(value</span><span style="color: #FF79C6;">=</span><span style="color: #F1FA8C;">0))</span><span style="color: #50FA7B;font-style: italic;"> -%}</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">    src</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ resized.url | safe }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  {% else -%}</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">    src</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ get_url(path=path ~ src) | safe }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  {% endif -%}</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  class</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">{{ class }}</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  loading</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">lazy</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span>/&gt;</span></span>
+<span class="giallo-l"><span>{% endmacro image -%}</span></span></code></pre>
 <p>The macro <code>image()</code> is used to generate the URL for the preview image.
 If <code>preview_img</code> is defined, it checks if the path starts with a <code>/</code> or contains <code>://</code>. If so, it uses the path as is. Otherwise, it appends the <code>preview_img</code> to the page's path to create the full URL.
 If the <code>preview_img</code> is not defined, it uses a default image located at <code>images/og-preview.png</code>.
 The <code>resize_image</code> function is used to generate a resized version of the image with a width of 1200 pixels and a height of 630 pixels. This is the recommended size for Open Graph images.</p>
 <h2 id="open-graph-tags">Open Graph Tags</h2>
 <p>The following Open Graph tags are used to define the title, description, and image for the page:</p>
-<pre data-lang="html" style="background-color:#282a36;color:#f8f8f2;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#ff79c6;">meta
-</span><span>  </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:title&quot;
-</span><span>  </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;mono</span><span style="color:#bd93f9;">&amp;#x2F;</span><span style="color:#f1fa8c;">plain; a11y=true | Open Graph Preview&quot;
-</span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">meta </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:type&quot; </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;website&quot; </span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">meta
-</span><span>  </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:url&quot;
-</span><span>  </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;http://exiguus.github.io/zola-monoplain/posts/opengraph/&quot;
-</span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">meta </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:description&quot; </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;Open Graph Preview by example&quot; </span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">meta </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:image&quot; </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;http://exiguus.github.io/zola-monoplain/posts/opengraph/opengraph-preview-image.jpg&quot; </span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">meta </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:image:url&quot; </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;http://exiguus.github.io/zola-monoplain/posts/opengraph/opengraph-preview-image.jpg&quot; </span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">meta </span><span style="color:#50fa7b;">property</span><span>=</span><span style="color:#f1fa8c;">&quot;og:image:secure_url&quot; </span><span style="color:#50fa7b;">content</span><span>=</span><span style="color:#f1fa8c;">&quot;http://exiguus.github.io/zola-monoplain/posts/opengraph/opengraph-preview-image.jpg&quot; </span><span>/&gt;
-</span><span>&lt;</span><span style="color:#ff79c6;">link
-</span><span>
-</span></code></pre>
-<h2 id="open-graph-preview-image">Open Graph Preview Image</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:title</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">mono</span><span style="color: #BD93F9;">&amp;#x2F;</span><span style="color: #F1FA8C;">plain; a11y=true | Open Graph Preview</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span>/&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span><span style="color: #50FA7B;font-style: italic;"> property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:type</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">website</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:url</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;font-style: italic;">  content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">http://exiguus.github.io/zola-monoplain/posts/opengraph/</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span>/&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span><span style="color: #50FA7B;font-style: italic;"> property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:description</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Open Graph Preview by example</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span><span style="color: #50FA7B;font-style: italic;"> property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:image</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">http://exiguus.github.io/zola-monoplain/posts/opengraph/opengraph-preview-image.jpg</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span><span style="color: #50FA7B;font-style: italic;"> property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:image:url</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">http://exiguus.github.io/zola-monoplain/posts/opengraph/opengraph-preview-image.jpg</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">meta</span><span style="color: #50FA7B;font-style: italic;"> property</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">og:image:secure_url</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> content</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">http://exiguus.github.io/zola-monoplain/posts/opengraph/opengraph-preview-image.jpg</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">link</span></span>
+<span class="giallo-l"></span></code></pre><h2 id="open-graph-preview-image">Open Graph Preview Image</h2>
 <img
   width="1200"
   height="630"
   alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice."
   title="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice."
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.4d1367aeb67c8d18.jpg"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.7af4c0b2bacc5a13.jpg"
   class=""
   loading="lazy"
 />
  
 <p>The shortcode for the image looks like this:</p>
-<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#ff79c6;">\{\{</span><span> image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;, width=1200, height=630) </span><span style="color:#ff79c6;">\}\}
-</span></code></pre>
-<h2 id="original-image">Original Image</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;, width=1200, height=630) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre><h2 id="original-image">Original Image</h2>
 <img
   width="960"
   height="720"
   alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice."
   title="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice."
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.e4c7af94c17360da.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.e4c7af94c17360da.webp 256w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.e450fd3cdbdda01e.webp 384w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.f8cce65c1e905f0a.webp 512w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.38288f19797f83f8.webp 576w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.5812d39c590b86b8.webp 640w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.f20eaaa67271cbbb.webp 768w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.d38cf9121835c9c4.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.d38cf9121835c9c4.webp 256w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.bed273476062c37c.webp 384w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.f59116ccd8c5d706.webp 512w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.68ddf0ae3e0a8159.webp 576w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eb66aa07c332092d.webp 640w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.32dbef01b009dee5.webp 768w"
   class=""
   loading="lazy"
 />
  
 <p>The shortcode for the image looks like this:</p>
-<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#ff79c6;">\{\{</span><span> image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;) </span><span style="color:#ff79c6;">\}\}
-</span></code></pre>
-<h2 id="default-image">Default Image</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre><h2 id="default-image">Default Image</h2>
 <p>The fallback image is used when no <code>preview_img</code> is defined in the page metadata. This image is located at <code>static/images/og-preview.png</code> and is used as a default Open Graph image.</p>
 <img
   width="1200"
   height="630"
   alt="Default opengraph image show a face, painted in blue on white ground."
   title="Default opengraph image show a face, painted in blue on white ground."
-  src="https://exiguus.github.io/zola-monoplain/processed_images/og-preview.05ee8c211c9240df.png"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/og-preview.a8335c487f06e49e.png"
   class=""
   loading="lazy"
 />
  
 <p>The shortcode for the image looks like this:</p>
-<pre data-lang="markdown" style="background-color:#282a36;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#ff79c6;">\{\{</span><span> image(src=&quot;../../../static/images/og-preview.png&quot;, alt=&quot;Default opengraph image show a face, painted in blue on white ground.&quot;, width=1200, height=630) </span><span style="color:#ff79c6;">\}\}
-</span></code></pre>
-   <section aria-labelledby="latest-feedback">
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;../../../static/images/og-preview.png&quot;, alt=&quot;Default opengraph image show a face, painted in blue on white ground.&quot;, width=1200, height=630) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre>   <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
@@ -345,8 +335,8 @@ The <code>resize_image</code> function is used to generate a resized version of 
   height="720"
   alt="Open Graph Preview - 2025-05-03"
   title="Open Graph Preview - 2025-05-03"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.c6be8221f3393acc.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.44c8e67b9df53264.webp 256w"
   class=""
   loading="lazy"
 />
@@ -372,8 +362,8 @@ The <code>resize_image</code> function is used to generate a resized version of 
   height="1866"
   alt="Shortcodes - 2024-06-08"
   title="Shortcodes - 2024-06-08"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.056da86c6a6b0c0b.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.4baec50532018be8.webp 256w"
   class=""
   loading="lazy"
 />
@@ -579,7 +569,7 @@ The <code>resize_image</code> function is used to generate a resized version of 
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-01-19 03:11:35 Europe&#x2F;Berlin</small
+      >2026-02-17 20:13:18 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>

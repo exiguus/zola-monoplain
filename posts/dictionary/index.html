@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-01-19T02:11:35.452419386+00:00" />
+<meta name="build" content="2026-02-17T19:13:18.662140261+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Dictionary"
@@ -35,9 +35,9 @@ accessible" />
   content="https://exiguus.github.io/zola-monoplain/posts/dictionary/"
 />
 <meta property="og:description" content="Dictionary by Example" />
-<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -158,40 +158,34 @@ accessible" />
 </hgroup>
 <h2 id="introduction">Introduction</h2>
 <p>The theme use Zola <code>[translations]</code> as <em>Dictionary</em> and to translate the content of the website. The translations are defined in the <code>config.toml</code> file. You can specify the default language and add translations for each language you want to support.</p>
-<p>The <a href="https://www.getzola.org/documentation/content/multilingual/">Zola Multilingual sites</a> provide more information about how to create multilingual sites with Zola.</p>
+<p>The <a rel="external" href="https://www.getzola.org/documentation/content/multilingual/">Zola Multilingual sites</a> provide more information about how to create multilingual sites with Zola.</p>
 <h2 id="translations">Translations</h2>
 <p>The search Page for example has the following translations defined in the <code>config.toml</code> file:</p>
-<pre data-lang="toml" style="background-color:#282a36;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[translations]
-</span><span style="color:#ff79c6;">search_form_legend </span><span>= </span><span style="color:#f1fa8c;">&quot;Search&quot;
-</span><span style="color:#ff79c6;">search_form_input_label </span><span>= </span><span style="color:#f1fa8c;">&quot;Text to search&quot;
-</span><span style="color:#ff79c6;">search_form_input_placeholder </span><span>= </span><span style="color:#f1fa8c;">&quot;Search ↵&quot;
-</span><span style="color:#ff79c6;">search_form_submit </span><span>= </span><span style="color:#f1fa8c;">&quot;Search&quot;
-</span><span style="color:#ff79c6;">search_form_clear </span><span>= </span><span style="color:#f1fa8c;">&quot;Clear&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Search</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_input_label</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Text to search</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_input_placeholder</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Search ↵</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_submit</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Search</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_clear</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Clear</span><span style="color: #E9F284;">&quot;</span></span></code></pre>
 <p>Its possible to change the translations for the search page by adding the following translations to the <code>config.toml</code> file:</p>
-<pre data-lang="toml" style="background-color:#282a36;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[translations]
-</span><span style="color:#ff79c6;">search_form_legend </span><span>= </span><span style="color:#f1fa8c;">&quot;The Search&quot;
-</span></code></pre>
-<h2 id="languages">Languages</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">The Search</span><span style="color: #E9F284;">&quot;</span></span></code></pre><h2 id="languages">Languages</h2>
 <p>To change translations for other languages as the default (en), you can add the translations to the <code>config.toml</code> file. The translations are used in the templates with the <code>trans</code> function. The <code>trans</code> function takes the key of the translation as an argument and returns the translation for the current language.</p>
-<pre data-lang="toml" style="background-color:#282a36;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[language.de.translations]
-</span><span style="color:#ff79c6;">search_form_legend </span><span>= </span><span style="color:#f1fa8c;">&quot;Die Suche&quot;
-</span><span>
-</span><span>[language.fr.translations]
-</span><span style="color:#ff79c6;">search_form_legend </span><span>= </span><span style="color:#f1fa8c;">&quot;La recherche&quot;
-</span><span>
-</span><span>[language.it.translations]
-</span><span style="color:#ff79c6;">search_form_legend </span><span>= </span><span style="color:#f1fa8c;">&quot;La ricerca&quot;
-</span></code></pre>
-<h2 id="extra-language">Extra Language</h2>
-<pre data-lang="md" style="background-color:#282a36;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span>+++
-</span><span>title = &quot;Extra Language&quot;
-</span><span>description = &quot;Extra Language&quot;
-</span><span>date = 2024-06-09
-</span><span>[extra]
-</span><span>lang = &quot;de&quot;
-</span><span>+++
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">de</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Die Suche</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">fr</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">La recherche</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">it</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">La ricerca</span><span style="color: #E9F284;">&quot;</span></span></code></pre><h2 id="extra-language">Extra Language</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"><span>title = &quot;Extra Language&quot;</span></span>
+<span class="giallo-l"><span>description = &quot;Extra Language&quot;</span></span>
+<span class="giallo-l"><span>date = 2024-06-09</span></span>
+<span class="giallo-l"><span>[</span><span style="color: #FF79C6;">extra</span><span>]</span></span>
+<span class="giallo-l"><span>lang = &quot;de&quot;</span></span>
+<span class="giallo-l"><span>+++</span></span></code></pre>
 <p>The <code>extra.lang</code> field is used to set the language for the main content of the page or post. Also, it adds a <code>lang</code> attribute to posts and gallery items link the the page.</p>
    <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
@@ -263,8 +257,8 @@ accessible" />
   height="720"
   alt="Open Graph Preview - 2025-05-03"
   title="Open Graph Preview - 2025-05-03"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.c6be8221f3393acc.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.44c8e67b9df53264.webp 256w"
   class=""
   loading="lazy"
 />
@@ -290,8 +284,8 @@ accessible" />
   height="1866"
   alt="Shortcodes - 2024-06-08"
   title="Shortcodes - 2024-06-08"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.056da86c6a6b0c0b.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.4baec50532018be8.webp 256w"
   class=""
   loading="lazy"
 />
@@ -497,7 +491,7 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-01-19 03:11:35 Europe&#x2F;Berlin</small
+      >2026-02-17 20:13:18 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>

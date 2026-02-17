@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-01-19T02:11:35.355179989+00:00" />
+<meta name="build" content="2026-02-17T19:13:18.662140261+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Feedback"
@@ -35,9 +35,9 @@ accessible" />
   content="https://exiguus.github.io/zola-monoplain/posts/feedback/"
 />
 <meta property="og:description" content="Feedback E-Mail for Monoplain Theme" />
-<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -156,27 +156,25 @@ accessible" />
 <p>Why? Because Feedback is important! And the Monoplain Theme has no comment section yet, so the only way to give feedback is via E-Mail.</p>
 <h2 id="configuration">Configuration</h2>
 <p>You can configure the feedback E-Mail address in the <code>config.toml</code> file of your Zola site. The following configuration options are available:</p>
-<pre data-lang="yaml" style="background-color:#282a36;color:#f8f8f2;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>[</span><span style="color:#f1fa8c;">translations</span><span>]
-</span><span style="color:#f1fa8c;">post_feedback_email_link_title = &quot;This email address has been obscured for security. Please click the link to reveal the actual address.&quot;
-</span><span style="color:#f1fa8c;">post_feedback_email_text = &quot;Have thoughts or experiences you&#39;d like to share? I&#39;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#39;s start a conversation.&quot;
-</span><span style="color:#f1fa8c;">post_feedback_email_title = &quot;Feedback&quot;
-</span><span>
-</span><span>[</span><span style="color:#f1fa8c;">extra</span><span>]
-</span><span style="color:#6272a4;"># feedback
-</span><span style="color:#f1fa8c;">feedback_email_enabled = true
-</span><span style="color:#f1fa8c;">feedback_email_address = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }
-</span><span style="color:#f1fa8c;">feedback_email_address_wildcard = true
-</span><span style="color:#f1fa8c;">feedback_email_address_wildcard_postfix = &quot;.monoplain&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span>[</span><span style="color: #F1FA8C;">translations</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">post_feedback_email_link_title = &quot;This email address has been obscured for security. Please click the link to reveal the actual address.&quot;</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">post_feedback_email_text = &quot;Have thoughts or experiences you&#39;d like to share? I&#39;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#39;s start a conversation.&quot;</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">post_feedback_email_title = &quot;Feedback&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span style="color: #F1FA8C;">extra</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># feedback</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_enabled = true</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_address = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_address_wildcard = true</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_address_wildcard_postfix = &quot;.monoplain&quot;</span></span></code></pre>
 <p>By default the feedback email is enabled for all posts.
 You can disable it for specific posts by setting <code>feedback_email_enabled = false</code> in the post's front matter.
 You can also customize the text and title of the feedback email link by modifying the <code>translations</code> section in your <code>config.toml</code> file.
 There is also a <code>feedback_email_address_wildcard</code> option that allows you to use a wildcard for the email address. This is useful if you want to use a different email address for each post. And you can set a postfix for the email address with <code>feedback_email_address_wildcard_postfix</code>.</p>
 <p>Fully configured, the feedback email link will look like this:</p>
-<pre data-lang="yaml" style="background-color:#282a36;color:#f8f8f2;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#f1fa8c;">feedback_email_address = { local_part = &quot;blog&quot;, domain_name = &quot;example&quot;, tld = &quot;org&quot; }
-</span><span style="color:#f1fa8c;">feedback_email_address_wildcard = true
-</span><span style="color:#f1fa8c;">feedback_email_address_wildcard_postfix = &quot;.blog-post&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_address = { local_part = &quot;blog&quot;, domain_name = &quot;example&quot;, tld = &quot;org&quot; }</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_address_wildcard = true</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">feedback_email_address_wildcard_postfix = &quot;.blog-post&quot;</span></span></code></pre>
 <p>This will result in the email address <code>feedback.blog-post@example.org</code> for the current page.</p>
 <h2 id="example">Example</h2>
 <p>See next section for an example of the feedback email link in action.</p>
@@ -262,8 +260,8 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
   height="720"
   alt="Open Graph Preview - 2025-05-03"
   title="Open Graph Preview - 2025-05-03"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.c6be8221f3393acc.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.44c8e67b9df53264.webp 256w"
   class=""
   loading="lazy"
 />
@@ -289,8 +287,8 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
   height="1866"
   alt="Shortcodes - 2024-06-08"
   title="Shortcodes - 2024-06-08"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.056da86c6a6b0c0b.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.4baec50532018be8.webp 256w"
   class=""
   loading="lazy"
 />
@@ -496,7 +494,7 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-01-19 03:11:35 Europe&#x2F;Berlin</small
+      >2026-02-17 20:13:18 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>

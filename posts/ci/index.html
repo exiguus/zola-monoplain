@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-01-19T02:11:35.442367150+00:00" />
+<meta name="build" content="2026-02-17T19:13:18.662140261+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -35,9 +35,9 @@ accessible" />
   content="https://exiguus.github.io/zola-monoplain/posts/ci/"
 />
 <meta property="og:description" content="Continous Integration by Example" />
-<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
-<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.e5a0fec63778a5ce.png" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -199,360 +199,350 @@ accessible" />
 <h2 id="github-actions">Github Actions</h2>
 <h3 id="simple-github-pages-deployment">Simple Github Pages deployment</h3>
 <p>Use <code>zola-deploy-action</code> to build and deploy the website to Github Pages.</p>
-<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#6272a4;"># .github/workflows/github-pages.yml
-</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Github Pages
-</span><span>
-</span><span style="color:#bd93f9;">on</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">push</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">branches</span><span>:
-</span><span>      - </span><span style="color:#f1fa8c;">main
-</span><span>
-</span><span style="color:#ff79c6;">jobs</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">build</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Build and deploy
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">github.ref == &#39;refs/heads/main&#39;
-</span><span>
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">checkout
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">build_and_deploy
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">shalzz/zola-deploy-action@v0.18.0
-</span><span>        </span><span style="color:#ff79c6;">env</span><span>:
-</span><span>          </span><span style="color:#6272a4;"># Target branch
-</span><span>          </span><span style="color:#ff79c6;">PAGES_BRANCH</span><span>: </span><span style="color:#f1fa8c;">gh-pages
-</span><span>          </span><span style="color:#ff79c6;">TOKEN</span><span>: </span><span style="color:#f1fa8c;">${{ secrets.GITHUB_TOKEN }}
-</span><span style="color:#ff79c6;">´          BUILD_DIR</span><span>: </span><span style="color:#f1fa8c;">themes/zola-monoplain
-</span></code></pre>
-<p>See <a href="https://www.getzola.org/documentation/deployment/github-pages/">https://www.getzola.org/documentation/deployment/github-pages/</a></p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #6272A4;"># .github/workflows/github-pages.yml</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Github Pages</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  push</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    branches</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> main</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  build</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build and deploy</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> github.ref == &#39;refs/heads/main&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> build_and_deploy</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> shalzz/zola-deploy-action@v0.18.0</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        env</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">          # Target branch</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          PAGES_BRANCH</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> gh-pages</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          TOKEN</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ secrets.GITHUB_TOKEN }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">´          BUILD_DIR</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> themes/zola-monoplain</span></span></code></pre>
+<p>See <a rel="external" href="https://www.getzola.org/documentation/deployment/github-pages/">https://www.getzola.org/documentation/deployment/github-pages/</a></p>
 <h3 id="advance-github-pages-deployment">Advance Github Pages deployment</h3>
 <p>Use <em>github-pages-deploy-action</em> to build and deploy the website to Github Pages.</p>
 <p>Use <em>taiki-e/install-action</em> to install Zola.</p>
 <p>Use <em>pnpm/action-setup</em> to install pnpm.</p>
 <p>Use <em>actions/cache</em> to cache the pnpm store.</p>
-<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#6272a4;"># .github/workflows/deploy.yml
-</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy
-</span><span style="color:#bd93f9;">on</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">push</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">branches</span><span>:
-</span><span>      - </span><span style="color:#f1fa8c;">main
-</span><span>
-</span><span style="color:#ff79c6;">jobs</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">deploy-github-pages</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy Github Pages
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">taiki-e/install-action@v2
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">tool</span><span>: </span><span style="color:#f1fa8c;">zola@0.18.0
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup Node.js
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">setup-node
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/setup-node@v4
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">node-version-file</span><span>: </span><span style="color:#f1fa8c;">package.json
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">pnpm/action-setup@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install pnpm
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">run_install</span><span>: </span><span style="color:#bd93f9;">false
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Get pnpm store directory
-</span><span>        </span><span style="color:#ff79c6;">shell</span><span>: </span><span style="color:#f1fa8c;">bash
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/cache@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup pnpm cache
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">${{ env.STORE_PATH }}
-</span><span>          </span><span style="color:#ff79c6;">key</span><span>: </span><span style="color:#f1fa8c;">${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}
-</span><span>          </span><span style="color:#ff79c6;">restore-keys</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">            ${{ runner.os }}-pnpm-store-
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install dependencies
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm install
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Build
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm build
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">JamesIves/github-pages-deploy-action@v4
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">folder</span><span>: </span><span style="color:#f1fa8c;">./themes/zola-monoplain/public
-</span><span>          </span><span style="color:#ff79c6;">branch</span><span>: </span><span style="color:#f1fa8c;">gh-pages
-</span><span>          </span><span style="color:#ff79c6;">clean-exclude</span><span>: </span><span style="color:#f1fa8c;">pr-preview
-</span><span>          </span><span style="color:#ff79c6;">force</span><span>: </span><span style="color:#bd93f9;">false
-</span></code></pre>
-<h3 id="preview-github-pages-deployment">Preview Github Pages deployment</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #6272A4;"># .github/workflows/deploy.yml</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy</span></span>
+<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  push</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    branches</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> main</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  deploy-github-pages</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy Github Pages</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> taiki-e/install-action@v2</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          tool</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> zola@0.18.0</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm build</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> JamesIves/github-pages-deploy-action@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          folder</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./themes/zola-monoplain/public</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          branch</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> gh-pages</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          clean-exclude</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pr-preview</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          force</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span></code></pre><h3 id="preview-github-pages-deployment">Preview Github Pages deployment</h3>
 <p>Use <em>pr-preview-action</em> to build and deploy the website to Github Pages.
 Test the website with <em>lighthouse-ci-action</em>.</p>
-<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#6272a4;"># .github/workflows/preview.yml
-</span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Preview
-</span><span style="color:#ff79c6;">concurrency</span><span>: </span><span style="color:#f1fa8c;">preview-${{ github.ref }}
-</span><span style="color:#bd93f9;">on</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">pull_request</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">types</span><span>:
-</span><span>      - </span><span style="color:#f1fa8c;">opened
-</span><span>      - </span><span style="color:#f1fa8c;">reopened
-</span><span>      - </span><span style="color:#f1fa8c;">synchronize
-</span><span>      - </span><span style="color:#f1fa8c;">closed
-</span><span style="color:#ff79c6;">jobs</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">deploy-preview</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy PR
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>
-</span><span>    </span><span style="color:#ff79c6;">outputs</span><span>:
-</span><span>      </span><span style="color:#ff79c6;">preview_url</span><span>: </span><span style="color:#f1fa8c;">${{ steps.deploy.outputs.deployment-url }}
-</span><span>
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">taiki-e/install-action@v2
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">tool</span><span>: </span><span style="color:#f1fa8c;">zola@0.18.0
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup Node.js
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">setup-node
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/setup-node@v4
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">node-version-file</span><span>: </span><span style="color:#f1fa8c;">package.json
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">pnpm/action-setup@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install pnpm
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">run_install</span><span>: </span><span style="color:#bd93f9;">false
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Get pnpm store directory
-</span><span>        </span><span style="color:#ff79c6;">shell</span><span>: </span><span style="color:#f1fa8c;">bash
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/cache@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup pnpm cache
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">${{ env.STORE_PATH }}
-</span><span>          </span><span style="color:#ff79c6;">key</span><span>: </span><span style="color:#f1fa8c;">${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}
-</span><span>          </span><span style="color:#ff79c6;">restore-keys</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">            ${{ runner.os }}-pnpm-store-
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install dependencies
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm install
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Build
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm build
-</span><span>        </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">github.event.action != &#39;closed&#39;
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Deploy
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">deploy
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">rossjrw/pr-preview-action@v1
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">source-dir</span><span>: </span><span style="color:#f1fa8c;">./themes/zola-monoplain/public
-</span><span>          </span><span style="color:#ff79c6;">preview-branch</span><span>: </span><span style="color:#f1fa8c;">gh-pages
-</span><span>          </span><span style="color:#ff79c6;">umbrella-dir</span><span>: </span><span style="color:#f1fa8c;">pr-preview
-</span><span>          </span><span style="color:#ff79c6;">action</span><span>: </span><span style="color:#f1fa8c;">auto
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Info
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">          echo &quot;Preview URL: ${{ steps.deploy.outputs.deployment-url }}&quot;
-</span><span style="color:#f1fa8c;">
-</span><span>  </span><span style="color:#ff79c6;">lighthouse</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Test PR
-</span><span>    </span><span style="color:#ff79c6;">needs</span><span>: </span><span style="color:#f1fa8c;">deploy-preview
-</span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
-</span><span>    </span><span style="color:#ff79c6;">timeout-minutes</span><span>: </span><span style="color:#bd93f9;">5
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Audit URLs and validate Budget
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">treosh/lighthouse-ci-action@v11
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">urls</span><span>: </span><span style="color:#f1fa8c;">${{ needs.deploy-preview.outputs.preview_url }}
-</span><span>          </span><span style="color:#ff79c6;">budgetPath</span><span>: </span><span style="color:#f1fa8c;">./budget.json
-</span><span>          </span><span style="color:#ff79c6;">uploadArtifacts</span><span>: </span><span style="color:#bd93f9;">true
-</span><span>          </span><span style="color:#ff79c6;">runs</span><span>: </span><span style="color:#bd93f9;">3
-</span></code></pre>
-<p>See: <a href="https://github.com/marketplace/actions/deploy-pr-preview">https://github.com/marketplace/actions/deploy-pr-preview</a></p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #6272A4;"># .github/workflows/preview.yml</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Preview</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">concurrency</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> preview-${{ github.ref }}</span></span>
+<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  pull_request</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    types</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> opened</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> reopened</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> synchronize</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> closed</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  deploy-preview</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy PR</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    outputs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">      preview_url</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ steps.deploy.outputs.deployment-url }}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> taiki-e/install-action@v2</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          tool</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> zola@0.18.0</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm build</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> github.event.action != &#39;closed&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> deploy</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> rossjrw/pr-preview-action@v1</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          source-dir</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./themes/zola-monoplain/public</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          preview-branch</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> gh-pages</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          umbrella-dir</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pr-preview</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          action</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> auto</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Info</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;Preview URL: ${{ steps.deploy.outputs.deployment-url }}&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  lighthouse</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test PR</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    needs</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> deploy-preview</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> always()</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    timeout-minutes</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 5</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Audit URLs and validate Budget</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> treosh/lighthouse-ci-action@v11</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          urls</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ needs.deploy-preview.outputs.preview_url }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          budgetPath</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./budget.json</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          uploadArtifacts</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          runs</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 3</span></span></code></pre>
+<p>See: <a rel="external" href="https://github.com/marketplace/actions/deploy-pr-preview">https://github.com/marketplace/actions/deploy-pr-preview</a></p>
 <h3 id="checks">Checks</h3>
 <p>Use <em>check-format</em> to check the format of the code.</p>
 <p>Use <em>analyze-typescript</em> to analyze the TypeScript code.</p>
-<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Continuous Integration
-</span><span>
-</span><span style="color:#bd93f9;">on</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">pull_request</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">push</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">branches</span><span>:
-</span><span>      - </span><span style="color:#f1fa8c;">main
-</span><span>
-</span><span style="color:#ff79c6;">permissions</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">contents</span><span>: </span><span style="color:#f1fa8c;">read
-</span><span>
-</span><span style="color:#ff79c6;">jobs</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">check-format</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Check Format
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup Node.js
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">setup-node
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/setup-node@v4
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">node-version-file</span><span>: </span><span style="color:#f1fa8c;">package.json
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">pnpm/action-setup@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install pnpm
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">run_install</span><span>: </span><span style="color:#bd93f9;">false
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Get pnpm store directory
-</span><span>        </span><span style="color:#ff79c6;">shell</span><span>: </span><span style="color:#f1fa8c;">bash
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/cache@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup pnpm cache
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">${{ env.STORE_PATH }}
-</span><span>          </span><span style="color:#ff79c6;">key</span><span>: </span><span style="color:#f1fa8c;">${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}
-</span><span>          </span><span style="color:#ff79c6;">restore-keys</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">            ${{ runner.os }}-pnpm-store-
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install dependencies
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm install
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">format
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm format:check
-</span><span>
-</span><span>  </span><span style="color:#ff79c6;">analyze-typescript</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Analyze TypeScript
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">FTA Action
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">fta-action
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">exiguus/fta-github-action@v0.1.1
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">project_path</span><span>: </span><span style="color:#f1fa8c;">./
-</span><span>          </span><span style="color:#ff79c6;">config_path</span><span>: </span><span style="color:#f1fa8c;">fta.config.json
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Print Output Summary
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">output-summary
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">echo -e &quot;\nSummary:\n${{ steps.fta-action.outputs.summary }}&quot;
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Print Output Details
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">output-details
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">echo -e &quot;\nDetails:\n${{ steps.fta-action.outputs.details }}&quot;
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Upload Output Summary
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">upload-output
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v6
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">output
-</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">output.json
-</span></code></pre>
-<h3 id="lighthouse">Lighthouse</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Continuous Integration</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  pull_request</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  push</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    branches</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> main</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">permissions</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  contents</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> read</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  check-format</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Check Format</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> format</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm format:check</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  analyze-typescript</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Analyze TypeScript</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> FTA Action</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> fta-action</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> exiguus/fta-github-action@v0.1.1</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          project_path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          config_path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> fta.config.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Print Output Summary</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output-summary</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> echo -e &quot;\nSummary:\n${{ steps.fta-action.outputs.summary }}&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Print Output Details</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output-details</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> echo -e &quot;\nDetails:\n${{ steps.fta-action.outputs.details }}&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Upload Output Summary</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> upload-output</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/upload-artifact@v6</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output.json</span></span></code></pre><h3 id="lighthouse">Lighthouse</h3>
 <p>Use <em>lighthouse-action</em> to check the performance of the website.</p>
-<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Lighthouse
-</span><span style="color:#bd93f9;">on</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">workflow_run</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">workflows</span><span>: [</span><span style="color:#f1fa8c;">&quot;Deploy&quot;</span><span>]
-</span><span>    </span><span style="color:#ff79c6;">types</span><span>:
-</span><span>      - </span><span style="color:#f1fa8c;">completed
-</span><span>
-</span><span style="color:#ff79c6;">jobs</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">test_run</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Test run
-</span><span>    </span><span style="color:#ff79c6;">timeout-minutes</span><span>: </span><span style="color:#bd93f9;">15
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Audit URLs and validate Budget
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">treosh/lighthouse-ci-action@v11
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">urls</span><span>: </span><span style="color:#f1fa8c;">https://exiguus.github.io/zola-monoplain/
-</span><span>          </span><span style="color:#ff79c6;">budgetPath</span><span>: </span><span style="color:#f1fa8c;">./budget.json
-</span><span>          </span><span style="color:#ff79c6;">uploadArtifacts</span><span>: </span><span style="color:#bd93f9;">true
-</span><span>          </span><span style="color:#ff79c6;">runs</span><span>: </span><span style="color:#bd93f9;">3
-</span></code></pre>
-<h3 id="accessibility">Accessibility</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Lighthouse</span></span>
+<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  workflow_run</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    workflows</span><span style="color: #FF79C6;">:</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Deploy</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    types</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> completed</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  test_run</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test run</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    timeout-minutes</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 15</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Audit URLs and validate Budget</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> treosh/lighthouse-ci-action@v11</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          urls</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> https://exiguus.github.io/zola-monoplain/</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          budgetPath</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./budget.json</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          uploadArtifacts</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          runs</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 3</span></span></code></pre><h3 id="accessibility">Accessibility</h3>
 <p>Use <code>pa11y</code> to check the accessibility of the website.</p>
 <p>And validate against the <code>WCAG</code> standard.</p>
-<pre data-lang="yml" style="background-color:#282a36;color:#f8f8f2;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">e2e
-</span><span style="color:#bd93f9;">on</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">workflow_run</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">workflows</span><span>: [</span><span style="color:#f1fa8c;">&quot;Deploy&quot;</span><span>]
-</span><span>    </span><span style="color:#ff79c6;">types</span><span>:
-</span><span>      - </span><span style="color:#f1fa8c;">completed
-</span><span>
-</span><span style="color:#ff79c6;">jobs</span><span>:
-</span><span>  </span><span style="color:#ff79c6;">a11y</span><span>:
-</span><span>    </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">A11y
-</span><span>    </span><span style="color:#ff79c6;">timeout-minutes</span><span>: </span><span style="color:#bd93f9;">15
-</span><span>    </span><span style="color:#ff79c6;">runs-on</span><span>: </span><span style="color:#f1fa8c;">ubuntu-latest
-</span><span>    </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
-</span><span>
-</span><span>    </span><span style="color:#ff79c6;">steps</span><span>:
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Checkout
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">checkout
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/checkout@v4
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup Node.js
-</span><span>        </span><span style="color:#ff79c6;">id</span><span>: </span><span style="color:#f1fa8c;">setup-node
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/setup-node@v4
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">node-version-file</span><span>: </span><span style="color:#f1fa8c;">package.json
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">pnpm/action-setup@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install pnpm
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">run_install</span><span>: </span><span style="color:#bd93f9;">false
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Get pnpm store directory
-</span><span>        </span><span style="color:#ff79c6;">shell</span><span>: </span><span style="color:#f1fa8c;">bash
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/cache@v4
-</span><span>        </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Setup pnpm cache
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">${{ env.STORE_PATH }}
-</span><span>          </span><span style="color:#ff79c6;">key</span><span>: </span><span style="color:#f1fa8c;">${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}
-</span><span>          </span><span style="color:#ff79c6;">restore-keys</span><span>: </span><span style="color:#ff79c6;">|
-</span><span style="color:#f1fa8c;">            ${{ runner.os }}-pnpm-store-
-</span><span style="color:#f1fa8c;">
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Install dependencies
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">pnpm install &amp;&amp; pnpm test:setup
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Test Run
-</span><span>        </span><span style="color:#ff79c6;">run</span><span>: </span><span style="color:#f1fa8c;">cd themes/zola-monoplain &amp;&amp; node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
-</span><span>
-</span><span>      - </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">Upload Artifacts
-</span><span>        </span><span style="color:#ff79c6;">uses</span><span>: </span><span style="color:#f1fa8c;">actions/upload-artifact@v6
-</span><span>        </span><span style="color:#ff79c6;">if</span><span>: </span><span style="color:#f1fa8c;">always()
-</span><span>        </span><span style="color:#ff79c6;">with</span><span>:
-</span><span>          </span><span style="color:#ff79c6;">name</span><span>: </span><span style="color:#f1fa8c;">a11y-report
-</span><span>          </span><span style="color:#ff79c6;">path</span><span>: </span><span style="color:#f1fa8c;">themes/zola-monoplain/pa11y-report/**
-</span><span>          </span><span style="color:#ff79c6;">if-no-files-found</span><span>: </span><span style="color:#f1fa8c;">error
-</span><span>          </span><span style="color:#ff79c6;">retention-days</span><span>: </span><span style="color:#bd93f9;">7
-</span></code></pre>
-   <section aria-labelledby="latest-feedback">
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> e2e</span></span>
+<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  workflow_run</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    workflows</span><span style="color: #FF79C6;">:</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Deploy</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    types</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> completed</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">  a11y</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> A11y</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    timeout-minutes</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 15</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> always()</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
+<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install &amp;&amp; pnpm test:setup</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test Run</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> cd themes/zola-monoplain &amp;&amp; node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Upload Artifacts</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/upload-artifact@v6</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> always()</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> a11y-report</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> themes/zola-monoplain/pa11y-report/**</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          if-no-files-found</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> error</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">          retention-days</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 7</span></span></code></pre>   <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
@@ -628,8 +618,8 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
   height="720"
   alt="Open Graph Preview - 2025-05-03"
   title="Open Graph Preview - 2025-05-03"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eee77cf1bf79c382.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.c6be8221f3393acc.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.44c8e67b9df53264.webp 256w"
   class=""
   loading="lazy"
 />
@@ -655,8 +645,8 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
   height="1866"
   alt="Shortcodes - 2024-06-08"
   title="Shortcodes - 2024-06-08"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp"
-  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.dead7a4ee7d7de21.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.056da86c6a6b0c0b.webp 256w"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp"
+  srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.4baec50532018be8.webp 256w"
   class=""
   loading="lazy"
 />
@@ -862,7 +852,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-01-19 03:11:35 Europe&#x2F;Berlin</small
+      >2026-02-17 20:13:18 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>
