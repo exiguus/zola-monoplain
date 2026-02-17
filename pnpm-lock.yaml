@@ -48,8 +48,8 @@ importers:
   themes/zola-monoplain:
     dependencies:
       '@tabler/icons':
-        specifier: ^2.47.0
-        version: 2.47.0
+        specifier: ^3.36.1
+        version: 3.36.1
 
 packages:
 
@@ -210,8 +210,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@tabler/icons@2.47.0':
-    resolution: {integrity: sha512-4w5evLh+7FUUiA1GucvGj2ReX2TvOjEr4ejXdwL/bsjoSkof6r1gQmzqI+VHrE2CpJpB3al7bCTulOkFa/RcyA==}
+  '@tabler/icons@3.36.1':
+    resolution: {integrity: sha512-f4Jg3Fof/Vru5ioix/UO4GX+sdDsF9wQo47FbtvG+utIYYVQ/QVAC0QYgcBbAjQGfbdOh2CCf0BgiFOF9Ixtjw==}
 
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
@@ -1848,7 +1848,7 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  '@tabler/icons@2.47.0': {}
+  '@tabler/icons@3.36.1': {}
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
