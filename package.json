@@ -40,18 +40,18 @@
   },
   "homepage": "https://github.com/exiguus/zola-monoplain#readme",
   "devDependencies": {
-    "@commitlint/cli": "^20.4.1",
-    "@commitlint/config-conventional": "^20.4.1",
-    "@commitlint/prompt-cli": "^20.4.1",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@commitlint/prompt-cli": "^20.4.2",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "dprint": "^0.50.2",
     "fta-cli": "^2.0.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "pa11y": "^9.1.0",
-    "puppeteer": "^24.37.3",
+    "puppeteer": "^24.37.5",
     "standard-version": "^9.5.0",
-    "turbo": "^2.8.9"
+    "turbo": "^2.8.10"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
@@ -61,7 +61,7 @@
       "pnpm format:fix"
     ]
   },
-  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
+  "packageManager": "pnpm@10.30.1",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
@@ -74,7 +74,10 @@
     "onlyBuiltDependencies": [
       "dprint",
       "puppeteer"
-    ]
+    ],
+    "overrides": {
+      "minimatch@<10.2.1": ">=10.2.1"
+    }
   },
   "engines": {
     "pnpm": ">=10.0.0 <12.0.0",
