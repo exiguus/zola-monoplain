@@ -8,7 +8,7 @@ local_part = config.extra.feedback_email_address.local_part %} {% endif -%}
   <p>
     <a
       href="mailto:invalid\(local)\part@example\.org"
-      title="{{ trans(key="post_feedback_email_link_title") }}""
+      title="{{ trans(key='post_feedback_email_link_title') }}"
       data-obfuscated-email="&#x3C;{{local_part}}&#x40;&#8203;&#8203;{{config.extra.feedback_email_address.domain_name}}&#8203;&#x2E;&#8203;{{config.extra.feedback_email_address.tld}}&#x3E;"
     >
       &#x3C;&#8203;&#8203;&#8203;&#8203;{{local_part}}&#8203;&#8203;&#8203;&#x40;{{config.extra.feedback_email_address.domain_name}}&#8203;&#x2E;&#8203;&#8203;{{config.extra.feedback_email_address.tld}}&#8203;&#8203;&#8203;&#x3E;
