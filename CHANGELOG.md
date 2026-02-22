@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/gattner-name/pbl-frontend/compare/v1.3.0...v1.3.1) (2026-02-22)
+
+### Features
+
+- **feedback:** add feedback via email section in posts ([2564f94](https://github.com/gattner-name/pbl-frontend/commits/2564f9413c318df10952b012273b723f14f247c8))
+- **language:** add extra lang support for pages and posts ([a3f724e](https://github.com/gattner-name/pbl-frontend/commits/a3f724e8198046147820f73139b8b1ad4c42a1be))
+- **language:** use standard lang for html lang attr ([14b5444](https://github.com/gattner-name/pbl-frontend/commits/14b544409894068c334eeeec7741378e9e316576))
+
+### Bug Fixes
+
+- debug translation key ([fa9f4db](https://github.com/gattner-name/pbl-frontend/commits/fa9f4db5de27fc02dce584397b6e780e62f0f7f5))
+- **feedback:** email link markup ([bbce097](https://github.com/gattner-name/pbl-frontend/commits/bbce09753f5dca502de1cf9e5ab4bb60de50ad81))
+
 ## [1.3.0](https://github.com/gattner-name/pbl-frontend/compare/v1.2.1...v1.3.0) (2025-05-03)
 
 ### Features
