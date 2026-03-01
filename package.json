@@ -61,7 +61,7 @@
       "pnpm format:fix"
     ]
   },
-  "packageManager": "pnpm@10.30.1",
+  "packageManager": "pnpm@10.30.3",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
