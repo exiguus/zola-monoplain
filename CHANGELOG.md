@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/gattner-name/pbl-frontend/compare/v1.3.2...v1.4.0) (2026-03-01)
+
+### Bug Fixes
+
+- **format:** typography scss ([445b520](https://github.com/gattner-name/pbl-frontend/commits/445b520f77d7a761c94271e32322fa583e1393ab))
+
 ### [1.3.2](https://github.com/gattner-name/pbl-frontend/compare/v1.3.1...v1.3.2) (2026-03-01)
 
 ### [1.3.1](https://github.com/gattner-name/pbl-frontend/compare/v1.3.0...v1.3.1) (2026-02-22)
