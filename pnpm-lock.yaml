@@ -27,8 +27,8 @@ importers:
         specifier: ^0.50.2
         version: 0.50.2
       fta-cli:
-        specifier: ^2.0.2
-        version: 2.0.2
+        specifier: ^3.0.0
+        version: 3.0.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -733,8 +733,8 @@ packages:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
     engines: {node: '>=10'}
 
-  fta-cli@2.0.2:
-    resolution: {integrity: sha512-m4eZbHGpIquFUxPbOxoHXG6Sjv/OjNPD5aMxSGYNIBfnAs8qqdLmplzw+WfWm/LwpK2ionBBGISTNFmLdyKfcQ==}
+  fta-cli@3.0.0:
+    resolution: {integrity: sha512-SBmoqIwbN7PLDmwmrPgjr6Z6/S9jPhNz5TCPmEVFkIaeloc/T2WXLeeXqhG1+C0UQxpOfGrC7CUb4friqbc2kQ==}
     hasBin: true
 
   function-bind@1.1.2:
@@ -2376,7 +2376,7 @@ snapshots:
       locate-path: 6.0.0
       path-exists: 4.0.0
 
-  fta-cli@2.0.2: {}
+  fta-cli@3.0.0: {}
 
   function-bind@1.1.2: {}
 

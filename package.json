@@ -45,7 +45,7 @@
     "@commitlint/prompt-cli": "^20.4.2",
     "conventional-changelog-conventionalcommits": "^9.2.0",
     "dprint": "^0.50.2",
-    "fta-cli": "^2.0.2",
+    "fta-cli": "^3.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.3.1",
     "pa11y": "^9.1.1",
