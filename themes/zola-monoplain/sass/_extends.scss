@@ -72,10 +72,12 @@
   background: inherit !important;
 
   @media (prefers-color-scheme: dark) {
+    color: currentColor !important;
     filter: brightness(0.999) !important;
     box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem !important;
   }
   @media (prefers-color-scheme: light) {
+    color: currentColor !important;
     filter: brightness(0.666) !important;
     box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem !important;
   }
