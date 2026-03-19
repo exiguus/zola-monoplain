@@ -31,6 +31,7 @@
       "dependsOn": ["^check", "build"]
     },
     "lint": {
+      "persistent": true,
       "dependsOn": ["^lint"],
       "inputs": [
         "*.tsx",
@@ -52,6 +53,7 @@
       ]
     },
     "format": {
+      "persistent": true,
       "dependsOn": ["^format"],
       "inputs": [
         "*.tsx",
