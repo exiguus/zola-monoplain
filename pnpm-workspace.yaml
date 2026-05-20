@@ -2,3 +2,11 @@ packages:
   - "packages/*"
   - "themes/*"
   - "themes/**/content/**/examples/*"
+
+minimumReleaseAge: 10080
+
+blockExoticSubdeps: true
+
+trustPolicy: "no-downgrade"
+
+strictDepBuilds: true
