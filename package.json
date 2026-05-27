@@ -49,9 +49,9 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "pa11y": "^9.1.1",
-    "puppeteer": "^24.42.0",
+    "puppeteer": "^24.43.1",
     "standard-version": "^9.5.0",
-    "turbo": "^2.9.12"
+    "turbo": "^2.9.14"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
@@ -61,24 +61,7 @@
       "pnpm format:fix"
     ]
   },
-  "packageManager": "pnpm@10.32.1",
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "react": ">=18.0.0 <19.0.0",
-        "react-dom": ">=18.0.0 <19.0.0",
-        "react-refresh": ">=0.8.3 <1.0.0",
-        "typescript": ">=5 <6"
-      }
-    },
-    "onlyBuiltDependencies": [
-      "dprint",
-      "puppeteer"
-    ],
-    "overrides": {
-      "minimatch@<10.2.1": ">=10.2.1"
-    }
-  },
+  "packageManager": "pnpm@11.2.1",
   "engines": {
     "pnpm": ">=10.0.0 <12.0.0",
     "npm": ">=10.0.0 <13.0.0",
