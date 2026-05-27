@@ -9,7 +9,7 @@ runs:
   steps:
     - name: Install dependencies
       shell: bash
-      run: CI=true PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public" pnpm install && pnpm test:setup
+      run: CI=true PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public" pnpm ci && pnpm test:setup
 
     - name: Test Run
       shell: bash

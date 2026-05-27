@@ -103,7 +103,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm ci
 
       - name: Build
         run: pnpm build
@@ -175,7 +175,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm ci
 
       - name: Build
         run: pnpm build
@@ -267,7 +267,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm ci
 
       - name: format
         run: pnpm format:check
@@ -384,7 +384,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install && pnpm test:setup
+        run: pnpm ci && pnpm test:setup
 
       - name: Test Run
         run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/
