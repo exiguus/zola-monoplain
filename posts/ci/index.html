@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-05-27T22:37:12.116933266+00:00" />
+<meta name="build" content="2026-05-27T22:50:11.564561218+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continous Integration"
@@ -275,7 +275,7 @@ accessible" />
 <span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build</span></span>
 <span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm build</span></span>
@@ -341,7 +341,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 <span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build</span></span>
 <span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm build</span></span>
@@ -426,7 +426,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 <span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> format</span></span>
 <span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm format:check</span></span>
@@ -530,7 +530,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
 <span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm install &amp;&amp; pnpm test:setup</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci &amp;&amp; pnpm test:setup</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test Run</span></span>
 <span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> cd themes/zola-monoplain &amp;&amp; node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/</span></span>
@@ -852,7 +852,7 @@ Test the website with <em>lighthouse-ci-action</em>.</p>
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-05-28 00:37:12 Europe&#x2F;Berlin</small
+      >2026-05-28 00:50:11 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>
