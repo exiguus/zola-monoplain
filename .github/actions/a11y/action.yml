@@ -9,7 +9,7 @@ runs:
   steps:
     - name: Install dependencies
       shell: bash
-      run: pnpm install && pnpm test:setup
+      run: CI=true PUPPETEER_SKIP_DOWNLOAD=true pnpm install && pnpm test:setup
 
     - name: Test Run
       shell: bash

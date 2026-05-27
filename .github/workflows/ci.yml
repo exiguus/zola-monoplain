@@ -24,7 +24,7 @@ jobs:
           node-version-file: package.json
 
       - name: Install dependencies
-        run: pnpm install
+        run: CI=true PUPPETEER_SKIP_DOWNLOAD=true pnpm install
 
       - name: format
         run: pnpm format:check
