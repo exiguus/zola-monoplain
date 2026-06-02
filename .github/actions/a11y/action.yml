@@ -10,7 +10,7 @@ runs:
     - name: Install dependencies
       shell: bash
       # pnpm store verify workaround 'NODE_OPTIONS=--max-old-space-size=4096'
-      run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 pnpm ci && pnpm test:setup
+      run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 PUPPETEER_SKIP_DOWNLOAD=1 pnpm ci && PUPPETEER_SKIP_DOWNLOAD=0 PUPPETEER_CACHE_DIR=$STORE_PATH/puppeteer pnpm test:setup
 
     - name: Test Run
       shell: bash
