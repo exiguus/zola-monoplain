@@ -9,7 +9,8 @@ runs:
   steps:
     - name: Install dependencies
       shell: bash
-      run: CI=true PUPPETEER_DOWNLOAD_BASE_URL="https://storage.googleapis.com/chrome-for-testing-public" pnpm ci && pnpm test:setup
+      # pnpm store verify workaround 'NODE_OPTIONS=--max-old-space-size=4096'
+      run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 pnpm ci && pnpm test:setup
 
     - name: Test Run
       shell: bash

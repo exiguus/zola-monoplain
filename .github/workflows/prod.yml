@@ -24,7 +24,8 @@ jobs:
           node-version-file: package.json
 
       - name: Install dependencies
-        run: CI=true PUPPETEER_SKIP_DOWNLOAD=true pnpm ci
+        # pnpm store verify workaround 'NODE_OPTIONS=--max-old-space-size=4096'
+        run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 PUPPETEER_SKIP_DOWNLOAD=1 pnpm ci
 
       - name: Build
         run: pnpm build
