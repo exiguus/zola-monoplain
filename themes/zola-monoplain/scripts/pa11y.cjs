@@ -149,8 +149,10 @@ Promise.all(
 async function run(url) {
   try {
     console.info(`Start test ${url}`);
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
     const browser = await puppeteer.launch({
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      executablePath,
     });
     const result = await Promise.race([
       pa11y(url, {

@@ -15,8 +15,6 @@ jobs:
 
       - name: Common Setup
         uses: ./.github/actions/common-setup
-        with:
-          node-version-file: package.json
 
       - name: Audit URLs and validate Budget
         uses: treosh/lighthouse-ci-action@v12

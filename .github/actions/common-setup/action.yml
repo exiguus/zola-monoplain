@@ -3,6 +3,12 @@ description: |
   This workflow sets up the environment for other workflows.
   It installs Node.js, pnpm, and sets up the pnpm cache.
 
+inputs:
+  node-version-file:
+    description: Path to the Node.js version file
+    required: false
+    default: package.json
+
 runs:
   using: composite
   steps:

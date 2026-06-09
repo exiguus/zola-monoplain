@@ -20,8 +20,6 @@ jobs:
 
       - name: Common Setup
         uses: ./.github/actions/common-setup
-        with:
-          node-version-file: package.json
 
       - name: Install dependencies
         # pnpm store verify workaround 'NODE_OPTIONS=--max-old-space-size=4096'
@@ -40,8 +38,6 @@ jobs:
 
       - name: Common Setup
         uses: ./.github/actions/common-setup
-        with:
-          node-version-file: package.json
 
       - name: FTA Action
         id: fta-action

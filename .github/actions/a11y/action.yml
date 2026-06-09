@@ -4,17 +4,59 @@ description: |
   It installs dependencies, sets up the environment, and runs the tests.
   After the test it uploads the report as an artifact.
 
+inputs:
+  url:
+    description: URL to test with Pa11y
+    required: false
+    default: https://exiguus.github.io/zola-monoplain/
+
 runs:
   using: composite
   steps:
     - name: Install dependencies
       shell: bash
       # pnpm store verify workaround 'NODE_OPTIONS=--max-old-space-size=4096'
-      run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 PUPPETEER_SKIP_DOWNLOAD=1 pnpm ci && PUPPETEER_SKIP_DOWNLOAD=0 PUPPETEER_CACHE_DIR=$STORE_PATH/puppeteer pnpm test:setup
+      run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 PUPPETEER_SKIP_DOWNLOAD=1 pnpm ci
+
+    - name: Resolve Chrome for Puppeteer
+      shell: bash
+      run: |
+        chrome_path=""
+        if command -v google-chrome-stable >/dev/null 2>&1; then
+          chrome_path="$(command -v google-chrome-stable)"
+        elif command -v google-chrome >/dev/null 2>&1; then
+          chrome_path="$(command -v google-chrome)"
+        elif command -v chromium-browser >/dev/null 2>&1; then
+          chrome_path="$(command -v chromium-browser)"
+        elif command -v chromium >/dev/null 2>&1; then
+          chrome_path="$(command -v chromium)"
+        fi
+
+        if [[ -n "$chrome_path" ]]; then
+          echo "Using system Chrome at: $chrome_path"
+          echo "PUPPETEER_EXECUTABLE_PATH=$chrome_path" >> "$GITHUB_ENV"
+          exit 0
+        fi
+
+        # Fallback for environments without a system Chrome.
+        cache_dir="$STORE_PATH/puppeteer"
+        rm -rf "$cache_dir"
+        PUPPETEER_SKIP_DOWNLOAD=0 pnpm exec puppeteer browsers install chrome --path "$cache_dir"
+        echo "PUPPETEER_CACHE_DIR=$cache_dir" >> "$GITHUB_ENV"
+        executable_path=$(PUPPETEER_CACHE_DIR="$cache_dir" node -e 'const puppeteer=require("puppeteer"); process.stdout.write(puppeteer.executablePath());')
+        if [[ ! -e "$executable_path" ]]; then
+          echo "Computed executable path was not found: $executable_path"
+          echo "Installed browser files in $cache_dir:"
+          find "$cache_dir" -maxdepth 5 -type f | head -n 200
+          exit 1
+        fi
+        echo "PUPPETEER_EXECUTABLE_PATH=$executable_path" >> "$GITHUB_ENV"
 
     - name: Test Run
       shell: bash
-      run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs ${{ inputs.url }}
+      env:
+        TARGET_URL: ${{ inputs.url || env.A11Y_URL || 'https://exiguus.github.io/zola-monoplain/' }}
+      run: cd themes/zola-monoplain && node ./scripts/pa11y.cjs "$TARGET_URL"
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v7

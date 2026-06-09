@@ -50,8 +50,6 @@ jobs:
 
       - name: Common Setup
         uses: ./.github/actions/common-setup
-        with:
-          node-version-file: package.json
 
       - name: Audit URLs and validate Budget
         uses: treosh/lighthouse-ci-action@v12
@@ -73,10 +71,8 @@ jobs:
 
       - name: Common Setup
         uses: ./.github/actions/common-setup
-        with:
-          node-version-file: package.json
 
       - name: A11 Test
         uses: ./.github/actions/a11y
-        with:
-          url: https://exiguus.github.io/zola-monoplain/
+        env:
+          A11Y_URL: https://exiguus.github.io/zola-monoplain/
