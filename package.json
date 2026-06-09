@@ -61,7 +61,7 @@
       "pnpm format:fix"
     ]
   },
-  "packageManager": "pnpm@11.2.1",
+  "packageManager": "pnpm@11.5.1",
   "engines": {
     "pnpm": ">=10.0.0 <12.0.0",
     "npm": ">=10.0.0 <13.0.0",
