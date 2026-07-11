@@ -13,4 +13,6 @@ img {
   width: map.get($thumbnail, "small");
   height: map.get($thumbnail, "small");
   overflow: hidden;
+  border: 2px solid currentColor;
+  background-color: currentColor;
 }
