@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-11T21:27:55.278319540+00:00" />
+<meta name="build" content="2026-07-11T23:30:49.811673469+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Shortcodes"
@@ -93,6 +93,9 @@ accessible" />
             <li>
               <a href="#spotify">Spotify</a>
               </li>
+            <li>
+              <a href="#email">Email</a>
+              </li>
             </ul>
           </li>
         <li>
@@ -149,7 +152,7 @@ accessible" />
   </p>
   <p>
     Updated:
-    <date>2026-07-11</date>
+    <date>2026-07-12</date>
   </p>
    <nav aria-labelledby="toc">
   <details aria-labelledby="toc" open="true">
@@ -193,6 +196,11 @@ accessible" />
           
           <li>
             <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#spotify">Spotify</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#email">Email</a>
             
           </li>
           
@@ -347,22 +355,31 @@ accessible" />
   </iframe>
 </figure>
 <p>Shortcodes normally start and end with <code>{{</code> and <code>}}</code>. In code examples they are escaped as <code>\{\{</code> and <code>\}\}</code> so they are shown as text instead of being executed.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> spotify(id=&quot;6rqhFgbbKwnb9MLmUQDhG6&quot;, title=&quot;album&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre><h2 id="conclusion">Conclusion</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> spotify(id=&quot;6rqhFgbbKwnb9MLmUQDhG6&quot;, title=&quot;album&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre><h3 id="email">Email</h3>
+<p>The <code>email</code> shortcode renders an obfuscated mail link and reuses the same logic as the feedback component.</p>
+<p>The <code>local_part</code>, <code>domain_name</code>, and <code>tld</code> parameters are required. Only <code>title</code> is optional.</p>
+<p>Example:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> email(local_part=&quot;hello&quot;, domain_name=&quot;example&quot;, tld=&quot;org&quot;, title=&quot;Reveal email address&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre>
+<p>Without an explicit <code>title</code>, the shortcode uses <code>post_feedback_email_link_title</code> from <code>translations</code>.</p>
+<p>The rendered output keeps the address obfuscated in source and reveals it through the existing JavaScript behavior.</p>
+<h2 id="conclusion">Conclusion</h2>
 <p>Shortcodes are a powerful Zola feature for embedding richer content in Markdown. They are easy to use and help keep posts expressive without leaving the Markdown workflow.</p>
    <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
-    <a
-      href="mailto:invalid\(local)\part@example\.org"
-      title="This email address has been obscured for security. Please click the link to reveal the actual address."
-      data-obfuscated-email="&#x3C;shortcodes.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
-    >
-      &#x3C;&#8203;&#8203;&#8203;&#8203;shortcodes.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
-    </a>
+    
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="This email address has been obscured for security. Please click the link to reveal the actual address."
+  
+  data-obfuscated-email="&#x3C;shortcodes.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;shortcodes.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+</a>
+
   </p>
 </section>
-
 <section aria-labelledby="tags">
   <h1 id="tags">Tags</h1>
   <ul aria-labelledby="tags">
@@ -638,7 +655,7 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-11 23:27:55 Europe&#x2F;Berlin</small
+      >2026-07-12 01:30:49 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>

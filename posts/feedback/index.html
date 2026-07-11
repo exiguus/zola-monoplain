@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-11T21:27:55.278319540+00:00" />
+<meta name="build" content="2026-07-11T23:30:49.811673469+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Feedback"
@@ -78,6 +78,9 @@ accessible" />
         <li>
           <a href="#example">Example</a>
           </li>
+        <li>
+          <a href="#template-macro">Template Macro</a>
+          </li>
         </ul>
     </li>
     <li><a href="#main-nav">Skip to navigation</a></li>
@@ -129,7 +132,7 @@ accessible" />
   </p>
   <p>
     Updated:
-    <date>2026-07-11</date>
+    <date>2026-07-12</date>
   </p>
    <nav aria-labelledby="toc">
   <details aria-labelledby="toc" open="true">
@@ -148,6 +151,11 @@ accessible" />
       
       <li>
         <a href="https://exiguus.github.io/zola-monoplain/posts/feedback/#example">Example</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/feedback/#template-macro">Template Macro</a>
         
       </li>
       
@@ -187,20 +195,31 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
 <p>This will result in the email address <code>feedback.blog-post@example.org</code> for the current page.</p>
 <h2 id="example">Example</h2>
 <p>See next section for an example of the feedback email link in action.</p>
+<h2 id="template-macro">Template Macro</h2>
+<p>The feedback component now uses a reusable Tera macro called <code>obfuscate_mail</code> from <code>templates/macros/email.html</code>.</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>\{\{ email::obfuscate_mail(</span></span>
+<span class="giallo-l"><span>  local_part=local_part,</span></span>
+<span class="giallo-l"><span>  domain_name=config.extra.feedback_email_address.domain_name,</span></span>
+<span class="giallo-l"><span>  tld=config.extra.feedback_email_address.tld,</span></span>
+<span class="giallo-l"><span>  title=trans(key=&quot;post_feedback_email_link_title&quot;)</span></span>
+<span class="giallo-l"><span>) \}\}</span></span></code></pre>
+<p>This keeps the obfuscation logic in one place and makes reuse in other templates easier.</p>
    <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
-    <a
-      href="mailto:invalid\(local)\part@example\.org"
-      title="This email address has been obscured for security. Please click the link to reveal the actual address."
-      data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
-    >
-      &#x3C;&#8203;&#8203;&#8203;&#8203;feedback.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
-    </a>
+    
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="This email address has been obscured for security. Please click the link to reveal the actual address."
+  
+  data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;feedback.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+</a>
+
   </p>
 </section>
-
 <section aria-labelledby="tags">
   <h1 id="tags">Tags</h1>
   <ul aria-labelledby="tags">
@@ -494,7 +513,7 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-11 23:27:55 Europe&#x2F;Berlin</small
+      >2026-07-12 01:30:49 Europe&#x2F;Berlin</small
     >
   </p>
 </footer>
