@@ -136,7 +136,7 @@ body {
 
     article {
       margin-bottom: 3rem;
-      & > hgroup {
+      & > header {
         display: flex;
         flex-direction: column;
         gap: 0.25em;
@@ -168,6 +168,16 @@ body {
       padding: 1rem;
       width: 100%;
       box-sizing: border-box;
+    }
+
+    & > header {
+      & > figure {
+        margin: 0 -1rem 1rem -1rem;
+
+        > figcaption {
+          @extend %sr-only;
+        }
+      }
     }
 
     .footnote-definition {

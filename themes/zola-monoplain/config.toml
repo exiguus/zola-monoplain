@@ -81,6 +81,7 @@ post_feedback_email_link_title = "This email address has been obscured for secur
 post_feedback_email_text = "Have thoughts or experiences you'd like to share? I'd love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let's start a conversation."
 post_feedback_email_title = "Feedback"
 post_summary_desc = "Post summary"
+post_hero_copy = "Picture by"
 search_form_clear = "Clear"
 search_form_input_label = "Text to search"
 search_form_input_placeholder = "Search ↵"
