@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/gattner-name/pbl-frontend/compare/v1.4.0...v1.5.0) (2026-07-11)
+
+### Features
+
+- **images:** adjust for better thumbnail visibility ([e29e868](https://github.com/gattner-name/pbl-frontend/commits/e29e86873e12559387370203ad56538e165c7a7d))
+- **images:** show latest images section only if images exist on landingpage ([cf623d0](https://github.com/gattner-name/pbl-frontend/commits/cf623d0aab168afd8a2fccbdcaaf4264383933c3))
+- **posts:** show latest posts section only if posts exist on landingpage ([3a27ea7](https://github.com/gattner-name/pbl-frontend/commits/3a27ea7bfc3e0b181f61c440500c4b17f2eecc09))
+
+### Bug Fixes
+
+- **highlight:** use current color ([72d7c1e](https://github.com/gattner-name/pbl-frontend/commits/72d7c1e05fc763b5e071831a57b806a9c8650f88))
+
 ## [1.4.0](https://github.com/gattner-name/pbl-frontend/compare/v1.3.2...v1.4.0) (2026-03-01)
 
 ### Bug Fixes
