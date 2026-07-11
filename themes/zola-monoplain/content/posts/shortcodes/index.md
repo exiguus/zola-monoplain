@@ -2,7 +2,7 @@
 title = "Shortcodes"
 description = "Shortcodes by example"
 date = 2024-06-08
-updated = 2026-07-11
+updated = 2026-07-12
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Theme", "Markdown", "Shortcodes"]
@@ -128,6 +128,22 @@ Shortcodes normally start and end with `{{` and `}}`. In code examples they are 
 ```md
 \{\{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") \}\}
 ```
+
+### Email
+
+The `email` shortcode renders an obfuscated mail link and reuses the same logic as the feedback component.
+
+The `local_part`, `domain_name`, and `tld` parameters are required. Only `title` is optional.
+
+Example:
+
+```md
+\{\{ email(local_part="hello", domain_name="example", tld="org", title="Reveal email address") \}\}
+```
+
+Without an explicit `title`, the shortcode uses `post_feedback_email_link_title` from `translations`.
+
+The rendered output keeps the address obfuscated in source and reveals it through the existing JavaScript behavior.
 
 ## Conclusion
 

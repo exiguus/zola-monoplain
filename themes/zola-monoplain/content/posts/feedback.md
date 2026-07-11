@@ -2,7 +2,7 @@
 title = "Feedback"
 description = "Feedback Email for mono/plain theme"
 date = 2025-06-17
-updated = 2026-07-11
+updated = 2026-07-12
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Feedback", "E-Mail", "Zola", "Theme", "Markdown", "SSG", "Static Site Generator"]
@@ -52,3 +52,18 @@ This will result in the email address `feedback.blog-post@example.org` for the c
 ## Example
 
 See next section for an example of the feedback email link in action.
+
+## Template Macro
+
+The feedback component now uses a reusable Tera macro called `obfuscate_mail` from `templates/macros/email.html`.
+
+```tera
+\{\{ email::obfuscate_mail(
+  local_part=local_part,
+  domain_name=config.extra.feedback_email_address.domain_name,
+  tld=config.extra.feedback_email_address.tld,
+  title=trans(key="post_feedback_email_link_title")
+) \}\}
+```
+
+This keeps the obfuscation logic in one place and makes reuse in other templates easier.

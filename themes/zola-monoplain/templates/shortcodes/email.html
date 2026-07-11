@@ -1,0 +1,4 @@
+{% import "macros/email.html" as email -%} {% set resolved_title = title |
+default(value=trans(key='post_feedback_email_link_title')) -%} {{
+email::obfuscate_mail( local_part=local_part, domain_name=domain_name, tld=tld,
+title=resolved_title ) }}
