@@ -5,4 +5,4 @@ template = "posts.html"
 page_template = "post.html"
 +++
 
-Here are some example posts. The posts are grouped by year.
+Here are example posts grouped by year.

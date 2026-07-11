@@ -2,6 +2,7 @@
 title = "Emojis"
 description = "Emoji by example"
 date = 2024-06-07
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Theme", "Markdown", "Emojis"]
@@ -9,9 +10,9 @@ tags= ["Zola", "Theme", "Markdown", "Emojis"]
 
 ## Introduction
 
-Zola supports emojis out of the box. You can use emojis in your markdown files like you would use them in any other text file. Just type the emoji you want to use and Zola will render it for you.
+Zola supports emojis out of the box. You can use emojis in your Markdown files just like in any other text file.
 
-Or use the the github emoji syntax `:smile:` to render the emoji 😄.
+You can also use GitHub-style emoji syntax like `:smile:` to render 😄.
 
 ## Configuration
 
@@ -20,11 +21,11 @@ Or use the the github emoji syntax `:smile:` to render the emoji 😄.
 render_emoji = true
 ```
 
-should be set in your `config.toml` file.
+Set this option in your `config.toml` file.
 
 ## Implementation
 
-Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/gemoji>). You can find a list of all supported emojis [here](https://github.com/github/gemoji/blob/master/db/emoji.json).
+Zola uses the [`gh-emoji` crate](https://github.com/github/gemoji) to render emojis. You can find the [gemoji emoji dataset](https://github.com/github/gemoji/blob/master/db/emoji.json) for the full supported list.
 
 ## Emojis
 
@@ -31886,7 +31887,7 @@ Zola use the `gh-emoji` crate to render the emojis (<https://github.com/github/g
 
 :hash: `:hash:`
 ') }}
-{{ markdown(title="_️⃣ keycap: _" type="markdown", code='
+{{ markdown(title="_️⃣ keycap:_" type="markdown", code='
 
 <!--
 # *️⃣ keycap: *

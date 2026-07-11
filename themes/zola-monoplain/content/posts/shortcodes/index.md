@@ -2,6 +2,7 @@
 title = "Shortcodes"
 description = "Shortcodes by example"
 date = 2024-06-08
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Theme", "Markdown", "Shortcodes"]
@@ -12,7 +13,7 @@ preview_img = "example-image.jpg"
 
 ## Introduction
 
-Shortcodes are a way to embed additional content in your Markdown files. They are a powerful feature of Zola and can be used to embed content like images, videos, or other HTML elements. In this post, I will show you how to use shortcodes in Zola.
+Shortcodes let you embed dynamic content in Markdown files. In this post, you will learn how to use the shortcodes provided by this theme.
 
 ## Shortcodes
 
@@ -22,18 +23,18 @@ The `image` shortcode can be used to embed images in your Markdown files. This c
 
 {{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") }}
 
-Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
 
 ```md
 \{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") \}\}
 ```
 
-The `path` parameter specifies the path to the image file, the `src` parameter specifies the filename of the image, and the `alt` parameter specifies the alt text for the image.
+The `src` parameter specifies the image filename (resolved relative to the page context), and the `alt` parameter specifies the alt text for the image.
 
 {{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) }}
 
 ```md
-\{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=300) \}\}
+\{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) \}\}
 ```
 
 The `width` and `height` parameters can be used to specify the size of the image. The `width` and `height` parameters are optional and can be omitted if you want to use the original size of the image.
@@ -44,7 +45,7 @@ The `details` shortcode can be used to create a collapsible section in your Mark
 
 {{ details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) }}
 
-Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
 
 ```md
 \{\{ details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) \}\}
@@ -52,7 +53,7 @@ Please note that the shortcode normale start and end with `{{` and `}}`. But in 
 
 ### Markdown
 
-The `markdown` shortcode can be used to render Code within your Markdown files. This can be usefull to embed Code examples and the Source of the examples. Here is an example that render a HTML form and the Source.
+The `markdown` shortcode can render code examples and their output in the same post. Here is an example that renders an HTML form and its source.
 
 {{ markdown(title="input attr type is number and attr step is 1" type="html", code='
 
@@ -69,7 +70,7 @@ The `markdown` shortcode can be used to render Code within your Markdown files. 
   </script>
 ') }}
 
-Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
 
 ```md
 \{\{ markdown(title="input attr type is number and attr step is 1" type="html", code='
@@ -94,7 +95,7 @@ The `icon` shortcode can be used to embed icons in your Markdown files. This can
 
 {{ icon(name="activity") }}
 
-Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
 
 ```md
 \{\{ icon(name="activity",size=32) \}\}
@@ -110,7 +111,7 @@ The `youtube` shortcode can be used to embed YouTube videos in your Markdown fil
 
 {{ youtube(id="Pb4Naef8pc8", title="loop") }}
 
-Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
 
 ```md
 \{\{ youtube(id="Pb4Naef8pc8", title="loop") \}\}
@@ -122,7 +123,7 @@ The `spotify` shortcode can be used to embed Spotify playlists in your Markdown 
 
 {{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") }}
 
-Please note that the shortcode normale start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
 
 ```md
 \{\{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") \}\}
@@ -130,4 +131,4 @@ Please note that the shortcode normale start and end with `{{` and `}}`. But in 
 
 ## Conclusion
 
-Shortcodes are a powerful feature of Zola that can be used to embed additional content in your Markdown files. They are easy to use and can help you create more dynamic and interactive posts. I hope this post has given you a good overview of how to use shortcodes in Zola. If you have any questions or need further assistance, feel free to leave a comment below. Happy coding!
+Shortcodes are a powerful Zola feature for embedding richer content in Markdown. They are easy to use and help keep posts expressive without leaving the Markdown workflow.

@@ -1,7 +1,8 @@
 +++
 title = "Feedback"
-description = "Feedback E-Mail for Monoplain Theme"
+description = "Feedback Email for mono/plain theme"
 date = 2025-06-17
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Feedback", "E-Mail", "Zola", "Theme", "Markdown", "SSG", "Static Site Generator"]
@@ -9,15 +10,15 @@ tags= ["Feedback", "E-Mail", "Zola", "Theme", "Markdown", "SSG", "Static Site Ge
 
 ## Introduction
 
-This is the feedback page for the Monoplain Theme. If you have any feedback, suggestions, or issues with the theme, please feel free to reach out.
+This post explains the feedback email feature in the mono/plain theme.
 
-> Ok this is not a real feedback page, but it reviews the feedback E-Mail address feature of the Monoplain Theme.
+> This is not a live feedback form. It documents how the feedback email setup works.
 
-Why? Because Feedback is important! And the Monoplain Theme has no comment section yet, so the only way to give feedback is via E-Mail.
+Feedback matters. Since the theme currently has no built-in comment section, email is the default feedback channel.
 
 ## Configuration
 
-You can configure the feedback E-Mail address in the `config.toml` file of your Zola site. The following configuration options are available:
+You can configure the feedback email address in your site `config.toml`. The following options are available:
 
 ```yaml
 [translations]
@@ -33,8 +34,8 @@ feedback_email_address_wildcard = true
 feedback_email_address_wildcard_postfix = ".monoplain"
 ```
 
-By default the feedback email is enabled for all posts.
-You can disable it for specific posts by setting `feedback_email_enabled = false` in the post's front matter.
+By default the feedback email block is controlled globally via `config.extra.feedback_email_enabled`.
+Per-post toggling is not implemented in the current templates.
 You can also customize the text and title of the feedback email link by modifying the `translations` section in your `config.toml` file.
 There is also a `feedback_email_address_wildcard` option that allows you to use a wildcard for the email address. This is useful if you want to use a different email address for each post. And you can set a postfix for the email address with `feedback_email_address_wildcard_postfix`.
 

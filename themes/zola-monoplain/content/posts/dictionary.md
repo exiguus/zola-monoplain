@@ -2,6 +2,7 @@
 title = "Dictionary"
 description = "Dictionary by Example"
 date = 2024-06-09
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Markdown", "Translations", "Languages", "Dictionary"]
@@ -9,13 +10,13 @@ tags= ["Zola", "Markdown", "Translations", "Languages", "Dictionary"]
 
 ## Introduction
 
-The theme use Zola `[translations]` as _Dictionary_ and to translate the content of the website. The translations are defined in the `config.toml` file. You can specify the default language and add translations for each language you want to support.
+This theme uses Zola `[translations]` as a dictionary for UI text. The translations are defined in `config.toml`. You can set a default language and add translations for each language you want to support.
 
 The [Zola Multilingual sites](https://www.getzola.org/documentation/content/multilingual/) provide more information about how to create multilingual sites with Zola.
 
 ## Translations
 
-The search Page for example has the following translations defined in the `config.toml` file:
+The search page, for example, has the following translations defined in `config.toml`:
 
 ```toml
 [translations]
@@ -26,7 +27,7 @@ search_form_submit = "Search"
 search_form_clear = "Clear"
 ```
 
-Its possible to change the translations for the search page by adding the following translations to the `config.toml` file:
+It is possible to override the search page translations by adding the following values to `config.toml`:
 
 ```toml
 [translations]
@@ -35,7 +36,7 @@ search_form_legend = "The Search"
 
 ## Languages
 
-To change translations for other languages as the default (en), you can add the translations to the `config.toml` file. The translations are used in the templates with the `trans` function. The `trans` function takes the key of the translation as an argument and returns the translation for the current language.
+To define translations for languages other than the default (`en`), add language-specific translations in `config.toml`. Templates resolve these values with the `trans` function.
 
 ```toml
 [language.de.translations]
@@ -60,4 +61,4 @@ lang = "de"
 +++
 ```
 
-The `extra.lang` field is used to set the language for the main content of the page or post. Also, it adds a `lang` attribute to posts and gallery items link the the page.
+The `extra.lang` field sets the language for the main content of a page or post. It also adds a `lang` attribute to post and gallery output that links to the page.
