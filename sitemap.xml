@@ -32,39 +32,43 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/ci/</loc>
-        <lastmod>2024-06-15</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/dictionary/</loc>
-        <lastmod>2024-06-09</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/emojis/</loc>
-        <lastmod>2024-06-07</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/feedback/</loc>
-        <lastmod>2025-06-17</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/icons/</loc>
-        <lastmod>2024-06-09</lastmod>
+        <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/posts/images/</loc>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/markdown/</loc>
-        <lastmod>2025-06-07</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/opengraph/</loc>
-        <lastmod>2025-05-03</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/shortcodes/</loc>
-        <lastmod>2024-06-08</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/themes/</loc>
-        <lastmod>2024-06-09</lastmod>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/search/</loc>
@@ -79,7 +83,7 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/ci/</loc>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/tags/continous-integration/</loc>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/continuous-integration/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/deployment/</loc>
@@ -106,6 +110,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/icons/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/images/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/languages/</loc>
     </url>
     <url>
@@ -125,6 +132,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/static-site-generator/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/templates/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/theme/</loc>
