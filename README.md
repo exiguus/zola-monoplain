@@ -8,7 +8,7 @@
 
 > Design should never say, 'Look at me.' It should always say, 'Look at this.' - David Craib
 
-This Theme is designed to:
+This theme is designed to:
 
 - Be fast
 - Be accessible
@@ -32,8 +32,8 @@ This Theme is designed to:
 
 ---
 
-- not load external resources (like fonts, js, styles)
-- focus on the content and the user experience
+- Not load external resources (like fonts, JS, and styles)
+- Focus on content and user experience
 
 ## Changelog
 
@@ -41,13 +41,13 @@ For latest changes please see the [changelog](CHANGELOG.md).
 
 ## Features
 
-- [x] Responsive, adoptive Design
+- [x] Responsive, adaptive design
   - [x] Responsive images
-  - [x] Adoptive Font
+  - [x] Adaptive font
   - [x] Responsive Layout
-  - [x] Native Dark mode
-  - [x] Default Browser Styles
-  - [x] Clean HTML5
+  - [x] Native dark mode
+  - [x] Default browser styles
+  - [x] Clean HTML5 output
   - [x] Lean CSS
 - [x] Accessible
   - [x] CI tests
@@ -59,7 +59,9 @@ For latest changes please see the [changelog](CHANGELOG.md).
     - [ ] Latest Links
     - [x] Latest Gallery Images
   - [x] Post
-    - [x] Table of Content support
+    - [x] Table of contents support
+    - [x] Hero image support (`hero_img`)
+    - [x] Hero image alt/caption support (`hero_alt`, `hero_copy`)
     - [x] Shortcodes <https://exiguus.github.io/zola-monoplain/posts/shortcodes/>
     - [x] Emojis <https://exiguus.github.io/zola-monoplain/posts/emojis/>
     - [x] Icons <https://exiguus.github.io/zola-monoplain/posts/icons/>
@@ -71,21 +73,22 @@ For latest changes please see the [changelog](CHANGELOG.md).
     - [ ] Comments
       - [x] via mailto
       - [ ] via Mastodon
-      - [ ] via Disqus (Github Discussions)
+      - [ ] via Disqus (GitHub Discussions)
   - [x] Gallery
     - [x] Post integration
   - [ ] Project
-    - [ ] Github integration
+    - [ ] GitHub integration
   - [x] Taxonomy / Category and Tag support
   - [x] Search
   - [x] Sitemap
-  - [x] 404 / not-found
+  - [x] 404 / not found
   - [x] Feeds
     - [x] Atom
+    - [x] RSS
 - [x] Language
-  - [x] Translations <https://exiguus.github.io/zola-monoplain/posts/zola/>
+  - [x] Template labels translated via `translations`
   - [x] Dictionary <https://exiguus.github.io/zola-monoplain/posts/dictionary/>
-- [x] Opengraph
+- [x] Open Graph
   - [x] Link preview support
   - [x] Link preview image support
   - [x] Link custom preview image support
@@ -93,7 +96,7 @@ For latest changes please see the [changelog](CHANGELOG.md).
   - [x] Customizable via template hooks
   - [ ] Customizable JavaScript
 - [ ] Environment
-  - [x] Javascript Support
+  - [x] JavaScript support
   - [x] React Support
   - [ ] TypeScript support
 - [ ] CI/CD <https://exiguus.github.io/zola-monoplain/posts/ci/>
@@ -106,20 +109,26 @@ For latest changes please see the [changelog](CHANGELOG.md).
 ## Getting started
 
 1. Add this theme to your `themes/` folder (copy or symlink).
-2. Copy of the the theme's config.toml file and put in your projects root directory. Update it as required and don't forget to add `theme = 'zola-monoplain'` at the top of the file.
-3. Copy this contents of the `content/` directory the root of your project and change the files as your necessary.
+2. Copy the theme config file from `themes/zola-monoplain/config.toml` into your project's root directory. Update it as required and don't forget to add `theme = 'zola-monoplain'` at the top of the file.
+3. Copy the contents of `themes/zola-monoplain/content/` into the root of your project and adjust the files as needed.
 
 Also, see the themes documentation: <https://exiguus.github.io/zola-monoplain/posts/themes/>
 
 ## Customising the theme
 
-- **To change the settings** copy `config.toml` in to your project and update as required (make sure you add the theme variable at the top of the file, see the getting started heading above).
-- **To inject content in to templates** copy `templates/macros/hooks.html` and update as required.
-- **To change the Syntax Highlighting** change `theme` in `config.toml` to one of the [available themes](https://github.com/getzola/zola/tree/master/sublime/themes).
+- **To change settings** copy `config.toml` into your project and update it as required (make sure you add the theme variable at the top of the file, see Getting started above).
+- **To inject content into templates** copy `templates/macros/hooks.html` and update it as required.
+- **To change syntax highlighting** change `theme` in `config.toml` to one of the [available themes](https://github.com/getzola/zola/tree/master/sublime/themes).
+
+For a complete reference of `config.extra`, `page.extra`, and available macros/shortcodes, see:
+
+- <https://exiguus.github.io/zola-monoplain/posts/themes/>
+- <https://exiguus.github.io/zola-monoplain/posts/images/>
+- <https://exiguus.github.io/zola-monoplain/posts/shortcodes/>
 
 ## Using the responsive image shortcode
 
-Using the responsive images will make sure your images are generated at various sizes and served up to viewers at the size that best suits their device via the image srcset attribute. You can use this feature in your markdown like so:
+Responsive images generate multiple sizes and use `srcset` so each device can load an appropriate image. You can use this feature in Markdown like this:
 
 ```md
 {{ image(src="yourimage.jpg", alt="This is my image") }}
@@ -127,11 +136,11 @@ Using the responsive images will make sure your images are generated at various 
 
 ## Feature requests & support
 
-I'm afraid I'm unable to accept feature requests or provide user support for this theme. The [Zola documentation](https://www.getzola.org/documentation/getting-started/overview/) and [Tera documentation](https://tera.netlify.app/docs/) are great resources and there is a [Zola discussion forum](https://zola.discourse.group/). If you've found a bug in the themse please open a github issue.
+I'm afraid I'm unable to accept feature requests or provide user support for this theme. The [Zola documentation](https://www.getzola.org/documentation/getting-started/overview/) and [Tera documentation](https://tera.netlify.app/docs/) are great resources and there is a [Zola discussion forum](https://zola.discourse.group/). If you've found a bug in the theme please open a GitHub issue.
 
 ## Contributing
 
-Contributions are very welcome! If you are planning to add a feature to the theme then feel free to open an issue to discuss your approach and we will be able to say if it's it will likely be accepted. Please keep the following in mind:
+Contributions are very welcome. If you are planning to add a feature, open an issue first so the approach can be discussed before implementation. Please keep the following in mind:
 
 - Only widely generic features will be accepted, anything too specific should be kept to your own templates.
 - Be careful about destroying indentation as Tera syntax doesn't seem to be widely supported by IDEs.
@@ -142,18 +151,18 @@ Contributions are very welcome! If you are planning to add a feature to the them
 
 Use [Tabler Icons](https://tabler.io/icons) for icons.
 
-The icons macro use the following syntax:
+The icon shortcode uses the following syntax:
 
 ```md
-{{ icons("name", "size") }}
+{{ icon(name="brand-github", size=24) }}
 ```
 
-- Name is the name of the icon, e.g. `brand-github`. Names are the icon names from [Tabler Icons]([https://tabler.io/icons).
+- Name is the name of the icon, e.g. `brand-github`. Names are the icon names from [Tabler Icons](https://tabler.io/icons).
 - Size is the size of the icon in px, e.g. `24`. Default is `32`.
 
-Tabler icons are installed via npm and are available in the `node_modules` folder.
+Tabler Icons are installed via npm and are available in the `node_modules` folder.
 
-There is a copy script `pnpm cp:icons` folder that will copy the svg icon sprite
+The `pnpm cp:icons` script copies the SVG icon sprite
 to the `static` folder.
 
 ## License
