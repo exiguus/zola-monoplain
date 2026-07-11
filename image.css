@@ -1,1 +1,1 @@
-img{width:auto;height:auto}.thumbnail{display:grid;place-items:center;justify-content:center;width:256px;height:256px;overflow:hidden}
+img{width:auto;height:auto}.thumbnail{display:grid;place-items:center;justify-content:center;width:256px;height:256px;overflow:hidden;border:2px solid currentColor;background-color:currentColor}
