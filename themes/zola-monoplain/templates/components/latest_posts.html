@@ -1,4 +1,5 @@
-{% set section = get_section(path="posts/_index.md") %}
+{% set section = get_section(path="posts/_index.md") %} {% if section.pages |
+length > 0 %}
 <section aria-labelledby="latest-posts">
   <h1 id="latest-posts">Latest Posts</h1>
   <ul aria-labelledby="latest-posts">
@@ -24,3 +25,4 @@
     {% endfor %}
   </ul>
 </section>
+{% endif %}
