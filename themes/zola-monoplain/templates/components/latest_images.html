@@ -6,7 +6,7 @@ section_images.pages -%} {% endif -%} {% set_global has_images = false -%} {%
 for post in pages -%} {% if post.extra.images -%} {% set_global has_images =
 true -%} {% break -%} {% endif -%} {% endfor -%} {% if has_images -%}
 <section aria-labelledby="latest-images">
-  <h1 id="latest-images">Latest Images</h1>
+  <h1 id="latest-images">{{ trans(key='latest_images_title') }}</h1>
   <ul aria-labelledby="latest-images">
     {% set_global imageCount = 0 -%} {% set imageCountMax = 4 -%} {% for post in
     pages -%} {% if post.extra.images -%} {% for image in post.extra.images -%}

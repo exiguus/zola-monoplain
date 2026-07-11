@@ -1,7 +1,7 @@
 {% set section = get_section(path="posts/_index.md") %} {% if section.pages |
 length > 0 %}
 <section aria-labelledby="latest-posts">
-  <h1 id="latest-posts">Latest Posts</h1>
+  <h1 id="latest-posts">{{ trans(key='latest_posts_title') }}</h1>
   <ul aria-labelledby="latest-posts">
     {% set_global imageCount = 0 -%} {% set imageCountMax = 6 -%} {% for post in
     section.pages -%} {% set_global imageCount = imageCount + 1 -%} {% if
