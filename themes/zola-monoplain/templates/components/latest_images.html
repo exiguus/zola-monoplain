@@ -2,7 +2,9 @@
 config.extra.gallery_show_posts -%} {% set section_posts =
 get_section(path="posts/_index.md") -%} {% set pages = section_posts.pages |
 concat(with=section_images.pages) -%} {% else -%} {% set pages =
-section_images.pages -%} {% endif -%}
+section_images.pages -%} {% endif -%} {% set_global has_images = false -%} {%
+for post in pages -%} {% if post.extra.images -%} {% set_global has_images =
+true -%} {% break -%} {% endif -%} {% endfor -%} {% if has_images -%}
 <section aria-labelledby="latest-images">
   <h1 id="latest-images">Latest Images</h1>
   <ul aria-labelledby="latest-images">
@@ -39,3 +41,4 @@ section_images.pages -%} {% endif -%}
     {% endfor -%} {% endif -%} {% endfor -%}
   </ul>
 </section>
+{% endif -%}
