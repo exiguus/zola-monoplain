@@ -48,7 +48,7 @@ height=default_size ) -}} {% else -%} {% set abspath = path ~ src -%} {% set
 meta = get_image_metadata(path=abspath) -%} {% set width = meta.width -%} {% set
 srcset_list = [] -%} {% for s in sizes -%} {% if width >= s -%} {% set resized =
 resize_image(format=config.extra.image_format, path=abspath, width=s, height=s,
-op="fill", quality=config.extra.thumbnail_quality) -%} {% set element =
+op="fit", quality=config.extra.thumbnail_quality) -%} {% set element =
 resized.url ~ " " ~ s ~ "w" -%} {% set_global srcset_list = srcset_list |
 concat(with=[element]) -%} {% endif -%} {% endfor -%} {% set default_resized =
 resize_image(format=config.extra.image_format, path=abspath, width=default_size,

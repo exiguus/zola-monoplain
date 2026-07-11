@@ -1,4 +1,16 @@
+@use "sass:map";
+@import "_variables.scss";
+
 img {
   width: auto;
   height: auto;
+}
+
+.thumbnail {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  width: map.get($thumbnail, "small");
+  height: map.get($thumbnail, "small");
+  overflow: hidden;
 }
