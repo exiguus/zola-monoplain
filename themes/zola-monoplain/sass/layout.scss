@@ -179,9 +179,11 @@ body {
 
     #latest-images {
       & + ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem 2rem;
+        @media (min-width: map.get($breakpoints, "medium")) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem 2rem;
+        }
 
         figure {
           margin: 0;
@@ -210,25 +212,17 @@ body {
     }
   }
 
-  @media (min-width: map.get($breakpoints, "medium")) {
-    @at-root #gallery {
-      > div > main,
-      > div > aside {
-        section {
-          & > ul {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem 2rem;
-          }
-        }
-      }
-    }
-  }
   @at-root #gallery {
     > div > main,
     > div > aside {
       section {
         & > ul {
+          @media (min-width: map.get($breakpoints, "medium")) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 2rem;
+          }
+
           figure {
             display: flex;
             flex-direction: column;
