@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/gattner-name/pbl-frontend/compare/v1.5.0...v1.6.0) (2026-07-11)
+
+### Features
+
+- **opengraph:** use hero image as preview image fallback ([6f392ce](https://github.com/gattner-name/pbl-frontend/commits/6f392ce14c91866f1711b95f83624a16f41d019f))
+- **post:** adjust latest images section for better thumbnail visibility ([c6b680d](https://github.com/gattner-name/pbl-frontend/commits/c6b680d330538b6fdf1471bcd4b46f263ef00332))
+- **posts:** add hero image ([bab1869](https://github.com/gattner-name/pbl-frontend/commits/bab1869c7a83f65319855e38acc1731dbc8a49bc))
+- **translations:** add missing template translations ([45d2095](https://github.com/gattner-name/pbl-frontend/commits/45d209531b62b1fb3b9fb0a1d1d8f3e931720b75))
+
 ## [1.5.0](https://github.com/gattner-name/pbl-frontend/compare/v1.4.0...v1.5.0) (2026-07-11)
 
 ### Features
