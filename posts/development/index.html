@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og:https://ogp.me/ns#">
+
+<head>
+  <title>Development | mono&#x2F;plain; a11y=true</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Zola" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="Development" />
+<meta name="description" content="Set up a local development environment for Zola theme work" />
+<meta name="keywords" content="zola,
+theme,
+a11y,
+accessible" />
+<meta name="author" content="Simon Gattner" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="build" content="2026-07-12T19:12:57.147241928+00:00" />
+<meta
+  property="og:title"
+  content="mono&#x2F;plain; a11y=true | Development"
+/>
+<meta property="og:type" content="website" />
+<meta
+  property="og:url"
+  content="https://exiguus.github.io/zola-monoplain/posts/development/"
+/>
+<meta property="og:description" content="Set up a local development environment for Zola theme work" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="mono&#x2F;plain; a11y=true Atom Feed"
+  href="https://exiguus.github.io/zola-monoplain/atom.xml"
+/> <link
+  rel="alternate"
+  type="application/rss+xml"
+  title="mono&#x2F;plain; a11y=true RSS Feed"
+  href="https://exiguus.github.io/zola-monoplain/atom.rss"
+/>
+<link
+  rel="stylesheet"
+  href="https://exiguus.github.io/zola-monoplain/base.css"
+  media="screen"
+/>
+
+  
+</head>
+<body id="posts--development" data-base-url="https://exiguus.github.io/zola-monoplain">
+  
+<nav
+  id="skip-nav"
+  aria-label="Skip Navigation"
+  aria-live="off"
+  aria-atomic="false"
+>
+  <ul>
+    <li><a href="#main">Skip to content</a></li>
+    <li
+      ><a href="#toc">Skip to table of contents</a>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+          </li>
+        <li>
+          <a href="#prerequisites">Prerequisites</a>
+          </li>
+        <li>
+          <a href="#1-check-out-the-repository">1. Check out the repository</a>
+          </li>
+        <li>
+          <a href="#2-install-cargo-zola-node-js-and-pnpm">2. Install Cargo, Zola, Node.js and pnpm</a>
+          <ul>
+            <li>
+              <a href="#preferred-cargo">Preferred (Cargo)</a>
+              </li>
+            <li>
+              <a href="#package-manager-alternatives">Package manager alternatives</a>
+              <ul>
+                <li>
+                  <a href="#linux-debian-ubuntu">Linux (Debian&#x2F;Ubuntu)</a>
+                  </li>
+                <li>
+                  <a href="#macos-homebrew">macOS (Homebrew)</a>
+                  </li>
+                <li>
+                  <a href="#alternative">Alternative</a>
+                  </li>
+                </ul>
+              </li>
+            <li>
+              <a href="#node-pnpm">Node, pnpm</a>
+              </li>
+            </ul>
+          </li>
+        <li>
+          <a href="#3-run-development-mode">3. Run development mode</a>
+          <ul>
+            <li>
+              <a href="#option-a-workspace-root-turbo">Option A: Workspace root (Turbo)</a>
+              </li>
+            <li>
+              <a href="#option-b-theme-package-directly">Option B: Theme package directly</a>
+              </li>
+            </ul>
+          </li>
+        <li>
+          <a href="#4-understand-tera-templates-and-editor-support">4. Understand Tera templates and editor support</a>
+          </li>
+        <li>
+          <a href="#5-understand-the-theme-structure">5. Understand the theme structure</a>
+          </li>
+        <li>
+          <a href="#6-debug-templates-and-components">6. Debug templates and components</a>
+          <ul>
+            <li>
+              <a href="#enable-debug-mode-in-config">Enable debug mode in config</a>
+              </li>
+            <li>
+              <a href="#print-page-data-in-templates">Print page data in templates</a>
+              </li>
+            <li>
+              <a href="#scope-component-debugging">Scope component debugging</a>
+              </li>
+            </ul>
+          </li>
+        <li>
+          <a href="#7-run-local-accessibility-checks">7. Run local accessibility checks</a>
+          </li>
+        <li>
+          <a href="#8-run-test-and-check">8. Run test and check</a>
+          </li>
+        <li>
+          <a href="#9-commit-and-push-changes">9. Commit and push changes</a>
+          </li>
+        <li>
+          <a href="#10-release-a-new-version">10. Release a new version</a>
+          </li>
+        <li>
+          <a href="#resources">Resources</a>
+          </li>
+        </ul>
+    </li>
+    <li><a href="#main-nav">Skip to navigation</a></li>
+  </ul>
+</nav>
+<header>
+  <a href="https://exiguus.github.io/zola-monoplain" title="mono&#x2F;plain; a11y=true">
+    <h1>mono&#x2F;plain; a11y=true</h1>
+    <p>An accessible, monospace plain Zola Theme</p>
+  </a>
+</header>
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<div>
+      <main id="main">
+         <header>
+  
+
+<p aria-label="Author"
+  >By 
+  <a href="https://exiguus.github.io/zola-monoplain/authors/simon-gattner"
+    >Simon Gattner</a
+  > 
+</p>
+ 
+  <h1
+    >Development </h1
+  >
+  <p>
+    Created:
+    <date>2026-07-12</date>
+  </p>
+   <nav aria-labelledby="toc">
+  <details aria-labelledby="toc" open="true">
+    <summary id="toc">Table of contents</summary>
+    <ol aria-labelledby="toc">
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#introduction">Introduction</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#prerequisites">Prerequisites</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#1-check-out-the-repository">1. Check out the repository</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#2-install-cargo-zola-node-js-and-pnpm">2. Install Cargo, Zola, Node.js and pnpm</a>
+        
+        <ol>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#preferred-cargo">Preferred (Cargo)</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#package-manager-alternatives">Package manager alternatives</a>
+            
+            <ol>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/development/#linux-debian-ubuntu">Linux (Debian&#x2F;Ubuntu)</a>
+                
+              </li>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/development/#macos-homebrew">macOS (Homebrew)</a>
+                
+              </li>
+              
+              <li>
+                <a href="https://exiguus.github.io/zola-monoplain/posts/development/#alternative">Alternative</a>
+                
+              </li>
+              
+            </ol>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#node-pnpm">Node, pnpm</a>
+            
+          </li>
+          
+        </ol>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#3-run-development-mode">3. Run development mode</a>
+        
+        <ol>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#option-a-workspace-root-turbo">Option A: Workspace root (Turbo)</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#option-b-theme-package-directly">Option B: Theme package directly</a>
+            
+          </li>
+          
+        </ol>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#4-understand-tera-templates-and-editor-support">4. Understand Tera templates and editor support</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#5-understand-the-theme-structure">5. Understand the theme structure</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#6-debug-templates-and-components">6. Debug templates and components</a>
+        
+        <ol>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#enable-debug-mode-in-config">Enable debug mode in config</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#print-page-data-in-templates">Print page data in templates</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/development/#scope-component-debugging">Scope component debugging</a>
+            
+          </li>
+          
+        </ol>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#7-run-local-accessibility-checks">7. Run local accessibility checks</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#8-run-test-and-check">8. Run test and check</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#9-commit-and-push-changes">9. Commit and push changes</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#10-release-a-new-version">10. Release a new version</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#resources">Resources</a>
+        
+      </li>
+      
+    </ol>
+  </details>
+</nav>
+
+
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>This post shows a practical workflow for developing Zola themes locally:</p>
+<ul>
+<li>check out the repository</li>
+<li>install Zola, Node.js and pnpm</li>
+<li>run development mode</li>
+<li>understand Tera templates and editor support</li>
+<li>debug templates and components</li>
+<li>run local accessibility checks</li>
+<li>run test and check</li>
+<li>commit and push changes</li>
+<li>release a new version</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>For this repository, the JavaScript toolchain expects:</p>
+<ul>
+<li>Cargo <code>&gt;=1.95.0</code></li>
+<li>Zola <code>&gt;=0.22.1</code></li>
+<li>Node.js <code>&gt;=22.0.0 &lt;25.0.0</code></li>
+<li>pnpm <code>&gt;=10.0.0 &lt;12.0.0</code></li>
+</ul>
+<p>Repository scripts are defined in the workspace root <code>package.json</code>, while the theme package also has its own local <code>package.json</code> under <code>themes/zola-monoplain/</code>.</p>
+<h2 id="1-check-out-the-repository">1. Check out the repository</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> clone https://github.com/exiguus/zola-monoplain.git</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">cd</span><span style="color: #F1FA8C;"> zola-monoplain</span></span></code></pre><h2 id="2-install-cargo-zola-node-js-and-pnpm">2. Install Cargo, Zola, Node.js and pnpm</h2>
+<p>Preferred: install Zola with Cargo and pin the same version used by this repository's GitHub Actions.</p>
+<p>At the moment, workflows use <code>zola@0.22.1</code>, so this is the recommended development version.</p>
+<h3 id="preferred-cargo">Preferred (Cargo)</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">cargo</span><span style="color: #F1FA8C;"> install</span><span style="color: #BD93F9;"> --locked --git</span><span style="color: #F1FA8C;"> https://github.com/getzola/zola zola@0.22.1</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre>
+<p>You can verify the CI pin in <code>.github/workflows/prod.yml</code> and <code>.github/workflows/preview.yml</code>.</p>
+<h3 id="package-manager-alternatives">Package manager alternatives</h3>
+<p>If you do not use Rust/Cargo locally, install Zola with your package manager only if it provides a recent enough version (&gt;=0.22.1).</p>
+<h4 id="linux-debian-ubuntu">Linux (Debian/Ubuntu)</h4>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">sudo</span><span style="color: #F1FA8C;"> apt update</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">sudo</span><span style="color: #F1FA8C;"> apt install zola</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre><h4 id="macos-homebrew">macOS (Homebrew)</h4>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">brew</span><span style="color: #F1FA8C;"> install zola</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre><h4 id="alternative">Alternative</h4>
+<p>Use the official installation guide if your platform/package manager differs:</p>
+<p><a rel="external" href="https://www.getzola.org/documentation/getting-started/installation/">https://www.getzola.org/documentation/getting-started/installation/</a></p>
+<h3 id="node-pnpm">Node, pnpm</h3>
+<p>If Node.js is not installed yet, install Node.js 22 or newer and then enable pnpm via Corepack:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">node</span><span style="color: #BD93F9;"> --version</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">corepack</span><span style="color: #F1FA8C;"> enable</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">corepack</span><span style="color: #F1FA8C;"> prepare pnpm@11.9.0</span><span style="color: #BD93F9;"> --activate</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #BD93F9;"> --version</span></span></code></pre>
+<p>Install dependencies from the repository root:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> install</span></span></code></pre><h2 id="3-run-development-mode">3. Run development mode</h2>
+<p>You can run development in two ways.</p>
+<h3 id="option-a-workspace-root-turbo">Option A: Workspace root (Turbo)</h3>
+<p>From the repository root:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> dev</span></span></code></pre>
+<p>This runs the workspace <code>dev</code> pipeline.</p>
+<h3 id="option-b-theme-package-directly">Option B: Theme package directly</h3>
+<p>From the theme directory:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #8BE9FD;">cd</span><span style="color: #F1FA8C;"> themes/zola-monoplain</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> dev</span></span></code></pre>
+<p>This runs <code>zola serve</code> (after checking that Zola is installed).</p>
+<h2 id="4-understand-tera-templates-and-editor-support">4. Understand Tera templates and editor support</h2>
+<p>Zola templates use the Tera template engine.</p>
+<p>Tera documentation:</p>
+<p><a rel="external" href="https://keats.github.io/tera/docs/">https://keats.github.io/tera/docs/</a></p>
+<p>If your IDE/editor does not provide a dedicated Tera extension, the Twig syntax extension works well for highlighting and basic template readability.</p>
+<p>VS Code extension:</p>
+<p><a rel="external" href="https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2">https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2</a></p>
+<h2 id="5-understand-the-theme-structure">5. Understand the theme structure</h2>
+<p>The theme keeps content, templates, styles, and client-side scripts in separate folders so each part stays easy to find:</p>
+<ul>
+<li><code>templates/</code> contains the page layout layer.
+<ul>
+<li><code>base.html</code> provides the shared shell.</li>
+<li><code>index.html</code>, <code>page.html</code>, <code>post.html</code>, <code>posts.html</code>, and <code>taxonomy_*.html</code> define the main page types.</li>
+<li><code>components/</code> holds reusable partials such as the header, footer, and latest content blocks.</li>
+<li><code>macros/</code> and <code>shortcodes/</code> contain shared template helpers and shortcode implementations.</li>
+</ul>
+</li>
+<li><code>sass/</code> contains the SCSS source files.
+<ul>
+<li><code>base.scss</code>, <code>layout.scss</code>, <code>typography.scss</code>, <code>markdown.scss</code>, and related partials are split by concern.</li>
+<li><code>_variables.scss</code> and <code>_extends.scss</code> hold shared values and reusable style rules.</li>
+<li><code>a11y.scss</code>, <code>image.scss</code>, <code>scheme.scss</code>, <code>spotify.scss</code>, and <code>youtube.scss</code> group feature-specific styles.</li>
+</ul>
+</li>
+<li><code>static/js/</code> contains JavaScript shipped directly to the browser.
+<ul>
+<li><code>main.js</code> is the general site script.</li>
+<li><code>search.js</code> powers the search page behavior.</li>
+</ul>
+</li>
+</ul>
+<p>Keeping these areas separated makes template changes, styling changes, and script changes easier to debug independently.</p>
+<h2 id="6-debug-templates-and-components">6. Debug templates and components</h2>
+<h3 id="enable-debug-mode-in-config">Enable debug mode in config</h3>
+<p>In <code>config.toml</code> set:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">debug</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span></code></pre><h3 id="print-page-data-in-templates">Print page data in templates</h3>
+<p>When debugging a component, render the current page context in a template (for example in <code>templates/post.html</code>):</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{% if config.extra.debug %}</span></span>
+<span class="giallo-l"><span>&lt;details&gt;</span></span>
+<span class="giallo-l"><span>  &lt;summary&gt;Debug: page&lt;/summary&gt;</span></span>
+<span class="giallo-l"><span>  &lt;pre&gt;\{\{ page | default(value=&quot;{}&quot;) | json_encode | safe \}\}&lt;/pre&gt;</span></span>
+<span class="giallo-l"><span>&lt;/details&gt;</span></span>
+<span class="giallo-l"><span>{% endif %}</span></span></code></pre>
+<p>The escaped braces are for Markdown examples. In your actual template file, use normal braces:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ page | default(value=&quot;{}&quot;) | json_encode | safe }}</span></span></code></pre>
+<p>This is useful to inspect available keys while developing components.</p>
+<h3 id="scope-component-debugging">Scope component debugging</h3>
+<p>For reusable components/macros, print only the value you need first, then expand:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ page.title | default(value=&quot;(no title)&quot;) }}</span></span></code></pre><pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ page.extra | default(value=&quot;{}&quot;) | json_encode | safe }}</span></span></code></pre>
+<p>Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.</p>
+<h2 id="7-run-local-accessibility-checks">7. Run local accessibility checks</h2>
+<p>To test accessibility against a local running dev server:</p>
+<ol>
+<li>Start the local dev server (default: <code>http://127.0.0.1:1111</code>):</li>
+</ol>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> dev</span></span></code></pre>
+<ol>
+<li>In a second terminal from the repository root, run:</li>
+</ol>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> test:pa11y</span></span></code></pre>
+<p>This command runs pa11y checks against the local server and writes HTML reports to <code>pa11y-report/</code>.</p>
+<h2 id="8-run-test-and-check">8. Run test and check</h2>
+<p>From the repository root:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> test</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> check</span></span></code></pre>
+<p>If you need to run the full build pipeline locally:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> build</span></span></code></pre>
+<p>Useful script references:</p>
+<ul>
+<li><code>pnpm dev</code> runs the workspace dev pipeline.</li>
+<li><code>pnpm test</code> runs the workspace test pipeline.</li>
+<li><code>pnpm check</code> runs <code>fta</code> validation and the workspace check pipeline.</li>
+<li><code>pnpm format</code> reformats files with Dprint.</li>
+<li><code>pnpm release:patch</code>, <code>pnpm release:minor</code>, and <code>pnpm release:major</code> create releases with conventional versioning.</li>
+<li>In <code>themes/zola-monoplain/</code>, <code>pnpm dev</code> runs <code>zola serve</code> after checking that Zola is installed.</li>
+<li>In <code>themes/zola-monoplain/</code>, <code>pnpm build</code> runs <code>zola build</code> after checking that Zola is installed.</li>
+</ul>
+<h2 id="9-commit-and-push-changes">9. Commit and push changes</h2>
+<p>From the repository root:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> add .</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> commit</span><span style="color: #BD93F9;"> -m</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">feat(posts): short summary of your change</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span></span></code></pre>
+<p>Use a conventional commit message (<code>feat:</code>, <code>fix:</code>, <code>docs:</code>, and so on) so release tooling can derive changelog entries.</p>
+<h2 id="10-release-a-new-version">10. Release a new version</h2>
+<p>Choose the release type and run one of:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:patch</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:minor</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:major</span></span></code></pre>
+<p>Then push commit and tags:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span><span style="color: #BD93F9;"> --follow-tags</span><span style="color: #F1FA8C;"> origin main</span></span></code></pre><h2 id="resources">Resources</h2>
+<ul>
+<li><a rel="external" href="https://www.getzola.org/documentation/">https://www.getzola.org/documentation/</a></li>
+<li><a rel="external" href="https://www.getzola.org/documentation/templates/overview/">https://www.getzola.org/documentation/templates/overview/</a></li>
+<li><a rel="external" href="https://keats.github.io/tera/docs/">https://keats.github.io/tera/docs/</a></li>
+</ul>
+   <section aria-labelledby="latest-feedback">
+  <h1 id="latest-feedback">Feedback</h1>
+  <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
+  <p>
+    
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="This email address has been obscured for security. Please click the link to reveal the actual address."
+  
+  data-obfuscated-email="&#x3C;development.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;development.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+</a>
+
+  </p>
+</section>
+<section aria-labelledby="tags">
+  <h1 id="tags">Tags</h1>
+  <ul aria-labelledby="tags">
+    
+    <li aria-label="Zola"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/zola"
+        >Zola</a
+      ></li
+    >
+    
+    <li aria-label="Theme"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/theme"
+        >Theme</a
+      ></li
+    >
+    
+    <li aria-label="Development"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/development"
+        >Development</a
+      ></li
+    >
+    
+    <li aria-label="Templates"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/templates"
+        >Templates</a
+      ></li
+    >
+    
+    <li aria-label="Debugging"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/debugging"
+        >Debugging</a
+      ></li
+    >
+    
+    <li aria-label="Accessibility"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/accessibility"
+        >Accessibility</a
+      ></li
+    >
+    
+    <li aria-label="Testing"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/testing"
+        >Testing</a
+      ></li
+    >
+    
+    <li aria-label="Release"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/release"
+        >Release</a
+      ></li
+    >
+    
+  </ul>
+</section>
+
+
+</main>
+       <aside>
+  <section aria-labelledby="latest-images">
+  <h1 id="latest-images">Latest Images</h1>
+  <ul aria-labelledby="latest-images">
+         <li
+      aria-labelledby="post-image-2025-05-03-opengraph-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/posts/opengraph/"
+        title="Open Graph Preview - 2025-05-03"
+      >
+        <figure>
+          <div class="thumbnail">
+            <img width="960" height="720" alt="Open Graph Preview - 2025-05-03" title="Open Graph Preview - 2025-05-03"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.56c88dd49ee185a6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.cf8aa7476a82dcb4.webp 256w" class=""
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2025-05-03-opengraph-1"
+          >
+            Open Graph Preview
+            <date>2025-05-03</date>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+          <li
+      aria-labelledby="post-image-2024-06-08-shortcodes-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/"
+        title="Shortcodes - 2024-06-08"
+      >
+        <figure>
+          <div class="thumbnail">
+            <img width="2488" height="1866" alt="Shortcodes - 2024-06-08" title="Shortcodes - 2024-06-08"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.babf706ac8aebed6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.067baa4a7c9016f4.webp 256w" class=""
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2024-06-08-shortcodes-1"
+          >
+            Shortcodes
+            <date>2024-06-08</date>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+      </ul>
+</section>
+ 
+<section aria-labelledby="latest-posts">
+  <h1 id="latest-posts">Latest Posts</h1>
+  <ul aria-labelledby="latest-posts">
+    <li aria-labelledby="post-2026-07-12-development-1">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/development/" title="Development">
+        <article>
+          <header id="post-2026-07-12-development-1">
+            <h1>Development</h1>
+            
+            <p>
+              <date> 2026-07-12 </date>
+            </p>
+          </header>
+          <p>Set up a local development environment for Zola theme work</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2026-07-11-images-2">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/images/" title="Images">
+        <article>
+          <header id="post-2026-07-11-images-2">
+            <h1>Images</h1>
+            
+            <p>
+              <date> 2026-07-11 </date>
+            </p>
+          </header>
+          <p>How images work in mono&#x2F;plain and how to use them in posts and templates</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2025-06-17-feedback-3">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/feedback/" title="Feedback">
+        <article>
+          <header id="post-2025-06-17-feedback-3">
+            <h1>Feedback</h1>
+            
+            <p>
+              <date> 2025-06-17 </date>
+            </p>
+          </header>
+          <p>Feedback Email for mono&#x2F;plain theme</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2025-05-03-opengraph-4">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/opengraph/" title="Open Graph Preview">
+        <article>
+          <header id="post-2025-05-03-opengraph-4">
+            <h1>Open Graph Preview</h1>
+            
+            <p>
+              <date> 2025-05-03 </date>
+            </p>
+          </header>
+          <p>Open Graph Preview by example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-15-ci-5">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/ci/" title="Continuous Integration">
+        <article>
+          <header id="post-2024-06-15-ci-5">
+            <h1>Continuous Integration</h1>
+            
+            <p>
+              <date> 2024-06-15 </date>
+            </p>
+          </header>
+          <p>Continuous Integration by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-dictionary-6">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/dictionary/" title="Dictionary">
+        <article>
+          <header id="post-2024-06-09-dictionary-6">
+            <h1>Dictionary</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </header>
+          <p>Dictionary by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+</aside>
+
+    </div>
+    <nav id="footer-nav" aria-label="Footer Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<footer>
+  <h2 id="footer-links" class="sr-only">Links</h2>
+  <ul aria-labelledby="footer-links">
+     <li>
+      <a
+        href="https://github.com/exiguus&#x2F;zola-monoplain"
+        title="Github page"
+        rel="me"
+      >
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-github" />
+</svg>
+ </span>
+      </a>
+    </li>
+     <li>
+      <a
+        href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus"
+        title="Mastodon Page"
+        rel="me"
+      >
+        <span class="sr-only"
+          >Mastodon</span
+        >
+        <span aria-hidden="true">
+           
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-mastodon" />
+</svg>
+
+        </span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://exiguus.github.io/zola-monoplain/atom.xml"
+        title="Atom Feed"
+        rel="alternate"
+      >
+        <span class="sr-only">Atom</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-rss" />
+</svg>
+ </span>
+      </a>
+    </li>
+  </ul>
+  <h2 id="footer-info" class="sr-only">Information</h2>
+  <p aria-labelledby="footer-info">
+    © mono&#x2F;plain; a11y=true 2026  <br />Powered by
+    <a
+      title="Your one-stop static site engine"
+      href="https://getzola.org/"
+      >Zola</a
+    >. Theme by
+    <a
+      title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
+      href="https://github.com/exiguus/zola-monoplain"
+      >@exiguus mono&#x2F;plain Zola</a
+    >. Made with love.<br />
+    <i class="sr-only">Last update:</i>
+    <small
+      >2026-07-12 21:12:57 Europe&#x2F;Berlin</small
+    >
+  </p>
+</footer>
+<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
+  </body>
+
+</html>

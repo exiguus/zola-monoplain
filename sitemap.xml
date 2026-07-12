@@ -35,6 +35,10 @@
         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/posts/development/</loc>
+        <lastmod>2026-07-12</lastmod>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/dictionary/</loc>
         <lastmod>2026-07-11</lastmod>
     </url>
@@ -77,6 +81,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/accessibility/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/build/</loc>
     </url>
     <url>
@@ -86,7 +93,13 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/continuous-integration/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/debugging/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/deployment/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/development/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/dictionary/</loc>
@@ -125,6 +138,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/preview-image/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/release/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/shortcodes/</loc>
     </url>
     <url>
@@ -135,6 +151,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/templates/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/testing/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/theme/</loc>
