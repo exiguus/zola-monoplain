@@ -21,11 +21,12 @@
   <figure>
     <div class="hero">
       {{ images::responsive_image(path=page.path, src=page.extra.hero_img,
-      alt=hero_alt, default_size=384, sizes=[384,576,1200]) -}}
+      alt=hero_alt, default_size=384, sizes=[256,384,512,576,640,768,1024,1152])
+      -}}
     </div>
-    {%- if hero_copy is defined and hero_copy %}<p
-      >{{ trans(key='post_hero_copy') }} {{ hero_copy | safe }}</p
-    >{%- endif %}
+    {%- if hero_copy is defined and hero_copy %}
+    <p>{{ trans(key='post_hero_copy') }} {{ hero_copy | safe }}</p>
+    {%- endif%}
     <figcaption id="post-image-{{ page.date }}-{{ page.slug }}">
       <p>{{ page.description | safe }}</p>
       <p>{{ hero_alt | safe }}</p>
