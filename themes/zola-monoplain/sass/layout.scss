@@ -215,16 +215,18 @@ body {
     #latest-images {
       & + ul {
         @extend %list-vertical;
+        align-items: center;
         @media (min-width: map.get($breakpoints, "medium")) {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 1rem 2rem;
+          align-items: start;
         }
 
         figure {
-          margin: 0;
+          @extend %list-vertical;
+          align-items: center;
           img {
-            margin: 0 auto;
             max-width: map.get($thumbnail, "small");
           }
           figcaption {
@@ -254,10 +256,12 @@ body {
       section {
         & > ul {
           @extend %list-vertical;
+          align-items: center;
           @media (min-width: map.get($breakpoints, "medium")) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem 2rem;
+            align-items: start;
           }
 
           figure {
