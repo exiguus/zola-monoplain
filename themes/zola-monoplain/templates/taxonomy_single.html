@@ -19,7 +19,17 @@
               <date> {{ post.date | date(format='%Y-%m-%d') }} </date>
             </p>
           </header>
-          {{ hooks::posts_below_title(page=post) }}
+          {%- if post.description %}
+          <p>{{ post.description }}</p>
+          {%- endif %} {% if post.taxonomies is containing ("tags") %}
+          <footer>
+            <ul aria-labelledby="tags">
+              {% for tag in post.taxonomies["tags"] %}
+              <li aria-label="{{tag}}">#{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          </footer>
+          {% endif %} {{ hooks::posts_below_title(page=post) }}
         </article>
       </a>
     </li>

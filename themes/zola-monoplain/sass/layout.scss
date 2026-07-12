@@ -15,7 +15,7 @@ body {
   & > nav#main-nav,
   & > nav#footer-nav {
     & > ul {
-      @extend %list-vertical;
+      @extend %list-horizontal;
     }
   }
 
@@ -154,6 +154,17 @@ body {
           text-indent: 2em;
         }
       }
+      & > footer {
+        > ul {
+          @extend %list-horizontal;
+          gap: 0.5em 1rem;
+          > li {
+            font-size: 0.8em;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
     }
 
     img {
@@ -194,6 +205,7 @@ body {
 
     #latest-images {
       & + ul {
+        @extend %list-vertical;
         @media (min-width: map.get($breakpoints, "medium")) {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -223,7 +235,7 @@ body {
     & > ul {
       padding-left: 1rem;
       width: 66.6%;
-      @extend %list-vertical;
+      @extend %list-horizontal;
     }
   }
 
@@ -232,6 +244,7 @@ body {
     > div > aside {
       section {
         & > ul {
+          @extend %list-vertical;
           @media (min-width: map.get($breakpoints, "medium")) {
             display: grid;
             grid-template-columns: 1fr 1fr;
