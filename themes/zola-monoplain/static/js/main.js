@@ -83,11 +83,24 @@ const labelTaskListCheckboxes = () => {
       checkbox.setAttribute("aria-label", itemText);
       return;
     }
-
     checkbox.setAttribute("aria-label", "Task item");
   });
 };
 
+/**
+ * Make preformatted content keyboard reachable.
+ */
+const makeScrollableRegionsFocusable = () => {
+  const scrollableRegions = document.querySelectorAll("pre");
+
+  Array.from(scrollableRegions).forEach((region) => {
+    if (region.hasAttribute("tabindex")) {
+      return;
+    }
+
+    region.setAttribute("tabindex", "0");
+  });
+};
 // <script>
 // This script should be added to the html head with attribute:
 //  defer="defer"
