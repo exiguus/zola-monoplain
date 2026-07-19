@@ -158,3 +158,37 @@ feedback_email_enabled = true
 feedback_email_address = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
 feedback_email_address_wildcard = true
 feedback_email_address_wildcard_postfix = ".monoplain"
+# h_card for replay contexts, cross-site comments and event RSVPs.
+#  The h-card is visible only for screen reader and is attachted to all page footer if enabled
+#  Not in used keys are commented out
+#  Validate the h-card with <https://indiewebify.me/validate-h-card/>
+h_card_enabled = true
+h_card_name = "Simon Gattner"
+# h_card_honorific_prefix="Dr."
+# h_card_given_name="Sally"
+# h_card_additional_name="K."
+# h_card_family_name="Ride"
+# h_card_honorific_suffix="Ph.D."
+h_card_nickname = "exiguus"
+# h_card_org="Sally Ride Science"
+# h_card_photo="Sally_Ride_(1984).jpg"
+h_card_urls = [
+  ["https://www.gattner.name", "Homepage"],
+  ["https://github.com/exiguus", "Github Profile"],
+]
+# h_card_emails=[
+#    ["sally", "example", "com"]
+# ]
+# h_card_tels=[
+#    ["+1-800-555-0100", "Work phone"],
+#    ["+1-800-555-0101", "Mobile phone"]
+# ]
+# h_card_street_address="123 Main st."
+# h_card_locality="Los Angeles"
+# h_card_region="CA"
+# h_card_region_title="California"
+# h_card_postal_code="91316"
+# h_card_country_name="U.S.A"
+# h_card_bday="1951-05-26"
+# h_card_category="physicist"
+# h_card_note="First American woman in space.
