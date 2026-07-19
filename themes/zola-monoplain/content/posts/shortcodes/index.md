@@ -2,10 +2,10 @@
 title = "Shortcodes"
 description = "Shortcodes by example"
 date = 2024-06-08
-updated = 2026-07-12
+updated = 2026-07-19
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Theme", "Markdown", "Shortcodes"]
+tags = ["Zola", "Theme", "Markdown", "Shortcodes", "Images", "Details", "Markdown", "Icons", "Youtube", "Spotify", "Email", "Phone", "h-card"]
 [extra]
 images = ["example-image.jpg"]
 preview_img = "example-image.jpg"
@@ -23,10 +23,8 @@ The `image` shortcode can be used to embed images in your Markdown files. This c
 
 {{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") }}
 
-Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
-
 ```md
-\{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") \}\}
+{{/* image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") */}}
 ```
 
 The `src` parameter specifies the image filename (resolved relative to the page context), and the `alt` parameter specifies the alt text for the image.
@@ -34,7 +32,7 @@ The `src` parameter specifies the image filename (resolved relative to the page 
 {{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) }}
 
 ```md
-\{\{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) \}\}
+{{/* image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) */}}
 ```
 
 The `width` and `height` parameters can be used to specify the size of the image. The `width` and `height` parameters are optional and can be omitted if you want to use the original size of the image.
@@ -45,10 +43,8 @@ The `details` shortcode can be used to create a collapsible section in your Mark
 
 {{ details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) }}
 
-Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
-
 ```md
-\{\{ details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) \}\}
+{{/* details(title="Click to expand", summary="This is a summary" content=`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`) */}}
 ```
 
 ### Markdown
@@ -70,10 +66,8 @@ The `markdown` shortcode can render code examples and their output in the same p
   </script>
 ') }}
 
-Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
-
 ```md
-\{\{ markdown(title="input attr type is number and attr step is 1" type="html", code='
+{{/\* markdown(title="input attr type is number and attr step is 1" type="html", code='
 
 <form>
     <input type="number" step="1" />
@@ -86,7 +80,7 @@ Shortcodes normally start and end with `{{` and `}}`. In code examples they are 
       document.querySelector("span").innerText = e.target.querySelector("input").value;
     });
   </script>
-') \}\}
+') */}}
 ```
 
 ### Icons
@@ -95,10 +89,8 @@ The `icon` shortcode can be used to embed icons in your Markdown files. This can
 
 {{ icon(name="activity") }}
 
-Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
-
 ```md
-\{\{ icon(name="activity",size=32) \}\}
+{{/* icon(name="activity",size=32) */}}
 ```
 
 The size of the icon can be adjusted by adding the `size` parameter to the shortcode. The default size is 32 pixels, but you can specify a different size. The parameter is optional and can be omitted if you want to use the default size.
@@ -111,10 +103,8 @@ The `youtube` shortcode can be used to embed YouTube videos in your Markdown fil
 
 {{ youtube(id="Pb4Naef8pc8", title="loop") }}
 
-Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
-
 ```md
-\{\{ youtube(id="Pb4Naef8pc8", title="loop") \}\}
+{{/* youtube(id="Pb4Naef8pc8", title="loop") */}}
 ```
 
 ### Spotify
@@ -123,10 +113,8 @@ The `spotify` shortcode can be used to embed Spotify playlists in your Markdown 
 
 {{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") }}
 
-Shortcodes normally start and end with `{{` and `}}`. In code examples they are escaped as `\{\{` and `\}\}` so they are shown as text instead of being executed.
-
 ```md
-\{\{ spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") \}\}
+{{/* spotify(id="6rqhFgbbKwnb9MLmUQDhG6", title="album") */}}
 ```
 
 ### Email
@@ -137,13 +125,128 @@ The `local_part`, `domain_name`, and `tld` parameters are required. Only `title`
 
 Example:
 
+{{ email(local_part="hello", domain_name="example", tld="org", title="Reveal email address") }}
+
 ```md
-\{\{ email(local_part="hello", domain_name="example", tld="org", title="Reveal email address") \}\}
+{{/* email(local_part="hello", domain_name="example", tld="org", title="Reveal email address") */}}
 ```
 
 Without an explicit `title`, the shortcode uses `post_feedback_email_link_title` from `translations`.
 
 The rendered output keeps the address obfuscated in source and reveals it through the existing JavaScript behavior.
+
+### Phone
+
+The `phone` shortcode renders an obfuscated phone link. The `number` parameter is required. The `title` parameter is optional.
+
+Example:
+
+{{ phone(number="+1-800-555-0199", title="Call me") }}
+
+```md
+{{/* phone(number="+1-800-555-0199", title="Call me") */}}
+```
+
+The rendered output keeps the phone number obfuscated in source and reveals it through the existing JavaScript behavior.
+
+### h-card
+
+The `h-card` shortcode renders a [microformat2 h-card](https://microformats.org/wiki/h-card) for representing people and organizations. All parameters are optional, but at least one must be provided.
+
+**Note:** URLs, emails, and phone numbers are now passed as arrays of arrays to support multiple values.
+
+Examples:
+
+**Simple h-card with multiple URLs:**
+
+{{ h_card(
+  name="Simon",
+  nickname="exiguus",
+  urls=[["https://exiguus.blog", "exiguus blog"],["https://github.com/exiguus", "GitHub"],["https://github.com/exiguus/zola-monoplain", "Zola Monoplain theme"]]
+) }}
+
+```md
+{{/* h_card(
+  name="Simon",
+  nickname="exiguus",
+  urls=[["https://exiguus.blog", "exiguus blog"],["https://github.com/exiguus", "GitHub"],["https://github.com/exiguus/zola-monoplain", "Zola Monoplain theme"]]
+) */}}
+```
+
+**Full h-card with multiple phone numbers and emails:**
+
+{{ h_card(
+  name="Sally Ride",
+  honorific_prefix="Dr.",
+  given_name="Sally",
+  additional_name="K.",
+  family_name="Ride",
+  honorific_suffix="Ph.D.",
+  nickname="sallykride",
+  org="Sally Ride Science",
+  photo="Sally_Ride_(1984).jpg",
+  urls=[
+    ["http://sally.example.com", "Sally Ride Science website"]
+  ],
+  emails=[
+    ["sally", "example", "com", "Reveal email address"],
+    ["s.ride", "example", "org", "Reveal email address"]
+  ],
+  tels=[
+    ["+1-800-555-0100", "Work phone"],
+    ["+1-800-555-0101", "Mobile phone"]
+  ],
+  street_address="123 Main st.",
+  locality="Los Angeles",
+  region="CA",
+  region_title="California",
+  postal_code="91316",
+  country_name="U.S.A",
+  bday="1951-05-26",
+  category="physicist",
+  note="First American woman in space. The image is from <https://en.wikipedia.org/wiki/File:Sally_Ride_(1984).jpg>: This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that: NASA material is not protected by copyright unless noted."
+) }}
+
+```md
+{{/* h_card(
+  name="Sally Ride",
+  honorific_prefix="Dr.",
+  given_name="Sally",
+  additional_name="K.",
+  family_name="Ride",
+  honorific_suffix="Ph.D.",
+  nickname="sallykride",
+  org="Sally Ride Science",
+  photo="Sally_Ride_(1984).jpg",
+  urls=[
+    ["http://sally.example.com", "Sally Ride Science website"]
+  ],
+  emails=[
+    ["sally", "example", "com"]
+  ],
+  tels=[
+    ["+1-800-555-0100", "Work phone"],
+    ["+1-800-555-0101", "Mobile phone"]
+  ],
+  street_address="123 Main st.",
+  locality="Los Angeles",
+  region="CA",
+  region_title="California",
+  postal_code="91316",
+  country_name="U.S.A",
+  bday="1951-05-26",
+  category="physicist",
+  note="First American woman in space."
+) */}}
+```
+
+The shortcode supports all h-card microformat properties including name components, contact information, address, and more. Email addresses and phone numbers are obfuscated to prevent spam.
+
+**Array Format:**
+
+- `urls`: Array of arrays, each with `[url, url_text]` (url_text is optional and defaults to name)
+- `emails`: Array of arrays, each with `[local_part, domain_name, tld, title]` (title is optional)
+- `tels`: Array of arrays, each with `[number, title]` (title is optional)
 
 ## Conclusion
 

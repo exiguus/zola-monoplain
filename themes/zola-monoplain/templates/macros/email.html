@@ -1,10 +1,17 @@
-{% macro obfuscate_mail(local_part, domain_name, tld, title="") %}
+{% macro obfuscate_mail(local_part, domain_name, tld, title="", css_class="") %}
 <a
   href="mailto:invalid\(local)\part@example\.org"
   {%
   if
   title
   %}title="{{ title }}"
+  {%
+  endif
+  %}
+  {%-
+  if
+  css_class
+  %}class="{{ css_class }}"
   {%
   endif
   %}

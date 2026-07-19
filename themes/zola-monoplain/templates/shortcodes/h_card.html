@@ -1,0 +1,13 @@
+{%- import "macros/h-card.html" as hcard -%} {{ hcard::h_card( name=name |
+default(value=""), honorific_prefix=honorific_prefix | default(value=""),
+given_name=given_name | default(value=""), additional_name=additional_name |
+default(value=""), family_name=family_name | default(value=""),
+honorific_suffix=honorific_suffix | default(value=""), nickname=nickname |
+default(value=""), org=org | default(value=""), photo=photo | default(value=""),
+urls=urls | default(value=[]), emails=emails | default(value=[]), tels=tels |
+default(value=[]), street_address=street_address | default(value=""),
+locality=locality | default(value=""), region=region | default(value=""),
+region_title=region_title | default(value=""), postal_code=postal_code |
+default(value=""), country_name=country_name | default(value=""), bday=bday |
+default(value=""), category=category | default(value=""), note=note |
+default(value="") ) }}
