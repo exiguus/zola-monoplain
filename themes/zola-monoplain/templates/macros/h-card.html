@@ -6,8 +6,9 @@ region_title, postal_code, country_name, bday, category, note ) %} {%- set
 has_content = name or honorific_prefix or given_name or additional_name or
 family_name or honorific_suffix or nickname or org or photo or urls or emails or
 tels or street_address or locality or region or postal_code or country_name or
-bday or category or note %} {%- set has_grid = photo or note %} {%- if
-has_content %}
+bday or category or note %} {%- set has_grid = photo or note %} {%- set
+photo_path = "" -%} {%- if photo is not starting_with("/") and page -%} {%- set
+photo_path = page.path -%} {%- endif -%} {%- if has_content %}
 <div class="h-card{% if has_grid %} grid{% endif %}">
   <div>
     {%- if name %}<div class="p-name">{{ name }}</div>{% endif %} {%- if
@@ -79,9 +80,9 @@ has_content %}
       {%- if bday %}<div class="p-bday"
         >{{ trans(key='h_card_born_label') }}<time class="dt-bday"
           >{{ bday }}</time
-        ></div
+        > </div
       >{% endif %} {%- if category %}<div class="p-category"
-        >{{ trans(key='h_card_category_label') }}{{ category }}</div
+        >{{ trans(key='h_card_category_label') }}{{ category }} </div
       >{% endif %}
     </div>
     {%- endif %}
@@ -90,9 +91,9 @@ has_content %}
   <div>
     {%- if photo %}
     <div class="p-photo">
-      {{ images::responsive_thumbnail(path=page.path, src=photo,
+      {{ images::responsive_thumbnail(path=photo_path, src=photo,
       alt=trans(key='h_card_alt_photo') ~ name, default_size=128,
-      sizes=[128,256], css_class="u-photo") }}
+      sizes=[128,256,512], css_class="u-photo") }}
     </div>
     {%- endif %} {%- if note %}<div class="p-note">{{ note }}</div>{% endif %}
   </div>

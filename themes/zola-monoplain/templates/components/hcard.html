@@ -1,0 +1,26 @@
+{%- import "macros/h-card.html" as h_card -%} {%- if config.extra.h_card_enabled
+== true -%}
+<div id="h-card">
+  {{ h_card::h_card( name=config.extra.h_card_name | default(value=""),
+  honorific_prefix=config.extra.h_card_honorific_prefix | default(value=""),
+  given_name=config.extra.h_card_given_name | default(value=""),
+  additional_name=config.extra.h_card_additional_name | default(value=""),
+  family_name=config.extra.h_card_family_name | default(value=""),
+  honorific_suffix=config.extra.h_card_honorific_suffix | default(value=""),
+  nickname=config.extra.h_card_nickname | default(value=""),
+  org=config.extra.h_card_org | default(value=""),
+  photo=config.extra.h_card_photo | default(value=""),
+  urls=config.extra.h_card_urls | default(value=[]),
+  emails=config.extra.h_card_emails | default(value=[]),
+  tels=config.extra.h_card_tels | default(value=[]),
+  street_address=config.extra.h_card_street_address | default(value=""),
+  locality=config.extra.h_card_locality | default(value=""),
+  region=config.extra.h_card_region | default(value=""),
+  region_title=config.extra.h_card_region_title | default(value=""),
+  postal_code=config.extra.h_card_postal_code | default(value=""),
+  country_name=config.extra.h_card_country_name | default(value=""),
+  bday=config.extra.h_card_bday | default(value=""),
+  category=config.extra.h_card_category | default(value=""),
+  note=config.extra.h_card_note | default(value=""), ) }}
+</div>
+{%- endif -%}
