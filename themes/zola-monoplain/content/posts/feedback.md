@@ -57,13 +57,13 @@ See next section for an example of the feedback email link in action.
 
 The feedback component now uses a reusable Tera macro called `obfuscate_mail` from `templates/macros/email.html`.
 
-```tera
-\{\{ email::obfuscate_mail(
+```md
+{{/* email::obfuscate_mail(
   local_part=local_part,
   domain_name=config.extra.feedback_email_address.domain_name,
   tld=config.extra.feedback_email_address.tld,
   title=trans(key="post_feedback_email_link_title")
-) \}\}
+) */}}
 ```
 
 This keeps the obfuscation logic in one place and makes reuse in other templates easier.

@@ -169,19 +169,20 @@ debug = true
 
 When debugging a component, render the current page context in a template (for example in `templates/post.html`):
 
-```tera
+```md
 {% if config.extra.debug %}
+
 <details>
   <summary>Debug: page</summary>
-  <pre>\{\{ page | default(value="{}") | json_encode | safe \}\}</pre>
+  <pre>{{/* page | default(value="{}") | json_encode | safe */}}</pre>
 </details>
 {% endif %}
 ```
 
 The escaped braces are for Markdown examples. In your actual template file, use normal braces:
 
-```tera
-{{ page | default(value="{}") | json_encode | safe }}
+```md
+{{/* page | default(value="{}") | json_encode | safe */}}
 ```
 
 This is useful to inspect available keys while developing components.
@@ -190,12 +191,12 @@ This is useful to inspect available keys while developing components.
 
 For reusable components/macros, print only the value you need first, then expand:
 
-```tera
-{{ page.title | default(value="(no title)") }}
+```md
+{{/* page.title | default(value="(no title)") */}}
 ```
 
-```tera
-{{ page.extra | default(value="{}") | json_encode | safe }}
+```md
+{{/* page.extra | default(value="{}") | json_encode | safe */}}
 ```
 
 Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.

@@ -21,10 +21,10 @@ To use an icon in your content, you can use the `icon` shortcode. The `icon` sho
 Here is an example of how to use the `icon` shortcode:
 
 ```md
-\{\{ icon(name="activity") \}\}
+{{/* icon(name="activity") */}}
 ```
 
-Please note that the shortcode normally start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Please note that the shortcode normally start and end with `{{` and `}}`. But in code examples, they must be escaped as `{{/*` and `*/}}` to prevent Zola from processing them.
 
 This renders the `activity` icon. You can find all available icon names on the [Tabler Icons website](https://tabler.io/icons).
 
@@ -32,9 +32,9 @@ This renders the `activity` icon. You can find all available icon names on the [
 
 Here is an example of how to use the `icon` shortcode:
 
-{{ icon(name="activity") }} is `\{\{ icon(name="activity") \}\}` in a Markdown file.
+{{ icon(name="activity") }} is `{{/* icon(name="activity") */}}` in a Markdown file.
 
-Please note that the shortcode normally start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Please note that the shortcode normally start and end with `{{` and `}}`. But in code examples, they must be escaped as `{{/*` and `*/}}` to prevent Zola from processing them.
 
 This theme uses the [SVG sprite version](https://tabler.io/docs/icons/sprite) of Tabler Icons. The sprite is a single SVG file that contains all icons, which helps reduce HTTP requests.
 

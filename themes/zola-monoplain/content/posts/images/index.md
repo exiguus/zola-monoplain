@@ -73,7 +73,7 @@ Use this when you want plain Markdown behavior. No lazy-loading or responsive `s
 ### 2. Theme Image Shortcode (Responsive)
 
 ```md
-\{\{ image(src="photo-01.jpg", alt="A calm city skyline at dusk") \}\}
+{{/* image(src="photo-01.jpg", alt="A calm city skyline at dusk") */}}
 ```
 
 When used without explicit width/height, this calls the responsive image macro and generates `srcset` variants based on theme config.
@@ -81,7 +81,7 @@ When used without explicit width/height, this calls the responsive image macro a
 If you want a fixed output size:
 
 ```md
-\{\{ image(src="photo-01.jpg", alt="A calm city skyline at dusk", width=800, height=450) \}\}
+{{/* image(src="photo-01.jpg", alt="A calm city skyline at dusk", width=800, height=450) */}}
 ```
 
 With width and height set, the shortcode uses a fixed resize path.
@@ -153,28 +153,28 @@ The implementation lives in `templates/macros/images.html` and is reused across 
 
 In templates, import and call the image macros like this:
 
-```tera
+```md
 {% import "macros/images.html" as images %}
 
-{{ images::responsive_image(
+{{/* images::responsive_image(
   path=page.colocated_path,
   src="photo-01.jpg",
   alt="A calm city skyline at dusk",
   default_size=384,
   sizes=[384, 576, 1200]
-) }}
+) */}}
 ```
 
 Thumbnail usage:
 
-```tera
-{{ images::responsive_thumbnail(
+```md
+{{/* images::responsive_thumbnail(
   path=post.colocated_path,
   src="photo-01.jpg",
   alt=post.title,
   default_size=128,
   sizes=[128, 256]
-) }}
+) */}}
 ```
 
 ## Practical Workflow
@@ -182,7 +182,7 @@ Thumbnail usage:
 1. Put post text and image files in the same colocated post directory.
 2. Use `extra.hero_img` for a hero image.
 3. Use `extra.images` for gallery/latest image blocks.
-4. Use `\{\{ image(...) \}\}` shortcode in Markdown when you want responsive behavior in body content (best with colocated bundles).
+4. Use `{{/* image(...) */}}` shortcode in Markdown when you want responsive behavior in body content (best with colocated bundles).
 5. Tune `images_sizes` and `thumbnail_sizes` in config for your performance and quality targets.
 
 ## Summary

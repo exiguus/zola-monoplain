@@ -102,7 +102,7 @@ The following Open Graph tags are used to define the title, description, and ima
 The shortcode for the image looks like this:
 
 ```markdown
-\{\{ image(src="opengraph-preview-image.jpg", alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.", width=1200, height=630) \}\}
+{{/* image(src="opengraph-preview-image.jpg", alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.", width=1200, height=630) */}}
 ```
 
 ## Original Image
@@ -112,7 +112,7 @@ The shortcode for the image looks like this:
 The shortcode for the image looks like this:
 
 ```markdown
-\{\{ image(src="opengraph-preview-image.jpg", alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.") \}\}
+{{/* image(src="opengraph-preview-image.jpg", alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.") */}}
 ```
 
 ## Default Image
@@ -124,5 +124,5 @@ The fallback image is used when no `preview_img` or `hero_img` is defined in the
 The shortcode for the image looks like this:
 
 ```markdown
-\{\{ image(src="../../../static/images/og-preview.png", alt="Default opengraph image show a face, painted in blue on white ground.", width=1200, height=630) \}\}
+{{/* image(src="../../../static/images/og-preview.png", alt="Default opengraph image show a face, painted in blue on white ground.", width=1200, height=630) */}}
 ```
