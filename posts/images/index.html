@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-12T19:12:57.147241928+00:00" />
+<meta name="build" content="2026-07-19T23:05:38.085154332+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Images"
@@ -315,10 +315,10 @@ accessible" />
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>![</span><span style="color: #FF79C6;">Alternative text</span><span>](</span><span style="color: #8BE9FD;text-decoration: underline;">photo-01.jpg</span><span>)</span></span></code></pre>
 <p>Use this when you want plain Markdown behavior. No lazy-loading or responsive <code>srcset</code> is generated. The image path is resolved relative to the page's location, so it works with colocated content or global paths.</p>
 <h3 id="2-theme-image-shortcode-responsive">2. Theme Image Shortcode (Responsive)</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;photo-01.jpg&quot;, alt=&quot;A calm city skyline at dusk&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;photo-01.jpg&quot;, alt=&quot;A calm city skyline at dusk&quot;) }}</span></span></code></pre>
 <p>When used without explicit width/height, this calls the responsive image macro and generates <code>srcset</code> variants based on theme config.</p>
 <p>If you want a fixed output size:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;photo-01.jpg&quot;, alt=&quot;A calm city skyline at dusk&quot;, width=800, height=450) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;photo-01.jpg&quot;, alt=&quot;A calm city skyline at dusk&quot;, width=800, height=450) }}</span></span></code></pre>
 <p>With width and height set, the shortcode uses a fixed resize path.</p>
 <h2 id="config-extra">Config Extra</h2>
 <p>Image behavior is controlled in <code>config.toml</code>:</p>
@@ -371,28 +371,28 @@ accessible" />
 <p><code>templates/pages/gallery.html</code>, <code>templates/components/latest_images.html</code>, and <code>templates/components/post_latest_images.html</code> iterate over <code>post.extra.images</code> and render each with <code>responsive_thumbnail(...)</code>.</p>
 <h2 id="template-usage-examples">Template Usage Examples</h2>
 <p>In templates, import and call the image macros like this:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{% import &quot;macros/images.html&quot; as images %}</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{% import &quot;macros/images.html&quot; as images %}</span></span>
 <span class="giallo-l"></span>
-<span class="giallo-l"><span>{{ images::responsive_image(</span></span>
+<span class="giallo-l"><span>{{/* images::responsive_image(</span></span>
 <span class="giallo-l"><span>  path=page.colocated_path,</span></span>
 <span class="giallo-l"><span>  src=&quot;photo-01.jpg&quot;,</span></span>
 <span class="giallo-l"><span>  alt=&quot;A calm city skyline at dusk&quot;,</span></span>
 <span class="giallo-l"><span>  default_size=384,</span></span>
 <span class="giallo-l"><span>  sizes=[384, 576, 1200]</span></span>
-<span class="giallo-l"><span>) }}</span></span></code></pre>
+<span class="giallo-l"><span>) */}}</span></span></code></pre>
 <p>Thumbnail usage:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ images::responsive_thumbnail(</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* images::responsive_thumbnail(</span></span>
 <span class="giallo-l"><span>  path=post.colocated_path,</span></span>
 <span class="giallo-l"><span>  src=&quot;photo-01.jpg&quot;,</span></span>
 <span class="giallo-l"><span>  alt=post.title,</span></span>
 <span class="giallo-l"><span>  default_size=128,</span></span>
 <span class="giallo-l"><span>  sizes=[128, 256]</span></span>
-<span class="giallo-l"><span>) }}</span></span></code></pre><h2 id="practical-workflow">Practical Workflow</h2>
+<span class="giallo-l"><span>) */}}</span></span></code></pre><h2 id="practical-workflow">Practical Workflow</h2>
 <ol>
 <li>Put post text and image files in the same colocated post directory.</li>
 <li>Use <code>extra.hero_img</code> for a hero image.</li>
 <li>Use <code>extra.images</code> for gallery/latest image blocks.</li>
-<li>Use <code>\{\{ image(...) \}\}</code> shortcode in Markdown when you want responsive behavior in body content (best with colocated bundles).</li>
+<li>Use <code>{{/* image(...) */}}</code> shortcode in Markdown when you want responsive behavior in body content (best with colocated bundles).</li>
 <li>Tune <code>images_sizes</code> and <code>thumbnail_sizes</code> in config for your performance and quality targets.</li>
 </ol>
 <h2 id="summary">Summary</h2>
@@ -639,7 +639,7 @@ accessible" />
   <ul aria-labelledby="footer-links">
      <li>
       <a
-        href="https://github.com/exiguus&#x2F;zola-monoplain"
+        href="https://github.com/exiguus"
         title="Github page"
         rel="me"
       >
@@ -700,10 +700,27 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-12 21:12:57 Europe&#x2F;Berlin</small
+      >2026-07-20 01:05:38 Europe&#x2F;Berlin</small
     >
-  </p>
-</footer>
+  </p><div class="sr-only">
+    
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+  </div></footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
   </body>
 

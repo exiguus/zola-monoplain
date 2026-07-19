@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-12T19:12:57.147241928+00:00" />
+<meta name="build" content="2026-07-19T23:05:38.085154332+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Feedback"
@@ -198,12 +198,12 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
 <p>See next section for an example of the feedback email link in action.</p>
 <h2 id="template-macro">Template Macro</h2>
 <p>The feedback component now uses a reusable Tera macro called <code>obfuscate_mail</code> from <code>templates/macros/email.html</code>.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>\{\{ email::obfuscate_mail(</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* email::obfuscate_mail(</span></span>
 <span class="giallo-l"><span>  local_part=local_part,</span></span>
 <span class="giallo-l"><span>  domain_name=config.extra.feedback_email_address.domain_name,</span></span>
 <span class="giallo-l"><span>  tld=config.extra.feedback_email_address.tld,</span></span>
 <span class="giallo-l"><span>  title=trans(key=&quot;post_feedback_email_link_title&quot;)</span></span>
-<span class="giallo-l"><span>) \}\}</span></span></code></pre>
+<span class="giallo-l"><span>) */}}</span></span></code></pre>
 <p>This keeps the obfuscation logic in one place and makes reuse in other templates easier.</p>
    <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
@@ -453,7 +453,7 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
   <ul aria-labelledby="footer-links">
      <li>
       <a
-        href="https://github.com/exiguus&#x2F;zola-monoplain"
+        href="https://github.com/exiguus"
         title="Github page"
         rel="me"
       >
@@ -514,10 +514,27 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-12 21:12:57 Europe&#x2F;Berlin</small
+      >2026-07-20 01:05:38 Europe&#x2F;Berlin</small
     >
-  </p>
-</footer>
+  </p><div class="sr-only">
+    
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+  </div></footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
   </body>
 

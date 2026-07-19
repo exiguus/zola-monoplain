@@ -68,7 +68,7 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/shortcodes/</loc>
-        <lastmod>2026-07-12</lastmod>
+        <lastmod>2026-07-19</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/themes/</loc>
@@ -99,6 +99,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/deployment/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/details/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/development/</loc>
     </url>
     <url>
@@ -106,6 +109,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/e-mail/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/email/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/emojis/</loc>
@@ -118,6 +124,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/github-actions/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/h-card/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/icons/</loc>
@@ -135,6 +144,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/open-graph/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/phone/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/preview-image/</loc>
     </url>
     <url>
@@ -142,6 +154,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/shortcodes/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/spotify/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/ssg/</loc>
@@ -163,6 +178,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/typography/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/youtube/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/zola/</loc>

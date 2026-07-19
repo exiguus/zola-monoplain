@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-12T19:12:57.147241928+00:00" />
+<meta name="build" content="2026-07-19T23:05:38.085154332+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Open Graph Preview"
@@ -251,18 +251,18 @@ The <code>resize_image</code> function is used to generate a resized version of 
 <img width="1200" height="630" alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice." title="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice." src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.7af4c0b2bacc5a13.jpg" class="" loading="lazy" />
  
 <p>The shortcode for the image looks like this:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;, width=1200, height=630) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre><h2 id="original-image">Original Image</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;, width=1200, height=630) }}</span></span></code></pre><h2 id="original-image">Original Image</h2>
 <img width="960" height="720" alt="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice." title="Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice."
   src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.d38cf9121835c9c4.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.d38cf9121835c9c4.webp 256w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.bed273476062c37c.webp 384w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.f59116ccd8c5d706.webp 512w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.68ddf0ae3e0a8159.webp 576w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.eb66aa07c332092d.webp 640w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.32dbef01b009dee5.webp 768w" class=""
   loading="lazy" />
  
 <p>The shortcode for the image looks like this:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre><h2 id="default-image">Default Image</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;opengraph-preview-image.jpg&quot;, alt=&quot;Hand holding an ice cream cone with a scoop of creamy ice cream by a canal lined with colorful buildings in a Venice.&quot;) }}</span></span></code></pre><h2 id="default-image">Default Image</h2>
 <p>The fallback image is used when no <code>preview_img</code> or <code>hero_img</code> is defined in the page metadata. This image is located at <code>static/images/og-preview.png</code> and is used as a default Open Graph image.</p>
 <img width="1200" height="630" alt="Default opengraph image show a face, painted in blue on white ground." title="Default opengraph image show a face, painted in blue on white ground." src="https://exiguus.github.io/zola-monoplain/processed_images/og-preview.a8335c487f06e49e.png" class="" loading="lazy" />
  
 <p>The shortcode for the image looks like this:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> image(src=&quot;../../../static/images/og-preview.png&quot;, alt=&quot;Default opengraph image show a face, painted in blue on white ground.&quot;, width=1200, height=630) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre>   <section aria-labelledby="latest-feedback">
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;../../../static/images/og-preview.png&quot;, alt=&quot;Default opengraph image show a face, painted in blue on white ground.&quot;, width=1200, height=630) }}</span></span></code></pre>   <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
@@ -498,7 +498,7 @@ The <code>resize_image</code> function is used to generate a resized version of 
   <ul aria-labelledby="footer-links">
      <li>
       <a
-        href="https://github.com/exiguus&#x2F;zola-monoplain"
+        href="https://github.com/exiguus"
         title="Github page"
         rel="me"
       >
@@ -559,10 +559,27 @@ The <code>resize_image</code> function is used to generate a resized version of 
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-12 21:12:57 Europe&#x2F;Berlin</small
+      >2026-07-20 01:05:38 Europe&#x2F;Berlin</small
     >
-  </p>
-</footer>
+  </p><div class="sr-only">
+    
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+  </div></footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
   </body>
 

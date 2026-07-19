@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-12T19:12:57.147241928+00:00" />
+<meta name="build" content="2026-07-19T23:05:38.085154332+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Icons"
@@ -180,8 +180,8 @@ accessible" />
 <p>This theme uses the <a rel="external" href="https://tabler.io/">Tabler Icons</a> set. Tabler Icons provides free, MIT-licensed SVG icons for web projects.</p>
 <p>To use an icon in your content, you can use the <code>icon</code> shortcode. The <code>icon</code> shortcode takes the name of the icon as an argument and renders the SVG icon.</p>
 <p>Here is an example of how to use the <code>icon</code> shortcode:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span style="color: #FF79C6;">\{\{</span><span> icon(name=&quot;activity&quot;) </span><span style="color: #FF79C6;">\}\}</span></span></code></pre>
-<p>Please note that the shortcode normally start and end with <code>{{</code> and <code>}}</code>. But in this example the shortcode start and end with <code>\{\{</code> and <code>\}\}</code>. This is necessary to render the shortcode in the Markdown file.</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ icon(name=&quot;activity&quot;) }}</span></span></code></pre>
+<p>Please note that the shortcode normally start and end with <code>{{</code> and <code>}}</code>. But in code examples, they must be escaped as <code>{{/*</code> and <code>*/}}</code> to prevent Zola from processing them.</p>
 <p>This renders the <code>activity</code> icon. You can find all available icon names on the <a rel="external" href="https://tabler.io/icons">Tabler Icons website</a>.</p>
 <h2 id="example">Example</h2>
 <p>Here is an example of how to use the <code>icon</code> shortcode:</p>
@@ -190,8 +190,8 @@ accessible" />
   <use xlink:href="#tabler-activity" />
 </svg>
 
- is <code>\{\{ icon(name="activity") \}\}</code> in a Markdown file.</p>
-<p>Please note that the shortcode normally start and end with <code>{{</code> and <code>}}</code>. But in this example the shortcode start and end with <code>\{\{</code> and <code>\}\}</code>. This is necessary to render the shortcode in the Markdown file.</p>
+ is <code>{{ icon(name="activity") }}</code> in a Markdown file.</p>
+<p>Please note that the shortcode normally start and end with <code>{{</code> and <code>}}</code>. But in code examples, they must be escaped as <code>{{/*</code> and <code>*/}}</code> to prevent Zola from processing them.</p>
 <p>This theme uses the <a rel="external" href="https://tabler.io/docs/icons/sprite">SVG sprite version</a> of Tabler Icons. The sprite is a single SVG file that contains all icons, which helps reduce HTTP requests.</p>
 <h2 id="icons">Icons</h2>
 <p>A list of all available icons in the Tabler Icons set:</p>
@@ -78951,7 +78951,7 @@ accessible" />
   <ul aria-labelledby="footer-links">
      <li>
       <a
-        href="https://github.com/exiguus&#x2F;zola-monoplain"
+        href="https://github.com/exiguus"
         title="Github page"
         rel="me"
       >
@@ -79012,10 +79012,27 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-12 21:12:57 Europe&#x2F;Berlin</small
+      >2026-07-20 01:05:38 Europe&#x2F;Berlin</small
     >
-  </p>
-</footer>
+  </p><div class="sr-only">
+    
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+  </div></footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
   </body>
 

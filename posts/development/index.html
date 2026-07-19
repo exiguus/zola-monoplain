@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-12T19:12:57.147241928+00:00" />
+<meta name="build" content="2026-07-19T23:05:38.085154332+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Development"
@@ -444,18 +444,19 @@ accessible" />
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
 <span class="giallo-l"><span style="color: #8BE9FD;">debug</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span></code></pre><h3 id="print-page-data-in-templates">Print page data in templates</h3>
 <p>When debugging a component, render the current page context in a template (for example in <code>templates/post.html</code>):</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{% if config.extra.debug %}</span></span>
-<span class="giallo-l"><span>&lt;details&gt;</span></span>
-<span class="giallo-l"><span>  &lt;summary&gt;Debug: page&lt;/summary&gt;</span></span>
-<span class="giallo-l"><span>  &lt;pre&gt;\{\{ page | default(value=&quot;{}&quot;) | json_encode | safe \}\}&lt;/pre&gt;</span></span>
-<span class="giallo-l"><span>&lt;/details&gt;</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{% if config.extra.debug %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">details</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">summary</span><span>&gt;Debug: page&lt;/</span><span style="color: #FF79C6;">summary</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">pre</span><span>&gt;{{/* page | default(value=&quot;{}&quot;) | json_encode | safe */}}&lt;/</span><span style="color: #FF79C6;">pre</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&lt;/</span><span style="color: #FF79C6;">details</span><span>&gt;</span></span>
 <span class="giallo-l"><span>{% endif %}</span></span></code></pre>
 <p>The escaped braces are for Markdown examples. In your actual template file, use normal braces:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ page | default(value=&quot;{}&quot;) | json_encode | safe }}</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page | default(value=&quot;{}&quot;) | json_encode | safe */}}</span></span></code></pre>
 <p>This is useful to inspect available keys while developing components.</p>
 <h3 id="scope-component-debugging">Scope component debugging</h3>
 <p>For reusable components/macros, print only the value you need first, then expand:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ page.title | default(value=&quot;(no title)&quot;) }}</span></span></code></pre><pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>{{ page.extra | default(value=&quot;{}&quot;) | json_encode | safe }}</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.title | default(value=&quot;(no title)&quot;) */}}</span></span></code></pre><pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.extra | default(value=&quot;{}&quot;) | json_encode | safe */}}</span></span></code></pre>
 <p>Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.</p>
 <h2 id="7-run-local-accessibility-checks">7. Run local accessibility checks</h2>
 <p>To test accessibility against a local running dev server:</p>
@@ -756,7 +757,7 @@ accessible" />
   <ul aria-labelledby="footer-links">
      <li>
       <a
-        href="https://github.com/exiguus&#x2F;zola-monoplain"
+        href="https://github.com/exiguus"
         title="Github page"
         rel="me"
       >
@@ -817,10 +818,27 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-12 21:12:57 Europe&#x2F;Berlin</small
+      >2026-07-20 01:05:38 Europe&#x2F;Berlin</small
     >
-  </p>
-</footer>
+  </p><div class="sr-only">
+    
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+  </div></footer>
 <script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
   </body>
 
