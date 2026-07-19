@@ -122,7 +122,9 @@ thumbnail_quality = 70
 thumbnail_default_size = 128
 thumbnail_sizes = [128, 256]
 # links
-link_github_username = "exiguus/zola-monoplain"
+# github and the mastadon url can be used as web sign in because they contain rel="me"
+#   to validate you might use https://indiewebify.me/validate-rel-me/
+link_github_username = "exiguus"
 link_mastodon_url = "https://toot.community/@exiguus"
 # main navigation
 main_nav_items = [
