@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og:https://ogp.me/ns#">
+
+<head>
+  <title>Shortcodes | mono&#x2F;plain; a11y=true</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Zola" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="Shortcodes" />
+<meta name="description" content="Shortcodes by example" />
+<meta name="keywords" content="zola,
+theme,
+a11y,
+accessible" />
+<meta name="author" content="Simon Gattner" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="build" content="2026-07-20T14:51:50.933161414+00:00" />
+<meta
+  property="og:title"
+  content="mono&#x2F;plain; a11y=true | Shortcodes"
+/>
+<meta property="og:type" content="website" />
+<meta
+  property="og:url"
+  content="https://exiguus.github.io/zola-monoplain/posts/shortcodes/"
+/>
+<meta property="og:description" content="Shortcodes by example" />
+<meta property="og:image" content="https://exiguus.github.io/zola-monoplain/processed_images/example-image.25075be278bbfd78.jpg" />
+<meta property="og:image:url" content="https://exiguus.github.io/zola-monoplain/processed_images/example-image.25075be278bbfd78.jpg" />
+<meta property="og:image:secure_url" content="https://exiguus.github.io/zola-monoplain/processed_images/example-image.25075be278bbfd78.jpg" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="mono&#x2F;plain; a11y=true Atom Feed"
+  href="https://exiguus.github.io/zola-monoplain/atom.xml"
+/> <link
+  rel="alternate"
+  type="application/rss+xml"
+  title="mono&#x2F;plain; a11y=true RSS Feed"
+  href="https://exiguus.github.io/zola-monoplain/atom.rss"
+/>
+<link
+  rel="stylesheet"
+  href="https://exiguus.github.io/zola-monoplain/base.css"
+  media="screen"
+/>
+
+  
+</head>
+<body id="posts--shortcodes" data-base-url="https://exiguus.github.io/zola-monoplain">
+  
+<nav
+  id="skip-nav"
+  aria-label="Skip Navigation"
+  aria-live="off"
+  aria-atomic="false"
+>
+  <ul>
+    <li><a href="#main">Skip to content</a></li>
+    <li
+      ><a href="#toc">Skip to table of contents</a>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+          </li>
+        <li>
+          <a href="#shortcodes">Shortcodes</a>
+          <ul>
+            <li>
+              <a href="#images">Images</a>
+              </li>
+            <li>
+              <a href="#details">Details</a>
+              </li>
+            <li>
+              <a href="#markdown">Markdown</a>
+              </li>
+            <li>
+              <a href="#icons">Icons</a>
+              </li>
+            <li>
+              <a href="#youtube">Youtube</a>
+              </li>
+            <li>
+              <a href="#spotify">Spotify</a>
+              </li>
+            <li>
+              <a href="#email">Email</a>
+              </li>
+            <li>
+              <a href="#phone">Phone</a>
+              </li>
+            <li>
+              <a href="#h-card">h-card</a>
+              </li>
+            </ul>
+          </li>
+        <li>
+          <a href="#conclusion">Conclusion</a>
+          </li>
+        </ul>
+    </li>
+    <li><a href="#main-nav">Skip to navigation</a></li>
+  </ul>
+</nav>
+<header>
+  <a href="https://exiguus.github.io/zola-monoplain" title="mono&#x2F;plain; a11y=true">
+    <h1>mono&#x2F;plain; a11y=true</h1>
+    <p>An accessible, monospace plain Zola Theme</p>
+  </a>
+</header>
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<div>
+      <main id="main">
+         <header>
+  
+
+<p aria-label="Author"
+  >By 
+  <a href="https://exiguus.github.io/zola-monoplain/authors/simon-gattner"
+    >Simon Gattner</a
+  > 
+</p>
+ 
+  <h1
+    >Shortcodes </h1
+  >
+  <p>
+    Created:
+    <date>2024-06-08</date>
+  </p>
+  <p>
+    Updated:
+    <date>2026-07-19</date>
+  </p>
+   <nav aria-labelledby="toc">
+  <details aria-labelledby="toc" open="true">
+    <summary id="toc">Table of contents</summary>
+    <ol aria-labelledby="toc">
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#introduction">Introduction</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#shortcodes">Shortcodes</a>
+        
+        <ol>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#images">Images</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#details">Details</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#markdown">Markdown</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#icons">Icons</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#youtube">Youtube</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#spotify">Spotify</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#email">Email</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#phone">Phone</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#h-card">h-card</a>
+            
+          </li>
+          
+        </ol>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/#conclusion">Conclusion</a>
+        
+      </li>
+      
+    </ol>
+  </details>
+</nav>
+
+
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Shortcodes let you embed dynamic content in Markdown files. In this post, you will learn how to use the shortcodes provided by this theme.</p>
+<h2 id="shortcodes">Shortcodes</h2>
+<h3 id="images">Images</h3>
+<p>The <code>image</code> shortcode can be used to embed images in your Markdown files. This can be useful for adding visual elements to your posts. Here is an example of how to use the <code>image</code> shortcode:</p>
+<img width="2488" height="1866" alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening." title="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening."
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.ee902c82fac415f4.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.ee902c82fac415f4.webp 256w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.e5e29c50e314e1b9.webp 384w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.cc5b9c0d0b20958f.webp 512w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.c3524b03fcc92dc6.webp 576w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.62bec2053c00b571.webp 640w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.644358c26a4cf6f5.webp 768w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.a78bd639729c8ee6.webp 1024w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.dfa84b5c0aaf066c.webp 1152w" class=""
+  loading="lazy" />
+ <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;example-image.jpg&quot;, alt=&quot;Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.&quot;) }}</span></span></code></pre>
+<p>The <code>src</code> parameter specifies the image filename (resolved relative to the page context), and the <code>alt</code> parameter specifies the alt text for the image.</p>
+<img width="800" height="450" alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening." title="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening." src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.1f42d1c81e13ea44.jpg" class="" loading="lazy" />
+ <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;example-image.jpg&quot;, alt=&quot;Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.&quot;, width=800, height=450) }}</span></span></code></pre>
+<p>The <code>width</code> and <code>height</code> parameters can be used to specify the size of the image. The <code>width</code> and <code>height</code> parameters are optional and can be omitted if you want to use the original size of the image.</p>
+<h3 id="details">Details</h3>
+<p>The <code>details</code> shortcode can be used to create a collapsible section in your Markdown files. This can be useful for hiding additional information or content that is not essential to the main text. Here is an example of how to use the <code>details</code> shortcode:</p>
+<details aria-label="details">
+  <summary>Click to expand</summary>
+<p>This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.</p>
+</details>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ details(title=&quot;Click to expand&quot;, summary=&quot;This is a summary&quot; content=</span><span style="color: #50FA7B;">`This is the content that will be hidden by default. You can click on the summary above to expand or collapse this section.`</span><span>) }}</span></span></code></pre><h3 id="markdown">Markdown</h3>
+<p>The <code>markdown</code> shortcode can render code examples and their output in the same post. Here is an example that renders an HTML form and its source.</p>
+<figure aria-label="markdown">
+  <figcaption>
+    Example: input attr type is number and attr step is 1
+  </figcaption>
+  <iframe
+  title="input attr type is number and attr step is 1"
+  srcdoc='
+<html>
+  <head>
+    <title>input attr type is number and attr step is 1</title>
+    <style>
+      // enable native light/dark mode
+      :root {
+        color-scheme: light dark;
+      }
+      html {
+        color-scheme: light dark;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Consolas, "Lucida Console", Monaco, monospace;
+      }
+    </style>
+  </head>
+  <body>
+<form>
+    <input type="number" step="1" />
+    <input type="submit" />
+  </form>
+  <p>Input value: <span></span></p>
+  <script>
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.querySelector("span").innerText = e.target.querySelector("input").value;
+    });
+  </script>
+  </body>
+</html>
+'
+>
+</iframe>
+  <details aria-label="source" open>
+    <summary>Source</summary>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="html"><span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">form</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #FF79C6;">input</span><span style="color: #50FA7B;font-style: italic;"> type</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">number</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> step</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">1</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #FF79C6;">input</span><span style="color: #50FA7B;font-style: italic;"> type</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">submit</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #FF79C6;">form</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">p</span><span>&gt;Input value: &lt;</span><span style="color: #FF79C6;">span</span><span>&gt;&lt;/</span><span style="color: #FF79C6;">span</span><span>&gt;&lt;/</span><span style="color: #FF79C6;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    document.</span><span style="color: #50FA7B;">querySelector</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">form</span><span style="color: #E9F284;">&quot;</span><span>).</span><span style="color: #50FA7B;">addEventListener</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">submit</span><span style="color: #E9F284;">&quot;</span><span>, (</span><span style="color: #FFB86C;font-style: italic;">e</span><span>)</span><span style="color: #FF79C6;"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span>      e.</span><span style="color: #50FA7B;">preventDefault</span><span>();</span></span>
+<span class="giallo-l"><span>      document.</span><span style="color: #50FA7B;">querySelector</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">span</span><span style="color: #E9F284;">&quot;</span><span>).innerText</span><span style="color: #FF79C6;"> =</span><span> e.target.</span><span style="color: #50FA7B;">querySelector</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">input</span><span style="color: #E9F284;">&quot;</span><span>).value;</span></span>
+<span class="giallo-l"><span>    });</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #FF79C6;">script</span><span>&gt;</span></span></code></pre></details>
+</figure>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/</span><span style="color: #FF79C6;">\*</span><span> markdown(title=&quot;input attr type is number and attr step is 1&quot; type=&quot;html&quot;, code=&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">form</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #FF79C6;">input</span><span style="color: #50FA7B;font-style: italic;"> type</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">number</span><span style="color: #E9F284;">&quot;</span><span style="color: #50FA7B;font-style: italic;"> step</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">1</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>    &lt;</span><span style="color: #FF79C6;">input</span><span style="color: #50FA7B;font-style: italic;"> type</span><span style="color: #FF79C6;">=</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">submit</span><span style="color: #E9F284;">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #FF79C6;">form</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">p</span><span>&gt;Input value: &lt;</span><span style="color: #FF79C6;">span</span><span>&gt;&lt;/</span><span style="color: #FF79C6;">span</span><span>&gt;&lt;/</span><span style="color: #FF79C6;">p</span><span>&gt;</span></span>
+<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span>    document.</span><span style="color: #50FA7B;">querySelector</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">form</span><span style="color: #E9F284;">&quot;</span><span>).</span><span style="color: #50FA7B;">addEventListener</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">submit</span><span style="color: #E9F284;">&quot;</span><span>, (</span><span style="color: #FFB86C;font-style: italic;">e</span><span>)</span><span style="color: #FF79C6;"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span>      e.</span><span style="color: #50FA7B;">preventDefault</span><span>();</span></span>
+<span class="giallo-l"><span>      document.</span><span style="color: #50FA7B;">querySelector</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">span</span><span style="color: #E9F284;">&quot;</span><span>).innerText</span><span style="color: #FF79C6;"> =</span><span> e.target.</span><span style="color: #50FA7B;">querySelector</span><span>(</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">input</span><span style="color: #E9F284;">&quot;</span><span>).value;</span></span>
+<span class="giallo-l"><span>    });</span></span>
+<span class="giallo-l"><span>  &lt;/</span><span style="color: #FF79C6;">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span>&#39;) */}}</span></span></code></pre><h3 id="icons">Icons</h3>
+<p>The <code>icon</code> shortcode can be used to embed icons in your Markdown files. This can be useful for adding visual elements to your posts. Here is an example of how to use the <code>icon</code> shortcode:</p>
+ 
+<svg width="32" height="32">
+  <use xlink:href="#tabler-activity" />
+</svg>
+
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ icon(name=&quot;activity&quot;,size=32) }}</span></span></code></pre>
+<p>The size of the icon can be adjusted by adding the <code>size</code> parameter to the shortcode. The default size is 32 pixels, but you can specify a different size. The parameter is optional and can be omitted if you want to use the default size.</p>
+<p>All available icon names can be found on the <a href="https://exiguus.github.io/zola-monoplain/posts/icons/">icon page</a>.</p>
+<h3 id="youtube">Youtube</h3>
+<p>The <code>youtube</code> shortcode can be used to embed YouTube videos in your Markdown files. This can be useful for including video content in your posts. Here is an example of how to use the <code>youtube</code> shortcode:</p>
+<figure class="youtube">
+  <iframe
+    title="loop"
+    src="https://www.youtube-nocookie.com/embed/Pb4Naef8pc8"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+  >
+  </iframe>
+</figure>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ youtube(id=&quot;Pb4Naef8pc8&quot;, title=&quot;loop&quot;) }}</span></span></code></pre><h3 id="spotify">Spotify</h3>
+<p>The <code>spotify</code> shortcode can be used to embed Spotify playlists in your Markdown files. This can be useful for including music playlists in your posts. Here is an example of how to use the <code>spotify</code> shortcode:</p>
+<figure class="spotify">
+  <iframe
+    title="album"
+    src="https://open.spotify.com/embed/album/6rqhFgbbKwnb9MLmUQDhG6"
+    width="300"
+    height="380"
+    frameborder="0"
+    allowtransparency="true"
+    allow="encrypted-media"
+  >
+  </iframe>
+</figure>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ spotify(id=&quot;6rqhFgbbKwnb9MLmUQDhG6&quot;, title=&quot;album&quot;) }}</span></span></code></pre><h3 id="email">Email</h3>
+<p>The <code>email</code> shortcode renders an obfuscated mail link and reuses the same logic as the feedback component.</p>
+<p>The <code>local_part</code>, <code>domain_name</code>, and <code>tld</code> parameters are required. Only <code>title</code> is optional.</p>
+<p>Example:</p>
+
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="Reveal email address"
+  
+  data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;org&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;hello&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;org&#8203;&#8203;&#8203;&#x3E;
+</a>
+
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ email(local_part=&quot;hello&quot;, domain_name=&quot;example&quot;, tld=&quot;org&quot;, title=&quot;Reveal email address&quot;) }}</span></span></code></pre>
+<p>Without an explicit <code>title</code>, the shortcode uses <code>post_feedback_email_link_title</code> from <code>translations</code>.</p>
+<p>The rendered output keeps the address obfuscated in source and reveals it through the existing JavaScript behavior.</p>
+<h3 id="phone">Phone</h3>
+<p>The <code>phone</code> shortcode renders an obfuscated phone link. The <code>number</code> parameter is required. The <code>title</code> parameter is optional.</p>
+<p>Example:</p>
+
+<a
+  href="tel:0000000000"
+  title="Call me"
+  
+  class="u-url"
+  
+  data-obfuscated-phone="&#x2B;&#8203;+1-800-555-0199&#8203;"
+>
+  &#8203;+1-800-555-0199&#8203;
+</a>
+
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ phone(number=&quot;+1-800-555-0199&quot;, title=&quot;Call me&quot;) }}</span></span></code></pre>
+<p>The rendered output keeps the phone number obfuscated in source and reveals it through the existing JavaScript behavior.</p>
+<h3 id="h-card">h-card</h3>
+<p>The <code>h-card</code> shortcode renders a <a rel="external" href="https://microformats.org/wiki/h-card">microformat2 h-card</a> for representing people and organizations. All parameters are optional, but at least one must be provided.</p>
+<p><strong>Note:</strong> URLs, emails, and phone numbers are now passed as arrays of arrays to support multiple values.</p>
+<p>Examples:</p>
+<p><strong>Simple h-card with multiple URLs:</strong></p>
+
+<div class="h-card">
+  <div><div class="p-name">Simon</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;exiguus.blog"
+        >exiguus blog</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >GitHub</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus&#x2F;zola-monoplain"
+        >Zola Monoplain theme</a
+      >
+    </div>
+  </div>
+</div> 
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ h_card(</span></span>
+<span class="giallo-l"><span>  name=&quot;Simon&quot;,</span></span>
+<span class="giallo-l"><span>  nickname=&quot;exiguus&quot;,</span></span>
+<span class="giallo-l"><span>  urls=[[&quot;https://exiguus.blog&quot;, &quot;exiguus blog&quot;],[&quot;https://github.com/exiguus&quot;, &quot;GitHub&quot;],[&quot;https://github.com/exiguus/zola-monoplain&quot;, &quot;Zola Monoplain theme&quot;]]</span></span>
+<span class="giallo-l"><span>) }}</span></span></code></pre>
+<p><strong>Full h-card with multiple phone numbers and emails:</strong></p>
+
+<div class="h-card grid">
+  <div><div class="p-name">Sally Ride</div><div class="p-nickname"
+      >Nick: sallykride</div
+    >
+    <div class="p-full-name"><span class="p-honorific-prefix"
+        >Dr. </span
+      ><span class="p-given-name"
+        >Sally </span
+      ><abbr class="p-additional-name"
+        >K. </abbr
+      ><span class="p-family-name"
+        >Ride </span
+      ><span class="p-honorific-suffix"
+        >Ph.D. </span
+      >
+    </div><div class="p-org"
+      >Org: Sally Ride Science</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="http:&#x2F;&#x2F;sally.example.com"
+        >Sally Ride Science website</a
+      >
+    </div>
+    <div class="p-email">
+      
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="Reveal email address"
+  class="u-email"
+  
+  data-obfuscated-email="&#x3C;sally&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;com&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;sally&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;com&#8203;&#8203;&#8203;&#x3E;
+</a>
+
+    </div>
+    <div class="p-email">
+      
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="Reveal email address"
+  class="u-email"
+  
+  data-obfuscated-email="&#x3C;s.ride&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;org&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;s.ride&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;org&#8203;&#8203;&#8203;&#x3E;
+</a>
+
+    </div>
+    <div class="p-tel">
+      
+<a
+  href="tel:0000000000"
+  title="Work phone"
+  
+  class="u-url"
+  
+  data-obfuscated-phone="&#x2B;&#8203;+1-800-555-0100&#8203;"
+>
+  &#8203;+1-800-555-0100&#8203;
+</a>
+
+    </div>
+    <div class="p-tel">
+      
+<a
+  href="tel:0000000000"
+  title="Mobile phone"
+  
+  class="u-url"
+  
+  data-obfuscated-phone="&#x2B;&#8203;+1-800-555-0101&#8203;"
+>
+  &#8203;+1-800-555-0101&#8203;
+</a>
+
+    </div>
+    <div class="p-adr"><div class="p-street-address"
+        >123 Main st.</div
+      ><span class="p-locality"
+        >Los Angeles
+      </span>
+      <abbr
+        class="p-region"title="California"
+        
+        >CA
+      </abbr>
+      <span class="p-postal-code"
+        >91316</span
+      >  <div
+        class="p-country-name"
+        >U.S.A</div
+      >
+    </div>
+    <div class="p-extended"><div class="p-bday"
+        >Born: <time class="dt-bday"
+          >1951-05-26</time
+        > </div
+      ><div class="p-category"
+        >Category: physicist </div
+      >
+    </div>
+  </div>
+  <div>
+    <div class="p-photo">
+      <img width="2790" height="2093" alt="Photo of Sally Ride" title="Photo of Sally Ride"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/Sally_Ride_(1984).489539995b3e76e9.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/Sally_Ride_(1984).cb5cdfb6a134a0c4.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/Sally_Ride_(1984).62c551d5012441f5.webp 256w , https://exiguus.github.io/zola-monoplain/processed_images/Sally_Ride_(1984).59f2577ff7725c1e.webp 512w" class=""
+  loading="lazy" />
+
+    </div><div class="p-note">First American woman in space. The image is from &lt;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;File:Sally_Ride_(1984).jpg&gt;: This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that: NASA material is not protected by copyright unless noted.</div>
+  </div>
+</div> 
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ h_card(</span></span>
+<span class="giallo-l"><span>  name=&quot;Sally Ride&quot;,</span></span>
+<span class="giallo-l"><span>  honorific_prefix=&quot;Dr.&quot;,</span></span>
+<span class="giallo-l"><span>  given_name=&quot;Sally&quot;,</span></span>
+<span class="giallo-l"><span>  additional_name=&quot;K.&quot;,</span></span>
+<span class="giallo-l"><span>  family_name=&quot;Ride&quot;,</span></span>
+<span class="giallo-l"><span>  honorific_suffix=&quot;Ph.D.&quot;,</span></span>
+<span class="giallo-l"><span>  nickname=&quot;sallykride&quot;,</span></span>
+<span class="giallo-l"><span>  org=&quot;Sally Ride Science&quot;,</span></span>
+<span class="giallo-l"><span>  photo=&quot;Sally_Ride_(1984).jpg&quot;,</span></span>
+<span class="giallo-l"><span>  urls=[</span></span>
+<span class="giallo-l"><span>    [&quot;http://sally.example.com&quot;, &quot;Sally Ride Science website&quot;]</span></span>
+<span class="giallo-l"><span>  ],</span></span>
+<span class="giallo-l"><span>  emails=[</span></span>
+<span class="giallo-l"><span>    [&quot;sally&quot;, &quot;example&quot;, &quot;com&quot;]</span></span>
+<span class="giallo-l"><span>  ],</span></span>
+<span class="giallo-l"><span>  tels=[</span></span>
+<span class="giallo-l"><span>    [&quot;+1-800-555-0100&quot;, &quot;Work phone&quot;],</span></span>
+<span class="giallo-l"><span>    [&quot;+1-800-555-0101&quot;, &quot;Mobile phone&quot;]</span></span>
+<span class="giallo-l"><span>  ],</span></span>
+<span class="giallo-l"><span>  street_address=&quot;123 Main st.&quot;,</span></span>
+<span class="giallo-l"><span>  locality=&quot;Los Angeles&quot;,</span></span>
+<span class="giallo-l"><span>  region=&quot;CA&quot;,</span></span>
+<span class="giallo-l"><span>  region_title=&quot;California&quot;,</span></span>
+<span class="giallo-l"><span>  postal_code=&quot;91316&quot;,</span></span>
+<span class="giallo-l"><span>  country_name=&quot;U.S.A&quot;,</span></span>
+<span class="giallo-l"><span>  bday=&quot;1951-05-26&quot;,</span></span>
+<span class="giallo-l"><span>  category=&quot;physicist&quot;,</span></span>
+<span class="giallo-l"><span>  note=&quot;First American woman in space.&quot;</span></span>
+<span class="giallo-l"><span>) }}</span></span></code></pre>
+<p>The shortcode supports all h-card microformat properties including name components, contact information, address, and more. Email addresses and phone numbers are obfuscated to prevent spam.</p>
+<p><strong>Array Format:</strong></p>
+<ul>
+<li><code>urls</code>: Array of arrays, each with <code>[url, url_text]</code> (url_text is optional and defaults to name)</li>
+<li><code>emails</code>: Array of arrays, each with <code>[local_part, domain_name, tld, title]</code> (title is optional)</li>
+<li><code>tels</code>: Array of arrays, each with <code>[number, title]</code> (title is optional)</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Shortcodes are a powerful Zola feature for embedding richer content in Markdown. They are easy to use and help keep posts expressive without leaving the Markdown workflow.</p>
+   <section aria-labelledby="latest-feedback">
+  <h1 id="latest-feedback">Feedback</h1>
+  <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
+  <p>
+    
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  title="This email address has been obscured for security. Please click the link to reveal the actual address."
+  
+  data-obfuscated-email="&#x3C;shortcodes.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;shortcodes.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+</a>
+
+  </p>
+</section>
+<section aria-labelledby="tags">
+  <h1 id="tags">Tags</h1>
+  <ul aria-labelledby="tags">
+    
+    <li aria-label="Zola"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/zola"
+        >Zola</a
+      ></li
+    >
+    
+    <li aria-label="Theme"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/theme"
+        >Theme</a
+      ></li
+    >
+    
+    <li aria-label="Markdown"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/markdown"
+        >Markdown</a
+      ></li
+    >
+    
+    <li aria-label="Shortcodes"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/shortcodes"
+        >Shortcodes</a
+      ></li
+    >
+    
+    <li aria-label="Images"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/images"
+        >Images</a
+      ></li
+    >
+    
+    <li aria-label="Details"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/details"
+        >Details</a
+      ></li
+    >
+    
+    <li aria-label="Markdown"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/markdown"
+        >Markdown</a
+      ></li
+    >
+    
+    <li aria-label="Icons"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/icons"
+        >Icons</a
+      ></li
+    >
+    
+    <li aria-label="Youtube"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/youtube"
+        >Youtube</a
+      ></li
+    >
+    
+    <li aria-label="Spotify"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/spotify"
+        >Spotify</a
+      ></li
+    >
+    
+    <li aria-label="Email"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/email"
+        >Email</a
+      ></li
+    >
+    
+    <li aria-label="Phone"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/phone"
+        >Phone</a
+      ></li
+    >
+    
+    <li aria-label="h-card"
+      ><a href="https://exiguus.github.io/zola-monoplain/tags/h-card"
+        >h-card</a
+      ></li
+    >
+    
+  </ul>
+</section>
+
+
+</main>
+       <aside>
+  <section aria-labelledby="latest-images">
+  <h1 id="latest-images">Latest Images</h1>
+  <ul aria-labelledby="latest-images">
+         <li
+      aria-labelledby="post-image-2025-05-03-opengraph-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/posts/opengraph/"
+        title="Open Graph Preview - 2025-05-03"
+      >
+        <figure>
+          <div class="thumbnail">
+            <img width="960" height="720" alt="Open Graph Preview - 2025-05-03" title="Open Graph Preview - 2025-05-03"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.56c88dd49ee185a6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.cf8aa7476a82dcb4.webp 256w" class=""
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2025-05-03-opengraph-1"
+          >
+            Open Graph Preview
+            <date>2025-05-03</date>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+          <li
+      aria-labelledby="post-image-2024-06-08-shortcodes-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/"
+        title="Shortcodes - 2024-06-08"
+      >
+        <figure>
+          <div class="thumbnail">
+            <img width="2488" height="1866" alt="Shortcodes - 2024-06-08" title="Shortcodes - 2024-06-08"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.babf706ac8aebed6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.067baa4a7c9016f4.webp 256w" class=""
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2024-06-08-shortcodes-1"
+          >
+            Shortcodes
+            <date>2024-06-08</date>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+      </ul>
+</section>
+ 
+<section aria-labelledby="latest-posts">
+  <h1 id="latest-posts">Latest Posts</h1>
+  <ul aria-labelledby="latest-posts">
+    <li aria-labelledby="post-2026-07-12-development-1">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/development/" title="Development">
+        <article>
+          <header id="post-2026-07-12-development-1">
+            <h1>Development</h1>
+            
+            <p>
+              <date> 2026-07-12 </date>
+            </p>
+          </header>
+          <p>Set up a local development environment for Zola theme work</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2026-07-11-images-2">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/images/" title="Images">
+        <article>
+          <header id="post-2026-07-11-images-2">
+            <h1>Images</h1>
+            
+            <p>
+              <date> 2026-07-11 </date>
+            </p>
+          </header>
+          <p>How images work in mono&#x2F;plain and how to use them in posts and templates</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2025-06-17-feedback-3">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/feedback/" title="Feedback">
+        <article>
+          <header id="post-2025-06-17-feedback-3">
+            <h1>Feedback</h1>
+            
+            <p>
+              <date> 2025-06-17 </date>
+            </p>
+          </header>
+          <p>Feedback Email for mono&#x2F;plain theme</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2025-05-03-opengraph-4">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/opengraph/" title="Open Graph Preview">
+        <article>
+          <header id="post-2025-05-03-opengraph-4">
+            <h1>Open Graph Preview</h1>
+            
+            <p>
+              <date> 2025-05-03 </date>
+            </p>
+          </header>
+          <p>Open Graph Preview by example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-15-ci-5">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/ci/" title="Continuous Integration">
+        <article>
+          <header id="post-2024-06-15-ci-5">
+            <h1>Continuous Integration</h1>
+            
+            <p>
+              <date> 2024-06-15 </date>
+            </p>
+          </header>
+          <p>Continuous Integration by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-09-dictionary-6">
+      <a href="https://exiguus.github.io/zola-monoplain/posts/dictionary/" title="Dictionary">
+        <article>
+          <header id="post-2024-06-09-dictionary-6">
+            <h1>Dictionary</h1>
+            
+            <p>
+              <date> 2024-06-09 </date>
+            </p>
+          </header>
+          <p>Dictionary by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+</aside>
+
+    </div>
+    <nav id="footer-nav" aria-label="Footer Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<footer>
+  <h2 id="footer-links" class="sr-only">Links</h2>
+  <ul aria-labelledby="footer-links">
+     <li>
+      <a
+        href="https://github.com/exiguus"
+        title="Github page"
+        rel="me"
+      >
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-github" />
+</svg>
+ </span>
+      </a>
+    </li>
+     <li>
+      <a
+        href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus"
+        title="Mastodon Page"
+        rel="me"
+      >
+        <span class="sr-only"
+          >Mastodon</span
+        >
+        <span aria-hidden="true">
+           
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-mastodon" />
+</svg>
+
+        </span>
+      </a>
+    </li>
+    
+    <li>
+      <a
+        href="https://exiguus.github.io/zola-monoplain/atom.xml"
+        title="Atom Feed"
+        rel="alternate"
+      >
+        <span class="sr-only">Atom</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-rss" />
+</svg>
+ </span>
+      </a>
+    </li>
+  </ul>
+  <h2 id="footer-info" class="sr-only">Information</h2>
+  <p aria-labelledby="footer-info">
+    © mono&#x2F;plain; a11y=true 2026  <br />Powered by
+    <a
+      title="Your one-stop static site engine"
+      href="https://getzola.org/"
+      >Zola</a
+    >. Theme by
+    <a
+      title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
+      href="https://github.com/exiguus/zola-monoplain"
+      >@exiguus mono&#x2F;plain Zola</a
+    >. Made with love.<br />
+    <i class="sr-only">Last update:</i>
+    <small
+      >2026-07-20 16:51:50 Europe&#x2F;Berlin</small
+    >
+  </p>
+</footer>
+<div id="h-card">
+  
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+</div><script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
+  </body>
+
+</html>
