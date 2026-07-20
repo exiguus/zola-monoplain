@@ -1,21 +1,22 @@
 +++
-title = "Continous Integration"
-description = "Continous Integration by Example"
+title = "Continuous Integration"
+description = "Continuous Integration by Example"
 date = 2024-06-15
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "CI", "Continous Integration", "Deployment", "Build", "Github Actions"]
+tags= ["Zola", "CI", "Continuous Integration", "Deployment", "Build", "Github Actions"]
 +++
 
 ## Introduction
 
-The theme use Github Actions for _Continous Integration_ and _Continous Deployment_. The Github Actions are defined in the `.github/workflows` directory. The Github Actions are used to validate, format, build and deploy the website.
+This theme uses GitHub Actions for _Continuous Integration_ and _Continuous Deployment_. The workflows are defined in the `.github/workflows` directory and are used to validate, format, build, and deploy the site.
 
 ## Github Actions
 
-### Simple Github Pages deployment
+### Simple GitHub Pages Deployment
 
-Use `zola-deploy-action` to build and deploy the website to Github Pages.
+Use `zola-deploy-action` to build and deploy the site to GitHub Pages.
 
 ```yml
 # .github/workflows/github-pages.yml
@@ -42,14 +43,14 @@ jobs:
           # Target branch
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-´          BUILD_DIR: themes/zola-monoplain
+          BUILD_DIR: themes/zola-monoplain
 ```
 
 See <https://www.getzola.org/documentation/deployment/github-pages/>
 
-### Advance Github Pages deployment
+### Advanced GitHub Pages Deployment
 
-Use _github-pages-deploy-action_ to build and deploy the website to Github Pages.
+Use _github-pages-deploy-action_ to build and deploy the site to GitHub Pages.
 
 Use _taiki-e/install-action_ to install Zola.
 
@@ -117,7 +118,7 @@ jobs:
           force: false
 ```
 
-### Preview Github Pages deployment
+### Preview GitHub Pages Deployment
 
 Use _pr-preview-action_ to build and deploy the website to Github Pages.
 Test the website with _lighthouse-ci-action_.

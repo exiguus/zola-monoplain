@@ -1,12 +1,13 @@
 {
   "name": "zola-monoplain",
-  "version": "1.4.0",
+  "version": "1.6.0",
   "description": "mono/plain; a11y=true; An accessible, monospace plain Zola Theme",
   "scripts": {
     "dev": "turbo run dev",
     "test": "turbo run test",
     "test:setup": "pnpx puppeteer browsers install chrome",
     "test:environment": "pnpx pa11y --environment",
+    "test:pa11y": "node themes/zola-monoplain/scripts/pa11y.cjs http://127.0.0.1:1111",
     "check": "pnpm check:fta && turbo run check",
     "check:fta": "fta --config-path ./fta.config.json .",
     "build": "turbo run check build test",

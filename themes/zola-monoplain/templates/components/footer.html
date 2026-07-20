@@ -57,7 +57,7 @@
       href="https://github.com/exiguus/zola-monoplain"
       >{{ trans(key="footer_links_theme_text") }}</a
     >. {{ trans(key="footer_made") }}.{% endif %}<br />
-    <i class="sr-only">Last update:</i>
+    <i class="sr-only">{{ trans(key='footer_last_update') }}</i>
     <small
       >{{ now() | date(format="%Y-%m-%d %H:%M:%S",
       timezone=config.extra.timezone) | safe }} {{ config.extra.timezone

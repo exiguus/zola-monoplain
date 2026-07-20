@@ -1,0 +1,24 @@
+{% macro obfuscate_mail(local_part, domain_name, tld, title="", css_class="") %}
+<a
+  href="mailto:invalid\(local)\part@example\.org"
+  {%
+  if
+  title
+  %}title="{{ title }}"
+  {%
+  endif
+  %}
+  {%-
+  if
+  css_class
+  %}class="{{ css_class }}"
+  {%
+  endif
+  %}
+  data-obfuscated-email="&#x3C;{{ local_part }}&#x40;&#8203;&#8203;{{ domain_name }}&#8203;&#x2E;&#8203;{{ tld }}&#x3E;"
+>
+  &#x3C;&#8203;&#8203;&#8203;&#8203;{{ local_part
+  }}&#8203;&#8203;&#8203;&#x40;{{ domain_name }}&#8203;&#x2E;&#8203;&#8203;{{
+  tld }}&#8203;&#8203;&#8203;&#x3E;
+</a>
+{% endmacro obfuscate_mail %}

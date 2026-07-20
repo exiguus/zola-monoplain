@@ -1,0 +1,102 @@
+{%- import "macros/email.html" as email %} {%- import "macros/phone.html" as
+phone %} {%- import "macros/images.html" as images %} {% macro h_card( name,
+honorific_prefix, given_name, additional_name, family_name, honorific_suffix,
+nickname, org, photo, urls, emails, tels, street_address, locality, region,
+region_title, postal_code, country_name, bday, category, note ) %} {%- set
+has_content = name or honorific_prefix or given_name or additional_name or
+family_name or honorific_suffix or nickname or org or photo or urls or emails or
+tels or street_address or locality or region or postal_code or country_name or
+bday or category or note %} {%- set has_grid = photo or note %} {%- set
+photo_path = "" -%} {%- if photo is not starting_with("/") and page -%} {%- set
+photo_path = page.path -%} {%- endif -%} {%- if has_content %}
+<div class="h-card{% if has_grid %} grid{% endif %}">
+  <div>
+    {%- if name %}<div class="p-name">{{ name }}</div>{% endif %} {%- if
+    nickname %}<div class="p-nickname"
+      >{{ trans(key='h_card_nickname_label') }}{{ nickname }}</div
+    >{% endif %} {%- if honorific_prefix or given_name or additional_name or
+    family_name or honorific_suffix %}
+    <div class="p-full-name">
+      {%- if honorific_prefix %}<span class="p-honorific-prefix"
+        >{{ honorific_prefix }} </span
+      >{% endif %} {%- if given_name %}<span class="p-given-name"
+        >{{ given_name }} </span
+      >{% endif %} {%- if additional_name %}<abbr class="p-additional-name"
+        >{{ additional_name }} </abbr
+      >{% endif %} {%- if family_name %}<span class="p-family-name"
+        >{{ family_name }} </span
+      >{% endif %} {%- if honorific_suffix %}<span class="p-honorific-suffix"
+        >{{ honorific_suffix }} </span
+      >{% endif %}
+    </div>
+    {%- endif %} {%- if org %}<div class="p-org"
+      >{{ trans(key='h_card_org_label') }}{{ org }}</div
+    >{% endif %} {%- if urls %} {%- for url_item in urls %}
+    <div class="p-url">
+      <a class="u-url" href="{{ url_item[0] }}"
+        >{{ url_item[1] | default(value=name) }}</a
+      >
+    </div>
+    {%- endfor %} {%- endif %} {%- if emails %} {%- for email_item in emails %}
+    <div class="p-email">
+      {{ email::obfuscate_mail(local_part=email_item[0],
+      domain_name=email_item[1], tld=email_item[2], title=email_item[3] |
+      default(value=""), css_class="u-email") }}
+    </div>
+    {%- endfor %} {%- endif %} {%- if tels %} {%- for tel_item in tels %}
+    <div class="p-tel">
+      {{ phone::obfuscate_phone(number=tel_item[0], title=tel_item[1] |
+      default(value=""), css_class="u-url") }}
+    </div>
+    {%- endfor %} {%- endif %} {%- if street_address or locality or region or
+    postal_code or country_name %}
+    <div class="p-adr">
+      {%- if street_address %}<div class="p-street-address"
+        >{{ street_address }}</div
+      >{% endif %} {%- if locality %}<span class="p-locality"
+        >{{ locality }}
+      </span>
+      {%- if region or postal_code %} {%- if region %}
+      <abbr
+        class="p-region"
+        {%-
+        if
+        region_title
+        %}title="{{ region_title }}"
+        {%
+        endif
+        %}
+        >{{ region }}
+      </abbr>
+      {% endif %} {%- if postal_code %}<span class="p-postal-code"
+        >{{ postal_code }}</span
+      >{% endif %} {% endif %} {% endif %} {%- if country_name %}<div
+        class="p-country-name"
+        >{{ country_name }}</div
+      >{% endif %}
+    </div>
+    {%- endif %} {%- if bday or category %}
+    <div class="p-extended">
+      {%- if bday %}<div class="p-bday"
+        >{{ trans(key='h_card_born_label') }}<time class="dt-bday"
+          >{{ bday }}</time
+        > </div
+      >{% endif %} {%- if category %}<div class="p-category"
+        >{{ trans(key='h_card_category_label') }}{{ category }} </div
+      >{% endif %}
+    </div>
+    {%- endif %}
+  </div>
+  {%- if photo or note %}
+  <div>
+    {%- if photo %}
+    <div class="p-photo">
+      {{ images::responsive_thumbnail(path=photo_path, src=photo,
+      alt=trans(key='h_card_alt_photo') ~ name, default_size=128,
+      sizes=[128,256,512], css_class="u-photo") }}
+    </div>
+    {%- endif %} {%- if note %}<div class="p-note">{{ note }}</div>{% endif %}
+  </div>
+  {%- endif %}
+</div>
+{%- endif %} {% endmacro h_card %}

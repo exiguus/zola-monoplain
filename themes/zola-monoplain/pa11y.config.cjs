@@ -39,8 +39,10 @@ const testPaths = [
   "/posts/ci/index.html",
   "/posts/dictionary/index.html",
   "/posts/icons/index.html",
-  "/posts/zola/index.html",
+  "/posts/themes/index.html",
   "/posts/shortcodes/index.html",
+  "/posts/feedback/index.html",
+  "/posts/images/index.html",
   // emojis will cause a timeout error for the test
   // "/posts/emojis/index.html",
   "/posts/markdown/index.html",

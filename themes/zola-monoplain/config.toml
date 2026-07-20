@@ -57,6 +57,11 @@ a11y_taxonomy_list_label = "Tag list"
 debug_label = "debug"
 debug_summary = "Debug"
 draft_label = "(Draft)"
+h_card_alt_photo = "Photo of "
+h_card_born_label = "Born: "
+h_card_category_label = "Category: "
+h_card_nickname_label = "Nick: "
+h_card_org_label = "Org: "
 feed_atom_title = "Atom Feed"
 feed_rss_title = "RSS Feed"
 footer_info = "Information"
@@ -71,16 +76,23 @@ footer_links_theme_text = "@exiguus mono/plain Zola"
 footer_links_theme_title = "Github Zola 'mono/plain; a11y=true' Theme"
 footer_links_zola_text = "Zola"
 footer_links_zola_title = "Your one-stop static site engine"
+footer_last_update = "Last update:"
 footer_made = "Made with love"
 footer_nav_label = "Footer Navigation"
 footer_powered_by = "Powered by"
 footer_theme = "Theme by"
+latest_images_title = "Latest Images"
+latest_posts_title = "Latest Posts"
 main_nav_label = "Main Navigation"
-page_summary_desc = "Page summary"
+post_author_aria_label = "Author"
+post_author_prefix = "By"
+post_created_label = "Created:"
 post_feedback_email_link_title = "This email address has been obscured for security. Please click the link to reveal the actual address."
 post_feedback_email_text = "Have thoughts or experiences you'd like to share? I'd love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let's start a conversation."
 post_feedback_email_title = "Feedback"
-post_summary_desc = "Post summary"
+post_tags_title = "Tags"
+post_updated_label = "Updated:"
+post_hero_copy = "Picture by"
 search_form_clear = "Clear"
 search_form_input_label = "Text to search"
 search_form_input_placeholder = "Search ↵"
@@ -115,7 +127,9 @@ thumbnail_quality = 70
 thumbnail_default_size = 128
 thumbnail_sizes = [128, 256]
 # links
-link_github_username = "exiguus/zola-monoplain"
+# github and the mastadon url can be used as web sign in because they contain rel="me"
+#   to validate you might use https://indiewebify.me/validate-rel-me/
+link_github_username = "exiguus"
 link_mastodon_url = "https://toot.community/@exiguus"
 # main navigation
 main_nav_items = [
@@ -144,3 +158,37 @@ feedback_email_enabled = true
 feedback_email_address = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
 feedback_email_address_wildcard = true
 feedback_email_address_wildcard_postfix = ".monoplain"
+# h_card for replay contexts, cross-site comments and event RSVPs.
+#  The h-card is visible only for screen reader and is attachted to all page footer if enabled
+#  Not in used keys are commented out
+#  Validate the h-card with <https://indiewebify.me/validate-h-card/>
+h_card_enabled = true
+h_card_name = "Simon Gattner"
+# h_card_honorific_prefix="Dr."
+# h_card_given_name="Sally"
+# h_card_additional_name="K."
+# h_card_family_name="Ride"
+# h_card_honorific_suffix="Ph.D."
+h_card_nickname = "exiguus"
+# h_card_org="Sally Ride Science"
+# h_card_photo="Sally_Ride_(1984).jpg"
+h_card_urls = [
+  ["https://www.gattner.name", "Homepage"],
+  ["https://github.com/exiguus", "Github Profile"],
+]
+# h_card_emails=[
+#    ["sally", "example", "com"]
+# ]
+# h_card_tels=[
+#    ["+1-800-555-0100", "Work phone"],
+#    ["+1-800-555-0101", "Mobile phone"]
+# ]
+# h_card_street_address="123 Main st."
+# h_card_locality="Los Angeles"
+# h_card_region="CA"
+# h_card_region_title="California"
+# h_card_postal_code="91316"
+# h_card_country_name="U.S.A"
+# h_card_bday="1951-05-26"
+# h_card_category="physicist"
+# h_card_note="First American woman in space.

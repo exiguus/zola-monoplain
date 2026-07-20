@@ -62,6 +62,45 @@ const deobfuscateEmail = (email) =>
     .replace(/&#x2E;/g, ".")
     .replace(/&#x3E;/g, ">");
 
+/**
+ * Ensure markdown task-list checkboxes have accessible names.
+ */
+const labelTaskListCheckboxes = () => {
+  const taskCheckboxes = document.querySelectorAll("input[type='checkbox']");
+
+  Array.from(taskCheckboxes).forEach((checkbox) => {
+    if (
+      checkbox.getAttribute("aria-label") ||
+      checkbox.getAttribute("aria-labelledby")
+    ) {
+      return;
+    }
+
+    const itemText = checkbox.parentElement?.textContent
+      ?.replace(/\s+/g, " ")
+      .trim();
+    if (itemText) {
+      checkbox.setAttribute("aria-label", itemText);
+      return;
+    }
+    checkbox.setAttribute("aria-label", "Task item");
+  });
+};
+
+/**
+ * Make preformatted content keyboard reachable.
+ */
+const makeScrollableRegionsFocusable = () => {
+  const scrollableRegions = document.querySelectorAll("pre");
+
+  Array.from(scrollableRegions).forEach((region) => {
+    if (region.hasAttribute("tabindex")) {
+      return;
+    }
+
+    region.setAttribute("tabindex", "0");
+  });
+};
 // <script>
 // This script should be added to the html head with attribute:
 //  defer="defer"
@@ -71,6 +110,8 @@ const deobfuscateEmail = (email) =>
 // to make sure it is executed after the main scripts.
 window.addEventListener("load", function () {
   appendSVGSprite();
+  labelTaskListCheckboxes();
+  makeScrollableRegionsFocusable();
   const emailElements = document.querySelectorAll("a[data-obfuscated-email]");
   Array.from(emailElements).forEach((emailElement) => {
     emailElement.addEventListener("click", function (event) {

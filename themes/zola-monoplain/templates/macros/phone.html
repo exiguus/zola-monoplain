@@ -1,0 +1,22 @@
+{% macro obfuscate_phone(number, title="", css_class="") %}
+<a
+  href="tel:0000000000"
+  {%
+  if
+  title
+  %}title="{{ title }}"
+  {%
+  endif
+  %}
+  {%
+  if
+  css_class
+  %}class="{{ css_class }}"
+  {%
+  endif
+  %}
+  data-obfuscated-phone="&#x2B;&#8203;{{ number }}&#8203;"
+>
+  &#8203;{{ number }}&#8203;
+</a>
+{% endmacro obfuscate_phone %}

@@ -1,8 +1,36 @@
-<hgroup role="group" aria-description="{{ trans(key='post_summary_desc') }}">
+<header>
   {{ hooks::post_above_content(page=page) }}
-  <h1>{{ page.title }} {% if page.draft %}<mark>Draft</mark>{% endif %}</h1>
-  <p> Created: <date>{{ page.date | date(format='%Y-%m-%d')}}</date> </p>
-  {% if page.updated %}
-  <p> Updated: <date>{{ page.updated | date(format='%Y-%m-%d')}}</date> </p>
-  {% endif %} {% include "components/toc.html" %}
-</hgroup>
+  <h1
+    >{{ page.title }} {% if page.draft %}<mark
+      >{{ trans(key='draft_label') }}</mark
+    >{% endif %}</h1
+  >
+  <p>
+    {{ trans(key='post_created_label') }}
+    <date>{{ page.date | date(format='%Y-%m-%d')}}</date>
+  </p>
+  {% if page.updated -%}
+  <p>
+    {{ trans(key='post_updated_label') }}
+    <date>{{ page.updated | date(format='%Y-%m-%d')}}</date>
+  </p>
+  {% endif %} {%- if page.extra.hero_img is defined and page.extra.hero_img %}
+  {%- set hero_alt = page.extra.hero_alt | default(value=page.description |
+  default(value=page.title)) | striptags %} {%- set hero_copy =
+  page.extra.hero_copy | default(value="") | striptags %}
+  <figure>
+    <div class="hero">
+      {{ images::responsive_image(path=page.path, src=page.extra.hero_img,
+      alt=hero_alt, default_size=384, sizes=[256,384,512,576,640,768,1024,1152])
+      -}}
+    </div>
+    {%- if hero_copy is defined and hero_copy %}
+    <p>{{ trans(key='post_hero_copy') }} {{ hero_copy | safe }}</p>
+    {%- endif%}
+    <figcaption id="post-image-{{ page.date }}-{{ page.slug }}">
+      <p>{{ page.description | safe }}</p>
+      <p>{{ hero_alt | safe }}</p>
+    </figcaption>
+  </figure>
+  {%- endif %} {% include "components/toc.html" %}
+</header>

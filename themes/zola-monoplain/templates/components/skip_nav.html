@@ -1,3 +1,4 @@
+{%- set page = page | default(value="{}") %}
 <nav
   id="skip-nav"
   aria-label="{{ trans(key='skip_nav_label') }}"
@@ -6,7 +7,7 @@
 >
   <ul>
     <li><a href="#main">{{ trans(key="skip_nav_link_content") }}</a></li>
-    {% if page.toc -%}
+    {% if page.toc and page.components and "posts" in page.components -%}
     <li
       ><a href="#toc">{{ trans(key="skip_nav_link_toc") }}</a>
       <ul>

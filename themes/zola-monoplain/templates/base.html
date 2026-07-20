@@ -1,9 +1,12 @@
+{%- import "macros/email.html" as email -%}
+{%- import "macros/h-card.html" as h_card -%}
 {%- import "macros/hooks.html" as hooks -%}
-{%- import "macros/images.html" as images -%}
 {%- import "macros/icons.html" as icons -%}
+{%- import "macros/images.html" as images -%}
 {%- import "macros/markdown.html" as markdown -%}
 {%- import "macros/meta.html" as meta -%}
 {%- import "macros/opengraph.html" as opengraph -%}
+{%- import "macros/phone.html" as phone -%}
 {%- import "components/skip_nav.html" as skip_nav -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}" prefix="og:https://ogp.me/ns#">
@@ -46,6 +49,7 @@ replace(from='/', to='--') -%}
     {% include "components/footer_nav.html" -%}
 
     {% include "components/footer.html" -%}
+    {% include "components/hcard.html" -%}
     {% endblock footer -%}
     {% block body_end -%}
     {% endblock body_end -%}

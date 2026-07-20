@@ -4,16 +4,21 @@ elif page -%} {%- if page.summary | string -%} {{ page.summary | striptags |
 truncate(length=200) }} {%- elif page.description -%} {{ page.description }} {%-
 else -%} {{ config.description }} {%- endif -%} {%- endif -%} {% endmacro
 description %} {% macro title() %} {%- if section -%} {%- if section.title -%}
-{{ section.title | striptags }}{%- else -%} {{ config.description }}{%- endif
+{{ section.title | striptags }} {%- else -%} {{ config.description }} {%- endif
 -%} {%- elif page -%} {%- if page.title -%} {{ page.title | striptags }} {%-
 else -%} {{ config.description }} {%- endif -%} {%- elif term -%} {%- if
 term.name -%} {{ term.name | striptags }} {%- else -%} {{ config.description }}
 {%- endif -%} {%- elif taxonomy -%} {%- if taxonomy.name -%} {{ taxonomy.name |
 striptags }} {%- else -%} {{ config.description }} {%- endif -%} {%- endif -%}
-{% endmacro title %} {% macro image() %} {%- if page.extra.preview_img -%} {%-
-if page.extra.preview_img is starting_with("/") or page.extra.preview_img is
-containing("://") -%} {{ page.extra.preview_img | safe }} {%- else -%} {% set
-image = resize_image(path=page.path ~ page.extra.preview_img, width=1200,
-height=630) -%} {{ image.url | safe }} {%- endif -%} {%- else -%} {% set image =
+{% endmacro title %} {% macro image() %} {%- if page -%} {% set og_img = "" -%}
+{%- if page.extra.preview_img is defined and page.extra.preview_img -%} {% set
+og_img = page.extra.preview_img -%} {%- elif page.extra.hero_img is defined and
+page.extra.hero_img -%} {% set og_img = page.extra.hero_img -%} {%- endif -%}
+{%- if og_img -%} {%- if og_img is starting_with("/") or og_img is
+containing("://") -%} {{ og_img | safe }} {%- else -%} {% set image =
+resize_image(path=page.path ~ og_img, width=1200, height=630) -%} {{ image.url |
+safe }} {%- endif -%} {%- else -%} {% set image =
+resize_image(path='images/og-preview.png', width=1200, height=630) -%} {{
+image.url }} {%- endif -%} {%- else -%} {% set image =
 resize_image(path='images/og-preview.png', width=1200, height=630) -%} {{
 image.url }} {%- endif -%} {% endmacro image %}

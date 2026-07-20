@@ -2,6 +2,7 @@
 title = "Icons"
 description = "Icons by Example"
 date = 2024-06-09
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Markdown", "Icons"]
@@ -9,33 +10,33 @@ tags= ["Zola", "Markdown", "Icons"]
 
 ## Introduction
 
-Icons are a great way to add visual interest to your website. They can be used to represent different types of content, actions, or information. In this post, I will show you how to use icons in Zola.
+Icons are a simple way to add visual cues to your content. In this post, you will learn how to use icons in this theme.
 
 ## Implementation
 
-This theme use the [Tabler Icons](https://tabler.io/) icon set. Tabler Icons is a set of over 700 free MIT-licensed high-quality SVG icons for you to use in your web projects.
+This theme uses the [Tabler Icons](https://tabler.io/) set. Tabler Icons provides free, MIT-licensed SVG icons for web projects.
 
 To use an icon in your content, you can use the `icon` shortcode. The `icon` shortcode takes the name of the icon as an argument and renders the SVG icon.
 
 Here is an example of how to use the `icon` shortcode:
 
 ```md
-\{\{ icon(name="activity") \}\}
+{{/* icon(name="activity") */}}
 ```
 
-Please note that the shortcode normally start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Please note that the shortcode normally start and end with `{{` and `}}`. But in code examples, they must be escaped as `{{/*` and `*/}}` to prevent Zola from processing them.
 
-This will render the GitHub icon. You can find a list of all available icons on the [Tabler Icons website](https://tabler.io/icons).
+This renders the `activity` icon. You can find all available icon names on the [Tabler Icons website](https://tabler.io/icons).
 
 ## Example
 
-Here is an example of how to use the `icon` shortcode to render the GitHub icon:
+Here is an example of how to use the `icon` shortcode:
 
-{{ icon(name="activity") }} is `\{\{ icon(name="activity") \}\}` in a Markdown file.
+{{ icon(name="activity") }} is `{{/* icon(name="activity") */}}` in a Markdown file.
 
-Please note that the shortcode normally start and end with `{{` and `}}`. But in this example the shortcode start and end with `\{\{` and `\}\}`. This is necessary to render the shortcode in the Markdown file.
+Please note that the shortcode normally start and end with `{{` and `}}`. But in code examples, they must be escaped as `{{/*` and `*/}}` to prevent Zola from processing them.
 
-This theme use the [SVG sprite version](https://tabler.io/docs/icons/sprite) of the Tabler Icons. The SVG sprite version is a single SVG file that contains all the icons in the set. This is a more efficient way to load icons on your website as it reduces the number of HTTP requests.
+This theme uses the [SVG sprite version](https://tabler.io/docs/icons/sprite) of Tabler Icons. The sprite is a single SVG file that contains all icons, which helps reduce HTTP requests.
 
 ## Icons
 

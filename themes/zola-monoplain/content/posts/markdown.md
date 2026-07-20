@@ -2,7 +2,7 @@
 title = "Markdown"
 description = "Markdown by example"
 date = 2024-03-26
-updated = 2025-06-07
+updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Theme", "Markdown", "Typography"]
@@ -10,9 +10,9 @@ tags= ["Zola", "Theme", "Markdown", "Typography"]
 
 ## Introduction
 
-Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+Markdown is a lightweight markup language with plain-text formatting syntax. It is designed to be converted to HTML and other formats. Markdown is commonly used for README files, forum posts, and rich text written in plain text editors.
 
-Zola support CommonMark as the markdown parser. Further, it optionally supports parsing footnotes, Github flavored tables and task lists, and strikethrough text.
+Zola supports CommonMark as its Markdown parser. It also supports optional extensions such as footnotes, GitHub-flavored tables, task lists, and strikethrough text.
 
 ## Syntax
 

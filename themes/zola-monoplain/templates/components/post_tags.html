@@ -1,6 +1,6 @@
 {% if page.taxonomies is containing ("tags") %}
 <section aria-labelledby="tags">
-  <h1 id="tags">Tags</h1>
+  <h1 id="tags">{{ trans(key='post_tags_title') }}</h1>
   <ul aria-labelledby="tags">
     {% for tag in page.taxonomies["tags"] %}
     <li aria-label="{{tag}}"

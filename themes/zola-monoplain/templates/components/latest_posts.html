@@ -1,6 +1,7 @@
-{% set section = get_section(path="posts/_index.md") %}
+{% set section = get_section(path="posts/_index.md") %} {% if section.pages |
+length > 0 %}
 <section aria-labelledby="latest-posts">
-  <h1 id="latest-posts">Latest Posts</h1>
+  <h1 id="latest-posts">{{ trans(key='latest_posts_title') }}</h1>
   <ul aria-labelledby="latest-posts">
     {% set_global imageCount = 0 -%} {% set imageCountMax = 6 -%} {% for post in
     section.pages -%} {% set_global imageCount = imageCount + 1 -%} {% if
@@ -8,14 +9,14 @@
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
         <article>
-          <hgroup id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
+          <header id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <h1>{{ post.title }}</h1>
             {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%
             endif %}
             <p>
               <date> {{ post.date | date(format='%Y-%m-%d') }} </date>
             </p>
-          </hgroup>
+          </header>
           <p>{{ post.description }}</p>
           {{ hooks::posts_below_title(page=post) }}
         </article>
@@ -24,3 +25,4 @@
     {% endfor %}
   </ul>
 </section>
+{% endif %}

@@ -1,7 +1,7 @@
 {% set section_posts = get_section(path="posts/_index.md") -%} {% set pages =
 section_posts.pages -%}
 <section aria-labelledby="latest-images">
-  <h1 id="latest-images">Latest Images</h1>
+  <h1 id="latest-images">{{ trans(key='latest_images_title') }}</h1>
   <ul aria-labelledby="latest-images">
     {% set_global imageCount = 0 -%} {% set imageCountMax = 6 -%} {% for post in
     pages %} {% if post.extra.images -%} {% for image in post.extra.images -%}
@@ -17,9 +17,11 @@ section_posts.pages -%}
         title="{{ post.title }} - {{ post.date }}"
       >
         <figure>
-          {{ images::responsive_thumbnail(path=post.colocated_path, src=image,
-          default_size=128, sizes=[128,256], alt=post.title ~ " - " ~ post.date
-          ) -}}
+          <div class="thumbnail">
+            {{ images::responsive_thumbnail(path=post.colocated_path, src=image,
+            default_size=128, sizes=[128,256], alt=post.title ~ " - " ~
+            post.date ) -}}
+          </div>
           <figcaption
             id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}"
           >

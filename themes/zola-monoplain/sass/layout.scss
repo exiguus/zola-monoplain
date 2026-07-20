@@ -15,13 +15,14 @@ body {
   & > nav#main-nav,
   & > nav#footer-nav {
     & > ul {
-      @extend %list-vertical;
+      @extend %list-horizontal;
     }
   }
 
   & > nav#skip-nav {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
     width: 100%;
     margin: 0;
@@ -136,7 +137,7 @@ body {
 
     article {
       margin-bottom: 3rem;
-      & > hgroup {
+      & > header {
         display: flex;
         flex-direction: column;
         gap: 0.25em;
@@ -154,6 +155,17 @@ body {
           text-indent: 2em;
         }
       }
+      & > footer {
+        > ul {
+          @extend %list-horizontal;
+          gap: 0.5em 1rem;
+          > li {
+            font-size: 0.8em;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
     }
 
     img {
@@ -168,6 +180,29 @@ body {
       padding: 1rem;
       width: 100%;
       box-sizing: border-box;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+
+      &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+    }
+
+    & > header {
+      > figure {
+        margin: 0 -1rem 1rem -1rem;
+        & > .hero + p {
+          margin: 0.5rem;
+          font-size: 0.8em;
+          text-align: right;
+          line-break: anywhere;
+        }
+        & > .hero ~ figcaption {
+          @extend %sr-only;
+        }
+      }
     }
 
     .footnote-definition {
@@ -179,14 +214,19 @@ body {
 
     #latest-images {
       & + ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem 2rem;
+        @extend %list-vertical;
+        align-items: center;
+        @media (min-width: map.get($breakpoints, "medium")) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem 2rem;
+          align-items: start;
+        }
 
         figure {
-          margin: 0;
+          @extend %list-vertical;
+          align-items: center;
           img {
-            margin: 0 auto;
             max-width: map.get($thumbnail, "small");
           }
           figcaption {
@@ -206,7 +246,7 @@ body {
     & > ul {
       padding-left: 1rem;
       width: 66.6%;
-      @extend %list-vertical;
+      @extend %list-horizontal;
     }
   }
 
@@ -215,9 +255,14 @@ body {
     > div > aside {
       section {
         & > ul {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem 2rem;
+          @extend %list-vertical;
+          align-items: center;
+          @media (min-width: map.get($breakpoints, "medium")) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 2rem;
+            align-items: start;
+          }
 
           figure {
             display: flex;
