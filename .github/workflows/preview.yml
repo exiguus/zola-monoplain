@@ -52,6 +52,8 @@ jobs:
     if: always()
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    env:
+      PREVIEW_BASE_URL: https://exiguus.github.io/zola-monoplain/pr-preview/pr-${{ github.event.number }}
 
     steps:
       - name: Checkout
@@ -63,7 +65,7 @@ jobs:
       - name: Audit URLs and validate Budget
         uses: treosh/lighthouse-ci-action@v12
         with:
-          urls: ${{ needs.deploy-preview.outputs.preview_url }}
+          urls: ${{ env.PREVIEW_BASE_URL }}
           budgetPath: ./budget.json
           uploadArtifacts: true
           runs: 3
@@ -74,6 +76,8 @@ jobs:
     if: always()
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    env:
+      PREVIEW_BASE_URL: https://exiguus.github.io/zola-monoplain/pr-preview/pr-${{ github.event.number }}
 
     steps:
       - name: Checkout
@@ -82,7 +86,9 @@ jobs:
       - name: Common Setup
         uses: ./.github/actions/common-setup
 
-      - name: A11 Test
+      - name: A11y Test
         uses: ./.github/actions/a11y
+        with:
+          url: ${{ env.PREVIEW_BASE_URL }}
         env:
-          A11Y_URL: ${{ needs.deploy-preview.outputs.preview_url }}
+          A11Y_URL: ${{ env.PREVIEW_BASE_URL }}
