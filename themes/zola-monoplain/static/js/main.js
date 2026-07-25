@@ -70,20 +70,26 @@ const labelTaskListCheckboxes = () => {
 
   Array.from(taskCheckboxes).forEach((checkbox) => {
     if (
-      checkbox.getAttribute("aria-label") ||
-      checkbox.getAttribute("aria-labelledby")
+      checkbox.parentElement?.querySelector("label[for='" + checkbox.id + "']")
     ) {
+      // checkbox already has a label
       return;
     }
+    if (!checkbox.id) {
+      // add an id to the checkbox if it doesn't have one
+      checkbox.id = `task-checkbox-${Math.random().toString(36).substr(2, 9)}`;
+    }
+    if (!checkbox.name) {
+      // add a name to the checkbox if it doesn't have one
+      checkbox.setAttribute("name", checkbox.id);
+    }
+    // add a hidden label before the checkbox
+    const label = document.createElement("label");
 
-    const itemText = checkbox.parentElement?.textContent
-      ?.replace(/\s+/g, " ")
-      .trim();
-    if (itemText) {
-      checkbox.setAttribute("aria-label", itemText);
-      return;
-    }
-    checkbox.setAttribute("aria-label", "Task item");
+    label.setAttribute("for", checkbox.id);
+    label.setAttribute("class", "sr-only");
+    label.textContent = "Task item";
+    checkbox.parentElement?.insertBefore(label, checkbox);
   });
 };
 
