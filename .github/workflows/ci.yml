@@ -45,6 +45,7 @@ jobs:
         with:
           project_path: ./
           config_path: fta.config.json
+          extensions: .js,.jsx,.mjs,.cjs,.ts,.tsx
 
       - name: Print Output Summary
         id: output-summary
