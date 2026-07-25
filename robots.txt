@@ -1,4 +1,6 @@
 User-agent: *
 Disallow:
+Disallow: /pr-*
+Disallow: */pr-*
 Allow: /
 Sitemap: https://exiguus.github.io/zola-monoplain/sitemap.xml
