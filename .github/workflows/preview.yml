@@ -7,6 +7,8 @@ jobs:
   deploy-preview:
     name: Deploy PR
     runs-on: ubuntu-latest
+    env:
+      PREVIEW_BASE_URL: https://exiguus.github.io/zola-monoplain/pr-preview/pr-${{ github.event.number }}
 
     outputs:
       preview_url: ${{ steps.deploy.outputs.deployment-url }}
@@ -27,7 +29,8 @@ jobs:
         run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 PUPPETEER_SKIP_DOWNLOAD=1 pnpm ci
 
       - name: Build
-        run: pnpm build
+        working-directory: ./themes/zola-monoplain
+        run: pnpm check:zola && zola build --base-url "$PREVIEW_BASE_URL"
         if: github.event.action != 'closed'
 
       - name: Deploy
