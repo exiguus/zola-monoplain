@@ -34,7 +34,7 @@ jobs:
         id: deploy
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./themes/zola-monoplain/public
+          source-dir: ./apps/blog/public
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
