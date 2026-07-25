@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://exiguus.github.io/zola-monoplain/sitemap.xml
+Sitemap: https://exiguus.github.io/zola-monoplain/pr-preview/pr-104/sitemap.xml
