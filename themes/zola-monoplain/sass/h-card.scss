@@ -1,7 +1,7 @@
 @use "sass:map";
 @import "_variables.scss";
 
-#h-card {
+.h-card-container {
   @extend %sr-only;
 }
 
