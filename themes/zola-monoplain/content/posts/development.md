@@ -195,9 +195,19 @@ For reusable components/macros, print only the value you need first, then expand
 {{/* page.title | default(value="(no title)") */}}
 ```
 
+for example, to check if the `page.title` key is available in a component.
+
 ```md
 {{/* page.extra | default(value="{}") | json_encode | safe */}}
 ```
+
+or page.extra to check if the `page.extra` key is available in a component.
+
+```md
+{{/* __tera_context */}}
+```
+
+or `__tera_context` to inspect the full template context.
 
 Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.
 
@@ -244,7 +254,11 @@ Useful script references:
 - In `themes/zola-monoplain/`, `pnpm dev` runs `zola serve` after checking that Zola is installed.
 - In `themes/zola-monoplain/`, `pnpm build` runs `zola build` after checking that Zola is installed.
 
-## 9. Commit and push changes
+## 9. Write Documentation
+
+Features and usage are documented in the repository's `README.md` and via post content in `content/posts/` like this one. If you add a new feature, update the documentation accordingly.
+
+## 10. Commit and push changes
 
 From the repository root:
 
@@ -256,7 +270,17 @@ git push
 
 Use a conventional commit message (`feat:`, `fix:`, `docs:`, and so on) so release tooling can derive changelog entries.
 
-## 10. Release a new version
+For pull requests, create a new branch and push to that branch instead of `main`.
+
+Preview deployments are automatically built for pull requests and can be accessed at:
+
+```plain
+https://exiguus.github.io/zola-monoplain/pr-preview/pr-<PR_NUMBER>
+```
+
+If a post is marked as a draft, it will be included in the preview deployment, but not in the production deployment.
+
+## 11. Release a new version
 
 Choose the release type and run one of:
 
@@ -271,6 +295,9 @@ Then push commit and tags:
 ```bash
 git push --follow-tags origin main
 ```
+
+If we have breaking changes, like removing, adding or changing a variable in the `config.toml` file, we must release a new major version.
+The change is considered breaking if it requires users to change their configuration or templates to continue using the theme.
 
 ## Resources
 
