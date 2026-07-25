@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>mono&#x2F;plain; a11y=true</title>
+      <link>https://exiguus.github.io/zola-monoplain</link>
+      <description>An accessible, monospace plain Zola Theme</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://exiguus.github.io/zola-monoplain/rss.xml" rel="self" type="application/rss+xml"/>
+      
+    </channel>
+</rss>

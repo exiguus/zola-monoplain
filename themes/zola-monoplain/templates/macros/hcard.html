@@ -1,5 +1,5 @@
 {%- import "macros/email.html" as email %} {%- import "macros/phone.html" as
-phone %} {%- import "macros/images.html" as images %} {% macro h_card( name,
+phone %} {%- import "macros/images.html" as images %} {% macro hcard( name,
 honorific_prefix, given_name, additional_name, family_name, honorific_suffix,
 nickname, org, photo, urls, emails, tels, street_address, locality, region,
 region_title, postal_code, country_name, bday, category, note ) %} {%- set
@@ -13,7 +13,7 @@ photo_path = page.path -%} {%- endif -%} {%- if has_content %}
   <div>
     {%- if name %}<div class="p-name">{{ name }}</div>{% endif %} {%- if
     nickname %}<div class="p-nickname"
-      >{{ trans(key='h_card_nickname_label') }}{{ nickname }}</div
+      >{{ trans(key='hcard_nickname_label') }}{{ nickname }}</div
     >{% endif %} {%- if honorific_prefix or given_name or additional_name or
     family_name or honorific_suffix %}
     <div class="p-full-name">
@@ -30,7 +30,7 @@ photo_path = page.path -%} {%- endif -%} {%- if has_content %}
       >{% endif %}
     </div>
     {%- endif %} {%- if org %}<div class="p-org"
-      >{{ trans(key='h_card_org_label') }}{{ org }}</div
+      >{{ trans(key='hcard_org_label') }}{{ org }}</div
     >{% endif %} {%- if urls %} {%- for url_item in urls %}
     <div class="p-url">
       <a class="u-url" href="{{ url_item[0] }}"
@@ -78,11 +78,11 @@ photo_path = page.path -%} {%- endif -%} {%- if has_content %}
     {%- endif %} {%- if bday or category %}
     <div class="p-extended">
       {%- if bday %}<div class="p-bday"
-        >{{ trans(key='h_card_born_label') }}<time class="dt-bday"
+        >{{ trans(key='hcard_born_label') }}<time class="dt-bday"
           >{{ bday }}</time
         > </div
       >{% endif %} {%- if category %}<div class="p-category"
-        >{{ trans(key='h_card_category_label') }}{{ category }} </div
+        >{{ trans(key='hcard_category_label') }}{{ category }} </div
       >{% endif %}
     </div>
     {%- endif %}
@@ -92,11 +92,11 @@ photo_path = page.path -%} {%- endif -%} {%- if has_content %}
     {%- if photo %}
     <div class="p-photo">
       {{ images::responsive_thumbnail(path=photo_path, src=photo,
-      alt=trans(key='h_card_alt_photo') ~ name, default_size=128,
+      alt=trans(key='hcard_alt_photo') ~ name, default_size=128,
       sizes=[128,256,512], css_class="u-photo") }}
     </div>
     {%- endif %} {%- if note %}<div class="p-note">{{ note }}</div>{% endif %}
   </div>
   {%- endif %}
 </div>
-{%- endif %} {% endmacro h_card %}
+{%- endif %} {% endmacro hcard %}

@@ -159,14 +159,14 @@ Examples:
 
 **Simple h-card with multiple URLs:**
 
-{{ h_card(
+{{ hcard(
   name="Simon",
   nickname="exiguus",
   urls=[["https://exiguus.blog", "exiguus blog"],["https://github.com/exiguus", "GitHub"],["https://github.com/exiguus/zola-monoplain", "Zola Monoplain theme"]]
 ) }}
 
 ```md
-{{/* h_card(
+{{/* hcard(
   name="Simon",
   nickname="exiguus",
   urls=[["https://exiguus.blog", "exiguus blog"],["https://github.com/exiguus", "GitHub"],["https://github.com/exiguus/zola-monoplain", "Zola Monoplain theme"]]
@@ -175,7 +175,7 @@ Examples:
 
 **Full h-card with multiple phone numbers and emails:**
 
-{{ h_card(
+{{ hcard(
   name="Sally Ride",
   honorific_prefix="Dr.",
   given_name="Sally",
@@ -208,7 +208,7 @@ Examples:
 ) }}
 
 ```md
-{{/* h_card(
+{{/* hcard(
   name="Sally Ride",
   honorific_prefix="Dr.",
   given_name="Sally",

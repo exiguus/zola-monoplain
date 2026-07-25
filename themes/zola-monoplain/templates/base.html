@@ -1,5 +1,5 @@
 {%- import "macros/email.html" as email -%}
-{%- import "macros/h-card.html" as h_card -%}
+{%- import "macros/hcard.html" as hcard -%}
 {%- import "macros/hooks.html" as hooks -%}
 {%- import "macros/icons.html" as icons -%}
 {%- import "macros/images.html" as images -%}
@@ -49,7 +49,6 @@ replace(from='/', to='--') -%}
     {% include "components/footer_nav.html" -%}
 
     {% include "components/footer.html" -%}
-    {% include "components/hcard.html" -%}
     {% endblock footer -%}
     {% block body_end -%}
     {% endblock body_end -%}
