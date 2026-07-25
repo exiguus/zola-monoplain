@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-25T17:16:07.663583727+00:00" />
+<meta name="build" content="2026-07-25T19:03:03.757324123+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Development"
@@ -142,10 +142,13 @@ accessible" />
           <a href="#8-run-test-and-check">8. Run test and check</a>
           </li>
         <li>
-          <a href="#9-commit-and-push-changes">9. Commit and push changes</a>
+          <a href="#9-write-documentation">9. Write Documentation</a>
           </li>
         <li>
-          <a href="#10-release-a-new-version">10. Release a new version</a>
+          <a href="#10-commit-and-push-changes">10. Commit and push changes</a>
+          </li>
+        <li>
+          <a href="#11-release-a-new-version">11. Release a new version</a>
           </li>
         <li>
           <a href="#resources">Resources</a>
@@ -326,12 +329,17 @@ accessible" />
       </li>
       
       <li>
-        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#9-commit-and-push-changes">9. Commit and push changes</a>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#9-write-documentation">9. Write Documentation</a>
         
       </li>
       
       <li>
-        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#10-release-a-new-version">10. Release a new version</a>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#10-commit-and-push-changes">10. Commit and push changes</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/posts/development/#11-release-a-new-version">11. Release a new version</a>
         
       </li>
       
@@ -456,7 +464,12 @@ accessible" />
 <p>This is useful to inspect available keys while developing components.</p>
 <h3 id="scope-component-debugging">Scope component debugging</h3>
 <p>For reusable components/macros, print only the value you need first, then expand:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.title | default(value=&quot;(no title)&quot;) */}}</span></span></code></pre><pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.extra | default(value=&quot;{}&quot;) | json_encode | safe */}}</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.title | default(value=&quot;(no title)&quot;) */}}</span></span></code></pre>
+<p>for example, to check if the <code>page.title</code> key is available in a component.</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.extra | default(value=&quot;{}&quot;) | json_encode | safe */}}</span></span></code></pre>
+<p>or page.extra to check if the <code>page.extra</code> key is available in a component.</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* __tera_context */}}</span></span></code></pre>
+<p>or <code>__tera_context</code> to inspect the full template context.</p>
 <p>Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.</p>
 <h2 id="7-run-local-accessibility-checks">7. Run local accessibility checks</h2>
 <p>To test accessibility against a local running dev server:</p>
@@ -485,19 +498,28 @@ accessible" />
 <li>In <code>themes/zola-monoplain/</code>, <code>pnpm dev</code> runs <code>zola serve</code> after checking that Zola is installed.</li>
 <li>In <code>themes/zola-monoplain/</code>, <code>pnpm build</code> runs <code>zola build</code> after checking that Zola is installed.</li>
 </ul>
-<h2 id="9-commit-and-push-changes">9. Commit and push changes</h2>
+<h2 id="9-write-documentation">9. Write Documentation</h2>
+<p>Features and usage are documented in the repository's <code>README.md</code> and via post content in <code>content/posts/</code> like this one. If you add a new feature, update the documentation accordingly.</p>
+<h2 id="10-commit-and-push-changes">10. Commit and push changes</h2>
 <p>From the repository root:</p>
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> add .</span></span>
 <span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> commit</span><span style="color: #BD93F9;"> -m</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">feat(posts): short summary of your change</span><span style="color: #E9F284;">&quot;</span></span>
 <span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span></span></code></pre>
 <p>Use a conventional commit message (<code>feat:</code>, <code>fix:</code>, <code>docs:</code>, and so on) so release tooling can derive changelog entries.</p>
-<h2 id="10-release-a-new-version">10. Release a new version</h2>
+<p>For pull requests, create a new branch and push to that branch instead of <code>main</code>.</p>
+<p>Preview deployments are automatically built for pull requests and can be accessed at:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>https://exiguus.github.io/zola-monoplain/pr-preview/pr-&lt;PR_NUMBER&gt;</span></span></code></pre>
+<p>If a post is marked as a draft, it will be included in the preview deployment, but not in the production deployment.</p>
+<h2 id="11-release-a-new-version">11. Release a new version</h2>
 <p>Choose the release type and run one of:</p>
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:patch</span></span>
 <span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:minor</span></span>
 <span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:major</span></span></code></pre>
 <p>Then push commit and tags:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span><span style="color: #BD93F9;"> --follow-tags</span><span style="color: #F1FA8C;"> origin main</span></span></code></pre><h2 id="resources">Resources</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span><span style="color: #BD93F9;"> --follow-tags</span><span style="color: #F1FA8C;"> origin main</span></span></code></pre>
+<p>If we have breaking changes, like removing, adding or changing a variable in the <code>config.toml</code> file, we must release a new major version.
+The change is considered breaking if it requires users to change their configuration or templates to continue using the theme.</p>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><a rel="external" href="https://www.getzola.org/documentation/">https://www.getzola.org/documentation/</a></li>
 <li><a rel="external" href="https://www.getzola.org/documentation/templates/overview/">https://www.getzola.org/documentation/templates/overview/</a></li>
@@ -818,11 +840,10 @@ accessible" />
     >. Made with love.<br />
     <i class="sr-only">Last update:</i>
     <small
-      >2026-07-25 19:16:07 Europe&#x2F;Berlin</small
+      >2026-07-25 21:03:03 Europe&#x2F;Berlin</small
     >
   </p>
-</footer>
-<div class="h-card-container">
+  <div class="h-card-container">
   
 <div class="h-card">
   <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
@@ -840,7 +861,8 @@ accessible" />
     </div>
   </div>
 </div> 
-</div><script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
+</div></footer>
+<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-WLlTT9668YQ9LIbL4T2KBIivH2h6Vkctsdfq6mj/xgIB77/Rgf5I4dAB6HBNjFSk" defer="defer"></script>
   </body>
 
 </html>
