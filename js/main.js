@@ -120,9 +120,19 @@ window.addEventListener("load", function () {
   makeScrollableRegionsFocusable();
   const emailElements = document.querySelectorAll("a[data-obfuscated-email]");
   Array.from(emailElements).forEach((emailElement) => {
-    emailElement.addEventListener("click", function (event) {
-      const email = deobfuscateEmail(event.target.dataset.obfuscatedEmail);
-      event.target.href = `mailto:${email}`;
-    });
+    emailElement.addEventListener(
+      "click",
+      function (event) {
+        const element = event.target.closest("[data-obfuscated-email]");
+        const obfuscatedEmail = element?.dataset.obfuscatedEmail;
+        if (!obfuscatedEmail) {
+          console.warn("Obfuscated email not found");
+          return;
+        }
+        const email = deobfuscateEmail(obfuscatedEmail);
+        element.href = `mailto:${email}`;
+      },
+      { capture: true },
+    );
   });
 });

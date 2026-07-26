@@ -13,7 +13,7 @@
 theme,
 a11y,
 accessible" />
-<meta name="author" content="Simon Gattner" />
+<meta name="author" content="Simon Gattner, exiguus" />
 <meta
   name="theme-color"
   content="#ffffff"
@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-25T19:42:14.473927191+00:00" />
+<meta name="build" content="2026-07-26T21:00:05.349026839+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Shortcodes"
@@ -143,25 +143,41 @@ accessible" />
          <header>
   
 
-<p aria-label="Author"
-  >By 
-  <a href="https://exiguus.github.io/zola-monoplain/authors/simon-gattner"
-    >Simon Gattner</a
-  > 
-</p>
- 
-  <h1
-    >Shortcodes </h1
-  >
+
+  <h1>
+    Shortcodes
+    
+  </h1>
+
   <p>
     Created:
     <date>2024-06-08</date>
-  </p>
-  <p>
-    Updated:
-    <date>2026-07-19</date>
-  </p>
-   <nav aria-labelledby="toc">
+  </p><p>Updated:
+      <date>2026-07-19</date>
+    </p>
+  
+      <div
+        
+        aria-label="Post Authors"
+      >
+        <p>Author:</p>
+        <ul aria-label="Post Authors"><li>
+              
+<div class="h-card">
+  <div><div class="p-name">Simon Gattner</div>
+  </div>
+</div> 
+            </li><li>
+              
+<div class="h-card">
+  <div><div class="p-name">exiguus</div>
+  </div>
+</div> 
+            </li>
+        </ul>
+      </div>
+
+  <nav aria-labelledby="toc">
   <details aria-labelledby="toc" open="true">
     <summary id="toc">Table of contents</summary>
     <ol aria-labelledby="toc">
@@ -235,8 +251,7 @@ accessible" />
 </nav>
 
 
-</header>
-<h2 id="introduction">Introduction</h2>
+</header><h2 id="introduction">Introduction</h2>
 <p>Shortcodes let you embed dynamic content in Markdown files. In this post, you will learn how to use the shortcodes provided by this theme.</p>
 <h2 id="shortcodes">Shortcodes</h2>
 <h3 id="images">Images</h3>
@@ -370,13 +385,14 @@ accessible" />
 <p>The <code>local_part</code>, <code>domain_name</code>, and <code>tld</code> parameters are required. Only <code>title</code> is optional.</p>
 <p>Example:</p>
 
-<a
-  href="mailto:invalid\(local)\part@example\.org"
-  title="Reveal email address"
-  
-  data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;org&#x3E;"
+<a 
+href="mailto:invalid\(local)\part@example\.org"
+ title="Reveal email address"  
+data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;org&#x3E;"
 >
-  &#x3C;&#8203;&#8203;&#8203;&#8203;hello&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;org&#8203;&#8203;&#8203;&#x3E;
+  
+&#x3C;&#8203;&#8203;&#8203;&#8203;hello&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;org&#8203;&#8203;&#8203;&#x3E;
+
 </a>
 
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ email(local_part=&quot;hello&quot;, domain_name=&quot;example&quot;, tld=&quot;org&quot;, title=&quot;Reveal email address&quot;) }}</span></span></code></pre>
@@ -404,7 +420,8 @@ accessible" />
 <p><strong>Note:</strong> URLs, emails, and phone numbers are now passed as arrays of arrays to support multiple values.</p>
 <p>Examples:</p>
 <p><strong>Simple h-card with multiple URLs:</strong></p>
-
+<figure>
+  
 <div class="h-card">
   <div><div class="p-name">Simon</div><div class="p-nickname"
       >Nick: exiguus</div
@@ -426,13 +443,15 @@ accessible" />
     </div>
   </div>
 </div> 
+</figure>
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ hcard(</span></span>
 <span class="giallo-l"><span>  name=&quot;Simon&quot;,</span></span>
 <span class="giallo-l"><span>  nickname=&quot;exiguus&quot;,</span></span>
 <span class="giallo-l"><span>  urls=[[&quot;https://exiguus.blog&quot;, &quot;exiguus blog&quot;],[&quot;https://github.com/exiguus&quot;, &quot;GitHub&quot;],[&quot;https://github.com/exiguus/zola-monoplain&quot;, &quot;Zola Monoplain theme&quot;]]</span></span>
 <span class="giallo-l"><span>) }}</span></span></code></pre>
 <p><strong>Full h-card with multiple phone numbers and emails:</strong></p>
-
+<figure>
+  
 <div class="h-card grid">
   <div><div class="p-name">Sally Ride</div><div class="p-nickname"
       >Nick: sallykride</div
@@ -458,27 +477,27 @@ accessible" />
     </div>
     <div class="p-email">
       
-<a
-  href="mailto:invalid\(local)\part@example\.org"
-  title="Reveal email address"
-  class="u-email"
-  
-  data-obfuscated-email="&#x3C;sally&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;com&#x3E;"
+<a 
+href="mailto:invalid\(local)\part@example\.org"
+ title="Reveal email address" class="u-email"  
+data-obfuscated-email="&#x3C;sally&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;com&#x3E;"
 >
-  &#x3C;&#8203;&#8203;&#8203;&#8203;sally&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;com&#8203;&#8203;&#8203;&#x3E;
+  
+&#x3C;&#8203;&#8203;&#8203;&#8203;sally&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;com&#8203;&#8203;&#8203;&#x3E;
+
 </a>
 
     </div>
     <div class="p-email">
       
-<a
-  href="mailto:invalid\(local)\part@example\.org"
-  title="Reveal email address"
-  class="u-email"
-  
-  data-obfuscated-email="&#x3C;s.ride&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;org&#x3E;"
+<a 
+href="mailto:invalid\(local)\part@example\.org"
+ title="Reveal email address" class="u-email"  
+data-obfuscated-email="&#x3C;s.ride&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203;org&#x3E;"
 >
-  &#x3C;&#8203;&#8203;&#8203;&#8203;s.ride&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;org&#8203;&#8203;&#8203;&#x3E;
+  
+&#x3C;&#8203;&#8203;&#8203;&#8203;s.ride&#8203;&#8203;&#8203;&#x40;example&#8203;&#x2E;&#8203;&#8203;org&#8203;&#8203;&#8203;&#x3E;
+
 </a>
 
     </div>
@@ -545,6 +564,7 @@ accessible" />
     </div><div class="p-note">First American woman in space. The image is from &lt;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;File:Sally_Ride_(1984).jpg&gt;: This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that: NASA material is not protected by copyright unless noted.</div>
   </div>
 </div> 
+</figure>
 <pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ hcard(</span></span>
 <span class="giallo-l"><span>  name=&quot;Sally Ride&quot;,</span></span>
 <span class="giallo-l"><span>  honorific_prefix=&quot;Dr.&quot;,</span></span>
@@ -589,13 +609,14 @@ accessible" />
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
     
-<a
-  href="mailto:invalid\(local)\part@example\.org"
-  title="This email address has been obscured for security. Please click the link to reveal the actual address."
-  
-  data-obfuscated-email="&#x3C;shortcodes.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+<a 
+href="mailto:invalid\(local)\part@example\.org"
+ title="This email address has been obscured for security. Please click the link to reveal the actual address."  
+data-obfuscated-email="&#x3C;shortcodes.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
 >
-  &#x3C;&#8203;&#8203;&#8203;&#8203;shortcodes.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+  
+&#x3C;&#8203;&#8203;&#8203;&#8203;shortcodes.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+
 </a>
 
   </p>
@@ -867,11 +888,8 @@ accessible" />
   <h2 id="footer-links" class="sr-only">Links</h2>
   <ul aria-labelledby="footer-links">
      <li>
-      <a
-        href="https://github.com/exiguus"
-        title="Github page"
-        rel="me"
-      >
+      <a href="https://github.com/exiguus"
+        title="Github page" rel="me">
         <span class="sr-only">Github</span>
         <span aria-hidden="true">  
 <svg width="32" height="32">
@@ -881,14 +899,8 @@ accessible" />
       </a>
     </li>
      <li>
-      <a
-        href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus"
-        title="Mastodon Page"
-        rel="me"
-      >
-        <span class="sr-only"
-          >Mastodon</span
-        >
+      <a href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus" title="Mastodon Page" rel="me">
+        <span class="sr-only">Mastodon</span>
         <span aria-hidden="true">
            
 <svg width="32" height="32">
@@ -898,13 +910,25 @@ accessible" />
         </span>
       </a>
     </li>
+      <li>
+      <a 
+href="mailto:invalid\(local)\part@example\.org"
+ 
+data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+"
+        title="Write me a message" rel="me">
+        <span class="sr-only">E-Mail</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-mail-opened" />
+</svg>
+ </span>
+      </a>
+    </li>
     
     <li>
-      <a
-        href="https://exiguus.github.io/zola-monoplain/atom.xml"
-        title="Atom Feed"
-        rel="alternate"
-      >
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml"
+        title="Atom Feed" rel="alternate">
         <span class="sr-only">Atom</span>
         <span aria-hidden="true">  
 <svg width="32" height="32">
@@ -917,22 +941,11 @@ accessible" />
   <h2 id="footer-info" class="sr-only">Information</h2>
   <p aria-labelledby="footer-info">
     © mono&#x2F;plain; a11y=true 2026  <br />Powered by
-    <a
-      title="Your one-stop static site engine"
-      href="https://getzola.org/"
-      >Zola</a
-    >. Theme by
-    <a
-      title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme"
-      href="https://github.com/exiguus/zola-monoplain"
-      >@exiguus mono&#x2F;plain Zola</a
-    >. Made with love.<br />
+    <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
+    <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small
-      >2026-07-25 21:42:14 Europe&#x2F;Berlin</small
-    >
-  </p>
-  <div class="h-card-container">
+    <small>2026-07-26 23:00:05 Europe&#x2F;Berlin</small>
+  </p> <figure>
   
 <div class="h-card">
   <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
@@ -950,8 +963,8 @@ accessible" />
     </div>
   </div>
 </div> 
-</div></footer>
-<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-12eR0WrxHW7nNn7p9fCYWe1qIDgShshv51vsWfxTOfGgr89VsaSSMDaJFMo3tYlc" defer="defer"></script>
+</figure>
+</footer><script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-RrSRJubaifgb0IuRFNuRVHkxgMsEfOpulb7ts8mUAKAOjONe7GBpasRxecTL+OTk" defer="defer"></script>
   </body>
 
 </html>
