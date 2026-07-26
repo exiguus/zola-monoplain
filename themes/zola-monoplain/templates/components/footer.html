@@ -1,39 +1,38 @@
+{%- import "macros/email.html" as email -%}
 <footer>
   <h2 id="footer-links" class="sr-only">{{ trans(key="footer_links") }}</h2>
   <ul aria-labelledby="footer-links">
     {# Github #} {% if config.extra.link_github_username -%}
     <li>
-      <a
-        href="https://github.com/{{ config.extra.link_github_username }}"
-        title="{{ trans(key='footer_links_github_title') }}"
-        rel="me"
-      >
+      <a href="https://github.com/{{ config.extra.link_github_username }}"
+        title="{{ trans(key='footer_links_github_title') }}" rel="me">
         <span class="sr-only">{{ trans(key="footer_links_github_text") }}</span>
         <span aria-hidden="true"> {{ icons::icon(name="brand-github") }} </span>
       </a>
     </li>
     {% endif -%} {# Mastodon #} {% if config.extra.link_mastodon_url -%}
     <li>
-      <a
-        href="{{ config.extra.link_mastodon_url }}"
-        title="{{ trans(key='footer_links_mastodon_title') }}"
-        rel="me"
-      >
-        <span class="sr-only"
-          >{{ trans(key='footer_links_mastodon_text') }}</span
-        >
+      <a href="{{ config.extra.link_mastodon_url }}" title="{{ trans(key='footer_links_mastodon_title') }}" rel="me">
+        <span class="sr-only">{{ trans(key='footer_links_mastodon_text') }}</span>
         <span aria-hidden="true">
           {{ icons::icon(name="brand-mastodon") }}
         </span>
       </a>
     </li>
-    {% endif -%} {# Mastodon feed #}
+    {% endif -%} {# Mastodon feed #} {# email #} {% if config.extra.link_email
+    -%}
     <li>
-      <a
-        href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}"
-        title="{{ trans(key='footer_links_atom_title') }}"
-        rel="alternate"
-      >
+      <a {{ email::obfuscate_mail_href() }} {{ email::obfuscate_mail_data(local_part=config.extra.link_email.local_part,
+        domain_name=config.extra.link_email.domain_name, tld=config.extra.link_email.tld) }}"
+        title="{{ trans(key='footer_links_email_title') }}" rel="me">
+        <span class="sr-only">{{ trans(key='footer_links_email_text') }}</span>
+        <span aria-hidden="true"> {{ icons::icon(name="mail-opened") }} </span>
+      </a>
+    </li>
+    {% endif -%} {# email feed #}
+    <li>
+      <a href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}"
+        title="{{ trans(key='footer_links_atom_title') }}" rel="alternate">
         <span class="sr-only">{{ trans(key='footer_links_atom_text') }}</span>
         <span aria-hidden="true"> {{ icons::icon(name="rss") }} </span>
       </a>
@@ -47,22 +46,14 @@
     created your tools. #} {% if config.extra.disable_powered_by and
     config.extra.disable_powered_by == true %}{% else %}<br />{{
     trans(key="footer_powered_by") }}
-    <a
-      title="{{ trans(key='footer_links_zola_title') }}"
-      href="https://getzola.org/"
-      >{{ trans(key="footer_links_zola_text") }}</a
-    >. {{ trans(key="footer_theme") }}
-    <a
-      title="{{ trans(key='footer_links_theme_title') }}"
-      href="https://github.com/exiguus/zola-monoplain"
-      >{{ trans(key="footer_links_theme_text") }}</a
-    >. {{ trans(key="footer_made") }}.{% endif %}<br />
+    <a title="{{ trans(key='footer_links_zola_title') }}" href="https://getzola.org/">{{
+      trans(key="footer_links_zola_text") }}</a>. {{ trans(key="footer_theme") }}
+    <a title="{{ trans(key='footer_links_theme_title') }}" href="https://github.com/exiguus/zola-monoplain">{{
+      trans(key="footer_links_theme_text") }}</a>. {{ trans(key="footer_made") }}.{% endif %}<br />
     <i class="sr-only">{{ trans(key='footer_last_update') }}</i>
-    <small
-      >{{ now() | date(format="%Y-%m-%d %H:%M:%S",
+    <small>{{ now() | date(format="%Y-%m-%d %H:%M:%S",
       timezone=config.extra.timezone) | safe }} {{ config.extra.timezone
-      }}</small
-    >
+      }}</small>
   </p>
   {%- if config.extra.hcard_enabled %} {% include "components/hcard.html" -%} {%
   endif -%}

@@ -67,8 +67,10 @@
     "themes/zola-monoplain/templates/base.html",
     "themes/zola-monoplain/templates/pages/*.html",
     "themes/zola-monoplain/templates/macros/images.html",
+    "themes/zola-monoplain/templates/macros/email.html",
     "themes/zola-monoplain/templates/components/post_feedback.html",
     "themes/zola-monoplain/templates/components/post_header.html",
+    "themes/zola-monoplain/templates/components/footer.html",
     "themes/zola-monoplain/content/posts/opengraph/index.md"
   ],
   "plugins": [
