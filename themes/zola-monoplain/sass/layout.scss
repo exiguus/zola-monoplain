@@ -191,6 +191,35 @@ body {
     }
 
     & > header {
+      & > div {
+        display: flex;
+        flex-direction: row;
+        gap: 0 1em;
+        margin-bottom: 1rem;
+
+        & > p {
+          margin: 0;
+        }
+
+        & > p + ul {
+          @extend %list-horizontal;
+          margin: 0;
+
+          li {
+            position: relative;
+
+            &:not(:last-child) {
+              &::after {
+                content: ",";
+                position: absolute;
+                top: 0;
+                right: -0.5em;
+              }
+            }
+          }
+        }
+      }
+
       > figure {
         margin: 0 -1rem 1rem -1rem;
         & > .hero + p {

@@ -1,6 +1,5 @@
-{%- import "macros/hcard.html" as hcard -%} {%- if config.extra.hcard_enabled ==
-true -%}
-<div class="h-card-container">
+{%- import "macros/hcard.html" as hcard -%}
+<figure>
   {{ hcard::hcard( name=config.extra.hcard_name | default(value=""),
   honorific_prefix=config.extra.hcard_honorific_prefix | default(value=""),
   given_name=config.extra.hcard_given_name | default(value=""),
@@ -21,5 +20,4 @@ true -%}
   bday=config.extra.hcard_bday | default(value=""),
   category=config.extra.hcard_category | default(value=""),
   note=config.extra.hcard_note | default(value=""), ) }}
-</div>
-{%- endif -%}
+</figure>

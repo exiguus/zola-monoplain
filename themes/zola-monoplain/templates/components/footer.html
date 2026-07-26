@@ -64,5 +64,6 @@
       }}</small
     >
   </p>
-  {% include "components/hcard.html" -%}
+  {%- if config.extra.hcard_enabled %} {% include "components/hcard.html" -%} {%
+  endif -%}
 </footer>

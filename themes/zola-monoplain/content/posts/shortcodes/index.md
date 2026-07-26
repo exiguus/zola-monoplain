@@ -3,7 +3,7 @@ title = "Shortcodes"
 description = "Shortcodes by example"
 date = 2024-06-08
 updated = 2026-07-19
-authors = ["Simon Gattner"]
+authors = ["Simon Gattner", "exiguus"]
 [taxonomies]
 tags = ["Zola", "Theme", "Markdown", "Shortcodes", "Images", "Details", "Markdown", "Icons", "Youtube", "Spotify", "Email", "Phone", "h-card"]
 [extra]
