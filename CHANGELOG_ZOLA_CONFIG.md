@@ -4,7 +4,8 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ## Table of Contents
 
-- Changes between [v1.6.0 and HEAD (main)](#changes-between-v160-and-head-main)
+- Changes between [v1.7.0 and HEAD (main)](#changes-between-v170-and-head-main)
+- Changes between [v1.6.0 and v1.7.0](#changes-between-v160-and-v170)
 - Changes between [v1.5.0 and v1.6.0](#changes-between-v150-and-v160)
 - Changes between [v1.4.0 and v1.5.0](#changes-between-v140-and-v150)
 - Changes between [v1.3.2 and v1.4.0](#changes-between-v132-and-v140)
@@ -16,16 +17,32 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ---
 
-## Changes between v1.6.0 and HEAD (main)
+## Changes between v1.7.0 and HEAD (main)
+
+(`config.toml` diff)
+
+_No changes_ were made
+
+## Changes between v1.6.0 and v1.7.0
 
 (`config.toml` diff)
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index 92eeac0..e9620b0 100644
+index 92eeac0..e085579 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
-@@ -57,6 +57,11 @@ a11y_taxonomy_list_label = "Tag list"
+@@ -1,3 +1,9 @@
++##########
++# zola-monoplain Theme Config
++# Date: 2026-07-27
++# Version: 1.6.0
++###
++
+ title = "mono/plain; a11y=true"
+ description = "An accessible, monospace plain Zola Theme"
+
+@@ -57,6 +63,11 @@ a11y_taxonomy_list_label = "Tag list"
  debug_label = "debug"
  debug_summary = "Debug"
  draft_label = "(Draft)"
@@ -37,7 +54,7 @@ index 92eeac0..e9620b0 100644
  feed_atom_title = "Atom Feed"
  feed_rss_title = "RSS Feed"
  footer_info = "Information"
-@@ -67,6 +72,8 @@ footer_links_github_text = "Github"
+@@ -67,6 +78,8 @@ footer_links_github_text = "Github"
  footer_links_github_title = "Github page"
  footer_links_mastodon_text = "Mastodon"
  footer_links_mastodon_title = "Mastodon Page"
@@ -46,7 +63,7 @@ index 92eeac0..e9620b0 100644
  footer_links_theme_text = "@exiguus mono/plain Zola"
  footer_links_theme_title = "Github Zola 'mono/plain; a11y=true' Theme"
  footer_links_zola_text = "Zola"
-@@ -79,16 +86,14 @@ footer_theme = "Theme by"
+@@ -79,16 +92,14 @@ footer_theme = "Theme by"
  latest_images_title = "Latest Images"
  latest_posts_title = "Latest Posts"
  main_nav_label = "Main Navigation"
@@ -65,7 +82,7 @@ index 92eeac0..e9620b0 100644
  post_hero_copy = "Picture by"
  search_form_clear = "Clear"
  search_form_input_label = "Text to search"
-@@ -124,8 +129,11 @@ thumbnail_quality = 70
+@@ -124,8 +135,11 @@ thumbnail_quality = 70
  thumbnail_default_size = 128
  thumbnail_sizes = [128, 256]
  # links
@@ -78,7 +95,7 @@ index 92eeac0..e9620b0 100644
  # main navigation
  main_nav_items = [
    { url = "$BASE_URL/", name = "Home" },
-@@ -153,3 +161,41 @@ feedback_email_enabled = true
+@@ -153,3 +167,41 @@ feedback_email_enabled = true
  feedback_email_address = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
  feedback_email_address_wildcard = true
  feedback_email_address_wildcard_postfix = ".monoplain"
