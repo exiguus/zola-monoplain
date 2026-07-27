@@ -126,13 +126,11 @@ For a complete reference of `config.extra`, `page.extra`, and available macros/s
 - <https://exiguus.github.io/zola-monoplain/posts/images/>
 - <https://exiguus.github.io/zola-monoplain/posts/shortcodes/>
 
-## Using the responsive image shortcode
+## Releases
 
-Responsive images generate multiple sizes and use `srcset` so each device can load an appropriate image. You can use this feature in Markdown like this:
-
-```md
-{{ image(src="yourimage.jpg", alt="This is my image") }}
-```
+Release follow [Semantic Versioning](https://semver.org/) and are tagged in the Git repository. The version number is also available in `package.json` and the `config.toml` file.
+Release notes are available in the [CHANGELOG.md](CHANGELOG.md) file.
+Zola Config Changes are available in the [CHANGELOG-ZOLA-CONFIG.md](CHANGELOG-ZOLA-CONFIG.md) file.
 
 ## Feature requests & support
 
@@ -146,24 +144,6 @@ Contributions are very welcome. If you are planning to add a feature, open an is
 - Be careful about destroying indentation as Tera syntax doesn't seem to be widely supported by IDEs.
 - Keep it lean. Adding bloat will likely result in your PR being rejected.
 - Consider backward compatibility, ideally people blindly-upgrading won't see any unexpected changes to their sites.
-
-## Tabler Icons
-
-Use [Tabler Icons](https://tabler.io/icons) for icons.
-
-The icon shortcode uses the following syntax:
-
-```md
-{{ icon(name="brand-github", size=24) }}
-```
-
-- Name is the name of the icon, e.g. `brand-github`. Names are the icon names from [Tabler Icons](https://tabler.io/icons).
-- Size is the size of the icon in px, e.g. `24`. Default is `32`.
-
-Tabler Icons are installed via npm and are available in the `node_modules` folder.
-
-The `pnpm cp:icons` script copies the SVG icon sprite
-to the `static` folder.
 
 ## License
 

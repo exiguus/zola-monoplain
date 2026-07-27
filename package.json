@@ -14,10 +14,14 @@
     "format": "pnpm format:fix",
     "format:fix": "dprint fmt --allow-no-files",
     "format:check": "dprint check",
-    "release": "standard-version",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:major": "standard-version --release-as major",
+    "release": "pnpm run release:generate && pnpm run release:amend",
+    "release:generate": "standard-version",
+    "release:amend": "pnpm run zola:changelog && pnpm run zola:banner && git add CHANGELOG_ZOLA_CONFIG.md themes/zola-monoplain/config.toml && git commit --amend --no-edit",
+    "release:minor": "pnpm run release:generate --release-as minor && pnpm run release:amend",
+    "release:patch": "pnpm run release:generate --release-as patch && pnpm run release:amend",
+    "release:major": "pnpm run release:generate --release-as major && pnpm run release:amend",
+    "zola:changelog": "bash scripts/zola-config-changelog.sh",
+    "zola:banner": "bash scripts/zola-config-version.sh",
     "prepare": "pnpm husky"
   },
   "keywords": [
@@ -63,6 +67,7 @@
     ]
   },
   "packageManager": "pnpm@11.15.0",
+  "standard-version": {},
   "engines": {
     "pnpm": ">=10.0.0 <12.0.0",
     "npm": ">=10.0.0 <13.0.0",
