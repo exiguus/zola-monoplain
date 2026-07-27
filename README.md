@@ -130,7 +130,7 @@ For a complete reference of `config.extra`, `page.extra`, and available macros/s
 
 Release follow [Semantic Versioning](https://semver.org/) and are tagged in the Git repository. The version number is also available in `package.json` and the `config.toml` file.
 Release notes are available in the [CHANGELOG.md](CHANGELOG.md) file.
-Zola Config Changes are available in the [CHANGELOG-ZOLA-CONFIG.md](CHANGELOG-ZOLA-CONFIG.md) file.
+Zola Config Changes are available in the [CHANGELOG_ZOLA_CONFIG.md](CHANGELOG_ZOLA_CONFIG.md) file.
 
 ## Feature requests & support
 
