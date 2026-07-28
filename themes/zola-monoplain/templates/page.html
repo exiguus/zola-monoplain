@@ -1,4 +1,7 @@
 {% extends "base.html" -%} {% block title -%} {{ config.title }} |
 {{page.title}} {% endblock title -%} {% block content -%}
 <h1> {{ page.title }} </h1>
-{{ page.content | safe }} {% endblock content -%}
+{{ page.content | safe }} {%- if page.extra.content %} {%- set data =
+load_data(path=page.extra.content) -%} {%- if data -%}
+<section> {{ data | markdown(inline=true) | safe }} </section>
+{%- endif -%} {%- endif -%} {% endblock content -%}
