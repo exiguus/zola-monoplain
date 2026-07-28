@@ -1,13 +1,8 @@
-{%- import "macros/hcard.html" as hcard %} {% macro hentry_html( name, summary,
-content, published, updated, url, uid, author, categories, syndication ) %} {%-
-set has_content = name or summary or content or published or updated or url or
-uid or author or categories or syndication %} {%- set has_author = author.name
-or author.honorific_prefix or author.given_name or author.additional_name or
-author.family_name or author.honorific_suffix or author.nickname or author.org
-or author.photo or author.urls or author.emails or author.tels or
-author.street_address or author.locality or author.region or author.postal_code
-or author.country_name or author.bday or author.category or author.note %} {%-
-if has_content %}
+{%- import "macros/hcard.html" as hcard %} {% macro hentry_html( name="",
+summary="", content="", published="", updated="", url="", uid="", authors=false,
+categories=false, syndication=false ) %} {%- set has_content = name or summary
+or content or published or updated or url or uid or authors or categories or
+syndication %} {%- if has_content %}
 <div class="h-entry">
   {%- if name %}<div class="p-name">{{ name }}</div>{% endif %} {%- if summary
   %}<div class="p-summary">{{ summary }}</div>{% endif %} {%- if content %}<div
@@ -25,19 +20,12 @@ if has_content %}
     ><a class="u-url" href="{{ url }}"
       >{{ trans(key='hentry_permalink_label') }}</a
     ></div
-  >{% endif %} {%- if uid %}<div class="p-uid">{{ uid }}</div>{% endif %} {%- if
-  has_author %}
+  >
+  {% endif %} {%- if uid %}<div class="p-uid">{{ uid }}</div>{% endif %} {%- if
+  authors %}
   <div class="p-author">
-    {{ hcard::hcard_html( name=author.name,
-    honorific_prefix=author.honorific_prefix, given_name=author.given_name,
-    additional_name=author.additional_name, family_name=author.family_name,
-    honorific_suffix=author.honorific_suffix, nickname=author.nickname,
-    org=author.org, photo=author.photo, urls=author.urls, emails=author.emails,
-    tels=author.tels, street_address=author.street_address,
-    locality=author.locality, region=author.region,
-    region_title=author.region_title, postal_code=author.postal_code,
-    country_name=author.country_name, bday=author.bday,
-    category=author.category, note=author.note ) }}
+    {%- for author_name in authors %} {{ hcard::hcard_html(is_author=true,
+    name=author_name) }} {%- endfor %}
   </div>
   {%- endif %} {%- if categories %}
   <div class="p-category">
@@ -53,16 +41,11 @@ if has_content %}
   </div>
   {%- endif %}
 </div>
-{%- endif %} {% endmacro hentry_html %} {% macro hentry_json( name, summary,
-content, published, updated, url, uid, author, categories, syndication ) %} {%-
-set has_content = name or summary or content or published or updated or url or
-uid or author or categories or syndication %} {%- set has_author = author.name
-or author.honorific_prefix or author.given_name or author.additional_name or
-author.family_name or author.honorific_suffix or author.nickname or author.org
-or author.photo or author.urls or author.emails or author.tels or
-author.street_address or author.locality or author.region or author.postal_code
-or author.country_name or author.bday or author.category or author.note %} {%-
-if has_content %}
+{%- endif %} {% endmacro hentry_html %} {% macro hentry_json( name="",
+summary="", content="", published="", updated="", url="", uid="", authors=false,
+categories=false, syndication=false ) %} {%- set has_content = name or summary
+or content or published or updated or url or uid or authors or categories or
+syndication %} {%- if has_content %}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,35 +57,7 @@ if has_content %}
     {%- if updated %}"dateModified": "{{ updated }}",{% endif %}
     {%- if url %}"url": "{{ url }}",{% endif %}
     {%- if uid %}"identifier": "{{ uid }}",{% endif %}
-    {%- if has_author %}
-    "author": {
-      "@type": "Person",
-      {%- if author.name %}"name": "{{ author.name }}",{% endif %}
-      {%- if author.honorific_prefix %}"honorificPrefix": "{{ author.honorific_prefix }}",{% endif %}
-      {%- if author.given_name %}"givenName": "{{ author.given_name }}",{% endif %}
-      {%- if author.additional_name %}"additionalName": "{{ author.additional_name }}",{% endif %}
-      {%- if author.family_name %}"familyName": "{{ author.family_name }}",{% endif %}
-      {%- if author.honorific_suffix %}"honorificSuffix": "{{ author.honorific_suffix }}",{% endif %}
-      {%- if author.nickname %}"alternateName": "{{ author.nickname }}",{% endif %}
-      {%- if author.org %}"worksFor": { "@type": "Organization", "name": "{{ author.org }}" },{% endif %}
-      {%- if author.urls %}"url": [{% for url_item in author.urls %}{%- if not loop.first %},{% endif %}"{{ url_item[0] }}"{% endfor %}],{% endif %}
-      {%- if author.photo %}"image": "{{ author.photo | safe_url }}",{% endif %}
-      {%- if author.emails %}"email": [{% for email_item in author.emails %}{%- if not loop.first %},{% endif %}"{{ email_item[0] }}@{{ email_item[1] }}.{{ email_item[2] }}"{% endfor %}],{% endif %}
-      {%- if author.tels %}"telephone": [{% for tel_item in author.tels %}{%- if not loop.first %},{% endif %}"{{ tel_item[0] }}"{% endfor %}],{% endif %}
-      {%- if author.street_address or author.locality or author.region or author.postal_code or author.country_name %}
-      "address": {
-        "@type": "PostalAddress",
-        {%- if author.street_address %}"streetAddress": "{{ author.street_address }}",{% endif %}
-        {%- if author.locality %}"addressLocality": "{{ author.locality }}",{% endif %}
-        {%- if author.region %}"addressRegion": "{{ author.region }}",{% endif %}
-        {%- if author.postal_code %}"postalCode": "{{ author.postal_code }}",{% endif %}
-        {%- if author.country_name %}"addressCountry": "{{ author.country_name }}"{% endif %}
-      },{% endif %}
-      {%- if author.bday %}"birthDate": "{{ author.bday }}",{% endif %}
-      {%- if author.category %}"additionalType": "{{ author.category }}",{% endif %}
-      {%- if author.note %}"description": "{{ author.note }}"{% endif %}
-    },
-    {%- endif %}
+    {%- if authors %}"author": [{% for author_name in authors %}{%- if not loop.first %},{% endif %}{"@type": "Person", "name": "{{ author_name }}"}{% endfor %}],{% endif %}
     {%- if categories %}"keywords": [{% for category in categories %}{%- if not loop.first %},{% endif %}"{{ category }}"{% endfor %}],{% endif %}
     {%- if syndication %}"sameAs": [{% for synd_item in syndication %}{%- if not loop.first %},{% endif %}"{{ synd_item }}"{% endfor %}]{% endif %}
   }
