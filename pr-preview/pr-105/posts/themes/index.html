@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-28T10:25:02.811272879+00:00" />
+<meta name="build" content="2026-07-28T10:44:12.496771993+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Themes"
@@ -231,186 +231,186 @@ accessible" />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting","headline": "Themes","description": "Monoplain Theme for your one-stop static site engine","articleBody": "<h2 id="introduction">Introduction</h2>
-<p>Zola is a fast static site generator written in Rust. It is designed to be simple to use and easy to extend. Zola is a great choice for building blogs, portfolios, and other static websites.</p>
-<p>This post gives a practical introduction to Zola and shows how to get started.</p>
-<h2 id="install">Install</h2>
-<p>Zola is available on all major platforms. You can install it using the package manager of your choice or build it by yourself.</p>
-<p>To build Zola, you can use the following command:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> clone https://github.com/getzola/zola.git</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">cd</span><span style="color: #F1FA8C;"> zola</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">cargo</span><span style="color: #F1FA8C;"> install</span><span style="color: #BD93F9;"> --path</span><span style="color: #F1FA8C;"> .</span><span style="color: #BD93F9;"> --locked</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre>
-<p>To install Zola, use:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #F1FA8C;"> target/release/zola ~/.cargo/bin/zola</span></span></code></pre>
-<p><a rel="external" href="https://www.getzola.org/documentation/getting-started/installation/">https://www.getzola.org/documentation/getting-started/installation/</a></p>
-<h2 id="create-a-new-site">Create a new site</h2>
-<p>To create a new Zola site, use the Zola CLI:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #F1FA8C;"> init my-site</span></span></code></pre>
-<p><a rel="external" href="https://www.getzola.org/documentation/getting-started/cli-usage/">https://www.getzola.org/documentation/getting-started/cli-usage/</a></p>
-<h2 id="themes">Themes</h2>
-<p>Zola supports themes out of the box. You can create your own theme or use one of the many themes available on the Zola website.</p>
-<p>After you initialize your site, you can clone the theme repository.</p>
-<p>Then copy the theme into your site directory:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> clone https://github.com/exiguus/zola-monoplain.git</span></span>
-<span class="giallo-l"><span style="color: #6272A4;"># The theme is in the themes/zola-monoplain directory</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #BD93F9;"> -R</span><span style="color: #F1FA8C;"> zola-monoplain/themes/zola-monoplain my-site/themes/</span></span>
-<span class="giallo-l"><span style="color: #6272A4;"># Copy the example content of the theme to your site directory</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #BD93F9;"> -R</span><span style="color: #F1FA8C;"> zola-monoplain/themes/zola-monoplain/content my-site/</span></span>
-<span class="giallo-l"><span style="color: #6272A4;"># Copy the example config.toml of the theme to your site directory</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #F1FA8C;"> zola-monoplain/themes/zola-monoplain/config.toml my-site/</span></span></code></pre>
-<p>Instead of copying files, you can use symlinks. This is useful if you want to use the theme in multiple sites. You can create a symlink to the theme directory from your site directory:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">ln</span><span style="color: #BD93F9;"> -s</span><span style="color: #F1FA8C;"> /path/to/zola-monoplain/themes/zola-monoplain /path/to/blog/themes/zola-monoplain</span></span></code></pre>
-<p>Then you can set the theme in the <code>config.toml</code> file:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #8BE9FD;">theme</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">zola-monoplain</span><span style="color: #E9F284;">&quot;</span></span></code></pre>
-<p>And adjust the <code>config.toml</code> file to your needs.</p>
-<p>An example of using this theme with GitHub Actions in a monorepo is available here: <a rel="external" href="https://github.com/exiguus/blog">https://github.com/exiguus/blog</a></p>
-<h2 id="templates">Templates</h2>
-<p>Zola uses the Tera template engine to render your content. Tera is a powerful and flexible template engine that allows you to create complex layouts and designs for your website.</p>
-<p><a rel="external" href="https://keats.github.io/tera/docs">https://keats.github.io/tera/docs</a></p>
-<h2 id="theme-extra-reference">Theme Extra Reference</h2>
-<p>The following <code>config.extra</code> keys are currently used by templates/macros:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #6272A4;"># debug</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">debug</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #6272A4;"># defaults for metadata</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">tags</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">zola</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">theme</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">a11y</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">accessible</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">authors</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Simon Gattner</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">date</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">2024-01-01</span><span style="color: #E9F284;">&quot;</span><span style="color: #6272A4;"> # optional fallback used by meta macro</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">timezone</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Europe/Berlin</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #6272A4;"># images</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">image_resizing_disabled</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> false</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">image_format</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">webp</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">image_quality</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 80</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images_default_size</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 256</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images_sizes</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #BD93F9;">256</span><span>,</span><span style="color: #BD93F9;"> 384</span><span>,</span><span style="color: #BD93F9;"> 512</span><span>,</span><span style="color: #BD93F9;"> 576</span><span>,</span><span style="color: #BD93F9;"> 640</span><span>,</span><span style="color: #BD93F9;"> 768</span><span>,</span><span style="color: #BD93F9;"> 1024</span><span>,</span><span style="color: #BD93F9;"> 1152</span><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">thumbnail_quality</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 70</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">thumbnail_default_size</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 128</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">thumbnail_sizes</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #BD93F9;">128</span><span>,</span><span style="color: #BD93F9;"> 256</span><span>]</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #6272A4;"># links/footer/header</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">link_github_username</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">exiguus/zola-monoplain</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">link_mastodon_url</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">https://toot.community/@exiguus</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">disable_powered_by</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> false</span><span style="color: #6272A4;"> # optional</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">main_nav_items</span><span style="color: #FF79C6;"> =</span><span> [</span></span>
-<span class="giallo-l"><span>  {</span><span style="color: #8BE9FD;"> url</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">$BASE_URL/</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Home</span><span style="color: #E9F284;">&quot;</span><span> },</span></span>
-<span class="giallo-l"><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">footer_nav_items</span><span style="color: #FF79C6;"> =</span><span> [</span></span>
-<span class="giallo-l"><span>  {</span><span style="color: #8BE9FD;"> url</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">$BASE_URL/</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Home</span><span style="color: #E9F284;">&quot;</span><span> },</span></span>
-<span class="giallo-l"><span>]</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #6272A4;"># gallery</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">gallery_show_posts</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #6272A4;"># feedback</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_enabled</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_address</span><span style="color: #FF79C6;"> =</span><span> {</span><span style="color: #8BE9FD;"> local_part</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">monoplain</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #8BE9FD;"> domain_name</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">0x38</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #8BE9FD;"> tld</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">de</span><span style="color: #E9F284;">&quot;</span><span> }</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_address_wildcard</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_address_wildcard_postfix</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">.monoplain</span><span style="color: #E9F284;">&quot;</span></span></code></pre>
-<p>Notes:</p>
-<ul>
-<li><code>search_enabled</code> exists in <code>config.toml</code> but is currently not used directly in templates.</li>
-<li><code>thumbnail_default_size</code> is defined in config, but component/template calls often pass concrete defaults inline.</li>
-</ul>
-<h2 id="post-page-extra-reference">Post/Page Extra Reference</h2>
-<p>The following <code>page.extra</code> / <code>post.extra</code> keys are currently used by templates:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">lang</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">de</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">hero.jpg</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_alt</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Sunset skyline over a river</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_copy</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Hackesche Hoefe in Berlin-Mitte</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">preview_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">preview.jpg</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">image-01.jpg</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">image-02.jpg</span><span style="color: #E9F284;">&quot;</span><span>]</span></span></code></pre>
-<ul>
-<li><code>lang</code>: adds a language attribute in post/page and gallery output.</li>
-<li><code>hero_img</code>: renders the hero image in post headers.</li>
-<li><code>hero_alt</code>: optional alt text for the hero image in post headers.</li>
-<li><code>hero_copy</code>: optional figcaption text for the hero image in post headers.</li>
-<li><code>preview_img</code>: first choice for Open Graph image.</li>
-<li><code>images</code>: drives gallery and latest-images thumbnail sections.</li>
-<li>Open Graph falls back to <code>hero_img</code> when <code>preview_img</code> is missing.</li>
-</ul>
-<h2 id="macro-reference">Macro Reference</h2>
-<p>Theme macros used by templates/shortcodes:</p>
-<ul>
-<li><code>macros/images.html</code>
-<ul>
-<li><code>image(path, src, alt, class="", width, height)</code></li>
-<li><code>responsive_image(path, src, alt, default_size, sizes, class="")</code></li>
-<li><code>responsive_thumbnail(path, src, alt, default_size, sizes, class="")</code></li>
-</ul>
-</li>
-<li><code>macros/meta.html</code>
-<ul>
-<li><code>description()</code></li>
-<li><code>title()</code></li>
-<li><code>tags()</code></li>
-<li><code>authors()</code></li>
-<li><code>date()</code></li>
-</ul>
-</li>
-<li><code>macros/opengraph.html</code>
-<ul>
-<li><code>description()</code></li>
-<li><code>title()</code></li>
-<li><code>image()</code></li>
-</ul>
-</li>
-<li><code>macros/icons.html</code>
-<ul>
-<li><code>icon(name, size=32)</code></li>
-</ul>
-</li>
-<li><code>macros/hooks.html</code>
-<ul>
-<li><code>post_above_content(page)</code></li>
-<li><code>post_below_content(page)</code></li>
-<li><code>post_below_tags(page)</code></li>
-<li><code>posts_below_title(page)</code></li>
-</ul>
-</li>
-<li><code>macros/markdown.html</code>
-<ul>
-<li><code>example(title="example", type, code)</code></li>
-</ul>
-</li>
-</ul>
-<p>Shortcodes provided by the theme:</p>
-<ul>
-<li><code>image</code></li>
-<li><code>image_original</code></li>
-<li><code>thumbnail</code></li>
-<li><code>icon</code></li>
-<li><code>details</code></li>
-<li><code>markdown</code></li>
-<li><code>youtube</code></li>
-<li><code>spotify</code></li>
-</ul>
-<h2 id="multilingual-sites">Multilingual sites</h2>
-<p>Zola supports multilingual sites out of the box. You can create content in multiple languages and Zola will generate separate pages for each language.</p>
-<p>Languages and translations are defined in the <code>config.toml</code> file. You can specify the default language and add translations for each language you want to support.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">languages</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">de</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">generate_feed</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">build_search_index</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">languages</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">en</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">de</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">home</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Startseite</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">en</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">home</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Home</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">home</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Home</span><span style="color: #E9F284;">&quot;</span></span></code></pre><h2 id="resources">Resources</h2>
-<ul>
-<li><a rel="external" href="https://www.getzola.org/">Zola website</a></li>
-<li><a rel="external" href="https://www.getzola.org/documentation/templates/overview/">Zola templates</a></li>
-<li><a rel="external" href="https://www.getzola.org/documentation/content/multilingual/">Zola Multilingual sites</a></li>
-</ul>
+    "@type": "BlogPosting","headline": "Themes","description": "Monoplain Theme for your one-stop static site engine","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola is a fast static site generator written in Rust. It is designed to be simple to use and easy to extend. Zola is a great choice for building blogs, portfolios, and other static websites.&lt;&#x2F;p&gt;
+&lt;p&gt;This post gives a practical introduction to Zola and shows how to get started.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola is available on all major platforms. You can install it using the package manager of your choice or build it by yourself.&lt;&#x2F;p&gt;
+&lt;p&gt;To build Zola, you can use the following command:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; clone https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; .&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --locked&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To install Zola, use:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; target&#x2F;release&#x2F;zola ~&#x2F;.cargo&#x2F;bin&#x2F;zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;create-a-new-site&quot;&gt;Create a new site&lt;&#x2F;h2&gt;
+&lt;p&gt;To create a new Zola site, use the Zola CLI:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; init my-site&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;themes&quot;&gt;Themes&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola supports themes out of the box. You can create your own theme or use one of the many themes available on the Zola website.&lt;&#x2F;p&gt;
+&lt;p&gt;After you initialize your site, you can clone the theme repository.&lt;&#x2F;p&gt;
+&lt;p&gt;Then copy the theme into your site directory:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; clone https:&#x2F;&#x2F;github.com&#x2F;exiguus&#x2F;zola-monoplain.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# The theme is in the themes&#x2F;zola-monoplain directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -R&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola-monoplain&#x2F;themes&#x2F;zola-monoplain my-site&#x2F;themes&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Copy the example content of the theme to your site directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -R&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola-monoplain&#x2F;themes&#x2F;zola-monoplain&#x2F;content my-site&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Copy the example config.toml of the theme to your site directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola-monoplain&#x2F;themes&#x2F;zola-monoplain&#x2F;config.toml my-site&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Instead of copying files, you can use symlinks. This is useful if you want to use the theme in multiple sites. You can create a symlink to the theme directory from your site directory:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;ln&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -s&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; &#x2F;path&#x2F;to&#x2F;zola-monoplain&#x2F;themes&#x2F;zola-monoplain &#x2F;path&#x2F;to&#x2F;blog&#x2F;themes&#x2F;zola-monoplain&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then you can set the theme in the &lt;code&gt;config.toml&lt;&#x2F;code&gt; file:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;theme&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;zola-monoplain&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And adjust the &lt;code&gt;config.toml&lt;&#x2F;code&gt; file to your needs.&lt;&#x2F;p&gt;
+&lt;p&gt;An example of using this theme with GitHub Actions in a monorepo is available here: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;exiguus&#x2F;blog&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;exiguus&#x2F;blog&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;templates&quot;&gt;Templates&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola uses the Tera template engine to render your content. Tera is a powerful and flexible template engine that allows you to create complex layouts and designs for your website.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;keats.github.io&#x2F;tera&#x2F;docs&quot;&gt;https:&#x2F;&#x2F;keats.github.io&#x2F;tera&#x2F;docs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;theme-extra-reference&quot;&gt;Theme Extra Reference&lt;&#x2F;h2&gt;
+&lt;p&gt;The following &lt;code&gt;config.extra&lt;&#x2F;code&gt; keys are currently used by templates&#x2F;macros:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# debug&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;debug&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# defaults for metadata&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;theme&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;a11y&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;accessible&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;authors&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Simon Gattner&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;date&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;2024-01-01&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt; # optional fallback used by meta macro&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;timezone&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Europe&#x2F;Berlin&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# images&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;image_resizing_disabled&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;image_format&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;webp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;image_quality&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 80&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images_default_size&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 256&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images_sizes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;256&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 384&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 512&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 576&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 640&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 768&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 1024&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 1152&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;thumbnail_quality&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 70&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;thumbnail_default_size&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 128&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;thumbnail_sizes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;128&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 256&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# links&#x2F;footer&#x2F;header&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;link_github_username&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;exiguus&#x2F;zola-monoplain&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;link_mastodon_url&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;https:&#x2F;&#x2F;toot.community&#x2F;@exiguus&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;disable_powered_by&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt; # optional&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;main_nav_items&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; url&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;$BASE_URL&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; },&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;footer_nav_items&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; url&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;$BASE_URL&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; },&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# gallery&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;gallery_show_posts&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# feedback&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_enabled&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_address&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; local_part&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;monoplain&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; domain_name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;0x38&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; tld&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;de&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_address_wildcard&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_address_wildcard_postfix&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;.monoplain&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Notes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;search_enabled&lt;&#x2F;code&gt; exists in &lt;code&gt;config.toml&lt;&#x2F;code&gt; but is currently not used directly in templates.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;thumbnail_default_size&lt;&#x2F;code&gt; is defined in config, but component&#x2F;template calls often pass concrete defaults inline.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;post-page-extra-reference&quot;&gt;Post&#x2F;Page Extra Reference&lt;&#x2F;h2&gt;
+&lt;p&gt;The following &lt;code&gt;page.extra&lt;&#x2F;code&gt; &#x2F; &lt;code&gt;post.extra&lt;&#x2F;code&gt; keys are currently used by templates:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;de&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;hero.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_alt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Sunset skyline over a river&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_copy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Hackesche Hoefe in Berlin-Mitte&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;preview_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;preview.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;image-01.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;image-02.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lang&lt;&#x2F;code&gt;: adds a language attribute in post&#x2F;page and gallery output.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;hero_img&lt;&#x2F;code&gt;: renders the hero image in post headers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;hero_alt&lt;&#x2F;code&gt;: optional alt text for the hero image in post headers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;hero_copy&lt;&#x2F;code&gt;: optional figcaption text for the hero image in post headers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;preview_img&lt;&#x2F;code&gt;: first choice for Open Graph image.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;&#x2F;code&gt;: drives gallery and latest-images thumbnail sections.&lt;&#x2F;li&gt;
+&lt;li&gt;Open Graph falls back to &lt;code&gt;hero_img&lt;&#x2F;code&gt; when &lt;code&gt;preview_img&lt;&#x2F;code&gt; is missing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;macro-reference&quot;&gt;Macro Reference&lt;&#x2F;h2&gt;
+&lt;p&gt;Theme macros used by templates&#x2F;shortcodes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;images.html&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;image(path, src, alt, class=&quot;&quot;, width, height)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;responsive_image(path, src, alt, default_size, sizes, class=&quot;&quot;)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;responsive_thumbnail(path, src, alt, default_size, sizes, class=&quot;&quot;)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;meta.html&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;description()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;title()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;tags()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;authors()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;date()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;opengraph.html&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;description()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;title()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;image()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;icons.html&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;icon(name, size=32)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;hooks.html&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;post_above_content(page)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;post_below_content(page)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;post_below_tags(page)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;posts_below_title(page)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;markdown.html&lt;&#x2F;code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;example(title=&quot;example&quot;, type, code)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Shortcodes provided by the theme:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;image&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;image_original&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;thumbnail&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;icon&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;details&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;markdown&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;youtube&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;spotify&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;multilingual-sites&quot;&gt;Multilingual sites&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola supports multilingual sites out of the box. You can create content in multiple languages and Zola will generate separate pages for each language.&lt;&#x2F;p&gt;
+&lt;p&gt;Languages and translations are defined in the &lt;code&gt;config.toml&lt;&#x2F;code&gt; file. You can specify the default language and add translations for each language you want to support.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;languages&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;de&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;generate_feed&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;build_search_index&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;languages&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;en&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;language&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;de&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Startseite&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;language&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;en&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Home&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola website&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;&quot;&gt;Zola templates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;&quot;&gt;Zola Multilingual sites&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 ","datePublished": "2024-06-09","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;themes&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;themes&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Markdown","SSG","Static Site Generator"],
   }
 </script> 
@@ -897,7 +897,7 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-07-28 12:25:02 Europe&#x2F;Berlin</small>
+    <small>2026-07-28 12:44:12 Europe&#x2F;Berlin</small>
   </p> <figure>
   
 <div

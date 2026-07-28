@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-28T10:25:02.811272879+00:00" />
+<meta name="build" content="2026-07-28T10:44:12.496771993+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Continuous Integration"
@@ -221,355 +221,355 @@ accessible" />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting","headline": "Continuous Integration","description": "Continuous Integration by Example","articleBody": "<h2 id="introduction">Introduction</h2>
-<p>This theme uses GitHub Actions for <em>Continuous Integration</em> and <em>Continuous Deployment</em>. The workflows are defined in the <code>.github/workflows</code> directory and are used to validate, format, build, and deploy the site.</p>
-<h2 id="github-actions">Github Actions</h2>
-<h3 id="simple-github-pages-deployment">Simple GitHub Pages Deployment</h3>
-<p>Use <code>zola-deploy-action</code> to build and deploy the site to GitHub Pages.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #6272A4;"># .github/workflows/github-pages.yml</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Github Pages</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  push</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    branches</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> main</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  build</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build and deploy</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> github.ref == &#39;refs/heads/main&#39;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> build_and_deploy</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> shalzz/zola-deploy-action@v0.18.0</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        env</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #6272A4;">          # Target branch</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          PAGES_BRANCH</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> gh-pages</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          TOKEN</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ secrets.GITHUB_TOKEN }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          BUILD_DIR</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> themes/zola-monoplain</span></span></code></pre>
-<p>See <a rel="external" href="https://www.getzola.org/documentation/deployment/github-pages/">https://www.getzola.org/documentation/deployment/github-pages/</a></p>
-<h3 id="advanced-github-pages-deployment">Advanced GitHub Pages Deployment</h3>
-<p>Use <em>github-pages-deploy-action</em> to build and deploy the site to GitHub Pages.</p>
-<p>Use <em>taiki-e/install-action</em> to install Zola.</p>
-<p>Use <em>pnpm/action-setup</em> to install pnpm.</p>
-<p>Use <em>actions/cache</em> to cache the pnpm store.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #6272A4;"># .github/workflows/deploy.yml</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy</span></span>
-<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  push</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    branches</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> main</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  deploy-github-pages</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy Github Pages</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> taiki-e/install-action@v2</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          tool</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> zola@0.18.0</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm build</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> JamesIves/github-pages-deploy-action@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          folder</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./themes/zola-monoplain/public</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          branch</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> gh-pages</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          clean-exclude</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pr-preview</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          force</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span></code></pre><h3 id="preview-github-pages-deployment">Preview GitHub Pages Deployment</h3>
-<p>Use <em>pr-preview-action</em> to build and deploy the website to Github Pages.
-Test the website with <em>lighthouse-ci-action</em>.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #6272A4;"># .github/workflows/preview.yml</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Preview</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">concurrency</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> preview-${{ github.ref }}</span></span>
-<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  pull_request</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    types</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> opened</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> reopened</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> synchronize</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> closed</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  deploy-preview</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy PR</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    outputs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">      preview_url</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ steps.deploy.outputs.deployment-url }}</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> taiki-e/install-action@v2</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          tool</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> zola@0.18.0</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Build</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm build</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> github.event.action != &#39;closed&#39;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Deploy</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> deploy</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> rossjrw/pr-preview-action@v1</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          source-dir</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./themes/zola-monoplain/public</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          preview-branch</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> gh-pages</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          umbrella-dir</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pr-preview</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          action</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> auto</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Info</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;Preview URL: ${{ steps.deploy.outputs.deployment-url }}&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  lighthouse</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test PR</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    needs</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> deploy-preview</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> always()</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    timeout-minutes</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 5</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Audit URLs and validate Budget</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> treosh/lighthouse-ci-action@v11</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          urls</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ needs.deploy-preview.outputs.preview_url }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          budgetPath</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./budget.json</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          uploadArtifacts</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          runs</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 3</span></span></code></pre>
-<p>See: <a rel="external" href="https://github.com/marketplace/actions/deploy-pr-preview">https://github.com/marketplace/actions/deploy-pr-preview</a></p>
-<h3 id="checks">Checks</h3>
-<p>Use <em>check-format</em> to check the format of the code.</p>
-<p>Use <em>analyze-typescript</em> to analyze the TypeScript code.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Continuous Integration</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  pull_request</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  push</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    branches</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> main</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">permissions</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  contents</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> read</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  check-format</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Check Format</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> format</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm format:check</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  analyze-typescript</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Analyze TypeScript</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> FTA Action</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> fta-action</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> exiguus/fta-github-action@v0.1.1</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          project_path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          config_path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> fta.config.json</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Print Output Summary</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output-summary</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> echo -e &quot;\nSummary:\n${{ steps.fta-action.outputs.summary }}&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Print Output Details</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output-details</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> echo -e &quot;\nDetails:\n${{ steps.fta-action.outputs.details }}&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Upload Output Summary</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> upload-output</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/upload-artifact@v7</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> output.json</span></span></code></pre><h3 id="lighthouse">Lighthouse</h3>
-<p>Use <em>lighthouse-action</em> to check the performance of the website.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Lighthouse</span></span>
-<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  workflow_run</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    workflows</span><span style="color: #FF79C6;">:</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Deploy</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    types</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> completed</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  test_run</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test run</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    timeout-minutes</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 15</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Audit URLs and validate Budget</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> treosh/lighthouse-ci-action@v11</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          urls</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> https://exiguus.github.io/zola-monoplain/</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          budgetPath</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ./budget.json</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          uploadArtifacts</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> true</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          runs</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 3</span></span></code></pre><h3 id="accessibility">Accessibility</h3>
-<p>Use <code>pa11y</code> to check the accessibility of the website.</p>
-<p>And validate against the <code>WCAG</code> standard.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #8BE9FD;">name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> e2e</span></span>
-<span class="giallo-l"><span style="color: #BD93F9;">on</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  workflow_run</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    workflows</span><span style="color: #FF79C6;">:</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Deploy</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    types</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #F1FA8C;"> completed</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">jobs</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">  a11y</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> A11y</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    timeout-minutes</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 15</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    runs-on</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ubuntu-latest</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> always()</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">    steps</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> checkout</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/checkout@v4</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup Node.js</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        id</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> setup-node</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/setup-node@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          node-version-file</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> package.json</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm/action-setup@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install pnpm</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          run_install</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> false</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Get pnpm store directory</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        shell</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> bash</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">          echo &quot;STORE_PATH=$(pnpm store path --silent)&quot; &gt;&gt; $GITHUB_ENV</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/cache@v4</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Setup pnpm cache</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ env.STORE_PATH }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          key</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> ${{ runner.os }}-pnpm-store-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          restore-keys</span><span style="color: #FF79C6;">: |</span></span>
-<span class="giallo-l"><span style="color: #F1FA8C;">            ${{ runner.os }}-pnpm-store-</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Install dependencies</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> pnpm ci &amp;&amp; pnpm test:setup</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Test Run</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        run</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> cd themes/zola-monoplain &amp;&amp; node ./scripts/pa11y.cjs https://exiguus.github.io/zola-monoplain/</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">      -</span><span style="color: #8BE9FD;"> name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> Upload Artifacts</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        uses</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> actions/upload-artifact@v7</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        if</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> always()</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">        with</span><span style="color: #FF79C6;">:</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          name</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> a11y-report</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          path</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> themes/zola-monoplain/pa11y-report/**</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          if-no-files-found</span><span style="color: #FF79C6;">:</span><span style="color: #F1FA8C;"> error</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">          retention-days</span><span style="color: #FF79C6;">:</span><span style="color: #BD93F9;"> 7</span></span></code></pre>","datePublished": "2024-06-15","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;ci&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;ci&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","CI","Continuous Integration","Deployment","Build","Github Actions"],
+    "@type": "BlogPosting","headline": "Continuous Integration","description": "Continuous Integration by Example","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;This theme uses GitHub Actions for &lt;em&gt;Continuous Integration&lt;&#x2F;em&gt; and &lt;em&gt;Continuous Deployment&lt;&#x2F;em&gt;. The workflows are defined in the &lt;code&gt;.github&#x2F;workflows&lt;&#x2F;code&gt; directory and are used to validate, format, build, and deploy the site.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;github-actions&quot;&gt;Github Actions&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;simple-github-pages-deployment&quot;&gt;Simple GitHub Pages Deployment&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;code&gt;zola-deploy-action&lt;&#x2F;code&gt; to build and deploy the site to GitHub Pages.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# .github&#x2F;workflows&#x2F;github-pages.yml&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Github Pages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  push&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    branches&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; main&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  build&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Build and deploy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; github.ref == &amp;#39;refs&#x2F;heads&#x2F;main&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; build_and_deploy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; shalzz&#x2F;zola-deploy-action@v0.18.0&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        env&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;          # Target branch&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          PAGES_BRANCH&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; gh-pages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          TOKEN&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ secrets.GITHUB_TOKEN }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          BUILD_DIR&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; themes&#x2F;zola-monoplain&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;See &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;advanced-github-pages-deployment&quot;&gt;Advanced GitHub Pages Deployment&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;em&gt;github-pages-deploy-action&lt;&#x2F;em&gt; to build and deploy the site to GitHub Pages.&lt;&#x2F;p&gt;
+&lt;p&gt;Use &lt;em&gt;taiki-e&#x2F;install-action&lt;&#x2F;em&gt; to install Zola.&lt;&#x2F;p&gt;
+&lt;p&gt;Use &lt;em&gt;pnpm&#x2F;action-setup&lt;&#x2F;em&gt; to install pnpm.&lt;&#x2F;p&gt;
+&lt;p&gt;Use &lt;em&gt;actions&#x2F;cache&lt;&#x2F;em&gt; to cache the pnpm store.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# .github&#x2F;workflows&#x2F;deploy.yml&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Deploy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  push&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    branches&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; main&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  deploy-github-pages&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Deploy Github Pages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; taiki-e&#x2F;install-action@v2&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          tool&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola@0.18.0&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup Node.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; setup-node&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;setup-node@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          node-version-file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; package.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm&#x2F;action-setup@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install pnpm&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          run_install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Get pnpm store directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        shell&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; bash&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;          echo &amp;quot;STORE_PATH=$(pnpm store path --silent)&amp;quot; &amp;gt;&amp;gt; $GITHUB_ENV&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;cache@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup pnpm cache&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ env.STORE_PATH }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          key&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ runner.os }}-pnpm-store-${{ hashFiles(&amp;#39;**&#x2F;pnpm-lock.yaml&amp;#39;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          restore-keys&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;            ${{ runner.os }}-pnpm-store-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install dependencies&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm ci&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Build&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm build&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Deploy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; JamesIves&#x2F;github-pages-deploy-action@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          folder&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; .&#x2F;themes&#x2F;zola-monoplain&#x2F;public&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          branch&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; gh-pages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          clean-exclude&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pr-preview&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          force&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;preview-github-pages-deployment&quot;&gt;Preview GitHub Pages Deployment&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;em&gt;pr-preview-action&lt;&#x2F;em&gt; to build and deploy the website to Github Pages.
+Test the website with &lt;em&gt;lighthouse-ci-action&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# .github&#x2F;workflows&#x2F;preview.yml&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Preview&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;concurrency&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; preview-${{ github.ref }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  pull_request&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    types&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; opened&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; reopened&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; synchronize&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; closed&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  deploy-preview&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Deploy PR&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    outputs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;      preview_url&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ steps.deploy.outputs.deployment-url }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; taiki-e&#x2F;install-action@v2&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          tool&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola@0.18.0&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup Node.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; setup-node&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;setup-node@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          node-version-file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; package.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm&#x2F;action-setup@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install pnpm&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          run_install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Get pnpm store directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        shell&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; bash&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;          echo &amp;quot;STORE_PATH=$(pnpm store path --silent)&amp;quot; &amp;gt;&amp;gt; $GITHUB_ENV&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;cache@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup pnpm cache&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ env.STORE_PATH }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          key&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ runner.os }}-pnpm-store-${{ hashFiles(&amp;#39;**&#x2F;pnpm-lock.yaml&amp;#39;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          restore-keys&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;            ${{ runner.os }}-pnpm-store-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install dependencies&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm ci&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Build&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm build&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; github.event.action != &amp;#39;closed&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Deploy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; deploy&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; rossjrw&#x2F;pr-preview-action@v1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          source-dir&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; .&#x2F;themes&#x2F;zola-monoplain&#x2F;public&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          preview-branch&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; gh-pages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          umbrella-dir&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pr-preview&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          action&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; auto&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Info&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;          echo &amp;quot;Preview URL: ${{ steps.deploy.outputs.deployment-url }}&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  lighthouse&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Test PR&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    needs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; deploy-preview&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; always()&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    timeout-minutes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 5&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Audit URLs and validate Budget&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; treosh&#x2F;lighthouse-ci-action@v11&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          urls&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ needs.deploy-preview.outputs.preview_url }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          budgetPath&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; .&#x2F;budget.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          uploadArtifacts&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          runs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 3&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;See: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;marketplace&#x2F;actions&#x2F;deploy-pr-preview&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;marketplace&#x2F;actions&#x2F;deploy-pr-preview&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;checks&quot;&gt;Checks&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;em&gt;check-format&lt;&#x2F;em&gt; to check the format of the code.&lt;&#x2F;p&gt;
+&lt;p&gt;Use &lt;em&gt;analyze-typescript&lt;&#x2F;em&gt; to analyze the TypeScript code.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Continuous Integration&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  pull_request&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  push&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    branches&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; main&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;permissions&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  contents&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; read&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  check-format&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Check Format&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup Node.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; setup-node&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;setup-node@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          node-version-file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; package.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm&#x2F;action-setup@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install pnpm&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          run_install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Get pnpm store directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        shell&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; bash&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;          echo &amp;quot;STORE_PATH=$(pnpm store path --silent)&amp;quot; &amp;gt;&amp;gt; $GITHUB_ENV&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;cache@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup pnpm cache&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ env.STORE_PATH }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          key&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ runner.os }}-pnpm-store-${{ hashFiles(&amp;#39;**&#x2F;pnpm-lock.yaml&amp;#39;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          restore-keys&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;            ${{ runner.os }}-pnpm-store-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install dependencies&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm ci&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; format&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm format:check&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  analyze-typescript&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Analyze TypeScript&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; FTA Action&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; fta-action&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; exiguus&#x2F;fta-github-action@v0.1.1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          project_path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; .&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          config_path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; fta.config.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Print Output Summary&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; output-summary&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; echo -e &amp;quot;\nSummary:\n${{ steps.fta-action.outputs.summary }}&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Print Output Details&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; output-details&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; echo -e &amp;quot;\nDetails:\n${{ steps.fta-action.outputs.details }}&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Upload Output Summary&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; upload-output&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;upload-artifact@v7&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; output&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; output.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;lighthouse&quot;&gt;Lighthouse&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;em&gt;lighthouse-action&lt;&#x2F;em&gt; to check the performance of the website.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Lighthouse&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  workflow_run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    workflows&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Deploy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    types&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; completed&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  test_run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Test run&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    timeout-minutes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 15&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Audit URLs and validate Budget&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; treosh&#x2F;lighthouse-ci-action@v11&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          urls&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          budgetPath&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; .&#x2F;budget.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          uploadArtifacts&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          runs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 3&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;accessibility&quot;&gt;Accessibility&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;code&gt;pa11y&lt;&#x2F;code&gt; to check the accessibility of the website.&lt;&#x2F;p&gt;
+&lt;p&gt;And validate against the &lt;code&gt;WCAG&lt;&#x2F;code&gt; standard.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; e2e&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  workflow_run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    workflows&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Deploy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    types&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; completed&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;  a11y&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; A11y&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    timeout-minutes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 15&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    runs-on&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ubuntu-latest&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; always()&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;    steps&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; checkout&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;checkout@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup Node.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        id&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; setup-node&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;setup-node@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          node-version-file&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; package.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm&#x2F;action-setup@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install pnpm&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          run_install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Get pnpm store directory&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        shell&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; bash&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;          echo &amp;quot;STORE_PATH=$(pnpm store path --silent)&amp;quot; &amp;gt;&amp;gt; $GITHUB_ENV&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;cache@v4&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Setup pnpm cache&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ env.STORE_PATH }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          key&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ${{ runner.os }}-pnpm-store-${{ hashFiles(&amp;#39;**&#x2F;pnpm-lock.yaml&amp;#39;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          restore-keys&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;: |&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;            ${{ runner.os }}-pnpm-store-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Install dependencies&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pnpm ci &amp;amp;&amp;amp; pnpm test:setup&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Test Run&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        run&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; cd themes&#x2F;zola-monoplain &amp;amp;&amp;amp; node .&#x2F;scripts&#x2F;pa11y.cjs https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;      -&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Upload Artifacts&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        uses&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; actions&#x2F;upload-artifact@v7&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; always()&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;        with&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; a11y-report&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          path&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; themes&#x2F;zola-monoplain&#x2F;pa11y-report&#x2F;**&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          if-no-files-found&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; error&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;          retention-days&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 7&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;","datePublished": "2024-06-15","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;ci&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;ci&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","CI","Continuous Integration","Deployment","Build","Github Actions"],
   }
 </script> 
 </header><div class="e-content">
@@ -1231,7 +1231,7 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-07-28 12:25:02 Europe&#x2F;Berlin</small>
+    <small>2026-07-28 12:44:12 Europe&#x2F;Berlin</small>
   </p> <figure>
   
 <div

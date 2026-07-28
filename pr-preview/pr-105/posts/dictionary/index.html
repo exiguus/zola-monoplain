@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-28T10:25:02.811272879+00:00" />
+<meta name="build" content="2026-07-28T10:44:12.496771993+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Dictionary"
@@ -183,37 +183,37 @@ accessible" />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting","headline": "Dictionary","description": "Dictionary by Example","articleBody": "<h2 id="introduction">Introduction</h2>
-<p>This theme uses Zola <code>[translations]</code> as a dictionary for UI text. The translations are defined in <code>config.toml</code>. You can set a default language and add translations for each language you want to support.</p>
-<p>The <a rel="external" href="https://www.getzola.org/documentation/content/multilingual/">Zola Multilingual sites</a> provide more information about how to create multilingual sites with Zola.</p>
-<h2 id="translations">Translations</h2>
-<p>The search page, for example, has the following translations defined in <code>config.toml</code>:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Search</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_input_label</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Text to search</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_input_placeholder</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Search ↵</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_submit</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Search</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_clear</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Clear</span><span style="color: #E9F284;">&quot;</span></span></code></pre>
-<p>It is possible to override the search page translations by adding the following values to <code>config.toml</code>:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">The Search</span><span style="color: #E9F284;">&quot;</span></span></code></pre><h2 id="languages">Languages</h2>
-<p>To define translations for languages other than the default (<code>en</code>), add language-specific translations in <code>config.toml</code>. Templates resolve these values with the <code>trans</code> function.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">de</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Die Suche</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">fr</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">La recherche</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">language</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">it</span><span style="color: #FF79C6;">.</span><span style="color: #8BE9FD;">translations</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">search_form_legend</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">La ricerca</span><span style="color: #E9F284;">&quot;</span></span></code></pre><h2 id="extra-language">Extra Language</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
-<span class="giallo-l"><span>title = &quot;Extra Language&quot;</span></span>
-<span class="giallo-l"><span>description = &quot;Extra Language&quot;</span></span>
-<span class="giallo-l"><span>date = 2024-06-09</span></span>
-<span class="giallo-l"><span>[</span><span style="color: #FF79C6;">extra</span><span>]</span></span>
-<span class="giallo-l"><span>lang = &quot;de&quot;</span></span>
-<span class="giallo-l"><span>+++</span></span></code></pre>
-<p>The <code>extra.lang</code> field sets the language for the main content of a page or post. It also adds a <code>lang</code> attribute to post and gallery output that links to the page.</p>
+    "@type": "BlogPosting","headline": "Dictionary","description": "Dictionary by Example","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;This theme uses Zola &lt;code&gt;[translations]&lt;&#x2F;code&gt; as a dictionary for UI text. The translations are defined in &lt;code&gt;config.toml&lt;&#x2F;code&gt;. You can set a default language and add translations for each language you want to support.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;&quot;&gt;Zola Multilingual sites&lt;&#x2F;a&gt; provide more information about how to create multilingual sites with Zola.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;translations&quot;&gt;Translations&lt;&#x2F;h2&gt;
+&lt;p&gt;The search page, for example, has the following translations defined in &lt;code&gt;config.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_legend&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Search&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_input_label&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Text to search&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_input_placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Search ↵&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_submit&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Search&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_clear&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Clear&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It is possible to override the search page translations by adding the following values to &lt;code&gt;config.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_legend&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;The Search&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;languages&quot;&gt;Languages&lt;&#x2F;h2&gt;
+&lt;p&gt;To define translations for languages other than the default (&lt;code&gt;en&lt;&#x2F;code&gt;), add language-specific translations in &lt;code&gt;config.toml&lt;&#x2F;code&gt;. Templates resolve these values with the &lt;code&gt;trans&lt;&#x2F;code&gt; function.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;language&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;de&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_legend&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Die Suche&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;language&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;fr&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_legend&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;La recherche&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;language&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;it&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;search_form_legend&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;La ricerca&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;extra-language&quot;&gt;Extra Language&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;title = &amp;quot;Extra Language&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;description = &amp;quot;Extra Language&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;date = 2024-06-09&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;lang = &amp;quot;de&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;extra.lang&lt;&#x2F;code&gt; field sets the language for the main content of a page or post. It also adds a &lt;code&gt;lang&lt;&#x2F;code&gt; attribute to post and gallery output that links to the page.&lt;&#x2F;p&gt;
 ","datePublished": "2024-06-09","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;dictionary&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;dictionary&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Markdown","Translations","Languages","Dictionary"],
   }
 </script> 
@@ -551,7 +551,7 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-07-28 12:25:02 Europe&#x2F;Berlin</small>
+    <small>2026-07-28 12:44:12 Europe&#x2F;Berlin</small>
   </p> <figure>
   
 <div

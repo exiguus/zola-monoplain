@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-28T10:25:02.811272879+00:00" />
+<meta name="build" content="2026-07-28T10:44:12.496771993+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Images"
@@ -295,129 +295,129 @@ accessible" />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting","headline": "Images","description": "How images work in mono&#x2F;plain and how to use them in posts and templates","articleBody": "<h2 id="introduction">Introduction</h2>
-<p>This post explains how images are handled in the mono/plain theme:</p>
-<ul>
-<li>where image files should live,</li>
-<li>how to render them in posts,</li>
-<li>how resizing and <code>srcset</code> are generated,</li>
-<li>and how templates/macros build gallery and header images.</li>
-</ul>
-<p>The key idea: the theme supports both colocated image paths and page-relative paths, depending on where the image is rendered.</p>
-<h2 id="content-structure">Content Structure</h2>
-<p>For best results, keep the post and its image files together:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>content/</span></span>
-<span class="giallo-l"><span>  posts/</span></span>
-<span class="giallo-l"><span>    my-post/</span></span>
-<span class="giallo-l"><span>      index.md</span></span>
-<span class="giallo-l"><span>      hero.jpg</span></span>
-<span class="giallo-l"><span>      photo-01.jpg</span></span>
-<span class="giallo-l"><span>      photo-02.jpg</span></span></code></pre>
-<p>That layout works with the theme image shortcodes and gallery helpers without hardcoded global paths.</p>
-<h2 id="images-in-post-front-matter">Images In Post Front Matter</h2>
-<p>The theme uses these optional front matter fields:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">hero.jpg</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_alt</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Sunset skyline over a river</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_copy</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Hackesche Hoefe in Berlin-Mitte</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">preview_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">hero.jpg</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">photo-01.jpg</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">photo-02.jpg</span><span style="color: #E9F284;">&quot;</span><span>]</span></span></code></pre>
-<ul>
-<li><code>extra.hero_img</code>: shown in the post header (<code>templates/components/post_header.html</code>) and it is the fallback for the Open Graph preview image.</li>
-<li><code>extra.hero_alt</code>: optional alternative text for <code>extra.hero_img</code>.</li>
-<li><code>extra.hero_copy</code>: optional caption text shown below the hero image.</li>
-<li><code>extra.preview_img</code>: used first for Open Graph preview generation.</li>
-<li>If <code>extra.preview_img</code> is missing, Open Graph falls back to <code>extra.hero_img</code>.</li>
-<li><code>extra.images</code>: used by gallery-related templates to render thumbnails. It is also used by the latest images component, so the same image list can drive both post content and gallery views.</li>
-</ul>
-<h2 id="images-in-markdown-posts">Images In Markdown Posts</h2>
-<p>There are two common ways:</p>
-<h3 id="1-standard-markdown-image">1. Standard Markdown Image</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>![</span><span style="color: #FF79C6;">Alternative text</span><span>](</span><span style="color: #8BE9FD;text-decoration: underline;">photo-01.jpg</span><span>)</span></span></code></pre>
-<p>Use this when you want plain Markdown behavior. No lazy-loading or responsive <code>srcset</code> is generated. The image path is resolved relative to the page's location, so it works with colocated content or global paths.</p>
-<h3 id="2-theme-image-shortcode-responsive">2. Theme Image Shortcode (Responsive)</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;photo-01.jpg&quot;, alt=&quot;A calm city skyline at dusk&quot;) }}</span></span></code></pre>
-<p>When used without explicit width/height, this calls the responsive image macro and generates <code>srcset</code> variants based on theme config.</p>
-<p>If you want a fixed output size:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;photo-01.jpg&quot;, alt=&quot;A calm city skyline at dusk&quot;, width=800, height=450) }}</span></span></code></pre>
-<p>With width and height set, the shortcode uses a fixed resize path.</p>
-<h2 id="config-extra">Config Extra</h2>
-<p>Image behavior is controlled in <code>config.toml</code>:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">image_resizing_disabled</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> false</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">image_format</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">webp</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">image_quality</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 80</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images_default_size</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 256</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images_sizes</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #BD93F9;">256</span><span>,</span><span style="color: #BD93F9;"> 384</span><span>,</span><span style="color: #BD93F9;"> 512</span><span>,</span><span style="color: #BD93F9;"> 576</span><span>,</span><span style="color: #BD93F9;"> 640</span><span>,</span><span style="color: #BD93F9;"> 768</span><span>,</span><span style="color: #BD93F9;"> 1024</span><span>,</span><span style="color: #BD93F9;"> 1152</span><span>]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">thumbnail_quality</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 70</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">thumbnail_default_size</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> 128</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">thumbnail_sizes</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #BD93F9;">128</span><span>,</span><span style="color: #BD93F9;"> 256</span><span>]</span></span></code></pre>
-<ul>
-<li><code>image_resizing_disabled = true</code> disables responsive transformation and uses original file paths.</li>
-<li><code>image_format</code>, <code>image_quality</code> control generated responsive images.</li>
-<li><code>thumbnail_quality</code>, <code>thumbnail_sizes</code>, <code>thumbnail_default_size</code> control generated thumbnail images.</li>
-</ul>
-<h2 id="post-page-extra">Post/Page Extra</h2>
-<p>This is the image-related <code>extra</code> configuration you can use per page/post front matter:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">hero.jpg</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_alt</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Sunset skyline over a river</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">hero_copy</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Hackesche Hoefe in Berlin-Mitte</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">preview_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">hero.jpg</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">images</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">photo-01.jpg</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">photo-02.jpg</span><span style="color: #E9F284;">&quot;</span><span>]</span></span></code></pre>
-<ul>
-<li><code>hero_img</code>: post header hero image (<code>templates/components/post_header.html</code>).</li>
-<li><code>hero_alt</code>: post header image alt text. If missing, it falls back to page description and then page title.</li>
-<li><code>hero_copy</code>: post header figcaption text. If missing, it falls back to page description and then page title.</li>
-<li><code>preview_img</code>: Open Graph image (<code>templates/macros/opengraph.html</code>).</li>
-<li><code>images</code>: image list for gallery/latest image components.</li>
-</ul>
-<p>Resolution behavior:</p>
-<ul>
-<li>Post header currently uses <code>images::responsive_image(path=page.path, src=page.extra.hero_img, ...)</code>.</li>
-<li>Open Graph currently resizes relative image paths using <code>page.path ~ &lt;image-name&gt;</code>.</li>
-<li>The <code>image</code> shortcode uses <code>page.colocated_path</code> and is best used with colocated post bundles.</li>
-</ul>
-<h2 id="how-templates-handle-images">How Templates Handle Images</h2>
-<p>The implementation lives in <code>templates/macros/images.html</code> and is reused across pages.</p>
-<h3 id="core-macros">Core Macros</h3>
-<ul>
-<li><code>image(...)</code>: plain/fixed image output.</li>
-<li><code>responsive_image(...)</code>: generates <code>srcset</code> using <code>resize_image(..., op="fit_width")</code>.</li>
-<li><code>responsive_thumbnail(...)</code>: generates thumbnail variants using <code>resize_image(..., op="fit"|"fill")</code>.</li>
-</ul>
-<h3 id="post-header">Post Header</h3>
-<p><code>templates/components/post_header.html</code> renders <code>extra.hero_img</code> as a responsive image inside a figure.</p>
-<h3 id="gallery-and-latest-images">Gallery And Latest Images</h3>
-<p><code>templates/pages/gallery.html</code>, <code>templates/components/latest_images.html</code>, and <code>templates/components/post_latest_images.html</code> iterate over <code>post.extra.images</code> and render each with <code>responsive_thumbnail(...)</code>.</p>
-<h2 id="template-usage-examples">Template Usage Examples</h2>
-<p>In templates, import and call the image macros like this:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{% import &quot;macros/images.html&quot; as images %}</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span>{{/* images::responsive_image(</span></span>
-<span class="giallo-l"><span>  path=page.colocated_path,</span></span>
-<span class="giallo-l"><span>  src=&quot;photo-01.jpg&quot;,</span></span>
-<span class="giallo-l"><span>  alt=&quot;A calm city skyline at dusk&quot;,</span></span>
-<span class="giallo-l"><span>  default_size=384,</span></span>
-<span class="giallo-l"><span>  sizes=[384, 576, 1200]</span></span>
-<span class="giallo-l"><span>) */}}</span></span></code></pre>
-<p>Thumbnail usage:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* images::responsive_thumbnail(</span></span>
-<span class="giallo-l"><span>  path=post.colocated_path,</span></span>
-<span class="giallo-l"><span>  src=&quot;photo-01.jpg&quot;,</span></span>
-<span class="giallo-l"><span>  alt=post.title,</span></span>
-<span class="giallo-l"><span>  default_size=128,</span></span>
-<span class="giallo-l"><span>  sizes=[128, 256]</span></span>
-<span class="giallo-l"><span>) */}}</span></span></code></pre><h2 id="practical-workflow">Practical Workflow</h2>
-<ol>
-<li>Put post text and image files in the same colocated post directory.</li>
-<li>Use <code>extra.hero_img</code> for a hero image.</li>
-<li>Use <code>extra.images</code> for gallery/latest image blocks.</li>
-<li>Use <code>{{/* image(...) */}}</code> shortcode in Markdown when you want responsive behavior in body content (best with colocated bundles).</li>
-<li>Tune <code>images_sizes</code> and <code>thumbnail_sizes</code> in config for your performance and quality targets.</li>
-</ol>
-<h2 id="summary">Summary</h2>
-<p>Images in mono/plain are driven by reusable image macros and a mix of path strategies (<code>page.colocated_path</code> and <code>page.path</code>) depending on template context. Responsive behavior remains centralized in one macro file.</p>
+    "@type": "BlogPosting","headline": "Images","description": "How images work in mono&#x2F;plain and how to use them in posts and templates","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;This post explains how images are handled in the mono&#x2F;plain theme:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;where image files should live,&lt;&#x2F;li&gt;
+&lt;li&gt;how to render them in posts,&lt;&#x2F;li&gt;
+&lt;li&gt;how resizing and &lt;code&gt;srcset&lt;&#x2F;code&gt; are generated,&lt;&#x2F;li&gt;
+&lt;li&gt;and how templates&#x2F;macros build gallery and header images.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The key idea: the theme supports both colocated image paths and page-relative paths, depending on where the image is rendered.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;content-structure&quot;&gt;Content Structure&lt;&#x2F;h2&gt;
+&lt;p&gt;For best results, keep the post and its image files together:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;content&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  posts&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    my-post&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      index.md&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      hero.jpg&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      photo-01.jpg&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      photo-02.jpg&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That layout works with the theme image shortcodes and gallery helpers without hardcoded global paths.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;images-in-post-front-matter&quot;&gt;Images In Post Front Matter&lt;&#x2F;h2&gt;
+&lt;p&gt;The theme uses these optional front matter fields:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;hero.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_alt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Sunset skyline over a river&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_copy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Hackesche Hoefe in Berlin-Mitte&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;preview_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;hero.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;photo-01.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;photo-02.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;extra.hero_img&lt;&#x2F;code&gt;: shown in the post header (&lt;code&gt;templates&#x2F;components&#x2F;post_header.html&lt;&#x2F;code&gt;) and it is the fallback for the Open Graph preview image.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;extra.hero_alt&lt;&#x2F;code&gt;: optional alternative text for &lt;code&gt;extra.hero_img&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;extra.hero_copy&lt;&#x2F;code&gt;: optional caption text shown below the hero image.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;extra.preview_img&lt;&#x2F;code&gt;: used first for Open Graph preview generation.&lt;&#x2F;li&gt;
+&lt;li&gt;If &lt;code&gt;extra.preview_img&lt;&#x2F;code&gt; is missing, Open Graph falls back to &lt;code&gt;extra.hero_img&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;extra.images&lt;&#x2F;code&gt;: used by gallery-related templates to render thumbnails. It is also used by the latest images component, so the same image list can drive both post content and gallery views.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;images-in-markdown-posts&quot;&gt;Images In Markdown Posts&lt;&#x2F;h2&gt;
+&lt;p&gt;There are two common ways:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-standard-markdown-image&quot;&gt;1. Standard Markdown Image&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;![&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;Alternative text&lt;&#x2F;span&gt;&lt;span&gt;](&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;text-decoration: underline;&quot;&gt;photo-01.jpg&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Use this when you want plain Markdown behavior. No lazy-loading or responsive &lt;code&gt;srcset&lt;&#x2F;code&gt; is generated. The image path is resolved relative to the page&#x27;s location, so it works with colocated content or global paths.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;2-theme-image-shortcode-responsive&quot;&gt;2. Theme Image Shortcode (Responsive)&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ image(src=&amp;quot;photo-01.jpg&amp;quot;, alt=&amp;quot;A calm city skyline at dusk&amp;quot;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;When used without explicit width&#x2F;height, this calls the responsive image macro and generates &lt;code&gt;srcset&lt;&#x2F;code&gt; variants based on theme config.&lt;&#x2F;p&gt;
+&lt;p&gt;If you want a fixed output size:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ image(src=&amp;quot;photo-01.jpg&amp;quot;, alt=&amp;quot;A calm city skyline at dusk&amp;quot;, width=800, height=450) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;With width and height set, the shortcode uses a fixed resize path.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;config-extra&quot;&gt;Config Extra&lt;&#x2F;h2&gt;
+&lt;p&gt;Image behavior is controlled in &lt;code&gt;config.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;image_resizing_disabled&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;image_format&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;webp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;image_quality&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 80&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images_default_size&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 256&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images_sizes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;256&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 384&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 512&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 576&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 640&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 768&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 1024&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 1152&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;thumbnail_quality&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 70&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;thumbnail_default_size&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 128&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;thumbnail_sizes&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;128&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; 256&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;image_resizing_disabled = true&lt;&#x2F;code&gt; disables responsive transformation and uses original file paths.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;image_format&lt;&#x2F;code&gt;, &lt;code&gt;image_quality&lt;&#x2F;code&gt; control generated responsive images.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;thumbnail_quality&lt;&#x2F;code&gt;, &lt;code&gt;thumbnail_sizes&lt;&#x2F;code&gt;, &lt;code&gt;thumbnail_default_size&lt;&#x2F;code&gt; control generated thumbnail images.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;post-page-extra&quot;&gt;Post&#x2F;Page Extra&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the image-related &lt;code&gt;extra&lt;&#x2F;code&gt; configuration you can use per page&#x2F;post front matter:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;hero.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_alt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Sunset skyline over a river&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_copy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Hackesche Hoefe in Berlin-Mitte&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;preview_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;hero.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;photo-01.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;photo-02.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hero_img&lt;&#x2F;code&gt;: post header hero image (&lt;code&gt;templates&#x2F;components&#x2F;post_header.html&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;hero_alt&lt;&#x2F;code&gt;: post header image alt text. If missing, it falls back to page description and then page title.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;hero_copy&lt;&#x2F;code&gt;: post header figcaption text. If missing, it falls back to page description and then page title.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;preview_img&lt;&#x2F;code&gt;: Open Graph image (&lt;code&gt;templates&#x2F;macros&#x2F;opengraph.html&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;&#x2F;code&gt;: image list for gallery&#x2F;latest image components.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Resolution behavior:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Post header currently uses &lt;code&gt;images::responsive_image(path=page.path, src=page.extra.hero_img, ...)&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Open Graph currently resizes relative image paths using &lt;code&gt;page.path ~ &amp;lt;image-name&amp;gt;&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;code&gt;image&lt;&#x2F;code&gt; shortcode uses &lt;code&gt;page.colocated_path&lt;&#x2F;code&gt; and is best used with colocated post bundles.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;how-templates-handle-images&quot;&gt;How Templates Handle Images&lt;&#x2F;h2&gt;
+&lt;p&gt;The implementation lives in &lt;code&gt;templates&#x2F;macros&#x2F;images.html&lt;&#x2F;code&gt; and is reused across pages.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;core-macros&quot;&gt;Core Macros&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;image(...)&lt;&#x2F;code&gt;: plain&#x2F;fixed image output.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;responsive_image(...)&lt;&#x2F;code&gt;: generates &lt;code&gt;srcset&lt;&#x2F;code&gt; using &lt;code&gt;resize_image(..., op=&quot;fit_width&quot;)&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;responsive_thumbnail(...)&lt;&#x2F;code&gt;: generates thumbnail variants using &lt;code&gt;resize_image(..., op=&quot;fit&quot;|&quot;fill&quot;)&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;post-header&quot;&gt;Post Header&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;templates&#x2F;components&#x2F;post_header.html&lt;&#x2F;code&gt; renders &lt;code&gt;extra.hero_img&lt;&#x2F;code&gt; as a responsive image inside a figure.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;gallery-and-latest-images&quot;&gt;Gallery And Latest Images&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;code&gt;templates&#x2F;pages&#x2F;gallery.html&lt;&#x2F;code&gt;, &lt;code&gt;templates&#x2F;components&#x2F;latest_images.html&lt;&#x2F;code&gt;, and &lt;code&gt;templates&#x2F;components&#x2F;post_latest_images.html&lt;&#x2F;code&gt; iterate over &lt;code&gt;post.extra.images&lt;&#x2F;code&gt; and render each with &lt;code&gt;responsive_thumbnail(...)&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;template-usage-examples&quot;&gt;Template Usage Examples&lt;&#x2F;h2&gt;
+&lt;p&gt;In templates, import and call the image macros like this:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% import &amp;quot;macros&#x2F;images.html&amp;quot; as images %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* images::responsive_image(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  path=page.colocated_path,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  src=&amp;quot;photo-01.jpg&amp;quot;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  alt=&amp;quot;A calm city skyline at dusk&amp;quot;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  default_size=384,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  sizes=[384, 576, 1200]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;) *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Thumbnail usage:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* images::responsive_thumbnail(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  path=post.colocated_path,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  src=&amp;quot;photo-01.jpg&amp;quot;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  alt=post.title,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  default_size=128,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  sizes=[128, 256]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;) *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;practical-workflow&quot;&gt;Practical Workflow&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Put post text and image files in the same colocated post directory.&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;code&gt;extra.hero_img&lt;&#x2F;code&gt; for a hero image.&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;code&gt;extra.images&lt;&#x2F;code&gt; for gallery&#x2F;latest image blocks.&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;code&gt;{{&#x2F;* image(...) *&#x2F;}}&lt;&#x2F;code&gt; shortcode in Markdown when you want responsive behavior in body content (best with colocated bundles).&lt;&#x2F;li&gt;
+&lt;li&gt;Tune &lt;code&gt;images_sizes&lt;&#x2F;code&gt; and &lt;code&gt;thumbnail_sizes&lt;&#x2F;code&gt; in config for your performance and quality targets.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;Images in mono&#x2F;plain are driven by reusable image macros and a mix of path strategies (&lt;code&gt;page.colocated_path&lt;&#x2F;code&gt; and &lt;code&gt;page.path&lt;&#x2F;code&gt;) depending on template context. Responsive behavior remains centralized in one macro file.&lt;&#x2F;p&gt;
 ","datePublished": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;images&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;images&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Images","Markdown","Shortcodes","Templates"],
   }
 </script> 
@@ -855,7 +855,7 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-07-28 12:25:02 Europe&#x2F;Berlin</small>
+    <small>2026-07-28 12:44:12 Europe&#x2F;Berlin</small>
   </p> <figure>
   
 <div

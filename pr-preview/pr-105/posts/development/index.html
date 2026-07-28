@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-28T10:25:02.811272879+00:00" />
+<meta name="build" content="2026-07-28T10:44:12.496771993+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Development"
@@ -372,177 +372,177 @@ accessible" />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting","headline": "Development","description": "Set up a local development environment for Zola theme work","articleBody": "<h2 id="introduction">Introduction</h2>
-<p>This post shows a practical workflow for developing Zola themes locally:</p>
-<ul>
-<li>check out the repository</li>
-<li>install Zola, Node.js and pnpm</li>
-<li>run development mode</li>
-<li>understand Tera templates and editor support</li>
-<li>debug templates and components</li>
-<li>run local accessibility checks</li>
-<li>run test and check</li>
-<li>commit and push changes</li>
-<li>release a new version</li>
-</ul>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>For this repository, the JavaScript toolchain expects:</p>
-<ul>
-<li>Cargo <code>&gt;=1.95.0</code></li>
-<li>Zola <code>&gt;=0.22.1</code></li>
-<li>Node.js <code>&gt;=22.0.0 &lt;25.0.0</code></li>
-<li>pnpm <code>&gt;=10.0.0 &lt;12.0.0</code></li>
-</ul>
-<p>Repository scripts are defined in the workspace root <code>package.json</code>, while the theme package also has its own local <code>package.json</code> under <code>themes/zola-monoplain/</code>.</p>
-<h2 id="1-check-out-the-repository">1. Check out the repository</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> clone https://github.com/exiguus/zola-monoplain.git</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">cd</span><span style="color: #F1FA8C;"> zola-monoplain</span></span></code></pre><h2 id="2-install-cargo-zola-node-js-and-pnpm">2. Install Cargo, Zola, Node.js and pnpm</h2>
-<p>Preferred: install Zola with Cargo and pin the same version used by this repository's GitHub Actions.</p>
-<p>At the moment, workflows use <code>zola@0.22.1</code>, so this is the recommended development version.</p>
-<h3 id="preferred-cargo">Preferred (Cargo)</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">cargo</span><span style="color: #F1FA8C;"> install</span><span style="color: #BD93F9;"> --locked --git</span><span style="color: #F1FA8C;"> https://github.com/getzola/zola zola@0.22.1</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre>
-<p>You can verify the CI pin in <code>.github/workflows/prod.yml</code> and <code>.github/workflows/preview.yml</code>.</p>
-<h3 id="package-manager-alternatives">Package manager alternatives</h3>
-<p>If you do not use Rust/Cargo locally, install Zola with your package manager only if it provides a recent enough version (&gt;=0.22.1).</p>
-<h4 id="linux-debian-ubuntu">Linux (Debian/Ubuntu)</h4>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">sudo</span><span style="color: #F1FA8C;"> apt update</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">sudo</span><span style="color: #F1FA8C;"> apt install zola</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre><h4 id="macos-homebrew">macOS (Homebrew)</h4>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">brew</span><span style="color: #F1FA8C;"> install zola</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">zola</span><span style="color: #BD93F9;"> --version</span></span></code></pre><h4 id="alternative">Alternative</h4>
-<p>Use the official installation guide if your platform/package manager differs:</p>
-<p><a rel="external" href="https://www.getzola.org/documentation/getting-started/installation/">https://www.getzola.org/documentation/getting-started/installation/</a></p>
-<h3 id="node-pnpm">Node, pnpm</h3>
-<p>If Node.js is not installed yet, install Node.js 22 or newer and then enable pnpm via Corepack:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">node</span><span style="color: #BD93F9;"> --version</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">corepack</span><span style="color: #F1FA8C;"> enable</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">corepack</span><span style="color: #F1FA8C;"> prepare pnpm@11.9.0</span><span style="color: #BD93F9;"> --activate</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #BD93F9;"> --version</span></span></code></pre>
-<p>Install dependencies from the repository root:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> install</span></span></code></pre><h2 id="3-run-development-mode">3. Run development mode</h2>
-<p>You can run development in two ways.</p>
-<h3 id="option-a-workspace-root-turbo">Option A: Workspace root (Turbo)</h3>
-<p>From the repository root:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> dev</span></span></code></pre>
-<p>This runs the workspace <code>dev</code> pipeline.</p>
-<h3 id="option-b-theme-package-directly">Option B: Theme package directly</h3>
-<p>From the theme directory:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #8BE9FD;">cd</span><span style="color: #F1FA8C;"> themes/zola-monoplain</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> dev</span></span></code></pre>
-<p>This runs <code>zola serve</code> (after checking that Zola is installed).</p>
-<h2 id="4-understand-tera-templates-and-editor-support">4. Understand Tera templates and editor support</h2>
-<p>Zola templates use the Tera template engine.</p>
-<p>Tera documentation:</p>
-<p><a rel="external" href="https://keats.github.io/tera/docs/">https://keats.github.io/tera/docs/</a></p>
-<p>If your IDE/editor does not provide a dedicated Tera extension, the Twig syntax extension works well for highlighting and basic template readability.</p>
-<p>VS Code extension:</p>
-<p><a rel="external" href="https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2">https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2</a></p>
-<h2 id="5-understand-the-theme-structure">5. Understand the theme structure</h2>
-<p>The theme keeps content, templates, styles, and client-side scripts in separate folders so each part stays easy to find:</p>
-<ul>
-<li><code>templates/</code> contains the page layout layer.
-<ul>
-<li><code>base.html</code> provides the shared shell.</li>
-<li><code>index.html</code>, <code>page.html</code>, <code>post.html</code>, <code>posts.html</code>, and <code>taxonomy_*.html</code> define the main page types.</li>
-<li><code>components/</code> holds reusable partials such as the header, footer, and latest content blocks.</li>
-<li><code>macros/</code> and <code>shortcodes/</code> contain shared template helpers and shortcode implementations.</li>
-</ul>
-</li>
-<li><code>sass/</code> contains the SCSS source files.
-<ul>
-<li><code>base.scss</code>, <code>layout.scss</code>, <code>typography.scss</code>, <code>markdown.scss</code>, and related partials are split by concern.</li>
-<li><code>_variables.scss</code> and <code>_extends.scss</code> hold shared values and reusable style rules.</li>
-<li><code>a11y.scss</code>, <code>image.scss</code>, <code>scheme.scss</code>, <code>spotify.scss</code>, and <code>youtube.scss</code> group feature-specific styles.</li>
-</ul>
-</li>
-<li><code>static/js/</code> contains JavaScript shipped directly to the browser.
-<ul>
-<li><code>main.js</code> is the general site script.</li>
-<li><code>search.js</code> powers the search page behavior.</li>
-</ul>
-</li>
-</ul>
-<p>Keeping these areas separated makes template changes, styling changes, and script changes easier to debug independently.</p>
-<h2 id="6-debug-templates-and-components">6. Debug templates and components</h2>
-<h3 id="enable-debug-mode-in-config">Enable debug mode in config</h3>
-<p>In <code>config.toml</code> set:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
-<span class="giallo-l"><span style="color: #8BE9FD;">debug</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span></code></pre><h3 id="print-page-data-in-templates">Print page data in templates</h3>
-<p>When debugging a component, render the current page context in a template (for example in <code>templates/post.html</code>):</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{% if config.extra.debug %}</span></span>
-<span class="giallo-l"></span>
-<span class="giallo-l"><span>&lt;</span><span style="color: #FF79C6;">details</span><span>&gt;</span></span>
-<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">summary</span><span>&gt;Debug: page&lt;/</span><span style="color: #FF79C6;">summary</span><span>&gt;</span></span>
-<span class="giallo-l"><span>  &lt;</span><span style="color: #FF79C6;">pre</span><span>&gt;{{/* page | default(value=&quot;{}&quot;) | json_encode | safe */}}&lt;/</span><span style="color: #FF79C6;">pre</span><span>&gt;</span></span>
-<span class="giallo-l"><span>&lt;/</span><span style="color: #FF79C6;">details</span><span>&gt;</span></span>
-<span class="giallo-l"><span>{% endif %}</span></span></code></pre>
-<p>The escaped braces are for Markdown examples. In your actual template file, use normal braces:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page | default(value=&quot;{}&quot;) | json_encode | safe */}}</span></span></code></pre>
-<p>This is useful to inspect available keys while developing components.</p>
-<h3 id="scope-component-debugging">Scope component debugging</h3>
-<p>For reusable components/macros, print only the value you need first, then expand:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.title | default(value=&quot;(no title)&quot;) */}}</span></span></code></pre>
-<p>for example, to check if the <code>page.title</code> key is available in a component.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* page.extra | default(value=&quot;{}&quot;) | json_encode | safe */}}</span></span></code></pre>
-<p>or page.extra to check if the <code>page.extra</code> key is available in a component.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="markdown"><span class="giallo-l"><span>{{/* __tera_context */}}</span></span></code></pre>
-<p>or <code>__tera_context</code> to inspect the full template context.</p>
-<p>Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.</p>
-<h2 id="7-run-local-accessibility-checks">7. Run local accessibility checks</h2>
-<p>To test accessibility against a local running dev server:</p>
-<ol>
-<li>Start the local dev server (default: <code>http://127.0.0.1:1111</code>):</li>
-</ol>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> dev</span></span></code></pre>
-<ol>
-<li>In a second terminal from the repository root, run:</li>
-</ol>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> test:pa11y</span></span></code></pre>
-<p>This command runs pa11y checks against the local server and writes HTML reports to <code>pa11y-report/</code>.</p>
-<h2 id="8-run-test-and-check">8. Run test and check</h2>
-<p>From the repository root:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> test</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> check</span></span></code></pre>
-<p>If you need to run the full build pipeline locally:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> build</span></span></code></pre>
-<p>Useful script references:</p>
-<ul>
-<li><code>pnpm dev</code> runs the workspace dev pipeline.</li>
-<li><code>pnpm test</code> runs the workspace test pipeline.</li>
-<li><code>pnpm check</code> runs <code>fta</code> validation and the workspace check pipeline.</li>
-<li><code>pnpm format</code> reformats files with Dprint.</li>
-<li><code>pnpm release:patch</code>, <code>pnpm release:minor</code>, and <code>pnpm release:major</code> create releases with conventional versioning.</li>
-<li>In <code>themes/zola-monoplain/</code>, <code>pnpm dev</code> runs <code>zola serve</code> after checking that Zola is installed.</li>
-<li>In <code>themes/zola-monoplain/</code>, <code>pnpm build</code> runs <code>zola build</code> after checking that Zola is installed.</li>
-</ul>
-<h2 id="9-write-documentation">9. Write Documentation</h2>
-<p>Features and usage are documented in the repository's <code>README.md</code> and via post content in <code>content/posts/</code> like this one. If you add a new feature, update the documentation accordingly.</p>
-<h2 id="10-commit-and-push-changes">10. Commit and push changes</h2>
-<p>From the repository root:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> add .</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> commit</span><span style="color: #BD93F9;"> -m</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">feat(posts): short summary of your change</span><span style="color: #E9F284;">&quot;</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span></span></code></pre>
-<p>Use a conventional commit message (<code>feat:</code>, <code>fix:</code>, <code>docs:</code>, and so on) so release tooling can derive changelog entries.</p>
-<p>For pull requests, create a new branch and push to that branch instead of <code>main</code>.</p>
-<p>Preview deployments are automatically built for pull requests and can be accessed at:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>https://exiguus.github.io/zola-monoplain/pr-preview/pr-&lt;PR_NUMBER&gt;</span></span></code></pre>
-<p>If a post is marked as a draft, it will be included in the preview deployment, but not in the production deployment.</p>
-<h2 id="11-release-a-new-version">11. Release a new version</h2>
-<p>Choose the release type and run one of:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:patch</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:minor</span></span>
-<span class="giallo-l"><span style="color: #50FA7B;">pnpm</span><span style="color: #F1FA8C;"> release:major</span></span></code></pre>
-<p>Then push commit and tags:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">git</span><span style="color: #F1FA8C;"> push</span><span style="color: #BD93F9;"> --follow-tags</span><span style="color: #F1FA8C;"> origin main</span></span></code></pre>
-<p>If we have breaking changes, like removing, adding or changing a variable in the <code>config.toml</code> file, we must release a new major version.
-The change is considered breaking if it requires users to change their configuration or templates to continue using the theme.</p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a rel="external" href="https://www.getzola.org/documentation/">https://www.getzola.org/documentation/</a></li>
-<li><a rel="external" href="https://www.getzola.org/documentation/templates/overview/">https://www.getzola.org/documentation/templates/overview/</a></li>
-<li><a rel="external" href="https://keats.github.io/tera/docs/">https://keats.github.io/tera/docs/</a></li>
-</ul>
+    "@type": "BlogPosting","headline": "Development","description": "Set up a local development environment for Zola theme work","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;This post shows a practical workflow for developing Zola themes locally:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;check out the repository&lt;&#x2F;li&gt;
+&lt;li&gt;install Zola, Node.js and pnpm&lt;&#x2F;li&gt;
+&lt;li&gt;run development mode&lt;&#x2F;li&gt;
+&lt;li&gt;understand Tera templates and editor support&lt;&#x2F;li&gt;
+&lt;li&gt;debug templates and components&lt;&#x2F;li&gt;
+&lt;li&gt;run local accessibility checks&lt;&#x2F;li&gt;
+&lt;li&gt;run test and check&lt;&#x2F;li&gt;
+&lt;li&gt;commit and push changes&lt;&#x2F;li&gt;
+&lt;li&gt;release a new version&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
+&lt;p&gt;For this repository, the JavaScript toolchain expects:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cargo &lt;code&gt;&amp;gt;=1.95.0&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Zola &lt;code&gt;&amp;gt;=0.22.1&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Node.js &lt;code&gt;&amp;gt;=22.0.0 &amp;lt;25.0.0&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;pnpm &lt;code&gt;&amp;gt;=10.0.0 &amp;lt;12.0.0&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Repository scripts are defined in the workspace root &lt;code&gt;package.json&lt;&#x2F;code&gt;, while the theme package also has its own local &lt;code&gt;package.json&lt;&#x2F;code&gt; under &lt;code&gt;themes&#x2F;zola-monoplain&#x2F;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;1-check-out-the-repository&quot;&gt;1. Check out the repository&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; clone https:&#x2F;&#x2F;github.com&#x2F;exiguus&#x2F;zola-monoplain.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; zola-monoplain&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;2-install-cargo-zola-node-js-and-pnpm&quot;&gt;2. Install Cargo, Zola, Node.js and pnpm&lt;&#x2F;h2&gt;
+&lt;p&gt;Preferred: install Zola with Cargo and pin the same version used by this repository&#x27;s GitHub Actions.&lt;&#x2F;p&gt;
+&lt;p&gt;At the moment, workflows use &lt;code&gt;zola@0.22.1&lt;&#x2F;code&gt;, so this is the recommended development version.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;preferred-cargo&quot;&gt;Preferred (Cargo)&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cargo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --locked --git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola zola@0.22.1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can verify the CI pin in &lt;code&gt;.github&#x2F;workflows&#x2F;prod.yml&lt;&#x2F;code&gt; and &lt;code&gt;.github&#x2F;workflows&#x2F;preview.yml&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;package-manager-alternatives&quot;&gt;Package manager alternatives&lt;&#x2F;h3&gt;
+&lt;p&gt;If you do not use Rust&#x2F;Cargo locally, install Zola with your package manager only if it provides a recent enough version (&amp;gt;=0.22.1).&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;linux-debian-ubuntu&quot;&gt;Linux (Debian&#x2F;Ubuntu)&lt;&#x2F;h4&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; apt update&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; apt install zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h4 id=&quot;macos-homebrew&quot;&gt;macOS (Homebrew)&lt;&#x2F;h4&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; install zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h4 id=&quot;alternative&quot;&gt;Alternative&lt;&#x2F;h4&gt;
+&lt;p&gt;Use the official installation guide if your platform&#x2F;package manager differs:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;node-pnpm&quot;&gt;Node, pnpm&lt;&#x2F;h3&gt;
+&lt;p&gt;If Node.js is not installed yet, install Node.js 22 or newer and then enable pnpm via Corepack:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;node&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;corepack&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; enable&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;corepack&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; prepare pnpm@11.9.0&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --activate&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Install dependencies from the repository root:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; install&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;3-run-development-mode&quot;&gt;3. Run development mode&lt;&#x2F;h2&gt;
+&lt;p&gt;You can run development in two ways.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;option-a-workspace-root-turbo&quot;&gt;Option A: Workspace root (Turbo)&lt;&#x2F;h3&gt;
+&lt;p&gt;From the repository root:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; dev&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This runs the workspace &lt;code&gt;dev&lt;&#x2F;code&gt; pipeline.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;option-b-theme-package-directly&quot;&gt;Option B: Theme package directly&lt;&#x2F;h3&gt;
+&lt;p&gt;From the theme directory:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; themes&#x2F;zola-monoplain&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; dev&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This runs &lt;code&gt;zola serve&lt;&#x2F;code&gt; (after checking that Zola is installed).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;4-understand-tera-templates-and-editor-support&quot;&gt;4. Understand Tera templates and editor support&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola templates use the Tera template engine.&lt;&#x2F;p&gt;
+&lt;p&gt;Tera documentation:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;keats.github.io&#x2F;tera&#x2F;docs&#x2F;&quot;&gt;https:&#x2F;&#x2F;keats.github.io&#x2F;tera&#x2F;docs&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If your IDE&#x2F;editor does not provide a dedicated Tera extension, the Twig syntax extension works well for highlighting and basic template readability.&lt;&#x2F;p&gt;
+&lt;p&gt;VS Code extension:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=mblode.twig-language-2&quot;&gt;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=mblode.twig-language-2&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;5-understand-the-theme-structure&quot;&gt;5. Understand the theme structure&lt;&#x2F;h2&gt;
+&lt;p&gt;The theme keeps content, templates, styles, and client-side scripts in separate folders so each part stays easy to find:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;templates&#x2F;&lt;&#x2F;code&gt; contains the page layout layer.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;base.html&lt;&#x2F;code&gt; provides the shared shell.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;index.html&lt;&#x2F;code&gt;, &lt;code&gt;page.html&lt;&#x2F;code&gt;, &lt;code&gt;post.html&lt;&#x2F;code&gt;, &lt;code&gt;posts.html&lt;&#x2F;code&gt;, and &lt;code&gt;taxonomy_*.html&lt;&#x2F;code&gt; define the main page types.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;components&#x2F;&lt;&#x2F;code&gt; holds reusable partials such as the header, footer, and latest content blocks.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;macros&#x2F;&lt;&#x2F;code&gt; and &lt;code&gt;shortcodes&#x2F;&lt;&#x2F;code&gt; contain shared template helpers and shortcode implementations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;sass&#x2F;&lt;&#x2F;code&gt; contains the SCSS source files.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;base.scss&lt;&#x2F;code&gt;, &lt;code&gt;layout.scss&lt;&#x2F;code&gt;, &lt;code&gt;typography.scss&lt;&#x2F;code&gt;, &lt;code&gt;markdown.scss&lt;&#x2F;code&gt;, and related partials are split by concern.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;_variables.scss&lt;&#x2F;code&gt; and &lt;code&gt;_extends.scss&lt;&#x2F;code&gt; hold shared values and reusable style rules.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;a11y.scss&lt;&#x2F;code&gt;, &lt;code&gt;image.scss&lt;&#x2F;code&gt;, &lt;code&gt;scheme.scss&lt;&#x2F;code&gt;, &lt;code&gt;spotify.scss&lt;&#x2F;code&gt;, and &lt;code&gt;youtube.scss&lt;&#x2F;code&gt; group feature-specific styles.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;static&#x2F;js&#x2F;&lt;&#x2F;code&gt; contains JavaScript shipped directly to the browser.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;main.js&lt;&#x2F;code&gt; is the general site script.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;search.js&lt;&#x2F;code&gt; powers the search page behavior.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Keeping these areas separated makes template changes, styling changes, and script changes easier to debug independently.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;6-debug-templates-and-components&quot;&gt;6. Debug templates and components&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;enable-debug-mode-in-config&quot;&gt;Enable debug mode in config&lt;&#x2F;h3&gt;
+&lt;p&gt;In &lt;code&gt;config.toml&lt;&#x2F;code&gt; set:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;debug&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;print-page-data-in-templates&quot;&gt;Print page data in templates&lt;&#x2F;h3&gt;
+&lt;p&gt;When debugging a component, render the current page context in a template (for example in &lt;code&gt;templates&#x2F;post.html&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% if config.extra.debug %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;summary&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Debug: page&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;summary&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;pre&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{{&#x2F;* page | default(value=&amp;quot;{}&amp;quot;) | json_encode | safe *&#x2F;}}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;pre&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% endif %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The escaped braces are for Markdown examples. In your actual template file, use normal braces:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* page | default(value=&amp;quot;{}&amp;quot;) | json_encode | safe *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is useful to inspect available keys while developing components.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;scope-component-debugging&quot;&gt;Scope component debugging&lt;&#x2F;h3&gt;
+&lt;p&gt;For reusable components&#x2F;macros, print only the value you need first, then expand:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* page.title | default(value=&amp;quot;(no title)&amp;quot;) *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;for example, to check if the &lt;code&gt;page.title&lt;&#x2F;code&gt; key is available in a component.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* page.extra | default(value=&amp;quot;{}&amp;quot;) | json_encode | safe *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;or page.extra to check if the &lt;code&gt;page.extra&lt;&#x2F;code&gt; key is available in a component.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* __tera_context *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;or &lt;code&gt;__tera_context&lt;&#x2F;code&gt; to inspect the full template context.&lt;&#x2F;p&gt;
+&lt;p&gt;Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;7-run-local-accessibility-checks&quot;&gt;7. Run local accessibility checks&lt;&#x2F;h2&gt;
+&lt;p&gt;To test accessibility against a local running dev server:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start the local dev server (default: &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&lt;&#x2F;code&gt;):&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; dev&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol&gt;
+&lt;li&gt;In a second terminal from the repository root, run:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; test:pa11y&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This command runs pa11y checks against the local server and writes HTML reports to &lt;code&gt;pa11y-report&#x2F;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;8-run-test-and-check&quot;&gt;8. Run test and check&lt;&#x2F;h2&gt;
+&lt;p&gt;From the repository root:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; test&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; check&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If you need to run the full build pipeline locally:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; build&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Useful script references:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pnpm dev&lt;&#x2F;code&gt; runs the workspace dev pipeline.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pnpm test&lt;&#x2F;code&gt; runs the workspace test pipeline.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pnpm check&lt;&#x2F;code&gt; runs &lt;code&gt;fta&lt;&#x2F;code&gt; validation and the workspace check pipeline.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pnpm format&lt;&#x2F;code&gt; reformats files with Dprint.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pnpm release:patch&lt;&#x2F;code&gt;, &lt;code&gt;pnpm release:minor&lt;&#x2F;code&gt;, and &lt;code&gt;pnpm release:major&lt;&#x2F;code&gt; create releases with conventional versioning.&lt;&#x2F;li&gt;
+&lt;li&gt;In &lt;code&gt;themes&#x2F;zola-monoplain&#x2F;&lt;&#x2F;code&gt;, &lt;code&gt;pnpm dev&lt;&#x2F;code&gt; runs &lt;code&gt;zola serve&lt;&#x2F;code&gt; after checking that Zola is installed.&lt;&#x2F;li&gt;
+&lt;li&gt;In &lt;code&gt;themes&#x2F;zola-monoplain&#x2F;&lt;&#x2F;code&gt;, &lt;code&gt;pnpm build&lt;&#x2F;code&gt; runs &lt;code&gt;zola build&lt;&#x2F;code&gt; after checking that Zola is installed.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;9-write-documentation&quot;&gt;9. Write Documentation&lt;&#x2F;h2&gt;
+&lt;p&gt;Features and usage are documented in the repository&#x27;s &lt;code&gt;README.md&lt;&#x2F;code&gt; and via post content in &lt;code&gt;content&#x2F;posts&#x2F;&lt;&#x2F;code&gt; like this one. If you add a new feature, update the documentation accordingly.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;10-commit-and-push-changes&quot;&gt;10. Commit and push changes&lt;&#x2F;h2&gt;
+&lt;p&gt;From the repository root:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; add .&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feat(posts): short summary of your change&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; push&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Use a conventional commit message (&lt;code&gt;feat:&lt;&#x2F;code&gt;, &lt;code&gt;fix:&lt;&#x2F;code&gt;, &lt;code&gt;docs:&lt;&#x2F;code&gt;, and so on) so release tooling can derive changelog entries.&lt;&#x2F;p&gt;
+&lt;p&gt;For pull requests, create a new branch and push to that branch instead of &lt;code&gt;main&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Preview deployments are automatically built for pull requests and can be accessed at:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-&amp;lt;PR_NUMBER&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If a post is marked as a draft, it will be included in the preview deployment, but not in the production deployment.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;11-release-a-new-version&quot;&gt;11. Release a new version&lt;&#x2F;h2&gt;
+&lt;p&gt;Choose the release type and run one of:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; release:patch&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; release:minor&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;pnpm&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; release:major&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then push commit and tags:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; push&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; --follow-tags&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; origin main&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If we have breaking changes, like removing, adding or changing a variable in the &lt;code&gt;config.toml&lt;&#x2F;code&gt; file, we must release a new major version.
+The change is considered breaking if it requires users to change their configuration or templates to continue using the theme.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;keats.github.io&#x2F;tera&#x2F;docs&#x2F;&quot;&gt;https:&#x2F;&#x2F;keats.github.io&#x2F;tera&#x2F;docs&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 ","datePublished": "2026-07-12","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;development&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;development&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Development","Templates","Debugging","Accessibility","Testing","Release"],
   }
 </script> 
@@ -1044,7 +1044,7 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-07-28 12:25:02 Europe&#x2F;Berlin</small>
+    <small>2026-07-28 12:44:12 Europe&#x2F;Berlin</small>
   </p> <figure>
   
 <div
