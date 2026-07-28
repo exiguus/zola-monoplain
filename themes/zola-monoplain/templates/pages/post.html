@@ -1,6 +1,5 @@
-{% import "macros/images.html" as images -%} {% if page.extra.lang -%}
-<div lang="{{page.extra.lang}}">
-  {% endif -%} {% include "components/post_header.html" -%} {{ page.content |
-  safe }} {% include "components/post_footer.html" -%} {% if page.extra.lang -%}
+{% import "macros/images.html" as images -%}
+<div {% if page.extra.lang -%} lang="{{page.extra.lang}}" {% endif -%} class="h-entry">
+  {% include "components/post_header.html" -%} <div class="e-content">
+    {{ page.content | safe }} </div> {% include "components/post_footer.html" -%}
 </div>
-{% endif -%}
