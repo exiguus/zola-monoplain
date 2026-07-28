@@ -38,6 +38,7 @@ This theme is designed to:
 ## Changelog
 
 For latest changes please see the [changelog](CHANGELOG.md).
+For latest Zola config changes please see the [Zola config changelog](CHANGELOG_ZOLA_CONFIG.md).
 
 ## Features
 
@@ -49,9 +50,16 @@ For latest changes please see the [changelog](CHANGELOG.md).
   - [x] Default browser styles
   - [x] Clean HTML5 output
   - [x] Lean CSS
-- [x] Accessible
-  - [x] CI tests
+- [x] Accessibility
+  - [x] WCAG 2.2 AA compliant
+  - [x] ARIA support
+  - [x] Keyboard navigation support
   - [x] pa11y report
+- [x] IndyWeb
+  - [x] Web Sign In
+  - [x] Microformats
+    - [x] h-card
+    - [x] h-entry
 - [ ] Templates
   - [ ] Home
     - [x] Latest Posts
@@ -62,14 +70,13 @@ For latest changes please see the [changelog](CHANGELOG.md).
     - [x] Table of contents support
     - [x] Hero image support (`hero_img`)
     - [x] Hero image alt/caption support (`hero_alt`, `hero_copy`)
+    - [x] Draft support (`draft`)
     - [x] Shortcodes <https://exiguus.github.io/zola-monoplain/posts/shortcodes/>
     - [x] Emojis <https://exiguus.github.io/zola-monoplain/posts/emojis/>
     - [x] Icons <https://exiguus.github.io/zola-monoplain/posts/icons/>
-    - [ ] Markdown <https://exiguus.github.io/zola-monoplain/posts/markdown/>
+    - [x] Markdown <https://exiguus.github.io/zola-monoplain/posts/markdown/>
       - [x] CommonMark
       - [x] GitHub Flavored Markdown
-      - [ ] Graph support
-      - [ ] Chart support
     - [ ] Comments
       - [x] via mailto
       - [ ] via Mastodon
@@ -92,16 +99,15 @@ For latest changes please see the [changelog](CHANGELOG.md).
   - [x] Link preview support
   - [x] Link preview image support
   - [x] Link custom preview image support
-- [ ] Customization
+- [x] Customization
   - [x] Customizable via template hooks
-  - [ ] Customizable JavaScript
+  - [x] Customizable via config.toml
 - [ ] Environment
   - [x] JavaScript support
   - [x] React Support
   - [ ] TypeScript support
-- [ ] CI/CD <https://exiguus.github.io/zola-monoplain/posts/ci/>
-  - [ ] Linting and Formatting support
-    - [ ] Eslint
+- [x] CI/CD <https://exiguus.github.io/zola-monoplain/posts/ci/>
+  - [x] Linting and Formatting support
     - [x] Prettier
     - [x] Commitlint
   - [x] Commit hooks
