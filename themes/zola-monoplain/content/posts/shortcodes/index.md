@@ -2,10 +2,10 @@
 title = "Shortcodes"
 description = "Shortcodes by example"
 date = 2024-06-08
-updated = 2026-07-19
+updated = 2026-07-28
 authors = ["Simon Gattner", "exiguus"]
 [taxonomies]
-tags = ["Zola", "Theme", "Markdown", "Shortcodes", "Images", "Details", "Markdown", "Icons", "Youtube", "Spotify", "Email", "Phone", "h-card"]
+tags = ["Zola", "Theme", "Markdown", "Shortcodes", "Images", "Details", "Markdown", "Icons", "Youtube", "Spotify", "Email", "Phone", "h-card", "h-entry"]
 [extra]
 images = ["example-image.jpg"]
 preview_img = "example-image.jpg"
