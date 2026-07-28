@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-07-28T09:20:21.266657453+00:00" />
+<meta name="build" content="2026-07-28T10:25:02.811272879+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Shortcodes"
@@ -103,6 +103,9 @@ accessible" />
             <li>
               <a href="#h-card">h-card</a>
               </li>
+            <li>
+              <a href="#h-entry">h-entry</a>
+              </li>
             </ul>
           </li>
         <li>
@@ -154,21 +157,31 @@ accessible" />
     Created:
     <date class="dt-published">2024-06-08</date>
   </p><p>Updated:
-    <date class="dt-updated">2026-07-19</date>
+    <date class="dt-updated">2026-07-28</date>
   </p>
   
+
+  <p class="sr-only">
+    <a href="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;shortcodes&#x2F;" class="u-url">Post Permalink</a>
+  </p>
   <div 
     aria-label="Post Authors">
     <p>Author:</p>
-    <ul aria-label="Post Authors"><li>
+    <ul aria-label="Post Authors">
+      <li>
         
-<div class="h-card">
+<div
+  class="h-card p-author"
+>
   <div><div class="p-name">Simon Gattner</div>
   </div>
 </div> 
-      </li><li>
+      </li>
+      <li>
         
-<div class="h-card">
+<div
+  class="h-card p-author"
+>
   <div><div class="p-name">exiguus</div>
   </div>
 </div> 
@@ -233,6 +246,11 @@ accessible" />
           
           <li>
             <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/shortcodes/#h-card">h-card</a>
+            
+          </li>
+          
+          <li>
+            <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/shortcodes/#h-entry">h-entry</a>
             
           </li>
           
@@ -426,7 +444,9 @@ data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203
 <p><strong>Simple h-card with multiple URLs:</strong></p>
 <figure>
   
-<div class="h-card">
+<div
+  class="h-card"
+>
   <div><div class="p-name">Simon</div><div class="p-nickname"
       >Nick: exiguus</div
     >
@@ -456,7 +476,9 @@ data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203
 <p><strong>Full h-card with multiple phone numbers and emails:</strong></p>
 <figure>
   
-<div class="h-card grid">
+<div
+  class="h-card grid"
+>
   <div><div class="p-name">Sally Ride</div><div class="p-nickname"
       >Nick: sallykride</div
     >
@@ -606,9 +628,24 @@ data-obfuscated-email="&#x3C;s.ride&#x40;&#8203;&#8203;example&#8203;&#x2E;&#820
 <li><code>emails</code>: Array of arrays, each with <code>[local_part, domain_name, tld, title]</code> (title is optional)</li>
 <li><code>tels</code>: Array of arrays, each with <code>[number, title]</code> (title is optional)</li>
 </ul>
+<h3 id="h-entry">h-entry</h3>
+<p>The theme automatically renders <a rel="external" href="https://microformats.org/wiki/h-entry">microformat2 h-entry</a> markup for posts using the <code>hentry</code> macro. While there is no dedicated shortcode, h-entry is used internally in the post header template with page metadata (title, authors, published date, etc.).</p>
+<p>For custom h-entry usage, the macro supports these parameters:</p>
+<ul>
+<li><code>name</code>: Post title</li>
+<li><code>summary</code>: Post summary</li>
+<li><code>content</code>: Post content HTML</li>
+<li><code>published</code>: Publication datetime</li>
+<li><code>updated</code>: Update datetime</li>
+<li><code>url</code>: Permalink URL</li>
+<li><code>uid</code>: Unique identifier</li>
+<li><code>authors</code>: Array of author names (strings)</li>
+<li><code>categories</code>: Array of category names (strings)</li>
+<li><code>syndication</code>: Array of syndication URLs (strings)</li>
+</ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Shortcodes are a powerful Zola feature for embedding richer content in Markdown. They are easy to use and help keep posts expressive without leaving the Markdown workflow.</p>
-","datePublished": "2024-06-08","dateModified": "2026-07-19","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;shortcodes&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;shortcodes&#x2F;","keywords": ["Zola","Theme","Markdown","Shortcodes","Images","Details","Markdown","Icons","Youtube","Spotify","Email","Phone","h-card"],
+","datePublished": "2024-06-08","dateModified": "2026-07-28","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;shortcodes&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;shortcodes&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"},{"@type": "Person", "name": "exiguus"}],"keywords": ["Zola","Theme","Markdown","Shortcodes","Images","Details","Markdown","Icons","Youtube","Spotify","Email","Phone","h-card","h-entry"],
   }
 </script> 
 </header><div class="e-content">
@@ -783,7 +820,9 @@ data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203
 <p><strong>Simple h-card with multiple URLs:</strong></p>
 <figure>
   
-<div class="h-card">
+<div
+  class="h-card"
+>
   <div><div class="p-name">Simon</div><div class="p-nickname"
       >Nick: exiguus</div
     >
@@ -813,7 +852,9 @@ data-obfuscated-email="&#x3C;hello&#x40;&#8203;&#8203;example&#8203;&#x2E;&#8203
 <p><strong>Full h-card with multiple phone numbers and emails:</strong></p>
 <figure>
   
-<div class="h-card grid">
+<div
+  class="h-card grid"
+>
   <div><div class="p-name">Sally Ride</div><div class="p-nickname"
       >Nick: sallykride</div
     >
@@ -963,6 +1004,21 @@ data-obfuscated-email="&#x3C;s.ride&#x40;&#8203;&#8203;example&#8203;&#x2E;&#820
 <li><code>emails</code>: Array of arrays, each with <code>[local_part, domain_name, tld, title]</code> (title is optional)</li>
 <li><code>tels</code>: Array of arrays, each with <code>[number, title]</code> (title is optional)</li>
 </ul>
+<h3 id="h-entry">h-entry</h3>
+<p>The theme automatically renders <a rel="external" href="https://microformats.org/wiki/h-entry">microformat2 h-entry</a> markup for posts using the <code>hentry</code> macro. While there is no dedicated shortcode, h-entry is used internally in the post header template with page metadata (title, authors, published date, etc.).</p>
+<p>For custom h-entry usage, the macro supports these parameters:</p>
+<ul>
+<li><code>name</code>: Post title</li>
+<li><code>summary</code>: Post summary</li>
+<li><code>content</code>: Post content HTML</li>
+<li><code>published</code>: Publication datetime</li>
+<li><code>updated</code>: Update datetime</li>
+<li><code>url</code>: Permalink URL</li>
+<li><code>uid</code>: Unique identifier</li>
+<li><code>authors</code>: Array of author names (strings)</li>
+<li><code>categories</code>: Array of category names (strings)</li>
+<li><code>syndication</code>: Array of syndication URLs (strings)</li>
+</ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Shortcodes are a powerful Zola feature for embedding richer content in Markdown. They are easy to use and help keep posts expressive without leaving the Markdown workflow.</p>
  </div>   <section aria-labelledby="latest-feedback">
@@ -1087,6 +1143,14 @@ data-obfuscated-email="&#x3C;shortcodes.monoplain&#x40;&#8203;&#8203;0x38&#8203;
         class="p-category"
         href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/h-card"
         >h-card</a
+      ></li
+    >
+    
+    <li aria-label="h-entry"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/h-entry"
+        >h-entry</a
       ></li
     >
     
@@ -1331,10 +1395,12 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-07-28 11:20:21 Europe&#x2F;Berlin</small>
+    <small>2026-07-28 12:25:02 Europe&#x2F;Berlin</small>
   </p> <figure>
   
-<div class="h-card">
+<div
+  class="h-card"
+>
   <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
       >Nick: exiguus</div
     >

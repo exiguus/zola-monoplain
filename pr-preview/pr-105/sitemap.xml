@@ -68,7 +68,7 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/shortcodes/</loc>
-        <lastmod>2026-07-19</lastmod>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/themes/</loc>
@@ -127,6 +127,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/h-card/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/h-entry/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/icons/</loc>
