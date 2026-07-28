@@ -7,7 +7,7 @@ syndication %} {%- if has_content %}
   {%- if name %}<div class="p-name">{{ name }}</div>{% endif %} {%- if summary
   %}<div class="p-summary">{{ summary }}</div>{% endif %} {%- if content %}<div
     class="e-content"
-    >{{ content | safe }}</div
+    >{{ content | safe }} </div
   >{% endif %} {%- if published %}<div class="dt-published"
     >{{ trans(key='hentry_published_label') }}<time datetime="{{ published }}"
       >{{ published | date(format="%Y-%m-%d %H:%M") }}</time
@@ -52,7 +52,7 @@ syndication %} {%- if has_content %}
     "@type": "BlogPosting",
     {%- if name %}"headline": "{{ name }}",{% endif %}
     {%- if summary %}"description": "{{ summary }}",{% endif %}
-    {%- if content %}"articleBody": "{{ content | safe }}",{% endif %}
+    {%- if content %}"articleBody": "{{ content }}",{% endif %}
     {%- if published %}"datePublished": "{{ published }}",{% endif %}
     {%- if updated %}"dateModified": "{{ updated }}",{% endif %}
     {%- if url %}"url": "{{ url }}",{% endif %}
