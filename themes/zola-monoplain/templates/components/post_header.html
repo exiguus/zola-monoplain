@@ -37,30 +37,10 @@
     <p>{{ trans(key='post_author_prefix') }}</p>
     <ul aria-label="{{ trans(key='post_author_aria_label' | default(value='Author')) }}">
       {%- for author in page.authors %}
-      {%- set name = author | default(value="") -%}
       <li>
         {{ hcard::hcard_html(
-        name=name | default(value=""),
-        honorific_prefix=honorific_prefix | default(value=""),
-        given_name=given_name | default(value=""),
-        additional_name=additional_name | default(value=""),
-        family_name=family_name | default(value=""),
-        honorific_suffix=honorific_suffix | default(value=""),
-        nickname=nickname | default(value=""),
-        org=org | default(value=""),
-        photo=photo | default(value=""),
-        urls=urls | default(value=[]),
-        emails=emails | default(value=[]),
-        tels=tels | default(value=[]),
-        street_address=street_address | default(value=""),
-        locality=locality | default(value=""),
-        region=region | default(value=""),
-        region_title=region_title | default(value=""),
-        postal_code=postal_code | default(value=""),
-        country_name=country_name | default(value=""),
-        bday=bday | default(value=""),
-        category=category | default(value=""),
-        note=note | default(value="")
+        is_author=true,
+        name=author,
         ) }}
       </li>
       {%- endfor %}
@@ -72,29 +52,9 @@
     aria-label="{{ trans(key='post_author_aria_label' | default(value='Author')) }}">
     <span>{{ trans(key='post_author_prefix') }}</span>
     {%- for author in page.authors %}
-    {%- set name = author | default(value="") %}
     {{ hcard::hcard_html(
-    name=name | default(value=""),
-    honorific_prefix=honorific_prefix | default(value=""),
-    given_name=given_name | default(value=""),
-    additional_name=additional_name | default(value=""),
-    family_name=family_name | default(value=""),
-    honorific_suffix=honorific_suffix | default(value=""),
-    nickname=nickname | default(value=""),
-    org=org | default(value=""),
-    photo=photo | default(value=""),
-    urls=urls | default(value=[]),
-    emails=emails | default(value=[]),
-    tels=tels | default(value=[]),
-    street_address=street_address | default(value=""),
-    locality=locality | default(value=""),
-    region=region | default(value=""),
-    region_title=region_title | default(value=""),
-    postal_code=postal_code | default(value=""),
-    country_name=country_name | default(value=""),
-    bday=bday | default(value=""),
-    category=category | default(value=""),
-    note=note | default(value="")
+    is_author=true,
+    name=author
     ) }}
     {% if not loop.last %},{% endif %}
     {%- endfor %}
@@ -105,7 +65,7 @@
   {%- if page.extra.hero_img is defined and page.extra.hero_img %}
   {%- set hero_alt = page.extra.hero_alt |
   default(value=page.description | default(value=page.title)) | striptags %}
-  {%- set hero_copy = page.extra.hero_copy | default(value="") | striptags %}
+  {%- set hero_copy = page.extra.hero_copy | striptags %}
 
   <figure>
     <div class="hero">
@@ -133,14 +93,13 @@
 
   {{ hentry::hentry_json(
   name=page.title,
-  summary=page.description | default(value=""),
-  content=page.content | default(value=""),
+  summary=page.description,
+  content=page.content,
   published=page.date,
-  updated=page.updated | default(value=""),
+  updated=page.updated,
   url=page.permalink,
   uid=page.permalink,
-  author=page.authors | default(value=[]),
+  authors=page.authors | default(value=[]),
   categories=page.taxonomies["tags"] | default(value=[]),
-  syndication=page.extra.syndication | default(value=[])
   ) }}
 </header>
