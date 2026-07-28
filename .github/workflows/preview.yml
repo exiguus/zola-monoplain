@@ -30,7 +30,7 @@ jobs:
 
       - name: Build
         working-directory: ./themes/zola-monoplain
-        run: pnpm check:zola && zola build --base-url "$PREVIEW_BASE_URL" --drafts
+        run: pnpm check && pnpm cp:loaddata && zola build --base-url "$PREVIEW_BASE_URL" --drafts
         if: github.event.action != 'closed'
 
       - name: Deploy
