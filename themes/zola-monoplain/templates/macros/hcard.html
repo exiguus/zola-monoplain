@@ -1,5 +1,5 @@
 {%- import "macros/email.html" as email %} {%- import "macros/phone.html" as
-phone %} {%- import "macros/images.html" as images %} {% macro hcard( name,
+phone %} {%- import "macros/images.html" as images %} {% macro hcard_html( name,
 honorific_prefix, given_name, additional_name, family_name, honorific_suffix,
 nickname, org, photo, urls, emails, tels, street_address, locality, region,
 region_title, postal_code, country_name, bday, category, note ) %} {%- set
@@ -99,4 +99,45 @@ photo_path = page.path -%} {%- endif -%} {%- if has_content %}
   </div>
   {%- endif %}
 </div>
-{%- endif %} {% endmacro hcard %}
+{%- endif %} {% endmacro hcard_html %} {% macro hcard_json( name,
+honorific_prefix, given_name, additional_name, family_name, honorific_suffix,
+nickname, org, photo, urls, emails, tels, street_address, locality, region,
+region_title, postal_code, country_name, bday, category, note ) %} {%- set
+has_content = name or honorific_prefix or given_name or additional_name or
+family_name or honorific_suffix or nickname or org or photo or urls or emails or
+tels or street_address or locality or region or postal_code or country_name or
+bday or category or note %} {%- set photo_path = "" -%} {%- if photo is not
+starting_with("/") and page -%} {%- set photo_path = page.path -%} {%- endif -%}
+{%- if has_content %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    {%- if name %}"name": "{{ name }}",{% endif %}
+    {%- if honorific_prefix %}"honorificPrefix": "{{ honorific_prefix }}",{% endif %}
+    {%- if given_name %}"givenName": "{{ given_name }}",{% endif %}
+    {%- if additional_name %}"additionalName": "{{ additional_name }}",{% endif %}
+    {%- if family_name %}"familyName": "{{ family_name }}",{% endif %}
+    {%- if honorific_suffix %}"honorificSuffix": "{{ honorific_suffix }}",{% endif %}
+    {%- if nickname %}"alternateName": "{{ nickname }}",{% endif %}
+    {%- if org %}"worksFor": { "@type": "Organization", "name": "{{ org }}" },{% endif %}
+    {%- if urls %}"url": [{% for url_item in urls %}{%- if not loop.first %},{% endif %}"{{ url_item[0] }}"{% endfor %}],{% endif %}
+    {%- if photo %}"image": "{{ photo_path | safe_url }}/{{ photo }}",{% endif %}
+    {%- if emails %}"email": [{% for email_item in emails %}{%- if not loop.first %},{% endif %}"{{ email_item[0] }}@{{ email_item[1] }}.{{ email_item[2] }}"{% endfor %}],{% endif %}
+    {%- if tels %}"telephone": [{% for tel_item in tels %}{%- if not loop.first %},{% endif %}"{{ tel_item[0] }}"{% endfor %}],{% endif %}
+    {%- if street_address or locality or region or postal_code or country_name %}
+    "address": {
+      "@type": "PostalAddress",
+      {%- if street_address %}"streetAddress": "{{ street_address }}",{% endif %}
+      {%- if locality %}"addressLocality": "{{ locality }}",{% endif %}
+      {%- if region %}"addressRegion": "{{ region }}",{% endif %}
+      {%- if postal_code %}"postalCode": "{{ postal_code }}",{% endif %}
+      {%- if country_name %}"addressCountry": "{{ country_name }}"{% endif %}
+    },
+    {%- endif %}
+    {%- if bday %}"birthDate": "{{ bday }}",{% endif %}
+    {%- if category %}"additionalType": "{{ category }}",{% endif %}
+    {%- if note %}"description": "{{ note }}"{% endif %}
+  }
+</script>
+{%- endif %} {% endmacro hcard_json %}

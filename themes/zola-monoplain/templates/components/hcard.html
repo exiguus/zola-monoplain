@@ -1,6 +1,6 @@
 {%- import "macros/hcard.html" as hcard -%}
 <figure>
-  {{ hcard::hcard( name=config.extra.hcard_name | default(value=""),
+  {{ hcard::hcard_html( name=config.extra.hcard_name | default(value=""),
   honorific_prefix=config.extra.hcard_honorific_prefix | default(value=""),
   given_name=config.extra.hcard_given_name | default(value=""),
   additional_name=config.extra.hcard_additional_name | default(value=""),
