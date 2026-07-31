@@ -4,7 +4,12 @@ opengraph %}
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content="Zola" />
+{%- set robots_noindex = page.extra.robots_noindex | default(value=false) %} {%-
+if robots_noindex %}
+<meta name="robots" content="noindex, nofollow" />
+{%- else %}
 <meta name="robots" content="index, follow" />
+{%- endif %}
 <meta name="title" content="{{ meta::title() }}" />
 <meta name="description" content="{{ meta::description() }}" />
 <meta name="keywords" content="{{ meta::tags() }}" />
