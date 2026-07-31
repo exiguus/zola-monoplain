@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og:https://ogp.me/ns#">
+
+<head>
+  <title>Formatter | mono&#x2F;plain; a11y=true</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Zola" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="Formatter" />
+<meta name="description" content="Front matter fields: common usage in theme and blog, plus all Zola options" />
+<meta name="keywords" content="zola,
+theme,
+a11y,
+accessible" />
+<meta name="author" content="Simon Gattner" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="build" content="2026-07-31T19:19:44.333289472+00:00" />
+<meta
+  property="og:title"
+  content="mono&#x2F;plain; a11y=true | Formatter"
+/>
+<meta property="og:type" content="website" />
+<meta
+  property="og:url"
+  content="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/"
+/>
+<meta property="og:description" content="Front matter fields: common usage in theme and blog, plus all Zola options" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="mono&#x2F;plain; a11y=true Atom Feed"
+  href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/atom.xml"
+/> <link
+  rel="alternate"
+  type="application/rss+xml"
+  title="mono&#x2F;plain; a11y=true RSS Feed"
+  href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/atom.rss"
+/>
+<link
+  rel="stylesheet"
+  href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/base.css"
+  media="screen"
+/>
+
+  
+</head>
+<body id="posts--formatter" data-base-url="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105">
+  
+<nav
+  id="skip-nav"
+  aria-label="Skip Navigation"
+  aria-live="off"
+  aria-atomic="false"
+>
+  <ul>
+    <li><a href="#main">Skip to content</a></li>
+    <li
+      ><a href="#toc">Skip to table of contents</a>
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+          </li>
+        <li>
+          <a href="#common-front-matter-fields">Common Front Matter Fields</a>
+          </li>
+        <li>
+          <a href="#more-uncommon-front-matter-fields">More Uncommon Front Matter Fields</a>
+          </li>
+        <li>
+          <a href="#visibility-in-search-sitemap-and-feed">Visibility in Search, Sitemap and Feed</a>
+          </li>
+        <li>
+          <a href="#all-zola-supported-front-matter-fields">All Zola-Supported Front Matter Fields</a>
+          </li>
+        </ul>
+    </li>
+    <li><a href="#main-nav">Skip to navigation</a></li>
+  </ul>
+</nav>
+<header>
+  <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105" title="mono&#x2F;plain; a11y=true">
+    <h1>mono&#x2F;plain; a11y=true</h1>
+    <p>An accessible, monospace plain Zola Theme</p>
+  </a>
+</header>
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<div>
+      <main id="main">
+         <div class="h-entry">
+  <header>
+  
+
+
+  <h1 class="p-name">
+    Formatter
+    
+  </h1>
+
+  <p>
+    Created:
+    <date class="dt-published">2026-07-31</date>
+  </p>
+
+  <p class="sr-only">
+    <a href="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;formatter&#x2F;" class="u-url">Post Permalink</a>
+  </p>
+  <div 
+    aria-label="Post Authors">
+    <span>Author:</span>
+    
+<div
+  class="h-card p-author"
+>
+  <div><div class="p-name">Simon Gattner</div>
+  </div>
+</div> 
+    
+  </div>
+
+  <nav aria-labelledby="toc">
+  <details aria-labelledby="toc" open="true">
+    <summary id="toc">Table of contents</summary>
+    <ol aria-labelledby="toc">
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/#introduction">Introduction</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/#common-front-matter-fields">Common Front Matter Fields</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/#more-uncommon-front-matter-fields">More Uncommon Front Matter Fields</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/#visibility-in-search-sitemap-and-feed">Visibility in Search, Sitemap and Feed</a>
+        
+      </li>
+      
+      <li>
+        <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/#all-zola-supported-front-matter-fields">All Zola-Supported Front Matter Fields</a>
+        
+      </li>
+      
+    </ol>
+  </details>
+</nav>
+
+
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Formatter","description": "Front matter fields: common usage in theme and blog, plus all Zola options","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;With Front Matter, Zola allows you to define metadata for your content pages. This metadata can be used to control how the page is rendered, how it appears in search results, and how it is included in sitemaps and feeds.&lt;&#x2F;p&gt;
+&lt;p&gt;Next to commonly used fields like &lt;code&gt;title&lt;&#x2F;code&gt;, &lt;code&gt;description&lt;&#x2F;code&gt;, &lt;code&gt;date&lt;&#x2F;code&gt;, and &lt;code&gt;authors&lt;&#x2F;code&gt;, the Theme Monoplain also supports additional fields for images, hero images, and feedback email configuration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;common-front-matter-fields&quot;&gt;Common Front Matter Fields&lt;&#x2F;h2&gt;
+&lt;p&gt;For a standard post, the following front matter fields are commonly used:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF5555;font-style: italic;text-decoration: underline;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Page Title&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;description&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Page description for meta tags and RSS&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;date&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FFB86C;&quot;&gt; 2026-01-01&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;authors&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Author Name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;taxonomies&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;tag1&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;tag2&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;tag3&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;images&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;image1.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;image2.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;hero.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_alt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Description of hero image&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;hero_copy&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;Copyright notice&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF5555;font-style: italic;text-decoration: underline;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Field&lt;&#x2F;th&gt;&lt;th&gt;Type&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;title&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Page title, used in headings and meta tags&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;description&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Page description for meta tags and RSS&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;date&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;date&lt;&#x2F;td&gt;&lt;td&gt;Publication date (YYYY-MM-DD)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;authors&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;array of strings&lt;&#x2F;td&gt;&lt;td&gt;List of authors&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;tags&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;array of strings&lt;&#x2F;td&gt;&lt;td&gt;Tags for the page (most commonly used taxonomy)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;images&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;array of strings&lt;&#x2F;td&gt;&lt;td&gt;List of images for the page that are also displayed in the gallery&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;hero_img&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Path to hero image for post header&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;hero_alt&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Alt text for hero image&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;hero_copy&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Copyright&#x2F;attribution text for hero image&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;more-uncommon-front-matter-fields&quot;&gt;More Uncommon Front Matter Fields&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF5555;font-style: italic;text-decoration: underline;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Show the update date next to the creation date in the post header and feed&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;updated&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FFB86C;&quot;&gt; 2026-07-31&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Draft and rendering&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;#  if true, page won&amp;#39;t be rendered in production builds&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;#   but still available in dev server or preview deployments&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;draft&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Open Graph and preview&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;preview_img&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;preview.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;preview_image&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;preview.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Language&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;de&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Feedback configuration overwrite of config.toml&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_enabled&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_address&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; local_part&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; domain_name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;example&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt; tld&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;com&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_address_wildcard&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;feedback_email_address_wildcard_postfix&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;.monoplain&lt;&#x2F;span&gt;&lt;span style=&quot;color: #E9F284;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF5555;font-style: italic;text-decoration: underline;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Field&lt;&#x2F;th&gt;&lt;th&gt;Type&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;updated&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;date&lt;&#x2F;td&gt;&lt;td&gt;Last updated date (YYYY-MM-DD)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;draft&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;boolean&lt;&#x2F;td&gt;&lt;td&gt;If true, page won&#x27;t be rendered&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;preview_img&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Path to preview image for Open Graph&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;preview_image&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Alternative spelling for preview image&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;lang&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Language code for content (adds lang attribute)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;feedback_email_enabled&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;boolean&lt;&#x2F;td&gt;&lt;td&gt;Enables feedback email link&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;feedback_email_address&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;table&lt;&#x2F;td&gt;&lt;td&gt;Configuration for feedback email address&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;feedback_email_address_wildcard&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;boolean&lt;&#x2F;td&gt;&lt;td&gt;Enables wildcard email addresses&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;feedback_email_address_wildcard_postfix&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;string&lt;&#x2F;td&gt;&lt;td&gt;Postfix for wildcard email addresses&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;visibility-in-search-sitemap-and-feed&quot;&gt;Visibility in Search, Sitemap and Feed&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF5555;font-style: italic;text-decoration: underline;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;in_search_index&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;ignore_sitemap&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #8BE9FD;&quot;&gt;ignore_feed&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF5555;font-style: italic;text-decoration: underline;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Field&lt;&#x2F;th&gt;&lt;th&gt;Type&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;in_search_index&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;boolean&lt;&#x2F;td&gt;&lt;td&gt;If false, excludes page from search index&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ignore_sitemap&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;boolean&lt;&#x2F;td&gt;&lt;td&gt;If true, excludes page from sitemap&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;ignore_feed&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;boolean&lt;&#x2F;td&gt;&lt;td&gt;If true, excludes page from RSS feed&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;all-zola-supported-front-matter-fields&quot;&gt;All Zola-Supported Front Matter Fields&lt;&#x2F;h2&gt;
+&lt;p&gt;Complete reference of all front matter fields supported by Zola as documented at &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+","datePublished": "2026-07-31","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;formatter&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;pr-preview&#x2F;pr-105&#x2F;posts&#x2F;formatter&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Front Matter","Metadata","Configuration"],
+  }
+</script> 
+</header><div class="e-content">
+    <h2 id="introduction">Introduction</h2>
+<p>With Front Matter, Zola allows you to define metadata for your content pages. This metadata can be used to control how the page is rendered, how it appears in search results, and how it is included in sitemaps and feeds.</p>
+<p>Next to commonly used fields like <code>title</code>, <code>description</code>, <code>date</code>, and <code>authors</code>, the Theme Monoplain also supports additional fields for images, hero images, and feedback email configuration.</p>
+<h2 id="common-front-matter-fields">Common Front Matter Fields</h2>
+<p>For a standard post, the following front matter fields are commonly used:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF5555;font-style: italic;text-decoration: underline;">+++</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">title</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Page Title</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">description</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Page description for meta tags and RSS</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">date</span><span style="color: #FF79C6;"> =</span><span style="color: #FFB86C;"> 2026-01-01</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">authors</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">Author Name</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">taxonomies</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">tags</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">tag1</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">tag2</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">tag3</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">images</span><span style="color: #FF79C6;"> =</span><span> [</span><span style="color: #E9F284;">&quot;</span><span style="color: #F1FA8C;">image1.jpg</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">image2.jpg</span><span style="color: #E9F284;">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">hero_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">hero.jpg</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">hero_alt</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Description of hero image</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">hero_copy</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">Copyright notice</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;font-style: italic;text-decoration: underline;">+++</span></span></code></pre><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>title</code></td><td>string</td><td>Page title, used in headings and meta tags</td></tr>
+<tr><td><code>description</code></td><td>string</td><td>Page description for meta tags and RSS</td></tr>
+<tr><td><code>date</code></td><td>date</td><td>Publication date (YYYY-MM-DD)</td></tr>
+<tr><td><code>authors</code></td><td>array of strings</td><td>List of authors</td></tr>
+<tr><td><code>tags</code></td><td>array of strings</td><td>Tags for the page (most commonly used taxonomy)</td></tr>
+<tr><td><code>images</code></td><td>array of strings</td><td>List of images for the page that are also displayed in the gallery</td></tr>
+<tr><td><code>hero_img</code></td><td>string</td><td>Path to hero image for post header</td></tr>
+<tr><td><code>hero_alt</code></td><td>string</td><td>Alt text for hero image</td></tr>
+<tr><td><code>hero_copy</code></td><td>string</td><td>Copyright/attribution text for hero image</td></tr>
+</tbody></table>
+<h2 id="more-uncommon-front-matter-fields">More Uncommon Front Matter Fields</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF5555;font-style: italic;text-decoration: underline;">+++</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Show the update date next to the creation date in the post header and feed</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">updated</span><span style="color: #FF79C6;"> =</span><span style="color: #FFB86C;"> 2026-07-31</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Draft and rendering</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">#  if true, page won&#39;t be rendered in production builds</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">#   but still available in dev server or preview deployments</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">draft</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Open Graph and preview</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">preview_img</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">preview.jpg</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">preview_image</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">preview.jpg</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Language</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">lang</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">de</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Feedback configuration overwrite of config.toml</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_enabled</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_address</span><span style="color: #FF79C6;"> =</span><span> {</span><span style="color: #8BE9FD;"> local_part</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">name</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #8BE9FD;"> domain_name</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">example</span><span style="color: #E9F284;">&quot;</span><span>,</span><span style="color: #8BE9FD;"> tld</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">com</span><span style="color: #E9F284;">&quot;</span><span> }</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_address_wildcard</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">feedback_email_address_wildcard_postfix</span><span style="color: #FF79C6;"> =</span><span style="color: #E9F284;"> &quot;</span><span style="color: #F1FA8C;">.monoplain</span><span style="color: #E9F284;">&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;font-style: italic;text-decoration: underline;">+++</span></span></code></pre><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>updated</code></td><td>date</td><td>Last updated date (YYYY-MM-DD)</td></tr>
+<tr><td><code>draft</code></td><td>boolean</td><td>If true, page won't be rendered</td></tr>
+<tr><td><code>preview_img</code></td><td>string</td><td>Path to preview image for Open Graph</td></tr>
+<tr><td><code>preview_image</code></td><td>string</td><td>Alternative spelling for preview image</td></tr>
+<tr><td><code>lang</code></td><td>string</td><td>Language code for content (adds lang attribute)</td></tr>
+<tr><td><code>feedback_email_enabled</code></td><td>boolean</td><td>Enables feedback email link</td></tr>
+<tr><td><code>feedback_email_address</code></td><td>table</td><td>Configuration for feedback email address</td></tr>
+<tr><td><code>feedback_email_address_wildcard</code></td><td>boolean</td><td>Enables wildcard email addresses</td></tr>
+<tr><td><code>feedback_email_address_wildcard_postfix</code></td><td>string</td><td>Postfix for wildcard email addresses</td></tr>
+</tbody></table>
+<h2 id="visibility-in-search-sitemap-and-feed">Visibility in Search, Sitemap and Feed</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="toml"><span class="giallo-l"><span style="color: #FF5555;font-style: italic;text-decoration: underline;">+++</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">in_search_index</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> false</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF79C6;">[</span><span style="color: #8BE9FD;">extra</span><span style="color: #FF79C6;">]</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">ignore_sitemap</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #8BE9FD;">ignore_feed</span><span style="color: #FF79C6;"> =</span><span style="color: #BD93F9;"> true</span></span>
+<span class="giallo-l"><span style="color: #FF5555;font-style: italic;text-decoration: underline;">+++</span></span></code></pre><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>in_search_index</code></td><td>boolean</td><td>If false, excludes page from search index</td></tr>
+<tr><td><code>ignore_sitemap</code></td><td>boolean</td><td>If true, excludes page from sitemap</td></tr>
+<tr><td><code>ignore_feed</code></td><td>boolean</td><td>If true, excludes page from RSS feed</td></tr>
+</tbody></table>
+<h2 id="all-zola-supported-front-matter-fields">All Zola-Supported Front Matter Fields</h2>
+<p>Complete reference of all front matter fields supported by Zola as documented at <a rel="external" href="https://www.getzola.org/documentation/content/page/">https://www.getzola.org/documentation/content/page/</a></p>
+ </div>   <section aria-labelledby="latest-feedback">
+  <h1 id="latest-feedback">Feedback</h1>
+  <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
+  <p>
+    
+<a 
+href="mailto:invalid\(local)\part@example\.org"
+ title="This email address has been obscured for security. Please click the link to reveal the actual address."  
+data-obfuscated-email="&#x3C;formatter.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+>
+  
+&#x3C;&#8203;&#8203;&#8203;&#8203;formatter.monoplain&#8203;&#8203;&#8203;&#x40;0x38&#8203;&#x2E;&#8203;&#8203;de&#8203;&#8203;&#8203;&#x3E;
+
+</a>
+
+  </p>
+</section>
+<section aria-labelledby="tags">
+  <h1 id="tags">Tags</h1>
+  <ul aria-labelledby="tags">
+    
+    <li aria-label="Zola"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/zola"
+        >Zola</a
+      ></li
+    >
+    
+    <li aria-label="Theme"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/theme"
+        >Theme</a
+      ></li
+    >
+    
+    <li aria-label="Front Matter"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/front-matter"
+        >Front Matter</a
+      ></li
+    >
+    
+    <li aria-label="Metadata"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/metadata"
+        >Metadata</a
+      ></li
+    >
+    
+    <li aria-label="Configuration"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/configuration"
+        >Configuration</a
+      ></li
+    >
+    
+  </ul>
+</section>
+
+
+</div></main>
+       <aside>
+  <section aria-labelledby="latest-images">
+  <h1 id="latest-images">Latest Images</h1>
+  <ul aria-labelledby="latest-images">
+          <li
+      aria-labelledby="post-image-2025-05-03-opengraph-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/opengraph/"
+        title="Open Graph Preview - 2025-05-03"
+      >
+        <figure>
+          <div class="thumbnail">
+            <img width="960" height="720" alt="Open Graph Preview - 2025-05-03" title="Open Graph Preview - 2025-05-03"
+  src="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp" srcset="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/processed_images/opengraph-preview-image.56c88dd49ee185a6.webp 128w , https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/processed_images/opengraph-preview-image.cf8aa7476a82dcb4.webp 256w" class=""
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2025-05-03-opengraph-1"
+          >
+            Open Graph Preview
+            <date>2025-05-03</date>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+          <li
+      aria-labelledby="post-image-2024-06-08-shortcodes-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/shortcodes/"
+        title="Shortcodes - 2024-06-08"
+      >
+        <figure>
+          <div class="thumbnail">
+            <img width="2488" height="1866" alt="Shortcodes - 2024-06-08" title="Shortcodes - 2024-06-08"
+  src="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/processed_images/example-image.8f766e8c2df93dcf.webp" srcset="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/processed_images/example-image.babf706ac8aebed6.webp 128w , https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/processed_images/example-image.067baa4a7c9016f4.webp 256w" class=""
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2024-06-08-shortcodes-1"
+          >
+            Shortcodes
+            <date>2024-06-08</date>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+      </ul>
+</section>
+ 
+<section aria-labelledby="latest-posts">
+  <h1 id="latest-posts">Latest Posts</h1>
+  <ul aria-labelledby="latest-posts">
+    <li aria-labelledby="post-2026-07-31-formatter-1">
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/" title="Formatter">
+        <article>
+          <header id="post-2026-07-31-formatter-1">
+            <h1>Formatter</h1>
+            
+            <p>
+              <date> 2026-07-31 </date>
+            </p>
+          </header>
+          <p>Front matter fields: common usage in theme and blog, plus all Zola options</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2026-07-12-development-2">
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/development/" title="Development">
+        <article>
+          <header id="post-2026-07-12-development-2">
+            <h1>Development</h1>
+            
+            <p>
+              <date> 2026-07-12 </date>
+            </p>
+          </header>
+          <p>Set up a local development environment for Zola theme work</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2026-07-11-images-3">
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/images/" title="Images">
+        <article>
+          <header id="post-2026-07-11-images-3">
+            <h1>Images</h1>
+            
+            <p>
+              <date> 2026-07-11 </date>
+            </p>
+          </header>
+          <p>How images work in mono&#x2F;plain and how to use them in posts and templates</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2025-06-17-feedback-4">
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/feedback/" title="Feedback">
+        <article>
+          <header id="post-2025-06-17-feedback-4">
+            <h1>Feedback</h1>
+            
+            <p>
+              <date> 2025-06-17 </date>
+            </p>
+          </header>
+          <p>Feedback Email for mono&#x2F;plain theme</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2025-05-03-opengraph-5">
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/opengraph/" title="Open Graph Preview">
+        <article>
+          <header id="post-2025-05-03-opengraph-5">
+            <h1>Open Graph Preview</h1>
+            
+            <p>
+              <date> 2025-05-03 </date>
+            </p>
+          </header>
+          <p>Open Graph Preview by example</p>
+          
+        </article>
+      </a>
+    </li>
+    <li aria-labelledby="post-2024-06-15-ci-6">
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/ci/" title="Continuous Integration">
+        <article>
+          <header id="post-2024-06-15-ci-6">
+            <h1>Continuous Integration</h1>
+            
+            <p>
+              <date> 2024-06-15 </date>
+            </p>
+          </header>
+          <p>Continuous Integration by Example</p>
+          
+        </article>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+</aside>
+
+    </div>
+    <nav id="footer-nav" aria-label="Footer Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<footer>
+  <h2 id="footer-links" class="sr-only">Links</h2>
+  <ul aria-labelledby="footer-links">
+     <li>
+      <a href="https://github.com/exiguus"
+        title="Github page" rel="me">
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-github" />
+</svg>
+ </span>
+      </a>
+    </li>
+     <li>
+      <a href="https:&#x2F;&#x2F;toot.community&#x2F;@exiguus" title="Mastodon Page" rel="me">
+        <span class="sr-only">Mastodon</span>
+        <span aria-hidden="true">
+           
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-mastodon" />
+</svg>
+
+        </span>
+      </a>
+    </li>
+      <li>
+      <a 
+href="mailto:invalid\(local)\part@example\.org"
+ 
+data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+
+        title="Write me a message" rel="me">
+        <span class="sr-only">E-Mail</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-mail-opened" />
+</svg>
+ </span>
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/atom.xml"
+        title="Atom Feed" rel="alternate">
+        <span class="sr-only">Atom</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-rss" />
+</svg>
+ </span>
+      </a>
+    </li>
+  </ul>
+  <h2 id="footer-info" class="sr-only">Information</h2>
+  <p aria-labelledby="footer-info">
+    © mono&#x2F;plain; a11y=true 2026  <br />Powered by
+    <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
+    <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
+    <i class="sr-only">Last update:</i>
+    <small>2026-07-31 21:19:44 Europe&#x2F;Berlin</small>
+  </p> <figure>
+  
+<div
+  class="h-card"
+>
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+</figure>
+</footer><script src="https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/js/main.js" integrity="sha384-RrSRJubaifgb0IuRFNuRVHkxgMsEfOpulb7ts8mUAKAOjONe7GBpasRxecTL+OTk" defer="defer"></script>
+  </body>
+
+</html>

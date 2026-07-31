@@ -57,6 +57,10 @@
         <lastmod>2026-07-12</lastmod>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/formatter/</loc>
+        <lastmod>2026-07-31</lastmod>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/posts/icons/</loc>
         <lastmod>2026-07-11</lastmod>
     </url>
@@ -81,9 +85,6 @@
         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
-        <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/search/</loc>
-    </url>
-    <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/</loc>
     </url>
     <url>
@@ -94,6 +95,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/ci/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/configuration/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/continuous-integration/</loc>
@@ -126,6 +130,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/feedback/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/front-matter/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/gallery/</loc>
     </url>
     <url>
@@ -148,6 +155,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/markdown/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/metadata/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/pr-preview/pr-105/tags/open-graph/</loc>
