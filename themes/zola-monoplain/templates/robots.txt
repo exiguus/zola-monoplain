@@ -1,6 +1,14 @@
 User-agent: *
-Disallow:
-Disallow: /pr-*
-Disallow: */pr-*
-Allow: /
+{%- set disallows = config.extra.robots_disallows %}
+{%- if disallows %}
+{%- for disallow in disallows %}
+Disallow: {{ disallow }}
+{%- endfor %}
+{%- endif %}
+{%- set allows = config.extra.robots_allows %}
+{%- if allows %}
+{%- for allow in allows %}
+Allow: {{ allow }}
+{%- endfor %}
+{%- endif %}
 Sitemap: {{ get_url(path="sitemap.xml") }}

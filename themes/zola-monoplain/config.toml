@@ -205,3 +205,10 @@ hcard_urls = [
 # post
 post_author_visible = true
 post_update_visible = true
+#
+# robots.txt
+#
+# Disallow: /pr-*
+# Disallow: */pr-*
+robots_disallows = [" ", "/pr-*", "*/pr-*", "*/report/", "*/report/*"]
+robots_allows = ["/"]
