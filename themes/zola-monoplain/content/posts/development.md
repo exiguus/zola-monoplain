@@ -12,7 +12,7 @@ tags= ["Zola", "Theme", "Development", "Templates", "Debugging", "Accessibility"
 This post shows a practical workflow for developing Zola themes locally:
 
 - check out the repository
-- install Zola, Node.js and pnpm
+- install Zola, rumdl, Node.js and pnpm
 - run development mode
 - understand Tera templates and editor support
 - debug templates and components
@@ -27,19 +27,20 @@ For this repository, the JavaScript toolchain expects:
 
 - Cargo `>=1.95.0`
 - Zola `>=0.22.1`
+- rumdl `>=0.2.48`
 - Node.js `>=22.0.0 <25.0.0`
 - pnpm `>=10.0.0 <12.0.0`
 
 Repository scripts are defined in the workspace root `package.json`, while the theme package also has its own local `package.json` under `themes/zola-monoplain/`.
 
-## 1. Check out the repository
+## 1. Check Out the Repository
 
 ```bash
 git clone https://github.com/exiguus/zola-monoplain.git
 cd zola-monoplain
 ```
 
-## 2. Install Cargo, Zola, Node.js and pnpm
+## 2. Install Cargo, Zola, Node.js and Pnpm
 
 Preferred: install Zola with Cargo and pin the same version used by this repository's GitHub Actions.
 
@@ -54,7 +55,7 @@ zola --version
 
 You can verify the CI pin in `.github/workflows/prod.yml` and `.github/workflows/preview.yml`.
 
-### Package manager alternatives
+### Package Manager Alternatives
 
 If you do not use Rust/Cargo locally, install Zola with your package manager only if it provides a recent enough version (>=0.22.1).
 
@@ -79,7 +80,15 @@ Use the official installation guide if your platform/package manager differs:
 
 <https://www.getzola.org/documentation/getting-started/installation/>
 
-### Node, pnpm
+### Rumdl
+
+Rumdl is a Rust-based tool to lint and format Markdown files. It is used in this repository to check and format Markdown content.
+
+```bash
+cargo install rumdl
+```
+
+### Node, Pnpm
 
 If Node.js is not installed yet, install Node.js 22 or newer and then enable pnpm via Corepack:
 
@@ -96,11 +105,11 @@ Install dependencies from the repository root:
 pnpm install
 ```
 
-## 3. Run development mode
+## 3. Run Development Mode
 
 You can run development in two ways.
 
-### Option A: Workspace root (Turbo)
+### Option A: Workspace Root (Turbo)
 
 From the repository root:
 
@@ -110,7 +119,7 @@ pnpm dev
 
 This runs the workspace `dev` pipeline.
 
-### Option B: Theme package directly
+### Option B: Theme Package Directly
 
 From the theme directory:
 
@@ -121,7 +130,7 @@ pnpm dev
 
 This runs `zola serve` (after checking that Zola is installed).
 
-## 4. Understand Tera templates and editor support
+## 4. Understand Tera Templates and Editor Support
 
 Zola templates use the Tera template engine.
 
@@ -135,7 +144,7 @@ VS Code extension:
 
 <https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2>
 
-## 5. Understand the theme structure
+## 5. Understand the Theme Structure
 
 The theme keeps content, templates, styles, and client-side scripts in separate folders so each part stays easy to find:
 
@@ -154,9 +163,9 @@ The theme keeps content, templates, styles, and client-side scripts in separate 
 
 Keeping these areas separated makes template changes, styling changes, and script changes easier to debug independently.
 
-## 6. Debug templates and components
+## 6. Debug Templates and Components
 
-### Enable debug mode in config
+### Enable Debug Mode in Config
 
 In `config.toml` set:
 
@@ -165,7 +174,7 @@ In `config.toml` set:
 debug = true
 ```
 
-### Print page data in templates
+### Print Page Data in Templates
 
 When debugging a component, render the current page context in a template (for example in `templates/post.html`):
 
@@ -187,7 +196,7 @@ The escaped braces are for Markdown examples. In your actual template file, use 
 
 This is useful to inspect available keys while developing components.
 
-### Scope component debugging
+### Scope Component Debugging
 
 For reusable components/macros, print only the value you need first, then expand:
 
@@ -211,7 +220,7 @@ or `__tera_context` to inspect the full template context.
 
 Keeping debug output focused makes it easier to identify missing keys and wrong assumptions.
 
-## 7. Run local accessibility checks
+## 7. Run Local Accessibility Checks
 
 To test accessibility against a local running dev server:
 
@@ -229,7 +238,7 @@ pnpm test:pa11y
 
 This command runs pa11y checks against the local server and writes HTML reports to `pa11y-report/`.
 
-## 8. Run test and check
+## 8. Run Test and Check
 
 From the repository root:
 
@@ -258,7 +267,7 @@ Useful script references:
 
 Features and usage are documented in the repository's `README.md` and via post content in `content/posts/` like this one. If you add a new feature, update the documentation accordingly.
 
-## 10. Commit and push changes
+## 10. Commit and Push Changes
 
 From the repository root:
 
@@ -280,7 +289,7 @@ https://exiguus.github.io/zola-monoplain/pr-preview/pr-<PR_NUMBER>
 
 If a post is marked as a draft, it will be included in the preview deployment, but not in the production deployment.
 
-## 11. Release a new version
+## 11. Release a New Version
 
 Choose the release type and run one of:
 

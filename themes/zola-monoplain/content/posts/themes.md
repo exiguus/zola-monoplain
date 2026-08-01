@@ -35,7 +35,7 @@ cp target/release/zola ~/.cargo/bin/zola
 
 <https://www.getzola.org/documentation/getting-started/installation/>
 
-## Create a new site
+## Create a New Site
 
 To create a new Zola site, use the Zola CLI:
 
@@ -198,7 +198,7 @@ Shortcodes provided by the theme:
 - `youtube`
 - `spotify`
 
-## Multilingual sites
+## Multilingual Sites
 
 Zola supports multilingual sites out of the box. You can create content in multiple languages and Zola will generate separate pages for each language.
 

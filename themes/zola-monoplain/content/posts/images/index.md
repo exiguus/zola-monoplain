@@ -38,7 +38,7 @@ content/
 
 That layout works with the theme image shortcodes and gallery helpers without hardcoded global paths.
 
-## Images In Post Front Matter
+## Images in Post Front Matter
 
 The theme uses these optional front matter fields:
 
@@ -58,7 +58,7 @@ images = ["photo-01.jpg", "photo-02.jpg"]
 - If `extra.preview_img` is missing, Open Graph falls back to `extra.hero_img`.
 - `extra.images`: used by gallery-related templates to render thumbnails. It is also used by the latest images component, so the same image list can drive both post content and gallery views.
 
-## Images In Markdown Posts
+## Images in Markdown Posts
 
 There are two common ways:
 
@@ -145,7 +145,7 @@ The implementation lives in `templates/macros/images.html` and is reused across 
 
 `templates/components/post_header.html` renders `extra.hero_img` as a responsive image inside a figure.
 
-### Gallery And Latest Images
+### Gallery and Latest Images
 
 `templates/pages/gallery.html`, `templates/components/latest_images.html`, and `templates/components/post_latest_images.html` iterate over `post.extra.images` and render each with `responsive_thumbnail(...)`.
 

@@ -29,7 +29,6 @@
     "importDeclaration.sortNamedImports": "maintain"
   },
   "json": {},
-  "markdown": {},
   "toml": {},
   "yaml": {
     "quoteStyle": "preferDouble",
@@ -39,6 +38,7 @@
   },
   "dockerfile": {},
   "excludes": [
+    ".rumdl.toml",
     "**/node_modules",
     "**/yarn-error.log",
     "**/yarn.lock",
@@ -77,7 +77,6 @@
     "https://plugins.dprint.dev/prettier-0.40.0.json@68c668863ec834d4be0f6f5ccaab415df75336a992aceb7eeeb14fdf096a9e9c",
     "https://plugins.dprint.dev/typescript-0.91.0.wasm",
     "https://plugins.dprint.dev/json-0.19.3.wasm",
-    "https://plugins.dprint.dev/markdown-0.17.1.wasm",
     "https://plugins.dprint.dev/toml-0.6.2.wasm",
     "https://plugins.dprint.dev/dockerfile-0.3.2.wasm",
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.0.wasm"

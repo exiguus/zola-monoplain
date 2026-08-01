@@ -1,0 +1,71 @@
+# Rumdl Configuration File
+
+# Inherit Settings from Another Config File (Relative to This File's Directory)
+# extends = "../Base.rumdl.toml"
+
+# Global Configuration Options
+[global]
+
+# List of Rules to Disable (Uncomment and Modify as Needed)
+# disable = ["MD033"] # Inline HTML
+disable = ["MD033"]
+
+# List of Rules to Enable Exclusively (Replaces Defaults; Only These Rules Will Run)
+# enable = ["MD001", "MD003", "MD004"]
+
+# Additional Rules to Enable on Top of Defaults (Additive, Does Not Replace)
+# Use This to Activate Opt-in Rules Like MD060, MD063, MD072, MD073, MD074
+extend-enable = ["MD060", "MD063", "MD073", "MD074"]
+
+# Additional Rules to Disable on Top of the Disable List (Additive)
+# extend-disable = ["MD041"]
+
+# List of File/directory Patterns to Include for Linting (If Provided, Only These Will Be Linted)
+include = [
+  "themes/zola-monoplain/content/**/**/*.md",
+  "themes/zola-monoplain/content/**/*.md",
+  "themes/zola-monoplain/content/*.md",
+  "README.md",
+]
+
+# List of File/directory Patterns to Exclude from Linting
+exclude = [
+  # Common Directories to Exclude
+  ".rumdl.toml",
+  ".git",
+  ".github",
+  "node_modules",
+  "vendor",
+  "dist",
+  "build",
+  # Specific Files or Patterns
+  "CHANGELOG.md",
+  "CHANGELOG_*.md",
+  "LICENSE.md",
+]
+
+# Respect .Gitignore Files When Scanning Directories (Default: True)
+respect-gitignore = true
+
+# Markdown Flavor/dialect (Uncomment to Enable)
+# options: standard (default), gfm, commonmark, mkdocs, mdx, pandoc, quarto, obsidian, kramdown, azure_devops, myst
+flavor = "commonmark"
+
+# Rule-Specific Configurations (Uncomment and Modify as Needed)
+
+# [MD003]
+# style = "atx" # heading style (atx, atx_closed, setext)
+[MD004]
+style = "dash" # unordered list style (asterisk, plus, dash, consistent)
+
+# [MD007]
+# indent = 4 # unordered list indentation
+[MD013]
+line-length = 256 # line length
+code-blocks = false # exclude code blocks from line length check
+tables = false # exclude tables from line length check
+headings = true # include headings in line length check
+
+# [MD044]
+# names = ["Rumdl", "Markdown", "GitHub"] # proper names that should be capitalized correctly
+# code-blocks = false # check code blocks for proper names (default: false, skips code blocks)

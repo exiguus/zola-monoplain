@@ -21,7 +21,7 @@ Shortcodes let you embed dynamic content in Markdown files. In this post, you wi
 
 The `image` shortcode can be used to embed images in your Markdown files. This can be useful for adding visual elements to your posts. Here is an example of how to use the `image` shortcode:
 
-{{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") }}
+{{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") }} <!-- rumdl-disable-line line-length -->
 
 ```md
 {{/* image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.") */}}
@@ -29,7 +29,8 @@ The `image` shortcode can be used to embed images in your Markdown files. This c
 
 The `src` parameter specifies the image filename (resolved relative to the page context), and the `alt` parameter specifies the alt text for the image.
 
-{{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) }}
+{{ image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower.
+The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) }}
 
 ```md
 {{/* image(src="example-image.jpg", alt="Example image show a cityscape at dusk with modern buildings, a river, and a prominent tower. The sky is painted with hues of pink and blue, reflecting on the water. The scene is calm and picturesque, capturing the essence of a serene urban evening.", width=800, height=450) */}}
@@ -149,7 +150,7 @@ Example:
 
 The rendered output keeps the phone number obfuscated in source and reveals it through the existing JavaScript behavior.
 
-### h-card
+### H-Card
 
 The `h-card` shortcode renders a [microformat2 h-card](https://microformats.org/wiki/h-card) for representing people and organizations. All parameters are optional, but at least one must be provided.
 
@@ -204,7 +205,7 @@ Examples:
   country_name="U.S.A",
   bday="1951-05-26",
   category="physicist",
-  note="First American woman in space. The image is from <https://en.wikipedia.org/wiki/File:Sally_Ride_(1984).jpg>: This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that: NASA material is not protected by copyright unless noted."
+  note="First American woman in space. The image is from <https://en.wikipedia.org/wiki/File:Sally_Ride_(1984).jpg>: This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that: NASA material is not protected by copyright unless noted." <!-- rumdl-disable-line line-length -->
 ) }}
 
 ```md
@@ -248,6 +249,19 @@ The shortcode supports all h-card microformat properties including name componen
 - `emails`: Array of arrays, each with `[local_part, domain_name, tld, title]` (title is optional)
 - `tels`: Array of arrays, each with `[number, title]` (title is optional)
 
-## Conclusion
+### H-Entry
 
-Shortcodes are a powerful Zola feature for embedding richer content in Markdown. They are easy to use and help keep posts expressive without leaving the Markdown workflow.
+The theme automatically renders [microformat2 h-entry](https://microformats.org/wiki/h-entry) markup for posts using the `hentry` macro. While there is no dedicated shortcode, h-entry is used internally in the post header template with page metadata (title, authors, published date, etc.).
+
+For custom h-entry usage, the macro supports these parameters:
+
+- `name`: Post title
+- `summary`: Post summary
+- `content`: Post content HTML
+- `published`: Publication datetime
+- `updated`: Update datetime
+- `url`: Permalink URL
+- `uid`: Unique identifier
+- `authors`: Array of author names (strings)
+- `categories`: Array of category names (strings)
+- `syndication`: Array of syndication URLs (strings)

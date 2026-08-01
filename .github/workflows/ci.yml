@@ -21,9 +21,28 @@ jobs:
       - name: Common Setup
         uses: ./.github/actions/common-setup
 
-      - name: Install dependencies
+      - name: Install Node dependencies
         # pnpm store verify workaround 'NODE_OPTIONS=--max-old-space-size=4096'
         run: NODE_OPTIONS=--max-old-space-size=4096 CI=1 PUPPETEER_SKIP_DOWNLOAD=1 pnpm ci
+
+      - name: Setup Rust
+        uses: moonrepo/setup-rust@v1.3.0
+
+      - name: Cache Rust toolchain, and rumdl
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+          key: ${{ runner.os }}-cargo-rumdl-${{ hashFiles('.github/workflows/ci.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-rumdl-
+            ${{ runner.os }}-cargo-
+
+      - name: Install rumdl
+        run: command -v rumdl >/dev/null 2>&1 || { command -v cargo >/dev/null 2>&1 && { echo "Installing rumdl..."; cargo install --force rumdl; } || { echo "Install cargo to be able to install rumdl"; exit 1; } }
 
       - name: format
         run: pnpm format:check
