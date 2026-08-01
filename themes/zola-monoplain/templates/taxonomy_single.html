@@ -10,28 +10,47 @@
     {% for post in posts %}
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
-        <article>
+        <article class="h-entry">
           <header id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
-            <h1>{{ post.title }}</h1>
+            <h1 class="p-name">{{ post.title }}</h1>
             {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%
             endif %}
             <p>
-              <date> {{ post.date | date(format='%Y-%m-%d') }} </date>
+              <date class="dt-published">
+                {{ post.date | date(format='%Y-%m-%d') }}
+              </date>
             </p>
+            {%- if post.updated -%}
+            <p>
+              <date class="sr-only dt-updated">
+                {{ post.updated | date(format='%Y-%m-%d') }}
+              </date>
+            </p>
+            {%- endif -%}
           </header>
           {%- if post.description %}
-          <p>{{ post.description }}</p>
+          <p class="p-summary">{{ post.description }}</p>
+          <p class="sr-only p-author h-card">
+            {%- for author in post.authors -%}
+            <span class="p-name">{{ author }}</span>
+            {%- if not loop.last -%}, {% endif -%} {%- endfor -%}
+          </p>
+          <p class="sr-only u-url u-uid">{{ post.permalink | safe }}</p>
           {%- endif %} {% if post.taxonomies is containing ("tags") %}
           <footer>
-            <ul aria-labelledby="tags">
+            <ul aria-labelledby="tags" class="p-category">
               {% for tag in post.taxonomies["tags"] %}
-              <li aria-label="{{tag}}">#{{ tag }}</li>
+              <li aria-label="{{tag}}" class="p-name">#{{ tag }}</li>
               {% endfor %}
             </ul>
           </footer>
           {% endif %} {{ hooks::posts_below_title(page=post) }}
         </article>
       </a>
+      {{ hentry::hentry_json( name=post.title, summary=post.description,
+      published=post.date, updated=post.updated, url=post.permalink,
+      uid=post.permalink, authors=post.authors | default(value=[]),
+      categories=post.taxonomies["tags"] | default(value=[]), ) }}
     </li>
     {% endfor %}
   </ul>
