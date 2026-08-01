@@ -14,13 +14,13 @@ get_section(path="posts/_index.md") %} {% if section.pages | length > 0 %}
             {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%
             endif %}
             <p>
-              <date class="dt-published">
+              <time class="dt-published" datetime="{{ post.date }}">
                 {{ post.date | date(format='%Y-%m-%d') }}
-              </date>
+              </time>
               {%- if post.updated -%}
-              <date class="sr-only dt-updated">
-                {{ post.updated | date(format='%Y-%m-%d') }}
-              </date>
+              <time class="sr-only dt-updated" datetime="{{ post.updated }}"
+                >{{ post.updated | date(format='%Y-%m-%d') }}</time
+              >
               {%- endif -%}
             </p>
             <p class="sr-only p-author h-card">

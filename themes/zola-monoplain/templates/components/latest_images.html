@@ -33,9 +33,13 @@ if has_images -%}
           >
             <p class="h-name">{{ post.title }}</p>
             <p>
-              <date class="dt-published">{{ post.date }}</date>
+              <time class="dt-published" datetime="{{ post.date }}"
+                >{{ post.date }}</time
+              >
               {%- if post.updated -%}
-              <date class="dt-updated">{{ post.updated }}</date>
+              <time class="dt-updated" datetime="{{ post.updated }}"
+                >{{ post.updated }}</time
+              >
               {%- endif -%}
             </p>
             <p class="p-author h-card">
