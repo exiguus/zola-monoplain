@@ -2,7 +2,7 @@
 @import "_variables.scss";
 
 figure {
-  .h-card {
+  .h-card:not(.sr-only) {
     position: relative;
     display: inline-block;
     min-width: calc(map.get($container, "small") - 3rem);

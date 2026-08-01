@@ -6,6 +6,7 @@ authors = ["Simon Gattner"]
 [taxonomies]
 tags= ["Zola", "Theme", "Images", "Markdown", "Shortcodes", "Templates"]
 [extra]
+images = ["hero.jpg"]
 hero_img = "hero.jpg"
 hero_alt = "Rosenthaler Straße as seen from Hackescher Markt. DIE HACKESCHEN HÖFE are located between Alexanderplatz and Friedrichstraße, not far from the Scheunenviertel in Berlin Mitte. These residential and commercial courtyards have been designated historic landmarks since 1972. In addition to residential and office spaces, retail stores offering artistic and culinary experiences round out the picture."
 hero_copy = "exiguus"

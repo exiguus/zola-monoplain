@@ -27,7 +27,7 @@ post in posts -%} {% if post.extra.images -%} {% set_global yearHasImage = true
             <p>
               <time class="dt-published" datetime="{{ post.date }}">{{ post.date }}</time>
               {%- if post.updated -%}
-              <time class="dt-updated" datetime="{{ post.updated }}">{{ post.updated }}</time>
+              <time class="sr-only dt-updated" datetime="{{ post.updated }}">{{ post.updated }}</time>
               {%- endif -%}
             </p>
             <p class="sr-only p-author h-card">
