@@ -6,21 +6,31 @@
     {% for post in posts %}
     <li aria-labelledby="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
       <a href="{{ post.permalink | safe }}" title="{{ post.title }}">
-        <article {% if post.extra.lang %}lang="{{ post.extra.lang }}" {% endif %}>
+        <article class="h-entry" {% if post.extra.lang %}lang="{{ post.extra.lang }}" {% endif %}>
           <header id="post-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
-            <h1>{{ post.title }}</h1>
+            <h1 class="p-name">{{ post.title }}</h1>
             {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%
             endif %}
             <p class="sr-only">
-              <date> {{ post.date | date(format='%Y-%m-%d') }} </date>
+              <date class="dt-published"> {{ post.date | date(format='%Y-%m-%d') }} </date>
+              {%- if post.updated -%}
+              <date class="dt-updated"> {{ post.updated | date(format='%Y-%m-%d') }} </date>
+              {%- endif -%}
             </p>
+            <p class="sr-only p-author h-card">
+              {%- for author in post.authors -%}
+              <span class="p-name">{{ author }}</span>
+              {%- if not loop.last -%}, {% endif -%}
+              {%- endfor -%}
+            </p>
+            <p class="sr-only u-url u-uid">{{ post.permalink | safe }}</p>
           </header>
-          <p class="sr-only">{{ post.description }}</p>
+          <p class="sr-only e-summary">{{ post.description }}</p>
           {% if post.taxonomies is containing ("tags") %}
           <footer class="sr-only">
-            <ul aria-labelledby="tags">
+            <ul class="h-category" aria-labelledby="tags">
               {% for tag in post.taxonomies["tags"] %}
-              <li aria-label="{{tag}}">#{{ tag }}</li>
+              <li class="h-name" aria-label="{{tag}}">#{{ tag }}</li>
               {% endfor %}
             </ul>
           </footer>
@@ -28,6 +38,16 @@
           {{ hooks::posts_below_title(page=post) }}
         </article>
       </a>
+      {{ hentry::hentry_json(
+      name=post.title,
+      summary=post.description,
+      published=post.date,
+      updated=post.updated,
+      url=post.permalink,
+      uid=post.permalink,
+      authors=post.authors | default(value=[]),
+      categories=post.taxonomies["tags"] | default(value=[]),
+      ) }}
     </li>
     {% endfor %}
   </ul>
