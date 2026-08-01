@@ -5,4 +5,4 @@ Disallow: */pr-*
 Disallow: */report/
 Disallow: */report/*
 Allow: /
-Sitemap: <https://exiguus.github.io/zola-monoplain>/sitemap.xml
+Sitemap: https://exiguus.github.io/zola-monoplain/sitemap.xml
