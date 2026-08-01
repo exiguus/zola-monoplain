@@ -21,4 +21,4 @@ cache/
 themes/zola-monoplain/templates/base.html
 themes/zola-monoplain/templates/macros/images.html
 .rumdl.toml
-
+config.toml

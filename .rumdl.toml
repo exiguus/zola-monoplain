@@ -32,6 +32,7 @@ include = [
 exclude = [
   # Common Directories to Exclude
   ".rumdl.toml",
+  "config.toml",
   ".git",
   ".github",
   "node_modules",
