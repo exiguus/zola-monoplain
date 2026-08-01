@@ -28,7 +28,7 @@
           <p class="sr-only e-summary">{{ post.description }}</p>
           {% if post.taxonomies is containing ("tags") %}
           <footer class="sr-only">
-            <ul class="h-category" aria-labelledby="tags">
+            <ul class="p-category" aria-labelledby="tags">
               {% for tag in post.taxonomies["tags"] %}
               <li class="h-name" aria-label="{{tag}}">#{{ tag }}</li>
               {% endfor %}
