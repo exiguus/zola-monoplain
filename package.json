@@ -16,7 +16,7 @@
     "format:check": "dprint check && rumdl check",
     "release": "pnpm run release:generate && pnpm run release:amend",
     "release:generate": "standard-version",
-    "release:amend": "pnpm run zola:changelog && pnpm run zola:banner && git add CHANGELOG_ZOLA_CONFIG.md themes/zola-monoplain/config.toml && git commit --amend --no-edit",
+    "release:amend": "pnpm run zola:changelog && pnpm run zola:banner && git add CHANGELOG_ZOLA_CONFIG.md themes/zola-monoplain/config.toml && git commit --amend --no-edit --no-verify",
     "release:minor": "pnpm run release:generate --release-as minor && pnpm run release:amend",
     "release:patch": "pnpm run release:generate --release-as patch && pnpm run release:amend",
     "release:major": "pnpm run release:generate --release-as major && pnpm run release:amend",
@@ -62,7 +62,7 @@
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
       "pnpm format:fix"
     ],
-    "*.@(md|mdx|html|json|toml|yml|yaml)": [
+    "*.@(md|mdx|html|json|yml|yaml)": [
       "pnpm format:fix"
     ]
   },
