@@ -4,7 +4,8 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ## Table of Contents
 
-- Changes between [v1.8.1 and HEAD (main)](#changes-between-v181-and-head-main)
+- Changes between [v1.8.2 and HEAD (main)](#changes-between-v182-and-head-main)
+- Changes between [v1.8.1 and v1.8.2](#changes-between-v181-and-v182)
 - Changes between [v1.8.0 and v1.8.1](#changes-between-v180-and-v181)
 - Changes between [v1.7.0 and v1.8.0](#changes-between-v170-and-v180)
 - Changes between [v1.6.0 and v1.7.0](#changes-between-v160-and-v170)
@@ -19,11 +20,39 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ---
 
-## Changes between v1.8.1 and HEAD (main)
+## Changes between v1.8.2 and HEAD (main)
 
 (`config.toml` diff)
 
-_No changes_ were made
+*No changes* were made
+
+## Changes between v1.8.1 and v1.8.2
+
+(`config.toml` diff)
+
+```diff
+diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
+index 177231dc..62499d90 100644
+--- a/themes/zola-monoplain/config.toml
++++ b/themes/zola-monoplain/config.toml
+@@ -1,14 +1,14 @@
+ ##########
+ # zola-monoplain Theme Config
+ # Date: 2026-08-01
+-# Version: 1.8.0
++# Version: 1.8.1
+ ###
+ 
+ title = "mono/plain; a11y=true"
+ description = "An accessible, monospace plain Zola Theme"
+ 
+ # The URL the site will be built for
+-base_url = "<https://exiguus.github.io/zola-monoplain>"
++base_url = "https://exiguus.github.io/zola-monoplain"
+ 
+ # Whether to automatically compile all Sass files in the Sass directory
+ compile_sass = true
+```
 
 ## Changes between v1.8.0 and v1.8.1
 
@@ -42,39 +71,39 @@ index f6f8dac2..177231dc 100644
 +# Date: 2026-08-01
 +# Version: 1.8.0
  ###
-
+ 
  title = "mono/plain; a11y=true"
  description = "An accessible, monospace plain Zola Theme"
-
+ 
  # The URL the site will be built for
 -base_url = "https://exiguus.github.io/zola-monoplain"
 +base_url = "<https://exiguus.github.io/zola-monoplain>"
-
+ 
 -# Whether to automatically compile all Sass files in the sass directory
 +# Whether to automatically compile all Sass files in the Sass directory
  compile_sass = true
-
+ 
 -# When set to "true", the generated HTML files are minified.
 +# When set to "true", the generated HTML files are minified
  minify_html = false
-
+ 
  # Whether to build a search index to be used later on by a JavaScript library
  build_search_index = true
  default_language = "en"
-
+ 
 -# atom feed
 +# Atom feed
  generate_feeds = true
  feed_filenames = ["atom.xml", "rss.xml"]
  feed_limit = 50
-
+ 
 -# When set to "false", Sitemap.xml is not generated
 +# When set to "false", sitemap.xml is not generated
  generate_sitemap = true
-
+ 
  # When set to "false", robots.txt is not generated
 @@ -33,17 +33,17 @@ generate_robots_txt = true
-
+ 
  # The taxonomies to be rendered for the site and their configuration of the default languages
  # Example:
 -#     taxonomies = [
@@ -97,7 +126,7 @@ index f6f8dac2..177231dc 100644
 -  { name = "authors" }, # Basic definition: no feed or pagination
 +  { name = "authors" }, # basic definition: no feed or pagination
  ]
-
+ 
  [markdown]
 @@ -107,7 +107,7 @@ post_permalink_label = "Post Permalink"
  post_hero_copy = "Picture by"
@@ -110,7 +139,7 @@ index f6f8dac2..177231dc 100644
  search_results_empty = "No results"
 @@ -118,33 +118,40 @@ skip_nav_link_toc = "Skip to table of contents"
  toc_summary = "Table of contents"
-
+ 
  [extra]
 -# show a debug section (containing the page data) at the top of the page
 +# Show a debug section (containing the page data) at the top of the page
@@ -289,7 +318,7 @@ index e085579e..f6f8dac2 100644
 -# Version: 1.6.0
 +# Version: 1.7.0
  ###
-
+ 
  title = "mono/plain; a11y=true"
 @@ -68,6 +68,9 @@ hcard_born_label = "Born: "
  hcard_category_label = "Category: "
@@ -340,7 +369,7 @@ index 92eeac0c..e085579e 100644
 +
  title = "mono/plain; a11y=true"
  description = "An accessible, monospace plain Zola Theme"
-
+ 
 @@ -57,6 +63,11 @@ a11y_taxonomy_list_label = "Tag list"
  debug_label = "debug"
  debug_summary = "Debug"
@@ -479,19 +508,19 @@ index 828d8a89..92eeac0c 100644
 
 (`config.toml` diff)
 
-_No changes_ were made
+*No changes* were made
 
 ## Changes between v1.3.2 and v1.4.0
 
 (`config.toml` diff)
 
-_No changes_ were made
+*No changes* were made
 
 ## Changes between v1.3.1 and v1.3.2
 
 (`config.toml` diff)
 
-_No changes_ were made
+*No changes* were made
 
 ## Changes between v1.3.0 and v1.3.1
 
@@ -504,14 +533,14 @@ index b0f3bdb5..828d8a89 100644
 +++ b/themes/zola-monoplain/config.toml
 @@ -41,55 +41,57 @@ taxonomies = [
  ]
-
+ 
  [markdown]
 -# Whether to do syntax highlighting
 -# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 -highlight_code = true
 -highlight_theme = "dracula"
  render_emoji = true
-
+ 
 +[markdown.highlighting]
 +theme = "dracula"
 +
@@ -519,7 +548,7 @@ index b0f3bdb5..828d8a89 100644
  paths = "on"
  taxonomies = "on"
  anchors = "on"
-
+ 
  [translations]
 +a11y_search_results_label = "Search results"
 +a11y_taxonomy_list_label = "Tag list"
@@ -588,7 +617,7 @@ index b0f3bdb5..828d8a89 100644
 -a11y_search_results_label = "Search results"
 +skip_nav_link_toc = "Skip to table of contents"
 +toc_summary = "Table of contents"
-
+ 
  [extra]
  # show a debug section (containing the page data) at the top of the page
 @@ -136,3 +138,9 @@ footer_nav_items = [
@@ -614,13 +643,13 @@ index 89e836d8..b0f3bdb5 100644
 +++ b/themes/zola-monoplain/config.toml
 @@ -15,7 +15,8 @@ build_search_index = true
  default_language = "en"
-
+ 
  # atom feed
 -feed_filenames = ["atom.xml"]
 +generate_feeds = true
 +feed_filenames = ["atom.xml", "rss.xml"]
  feed_limit = 50
-
+ 
  # When set to "false", Sitemap.xml is not generated
 @@ -54,6 +55,7 @@ anchors = "on"
  [translations]
@@ -645,7 +674,7 @@ index 89e836d8..b0f3bdb5 100644
 
 (`config.toml` diff)
 
-_No changes_ were made
+*No changes* were made
 
 ## Changes between v1.1.0 and v1.2.0
 
@@ -659,14 +688,14 @@ index 68ab9eec..89e836d8 100644
 @@ -7,12 +7,22 @@ base_url = "https://exiguus.github.io/zola-monoplain"
  # Whether to automatically compile all Sass files in the sass directory
  compile_sass = true
-
+ 
 +# When set to "true", the generated HTML files are minified.
 +minify_html = false
 +
  # Whether to build a search index to be used later on by a JavaScript library
  build_search_index = true
  default_language = "en"
-
+ 
  # atom feed
 -generate_feed = true
 +feed_filenames = ["atom.xml"]
@@ -677,11 +706,11 @@ index 68ab9eec..89e836d8 100644
 +
 +# When set to "false", robots.txt is not generated
 +generate_robots_txt = true
-
+ 
  # The taxonomies to be rendered for the site and their configuration of the default languages
  # Example:
 @@ -43,6 +53,7 @@ anchors = "on"
-
+ 
  [translations]
  draft_label = "(Draft)"
 +feed_atom_title = "Atom Feed"
