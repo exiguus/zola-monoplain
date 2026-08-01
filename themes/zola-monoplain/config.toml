@@ -1,45 +1,65 @@
-##########
-# zola-monoplain Theme Config
-# Date: 2026-07-27
-# Version: 1.7.0
+######
+
+# Zola-Monoplain Theme Config
+
+## Date: 2026-08-01
+
+## Version: 1.8.0
+
 ###
 
 title = "mono/plain; a11y=true"
 description = "An accessible, monospace plain Zola Theme"
 
-# The URL the site will be built for
-base_url = "https://exiguus.github.io/zola-monoplain"
+## The URL the Site Will Be Built For
 
-# Whether to automatically compile all Sass files in the sass directory
+base_url = "<https://exiguus.github.io/zola-monoplain>"
+
+## Whether to Automatically Compile All Sass Files in the Sass Directory
+
 compile_sass = true
 
-# When set to "true", the generated HTML files are minified.
+## When Set to "True", the Generated HTML Files Are Minified
+
 minify_html = false
 
-# Whether to build a search index to be used later on by a JavaScript library
+## Whether to Build a Search Index to Be Used Later on by a JavaScript Library
+
 build_search_index = true
 default_language = "en"
 
-# atom feed
+## Atom Feed
+
 generate_feeds = true
 feed_filenames = ["atom.xml", "rss.xml"]
 feed_limit = 50
 
-# When set to "false", Sitemap.xml is not generated
+## When Set to "False", Sitemap.xml Is Not Generated
+
 generate_sitemap = true
 
-# When set to "false", robots.txt is not generated
+## When Set to "False", Robots.txt Is Not Generated
+
 generate_robots_txt = true
 
-# The taxonomies to be rendered for the site and their configuration of the default languages
-# Example:
-#     taxonomies = [
-#       {name = "tags", feed = true}, # each tag will have its own feed
-#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
-#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
-#       {name = "authors"}, # Basic definition: no feed or pagination
-#     ]
-#
+## The Taxonomies to Be Rendered for the Site and Their Configuration of the Default Languages
+
+## Example
+
+## Taxonomies = [
+
+## {Name = "Tags", Feed = True}, # Each Tag Will Have Its Own Feed
+
+## {Name = "Tags"}, # You Can Have Taxonomies with the Same Name in Multiple Languages
+
+## {Name = "Categories", Paginate_by = 5}, # 5 Items per Page for a Term
+
+## {Name = "Authors"}, # Basic Definition: No Feed or Pagination
+
+## ]
+
+##
+
 taxonomies = [
   { name = "tags", lang = "en", rss = true },
   { name = "categories", paginate_by = 5 }, # 5 items per page for a term
@@ -118,33 +138,52 @@ skip_nav_link_toc = "Skip to table of contents"
 toc_summary = "Table of contents"
 
 [extra]
-# show a debug section (containing the page data) at the top of the page
+
+## Show a Debug Section (Containing the Page Data) at the Top of the Page
+
 debug = false
-# meta
+
+## Meta
+
 tags = ["zola", "theme", "a11y", "accessible"]
 authors = ["Simon Gattner"]
 timezone = "Europe/Berlin"
-# search
+
+## Search
+
 search_enabled = true
-# images
+
+## Images
+
 image_resizing_disabled = false
 image_format = "webp" # "auto", "jpg", "png", "webp"
-# responsive image shortcode
-# example: {{ image(src="foo.jpeg", alt="some image") }}
+
+## Responsive Image Shortcode
+
+## Example: {{ Image(src="foo.jpeg", Alt="some Image") }}
+
 image_quality = 80
 images_default_size = 256
 images_sizes = [256, 384, 512, 576, 640, 768, 1024, 1152]
-# thumbs
+
+## Thumbs
+
 thumbnail_quality = 70
 thumbnail_default_size = 128
 thumbnail_sizes = [128, 256]
-# links
-# github and the mastodon url can be used as web sign in because they contain rel="me"
-#   to validate you might use https://indiewebify.me/validate-rel-me/
+
+## Links
+
+## Github and the Mastodon Url Can Be Used as Web Sign in Because They Contain Rel="me"
+
+## To Validate You Might Use <Https://indiewebify.me/validate-Rel-Me/>
+
 link_github_username = "exiguus"
-link_mastodon_url = "https://toot.community/@exiguus"
+link_mastodon_url = "<https://toot.community/@exiguus>"
 link_email = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
-# main navigation
+
+## Main Navigation
+
 main_nav_items = [
   { url = "$BASE_URL/", name = "Home" },
   { url = "$BASE_URL/posts/", name = "Posts" },
@@ -152,7 +191,9 @@ main_nav_items = [
   { url = "$BASE_URL/search/", name = "Search" },
   { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
 ]
-# footer navigation
+
+## Footer Navigation
+
 footer_nav_items = [
   { url = "$BASE_URL/", name = "Home" },
   { url = "$BASE_URL/posts/", name = "Posts" },
@@ -162,57 +203,102 @@ footer_nav_items = [
   { url = "$BASE_URL/search/", name = "Search" },
   { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
 ]
-# gallery
-# show also images from posts in gallery
+
+## Gallery
+
+## Show Also Images from Posts in Gallery
+
 gallery_show_posts = true
-# feedback
-# show feedback email in posts
+
+## Feedback
+
+## Show Feedback Email in Posts
+
 feedback_email_enabled = true
 feedback_email_address = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
 feedback_email_address_wildcard = true
 feedback_email_address_wildcard_postfix = ".monoplain"
-# hcard for replay contexts, cross-site comments and event RSVPs.
-#  The h-card is visible only for screen reader and is attachted to all page footer if enabled
-#  Not in used keys are commented out
-#  Validate the h-card with <https://indiewebify.me/validate-h-card/>
+
+## Hcard for Replay Contexts, Cross-Site Comments and Event RSVPs
+
+## The H-Card Is Visible Only for Screen Reader and Is Attachted to All Page Footer If Enabled
+
+## Not in Used Keys Are Commented Out
+
+## Validate the H-Card with <Https://indiewebify.me/validate-H-Card/>
+
 hcard_enabled = true
 hcard_name = "Simon Gattner"
-# hcard_honorific_prefix="Dr."
-# hcard_given_name="Sally"
-# hcard_additional_name="K."
-# hcard_family_name="Ride"
-# hcard_honorific_suffix="Ph.D."
+
+## hcard_honorific_prefix="Dr."
+
+## hcard_given_name="Sally"
+
+## hcard_additional_name="K."
+
+## hcard_family_name="Ride"
+
+## hcard_honorific_suffix="Ph.D."
+
 hcard_nickname = "exiguus"
-# hcard_org="Sally Ride Science"
-# hcard_photo="Sally_Ride_(1984).jpg"
+
+## hcard_org="Sally Ride Science"
+
+## hcard_photo="Sally_Ride_(1984).jpg"
+
 hcard_urls = [
   ["https://www.gattner.name", "Homepage"],
   ["https://github.com/exiguus", "Github Profile"],
 ]
-# hcard_emails=[
-#    ["sally", "example", "com"]
-# ]
-# hcard_tels=[
-#    ["+1-800-555-0100", "Work phone"],
-#    ["+1-800-555-0101", "Mobile phone"]
-# ]
-# hcard_street_address="123 Main st."
-# hcard_locality="Los Angeles"
-# hcard_region="CA"
-# hcard_region_title="California"
-# hcard_postal_code="91316"
-# hcard_country_name="U.S.A"
-# hcard_bday="1951-05-26"
-# hcard_category="physicist"
-# hcard_note="First American woman in space.
-#
-# post
+
+## Hcard_emails=[
+
+## ["Sally", "Example", "Com"]
+
+## ]
+
+## Hcard_tels=[
+
+## ["+1-800-555-0100", "Work Phone"]
+
+## ["+1-800-555-0101", "Mobile Phone"]
+
+## ]
+
+## Hcard_street_address="123 Main St."
+
+## hcard_locality="Los Angeles"
+
+## hcard_region="CA"
+
+## hcard_region_title="California"
+
+## Hcard_postal_code="91316"
+
+## hcard_country_name="U.S.A"
+
+## Hcard_bday="1951-05-26"
+
+## Hcard_category="physicist"
+
+## hcard_note="First American Woman in Space
+
+##
+
+## Post
+
 post_author_visible = true
 post_update_visible = true
-#
-# robots.txt
-#
-# Disallow: /pr-*
-# Disallow: */pr-*
+
+##
+
+## Robots.txt
+
+##
+
+## Disallow: /Pr-*
+
+## Disallow: */Pr-*
+
 robots_disallows = [" ", "/pr-*", "*/pr-*", "*/report/", "*/report/*"]
 robots_allows = ["/"]

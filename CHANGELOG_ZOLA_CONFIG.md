@@ -4,7 +4,8 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ## Table of Contents
 
-- Changes between [v1.7.0 and HEAD (main)](#changes-between-v170-and-head-main)
+- Changes between [v1.8.0 and HEAD (main)](#changes-between-v180-and-head-main)
+- Changes between [v1.7.0 and v1.8.0](#changes-between-v170-and-v180)
 - Changes between [v1.6.0 and v1.7.0](#changes-between-v160-and-v170)
 - Changes between [v1.5.0 and v1.6.0](#changes-between-v150-and-v160)
 - Changes between [v1.4.0 and v1.5.0](#changes-between-v140-and-v150)
@@ -17,11 +18,60 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ---
 
-## Changes between v1.7.0 and HEAD (main)
+## Changes between v1.8.0 and HEAD (main)
 
 (`config.toml` diff)
 
 _No changes_ were made
+
+## Changes between v1.7.0 and v1.8.0
+
+(`config.toml` diff)
+
+```diff
+diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
+index e085579e..f6f8dac2 100644
+--- a/themes/zola-monoplain/config.toml
++++ b/themes/zola-monoplain/config.toml
+@@ -1,7 +1,7 @@
+ ##########
+ # zola-monoplain Theme Config
+ # Date: 2026-07-27
+-# Version: 1.6.0
++# Version: 1.7.0
+ ###
+
+ title = "mono/plain; a11y=true"
+@@ -68,6 +68,9 @@ hcard_born_label = "Born: "
+ hcard_category_label = "Category: "
+ hcard_nickname_label = "Nick: "
+ hcard_org_label = "Org: "
++hentry_permalink_label = "Permalink"
++hentry_published_label = "Published: "
++hentry_updated_label = "Updated: "
+ feed_atom_title = "Atom Feed"
+ feed_rss_title = "RSS Feed"
+ footer_info = "Information"
+@@ -100,6 +103,7 @@ post_feedback_email_text = "Have thoughts or experiences you'd like to share? I'
+ post_feedback_email_title = "Feedback"
+ post_tags_title = "Tags"
+ post_updated_label = "Updated:"
++post_permalink_label = "Post Permalink"
+ post_hero_copy = "Picture by"
+ search_form_clear = "Clear"
+ search_form_input_label = "Text to search"
+@@ -205,3 +209,10 @@ hcard_urls = [
+ # post
+ post_author_visible = true
+ post_update_visible = true
++#
++# robots.txt
++#
++# Disallow: /pr-*
++# Disallow: */pr-*
++robots_disallows = [" ", "/pr-*", "*/pr-*", "*/report/", "*/report/*"]
++robots_allows = ["/"]
+```
 
 ## Changes between v1.6.0 and v1.7.0
 
@@ -29,7 +79,7 @@ _No changes_ were made
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index 92eeac0..e085579 100644
+index 92eeac0c..e085579e 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
 @@ -1,3 +1,9 @@
@@ -145,7 +195,7 @@ index 92eeac0..e085579 100644
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index 828d8a8..92eeac0 100644
+index 828d8a89..92eeac0c 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
 @@ -71,16 +71,25 @@ footer_links_theme_text = "@exiguus mono/plain Zola"
@@ -200,7 +250,7 @@ _No changes_ were made
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index b0f3bdb..828d8a8 100644
+index b0f3bdb5..828d8a89 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
 @@ -41,55 +41,57 @@ taxonomies = [
@@ -310,7 +360,7 @@ index b0f3bdb..828d8a8 100644
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index 89e836d..b0f3bdb 100644
+index 89e836d8..b0f3bdb5 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
 @@ -15,7 +15,8 @@ build_search_index = true
@@ -354,7 +404,7 @@ _No changes_ were made
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index 68ab9ee..89e836d 100644
+index 68ab9eec..89e836d8 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
 @@ -7,12 +7,22 @@ base_url = "https://exiguus.github.io/zola-monoplain"
