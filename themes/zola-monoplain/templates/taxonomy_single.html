@@ -16,15 +16,15 @@
             {% if post.draft %}<mark>{{ trans(key="draft_label") }}</mark>{%
             endif %}
             <p>
-              <date class="dt-published">
+              <time class="dt-published" datetime="{{ post.date }}">
                 {{ post.date | date(format='%Y-%m-%d') }}
-              </date>
+              </time>
             </p>
             {%- if post.updated -%}
             <p>
-              <date class="sr-only dt-updated">
+              <time class="sr-only dt-updated" datetime="{{ post.updated }}">
                 {{ post.updated | date(format='%Y-%m-%d') }}
-              </date>
+              </time>
             </p>
             {%- endif -%}
           </header>

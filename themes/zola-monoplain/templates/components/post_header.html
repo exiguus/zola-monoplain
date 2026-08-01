@@ -12,7 +12,7 @@
 
   <p>
     {{ trans(key='post_created_label') }}
-    <date class="dt-published">{{ page.date | date(format='%Y-%m-%d') }}</date>
+    <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format='%Y-%m-%d') }}</time>
   </p>
 
   {%- if page.updated -%}
@@ -22,7 +22,7 @@
   <p class="sr-only">
     {%- endif -%}
     {{ trans(key='post_updated_label') }}
-    <date class="dt-updated">{{ page.updated | date(format='%Y-%m-%d') }}</date>
+    <time class="dt-updated" datetime="{{ page.updated }}">{{ page.updated | date(format='%Y-%m-%d') }}</time>
   </p>
   {% endif %}
 

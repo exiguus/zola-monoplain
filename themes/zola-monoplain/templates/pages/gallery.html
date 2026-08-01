@@ -25,9 +25,9 @@ post in posts -%} {% if post.extra.images -%} {% set_global yearHasImage = true
           <figcaption id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
             <p class="h-name">{{ post.title }}</p>
             <p>
-              <date class="dt-published">{{ post.date }}</date>
+              <time class="dt-published" datetime="{{ post.date }}">{{ post.date }}</time>
               {%- if post.updated -%}
-              <date class="dt-updated">{{ post.updated }}</date>
+              <time class="dt-updated" datetime="{{ post.updated }}">{{ post.updated }}</time>
               {%- endif -%}
             </p>
             <p class="sr-only p-author h-card">
