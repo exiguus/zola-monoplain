@@ -6,7 +6,8 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ## Table of Contents
 
-- Changes between [v1.8.0 and HEAD (main)](#changes-between-v180-and-head-main)
+- Changes between [v1.8.1 and HEAD (main)](#changes-between-v181-and-head-main)
+- Changes between [v1.8.0 and v1.8.1](#changes-between-v180-and-v181)
 - Changes between [v1.7.0 and v1.8.0](#changes-between-v170-and-v180)
 - Changes between [v1.6.0 and v1.7.0](#changes-between-v160-and-v170)
 - Changes between [v1.5.0 and v1.6.0](#changes-between-v150-and-v160)
@@ -20,11 +21,259 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ---
 
-## Changes between v1.8.0 and HEAD (main)
+## Changes between v1.8.1 and HEAD (main)
 
 (`config.toml` diff)
 
 _No changes_ were made
+
+## Changes between v1.8.0 and v1.8.1
+
+(`config.toml` diff)
+
+```diff
+diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
+index f6f8dac2..177231dc 100644
+--- a/themes/zola-monoplain/config.toml
++++ b/themes/zola-monoplain/config.toml
+@@ -1,31 +1,31 @@
+ ##########
+ # zola-monoplain Theme Config
+-# Date: 2026-07-27
+-# Version: 1.7.0
++# Date: 2026-08-01
++# Version: 1.8.0
+ ###
+
+ title = "mono/plain; a11y=true"
+ description = "An accessible, monospace plain Zola Theme"
+
+ # The URL the site will be built for
+-base_url = "https://exiguus.github.io/zola-monoplain"
++base_url = "<https://exiguus.github.io/zola-monoplain>"
+
+-# Whether to automatically compile all Sass files in the sass directory
++# Whether to automatically compile all Sass files in the Sass directory
+ compile_sass = true
+
+-# When set to "true", the generated HTML files are minified.
++# When set to "true", the generated HTML files are minified
+ minify_html = false
+
+ # Whether to build a search index to be used later on by a JavaScript library
+ build_search_index = true
+ default_language = "en"
+
+-# atom feed
++# Atom feed
+ generate_feeds = true
+ feed_filenames = ["atom.xml", "rss.xml"]
+ feed_limit = 50
+
+-# When set to "false", Sitemap.xml is not generated
++# When set to "false", sitemap.xml is not generated
+ generate_sitemap = true
+
+ # When set to "false", robots.txt is not generated
+@@ -33,17 +33,17 @@ generate_robots_txt = true
+
+ # The taxonomies to be rendered for the site and their configuration of the default languages
+ # Example:
+-#     taxonomies = [
+-#       {name = "tags", feed = true}, # each tag will have its own feed
+-#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
+-#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+-#       {name = "authors"}, # Basic definition: no feed or pagination
+-#     ]
+-#
++# taxonomies = [
++#   { name = "tags", feed = true }, # each tag will have its own feed
++#   { name = "tags" }, # you can have taxonomies with the same name in multiple languages
++#   { name = "categories", paginate_by = 5 }, # 5 items per page for a term
++#   { name = "authors" }, # basic definition: no feed or pagination
++# ]
++
+ taxonomies = [
+   { name = "tags", lang = "en", rss = true },
+   { name = "categories", paginate_by = 5 }, # 5 items per page for a term
+-  { name = "authors" }, # Basic definition: no feed or pagination
++  { name = "authors" }, # basic definition: no feed or pagination
+ ]
+
+ [markdown]
+@@ -107,7 +107,7 @@ post_permalink_label = "Post Permalink"
+ post_hero_copy = "Picture by"
+ search_form_clear = "Clear"
+ search_form_input_label = "Text to search"
+-search_form_input_placeholder = "Search ↵"
++search_form_input_placeholder = "Search \u21B5"
+ search_form_legend = "Search"
+ search_form_submit = "Search"
+ search_results_empty = "No results"
+@@ -118,33 +118,40 @@ skip_nav_link_toc = "Skip to table of contents"
+ toc_summary = "Table of contents"
+
+ [extra]
+-# show a debug section (containing the page data) at the top of the page
++# Show a debug section (containing the page data) at the top of the page
+ debug = false
+-# meta
++
++# Meta
+ tags = ["zola", "theme", "a11y", "accessible"]
+ authors = ["Simon Gattner"]
+ timezone = "Europe/Berlin"
+-# search
++
++# Search
+ search_enabled = true
+-# images
++
++# Images
+ image_resizing_disabled = false
+ image_format = "webp" # "auto", "jpg", "png", "webp"
+-# responsive image shortcode
+-# example: {{ image(src="foo.jpeg", alt="some image") }}
++
++# Responsive image shortcode
++# Example: {{ Image(src="foo.jpeg", Alt="some Image") }}
+ image_quality = 80
+ images_default_size = 256
+ images_sizes = [256, 384, 512, 576, 640, 768, 1024, 1152]
+-# thumbs
++
++# Thumbs
+ thumbnail_quality = 70
+ thumbnail_default_size = 128
+ thumbnail_sizes = [128, 256]
+-# links
+-# github and the mastodon url can be used as web sign in because they contain rel="me"
+-#   to validate you might use https://indiewebify.me/validate-rel-me/
++
++# Links
++# Github and the Mastodon url can be used as web sign in because they contain rel="me"
++# To validate you might use <https://indiewebify.me/validate-rel-me/>
+ link_github_username = "exiguus"
+-link_mastodon_url = "https://toot.community/@exiguus"
++link_mastodon_url = "<https://toot.community/@exiguus>"
+ link_email = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
+-# main navigation
++
++# Main navigation
+ main_nav_items = [
+   { url = "$BASE_URL/", name = "Home" },
+   { url = "$BASE_URL/posts/", name = "Posts" },
+@@ -152,7 +159,8 @@ main_nav_items = [
+   { url = "$BASE_URL/search/", name = "Search" },
+   { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
+ ]
+-# footer navigation
++
++# Footer navigation
+ footer_nav_items = [
+   { url = "$BASE_URL/", name = "Home" },
+   { url = "$BASE_URL/posts/", name = "Posts" },
+@@ -162,56 +170,65 @@ footer_nav_items = [
+   { url = "$BASE_URL/search/", name = "Search" },
+   { url = "$BASE_URL/atom.xml", name = "Feed", rel = "alternate" },
+ ]
+-# gallery
+-# show also images from posts in gallery
++
++# Gallery
++# Show also images from posts in gallery
+ gallery_show_posts = true
+-# feedback
+-# show feedback email in posts
++
++# Feedback
++# Show feedback email in posts
+ feedback_email_enabled = true
+ feedback_email_address = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
+ feedback_email_address_wildcard = true
+ feedback_email_address_wildcard_postfix = ".monoplain"
+-# hcard for replay contexts, cross-site comments and event RSVPs.
+-#  The h-card is visible only for screen reader and is attachted to all page footer if enabled
+-#  Not in used keys are commented out
+-#  Validate the h-card with <https://indiewebify.me/validate-h-card/>
++
++# Hcard for replay contexts, cross-site comments and event RSVPs
++# The h-card is visible only for screen reader and is attached to all page footer if enabled
++# Not in used keys are commented out
++# Validate the h-card with <https://indiewebify.me/validate-h-card/>
+ hcard_enabled = true
+ hcard_name = "Simon Gattner"
+-# hcard_honorific_prefix="Dr."
+-# hcard_given_name="Sally"
+-# hcard_additional_name="K."
+-# hcard_family_name="Ride"
+-# hcard_honorific_suffix="Ph.D."
++
++# hcard_honorific_prefix = "Dr."
++# hcard_given_name = "Sally"
++# hcard_additional_name = "K."
++# hcard_family_name = "Ride"
++# hcard_honorific_suffix = "Ph.D."
++
+ hcard_nickname = "exiguus"
+-# hcard_org="Sally Ride Science"
+-# hcard_photo="Sally_Ride_(1984).jpg"
++
++# hcard_org = "Sally Ride Science"
++# hcard_photo = "Sally_Ride_(1984).jpg"
++
+ hcard_urls = [
+   ["https://www.gattner.name", "Homepage"],
+   ["https://github.com/exiguus", "Github Profile"],
+ ]
+-# hcard_emails=[
+-#    ["sally", "example", "com"]
++
++# hcard_emails = [
++#   ["Sally", "Example", "Com"]
+ # ]
+-# hcard_tels=[
+-#    ["+1-800-555-0100", "Work phone"],
+-#    ["+1-800-555-0101", "Mobile phone"]
++
++# hcard_tels = [
++#   ["+1-800-555-0100", "Work Phone"]
++#   ["+1-800-555-0101", "Mobile Phone"]
+ # ]
+-# hcard_street_address="123 Main st."
+-# hcard_locality="Los Angeles"
+-# hcard_region="CA"
+-# hcard_region_title="California"
+-# hcard_postal_code="91316"
+-# hcard_country_name="U.S.A"
+-# hcard_bday="1951-05-26"
+-# hcard_category="physicist"
+-# hcard_note="First American woman in space.
+-#
+-# post
++
++# hcard_street_address = "123 Main St."
++# hcard_locality = "Los Angeles"
++# hcard_region = "CA"
++# hcard_region_title = "California"
++# hcard_postal_code = "91316"
++# hcard_country_name = "U.S.A"
++# hcard_bday = "1951-05-26"
++# hcard_category = "physicist"
++# hcard_note = "First American Woman in Space"
++
++# Post
+ post_author_visible = true
+ post_update_visible = true
+-#
+-# robots.txt
+-#
++
++# Robots.txt
+ # Disallow: /pr-*
+ # Disallow: */pr-*
+ robots_disallows = [" ", "/pr-*", "*/pr-*", "*/report/", "*/report/*"]
+```
 
 ## Changes between v1.7.0 and v1.8.0
 
