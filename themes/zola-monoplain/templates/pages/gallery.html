@@ -37,7 +37,7 @@ post in posts -%} {% if post.extra.images -%} {% set_global yearHasImage = true
               {%- endfor -%}
             </p>
             <p class="sr-only u-url u-uid">{{ post.permalink | safe }}</p>
-            <p class="e-summary">{{ post.description }}</p>
+            <p class="sr-only e-summary">{{ post.description }}</p>
             <p class="sr-only p-category">
               {%- set tags = post.taxonomies['tags'] -%}
               {%- for tag in tags -%}
