@@ -1,3 +1,4 @@
+{%- import "macros/hentry.html" as hentry -%}
 {% include "components/page_header.html" -%} {% set section_images =
 get_section(path="gallery/_index.md") -%} {% if config.extra.gallery_show_posts
 -%} {% set section_posts = get_section(path="posts/_index.md") -%} {% set pages
@@ -13,29 +14,50 @@ post in posts -%} {% if post.extra.images -%} {% set_global yearHasImage = true
     post.extra.images -%} {# { set image = resize_image(path=post.path ~ image,
     width=256, height=256, format=config.extra.image_format,
     quality=config.extra.thumbnail_quality) %} #}
-    <li
-      aria-labelledby="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}"
-    >
-      <a
-        href="{{ post.permalink | safe }}"
-        title="{{ post.title }} - {{ post.date }}"
-      >
-        <figure {% if post.extra.lang %}lang="{{ post.extra.lang }}"{% endif %}>
+    <li aria-labelledby="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
+      <a href="{{ post.permalink | safe }}" title="{{ post.title }} - {{ post.date }}">
+        <figure class="h-entry" {% if post.extra.lang %}lang="{{ post.extra.lang }}" {% endif %}>
           <div class="thumbnail">
             {{ images::responsive_thumbnail(path=post.colocated_path, src=image,
-            default_size=128, sizes=[128,256], alt=post.title ~ " - " ~ post.date
+            default_size=128, sizes=[128,256], alt=post.title ~ " - " ~ post.date, class="u-photo") -}}
             ) -}}
           </div>
-          <figcaption
-            id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}"
-          >
-            {{ post.title }}
+          <figcaption id="post-image-{{ post.date }}-{{ post.slug }}-{{ loop.index }}">
+            <p class="h-name">{{ post.title }}</p>
             <p>
-              <date>{{ post.date }}</date>
+              <date class="dt-published">{{ post.date }}</date>
+              {%- if post.updated -%}
+              <date class="dt-updated">{{ post.updated }}</date>
+              {%- endif -%}
+            </p>
+            <p class="sr-only p-author h-card">
+              {%- for author in post.authors -%}
+              <span class="p-name">{{ author }}</span>
+              {%- if not loop.last -%}, {% endif -%}
+              {%- endfor -%}
+            </p>
+            <p class="sr-only u-url u-uid">{{ post.permalink | safe }}</p>
+            <p class="e-summary">{{ post.description }}</p>
+            <p class="sr-only p-category">
+              {%- set tags = post.taxonomies['tags'] -%}
+              {%- for tag in tags -%}
+              <span class="p-name">#{{ tag }}</span>
+              {%- if not loop.last -%}, {% endif -%}
+              {%- endfor -%}
             </p>
           </figcaption>
         </figure>
       </a>
+      {{ hentry::hentry_json(
+      name=post.title,
+      summary=post.description,
+      published=post.date,
+      updated=post.updated,
+      url=post.permalink,
+      uid=post.permalink,
+      authors=post.authors | default(value=[]),
+      categories=post.taxonomies["tags"] | default(value=[]),
+      ) }}
     </li>
     {% endfor -%} {% endif -%} {% endfor -%}
   </ul>
