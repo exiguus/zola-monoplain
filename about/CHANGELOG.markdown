@@ -4,6 +4,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/exiguus/zola-monoplain/compare/v1.6.0...v1.8.0) (2026-08-01)
+
+### Features
+
+- **a11y:** adjust code visibility ([6f1d3b0](https://github.com/exiguus/zola-monoplain/commits/6f1d3b02a289321136741c8b12c00f068fb6e468))
+- **a11y:** ensure markdown task-list checkboxes have accessible names ([4cf9be4](https://github.com/exiguus/zola-monoplain/commits/4cf9be4937d9f3b260acc69e0692dc746fc980fa))
+- **a11y:** make horizontal scroll regions keyboard reachable ([150a533](https://github.com/exiguus/zola-monoplain/commits/150a53335812d85033dd2a748ba5588d7b29b223))
+- **a11y:** make sure markdown task list items have a label and name [#84](https://github.com/exiguus/zola-monoplain/issues/84) ([2980dd1](https://github.com/exiguus/zola-monoplain/commits/2980dd111aa51fc745d027ee64358286ff4ec8d3))
+- **a11y:** remove page header aria description ([ffe57c6](https://github.com/exiguus/zola-monoplain/commits/ffe57c614386421d5c1ea2c42d2e493119d24283))
+- **a11y:** remove post and page header aria translations ([2c88f2d](https://github.com/exiguus/zola-monoplain/commits/2c88f2d14ccd048425a39b0e6ae1b791bbaf76a8))
+- **a11y:** remove post header aria description ([88b6393](https://github.com/exiguus/zola-monoplain/commits/88b6393a45d382e1abb8f713df7b80a6327ef92a))
+- **email:** add email snippet and macro also used by feedback ([35f161c](https://github.com/exiguus/zola-monoplain/commits/35f161c5d1529dad90f0397eb4356ce9ea75ce9b))
+- **feed:** add extra ignore_feed page flag ([d816071](https://github.com/exiguus/zola-monoplain/commits/d816071ac0db26e00a36d6d22550dd6844035388))
+- **images:** adjust hero responsive image sizes ([844288d](https://github.com/exiguus/zola-monoplain/commits/844288d45e5b34a9af5271e6b61582492592884c))
+- **indyweb:** add footer email link [#103](https://github.com/exiguus/zola-monoplain/issues/103) ([defe00a](https://github.com/exiguus/zola-monoplain/commits/defe00a65059154a49481cff99c63cea770dee59))
+- **indyweb:** add h-card post author support [#103](https://github.com/exiguus/zola-monoplain/issues/103) ([57d14a7](https://github.com/exiguus/zola-monoplain/commits/57d14a7baa94d1a99d5e872e715cdd7b68c4d8f1))
+- **indyweb:** add h-card support and shortcodes for phone and h-card ([a601633](https://github.com/exiguus/zola-monoplain/commits/a6016337f2e42e311b1f969a598aa6b60a19456d))
+- **indyweb:** add hentry in gallery ([8a90cf3](https://github.com/exiguus/zola-monoplain/commits/8a90cf34af1db0bc2829d524b0178e459835b80a))
+- **indyweb:** add hentry in latest images ([a7b1db6](https://github.com/exiguus/zola-monoplain/commits/a7b1db646fe0e15b572cdbd66d67de1ea830a1e8))
+- **indyweb:** add hentry in latest images posts ([177fc47](https://github.com/exiguus/zola-monoplain/commits/177fc4703f47b43e9e4271db7f88d2278f0864c9))
+- **indyweb:** add hentry in latest posts ([025cd4e](https://github.com/exiguus/zola-monoplain/commits/025cd4eb8a539677c9a9ff3cf8bd3dbaf40687d3))
+- **indyweb:** add hentry in posts ([6552cad](https://github.com/exiguus/zola-monoplain/commits/6552cad10038f994638c63661edad509980358da))
+- **indyweb:** add hentry in taxonomy ([0989df0](https://github.com/exiguus/zola-monoplain/commits/0989df0dc2943bc98d87ab75af9534495437a893))
+- **indyweb:** add post hentry support [#103](https://github.com/exiguus/zola-monoplain/issues/103) ([b758b5f](https://github.com/exiguus/zola-monoplain/commits/b758b5f7ff2d73c6e93fb20e4caa9185d2382f6f))
+- **indyweb:** add u-photo for post hero images ([97b0ba9](https://github.com/exiguus/zola-monoplain/commits/97b0ba93421788734c8f4ce7b48c07d9545511aa))
+- **indyweb:** adjust h-entry visibility on gallery page ([3b4e427](https://github.com/exiguus/zola-monoplain/commits/3b4e42700163b29edd4e5131b11b86ff29c44eae))
+- **indyweb:** create h-card component [#103](https://github.com/exiguus/zola-monoplain/issues/103) ([785c94c](https://github.com/exiguus/zola-monoplain/commits/785c94c4e5d9cec8f0fed72565e04f6a5920b69f))
+- **indyweb:** show h-card in page footer if enabled ([509d681](https://github.com/exiguus/zola-monoplain/commits/509d68130ae82edd4133d5b65f8b9a8ccb19238d))
+- **markdown:** force initial background for code highlighting ([389a47b](https://github.com/exiguus/zola-monoplain/commits/389a47bc41a531cbffb91640e5d76a39131faf3f))
+- **posts:** clean shortcode documentation and code embeddings ([64d427e](https://github.com/exiguus/zola-monoplain/commits/64d427e9dc5baef34d620a9ec83c0813998bdd36))
+- **robots:** add configurable robots.txt allows and disallows ([bb6a477](https://github.com/exiguus/zola-monoplain/commits/bb6a477e9874cf0cf1065570549d1cb4febdd268))
+- **robots:** add robots noindex flag formatter handling ([c702b0b](https://github.com/exiguus/zola-monoplain/commits/c702b0b408cc7a3394d7b71dd570066d5c559812))
+- **sitemap:** add extra ignore_sitmap post flag ([6f2282c](https://github.com/exiguus/zola-monoplain/commits/6f2282ca734902ff5fae967747dbde249ce01696))
+- **skipnav:** show toc only when the page is a post ([ff00b03](https://github.com/exiguus/zola-monoplain/commits/ff00b038d7ad8130e71bd40fb5370afd41ab66f2))
+- **taxonomy:** adjust visibility in posts and tag list ([8c57bbb](https://github.com/exiguus/zola-monoplain/commits/8c57bbb27308a7ec7f26fd6b7bf0287b8bdb98c3))
+- **websign:** adjust config info for web sign rel me footer links ([49ae2d4](https://github.com/exiguus/zola-monoplain/commits/49ae2d4ad13e6c8b0954b150ce8aa7baee4c9df1))
+
+### Bug Fixes
+
+- **email:** obfuscate mail href encoding ([d9f2b6d](https://github.com/exiguus/zola-monoplain/commits/d9f2b6dc98a2161caf5c5fe3832c416e78df807d))
+- **indyweb:** change wrong category class in posts ([4c34938](https://github.com/exiguus/zola-monoplain/commits/4c34938c7c256ea48298f997195a22418e30318c))
+- **indyweb:** h-card doublicate id error ([928c5ec](https://github.com/exiguus/zola-monoplain/commits/928c5ec09f986c92b8cb4932f6056912ef5b1a16))
+- **indyweb:** handle content as unsafe in ld+json ([1ec8214](https://github.com/exiguus/zola-monoplain/commits/1ec821499d948870ee97ff2adb4dbcbe3d219627))
+- **scss:** css h-card formatting ([0f87ac9](https://github.com/exiguus/zola-monoplain/commits/0f87ac9e2e32eda59c91c54ac94ce3928f315401))
+
 ## [1.7.0](https://github.com/exiguus/zola-monoplain/compare/v1.6.0...v1.7.0) (2026-07-27)
 
 ### Features
