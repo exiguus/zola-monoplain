@@ -1,5 +1,5 @@
 {% macro obfuscate_mail_href() %}
-href="mailto:invalid\(local)\part@example\.org"
+href="mailto:invalid\(local\)part@example.org"
 {% endmacro %}
 
 {% macro obfuscate_mail_data(local_part, domain_name, tld) %}
