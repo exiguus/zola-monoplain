@@ -133,6 +133,8 @@ EOL
 
         # Format the diff for markdown
         if [[ -n "${diff_output}" ]]; then
+          # escape shortcodes {{ and }} to avoid Zola parsing issues
+          diff_output=$(echo "${diff_output}" | sed 's/{{/{{\/\*/g; s/}}/\*\/}}/g')
           printf '```diff\n' >> "${OUTPUT_FILE}"
           printf '%s\n' "${diff_output}" >> "${OUTPUT_FILE}"
           printf '```\n' >> "${OUTPUT_FILE}"
@@ -157,6 +159,8 @@ EOL
 
       # Format the diff for markdown
       if [[ -n "${diff_output}" ]]; then
+        # escape shortcodes {{ and }} to avoid Zola parsing issues
+        diff_output=$(echo "${diff_output}" | sed 's/{{/{{\/\*/g; s/}}/\*\/}}/g')
         printf '```diff\n' >> "${OUTPUT_FILE}"
         printf '%s\n' "${diff_output}" >> "${OUTPUT_FILE}"
         printf '```\n' >> "${OUTPUT_FILE}"

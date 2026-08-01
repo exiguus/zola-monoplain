@@ -174,10 +174,10 @@ index f6f8dac2..177231dc 100644
  image_resizing_disabled = false
  image_format = "webp" # "auto", "jpg", "png", "webp"
 -# responsive image shortcode
--# example: {{ image(src="foo.jpeg", alt="some image") }}
+-# example: {{/* image(src="foo.jpeg", alt="some image") */}}
 +
 +# Responsive image shortcode
-+# Example: {{ Image(src="foo.jpeg", Alt="some Image") }}
++# Example: {{/* Image(src="foo.jpeg", Alt="some Image") */}}
  image_quality = 80
  images_default_size = 256
  images_sizes = [256, 384, 512, 576, 640, 768, 1024, 1152]
