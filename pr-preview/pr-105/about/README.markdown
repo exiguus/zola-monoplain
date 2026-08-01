@@ -114,7 +114,7 @@ For latest Zola config changes please see the [Zola config changelog](changelog-
     - [x] Commitlint
   - [x] Commit hooks
 
-## Getting started
+## Getting Started
 
 1. Add this theme to your `themes/` folder (copy or symlink).
 2. Copy the theme config file from `themes/zola-monoplain/config.toml` into your project's root directory. Update it as required and don't forget to add `theme = 'zola-monoplain'` at the top of the file.
@@ -122,7 +122,7 @@ For latest Zola config changes please see the [Zola config changelog](changelog-
 
 Also, see the themes documentation: <https://exiguus.github.io/zola-monoplain/posts/themes/>
 
-## Customising the theme
+## Customising the Theme
 
 - **To change settings** copy `config.toml` into your project and update it as required (make sure you add the theme variable at the top of the file, see Getting started above).
 - **To inject content into templates** copy `templates/macros/hooks.html` and update it as required.
@@ -140,9 +140,10 @@ Release follow [Semantic Versioning](https://semver.org/) and are tagged in the 
 Release notes are available in the [CHANGELOG.md](changelog) file.
 Zola Config Changes are available in the [CHANGELOG_ZOLA_CONFIG.md](changelog-zola-config) file.
 
-## Feature requests & support
+## Feature Requests & Support
 
-I'm afraid I'm unable to accept feature requests or provide user support for this theme. The [Zola documentation](https://www.getzola.org/documentation/getting-started/overview/) and [Tera documentation](https://tera.netlify.app/docs/) are great resources and there is a [Zola discussion forum](https://zola.discourse.group/). If you've found a bug in the theme please open a GitHub issue.
+I'm afraid I'm unable to accept feature requests or provide user support for this theme.
+The [Zola documentation](https://www.getzola.org/documentation/getting-started/overview/) and [Tera documentation](https://tera.netlify.app/docs/) are great resources and there is a [Zola discussion forum](https://zola.discourse.group/). If you've found a bug in the theme please open a GitHub issue.
 
 ## Contributing
 
