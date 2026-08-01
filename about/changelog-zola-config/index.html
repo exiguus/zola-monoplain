@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og:https://ogp.me/ns#">
+
+<head>
+  <title>CHANGELOG ZOLA_CONFIG | mono&#x2F;plain; a11y=true</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="Zola" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="CHANGELOG ZOLA_CONFIG" />
+<meta name="description" content="An accessible, monospace plain Zola Theme" />
+<meta name="keywords" content="zola,
+theme,
+a11y,
+accessible" />
+<meta name="author" content="Simon Gattner" />
+<meta
+  name="theme-color"
+  content="#ffffff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#000000"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta name="build" content="2026-08-01T22:04:46.300371523+00:00" />
+<meta
+  property="og:title"
+  content="mono&#x2F;plain; a11y=true | CHANGELOG ZOLA_CONFIG"
+/>
+<meta property="og:type" content="website" />
+<meta
+  property="og:url"
+  content="https://exiguus.github.io/zola-monoplain/about/changelog-zola-config/"
+/>
+<meta property="og:description" content="An accessible, monospace plain Zola Theme" />
+<meta property="og:image" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<meta property="og:image:secure_url" content="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;processed_images&#x2F;og-preview.4b72447b8d8c9b6a.png" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="mono&#x2F;plain; a11y=true Atom Feed"
+  href="https://exiguus.github.io/zola-monoplain/atom.xml"
+/> <link
+  rel="alternate"
+  type="application/rss+xml"
+  title="mono&#x2F;plain; a11y=true RSS Feed"
+  href="https://exiguus.github.io/zola-monoplain/atom.rss"
+/>
+<link
+  rel="stylesheet"
+  href="https://exiguus.github.io/zola-monoplain/base.css"
+  media="screen"
+/>
+
+  
+</head>
+<body id="about--changelog-zola-config" data-base-url="https://exiguus.github.io/zola-monoplain">
+  
+<nav
+  id="skip-nav"
+  aria-label="Skip Navigation"
+  aria-live="off"
+  aria-atomic="false"
+>
+  <ul>
+    <li><a href="#main">Skip to content</a></li>
+    <li><a href="#main-nav">Skip to navigation</a></li>
+  </ul>
+</nav>
+<header>
+  <a href="https://exiguus.github.io/zola-monoplain" title="mono&#x2F;plain; a11y=true">
+    <h1>mono&#x2F;plain; a11y=true</h1>
+    <p>An accessible, monospace plain Zola Theme</p>
+  </a>
+</header>
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<div>
+      <main id="main">
+        <h1> CHANGELOG ZOLA_CONFIG </h1>
+<section> <em>
+      Configuration Change Log
+    </em>
+<p>This document lists all changes between Git tags for the <code>config.toml</code> file.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li>Changes between <a href="#changes-between-v182-and-head-main">v1.8.2 and HEAD (main)</a></li>
+<li>Changes between <a href="#changes-between-v181-and-v182">v1.8.1 and v1.8.2</a></li>
+<li>Changes between <a href="#changes-between-v180-and-v181">v1.8.0 and v1.8.1</a></li>
+<li>Changes between <a href="#changes-between-v170-and-v180">v1.7.0 and v1.8.0</a></li>
+<li>Changes between <a href="#changes-between-v160-and-v170">v1.6.0 and v1.7.0</a></li>
+<li>Changes between <a href="#changes-between-v150-and-v160">v1.5.0 and v1.6.0</a></li>
+<li>Changes between <a href="#changes-between-v140-and-v150">v1.4.0 and v1.5.0</a></li>
+<li>Changes between <a href="#changes-between-v132-and-v140">v1.3.2 and v1.4.0</a></li>
+<li>Changes between <a href="#changes-between-v131-and-v132">v1.3.1 and v1.3.2</a></li>
+<li>Changes between <a href="#changes-between-v130-and-v131">v1.3.0 and v1.3.1</a></li>
+<li>Changes between <a href="#changes-between-v121-and-v130">v1.2.1 and v1.3.0</a></li>
+<li>Changes between <a href="#changes-between-v120-and-v121">v1.2.0 and v1.2.1</a></li>
+<li>Changes between <a href="#changes-between-v110-and-v120">v1.1.0 and v1.2.0</a></li>
+</ul>
+<hr />
+<h2 id="changes-between-v1-8-2-and-head-main">Changes between v1.8.2 and HEAD (main)</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index 62499d90..dff7d8d3 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -1,7 +1,7 @@</span></span>
+<span class="giallo-l"><span> ##########</span></span>
+<span class="giallo-l"><span> # zola-monoplain Theme Config</span></span>
+<span class="giallo-l"><span> # Date: 2026-08-01</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Version: 1.8.1</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Version: 1.8.2</span></span>
+<span class="giallo-l"><span> ###</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> title = &quot;mono/plain; a11y=true&quot;</span></span></code></pre><h2 id="changes-between-v1-8-1-and-v1-8-2">Changes between v1.8.1 and v1.8.2</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index 177231dc..62499d90 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -1,14 +1,14 @@</span></span>
+<span class="giallo-l"><span> ##########</span></span>
+<span class="giallo-l"><span> # zola-monoplain Theme Config</span></span>
+<span class="giallo-l"><span> # Date: 2026-08-01</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Version: 1.8.0</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Version: 1.8.1</span></span>
+<span class="giallo-l"><span> ###</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> title = &quot;mono/plain; a11y=true&quot;</span></span>
+<span class="giallo-l"><span> description = &quot;An accessible, monospace plain Zola Theme&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # The URL the site will be built for</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-base_url = &quot;&lt;https://exiguus.github.io/zola-monoplain&gt;&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+base_url = &quot;https://exiguus.github.io/zola-monoplain&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # Whether to automatically compile all Sass files in the Sass directory</span></span>
+<span class="giallo-l"><span> compile_sass = true</span></span></code></pre><h2 id="changes-between-v1-8-0-and-v1-8-1">Changes between v1.8.0 and v1.8.1</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index f6f8dac2..177231dc 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -1,31 +1,31 @@</span></span>
+<span class="giallo-l"><span> ##########</span></span>
+<span class="giallo-l"><span> # zola-monoplain Theme Config</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Date: 2026-07-27</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Version: 1.7.0</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Date: 2026-08-01</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Version: 1.8.0</span></span>
+<span class="giallo-l"><span> ###</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> title = &quot;mono/plain; a11y=true&quot;</span></span>
+<span class="giallo-l"><span> description = &quot;An accessible, monospace plain Zola Theme&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # The URL the site will be built for</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-base_url = &quot;https://exiguus.github.io/zola-monoplain&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+base_url = &quot;&lt;https://exiguus.github.io/zola-monoplain&gt;&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Whether to automatically compile all Sass files in the sass directory</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Whether to automatically compile all Sass files in the Sass directory</span></span>
+<span class="giallo-l"><span> compile_sass = true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# When set to &quot;true&quot;, the generated HTML files are minified.</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# When set to &quot;true&quot;, the generated HTML files are minified</span></span>
+<span class="giallo-l"><span> minify_html = false</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # Whether to build a search index to be used later on by a JavaScript library</span></span>
+<span class="giallo-l"><span> build_search_index = true</span></span>
+<span class="giallo-l"><span> default_language = &quot;en&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# atom feed</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Atom feed</span></span>
+<span class="giallo-l"><span> generate_feeds = true</span></span>
+<span class="giallo-l"><span> feed_filenames = [&quot;atom.xml&quot;, &quot;rss.xml&quot;]</span></span>
+<span class="giallo-l"><span> feed_limit = 50</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# When set to &quot;false&quot;, Sitemap.xml is not generated</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# When set to &quot;false&quot;, sitemap.xml is not generated</span></span>
+<span class="giallo-l"><span> generate_sitemap = true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # When set to &quot;false&quot;, robots.txt is not generated</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -33,17 +33,17 @@</span><span> generate_robots_txt = true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # The taxonomies to be rendered for the site and their configuration of the default languages</span></span>
+<span class="giallo-l"><span> # Example:</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#     taxonomies = [</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#       {name = &quot;tags&quot;, feed = true}, # each tag will have its own feed</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#       {name = &quot;tags&quot;}, # you can have taxonomies with the same name in multiple languages</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#       {name = &quot;categories&quot;, paginate_by = 5},  # 5 items per page for a term</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#       {name = &quot;authors&quot;}, # Basic definition: no feed or pagination</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#     ]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# taxonomies = [</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   { name = &quot;tags&quot;, feed = true }, # each tag will have its own feed</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   { name = &quot;tags&quot; }, # you can have taxonomies with the same name in multiple languages</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   { name = &quot;categories&quot;, paginate_by = 5 }, # 5 items per page for a term</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   { name = &quot;authors&quot; }, # basic definition: no feed or pagination</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# ]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span> taxonomies = [</span></span>
+<span class="giallo-l"><span>   { name = &quot;tags&quot;, lang = &quot;en&quot;, rss = true },</span></span>
+<span class="giallo-l"><span>   { name = &quot;categories&quot;, paginate_by = 5 }, # 5 items per page for a term</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-  { name = &quot;authors&quot; }, # Basic definition: no feed or pagination</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { name = &quot;authors&quot; }, # basic definition: no feed or pagination</span></span>
+<span class="giallo-l"><span> ]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> [markdown]</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -107,7 +107,7 @@</span><span> post_permalink_label = &quot;Post Permalink&quot;</span></span>
+<span class="giallo-l"><span> post_hero_copy = &quot;Picture by&quot;</span></span>
+<span class="giallo-l"><span> search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-search_form_input_placeholder = &quot;Search ↵&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+search_form_input_placeholder = &quot;Search \u21B5&quot;</span></span>
+<span class="giallo-l"><span> search_form_legend = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span> search_form_submit = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span> search_results_empty = &quot;No results&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -118,33 +118,40 @@</span><span> skip_nav_link_toc = &quot;Skip to table of contents&quot;</span></span>
+<span class="giallo-l"><span> toc_summary = &quot;Table of contents&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> [extra]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# show a debug section (containing the page data) at the top of the page</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Show a debug section (containing the page data) at the top of the page</span></span>
+<span class="giallo-l"><span> debug = false</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# meta</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Meta</span></span>
+<span class="giallo-l"><span> tags = [&quot;zola&quot;, &quot;theme&quot;, &quot;a11y&quot;, &quot;accessible&quot;]</span></span>
+<span class="giallo-l"><span> authors = [&quot;Simon Gattner&quot;]</span></span>
+<span class="giallo-l"><span> timezone = &quot;Europe/Berlin&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# search</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Search</span></span>
+<span class="giallo-l"><span> search_enabled = true</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# images</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Images</span></span>
+<span class="giallo-l"><span> image_resizing_disabled = false</span></span>
+<span class="giallo-l"><span> image_format = &quot;webp&quot; # &quot;auto&quot;, &quot;jpg&quot;, &quot;png&quot;, &quot;webp&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# responsive image shortcode</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# example: {{ image(src=&quot;foo.jpeg&quot;, alt=&quot;some image&quot;) }}</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Responsive image shortcode</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Example: {{ Image(src=&quot;foo.jpeg&quot;, Alt=&quot;some Image&quot;) }}</span></span>
+<span class="giallo-l"><span> image_quality = 80</span></span>
+<span class="giallo-l"><span> images_default_size = 256</span></span>
+<span class="giallo-l"><span> images_sizes = [256, 384, 512, 576, 640, 768, 1024, 1152]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# thumbs</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Thumbs</span></span>
+<span class="giallo-l"><span> thumbnail_quality = 70</span></span>
+<span class="giallo-l"><span> thumbnail_default_size = 128</span></span>
+<span class="giallo-l"><span> thumbnail_sizes = [128, 256]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# links</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# github and the mastodon url can be used as web sign in because they contain rel=&quot;me&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#   to validate you might use https://indiewebify.me/validate-rel-me/</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Links</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Github and the Mastodon url can be used as web sign in because they contain rel=&quot;me&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# To validate you might use &lt;https://indiewebify.me/validate-rel-me/&gt;</span></span>
+<span class="giallo-l"><span> link_github_username = &quot;exiguus&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-link_mastodon_url = &quot;https://toot.community/@exiguus&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+link_mastodon_url = &quot;&lt;https://toot.community/@exiguus&gt;&quot;</span></span>
+<span class="giallo-l"><span> link_email = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# main navigation</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Main navigation</span></span>
+<span class="giallo-l"><span> main_nav_items = [</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/&quot;, name = &quot;Home&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/posts/&quot;, name = &quot;Posts&quot; },</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -152,7 +159,8 @@</span><span> main_nav_items = [</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/search/&quot;, name = &quot;Search&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/atom.xml&quot;, name = &quot;Feed&quot;, rel = &quot;alternate&quot; },</span></span>
+<span class="giallo-l"><span> ]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# footer navigation</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Footer navigation</span></span>
+<span class="giallo-l"><span> footer_nav_items = [</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/&quot;, name = &quot;Home&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/posts/&quot;, name = &quot;Posts&quot; },</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -162,56 +170,65 @@</span><span> footer_nav_items = [</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/search/&quot;, name = &quot;Search&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/atom.xml&quot;, name = &quot;Feed&quot;, rel = &quot;alternate&quot; },</span></span>
+<span class="giallo-l"><span> ]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# gallery</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# show also images from posts in gallery</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Gallery</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Show also images from posts in gallery</span></span>
+<span class="giallo-l"><span> gallery_show_posts = true</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# feedback</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# show feedback email in posts</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Feedback</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Show feedback email in posts</span></span>
+<span class="giallo-l"><span> feedback_email_enabled = true</span></span>
+<span class="giallo-l"><span> feedback_email_address = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }</span></span>
+<span class="giallo-l"><span> feedback_email_address_wildcard = true</span></span>
+<span class="giallo-l"><span> feedback_email_address_wildcard_postfix = &quot;.monoplain&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard for replay contexts, cross-site comments and event RSVPs.</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#  The h-card is visible only for screen reader and is attachted to all page footer if enabled</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#  Not in used keys are commented out</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#  Validate the h-card with &lt;https://indiewebify.me/validate-h-card/&gt;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Hcard for replay contexts, cross-site comments and event RSVPs</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# The h-card is visible only for screen reader and is attached to all page footer if enabled</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Not in used keys are commented out</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Validate the h-card with &lt;https://indiewebify.me/validate-h-card/&gt;</span></span>
+<span class="giallo-l"><span> hcard_enabled = true</span></span>
+<span class="giallo-l"><span> hcard_name = &quot;Simon Gattner&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_honorific_prefix=&quot;Dr.&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_given_name=&quot;Sally&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_additional_name=&quot;K.&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_family_name=&quot;Ride&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_honorific_suffix=&quot;Ph.D.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_honorific_prefix = &quot;Dr.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_given_name = &quot;Sally&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_additional_name = &quot;K.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_family_name = &quot;Ride&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_honorific_suffix = &quot;Ph.D.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span> hcard_nickname = &quot;exiguus&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_org=&quot;Sally Ride Science&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_photo=&quot;Sally_Ride_(1984).jpg&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_org = &quot;Sally Ride Science&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_photo = &quot;Sally_Ride_(1984).jpg&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span> hcard_urls = [</span></span>
+<span class="giallo-l"><span>   [&quot;https://www.gattner.name&quot;, &quot;Homepage&quot;],</span></span>
+<span class="giallo-l"><span>   [&quot;https://github.com/exiguus&quot;, &quot;Github Profile&quot;],</span></span>
+<span class="giallo-l"><span> ]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_emails=[</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#    [&quot;sally&quot;, &quot;example&quot;, &quot;com&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_emails = [</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   [&quot;Sally&quot;, &quot;Example&quot;, &quot;Com&quot;]</span></span>
+<span class="giallo-l"><span> # ]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_tels=[</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#    [&quot;+1-800-555-0100&quot;, &quot;Work phone&quot;],</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#    [&quot;+1-800-555-0101&quot;, &quot;Mobile phone&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_tels = [</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   [&quot;+1-800-555-0100&quot;, &quot;Work Phone&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   [&quot;+1-800-555-0101&quot;, &quot;Mobile Phone&quot;]</span></span>
+<span class="giallo-l"><span> # ]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_street_address=&quot;123 Main st.&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_locality=&quot;Los Angeles&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_region=&quot;CA&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_region_title=&quot;California&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_postal_code=&quot;91316&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_country_name=&quot;U.S.A&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_bday=&quot;1951-05-26&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_category=&quot;physicist&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# hcard_note=&quot;First American woman in space.</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# post</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_street_address = &quot;123 Main St.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_locality = &quot;Los Angeles&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_region = &quot;CA&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_region_title = &quot;California&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_postal_code = &quot;91316&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_country_name = &quot;U.S.A&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_bday = &quot;1951-05-26&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_category = &quot;physicist&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_note = &quot;First American Woman in Space&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Post</span></span>
+<span class="giallo-l"><span> post_author_visible = true</span></span>
+<span class="giallo-l"><span> post_update_visible = true</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# robots.txt</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-#</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Robots.txt</span></span>
+<span class="giallo-l"><span> # Disallow: /pr-*</span></span>
+<span class="giallo-l"><span> # Disallow: */pr-*</span></span>
+<span class="giallo-l"><span> robots_disallows = [&quot; &quot;, &quot;/pr-*&quot;, &quot;*/pr-*&quot;, &quot;*/report/&quot;, &quot;*/report/*&quot;]</span></span></code></pre><h2 id="changes-between-v1-7-0-and-v1-8-0">Changes between v1.7.0 and v1.8.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index e085579e..f6f8dac2 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -1,7 +1,7 @@</span></span>
+<span class="giallo-l"><span> ##########</span></span>
+<span class="giallo-l"><span> # zola-monoplain Theme Config</span></span>
+<span class="giallo-l"><span> # Date: 2026-07-27</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Version: 1.6.0</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Version: 1.7.0</span></span>
+<span class="giallo-l"><span> ###</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> title = &quot;mono/plain; a11y=true&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -68,6 +68,9 @@</span><span> hcard_born_label = &quot;Born: &quot;</span></span>
+<span class="giallo-l"><span> hcard_category_label = &quot;Category: &quot;</span></span>
+<span class="giallo-l"><span> hcard_nickname_label = &quot;Nick: &quot;</span></span>
+<span class="giallo-l"><span> hcard_org_label = &quot;Org: &quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hentry_permalink_label = &quot;Permalink&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hentry_published_label = &quot;Published: &quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hentry_updated_label = &quot;Updated: &quot;</span></span>
+<span class="giallo-l"><span> feed_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span> feed_rss_title = &quot;RSS Feed&quot;</span></span>
+<span class="giallo-l"><span> footer_info = &quot;Information&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -100,6 +103,7 @@</span><span> post_feedback_email_text = &quot;Have thoughts or experiences you&#39;d like to share? I&#39;</span></span>
+<span class="giallo-l"><span> post_feedback_email_title = &quot;Feedback&quot;</span></span>
+<span class="giallo-l"><span> post_tags_title = &quot;Tags&quot;</span></span>
+<span class="giallo-l"><span> post_updated_label = &quot;Updated:&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_permalink_label = &quot;Post Permalink&quot;</span></span>
+<span class="giallo-l"><span> post_hero_copy = &quot;Picture by&quot;</span></span>
+<span class="giallo-l"><span> search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -205,3 +209,10 @@</span><span> hcard_urls = [</span></span>
+<span class="giallo-l"><span> # post</span></span>
+<span class="giallo-l"><span> post_author_visible = true</span></span>
+<span class="giallo-l"><span> post_update_visible = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# robots.txt</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Disallow: /pr-*</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Disallow: */pr-*</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+robots_disallows = [&quot; &quot;, &quot;/pr-*&quot;, &quot;*/pr-*&quot;, &quot;*/report/&quot;, &quot;*/report/*&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+robots_allows = [&quot;/&quot;]</span></span></code></pre><h2 id="changes-between-v1-6-0-and-v1-7-0">Changes between v1.6.0 and v1.7.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index 92eeac0c..e085579e 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -1,3 +1,9 @@</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+##########</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# zola-monoplain Theme Config</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Date: 2026-07-27</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# Version: 1.6.0</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+###</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span> title = &quot;mono/plain; a11y=true&quot;</span></span>
+<span class="giallo-l"><span> description = &quot;An accessible, monospace plain Zola Theme&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -57,6 +63,11 @@</span><span> a11y_taxonomy_list_label = &quot;Tag list&quot;</span></span>
+<span class="giallo-l"><span> debug_label = &quot;debug&quot;</span></span>
+<span class="giallo-l"><span> debug_summary = &quot;Debug&quot;</span></span>
+<span class="giallo-l"><span> draft_label = &quot;(Draft)&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_alt_photo = &quot;Photo of &quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_born_label = &quot;Born: &quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_category_label = &quot;Category: &quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_nickname_label = &quot;Nick: &quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_org_label = &quot;Org: &quot;</span></span>
+<span class="giallo-l"><span> feed_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span> feed_rss_title = &quot;RSS Feed&quot;</span></span>
+<span class="giallo-l"><span> footer_info = &quot;Information&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -67,6 +78,8 @@</span><span> footer_links_github_text = &quot;Github&quot;</span></span>
+<span class="giallo-l"><span> footer_links_github_title = &quot;Github page&quot;</span></span>
+<span class="giallo-l"><span> footer_links_mastodon_text = &quot;Mastodon&quot;</span></span>
+<span class="giallo-l"><span> footer_links_mastodon_title = &quot;Mastodon Page&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_email_text = &quot;E-Mail&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_email_title = &quot;Write me a message&quot;</span></span>
+<span class="giallo-l"><span> footer_links_theme_text = &quot;@exiguus mono/plain Zola&quot;</span></span>
+<span class="giallo-l"><span> footer_links_theme_title = &quot;Github Zola &#39;mono/plain; a11y=true&#39; Theme&quot;</span></span>
+<span class="giallo-l"><span> footer_links_zola_text = &quot;Zola&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -79,16 +92,14 @@</span><span> footer_theme = &quot;Theme by&quot;</span></span>
+<span class="giallo-l"><span> latest_images_title = &quot;Latest Images&quot;</span></span>
+<span class="giallo-l"><span> latest_posts_title = &quot;Latest Posts&quot;</span></span>
+<span class="giallo-l"><span> main_nav_label = &quot;Main Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-page_summary_desc = &quot;Page summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-post_author_aria_label = &quot;Author&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-post_author_prefix = &quot;By&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_author_aria_label = &quot;Post Authors&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_author_prefix = &quot;Author:&quot;</span></span>
+<span class="giallo-l"><span> post_created_label = &quot;Created:&quot;</span></span>
+<span class="giallo-l"><span> post_feedback_email_link_title = &quot;This email address has been obscured for security. Please click the link to reveal the actual address.&quot;</span></span>
+<span class="giallo-l"><span> post_feedback_email_text = &quot;Have thoughts or experiences you&#39;d like to share? I&#39;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#39;s start a conversation.&quot;</span></span>
+<span class="giallo-l"><span> post_feedback_email_title = &quot;Feedback&quot;</span></span>
+<span class="giallo-l"><span> post_tags_title = &quot;Tags&quot;</span></span>
+<span class="giallo-l"><span> post_updated_label = &quot;Updated:&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-post_summary_desc = &quot;Post summary&quot;</span></span>
+<span class="giallo-l"><span> post_hero_copy = &quot;Picture by&quot;</span></span>
+<span class="giallo-l"><span> search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -124,8 +135,11 @@</span><span> thumbnail_quality = 70</span></span>
+<span class="giallo-l"><span> thumbnail_default_size = 128</span></span>
+<span class="giallo-l"><span> thumbnail_sizes = [128, 256]</span></span>
+<span class="giallo-l"><span> # links</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-link_github_username = &quot;exiguus/zola-monoplain&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# github and the mastodon url can be used as web sign in because they contain rel=&quot;me&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#   to validate you might use https://indiewebify.me/validate-rel-me/</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+link_github_username = &quot;exiguus&quot;</span></span>
+<span class="giallo-l"><span> link_mastodon_url = &quot;https://toot.community/@exiguus&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+link_email = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }</span></span>
+<span class="giallo-l"><span> # main navigation</span></span>
+<span class="giallo-l"><span> main_nav_items = [</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/&quot;, name = &quot;Home&quot; },</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -153,3 +167,41 @@</span><span> feedback_email_enabled = true</span></span>
+<span class="giallo-l"><span> feedback_email_address = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }</span></span>
+<span class="giallo-l"><span> feedback_email_address_wildcard = true</span></span>
+<span class="giallo-l"><span> feedback_email_address_wildcard_postfix = &quot;.monoplain&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard for replay contexts, cross-site comments and event RSVPs.</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#  The h-card is visible only for screen reader and is attachted to all page footer if enabled</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#  Not in used keys are commented out</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#  Validate the h-card with &lt;https://indiewebify.me/validate-h-card/&gt;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_enabled = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_name = &quot;Simon Gattner&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_honorific_prefix=&quot;Dr.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_given_name=&quot;Sally&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_additional_name=&quot;K.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_family_name=&quot;Ride&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_honorific_suffix=&quot;Ph.D.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_nickname = &quot;exiguus&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_org=&quot;Sally Ride Science&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_photo=&quot;Sally_Ride_(1984).jpg&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+hcard_urls = [</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  [&quot;https://www.gattner.name&quot;, &quot;Homepage&quot;],</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  [&quot;https://github.com/exiguus&quot;, &quot;Github Profile&quot;],</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_emails=[</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#    [&quot;sally&quot;, &quot;example&quot;, &quot;com&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# ]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_tels=[</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#    [&quot;+1-800-555-0100&quot;, &quot;Work phone&quot;],</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#    [&quot;+1-800-555-0101&quot;, &quot;Mobile phone&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# ]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_street_address=&quot;123 Main st.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_locality=&quot;Los Angeles&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_region=&quot;CA&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_region_title=&quot;California&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_postal_code=&quot;91316&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_country_name=&quot;U.S.A&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_bday=&quot;1951-05-26&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_category=&quot;physicist&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# hcard_note=&quot;First American woman in space.</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+#</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# post</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_author_visible = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_update_visible = true</span></span></code></pre><h2 id="changes-between-v1-5-0-and-v1-6-0">Changes between v1.5.0 and v1.6.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index 828d8a89..92eeac0c 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -71,16 +71,25 @@</span><span> footer_links_theme_text = &quot;@exiguus mono/plain Zola&quot;</span></span>
+<span class="giallo-l"><span> footer_links_theme_title = &quot;Github Zola &#39;mono/plain; a11y=true&#39; Theme&quot;</span></span>
+<span class="giallo-l"><span> footer_links_zola_text = &quot;Zola&quot;</span></span>
+<span class="giallo-l"><span> footer_links_zola_title = &quot;Your one-stop static site engine&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_last_update = &quot;Last update:&quot;</span></span>
+<span class="giallo-l"><span> footer_made = &quot;Made with love&quot;</span></span>
+<span class="giallo-l"><span> footer_nav_label = &quot;Footer Navigation&quot;</span></span>
+<span class="giallo-l"><span> footer_powered_by = &quot;Powered by&quot;</span></span>
+<span class="giallo-l"><span> footer_theme = &quot;Theme by&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+latest_images_title = &quot;Latest Images&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+latest_posts_title = &quot;Latest Posts&quot;</span></span>
+<span class="giallo-l"><span> main_nav_label = &quot;Main Navigation&quot;</span></span>
+<span class="giallo-l"><span> page_summary_desc = &quot;Page summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_author_aria_label = &quot;Author&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_author_prefix = &quot;By&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_created_label = &quot;Created:&quot;</span></span>
+<span class="giallo-l"><span> post_feedback_email_link_title = &quot;This email address has been obscured for security. Please click the link to reveal the actual address.&quot;</span></span>
+<span class="giallo-l"><span> post_feedback_email_text = &quot;Have thoughts or experiences you&#39;d like to share? I&#39;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#39;s start a conversation.&quot;</span></span>
+<span class="giallo-l"><span> post_feedback_email_title = &quot;Feedback&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_tags_title = &quot;Tags&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_updated_label = &quot;Updated:&quot;</span></span>
+<span class="giallo-l"><span> post_summary_desc = &quot;Post summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_hero_copy = &quot;Picture by&quot;</span></span>
+<span class="giallo-l"><span> search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_placeholder = &quot;Search ↵&quot;</span></span></code></pre><h2 id="changes-between-v1-4-0-and-v1-5-0">Changes between v1.4.0 and v1.5.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<p><em>No changes</em> were made</p>
+<h2 id="changes-between-v1-3-2-and-v1-4-0">Changes between v1.3.2 and v1.4.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<p><em>No changes</em> were made</p>
+<h2 id="changes-between-v1-3-1-and-v1-3-2">Changes between v1.3.1 and v1.3.2</h2>
+<p>(<code>config.toml</code> diff)</p>
+<p><em>No changes</em> were made</p>
+<h2 id="changes-between-v1-3-0-and-v1-3-1">Changes between v1.3.0 and v1.3.1</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index b0f3bdb5..828d8a89 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -41,55 +41,57 @@</span><span> taxonomies = [</span></span>
+<span class="giallo-l"><span> ]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> [markdown]</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Whether to do syntax highlighting</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-highlight_code = true</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-highlight_theme = &quot;dracula&quot;</span></span>
+<span class="giallo-l"><span> render_emoji = true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+[markdown.highlighting]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+theme = &quot;dracula&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span> [slugify]</span></span>
+<span class="giallo-l"><span> paths = &quot;on&quot;</span></span>
+<span class="giallo-l"><span> taxonomies = &quot;on&quot;</span></span>
+<span class="giallo-l"><span> anchors = &quot;on&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> [translations]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+a11y_search_results_label = &quot;Search results&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+a11y_taxonomy_list_label = &quot;Tag list&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+debug_label = &quot;debug&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+debug_summary = &quot;Debug&quot;</span></span>
+<span class="giallo-l"><span> draft_label = &quot;(Draft)&quot;</span></span>
+<span class="giallo-l"><span> feed_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span> feed_rss_title = &quot;RSS Feed&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-search_form_legend = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_info = &quot;Information&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links = &quot;Links&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_atom_text = &quot;Atom&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_github_text = &quot;Github&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_github_title = &quot;Github page&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_mastodon_text = &quot;Mastodon&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_mastodon_title = &quot;Mastodon Page&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_theme_text = &quot;@exiguus mono/plain Zola&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_theme_title = &quot;Github Zola &#39;mono/plain; a11y=true&#39; Theme&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_zola_text = &quot;Zola&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_links_zola_title = &quot;Your one-stop static site engine&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_made = &quot;Made with love&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_nav_label = &quot;Footer Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_powered_by = &quot;Powered by&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_theme = &quot;Theme by&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+main_nav_label = &quot;Main Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+page_summary_desc = &quot;Page summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_feedback_email_link_title = &quot;This email address has been obscured for security. Please click the link to reveal the actual address.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_feedback_email_text = &quot;Have thoughts or experiences you&#39;d like to share? I&#39;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#39;s start a conversation.&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_feedback_email_title = &quot;Feedback&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+post_summary_desc = &quot;Post summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_placeholder = &quot;Search ↵&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+search_form_legend = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span> search_form_submit = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_results_empty = &quot;No results&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-toc_summary = &quot;Table of contents&quot;</span></span>
+<span class="giallo-l"><span> skip_nav_label = &quot;Skip Navigation&quot;</span></span>
+<span class="giallo-l"><span> skip_nav_link_content = &quot;Skip to content&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-skip_nav_link_toc = &quot;Skip to table of contents&quot;</span></span>
+<span class="giallo-l"><span> skip_nav_link_nav = &quot;Skip to navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-main_nav_label = &quot;Main Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_nav_label = &quot;Footer Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links = &quot;Links&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_info = &quot;Information&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_github_title = &quot;Github page&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_github_text = &quot;Github&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_mastodon_title = &quot;Mastodon Page&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_mastodon_text = &quot;Mastodon&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_atom_text = &quot;Atom&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_zola_title = &quot;Your one-stop static site engine&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_zola_text = &quot;Zola&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_theme_title = &quot;Github Zola &#39;mono/plain; a11y=true&#39; Theme&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_links_theme_text = &quot;@exiguus mono/plain Zola&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_theme = &quot;Theme by&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_powered_by = &quot;Powered by&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-footer_made = &quot;Made with love&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-debug_label = &quot;debug&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-debug_summary = &quot;Debug&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-post_summary_desc = &quot;Post summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-page_summary_desc = &quot;Page summary&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-a11y_taxonomy_list_label = &quot;Tag list&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-a11y_search_results_label = &quot;Search results&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+skip_nav_link_toc = &quot;Skip to table of contents&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+toc_summary = &quot;Table of contents&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> [extra]</span></span>
+<span class="giallo-l"><span> # show a debug section (containing the page data) at the top of the page</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -136,3 +138,9 @@</span><span> footer_nav_items = [</span></span>
+<span class="giallo-l"><span> # gallery</span></span>
+<span class="giallo-l"><span> # show also images from posts in gallery</span></span>
+<span class="giallo-l"><span> gallery_show_posts = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# feedback</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# show feedback email in posts</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feedback_email_enabled = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feedback_email_address = { local_part = &quot;monoplain&quot;, domain_name = &quot;0x38&quot;, tld = &quot;de&quot; }</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feedback_email_address_wildcard = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feedback_email_address_wildcard_postfix = &quot;.monoplain&quot;</span></span></code></pre><h2 id="changes-between-v1-2-1-and-v1-3-0">Changes between v1.2.1 and v1.3.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index 89e836d8..b0f3bdb5 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -15,7 +15,8 @@</span><span> build_search_index = true</span></span>
+<span class="giallo-l"><span> default_language = &quot;en&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # atom feed</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-feed_filenames = [&quot;atom.xml&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+generate_feeds = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feed_filenames = [&quot;atom.xml&quot;, &quot;rss.xml&quot;]</span></span>
+<span class="giallo-l"><span> feed_limit = 50</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # When set to &quot;false&quot;, Sitemap.xml is not generated</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -54,6 +55,7 @@</span><span> anchors = &quot;on&quot;</span></span>
+<span class="giallo-l"><span> [translations]</span></span>
+<span class="giallo-l"><span> draft_label = &quot;(Draft)&quot;</span></span>
+<span class="giallo-l"><span> feed_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feed_rss_title = &quot;RSS Feed&quot;</span></span>
+<span class="giallo-l"><span> search_form_legend = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_placeholder = &quot;Search ↵&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -111,7 +113,7 @@</span><span> thumbnail_quality = 70</span></span>
+<span class="giallo-l"><span> thumbnail_default_size = 128</span></span>
+<span class="giallo-l"><span> thumbnail_sizes = [128, 256]</span></span>
+<span class="giallo-l"><span> # links</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-link_github_username = &quot;exiguus/zola-monospace&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+link_github_username = &quot;exiguus/zola-monoplain&quot;</span></span>
+<span class="giallo-l"><span> link_mastodon_url = &quot;https://toot.community/@exiguus&quot;</span></span>
+<span class="giallo-l"><span> # main navigation</span></span>
+<span class="giallo-l"><span> main_nav_items = [</span></span></code></pre><h2 id="changes-between-v1-2-0-and-v1-2-1">Changes between v1.2.0 and v1.2.1</h2>
+<p>(<code>config.toml</code> diff)</p>
+<p><em>No changes</em> were made</p>
+<h2 id="changes-between-v1-1-0-and-v1-2-0">Changes between v1.1.0 and v1.2.0</h2>
+<p>(<code>config.toml</code> diff)</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="diff"><span class="giallo-l"><span style="color: #6272A4;">diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">index 68ab9eec..89e836d8 100644</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">--- a/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">+++ b/themes/zola-monoplain/config.toml</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -7,12 +7,22 @@</span><span> base_url = &quot;https://exiguus.github.io/zola-monoplain&quot;</span></span>
+<span class="giallo-l"><span> # Whether to automatically compile all Sass files in the sass directory</span></span>
+<span class="giallo-l"><span> compile_sass = true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# When set to &quot;true&quot;, the generated HTML files are minified.</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+minify_html = false</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span> # Whether to build a search index to be used later on by a JavaScript library</span></span>
+<span class="giallo-l"><span> build_search_index = true</span></span>
+<span class="giallo-l"><span> default_language = &quot;en&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # atom feed</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-generate_feed = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feed_filenames = [&quot;atom.xml&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feed_limit = 50</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# When set to &quot;false&quot;, Sitemap.xml is not generated</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+generate_sitemap = true</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# When set to &quot;false&quot;, robots.txt is not generated</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+generate_robots_txt = true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> # The taxonomies to be rendered for the site and their configuration of the default languages</span></span>
+<span class="giallo-l"><span> # Example:</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -43,6 +53,7 @@</span><span> anchors = &quot;on&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span> [translations]</span></span>
+<span class="giallo-l"><span> draft_label = &quot;(Draft)&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+feed_atom_title = &quot;Atom Feed&quot;</span></span>
+<span class="giallo-l"><span> search_form_legend = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_label = &quot;Text to search&quot;</span></span>
+<span class="giallo-l"><span> search_form_input_placeholder = &quot;Search ↵&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -50,11 +61,12 @@</span><span> search_form_submit = &quot;Search&quot;</span></span>
+<span class="giallo-l"><span> search_form_clear = &quot;Clear&quot;</span></span>
+<span class="giallo-l"><span> search_results_empty = &quot;No results&quot;</span></span>
+<span class="giallo-l"><span> toc_summary = &quot;Table of contents&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-skipNav_label = &quot;Skip Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-skipNav_link_content = &quot;Skip to content&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-skipNav_link_toc = &quot;Skip to table of contents&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-skipNav_link_nav = &quot;Skip to navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-mainNav_label = &quot;Main Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+skip_nav_label = &quot;Skip Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+skip_nav_link_content = &quot;Skip to content&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+skip_nav_link_toc = &quot;Skip to table of contents&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+skip_nav_link_nav = &quot;Skip to navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+main_nav_label = &quot;Main Navigation&quot;</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_nav_label = &quot;Footer Navigation&quot;</span></span>
+<span class="giallo-l"><span> footer_links = &quot;Links&quot;</span></span>
+<span class="giallo-l"><span> footer_info = &quot;Information&quot;</span></span>
+<span class="giallo-l"><span> footer_links_github_title = &quot;Github page&quot;</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -83,6 +95,7 @@</span><span> debug = false</span></span>
+<span class="giallo-l"><span> # meta</span></span>
+<span class="giallo-l"><span> tags = [&quot;zola&quot;, &quot;theme&quot;, &quot;a11y&quot;, &quot;accessible&quot;]</span></span>
+<span class="giallo-l"><span> authors = [&quot;Simon Gattner&quot;]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+timezone = &quot;Europe/Berlin&quot;</span></span>
+<span class="giallo-l"><span> # search</span></span>
+<span class="giallo-l"><span> search_enabled = true</span></span>
+<span class="giallo-l"><span> # images</span></span>
+<span class="giallo-l"><span style="color: #6272A4;">@@ -99,13 +112,21 @@</span><span> thumbnail_default_size = 128</span></span>
+<span class="giallo-l"><span> thumbnail_sizes = [128, 256]</span></span>
+<span class="giallo-l"><span> # links</span></span>
+<span class="giallo-l"><span> link_github_username = &quot;exiguus/zola-monospace&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# link_twitter_username = &quot;&quot;</span></span>
+<span class="giallo-l"><span> link_mastodon_url = &quot;https://toot.community/@exiguus&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-# menu</span></span>
+<span class="giallo-l"><span style="color: #FF5555;">-menu_links = [</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# main navigation</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+main_nav_items = [</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { url = &quot;$BASE_URL/&quot;, name = &quot;Home&quot; },</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { url = &quot;$BASE_URL/posts/&quot;, name = &quot;Posts&quot; },</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { url = &quot;$BASE_URL/about/&quot;, name = &quot;About&quot; },</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { url = &quot;$BASE_URL/search/&quot;, name = &quot;Search&quot; },</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { url = &quot;$BASE_URL/atom.xml&quot;, name = &quot;Feed&quot;, rel = &quot;alternate&quot; },</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+]</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+# footer navigation</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+footer_nav_items = [</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/&quot;, name = &quot;Home&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/posts/&quot;, name = &quot;Posts&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/gallery/&quot;, name = &quot;Gallery&quot; },</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">+  { url = &quot;$BASE_URL/about/&quot;, name = &quot;About&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/tags/&quot;, name = &quot;Tags&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/search/&quot;, name = &quot;Search&quot; },</span></span>
+<span class="giallo-l"><span>   { url = &quot;$BASE_URL/atom.xml&quot;, name = &quot;Feed&quot;, rel = &quot;alternate&quot; },</span></span></code></pre> </section></main>
+      
+      
+    </div>
+    <nav id="footer-nav" aria-label="Footer Navigation">
+  <ul>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/"> Home </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/posts/"> Posts </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/gallery/"> Gallery </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/about/"> About </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/tags/"> Tags </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/search/"> Search </a>
+      </li>
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml" rel="alternate"> Feed </a>
+      </li>
+    </ul>
+</nav>
+<footer>
+  <h2 id="footer-links" class="sr-only">Links</h2>
+  <ul aria-labelledby="footer-links">
+     <li>
+      <a href="https://github.com/exiguus"
+        title="Github page" rel="me">
+        <span class="sr-only">Github</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-github" />
+</svg>
+ </span>
+      </a>
+    </li>
+     <li>
+      <a href="&lt;https:&#x2F;&#x2F;toot.community&#x2F;@exiguus&gt;" title="Mastodon Page" rel="me">
+        <span class="sr-only">Mastodon</span>
+        <span aria-hidden="true">
+           
+<svg width="32" height="32">
+  <use xlink:href="#tabler-brand-mastodon" />
+</svg>
+
+        </span>
+      </a>
+    </li>
+      <li>
+      <a 
+href="mailto:invalid\(local\)part@example.org"
+ 
+data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
+
+        title="Write me a message" rel="me">
+        <span class="sr-only">E-Mail</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-mail-opened" />
+</svg>
+ </span>
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://exiguus.github.io/zola-monoplain/atom.xml"
+        title="Atom Feed" rel="alternate">
+        <span class="sr-only">Atom</span>
+        <span aria-hidden="true">  
+<svg width="32" height="32">
+  <use xlink:href="#tabler-rss" />
+</svg>
+ </span>
+      </a>
+    </li>
+  </ul>
+  <h2 id="footer-info" class="sr-only">Information</h2>
+  <p>
+    © mono&#x2F;plain; a11y=true 2026  <br />Powered by
+    <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
+    <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
+    <i class="sr-only">Last update:</i>
+    <small>2026-08-02 00:04:46 Europe&#x2F;Berlin</small>
+  </p> <figure>
+  
+<div
+  class="h-card"
+>
+  <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
+      >Nick: exiguus</div
+    >
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;www.gattner.name"
+        >Homepage</a
+      >
+    </div>
+    <div class="p-url">
+      <a class="u-url" href="https:&#x2F;&#x2F;github.com&#x2F;exiguus"
+        >Github Profile</a
+      >
+    </div>
+  </div>
+</div> 
+</figure>
+</footer>
+<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-RrSRJubaifgb0IuRFNuRVHkxgMsEfOpulb7ts8mUAKAOjONe7GBpasRxecTL+OTk" defer="defer"></script>
+  </body>
+
+</html>
