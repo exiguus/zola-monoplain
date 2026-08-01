@@ -24,7 +24,7 @@ accessible" />
   content="#000000"
   media="(prefers-color-scheme: dark)"
 />
-<meta name="build" content="2026-08-01T18:28:35.830344454+00:00" />
+<meta name="build" content="2026-08-01T20:49:24.915597169+00:00" />
 <meta
   property="og:title"
   content="mono&#x2F;plain; a11y=true | Feedback"
@@ -114,34 +114,39 @@ accessible" />
 </nav>
 <div>
       <main id="main">
-         <header>
+         <div class="h-entry">
+  <header>
   
 
 
-  <h1>
+  <h1 class="p-name">
     Feedback
     
   </h1>
 
   <p>
     Created:
-    <date>2025-06-17</date>
+    <time class="dt-published" datetime="2025-06-17">2025-06-17</time>
   </p><p>Updated:
-      <date>2026-07-12</date>
-    </p>
+    <time class="dt-updated" datetime="2026-07-12">2026-07-12</time>
+  </p>
   
-      <div
-        
-        aria-label="Post Authors"
-      >
-        <span>Author:</span>
-          
-<div class="h-card">
+
+  <p class="sr-only">
+    <a href="https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;feedback&#x2F;" class="u-url">Post Permalink</a>
+  </p>
+  <div 
+    aria-label="Post Authors">
+    <span>Author:</span>
+    
+<div
+  class="h-card p-author"
+>
   <div><div class="p-name">Simon Gattner</div>
   </div>
 </div> 
-          
-      </div>
+    
+  </div>
 
   <nav aria-labelledby="toc">
   <details aria-labelledby="toc" open="true">
@@ -173,7 +178,56 @@ accessible" />
 </nav>
 
 
-</header><h2 id="introduction">Introduction</h2>
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Feedback","description": "Feedback Email for mono&#x2F;plain theme","articleBody": "&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;This post explains the feedback email feature in the mono&#x2F;plain theme.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is not a live feedback form. It documents how the feedback email setup works.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Feedback matters. Since the theme currently has no built-in comment section, email is the default feedback channel.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;&#x2F;h2&gt;
+&lt;p&gt;You can configure the feedback email address in your site &lt;code&gt;config.toml&lt;&#x2F;code&gt;. The following options are available:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;translations&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;post_feedback_email_link_title = &amp;quot;This email address has been obscured for security. Please click the link to reveal the actual address.&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;post_feedback_email_text = &amp;quot;Have thoughts or experiences you&amp;#39;d like to share? I&amp;#39;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&amp;#39;s start a conversation.&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;post_feedback_email_title = &amp;quot;Feedback&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# feedback&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_enabled = true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_address = { local_part = &amp;quot;monoplain&amp;quot;, domain_name = &amp;quot;0x38&amp;quot;, tld = &amp;quot;de&amp;quot; }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_address_wildcard = true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_address_wildcard_postfix = &amp;quot;.monoplain&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;By default the feedback email block is controlled globally via &lt;code&gt;config.extra.feedback_email_enabled&lt;&#x2F;code&gt;.
+Per-post toggling is not implemented in the current templates.
+You can also customize the text and title of the feedback email link by modifying the &lt;code&gt;translations&lt;&#x2F;code&gt; section in your &lt;code&gt;config.toml&lt;&#x2F;code&gt; file.
+There is also a &lt;code&gt;feedback_email_address_wildcard&lt;&#x2F;code&gt; option that allows you to use a wildcard for the email address. This is useful if you want to use a different email address for each post. And you can set a postfix for the email address with &lt;code&gt;feedback_email_address_wildcard_postfix&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Fully configured, the feedback email link will look like this:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_address = { local_part = &amp;quot;blog&amp;quot;, domain_name = &amp;quot;example&amp;quot;, tld = &amp;quot;org&amp;quot; }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_address_wildcard = true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt;feedback_email_address_wildcard_postfix = &amp;quot;.blog-post&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This will result in the email address &lt;code&gt;feedback.blog-post@example.org&lt;&#x2F;code&gt; for the current page.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;&#x2F;h2&gt;
+&lt;p&gt;See next section for an example of the feedback email link in action.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;template-macro&quot;&gt;Template Macro&lt;&#x2F;h2&gt;
+&lt;p&gt;The feedback component now uses a reusable Tera macro called &lt;code&gt;obfuscate_mail&lt;&#x2F;code&gt; from &lt;code&gt;templates&#x2F;macros&#x2F;email.html&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{&#x2F;* email::obfuscate_mail(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  local_part=local_part,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  domain_name=config.extra.feedback_email_address.domain_name,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  tld=config.extra.feedback_email_address.tld,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  title=trans(key=&amp;quot;post_feedback_email_link_title&amp;quot;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;) *&#x2F;}}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This keeps the obfuscation logic in one place and makes reuse in other templates easier.&lt;&#x2F;p&gt;
+","datePublished": "2025-06-17","dateModified": "2026-07-12","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;feedback&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;feedback&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Feedback","E-Mail","Zola","Theme","Markdown","SSG","Static Site Generator"],
+  }
+</script> 
+</header>
+<div class="e-content">
+    <h2 id="introduction">Introduction</h2>
 <p>This post explains the feedback email feature in the mono/plain theme.</p>
 <blockquote>
 <p>This is not a live feedback form. It documents how the feedback email setup works.</p>
@@ -212,13 +266,13 @@ There is also a <code>feedback_email_address_wildcard</code> option that allows 
 <span class="giallo-l"><span>  title=trans(key=&quot;post_feedback_email_link_title&quot;)</span></span>
 <span class="giallo-l"><span>) */}}</span></span></code></pre>
 <p>This keeps the obfuscation logic in one place and makes reuse in other templates easier.</p>
-   <section aria-labelledby="latest-feedback">
+ </div>   <section aria-labelledby="latest-feedback">
   <h1 id="latest-feedback">Feedback</h1>
   <p>Have thoughts or experiences you&#x27;d like to share? I&#x27;d love to hear from you! Whether you agree, disagree, or have a different perspective, your feedback is always welcome. Drop me an email and let&#x27;s start a conversation.</p>
   <p>
     
 <a 
-href="mailto:invalid\(local)\part@example\.org"
+href="mailto:invalid\(local\)part@example.org"
  title="This email address has been obscured for security. Please click the link to reveal the actual address."  
 data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
 >
@@ -234,43 +288,57 @@ data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#
   <ul aria-labelledby="tags">
     
     <li aria-label="Feedback"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/feedback"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/feedback"
         >Feedback</a
       ></li
     >
     
     <li aria-label="E-Mail"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/e-mail"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/e-mail"
         >E-Mail</a
       ></li
     >
     
     <li aria-label="Zola"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/zola"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/zola"
         >Zola</a
       ></li
     >
     
     <li aria-label="Theme"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/theme"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/theme"
         >Theme</a
       ></li
     >
     
     <li aria-label="Markdown"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/markdown"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/markdown"
         >Markdown</a
       ></li
     >
     
     <li aria-label="SSG"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/ssg"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/ssg"
         >SSG</a
       ></li
     >
     
     <li aria-label="Static Site Generator"
-      ><a href="https://exiguus.github.io/zola-monoplain/tags/static-site-generator"
+      ><a
+        class="p-category"
+        href="https://exiguus.github.io/zola-monoplain/tags/static-site-generator"
         >Static Site Generator</a
       ></li
     >
@@ -279,32 +347,84 @@ data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#
 </section>
 
 
-</main>
+</div></main>
        <aside>
   <section aria-labelledby="latest-images">
   <h1 id="latest-images">Latest Images</h1>
   <ul aria-labelledby="latest-images">
-          <li
+        <li
+      aria-labelledby="post-image-2026-07-11-images-1"
+    >
+      <a
+        href="https://exiguus.github.io/zola-monoplain/posts/images/"
+        title="Images - 2026-07-11"
+      >
+        <figure class="h-entry">
+          <div class="thumbnail">
+            <img width="1600" height="1200" alt="Images - 2026-07-11" title="Images - 2026-07-11"
+  src="https://exiguus.github.io/zola-monoplain/processed_images/hero.3dde751228455ab1.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/hero.38af0c243d8cf368.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/hero.955bd33d4306445f.webp 256w" class="u-photo"
+  loading="lazy" />
+</div>
+          <figcaption
+            id="post-image-2026-07-11-images-1"
+          >
+            <p class="h-name">Images</p>
+            <p>
+              <time class="dt-published" datetime="2026-07-11"
+                >2026-07-11</time
+              ></p>
+            <p class="p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Images</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#Shortcodes</span>, <span class="p-name">#Templates</span></p>
+            <p class="u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/images/</p>
+            <p class="e-summary">How images work in mono&#x2F;plain and how to use them in posts and templates</p>
+          </figcaption>
+        </figure>
+      </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Images","description": "How images work in mono&#x2F;plain and how to use them in posts and templates","datePublished": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;images&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;images&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Images","Markdown","Shortcodes","Templates"],
+  }
+</script> 
+    </li>
+       <li
       aria-labelledby="post-image-2025-05-03-opengraph-1"
     >
       <a
         href="https://exiguus.github.io/zola-monoplain/posts/opengraph/"
         title="Open Graph Preview - 2025-05-03"
       >
-        <figure>
+        <figure class="h-entry">
           <div class="thumbnail">
             <img width="960" height="720" alt="Open Graph Preview - 2025-05-03" title="Open Graph Preview - 2025-05-03"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.56c88dd49ee185a6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.cf8aa7476a82dcb4.webp 256w" class=""
+  src="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.9ccbe74db09502e1.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.56c88dd49ee185a6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/opengraph-preview-image.cf8aa7476a82dcb4.webp 256w" class="u-photo"
   loading="lazy" />
 </div>
           <figcaption
             id="post-image-2025-05-03-opengraph-1"
           >
-            Open Graph Preview
-            <date>2025-05-03</date>
+            <p class="h-name">Open Graph Preview</p>
+            <p>
+              <time class="dt-published" datetime="2025-05-03"
+                >2025-05-03</time
+              ><time class="dt-updated" datetime="2026-07-11"
+                >2026-07-11</time
+              ></p>
+            <p class="p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#Open Graph</span>, <span class="p-name">#Preview Image</span></p>
+            <p class="u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/opengraph/</p>
+            <p class="e-summary">Open Graph Preview by example</p>
           </figcaption>
         </figure>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Open Graph Preview","description": "Open Graph Preview by example","datePublished": "2025-05-03","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;opengraph&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;opengraph&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Markdown","Open Graph","Preview Image"],
+  }
+</script> 
     </li>
           <li
       aria-labelledby="post-image-2024-06-08-shortcodes-1"
@@ -313,20 +433,36 @@ data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#
         href="https://exiguus.github.io/zola-monoplain/posts/shortcodes/"
         title="Shortcodes - 2024-06-08"
       >
-        <figure>
+        <figure class="h-entry">
           <div class="thumbnail">
             <img width="2488" height="1866" alt="Shortcodes - 2024-06-08" title="Shortcodes - 2024-06-08"
-  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.babf706ac8aebed6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.067baa4a7c9016f4.webp 256w" class=""
+  src="https://exiguus.github.io/zola-monoplain/processed_images/example-image.8f766e8c2df93dcf.webp" srcset="https://exiguus.github.io/zola-monoplain/processed_images/example-image.babf706ac8aebed6.webp 128w , https://exiguus.github.io/zola-monoplain/processed_images/example-image.067baa4a7c9016f4.webp 256w" class="u-photo"
   loading="lazy" />
 </div>
           <figcaption
             id="post-image-2024-06-08-shortcodes-1"
           >
-            Shortcodes
-            <date>2024-06-08</date>
+            <p class="h-name">Shortcodes</p>
+            <p>
+              <time class="dt-published" datetime="2024-06-08"
+                >2024-06-08</time
+              ><time class="dt-updated" datetime="2026-07-28"
+                >2026-07-28</time
+              ></p>
+            <p class="p-author h-card"><span class="p-name">Simon Gattner</span>, <span class="p-name">exiguus</span></p>
+            <p class="p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#Shortcodes</span>, <span class="p-name">#Images</span>, <span class="p-name">#Details</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#Icons</span>, <span class="p-name">#Youtube</span>, <span class="p-name">#Spotify</span>, <span class="p-name">#Email</span>, <span class="p-name">#Phone</span>, <span class="p-name">#h-card</span>, <span class="p-name">#h-entry</span></p>
+            <p class="u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/shortcodes/</p>
+            <p class="e-summary">Shortcodes by example</p>
           </figcaption>
         </figure>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Shortcodes","description": "Shortcodes by example","datePublished": "2024-06-08","dateModified": "2026-07-28","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;shortcodes&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;shortcodes&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"},{"@type": "Person", "name": "exiguus"}],"keywords": ["Zola","Theme","Markdown","Shortcodes","Images","Details","Markdown","Icons","Youtube","Spotify","Email","Phone","h-card","h-entry"],
+  }
+</script> 
     </li>
       </ul>
 </section>
@@ -336,93 +472,165 @@ data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#
   <ul aria-labelledby="latest-posts">
     <li aria-labelledby="post-2026-07-31-formatter-1">
       <a href="https://exiguus.github.io/zola-monoplain/posts/formatter/" title="Formatter">
-        <article>
+        <article class="h-entry">
           <header id="post-2026-07-31-formatter-1">
-            <h1>Formatter</h1>
+            <h1 class="h-name">Formatter</h1>
             
             <p>
-              <date> 2026-07-31 </date>
-            </p>
+              <time class="dt-published" datetime="2026-07-31">
+                2026-07-31
+              </time></p>
+            <p class="sr-only p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="sr-only p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Front Matter</span>, <span class="p-name">#Metadata</span>, <span class="p-name">#Configuration</span></p>
+            <p class="sr-only u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/formatter/</p>
           </header>
-          <p>Front matter fields: common usage in theme and blog, plus all Zola options</p>
+          <p class="e-summary">Front matter fields: common usage in theme and blog, plus all Zola options</p>
           
         </article>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Formatter","description": "Front matter fields: common usage in theme and blog, plus all Zola options","datePublished": "2026-07-31","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;formatter&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;formatter&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Front Matter","Metadata","Configuration"],
+  }
+</script> 
     </li>
     <li aria-labelledby="post-2026-07-12-development-2">
       <a href="https://exiguus.github.io/zola-monoplain/posts/development/" title="Development">
-        <article>
+        <article class="h-entry">
           <header id="post-2026-07-12-development-2">
-            <h1>Development</h1>
+            <h1 class="h-name">Development</h1>
             
             <p>
-              <date> 2026-07-12 </date>
-            </p>
+              <time class="dt-published" datetime="2026-07-12">
+                2026-07-12
+              </time></p>
+            <p class="sr-only p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="sr-only p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Development</span>, <span class="p-name">#Templates</span>, <span class="p-name">#Debugging</span>, <span class="p-name">#Accessibility</span>, <span class="p-name">#Testing</span>, <span class="p-name">#Release</span></p>
+            <p class="sr-only u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/development/</p>
           </header>
-          <p>Set up a local development environment for Zola theme work</p>
+          <p class="e-summary">Set up a local development environment for Zola theme work</p>
           
         </article>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Development","description": "Set up a local development environment for Zola theme work","datePublished": "2026-07-12","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;development&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;development&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Development","Templates","Debugging","Accessibility","Testing","Release"],
+  }
+</script> 
     </li>
     <li aria-labelledby="post-2026-07-11-images-3">
       <a href="https://exiguus.github.io/zola-monoplain/posts/images/" title="Images">
-        <article>
+        <article class="h-entry">
           <header id="post-2026-07-11-images-3">
-            <h1>Images</h1>
+            <h1 class="h-name">Images</h1>
             
             <p>
-              <date> 2026-07-11 </date>
-            </p>
+              <time class="dt-published" datetime="2026-07-11">
+                2026-07-11
+              </time></p>
+            <p class="sr-only p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="sr-only p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Images</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#Shortcodes</span>, <span class="p-name">#Templates</span></p>
+            <p class="sr-only u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/images/</p>
           </header>
-          <p>How images work in mono&#x2F;plain and how to use them in posts and templates</p>
+          <p class="e-summary">How images work in mono&#x2F;plain and how to use them in posts and templates</p>
           
         </article>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Images","description": "How images work in mono&#x2F;plain and how to use them in posts and templates","datePublished": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;images&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;images&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Images","Markdown","Shortcodes","Templates"],
+  }
+</script> 
     </li>
     <li aria-labelledby="post-2025-06-17-feedback-4">
       <a href="https://exiguus.github.io/zola-monoplain/posts/feedback/" title="Feedback">
-        <article>
+        <article class="h-entry">
           <header id="post-2025-06-17-feedback-4">
-            <h1>Feedback</h1>
+            <h1 class="h-name">Feedback</h1>
             
             <p>
-              <date> 2025-06-17 </date>
-            </p>
+              <time class="dt-published" datetime="2025-06-17">
+                2025-06-17
+              </time><time class="sr-only dt-updated" datetime="2026-07-12"
+                >2026-07-12</time
+              ></p>
+            <p class="sr-only p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="sr-only p-category"><span class="p-name">#Feedback</span>, <span class="p-name">#E-Mail</span>, <span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#SSG</span>, <span class="p-name">#Static Site Generator</span></p>
+            <p class="sr-only u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/feedback/</p>
           </header>
-          <p>Feedback Email for mono&#x2F;plain theme</p>
+          <p class="e-summary">Feedback Email for mono&#x2F;plain theme</p>
           
         </article>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Feedback","description": "Feedback Email for mono&#x2F;plain theme","datePublished": "2025-06-17","dateModified": "2026-07-12","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;feedback&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;feedback&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Feedback","E-Mail","Zola","Theme","Markdown","SSG","Static Site Generator"],
+  }
+</script> 
     </li>
     <li aria-labelledby="post-2025-05-03-opengraph-5">
       <a href="https://exiguus.github.io/zola-monoplain/posts/opengraph/" title="Open Graph Preview">
-        <article>
+        <article class="h-entry">
           <header id="post-2025-05-03-opengraph-5">
-            <h1>Open Graph Preview</h1>
+            <h1 class="h-name">Open Graph Preview</h1>
             
             <p>
-              <date> 2025-05-03 </date>
-            </p>
+              <time class="dt-published" datetime="2025-05-03">
+                2025-05-03
+              </time><time class="sr-only dt-updated" datetime="2026-07-11"
+                >2026-07-11</time
+              ></p>
+            <p class="sr-only p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="sr-only p-category"><span class="p-name">#Zola</span>, <span class="p-name">#Theme</span>, <span class="p-name">#Markdown</span>, <span class="p-name">#Open Graph</span>, <span class="p-name">#Preview Image</span></p>
+            <p class="sr-only u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/opengraph/</p>
           </header>
-          <p>Open Graph Preview by example</p>
+          <p class="e-summary">Open Graph Preview by example</p>
           
         </article>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Open Graph Preview","description": "Open Graph Preview by example","datePublished": "2025-05-03","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;opengraph&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;opengraph&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","Theme","Markdown","Open Graph","Preview Image"],
+  }
+</script> 
     </li>
     <li aria-labelledby="post-2024-06-15-ci-6">
       <a href="https://exiguus.github.io/zola-monoplain/posts/ci/" title="Continuous Integration">
-        <article>
+        <article class="h-entry">
           <header id="post-2024-06-15-ci-6">
-            <h1>Continuous Integration</h1>
+            <h1 class="h-name">Continuous Integration</h1>
             
             <p>
-              <date> 2024-06-15 </date>
-            </p>
+              <time class="dt-published" datetime="2024-06-15">
+                2024-06-15
+              </time><time class="sr-only dt-updated" datetime="2026-07-11"
+                >2026-07-11</time
+              ></p>
+            <p class="sr-only p-author h-card"><span class="p-name">Simon Gattner</span></p>
+            <p class="sr-only p-category"><span class="p-name">#Zola</span>, <span class="p-name">#CI</span>, <span class="p-name">#Continuous Integration</span>, <span class="p-name">#Deployment</span>, <span class="p-name">#Build</span>, <span class="p-name">#Github Actions</span></p>
+            <p class="sr-only u-url u-uid">https://exiguus.github.io/zola-monoplain/posts/ci/</p>
           </header>
-          <p>Continuous Integration by Example</p>
+          <p class="e-summary">Continuous Integration by Example</p>
           
         </article>
       </a>
+      
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting","headline": "Continuous Integration","description": "Continuous Integration by Example","datePublished": "2024-06-15","dateModified": "2026-07-11","url": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;ci&#x2F;","identifier": "https:&#x2F;&#x2F;exiguus.github.io&#x2F;zola-monoplain&#x2F;posts&#x2F;ci&#x2F;","author": [{"@type": "Person", "name": "Simon Gattner"}],"keywords": ["Zola","CI","Continuous Integration","Deployment","Build","Github Actions"],
+  }
+</script> 
     </li>
     
   </ul>
@@ -484,10 +692,10 @@ data-obfuscated-email="&#x3C;feedback.monoplain&#x40;&#8203;&#8203;0x38&#8203;&#
     </li>
       <li>
       <a 
-href="mailto:invalid\(local)\part@example\.org"
+href="mailto:invalid\(local\)part@example.org"
  
 data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#8203;de&#x3E;"
-"
+
         title="Write me a message" rel="me">
         <span class="sr-only">E-Mail</span>
         <span aria-hidden="true">  
@@ -511,15 +719,17 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
     </li>
   </ul>
   <h2 id="footer-info" class="sr-only">Information</h2>
-  <p aria-labelledby="footer-info">
+  <p>
     © mono&#x2F;plain; a11y=true 2026  <br />Powered by
     <a title="Your one-stop static site engine" href="https://getzola.org/">Zola</a>. Theme by
     <a title="Github Zola &#x27;mono&#x2F;plain; a11y=true&#x27; Theme" href="https://github.com/exiguus/zola-monoplain">@exiguus mono&#x2F;plain Zola</a>. Made with love.<br />
     <i class="sr-only">Last update:</i>
-    <small>2026-08-01 20:28:35 Europe&#x2F;Berlin</small>
+    <small>2026-08-01 22:49:24 Europe&#x2F;Berlin</small>
   </p> <figure>
   
-<div class="h-card">
+<div
+  class="h-card"
+>
   <div><div class="p-name">Simon Gattner</div><div class="p-nickname"
       >Nick: exiguus</div
     >
@@ -536,7 +746,8 @@ data-obfuscated-email="&#x3C;monoplain&#x40;&#8203;&#8203;0x38&#8203;&#x2E;&#820
   </div>
 </div> 
 </figure>
-</footer><script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-RrSRJubaifgb0IuRFNuRVHkxgMsEfOpulb7ts8mUAKAOjONe7GBpasRxecTL+OTk" defer="defer"></script>
+</footer>
+<script src="https://exiguus.github.io/zola-monoplain/js/main.js" integrity="sha384-RrSRJubaifgb0IuRFNuRVHkxgMsEfOpulb7ts8mUAKAOjONe7GBpasRxecTL+OTk" defer="defer"></script>
   </body>
 
 </html>
