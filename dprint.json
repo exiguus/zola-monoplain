@@ -38,6 +38,7 @@
   },
   "dockerfile": {},
   "excludes": [
+    "config.toml",
     ".rumdl.toml",
     "**/node_modules",
     "**/yarn-error.log",
