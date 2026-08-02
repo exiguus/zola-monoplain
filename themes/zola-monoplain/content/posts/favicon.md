@@ -19,11 +19,11 @@ These files override the theme's default static files. Zola copies your `static/
 
 The theme includes three favicon files in the `static` directory:
 
-| File          | Description                                                                                             | Image                             |
-| ------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `icon.svg`    | An SVG image used as the favicon for modern browsers that support SVG favicons.                         | ![SVG Favicon Example](/icon.svg) |
-| `icon.png`    | A 32x32 PNG image used as the favicon for most browsers.                                                | ![Icon Example](/icon.png)        |
-| `favicon.ico` | A traditional ICO file used as a fallback for older browsers. It is generated from the `icon.png` file. | ![Favicon Example](/favicon.ico)  |
+| File          | Description                                                                                             | Image                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `icon.svg`    | An SVG image used as the favicon for modern browsers that support SVG favicons.                         | ![SVG Favicon Example](../../icon.svg) <!-- rumdl-disable-line existing-relative-links --> |
+| `icon.png`    | A 32x32 PNG image used as the favicon for most browsers.                                                | ![Icon Example](../../icon.png) <!-- rumdl-disable-line existing-relative-links -->        |
+| `favicon.ico` | A traditional ICO file used as a fallback for older browsers. It is generated from the `icon.png` file. | ![Favicon Example](../../favicon.ico) <!-- rumdl-disable-line existing-relative-links -->  |
 
 ## How Favicons Work
 
@@ -38,8 +38,24 @@ As fallback for older browsers, it also includes a reference to `/favicon.ico` i
 The current theme uses the following link tags in the `<head>` section of your HTML:
 
 ```html
-<link rel="icon" href="/icon.svg" sizes="32x32" type="image/svg+xml" />
-<link rel="icon" href="/icon.png" sizes="32x32" />
+<link
+  rel="icon"
+  href="{{ get_url(path='icon.svg', trailing_slash=false)|safe }}"
+  sizes="32x32"
+  type="image/svg+xml"
+/>
+<link
+  rel="icon"
+  href="{{ get_url(path='icon.png', trailing_slash=false)|safe }}"
+  sizes="32x32"
+  type="image/png"
+/>
+<link
+  rel="icon"
+  href="{{ get_url(path='favicon.ico', trailing_slash=false)|safe }}"
+  sizes="32x32"
+  type="image/ico"
+/>
 ```
 
 ## Customize the Icons

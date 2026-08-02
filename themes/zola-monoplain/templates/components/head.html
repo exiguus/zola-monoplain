@@ -60,5 +60,21 @@ if robots_noindex %}
   href="{{ get_url(path='base.css',trailing_slash=false)|safe}}"
   media="screen"
 />
-<link rel="icon" href="/icon.png" sizes="32x32" />
-<link rel="icon" href="/icon.svg" sizes="32x32" type="image/svg+xml" />
+<link
+  rel="icon"
+  href="{{ get_url(path='icon.svg', trailing_slash=false)|safe }}"
+  sizes="32x32"
+  type="image/svg+xml"
+/>
+<link
+  rel="icon"
+  href="{{ get_url(path='icon.png', trailing_slash=false)|safe }}"
+  sizes="32x32"
+  type="image/png"
+/>
+<link
+  rel="icon"
+  href="{{ get_url(path='favicon.ico', trailing_slash=false)|safe }}"
+  sizes="32x32"
+  type="image/ico"
+/>
