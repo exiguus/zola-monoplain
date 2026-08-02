@@ -2,7 +2,7 @@
 title = "Quisque viverra"
 date = 2022-01-17
 [taxonomies]
-tags= ["Zola", "Theme", "gallery"]
+tags = ["Zola", "Theme", "gallery"]
 [extra]
 images= ["4.png"]
 +++

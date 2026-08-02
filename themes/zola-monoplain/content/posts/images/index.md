@@ -4,7 +4,7 @@ description = "How images work in mono/plain and how to use them in posts and te
 date = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Theme", "Images", "Markdown", "Shortcodes", "Templates"]
+tags = ["Zola", "Theme", "Images", "Markdown", "Shortcodes", "Templates"]
 [extra]
 images = ["hero.jpg"]
 hero_img = "hero.jpg"

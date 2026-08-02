@@ -5,7 +5,7 @@ date = 2025-06-17
 updated = 2026-07-12
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Feedback", "E-Mail", "Zola", "Theme", "Markdown", "SSG", "Static Site Generator"]
+tags = ["Feedback", "E-Mail", "Zola", "Theme", "Markdown", "SSG", "Static Site Generator"]
 +++
 
 ## Introduction

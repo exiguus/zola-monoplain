@@ -5,7 +5,7 @@ date = 2025-05-03
 updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Theme", "Markdown", "Open Graph", "Preview Image"]
+tags = ["Zola", "Theme", "Markdown", "Open Graph", "Preview Image"]
 [extra]
 images = ["opengraph-preview-image.jpg"]
 preview_img = "opengraph-preview-image.jpg"
@@ -28,7 +28,7 @@ description = "Open Graph Preview by example"
 date = 2025-05-03
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Theme", "Markdown", "Open Graph", "Preview Image"]
+tags = ["Zola", "Theme", "Markdown", "Open Graph", "Preview Image"]
 [extra]
 images = ["opengraph-preview-image.jpg"]
 preview_img = "opengraph-preview-image.jpg"

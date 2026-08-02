@@ -2,7 +2,7 @@
 title = "Suspendisse quis"
 date = 2023-01-29
 [taxonomies]
-tags= ["Zola", "Theme", "gallery"]
+tags = ["Zola", "Theme", "gallery"]
 [extra]
 images= ["2.png", "3.png"]
 +++

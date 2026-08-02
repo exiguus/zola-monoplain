@@ -5,7 +5,7 @@ date = 2024-06-15
 updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "CI", "Continuous Integration", "Deployment", "Build", "Github Actions"]
+tags = ["Zola", "CI", "Continuous Integration", "Deployment", "Build", "Github Actions"]
 +++
 
 ## Introduction

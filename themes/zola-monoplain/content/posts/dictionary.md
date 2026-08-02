@@ -5,7 +5,7 @@ date = 2024-06-09
 updated = 2026-07-11
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Markdown", "Translations", "Languages", "Dictionary"]
+tags = ["Zola", "Markdown", "Translations", "Languages", "Dictionary"]
 +++
 
 ## Introduction

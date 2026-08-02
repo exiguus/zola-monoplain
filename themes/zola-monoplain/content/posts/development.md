@@ -4,7 +4,7 @@ description = "Set up a local development environment for Zola theme work"
 date = 2026-07-12
 authors = ["Simon Gattner"]
 [taxonomies]
-tags= ["Zola", "Theme", "Development", "Templates", "Debugging", "Accessibility", "Testing", "Release"]
+tags = ["Zola", "Theme", "Development", "Templates", "Debugging", "Accessibility", "Testing", "Release"]
 +++
 
 ## Introduction

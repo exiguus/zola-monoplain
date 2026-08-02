@@ -2,7 +2,7 @@
 title = "Luctus dolor"
 date = 2023-01-30
 [taxonomies]
-tags= ["Zola", "Theme", "gallery"]
+tags = ["Zola", "Theme", "gallery"]
 [extra]
 images= ["1.png"]
 +++
