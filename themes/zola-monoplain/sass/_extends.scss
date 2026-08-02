@@ -89,7 +89,7 @@
   }
   @media (prefers-color-scheme: light) {
     color: currentColor !important;
-    filter: brightness(0.666) !important;
+    filter: brightness(0.5) !important;
     box-shadow: 0.0666rem 0.0666rem 0.0666rem 0.0666rem !important;
   }
 
@@ -106,10 +106,6 @@
     @media (prefers-color-scheme: dark) {
       background-color: currentColor;
       filter: blur(100vw) brightness(0.333) opacity(0.5);
-    }
-    @media (prefers-color-scheme: light) {
-      background-color: currentColor;
-      filter: blur(100vw) brightness(0.666) opacity(0.25);
     }
   }
 }

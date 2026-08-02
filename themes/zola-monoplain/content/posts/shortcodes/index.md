@@ -205,7 +205,7 @@ Examples:
   country_name="U.S.A",
   bday="1951-05-26",
   category="physicist",
-  note="First American woman in space. The image is from <https://en.wikipedia.org/wiki/File:Sally_Ride_(1984).jpg>: This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that: NASA material is not protected by copyright unless noted." <!-- rumdl-disable-line line-length -->
+  note="First American woman in space. The image is from <https://en.wikipedia.org/wiki/File:Sally_Ride_(1984).jpg>: This file is in the public domain in the United States because it was solely created by NASA."
 ) }}
 
 ```md
