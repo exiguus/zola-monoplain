@@ -53,6 +53,10 @@
         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/posts/favicon/</loc>
+        <lastmod>2026-08-02</lastmod>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/posts/feedback/</loc>
         <lastmod>2026-07-12</lastmod>
     </url>
@@ -127,6 +131,9 @@
         <loc>https://exiguus.github.io/zola-monoplain/tags/emojis/</loc>
     </url>
     <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/favicon/</loc>
+    </url>
+    <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/feedback/</loc>
     </url>
     <url>
@@ -149,6 +156,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/images/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/inkscape/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/languages/</loc>
@@ -182,6 +192,9 @@
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/static-site-generator/</loc>
+    </url>
+    <url>
+        <loc>https://exiguus.github.io/zola-monoplain/tags/svg/</loc>
     </url>
     <url>
         <loc>https://exiguus.github.io/zola-monoplain/tags/templates/</loc>
