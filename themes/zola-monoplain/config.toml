@@ -148,7 +148,7 @@ thumbnail_sizes = [128, 256]
 # Github and the Mastodon url can be used as web sign in because they contain rel="me"
 # To validate you might use <https://indiewebify.me/validate-rel-me/>
 link_github_username = "exiguus"
-link_mastodon_url = "<https://toot.community/@exiguus>"
+link_mastodon_url = "https://toot.community/@exiguus"
 link_email = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
 
 # Main navigation
