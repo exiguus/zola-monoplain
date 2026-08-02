@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    :root {
+    color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: white; }
+      rect { fill: black; }
+    }
+    @media (prefers-color-scheme: light) {
+      text { fill: black; }
+      rect { fill: white; }
+    }
+    text {
+      text-anchor: middle;
+      dominant-baseline: middle;
+      font-family: "IBM Plex Mono", Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Consolas,
+      "Lucida Console", Monaco, monospace;
+      font-size: 32em;
+    }
+    text + text {
+      font-size: 8em;
+    }
+  </style>
+  <rect width="100%" height="100%" />
+  <text x="50%" y="50%">m</text>
+  <text x="85%" y="15%">ρ</text>
+</svg>
