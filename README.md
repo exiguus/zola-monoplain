@@ -60,11 +60,12 @@ For latest Zola config changes please see the [Zola config changelog](CHANGELOG_
   - [x] Microformats
     - [x] h-card
     - [x] h-entry
-- [ ] Templates
-  - [ ] Home
+- [ ] Comments
+  - [ ] via Mastodon
+  - [ ] via Disqus (GitHub Discussions)
+- [x] Templates
+  - [x] Home
     - [x] Latest Posts
-    - [ ] Latest Projects
-    - [ ] Latest Links
     - [x] Latest Gallery Images
   - [x] Post
     - [x] Table of contents support
@@ -77,14 +78,10 @@ For latest Zola config changes please see the [Zola config changelog](CHANGELOG_
     - [x] Markdown <https://exiguus.github.io/zola-monoplain/posts/markdown/>
       - [x] CommonMark
       - [x] GitHub Flavored Markdown
-    - [ ] Comments
+    - [x] Comments
       - [x] via mailto
-      - [ ] via Mastodon
-      - [ ] via Disqus (GitHub Discussions)
   - [x] Gallery
     - [x] Post integration
-  - [ ] Project
-    - [ ] GitHub integration
   - [x] Taxonomy / Category and Tag support
   - [x] Search
   - [x] Sitemap
