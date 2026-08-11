@@ -4,7 +4,8 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ## Table of Contents
 
-- Changes between [v1.8.2 and HEAD (main)](#changes-between-v182-and-head-main)
+- Changes between [v1.8.3 and HEAD (main)](#changes-between-v183-and-head-main)
+- Changes between [v1.8.2 and v1.8.3](#changes-between-v182-and-v183)
 - Changes between [v1.8.1 and v1.8.2](#changes-between-v181-and-v182)
 - Changes between [v1.8.0 and v1.8.1](#changes-between-v180-and-v181)
 - Changes between [v1.7.0 and v1.8.0](#changes-between-v170-and-v180)
@@ -20,13 +21,19 @@ This document lists all changes between Git tags for the `config.toml` file.
 
 ---
 
-## Changes between v1.8.2 and HEAD (main)
+## Changes between v1.8.3 and HEAD (main)
+
+(`config.toml` diff)
+
+_No changes_ were made
+
+## Changes between v1.8.2 and v1.8.3
 
 (`config.toml` diff)
 
 ```diff
 diff --git a/themes/zola-monoplain/config.toml b/themes/zola-monoplain/config.toml
-index 62499d90..dff7d8d3 100644
+index 62499d90..acbef4c1 100644
 --- a/themes/zola-monoplain/config.toml
 +++ b/themes/zola-monoplain/config.toml
 @@ -1,7 +1,7 @@
@@ -38,6 +45,15 @@ index 62499d90..dff7d8d3 100644
  ###
 
  title = "mono/plain; a11y=true"
+@@ -148,7 +148,7 @@ thumbnail_sizes = [128, 256]
+ # Github and the Mastodon url can be used as web sign in because they contain rel="me"
+ # To validate you might use <https://indiewebify.me/validate-rel-me/>
+ link_github_username = "exiguus"
+-link_mastodon_url = "<https://toot.community/@exiguus>"
++link_mastodon_url = "https://toot.community/@exiguus"
+ link_email = { local_part = "monoplain", domain_name = "0x38", tld = "de" }
+
+ # Main navigation
 ```
 
 ## Changes between v1.8.1 and v1.8.2

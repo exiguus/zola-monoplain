@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/exiguus/zola-monoplain/compare/v1.8.2...v1.8.3) (2026-08-11)
+
+### Features
+
+- **a11y:** add date and last-modified head meta ([6d35ed0](https://github.com/exiguus/zola-monoplain/commits/6d35ed0450f515fc1b4d841301da7d7e5fdafbcf))
+- **favicon:** add editable svg icon and fallbacks ([8ceee49](https://github.com/exiguus/zola-monoplain/commits/8ceee4900f4d611be20a271b095e09c704c0f083))
+- **favicon:** use generated paths ([2b34b69](https://github.com/exiguus/zola-monoplain/commits/2b34b69adb57b7301519a84d8caff9050891c2ae))
+- **gallary:** align items center ([dbbac04](https://github.com/exiguus/zola-monoplain/commits/dbbac046f56ae1462e8565a9ad1acbce77758407))
+- **indyweb:** adjust summary visibility on gallery page ([38a4455](https://github.com/exiguus/zola-monoplain/commits/38a4455c812e584907602b1f3b9505c8c6e3b444))
+
+### Bug Fixes
+
+- **changelog:** remove duplicate entries between release 1.8.0 and 1.7.0 ([d773ffd](https://github.com/exiguus/zola-monoplain/commits/d773ffd04a7b3aa547efa42d1b55df947a4bda72))
+- **changlog:** manual adjust formatting issues ([1f61316](https://github.com/exiguus/zola-monoplain/commits/1f61316a7dcf6a16557e0988e35bb16037f8e7c9))
+- **config:** mastodon link ([05be0c3](https://github.com/exiguus/zola-monoplain/commits/05be0c3add9ab072a5f8e87f90c9c2002893f129))
+- **gallery:** image template tera markup ([d876a43](https://github.com/exiguus/zola-monoplain/commits/d876a43a25a5a6efad13d633171ce6f8c973639c))
+
 ## [1.8.2](https://github.com/exiguus/zola-monoplain/compare/v1.8.1...v1.8.2) (2026-08-01)
 
 ### Bug Fixes
