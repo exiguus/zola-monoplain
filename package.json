@@ -52,11 +52,11 @@
     "dprint": "^0.55.2",
     "fta-cli": "^3.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.2.0",
+    "lint-staged": "^17.3.0",
     "pa11y": "^9.1.1",
-    "puppeteer": "^25.3.0",
+    "puppeteer": "^25.5.0",
     "standard-version": "^9.5.0",
-    "turbo": "^2.10.6"
+    "turbo": "^2.10.8"
   },
   "lint-staged": {
     "*.@(ts|tsx|js|jsx|mjs|cjs)": [
