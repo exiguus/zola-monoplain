@@ -125,6 +125,8 @@ debug = false
 tags = ["zola", "theme", "a11y", "accessible"]
 authors = ["Simon Gattner"]
 timezone = "Europe/Berlin"
+# The year the site was started. This is used for example in the footer to show the copyright year range.
+start_year = 2023
 
 # Search
 search_enabled = true

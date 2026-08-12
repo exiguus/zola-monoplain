@@ -40,8 +40,10 @@
   </ul>
   <h2 id="footer-info" class="sr-only">{{ trans(key="footer_info") }}</h2>
   <p>
-    © {{ config.title }} {{ now() | date(format="%Y") | safe }} {# If you
-    remove the powered by information, it would be appreciated if you could add
+    © {{ config.title }} <time datetime="{{ config.extra.start_year }}">{{
+      config.extra.start_year }}</time>-<time datetime="{{ now() | date(format="%Y") | safe }}">{{ now() |
+      date(format="%Y") | safe }}</time>
+    {# If you remove the powered by information, it would be appreciated if you could add
     information & links somewhere else on your site to credit those that have
     created your tools. #} {% if config.extra.disable_powered_by and
     config.extra.disable_powered_by == true %}{% else %}<br />{{
