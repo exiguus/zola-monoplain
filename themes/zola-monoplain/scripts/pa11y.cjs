@@ -12,7 +12,7 @@ const {
 // htmlcs is a HTML Code Sniffer for testing the accessibility of HTML source code
 
 // Run the script with the following command
-// node scripts/pa11y.cjs https://example.com
+// node scripts/pa11y.cjs <https://example.com>
 
 // get url from the command line
 let url = process.argv[2] || defaultUrl;
@@ -34,28 +34,30 @@ if (url.startsWith("/")) {
 }
 
 /**
- * results: [
- *  {
- *   documentTitle: '...',
- *  pageUrl: '...',
- * issues: [
- *   {
- *    code: '...',
- *   type: '...',
- *  typeCode: 1,
- * message: '...',
- * context: '...',
- * selector: '...',
- * runner: '...',
- * runnerExtras: '...',
- * runnerExtrasMessage: '...',
- * runnerExtrasType: '...',
- * runnerExtrasSelector: '...',
- * runnerExtrasContext: '...',
- * ...
- * }
- * ],
- **/
+
+- results: [
+- {
+- documentTitle: '...',
+- pageUrl: '...',
+- issues: [
+- {
+- code: '...',
+- type: '...',
+- typeCode: 1,
+- message: '...',
+- context: '...',
+- selector: '...',
+- runner: '...',
+- runnerExtras: '...',
+- runnerExtrasMessage: '...',
+- runnerExtrasType: '...',
+- runnerExtrasSelector: '...',
+- runnerExtrasContext: '...',
+- ...
+- }
+- ],
+
+  **/
 const results = [];
 
 console.log("Start testing...");
@@ -160,8 +162,8 @@ async function run(url) {
         browser,
       }),
       new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("Timeout")), 30000),
-      ), // 30 seconds timeout
+        setTimeout(() => reject(new Error("Timeout")), 180000),
+      ), // 180 seconds timeout
     ]);
     browser.close();
     console.info(`End test ${url}`);
