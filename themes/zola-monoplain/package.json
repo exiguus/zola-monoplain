@@ -10,7 +10,7 @@
     "dev": "pnpm check && pnpm cp:loaddata &&zola serve --drafts",
     "build": "pnpm check && pnpm cp:loaddata && zola build",
     "cp:loaddata": "./scripts/cp-loaddata.sh",
-    "cp:icons": "mkdir -p ./static/images/ && cp ./node_modules/@tabler/icons/tabler-sprite.svg ./static/images/tabler-sprite.svg",
+    "cp:icons": "mkdir -p ./static/images/icons && cp ./node_modules/@tabler/icons/icons/outline/*.svg ./static/images/icons/",
     "postinstall": "pnpm cp:icons && pnpm cp:loaddata"
   },
   "keywords": [
@@ -24,7 +24,7 @@
   "author": "Simon Gattner",
   "license": "MIT",
   "dependencies": {
-    "@tabler/icons": "^2.47.0"
+    "@tabler/icons": "^3.46.0"
   },
   "engines": {
     "pnpm": ">=10.0.0 <13.0.0",

@@ -1,7 +1,40 @@
 <!-- All icons from https://tabler.io/icons/ under the MIT License -->
-{% macro icon(name, size=32) %} {# use tabler sprite (see:
-https://tabler.io/docs/icons/svg#svg-sprite) #}
-<svg width="{{ size }}" height="{{ size }}">
-  <use xlink:href="#tabler-{{ name  | default (value='heart-filled') }}" />
-</svg>
-{% endmacro %}
+{% macro icon(name, size=32, img=false) %} {# use tabler sprite (see:
+<https://tabler.io/docs/icons/svg#svg-sprite>) #} {% if img == true %}
+<div
+  width="{{ size }}"
+  height="{{ size }}"
+  style="width:{{ size }}px;height:{{ size }}px;"
+  class="icon icon-img"
+>
+  <img
+    src="{{ get_url(path='images/icons/' ~ name ~ '.svg', trailing_slash=false) | safe }}"
+    alt="{{ name }} icon"
+    width="{{ size }}"
+    height="{{ size }}"
+    loading="lazy"
+  />
+</div>
+{% else %} {%- set data = load_data(path="static/images/icons/" ~ name ~ ".svg")
+| default(value='<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-error-404"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 8v3a1 1 0 0 0 1 1h3" />
+  <path d="M7 8v8" />
+  <path d="M17 8v3a1 1 0 0 0 1 1h3" />
+  <path d="M21 8v8" />
+  <path d="M10 10v4a2 2 0 1 0 4 0v-4a2 2 0 1 0 -4 0" /></svg
+>') | safe %} {# use height and width from the size parameter #} {%- set data =
+data | replace(from='width="24"', to='width="' ~ size ~ '"') |
+replace(from='height="24"', to='height="' ~ size ~ '"') | safe %} {{ data | safe
+}} {% endif %} {% endmacro %}

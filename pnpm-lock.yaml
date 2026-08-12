@@ -51,8 +51,8 @@ importers:
   themes/zola-monoplain:
     dependencies:
       '@tabler/icons':
-        specifier: ^2.47.0
-        version: 2.47.0
+        specifier: ^3.46.0
+        version: 3.46.0
 
 packages:
 
@@ -289,8 +289,8 @@ packages:
     resolution: {integrity: sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ==}
     engines: {node: '>=22'}
 
-  '@tabler/icons@2.47.0':
-    resolution: {integrity: sha512-4w5evLh+7FUUiA1GucvGj2ReX2TvOjEr4ejXdwL/bsjoSkof6r1gQmzqI+VHrE2CpJpB3al7bCTulOkFa/RcyA==}
+  '@tabler/icons@3.46.0':
+    resolution: {integrity: sha512-f2RYFl3fzPwj5WO82x6en0dmkjefxEfOm16D1ByM6cj/McNiwOkL4VaPUoP9VVIrXAD9WnTSVFr70px703b//A==}
 
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
@@ -1906,7 +1906,7 @@ snapshots:
 
   '@simple-libs/stream-utils@2.0.0': {}
 
-  '@tabler/icons@2.47.0': {}
+  '@tabler/icons@3.46.0': {}
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
