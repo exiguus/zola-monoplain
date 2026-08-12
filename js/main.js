@@ -8,11 +8,11 @@
   **/
 const deobfuscateEmail = (email) =>
   email
-  .replace(/&#8203;/g, "")
-  .replace(/&#x3C;/g, "<")
-  .replace(/&#x40;/g, "@")
-  .replace(/&#x2E;/g, ".")
-  .replace(/&#x3E;/g, ">");
+    .replace(/&#8203;/g, "")
+    .replace(/&#x3C;/g, "<")
+    .replace(/&#x40;/g, "@")
+    .replace(/&#x2E;/g, ".")
+    .replace(/&#x3E;/g, ">");
 
 /**
 
@@ -23,27 +23,27 @@ const labelTaskListCheckboxes = () => {
   const taskCheckboxes = document.querySelectorAll("input[type='checkbox']");
 
   Array.from(taskCheckboxes).forEach((checkbox) => {
-  if (
-  checkbox.parentElement?.querySelector("label[for='" + checkbox.id + "']")
-  ) {
-  // checkbox already has a label
-  return;
-  }
-  if (!checkbox.id) {
-  // add an id to the checkbox if it doesn't have one
-  checkbox.id = `task-checkbox-${Math.random().toString(36).substr(2, 9)}`;
-  }
-  if (!checkbox.name) {
-  // add a name to the checkbox if it doesn't have one
-  checkbox.setAttribute("name", checkbox.id);
-  }
-  // add a hidden label before the checkbox
-  const label = document.createElement("label");
+    if (
+      checkbox.parentElement?.querySelector("label[for='" + checkbox.id + "']")
+    ) {
+      // checkbox already has a label
+      return;
+    }
+    if (!checkbox.id) {
+      // add an id to the checkbox if it doesn't have one
+      checkbox.id = `task-checkbox-${Math.random().toString(36).substr(2, 9)}`;
+    }
+    if (!checkbox.name) {
+      // add a name to the checkbox if it doesn't have one
+      checkbox.setAttribute("name", checkbox.id);
+    }
+    // add a hidden label before the checkbox
+    const label = document.createElement("label");
 
-  label.setAttribute("for", checkbox.id);
-  label.setAttribute("class", "sr-only");
-  label.textContent = "Task item";
-  checkbox.parentElement?.insertBefore(label, checkbox);
+    label.setAttribute("for", checkbox.id);
+    label.setAttribute("class", "sr-only");
+    label.textContent = "Task item";
+    checkbox.parentElement?.insertBefore(label, checkbox);
   });
 };
 
@@ -56,11 +56,11 @@ const makeScrollableRegionsFocusable = () => {
   const scrollableRegions = document.querySelectorAll("pre");
 
   Array.from(scrollableRegions).forEach((region) => {
-  if (region.hasAttribute("tabindex")) {
-  return;
-  }
+    if (region.hasAttribute("tabindex")) {
+      return;
+    }
 
-  region.setAttribute("tabindex", "0");
+    region.setAttribute("tabindex", "0");
   });
 };
 // <script>
