@@ -3,4 +3,47 @@
     <h1>{{ config.title }}</h1>
     <p>{{ config.description }}</p>
   </a>
+  {%- if config.extra.links_header_enabled and config.extra.links_header_enabled == true %}
+  <div>
+    <h2 id="header-links" class="sr-only">{{ trans(key="header_links") }}</h2>
+    <ul aria-labelledby="header-links">
+      {# Github #} {% if config.extra.link_github_username -%}
+      <li>
+        <a href="https://github.com/{{ config.extra.link_github_username }}"
+          title="{{ trans(key='header_links_github_title') }}" rel="me">
+          <span class="sr-only">{{ trans(key="header_links_github_text") }}</span>
+          <span aria-hidden="true"> {{ icons::icon(name="brand-github") }} </span>
+        </a>
+      </li>
+      {% endif -%} {# Mastodon #} {% if config.extra.link_mastodon_url -%}
+      <li>
+        <a href="{{ config.extra.link_mastodon_url }}" title="{{ trans(key='header_links_mastodon_title') }}" rel="me">
+          <span class="sr-only">{{ trans(key='header_links_mastodon_text') }}</span>
+          <span aria-hidden="true">
+            {{ icons::icon(name="brand-mastodon") }}
+          </span>
+        </a>
+      </li>
+      {% endif -%} {# Mastodon feed #} {# email #} {% if config.extra.link_email
+      -%}
+      <li>
+        <a {{ email::obfuscate_mail_href() }} {{
+          email::obfuscate_mail_data(local_part=config.extra.link_email.local_part,
+          domain_name=config.extra.link_email.domain_name, tld=config.extra.link_email.tld) }}
+          title="{{ trans(key='header_links_email_title') }}" rel="me">
+          <span class="sr-only">{{ trans(key='header_links_email_text') }}</span>
+          <span aria-hidden="true"> {{ icons::icon(name="mail-opened") }} </span>
+        </a>
+      </li>
+      {% endif -%} {# email feed #}
+      <li>
+        <a href="{{ get_url(path='atom.xml',trailing_slash=false)|safe }}"
+          title="{{ trans(key='header_links_atom_title') }}" rel="alternate">
+          <span class="sr-only">{{ trans(key='header_links_atom_text') }}</span>
+          <span aria-hidden="true"> {{ icons::icon(name="rss") }} </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  {%- endif %}
 </header>

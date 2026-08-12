@@ -23,13 +23,6 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 100%;
-  grid-template-rows: 10rem 3rem auto 3rem;
-  @media (min-width: map.get($breakpoints, "small")) {
-    grid-template-rows: 10rem 2rem auto 3rem;
-  }
-  @media (min-width: map.get($breakpoints, "medium")) {
-    grid-template-rows: 8rem 2rem auto 3rem;
-  }
   justify-content: center;
   align-items: start;
   min-height: calc(100vh - 2rem - 3rem);

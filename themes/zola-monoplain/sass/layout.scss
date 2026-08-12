@@ -267,6 +267,36 @@ body {
     }
   }
 
+  & > header {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    @media (min-width: map.get($breakpoints, "large")) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 0 1rem;
+    }
+
+    & > div {
+      order: -1;
+      align-self: end;
+      padding-right: 0.5rem;
+
+      @media (min-width: map.get($breakpoints, "large")) {
+        order: 1;
+        align-self: end;
+        padding: 0.5rem 0;
+      }
+
+      & > ul {
+        @extend %list-horizontal;
+        gap: 0 1rem;
+      }
+    }
+  }
+
   & > footer {
     display: flex;
     justify-content: space-between;

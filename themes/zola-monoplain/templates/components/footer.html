@@ -1,5 +1,6 @@
 {%- import "macros/email.html" as email -%}
 <footer>
+  {%- if config.extra.links_footer_enabled and config.extra.links_footer_enabled == true %}
   <h2 id="footer-links" class="sr-only">{{ trans(key="footer_links") }}</h2>
   <ul aria-labelledby="footer-links">
     {# Github #} {% if config.extra.link_github_username -%}
@@ -38,6 +39,7 @@
       </a>
     </li>
   </ul>
+  {%- endif %}
   <h2 id="footer-info" class="sr-only">{{ trans(key="footer_info") }}</h2>
   <p>
     © {{ config.title }} <time datetime="{{ config.extra.start_year }}">{{
