@@ -46,7 +46,7 @@
   "homepage": "https://github.com/exiguus/zola-monoplain#readme",
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.2",
     "@commitlint/prompt-cli": "^21.2.0",
     "conventional-changelog-conventionalcommits": "^10.2.1",
     "dprint": "^0.55.2",
